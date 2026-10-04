@@ -80,8 +80,10 @@ jobs:
             let enabled = false;
             try {
               const {data} = await github.rest.repos.getPages(context.repo);
-              enabled = data.build_type === 'workflow';
+              core.info(JSON.stringify({pagesExists: true, buildType: data.build_type ?? null, source: data.source ?? null, status: data.status ?? null}));
+              enabled = true; // GET success proves the site exists; deploy-pages validates deployment mode.
             } catch (error) {
+              core.info(`Pages API status: ${error.status}`);
               if (error.status !== 404) throw error;
             }
             core.setOutput('enabled', String(enabled));
