@@ -38,8 +38,9 @@ jobs:
         run: node scripts/data-refresh-preflight.js
 
       - name: Verify deployed production contract
+        if: vars.ASTRA_V5_PROD_URL != ''
         env:
-          ASTRA_PROD_URL: https://ras-egx-astra-v4.vercel.app
+          ASTRA_PROD_URL: ${{ vars.ASTRA_V5_PROD_URL }}
           GITHUB_SHA: ${{ github.sha }}
           ASTRA_PROD_RETRY_ATTEMPTS: "12"
           ASTRA_PROD_RETRY_DELAY_MS: "10000"

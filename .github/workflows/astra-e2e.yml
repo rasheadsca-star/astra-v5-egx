@@ -31,9 +31,9 @@ jobs:
         run: node scripts/astra-e2e-runner.js
 
       - name: Production contract validation
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.ASTRA_V5_PROD_URL != ''
         env:
-          ASTRA_PROD_URL: https://ras-egx-astra-v4.vercel.app
+          ASTRA_PROD_URL: ${{ vars.ASTRA_V5_PROD_URL }}
         run: node scripts/production-contract-check.js
 
       - name: Upload ASTRA Result Artifact

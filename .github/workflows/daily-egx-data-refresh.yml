@@ -16,8 +16,11 @@ on:
       - 'scripts/data-refresh.js'
 
 concurrency:
-  group: astra-v4-daily-data-refresh
+  group: astra-v5-daily-data-refresh
   cancel-in-progress: false
+
+env:
+  ASTRA_CANONICAL_SOURCE_BASE: ${{ vars.ASTRA_CANONICAL_SOURCE_BASE || 'https://raw.githubusercontent.com/rasheadsca-star/RAS-EGX-PRO2026-NEXT/main/data' }}
 
 jobs:
   refresh:

@@ -20,6 +20,8 @@ concurrency:
 
 jobs:
   capture-and-resolve:
+    # A static Pages site has no /api/ucp-shadow. Never capture V4 as V5 evidence.
+    if: vars.ASTRA_V5_PROD_URL != ''
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -61,7 +63,7 @@ jobs:
       - name: Capture and resolve forward evidence
         if: steps.preflight.outputs.run == 'true'
         env:
-          UCP_PROD_URL: https://ras-egx-astra-v4.vercel.app
+          UCP_PROD_URL: ${{ vars.ASTRA_V5_PROD_URL }}
           UCP_EXPECTED_COMMIT: ${{ github.sha }}
           UCP_PROD_RETRY_ATTEMPTS: 12
           UCP_PROD_RETRY_DELAY_MS: 10000

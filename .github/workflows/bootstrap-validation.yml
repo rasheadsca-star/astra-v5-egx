@@ -1,0 +1,49 @@
+name: ASTRA Deployment Acceptance
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/bootstrap-validation.yml']
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: astra-deployment-acceptance
+  cancel-in-progress: false
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Dispatch refresh, quant, and an unchanged-data repeat
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+            const repo = context.repo;
+            async function dispatch(workflow_id) {
+              const since = new Date(Date.now() - 1000).toISOString();
+              await github.rest.actions.createWorkflowDispatch({...repo, workflow_id, ref: 'main'});
+              for (let attempt = 0; attempt < 120; attempt++) {
+                await sleep(10000);
+                const {data} = await github.rest.actions.listWorkflowRuns({...repo, workflow_id, event: 'workflow_dispatch', branch: 'main', created: `>=${since}`, per_page: 20});
+                const run = data.workflow_runs.find(r => r.created_at >= since);
+                if (!run || run.status !== 'completed') continue;
+                core.info(`${workflow_id}: ${run.html_url} -> ${run.conclusion}`);
+                await core.summary.addRaw(`\n- [${workflow_id} #${run.id}](${run.html_url}): ${run.conclusion}\n`).write();
+                if (run.conclusion !== 'success') throw new Error(`${workflow_id} failed: ${run.html_url}`);
+                return run;
+              }
+              throw new Error(`Timed out waiting for ${workflow_id}`);
+            }
+            await dispatch('daily-egx-data-refresh.yml');
+            await dispatch('quant-daily.yml');
+            const before = (await github.rest.repos.getBranch({...repo, branch: 'main'})).data.commit.sha;
+            await dispatch('quant-daily.yml');
+            const after = (await github.rest.repos.getBranch({...repo, branch: 'main'})).data.commit.sha;
+            await core.summary.addRaw(`\nNo-change repeat: before=${before}, after=${after}\n`).write();
+            if (before !== after) throw new Error('Repository changed during repeat: inspect commits for new input or an idempotency defect.');

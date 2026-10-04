@@ -5,6 +5,7 @@ on:
   workflow_run:
     workflows: ["Daily EGX Data Refresh"]
     types: [completed]
+    branches: [main]
   schedule:
     - cron: "40 12,13,14,15 * * 0-4"
   workflow_dispatch:
@@ -57,3 +58,46 @@ jobs:
           S=$(python -c "import json;print(json.load(open('data/quant/signals.json'))['session'])")
           git commit -m "Quant lane: session $S"
           git pull --rebase origin ${{ github.ref_name }} && git push
+
+  deploy-pages:
+    needs: quant
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check Pages configuration explicitly
+        id: pages
+        uses: actions/github-script@v7
+        with:
+          script: |
+            let enabled = false;
+            try {
+              const {data} = await github.rest.repos.getPages(context.repo);
+              enabled = data.build_type === 'workflow';
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            core.setOutput('enabled', String(enabled));
+            if (!enabled) {
+              core.warning('PAGES_SETUP_REQUIRED: Settings > Pages > Source > GitHub Actions');
+              await core.summary.addRaw('Pages NOT deployed: select GitHub Actions in Settings > Pages, then dispatch ASTRA Quant Lane (daily).').write();
+            }
+      - uses: actions/checkout@v4
+        if: steps.pages.outputs.enabled == 'true'
+        with:
+          ref: main
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outputs.enabled == 'true'
+        with:
+          path: docs
+      - name: Deploy the quant output directly
+        id: deployment
+        if: steps.pages.outputs.enabled == 'true'
+        uses: actions/deploy-pages@v4
