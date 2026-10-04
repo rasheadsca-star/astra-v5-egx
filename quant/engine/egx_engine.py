@@ -54,9 +54,11 @@ def load_prices(paths, blocklist=()):
     for t, dfs in sorted(raw.items()):
         df = pd.concat(dfs); df["date"] = pd.to_datetime(df["date"])
         df = df.sort_values(["date", "_p"], kind="stable").drop_duplicates("date", keep="last").drop(columns="_p").reset_index(drop=True)
-        df = df.dropna(subset=["close"]); df = df[df.close > 0].reset_index(drop=True)
-        for c in ("open", "high", "low"): df[c] = df[c].where(df[c] > 0, df.close)
-        df["high"] = df[["high", "open", "close"]].max(axis=1); df["low"] = df[["low", "open", "close"]].min(axis=1); df["volume"] = df.volume.fillna(0)
+        # Preserve source precedence before rejecting incomplete/invalid bars: no weaker fallback or imputation.
+        for c in COLS[1:]: df[c] = pd.to_numeric(df[c], errors="coerce")
+        valid = np.isfinite(df[COLS[1:]]).all(axis=1) & (df[["open", "high", "low", "close"]] > 0).all(axis=1) & (df.volume >= 0)
+        valid &= (df.low <= df[["open", "close"]].min(axis=1)) & (df.high >= df[["open", "close"]].max(axis=1))
+        df = df[valid].reset_index(drop=True)
         jumps = np.where(df.close.pct_change().abs().values > 0.22)[0]      # قفزة >22% = انقسام/خطأ: نقطع السلسلة
         if len(jumps): df = df.iloc[jumps[-1]:].reset_index(drop=True)
         why = eligibility(dict(metas.get(t, {}), ticker=t), len(df), set(blocklist))

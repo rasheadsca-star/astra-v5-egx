@@ -23,8 +23,10 @@ for f in sorted(glob.glob(os.path.join(ROOT, "data", "history", "*.json"))):
     try:
         r = get(t); q = r["indicators"]["quote"][0]; rows = []
         for i, ts in enumerate(r["timestamp"]):
-            if None in (q["close"][i], q["high"][i], q["low"][i]): continue
-            rows.append([dt.datetime.fromtimestamp(ts, dt.timezone.utc).strftime("%Y-%m-%d"), q["open"][i] or q["close"][i], q["high"][i], q["low"][i], q["close"][i], q["volume"][i] or 0])
+            if any(q[k][i] is None for k in ("open", "high", "low", "close", "volume")): continue
+            if min(q[k][i] for k in ("open", "high", "low", "close")) <= 0 or q["volume"][i] < 0: continue
+            if not (q["low"][i] <= min(q["open"][i], q["close"][i]) <= max(q["open"][i], q["close"][i]) <= q["high"][i]): continue
+            rows.append([dt.datetime.fromtimestamp(ts, dt.timezone.utc).strftime("%Y-%m-%d"), q["open"][i], q["high"][i], q["low"][i], q["close"][i], q["volume"][i]])
         ref = local_last(t)
         if not rows: bad.append((t, "فارغ")); continue
         if ref and abs(rows[-1][4]/ref-1) > 0.15: bad.append((t, "تعارض سعر >15% مع المحلي")); continue
@@ -36,7 +38,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, "data", "history", "*.json"))):
             w = csv.writer(fh); w.writerow(["date", "open", "high", "low", "close", "volume"]); w.writerows(merged[k] for k in sorted(merged))
         ok += 1; last_dates[rows[-1][0]] += 1; streak = 0
     except Exception as e:
-        bad.append((t, str(e)[:60])); streak += 1
+        bad.append((t, str(e)[:160])); print(t, str(e)[:160], flush=True); streak += 1
         if streak >= 5 and ok == 0: print("5 إخفاقات متتالية بلا أي نجاح: لا يوجد اتصال بالمصدر (أو محجوب). إيقاف مبكر."); sys.exit(3)
     time.sleep(0.3)
 print(f"نجح: {ok}   فشل/تخطي: {len(bad)}")
