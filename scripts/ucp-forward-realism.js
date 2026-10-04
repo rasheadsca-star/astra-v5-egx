@@ -27,11 +27,11 @@ function resolveRealistic(entry, candidate, rows, previous, policy) {
     // A whole session locked at -10% has no evidenced sell-side liquidity.
     const locked=prior && r.high <= prior.close * .9 + 1e-8;
     if (pendingStop) { if (!locked) return close(r,r.open,'STOP',null,true); continue; }
-    if (i > index && r.open >= target) return close(r,r.open,'TARGET1');
+    if (r.open >= target) return close(r,r.open,'TARGET1');
     const stopHit=r.low<=stop, targetHit=r.high>=target;
     if (stopHit) {
       if (locked) { pendingStop=true; continue; }
-      return close(r,i>index && r.open<=stop ? r.open : stop,'STOP',targetHit && !(i>index && r.open<=stop) ? 'STOP_FIRST' : null);
+      return close(r,r.open<=stop ? r.open : stop,'STOP',targetHit && !(r.open<=stop) ? 'STOP_FIRST' : null);
     }
     if (targetHit) return close(r,target,'TARGET1');
     if (i-index+1 >= policy.maxHoldSessions) return close(r,r.close,'TIME_EXIT');
