@@ -1,6 +1,13 @@
 name: ASTRA V5 Skill Discovery
 
 on:
+  push:
+    branches:
+      - feat/find-skills-integration
+    paths:
+      - ".agents/skills/**"
+      - ".github/workflows/find-skills.yml"
+      - "package.json"
   workflow_dispatch:
     inputs:
       query:
@@ -27,13 +34,21 @@ jobs:
         with:
           node-version: 20
 
+      - name: Verify installed find-skills skill
+        run: |
+          test -f .agents/skills/find-skills/SKILL.md
+          grep -q '^name: find-skills$' .agents/skills/find-skills/SKILL.md
+          echo "find-skills project skill is installed"
+
       - name: Find skills
         shell: bash
         env:
-          QUERY: ${{ inputs.query }}
-          OWNER: ${{ inputs.owner }}
+          INPUT_QUERY: ${{ inputs.query }}
+          INPUT_OWNER: ${{ inputs.owner }}
         run: |
           set -euo pipefail
+          QUERY="${INPUT_QUERY:-github actions automation}"
+          OWNER="${INPUT_OWNER:-}"
           echo "Searching skills for: $QUERY"
           if [ -n "$OWNER" ]; then
             npx -y skills@latest find "$QUERY" --owner "$OWNER"
