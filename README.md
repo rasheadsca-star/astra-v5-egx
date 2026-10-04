@@ -39,3 +39,8 @@ npm run quant:update    # جسر ← تحديث ← محرك ← نشر (اسم 
 - توجد جدولة الأحد–الخميس وconcurrency لكل مسار. الجدولة القادمة لا تُعد مثبتة حتى يظهر Run فعلي؛ البيانات القديمة تبقى PARTIAL/WAITING_DATA وفق الحراس.
 - ملف `quant/config/holidays.json` فارغ. لم نضف عطلة تداول دون إعلان موثّق يخص EGX؛ إعلان عطلة عامة وحده لا يثبت إغلاق البورصة.
 - التنفيذ الآلي معطّل؛ لا تعديل للاستراتيجية أو الدرجات أو عتبات الترقية.
+
+### Verified deployment and remaining setup
+Direct upload-pages-artifact/deploy-pages deployment succeeded after bot commit `0b71540` in run `37215837630`; an unchanged-data repeat succeeded in `37215903139`. At the last Pages API audit, source was still legacy `main:/`. Select **GitHub Actions** in Settings > Pages to prevent a competing legacy root build. The connector cannot change this administration setting. The direct deployment works, but this configuration mismatch remains open.
+
+Status JSON uses network-first caching, and cache cleanup is scoped to this repository. The displayed expected session comes from the current update status even when accepted signals are intentionally older. Missing canonical October 4 prices produced WAITING_DATA; no data or strategy was forced. Manifest and service worker use repository-relative paths; actual mobile home-screen installation still requires device verification.

@@ -1775,9 +1775,10 @@ async function main(){
   try{const r=await fetch('data/signals.json',{cache:'no-store'});if(r.ok){d=await r.json();src='live'}}catch(e){}
   if(!d&&D){d=D;src='embedded'}
   if(!d){$('app').textContent='لا توجد بيانات — شغّل python update.py';return}
+  let U=ST;try{const r=await fetch('data/daily-data-update-status.json',{cache:'no-store'});if(r.ok)U=await r.json()}catch(e){}
   const b=d.backtest,t3=b.top3,t5=b.top5,bl=b.baseline_all,I=d.integrity,ex=Object.entries(d.excluded||{});
-  let h=`<h1>EGX NEXT V2.1 — ترتيب الفرص (دعم قرار)</h1><div class="mut">آخر جلسة في البيانات ${d.session} · المتوقعة ${d.expected_session} · ${d.universe} سهماً مفحوصاً من ${d.symbols} مؤهلاً · ${d.history_sessions} جلسة</div>`;
-  {let U=ST;try{const r=await fetch('data/daily-data-update-status.json',{cache:'no-store'});if(r.ok)U=await r.json()}catch(e){}
+  let h=`<h1>EGX NEXT V2.1 — ترتيب الفرص (دعم قرار)</h1><div class="mut">آخر جلسة في البيانات ${d.session} · المتوقعة ${U?.expectedSession||d.expected_session} · ${d.universe} سهماً مفحوصاً من ${d.symbols} مؤهلاً · ${d.history_sessions} جلسة</div>`;
+  {
    if(U){const c={SUCCESS:'var(--ok)',ALREADY_CURRENT:'var(--ok)',PARTIAL:'var(--warn)',WAITING_DATA:'var(--bad)',FAILED:'var(--bad)'}[U.finalStatus]||'var(--mut)';
     h+=`<div class="al" style="border-color:${c}"><b style="color:${c}">تحديث البيانات: ${U.finalStatus}</b> · جلسة معتمدة ${U.actualAcceptedSession||'—'} من المتوقعة ${U.expectedSession} · تغطية ${U.coveragePct}% (${U.acceptedRows} سهماً جديداً، ${U.staleRows} بلا بيانات الجلسة، ${U.quarantinedCount} صفاً في الحجر)${U.finalStatus==='WAITING_DATA'?' — المصدر لم يسلّم جلسة اليوم بعد؛ التوصيات أدناه من الجلسة السابقة ولا تُنفَّذ.':''}</div>`}}
   if(d.stale)h+=`<div class="al" style="border-color:var(--bad)">⛔ البيانات متأخرة ${d.stale_lag_sessions} جلسة عن المتوقعة (العطلات الرسمية غير محتسبة). لا تنفّذ أي توصية قبل تحديث البيانات ومطابقة السعر.</div>`;

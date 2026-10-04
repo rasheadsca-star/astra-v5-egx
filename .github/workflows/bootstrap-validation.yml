@@ -47,3 +47,36 @@ jobs:
             const after = (await github.rest.repos.getBranch({...repo, branch: 'main'})).data.commit.sha;
             await core.summary.addRaw(`\nNo-change repeat: before=${before}, after=${after}\n`).write();
             if (before !== after) throw new Error('Repository changed during repeat: inspect commits for new input or an idempotency defect.');
+
+      - name: Audit schedules and live Pages assets
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const {data} = await github.rest.actions.listRepoWorkflows({...context.repo, per_page: 100});
+            for (const name of ['Daily EGX Data Refresh', 'ASTRA Quant Lane (daily)']) {
+              const workflow = data.workflows.find(w => w.name === name);
+              if (!workflow) throw new Error('Workflow missing: ' + name);
+              if (workflow.state === 'disabled_manually' || workflow.state === 'disabled_inactivity') {
+                await github.rest.actions.enableWorkflow({...context.repo, workflow_id: workflow.id});
+              } else if (workflow.state !== 'active') throw new Error(name + ': ' + workflow.state);
+              const {data: checked} = await github.rest.actions.getWorkflow({...context.repo, workflow_id: workflow.id});
+              core.info(JSON.stringify({workflow: name, state: checked.state, path: checked.path}));
+            }
+            const base = 'https://rasheadsca-star.github.io/astra-v5-egx/';
+            async function get(path) {
+              const r = await fetch(base + path, {cache: 'no-store'});
+              if (!r.ok) throw new Error(path + ': HTTP ' + r.status);
+              return r;
+            }
+            const signals = await (await get('data/signals.json')).json();
+            const status = await (await get('data/daily-data-update-status.json')).json();
+            const manifest = await (await get('manifest.webmanifest')).json();
+            const sw = await (await get('sw.js')).text();
+            const html = await (await get('')).text();
+            if (signals.session !== status.actualAcceptedSession) throw new Error('Accepted session mismatch');
+            for (const key of ['scope', 'start_url']) {
+              if (!new URL(manifest[key], base).pathname.startsWith('/astra-v5-egx/')) throw new Error('Manifest path escapes repository');
+            }
+            for (const icon of manifest.icons) await get(icon.src);
+            if (!html.includes('name="viewport"') || !sw.includes('addEventListener')) throw new Error('PWA files missing');
+            core.info(JSON.stringify({signalsSession: signals.session, expectedSession: status.expectedSession, status: status.finalStatus, manifestScope: manifest.scope, pwaAssets: 'reachable', mobileInstallation: 'not_verified'}));
