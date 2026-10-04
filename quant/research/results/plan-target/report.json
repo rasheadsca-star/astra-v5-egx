@@ -1,0 +1,94 @@
+{
+  "executionAllowed": false,
+  "production_model_changed": false,
+  "data_hash": "6845cc399b33bdfd",
+  "sessions": 267,
+  "purge": "max(far_end, plan_end) < test_start",
+  "objective": "0.5 P(T1 1ATR) + 0.5 P(T2 after T1 and break-even)",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1"
+  },
+  "far": {
+    "plan_top5": {
+      "n": 471,
+      "days": 107,
+      "hit": 67.3,
+      "win": 65.8,
+      "avg": 0.82,
+      "med": 0.94,
+      "pf": 1.61
+    },
+    "plan_baseline": {
+      "n": 12680,
+      "days": 108,
+      "hit": 61.7,
+      "win": 62.4,
+      "avg": 0.37,
+      "med": 0.91,
+      "pf": 1.2
+    },
+    "t1_hit_pct": 67.3036093418259,
+    "t2_hit_pct": 38.42887473460722,
+    "daily_plan_excess_pct": 0.44511029227404075,
+    "ci90": [
+      -0.16206686108119203,
+      0.8260296739044963
+    ],
+    "folds": 22,
+    "all_clean": true,
+    "signals": 14595,
+    "placebo_daily_excess_pct": [
+      0.06494522786885908,
+      -0.4671473801827145,
+      -0.052569659439765055,
+      -0.09117046807157275,
+      0.18101447877572685
+    ]
+  },
+  "plan": {
+    "plan_top5": {
+      "n": 474,
+      "days": 107,
+      "hit": 65.8,
+      "win": 66.5,
+      "avg": 0.92,
+      "med": 0.95,
+      "pf": 1.69
+    },
+    "plan_baseline": {
+      "n": 12680,
+      "days": 108,
+      "hit": 61.7,
+      "win": 62.4,
+      "avg": 0.37,
+      "med": 0.91,
+      "pf": 1.2
+    },
+    "t1_hit_pct": 65.82278481012658,
+    "t2_hit_pct": 36.91983122362869,
+    "daily_plan_excess_pct": 0.5187996705010814,
+    "ci90": [
+      -0.02146518245727303,
+      1.0485461559957148
+    ],
+    "folds": 22,
+    "all_clean": true,
+    "signals": 14595,
+    "placebo_daily_excess_pct": [
+      0.12716362530254996,
+      -0.6748473479502932,
+      -0.48721149575431066,
+      0.010563474993725347,
+      -0.030116815114753885
+    ]
+  },
+  "same_signals": true,
+  "paired_plan_minus_far_pct": 0.07368937822704055,
+  "paired_ci90": [
+    -0.20485198321161172,
+    0.6057625372773474
+  ],
+  "live_profitability_proven": false
+}
