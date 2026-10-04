@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "rasheed-egx-ucp-morning-evidence/v2",
+  "sessionDate": null,
+  "generatedAt": null,
+  "cairoTime": null,
+  "collectorMinute": null,
+  "latestSourceMinute": null,
+  "source": "UCP_DELAY_AWARE_MORNING_COLLECTOR",
+  "sourceMarketGeneratedAt": null,
+  "sourceMarketUpdatedAt": null,
+  "sourceTimingModes": [],
+  "completeSource": false,
+  "marketCoveragePct": null,
+  "breadth": null,
+  "preparedCandidateCount": 0,
+  "evidenceByTicker": {},
+  "baselineSessions": [],
+  "policy": {
+    "minBaselineSessions": 5,
+    "maxReceiptAgeMinutes": 35,
+    "expectedFeedDelayMinutes": 15,
+    "marketEvidenceWindow": "10:20-10:45 Africa/Cairo market-data time",
+    "collectionWindow": "10:20-11:10 Africa/Cairo wall-clock time",
+    "evidenceStartMinute": 620,
+    "evidenceEndMinute": 645,
+    "collectionEndMinute": 670
+  },
+  "resilience": {
+    "appAvailabilityIndependentOfMorningEvidence": true,
+    "missingMorningEvidenceBehavior": "WAITING_DATA_THEN_UNCONFIRMED_DATA_GAP",
+    "afterCloseCandidatesPreserved": true,
+    "executionFailsClosed": true
+  },
+  "notes": [
+    "No morning session has been captured yet under the delay-aware schema.",
+    "A known approximately 15-minute delayed source is evaluated by market-data time, not collector wall-clock time.",
+    "Morning source failure is non-fatal to ASTRA/UCP availability and cannot delete after-close prepared candidates.",
+    "Execution remains fail-closed until complete morning evidence is available."
+  ]
+}

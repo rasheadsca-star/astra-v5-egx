@@ -1,0 +1,6 @@
+{
+  "_help": "ترتيب المصادر: 1) حزم الجلسة في data/inbox (ناتج نظام مباشر مصر) ثم 2) Yahoo للرموز الناقصة فقط. لتعطيل Yahoo ضع yahoo_fallback=false. thresholds تغيّر الحدود دون تعديل الكود.",
+  "inbox": "data/inbox",
+  "yahoo_fallback": true,
+  "thresholds": {"success_coverage": 0.95, "min_coverage": 0.80, "close_time": "14:30", "grace_min": 45, "min_last_trade": "12:30", "jump_quarantine": 0.22, "jump_warn": 0.12}
+}

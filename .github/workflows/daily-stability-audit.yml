@@ -1,0 +1,46 @@
+name: ASTRA Daily Stability Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Repeated checks on EGX trading days. UTC slots cover Cairo operational
+    # periods across UTC+2/+3 without depending on a timezone extension.
+    - cron: "30 6,10,14,18 * * 0-4"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astra-daily-stability-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate application invariants
+        run: npm test
+
+      - name: Inspect atomic source readiness
+        run: node scripts/data-refresh-preflight.js
+
+      - name: Verify deployed production contract
+        env:
+          ASTRA_PROD_URL: https://ras-egx-astra-v4.vercel.app
+          GITHUB_SHA: ${{ github.sha }}
+          ASTRA_PROD_RETRY_ATTEMPTS: "12"
+          ASTRA_PROD_RETRY_DELAY_MS: "10000"
+        run: node scripts/production-contract-check.js

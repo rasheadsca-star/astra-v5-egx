@@ -1,0 +1,5445 @@
+{
+  "schemaVersion": "12.9.0",
+  "ticker": "EGBE",
+  "companyNameAr": "البنك المصري الخليجي",
+  "companyNameEn": "Egyptian Gulf Bank",
+  "isin": "EGS60182C010",
+  "reutersCode": "EGBE.CA",
+  "yahooSymbol": "EGBE.CA",
+  "currency": "EGP",
+  "exchange": "EGX",
+  "generatedAt": "2026-09-29T00:00:33.636Z",
+  "availableSessions": 154,
+  "firstSession": "2026-02-04",
+  "lastSession": "2026-10-01",
+  "historyStatus": "historical_complete_100",
+  "primarySource": "mixed_history_with_starta_ohlc_api",
+  "verificationSources": [
+    "starta_egx_database_identity"
+  ],
+  "officiallyVerifiedLatestSession": false,
+  "symbolVerified": true,
+  "symbolVerification": {
+    "verified": true,
+    "policy": "historical_seed_ticker_map_match",
+    "identityConfidence": 80,
+    "priceOfficiallyVerified": false,
+    "source": "kaggle_yahoo_seed"
+  },
+  "averageConfidence": 74.9,
+  "staleData": false,
+  "updateFailed": false,
+  "warnings": [
+    "historical_seed_not_officially_verified",
+    "historical_seed_rows_quarantined:21",
+    "starta_ohlc_gap_completion_applied",
+    "non_official_public_database_fallback",
+    "not_independently_verified_by_egx"
+  ],
+  "seedImport": {
+    "source": "kaggle_yahoo_seed",
+    "sourceUrl": "https://www.kaggle.com/datasets/mahmoudalrefaey/egx-egyptian-stocks-2021-2026",
+    "importedAt": "2026-07-10T08:50:16Z",
+    "seedValidSessions": 79,
+    "seedQuarantinedRows": 21,
+    "seedLatestSession": "2026-02-04",
+    "requiresIncrementalGapFill": true
+  },
+  "sessions": [
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-04",
+      "open": 0.399,
+      "high": 0.419,
+      "low": 0.398,
+      "close": 0.418,
+      "adjustedClose": null,
+      "volume": 1109021,
+      "currency": "EGP",
+      "primarySource": "kaggle_yahoo_seed",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "https://www.kaggle.com/datasets/mahmoudalrefaey/egx-egyptian-stocks-2021-2026",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T08:50:16Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 65,
+        "ohlc": 65,
+        "volume": 65,
+        "symbolIdentity": 80
+      },
+      "validationStatus": "historical_seed_single_source_validated",
+      "warnings": [
+        "historical_seed_single_source",
+        "historical_seed_requires_recent_gap_fill"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-05",
+      "open": 0.415,
+      "high": 0.415,
+      "low": 0.406,
+      "close": 0.414,
+      "adjustedClose": null,
+      "volume": 611171,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-08",
+      "open": 0.414,
+      "high": 0.426,
+      "low": 0.407,
+      "close": 0.407,
+      "adjustedClose": null,
+      "volume": 723935,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-09",
+      "open": 0.403,
+      "high": 0.403,
+      "low": 0.386,
+      "close": 0.394,
+      "adjustedClose": null,
+      "volume": 679002,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-10",
+      "open": 0.394,
+      "high": 0.417,
+      "low": 0.389,
+      "close": 0.413,
+      "adjustedClose": null,
+      "volume": 404673,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-11",
+      "open": 0.413,
+      "high": 0.422,
+      "low": 0.407,
+      "close": 0.413,
+      "adjustedClose": null,
+      "volume": 395063,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.239Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-12",
+      "open": 0.412,
+      "high": 0.412,
+      "low": 0.405,
+      "close": 0.41,
+      "adjustedClose": null,
+      "volume": 108705,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-15",
+      "open": 0.41,
+      "high": 0.42,
+      "low": 0.407,
+      "close": 0.412,
+      "adjustedClose": null,
+      "volume": 68044,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-16",
+      "open": 0.412,
+      "high": 0.425,
+      "low": 0.412,
+      "close": 0.42,
+      "adjustedClose": null,
+      "volume": 445797,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-17",
+      "open": 0.42,
+      "high": 0.43,
+      "low": 0.42,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 1200450,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-18",
+      "open": 0.43,
+      "high": 0.431,
+      "low": 0.426,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 225763,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-19",
+      "open": 0.43,
+      "high": 0.43,
+      "low": 0.42,
+      "close": 0.421,
+      "adjustedClose": null,
+      "volume": 75520,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-22",
+      "open": 0.421,
+      "high": 0.421,
+      "low": 0.4,
+      "close": 0.414,
+      "adjustedClose": null,
+      "volume": 263226,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-23",
+      "open": 0.414,
+      "high": 0.417,
+      "low": 0.401,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 177624,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-24",
+      "open": 0.415,
+      "high": 0.42,
+      "low": 0.408,
+      "close": 0.41,
+      "adjustedClose": null,
+      "volume": 163136,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.240Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-25",
+      "open": 0.41,
+      "high": 0.414,
+      "low": 0.397,
+      "close": 0.401,
+      "adjustedClose": null,
+      "volume": 307834,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-02-26",
+      "open": 0.401,
+      "high": 0.402,
+      "low": 0.398,
+      "close": 0.399,
+      "adjustedClose": null,
+      "volume": 121695,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-01",
+      "open": 0.395,
+      "high": 0.395,
+      "low": 0.376,
+      "close": 0.386,
+      "adjustedClose": null,
+      "volume": 516546,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-02",
+      "open": 0.386,
+      "high": 0.392,
+      "low": 0.382,
+      "close": 0.39,
+      "adjustedClose": null,
+      "volume": 737485,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-03",
+      "open": 0.39,
+      "high": 0.394,
+      "low": 0.381,
+      "close": 0.39,
+      "adjustedClose": null,
+      "volume": 8541,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-04",
+      "open": 0.39,
+      "high": 0.39,
+      "low": 0.375,
+      "close": 0.377,
+      "adjustedClose": null,
+      "volume": 465689,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-05",
+      "open": 0.377,
+      "high": 0.38,
+      "low": 0.367,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 1180383,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-08",
+      "open": 0.378,
+      "high": 0.378,
+      "low": 0.371,
+      "close": 0.378,
+      "adjustedClose": null,
+      "volume": 478696,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-09",
+      "open": 0.378,
+      "high": 0.378,
+      "low": 0.37,
+      "close": 0.37,
+      "adjustedClose": null,
+      "volume": 126984,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-10",
+      "open": 0.37,
+      "high": 0.384,
+      "low": 0.369,
+      "close": 0.378,
+      "adjustedClose": null,
+      "volume": 116325,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-11",
+      "open": 0.378,
+      "high": 0.385,
+      "low": 0.375,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 47581,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.241Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-12",
+      "open": 0.382,
+      "high": 0.389,
+      "low": 0.382,
+      "close": 0.387,
+      "adjustedClose": null,
+      "volume": 230969,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-15",
+      "open": 0.385,
+      "high": 0.385,
+      "low": 0.371,
+      "close": 0.378,
+      "adjustedClose": null,
+      "volume": 752228,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-16",
+      "open": 0.378,
+      "high": 0.38,
+      "low": 0.374,
+      "close": 0.375,
+      "adjustedClose": null,
+      "volume": 58181,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-17",
+      "open": 0.38,
+      "high": 0.387,
+      "low": 0.38,
+      "close": 0.386,
+      "adjustedClose": null,
+      "volume": 312508,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-18",
+      "open": 0.386,
+      "high": 0.395,
+      "low": 0.385,
+      "close": 0.386,
+      "adjustedClose": null,
+      "volume": 192081,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-24",
+      "open": 0.386,
+      "high": 0.392,
+      "low": 0.386,
+      "close": 0.386,
+      "adjustedClose": null,
+      "volume": 3889,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-25",
+      "open": 0.386,
+      "high": 0.386,
+      "low": 0.38,
+      "close": 0.383,
+      "adjustedClose": null,
+      "volume": 145430,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-26",
+      "open": 0.383,
+      "high": 0.39,
+      "low": 0.381,
+      "close": 0.384,
+      "adjustedClose": null,
+      "volume": 55588,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-29",
+      "open": 0.384,
+      "high": 0.385,
+      "low": 0.379,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 219326,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.242Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-30",
+      "open": 0.38,
+      "high": 0.382,
+      "low": 0.375,
+      "close": 0.375,
+      "adjustedClose": null,
+      "volume": 188041,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-03-31",
+      "open": 0.375,
+      "high": 0.382,
+      "low": 0.372,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 648511,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-01",
+      "open": 0.38,
+      "high": 0.386,
+      "low": 0.377,
+      "close": 0.379,
+      "adjustedClose": null,
+      "volume": 635320,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-02",
+      "open": 0.379,
+      "high": 0.384,
+      "low": 0.365,
+      "close": 0.367,
+      "adjustedClose": null,
+      "volume": 517125,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-05",
+      "open": 0.367,
+      "high": 0.37,
+      "low": 0.367,
+      "close": 0.368,
+      "adjustedClose": null,
+      "volume": 20181,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-06",
+      "open": 0.368,
+      "high": 0.37,
+      "low": 0.364,
+      "close": 0.366,
+      "adjustedClose": null,
+      "volume": 33209,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-07",
+      "open": 0.366,
+      "high": 0.367,
+      "low": 0.366,
+      "close": 0.366,
+      "adjustedClose": null,
+      "volume": 2800,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-08",
+      "open": 0.37,
+      "high": 0.38,
+      "low": 0.37,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 189996,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-09",
+      "open": 0.38,
+      "high": 0.386,
+      "low": 0.38,
+      "close": 0.385,
+      "adjustedClose": null,
+      "volume": 127643,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-14",
+      "open": 0.385,
+      "high": 0.388,
+      "low": 0.38,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 46848,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.243Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-15",
+      "open": 0.38,
+      "high": 0.38,
+      "low": 0.377,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 57952,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-16",
+      "open": 0.38,
+      "high": 0.38,
+      "low": 0.378,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 59191,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-19",
+      "open": 0.38,
+      "high": 0.384,
+      "low": 0.378,
+      "close": 0.379,
+      "adjustedClose": null,
+      "volume": 22376,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-20",
+      "open": 0.379,
+      "high": 0.387,
+      "low": 0.378,
+      "close": 0.385,
+      "adjustedClose": null,
+      "volume": 67566,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-21",
+      "open": 0.385,
+      "high": 0.388,
+      "low": 0.381,
+      "close": 0.382,
+      "adjustedClose": null,
+      "volume": 100740,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-22",
+      "open": 0.382,
+      "high": 0.383,
+      "low": 0.373,
+      "close": 0.374,
+      "adjustedClose": null,
+      "volume": 229764,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-23",
+      "open": 0.377,
+      "high": 0.381,
+      "low": 0.377,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 55953,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-26",
+      "open": 0.38,
+      "high": 0.38,
+      "low": 0.377,
+      "close": 0.377,
+      "adjustedClose": null,
+      "volume": 55666,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-27",
+      "open": 0.377,
+      "high": 0.378,
+      "low": 0.377,
+      "close": 0.377,
+      "adjustedClose": null,
+      "volume": 3927,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-28",
+      "open": 0.377,
+      "high": 0.38,
+      "low": 0.375,
+      "close": 0.377,
+      "adjustedClose": null,
+      "volume": 13309,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-29",
+      "open": 0.377,
+      "high": 0.382,
+      "low": 0.377,
+      "close": 0.377,
+      "adjustedClose": null,
+      "volume": 705,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.244Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-04-30",
+      "open": 0.377,
+      "high": 0.386,
+      "low": 0.377,
+      "close": 0.38,
+      "adjustedClose": null,
+      "volume": 252157,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-03",
+      "open": 0.38,
+      "high": 0.386,
+      "low": 0.378,
+      "close": 0.385,
+      "adjustedClose": null,
+      "volume": 132505,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-04",
+      "open": 0.385,
+      "high": 0.4,
+      "low": 0.385,
+      "close": 0.4,
+      "adjustedClose": null,
+      "volume": 646466,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-05",
+      "open": 0.402,
+      "high": 0.42,
+      "low": 0.402,
+      "close": 0.419,
+      "adjustedClose": null,
+      "volume": 164747,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-06",
+      "open": 0.419,
+      "high": 0.42,
+      "low": 0.414,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 245817,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-10",
+      "open": 0.415,
+      "high": 0.418,
+      "low": 0.412,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 110328,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-11",
+      "open": 0.415,
+      "high": 0.416,
+      "low": 0.407,
+      "close": 0.412,
+      "adjustedClose": null,
+      "volume": 32598,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-12",
+      "open": 0.417,
+      "high": 0.446,
+      "low": 0.417,
+      "close": 0.445,
+      "adjustedClose": null,
+      "volume": 1202965,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-13",
+      "open": 0.445,
+      "high": 0.46,
+      "low": 0.444,
+      "close": 0.459,
+      "adjustedClose": null,
+      "volume": 331208,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-14",
+      "open": 0.459,
+      "high": 0.461,
+      "low": 0.448,
+      "close": 0.46,
+      "adjustedClose": null,
+      "volume": 263504,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.245Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-17",
+      "open": 0.46,
+      "high": 0.47,
+      "low": 0.45,
+      "close": 0.464,
+      "adjustedClose": null,
+      "volume": 498965,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-18",
+      "open": 0.464,
+      "high": 0.471,
+      "low": 0.458,
+      "close": 0.47,
+      "adjustedClose": null,
+      "volume": 337678,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-19",
+      "open": 0.47,
+      "high": 0.474,
+      "low": 0.465,
+      "close": 0.465,
+      "adjustedClose": null,
+      "volume": 482417,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-20",
+      "open": 0.465,
+      "high": 0.473,
+      "low": 0.455,
+      "close": 0.455,
+      "adjustedClose": null,
+      "volume": 242866,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-21",
+      "open": 0.455,
+      "high": 0.462,
+      "low": 0.447,
+      "close": 0.461,
+      "adjustedClose": null,
+      "volume": 491568,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-24",
+      "open": 0.4523,
+      "high": 0.4572,
+      "low": 0.4523,
+      "close": 0.4543,
+      "adjustedClose": null,
+      "volume": 120351,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-05-25",
+      "open": 0.4533,
+      "high": 0.4533,
+      "low": 0.4406,
+      "close": 0.4455,
+      "adjustedClose": null,
+      "volume": 452917,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-01",
+      "open": 0.4455,
+      "high": 0.4504,
+      "low": 0.4406,
+      "close": 0.4504,
+      "adjustedClose": null,
+      "volume": 391563,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-02",
+      "open": 0.45,
+      "high": 0.46,
+      "low": 0.448,
+      "close": 0.45,
+      "adjustedClose": null,
+      "volume": 176211,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-03",
+      "open": 0.45,
+      "high": 0.455,
+      "low": 0.45,
+      "close": 0.452,
+      "adjustedClose": null,
+      "volume": 68904,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.246Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-04",
+      "open": 0.452,
+      "high": 0.459,
+      "low": 0.448,
+      "close": 0.448,
+      "adjustedClose": null,
+      "volume": 379213,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-07",
+      "open": 0.448,
+      "high": 0.449,
+      "low": 0.441,
+      "close": 0.441,
+      "adjustedClose": null,
+      "volume": 80887,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-08",
+      "open": 0.444,
+      "high": 0.45,
+      "low": 0.444,
+      "close": 0.445,
+      "adjustedClose": null,
+      "volume": 218211,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-09",
+      "open": 0.445,
+      "high": 0.455,
+      "low": 0.445,
+      "close": 0.448,
+      "adjustedClose": null,
+      "volume": 33367,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-10",
+      "open": 0.445,
+      "high": 0.445,
+      "low": 0.438,
+      "close": 0.44,
+      "adjustedClose": null,
+      "volume": 227128,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-11",
+      "open": 0.44,
+      "high": 0.44,
+      "low": 0.437,
+      "close": 0.437,
+      "adjustedClose": null,
+      "volume": 119876,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-14",
+      "open": 0.437,
+      "high": 0.44,
+      "low": 0.436,
+      "close": 0.44,
+      "adjustedClose": null,
+      "volume": 54271,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-15",
+      "open": 0.44,
+      "high": 0.44,
+      "low": 0.431,
+      "close": 0.431,
+      "adjustedClose": null,
+      "volume": 128633,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-16",
+      "open": 0.432,
+      "high": 0.44,
+      "low": 0.432,
+      "close": 0.44,
+      "adjustedClose": null,
+      "volume": 128236,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-17",
+      "open": 0.439,
+      "high": 0.44,
+      "low": 0.436,
+      "close": 0.44,
+      "adjustedClose": null,
+      "volume": 65115,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.247Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-21",
+      "open": 0.438,
+      "high": 0.44,
+      "low": 0.436,
+      "close": 0.439,
+      "adjustedClose": null,
+      "volume": 31200,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-22",
+      "open": 0.438,
+      "high": 0.439,
+      "low": 0.436,
+      "close": 0.436,
+      "adjustedClose": null,
+      "volume": 60506,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.887Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-23",
+      "open": 0.436,
+      "high": 0.443,
+      "low": 0.436,
+      "close": 0.442,
+      "adjustedClose": null,
+      "volume": 215721,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-24",
+      "open": 0.443,
+      "high": 0.445,
+      "low": 0.437,
+      "close": 0.445,
+      "adjustedClose": null,
+      "volume": 38147,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-25",
+      "open": 0.444,
+      "high": 0.46,
+      "low": 0.444,
+      "close": 0.46,
+      "adjustedClose": null,
+      "volume": 375810,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-28",
+      "open": 0.459,
+      "high": 0.47,
+      "low": 0.447,
+      "close": 0.448,
+      "adjustedClose": null,
+      "volume": 401318,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-29",
+      "open": 0.448,
+      "high": 0.456,
+      "low": 0.447,
+      "close": 0.448,
+      "adjustedClose": null,
+      "volume": 200277,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-06-30",
+      "open": 0.448,
+      "high": 0.459,
+      "low": 0.445,
+      "close": 0.446,
+      "adjustedClose": null,
+      "volume": 254258,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-01",
+      "open": 0.446,
+      "high": 0.456,
+      "low": 0.445,
+      "close": 0.455,
+      "adjustedClose": null,
+      "volume": 17684,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.248Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-05",
+      "open": 0.453,
+      "high": 0.458,
+      "low": 0.453,
+      "close": 0.457,
+      "adjustedClose": null,
+      "volume": 56154,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.249Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-06",
+      "open": 0.456,
+      "high": 0.465,
+      "low": 0.455,
+      "close": 0.458,
+      "adjustedClose": null,
+      "volume": 161087,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.249Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-07",
+      "open": 0.458,
+      "high": 0.461,
+      "low": 0.45,
+      "close": 0.45,
+      "adjustedClose": null,
+      "volume": 150073,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.249Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-08",
+      "open": 0.45,
+      "high": 0.457,
+      "low": 0.45,
+      "close": 0.451,
+      "adjustedClose": null,
+      "volume": 49600,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.249Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-07-09",
+      "open": 0.451,
+      "high": 0.461,
+      "low": 0.451,
+      "close": 0.46,
+      "adjustedClose": null,
+      "volume": 111779,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:14:53.886Z",
+      "validatedAt": "2026-07-10T10:14:54.249Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "sessionDate": "2026-07-15",
+      "open": 0.45,
+      "high": 0.46,
+      "low": 0.45,
+      "close": 0.45,
+      "volume": 21160,
+      "turnover": 9480.39,
+      "valueTraded": 9480.39,
+      "previousClose": 0.45,
+      "changePct": -0.89,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-15T02:58:02.293Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-16",
+      "sessionDate": "2026-07-16",
+      "open": 0.44,
+      "high": 0.46,
+      "low": 0.44,
+      "close": 0.46,
+      "volume": 422529,
+      "turnover": 191641.55,
+      "valueTraded": 191641.55,
+      "previousClose": 0.44,
+      "changePct": 4.31,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-16T12:57:06.467Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-19",
+      "sessionDate": "2026-07-19",
+      "open": 0.46,
+      "high": 0.47,
+      "low": 0.45,
+      "close": 0.47,
+      "volume": 296950,
+      "turnover": 137208.39,
+      "valueTraded": 137208.39,
+      "previousClose": 0.46,
+      "changePct": 1.09,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-19T13:13:18.637Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-21",
+      "sessionDate": "2026-07-21",
+      "open": 0.48,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.48,
+      "volume": 236387,
+      "turnover": 115102.45,
+      "valueTraded": 115102.45,
+      "previousClose": 0.48,
+      "changePct": 1.25,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-21T18:28:06.195Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-22",
+      "sessionDate": "2026-07-22",
+      "open": 0.48,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.48,
+      "volume": 243088,
+      "turnover": 117882.98,
+      "valueTraded": 117882.98,
+      "previousClose": 0.48,
+      "changePct": 0.21,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-22T12:14:45.641Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-23",
+      "sessionDate": "2026-07-23",
+      "open": 0.48,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.48,
+      "volume": 243088,
+      "turnover": 117882.98,
+      "valueTraded": 117882.98,
+      "previousClose": 0.48,
+      "changePct": 0.21,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-23T12:12:58.639Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-27",
+      "sessionDate": "2026-07-27",
+      "open": 0.49,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.49,
+      "volume": 232802,
+      "turnover": 113670.8,
+      "valueTraded": 113670.8,
+      "previousClose": 0.49,
+      "changePct": 0.41,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-27T12:44:27.505Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-28",
+      "sessionDate": "2026-07-28",
+      "open": 0.49,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.48,
+      "volume": 174208,
+      "turnover": 84268.8,
+      "valueTraded": 84268.8,
+      "previousClose": 0.49,
+      "changePct": -2.64,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-28T12:51:00.689Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-29",
+      "sessionDate": "2026-07-29",
+      "open": 0.48,
+      "high": 0.48,
+      "low": 0.47,
+      "close": 0.47,
+      "volume": 249510,
+      "turnover": 118473.12,
+      "valueTraded": 118473.12,
+      "previousClose": 0.48,
+      "changePct": -1.04,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-29T13:06:40.293Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-30",
+      "sessionDate": "2026-07-30",
+      "open": 0.47,
+      "high": 0.49,
+      "low": 0.47,
+      "close": 0.48,
+      "volume": 260941,
+      "turnover": 123413.56,
+      "valueTraded": 123413.56,
+      "previousClose": 0.47,
+      "changePct": 0.42,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-07-30T12:15:02.290Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-02",
+      "open": 0.48,
+      "high": 0.48,
+      "low": 0.47,
+      "close": 0.47,
+      "adjustedClose": 0.47,
+      "volume": 75014,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-02T23:28:06.102Z",
+      "validatedAt": "2026-08-02T23:29:01.558Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.48,
+      "jumpPct": 2.08
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-03",
+      "open": 0.47,
+      "high": 0.49,
+      "low": 0.47,
+      "close": 0.48,
+      "adjustedClose": 0.48,
+      "volume": 129771,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-03T21:40:41.387Z",
+      "validatedAt": "2026-08-03T21:41:52.107Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.47,
+      "jumpPct": 2.13
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-04",
+      "open": 0.48,
+      "high": 0.49,
+      "low": 0.48,
+      "close": 0.49,
+      "adjustedClose": 0.49,
+      "volume": 121303,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-04T21:48:56.843Z",
+      "validatedAt": "2026-08-04T21:50:10.323Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.48,
+      "jumpPct": 2.08
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-05",
+      "open": 0.49,
+      "high": 0.49,
+      "low": 0.49,
+      "close": 0.49,
+      "adjustedClose": 0.49,
+      "volume": 232681,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-05T21:46:51.260Z",
+      "validatedAt": "2026-08-05T21:48:11.726Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.49,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-06",
+      "open": 0.49,
+      "high": 0.57,
+      "low": 0.49,
+      "close": 0.55,
+      "adjustedClose": 0.55,
+      "volume": 946671,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-06T15:26:36.886Z",
+      "validatedAt": "2026-08-06T15:27:33.743Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.49,
+      "jumpPct": 12.24
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-09",
+      "open": 0.55,
+      "high": 0.58,
+      "low": 0.55,
+      "close": 0.58,
+      "adjustedClose": 0.58,
+      "volume": 402354,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-09T21:02:41.219Z",
+      "validatedAt": "2026-08-09T21:04:28.210Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.55,
+      "jumpPct": 5.45
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-10",
+      "open": 0.58,
+      "high": 0.58,
+      "low": 0.56,
+      "close": 0.56,
+      "adjustedClose": 0.56,
+      "volume": 293590,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-10T21:12:50.723Z",
+      "validatedAt": "2026-08-10T21:13:56.858Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.58,
+      "jumpPct": 3.45
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-11",
+      "open": 0.56,
+      "high": 0.57,
+      "low": 0.56,
+      "close": 0.56,
+      "adjustedClose": 0.56,
+      "volume": 478472,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-11T21:21:39.224Z",
+      "validatedAt": "2026-08-11T21:22:45.041Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.56,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-12",
+      "open": 0.56,
+      "high": 0.57,
+      "low": 0.51,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 933054,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-12T21:19:09.699Z",
+      "validatedAt": "2026-08-12T21:20:28.985Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.56,
+      "jumpPct": 5.36
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-13",
+      "sourceSessionDate": "2026-08-13",
+      "sourceMarketTime": "13 August 01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-14T16:47:00.404Z",
+      "open": 0.53,
+      "high": 0.55,
+      "low": 0.52,
+      "close": 0.55,
+      "adjustedClose": 0.55,
+      "volume": 208280,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-14T16:45:23.475Z",
+      "validatedAt": "2026-08-14T16:47:02.438Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 3.77
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-16",
+      "sourceSessionDate": "2026-08-16",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": "mubasher_volume_statistics_explicit_date_volume_match",
+      "sourceSessionCheckedAt": "2026-08-17T07:20:46.435Z",
+      "open": 0.55,
+      "high": 0.55,
+      "low": 0.53,
+      "close": 0.54,
+      "adjustedClose": 0.54,
+      "volume": 445502,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_volume_statistics_explicit_date_volume_match"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-17T07:18:43.624Z",
+      "validatedAt": "2026-08-17T07:20:48.024Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.55,
+      "jumpPct": 1.82
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-17",
+      "sourceSessionDate": "2026-08-17",
+      "sourceMarketTime": "17 August 01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-17T21:39:33.917Z",
+      "open": 0.54,
+      "high": 0.55,
+      "low": 0.53,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 224611,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-17T21:38:05.748Z",
+      "validatedAt": "2026-08-17T21:39:34.631Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.54,
+      "jumpPct": 1.85
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-18",
+      "sourceSessionDate": "2026-08-18",
+      "sourceMarketTime": "01:26 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-18T20:52:04.192Z",
+      "open": 0.53,
+      "high": 0.55,
+      "low": 0.52,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 763421,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-18T20:50:21.678Z",
+      "validatedAt": "2026-08-18T20:52:04.309Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 1.89
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-19",
+      "sourceSessionDate": "2026-08-19",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-19T20:56:12.672Z",
+      "open": 0.52,
+      "high": 0.53,
+      "low": 0.52,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 378374,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-19T20:54:57.527Z",
+      "validatedAt": "2026-08-19T20:56:12.792Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 78,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "partial_ohlc_reconstructed_from_close_or_previous_close"
+      ],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 1.92
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-20",
+      "sourceSessionDate": "2026-08-20",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-20T20:58:32.790Z",
+      "open": 0.53,
+      "high": 0.55,
+      "low": 0.53,
+      "close": 0.55,
+      "adjustedClose": 0.55,
+      "volume": 1275153,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-20T20:57:24.752Z",
+      "validatedAt": "2026-08-20T20:58:33.259Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 3.77
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-23",
+      "sourceSessionDate": "2026-08-23",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-23T20:51:14.136Z",
+      "open": 0.55,
+      "high": 0.56,
+      "low": 0.54,
+      "close": 0.55,
+      "adjustedClose": 0.55,
+      "volume": 255817,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-23T20:49:46.605Z",
+      "validatedAt": "2026-08-23T20:51:14.878Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.55,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-24",
+      "sourceSessionDate": "2026-08-24",
+      "sourceMarketTime": "24 August 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-24T21:00:51.266Z",
+      "open": 0.55,
+      "high": 0.56,
+      "low": 0.54,
+      "close": 0.54,
+      "adjustedClose": 0.54,
+      "volume": 360115,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-24T20:59:30.987Z",
+      "validatedAt": "2026-08-24T21:00:51.903Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.55,
+      "jumpPct": 1.82
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-25",
+      "sourceSessionDate": "2026-08-25",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-25T20:59:44.710Z",
+      "open": 0.54,
+      "high": 0.55,
+      "low": 0.54,
+      "close": 0.54,
+      "adjustedClose": 0.54,
+      "volume": 84209,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-25T20:57:57.708Z",
+      "validatedAt": "2026-08-25T20:59:45.269Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.54,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-26",
+      "sourceSessionDate": "2026-08-26",
+      "sourceMarketTime": "26 August 01:10 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-27T00:02:34.307Z",
+      "open": 0.54,
+      "high": 0.55,
+      "low": 0.53,
+      "close": 0.54,
+      "adjustedClose": 0.54,
+      "volume": 266717,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-27T00:01:23.451Z",
+      "validatedAt": "2026-08-27T00:02:34.954Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.54,
+      "jumpPct": 0
+    },
+    {
+      "date": "2026-08-27",
+      "sessionDate": "2026-08-27",
+      "open": 0.54,
+      "high": 0.55,
+      "low": 0.53,
+      "close": 0.54,
+      "volume": 266717,
+      "turnover": 143345.28,
+      "valueTraded": 143345.28,
+      "previousClose": 0.54,
+      "changePct": 0.94,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+      "fetchedAt": "2026-08-27T17:10:35.823Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-30",
+      "sourceSessionDate": "2026-08-30",
+      "sourceMarketTime": "30 August 01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-30T21:24:02.509Z",
+      "open": 0.54,
+      "high": 0.54,
+      "low": 0.53,
+      "close": 0.54,
+      "adjustedClose": 0.54,
+      "volume": 175539,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-30T21:23:00.918Z",
+      "validatedAt": "2026-08-30T21:24:02.615Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.54,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-08-31",
+      "sourceSessionDate": "2026-08-31",
+      "sourceMarketTime": "31 August 01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-31T23:20:55.878Z",
+      "open": 0.54,
+      "high": 0.54,
+      "low": 0.52,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 426928,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-31T23:19:20.789Z",
+      "validatedAt": "2026-08-31T23:20:56.650Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.54,
+      "jumpPct": 1.85
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-01",
+      "sourceSessionDate": "2026-09-01",
+      "sourceMarketTime": "1 September 01:11 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-01T22:45:11.572Z",
+      "open": 0.53,
+      "high": 0.54,
+      "low": 0.53,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 69539,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-01T22:44:12.929Z",
+      "validatedAt": "2026-09-01T22:45:12.120Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-02",
+      "sourceSessionDate": "2026-09-02",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-02T17:16:40.516Z",
+      "open": 0.53,
+      "high": 0.53,
+      "low": 0.53,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 37650,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-02T17:15:19.773Z",
+      "validatedAt": "2026-09-02T17:16:41.299Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-03",
+      "sourceSessionDate": "2026-09-03",
+      "sourceMarketTime": "01:12 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-03T20:03:35.523Z",
+      "open": 0.53,
+      "high": 0.53,
+      "low": 0.53,
+      "close": 0.53,
+      "adjustedClose": 0.53,
+      "volume": 80623,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-03T20:02:19.801Z",
+      "validatedAt": "2026-09-03T20:03:36.249Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-06",
+      "sourceSessionDate": "2026-09-06",
+      "sourceMarketTime": "01:01 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-06T20:43:29.809Z",
+      "open": 0.53,
+      "high": 0.53,
+      "low": 0.52,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 41117,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-06T20:42:19.495Z",
+      "validatedAt": "2026-09-06T20:43:30.401Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.53,
+      "jumpPct": 1.89
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-07",
+      "sourceSessionDate": "2026-09-07",
+      "sourceMarketTime": "7 September 01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-07T21:48:11.160Z",
+      "open": 0.52,
+      "high": 0.53,
+      "low": 0.52,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 132798,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-07T21:47:09.321Z",
+      "validatedAt": "2026-09-07T21:48:11.679Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-08",
+      "sourceSessionDate": "2026-09-08",
+      "sourceMarketTime": "8 September 01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-08T23:00:18.431Z",
+      "open": 0.52,
+      "high": 0.53,
+      "low": 0.51,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 216912,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-08T22:58:45.888Z",
+      "validatedAt": "2026-09-08T23:00:18.560Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-09",
+      "sourceSessionDate": "2026-09-09",
+      "sourceMarketTime": "01:03 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum",
+      "sourceSessionCheckedAt": "2026-09-09T12:21:04.934Z",
+      "open": 0.52,
+      "high": 0.52,
+      "low": 0.51,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 67832,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-09T12:19:34.218Z",
+      "validatedAt": "2026-09-09T12:21:05.062Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 1.92
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-10",
+      "sourceSessionDate": "2026-09-10",
+      "sourceMarketTime": "10 September 01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-10T22:48:40.572Z",
+      "open": 0.51,
+      "high": 0.52,
+      "low": 0.51,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 46990,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-10T22:47:42.622Z",
+      "validatedAt": "2026-09-10T22:48:41.140Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 1.96
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-13",
+      "sourceSessionDate": "2026-09-13",
+      "sourceMarketTime": "13 September 01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-13T21:13:08.972Z",
+      "open": 0.52,
+      "high": 0.52,
+      "low": 0.51,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 178592,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-13T21:11:36.756Z",
+      "validatedAt": "2026-09-13T21:13:09.100Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 1.92
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-14",
+      "sourceSessionDate": "2026-09-14",
+      "sourceMarketTime": "14 September 01:26 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-14T21:08:54.811Z",
+      "open": 0.51,
+      "high": 0.51,
+      "low": 0.49,
+      "close": 0.49,
+      "adjustedClose": 0.49,
+      "volume": 177054,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-14T21:07:54.262Z",
+      "validatedAt": "2026-09-14T21:08:54.937Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 3.92
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-15",
+      "sourceSessionDate": "2026-09-15",
+      "sourceMarketTime": "15 September 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-15T23:15:02.220Z",
+      "open": 0.49,
+      "high": 0.51,
+      "low": 0.49,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 165636,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-15T23:14:00.172Z",
+      "validatedAt": "2026-09-15T23:15:02.354Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.49,
+      "jumpPct": 4.08
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-16",
+      "sourceSessionDate": "2026-09-16",
+      "sourceMarketTime": "16 September 01:11 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-16T22:23:58.445Z",
+      "open": 0.51,
+      "high": 0.51,
+      "low": 0.5,
+      "close": 0.5,
+      "adjustedClose": 0.5,
+      "volume": 38650,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-16T22:23:03.437Z",
+      "validatedAt": "2026-09-16T22:23:59.090Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 1.96
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-17",
+      "sourceSessionDate": "2026-09-17",
+      "sourceMarketTime": "17 September 01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-17T23:10:06.370Z",
+      "open": 0.5,
+      "high": 0.51,
+      "low": 0.5,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 239505,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-17T23:08:42.549Z",
+      "validatedAt": "2026-09-17T23:10:07.101Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.5,
+      "jumpPct": 2
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-20",
+      "sourceSessionDate": "2026-09-20",
+      "sourceMarketTime": "20 September 01:25 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-20T21:09:02.542Z",
+      "open": 0.51,
+      "high": 0.51,
+      "low": 0.5,
+      "close": 0.5,
+      "adjustedClose": 0.5,
+      "volume": 232958,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-20T21:07:51.900Z",
+      "validatedAt": "2026-09-20T21:09:02.674Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 1.96
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-21",
+      "sourceSessionDate": "2026-09-21",
+      "sourceMarketTime": "21 September 01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-21T21:22:24.849Z",
+      "open": 0.5,
+      "high": 0.51,
+      "low": 0.5,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 103736,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-21T21:21:10.915Z",
+      "validatedAt": "2026-09-21T21:22:25.429Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.5,
+      "jumpPct": 2
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-22",
+      "sourceSessionDate": "2026-09-22",
+      "sourceMarketTime": "22 September 01:12 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-22T23:21:42.797Z",
+      "open": 0.51,
+      "high": 0.52,
+      "low": 0.5,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 153731,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-22T23:20:16.952Z",
+      "validatedAt": "2026-09-22T23:21:43.534Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 1.96
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-24",
+      "sourceSessionDate": "2026-09-24",
+      "sourceMarketTime": "24 September 01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-24T23:31:33.844Z",
+      "open": 0.52,
+      "high": 0.53,
+      "low": 0.5,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 1297345,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-24T23:30:05.271Z",
+      "validatedAt": "2026-09-24T23:31:34.614Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-27",
+      "sourceSessionDate": "2026-09-27",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": "mubasher_volume_statistics_explicit_date_volume_match",
+      "sourceSessionCheckedAt": "2026-09-28T06:56:19.616Z",
+      "open": 0.52,
+      "high": 0.52,
+      "low": 0.5,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 204720,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_volume_statistics_explicit_date_volume_match"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-28T06:55:12.398Z",
+      "validatedAt": "2026-09-28T06:56:20.272Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-28",
+      "sourceSessionDate": "2026-09-28",
+      "sourceMarketTime": "28 September 01:07 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-29T00:00:32.484Z",
+      "open": 0.52,
+      "high": 0.52,
+      "low": 0.5,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 100909,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-28T23:59:31.819Z",
+      "validatedAt": "2026-09-29T00:00:33.187Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 1.92
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-29",
+      "sourceSessionDate": "2026-09-29",
+      "sourceMarketTime": "29 September 01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "open": 0.51,
+      "high": 0.52,
+      "low": 0.51,
+      "close": 0.51,
+      "adjustedClose": 0.51,
+      "volume": 14150,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-29T21:36:26.570Z",
+      "validatedAt": "2026-09-29T21:37:25.945Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 0.0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-09-30",
+      "sourceSessionDate": "2026-09-30",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum",
+      "open": 0.51,
+      "high": 0.52,
+      "low": 0.51,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 42597,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/EGBE/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-30T17:50:47.808Z",
+      "validatedAt": "2026-09-30T17:52:09.640Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.51,
+      "jumpPct": 1.96
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-10-01",
+      "sourceSessionDate": "2026-10-01",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.52,
+      "high": 0.53,
+      "low": 0.52,
+      "close": 0.52,
+      "adjustedClose": 0.52,
+      "volume": 427565,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-02T09:03:38.589Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:21"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.52,
+      "jumpPct": 0.0
+    }
+  ],
+  "lastUpdateError": "Yahoo history failed for EGBE: EGBE.CA: identity score 65",
+  "startaGapCompletion": {
+    "importedAt": "2026-07-10T10:14:54.249Z",
+    "source": "starta_ohlc_api",
+    "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGBE?period=1y&limit=500",
+    "identityEvidence": {
+      "verified": true,
+      "exactSymbol": true,
+      "egxMarket": true,
+      "nameAccepted": true,
+      "nameSimilarity": 1,
+      "identity": {
+        "symbol": "EGBE",
+        "marketCode": "EGX",
+        "nameEn": "Egyptian Gulf Bank",
+        "nameAr": "البنك المصري الخليجي",
+        "lastPrice": 0.46,
+        "raw": {
+          "symbol": "EGBE",
+          "name_ar": "البنك المصري الخليجي",
+          "name_en": "Egyptian Gulf Bank",
+          "market_code": "EGX",
+          "sector_name": "Finance",
+          "currency": "USD",
+          "last_price": 0.46,
+          "change": 0.009,
+          "change_percent": 1.9956,
+          "volume": 111779,
+          "last_updated": "2026-07-09T17:26:16.711661+00:00",
+          "open_price": null,
+          "pe_ratio": 3.0046,
+          "pb_ratio": 0.8491,
+          "dividend_yield": 2.5432,
+          "beta": 0.3893,
+          "high_52w": 0.47,
+          "low_52w": 0.2418,
+          "target_price": null,
+          "market_cap": 11891179499,
+          "high": null,
+          "low": null,
+          "prev_close": null,
+          "revenue": 10756296587,
+          "net_income": 3608955259,
+          "industry": "Commercial Banks",
+          "logo_url": "https://s3-symbol-logo.tradingview.com/egyptian-gulf-bank.svg",
+          "isin": "EGS60182C010",
+          "recommend_all": null,
+          "source": "tradingview",
+          "updated_at": "2026-07-09T17:26:21.032349+00:00",
+          "forward_pe": null,
+          "float_shares_percent": 73.45980000000002,
+          "float_shares": 382723354.20600003,
+          "shareholders_count": null
+        }
+      },
+      "warnings": []
+    },
+    "overlap": {
+      "overlapCount": 79,
+      "matches": 79,
+      "ratio": 1,
+      "accepted": true,
+      "samples": [
+        {
+          "date": "2026-01-18",
+          "existingClose": 0.33000001311302185,
+          "incomingClose": 0.33,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-19",
+          "existingClose": 0.35199999809265137,
+          "incomingClose": 0.352,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-20",
+          "existingClose": 0.3499999940395355,
+          "incomingClose": 0.35,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-21",
+          "existingClose": 0.3499999940395355,
+          "incomingClose": 0.35,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-22",
+          "existingClose": 0.3540000021457672,
+          "incomingClose": 0.354,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-26",
+          "existingClose": 0.3720000088214874,
+          "incomingClose": 0.372,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-27",
+          "existingClose": 0.375,
+          "incomingClose": 0.375,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-28",
+          "existingClose": 0.37700000405311584,
+          "incomingClose": 0.377,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-02-03",
+          "existingClose": 0.39899998903274536,
+          "incomingClose": 0.399,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-02-04",
+          "existingClose": 0.4180000126361847,
+          "incomingClose": 0.418,
+          "differencePct": 0,
+          "matched": true
+        }
+      ]
+    },
+    "rowsReceived": 251,
+    "rowsAccepted": 99,
+    "confidenceCap": 75
+  },
+  "sessionsCount": 154,
+  "updatedAt": "2026-10-02T22:39:33.901793+03:00",
+  "lastUpdateSource": "daily_update:session_pack",
+  "priceTruthLatest": {
+    "date": "2026-09-28",
+    "close": 0.51,
+    "source": "mubasher_symbol_pages_precise_enriched",
+    "validationStatus": "precise_public_source_session_confirmed",
+    "confidence": 86,
+    "sourceSessionDate": "2026-09-28"
+  }
+}

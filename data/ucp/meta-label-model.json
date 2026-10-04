@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "rasheed-egx-meta-label-model/v1",
+  "modelVersion": "bootstrap-not-calibrated",
+  "status": "NOT_CALIBRATED",
+  "generatedAt": "2026-10-02T11:00:00.000Z",
+  "target": "TARGET1_BEFORE_STOP_WITHIN_MAX_HOLD",
+  "features": [
+    "technicalScore",
+    "researchScore",
+    "liquidityScore",
+    "supportResistanceScore",
+    "dataQualityScore",
+    "structuralNetRR",
+    "stopRiskPct",
+    "openingGapPct",
+    "relativeVolumeRatio",
+    "relativeTurnoverRatio",
+    "marketBreadthPct",
+    "priceAcceptancePass",
+    "openingGapPass",
+    "marketBreadthPass",
+    "regimeScore",
+    "regimeRiskMultiplier"
+  ],
+  "trainingSample": {
+    "prospectiveOnly": true,
+    "resolvedTrades": 0,
+    "forwardSessions": 0,
+    "observedCalendarDays": 0
+  },
+  "intercept": null,
+  "coefficients": {},
+  "normalization": {},
+  "safety": {
+    "probabilityPublished": false,
+    "expectedValuePublished": false,
+    "usedForSelection": false,
+    "executionAllowed": false,
+    "automaticTrainingPromotionAllowed": false
+  },
+  "notes": [
+    "No probability is emitted until prospective out-of-sample calibration requirements are met.",
+    "Retrospective performance is not used to masquerade as calibrated probability.",
+    "Model failure or missing inputs must never affect ASTRA/UCP availability."
+  ]
+}

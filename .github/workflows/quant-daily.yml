@@ -1,0 +1,59 @@
+name: ASTRA Quant Lane (daily)
+
+on:
+  # يعمل بعد نجاح تحديث بيانات ASTRA الذري، ولديه جدولة احتياطية بعد الإغلاق (14:30 القاهرة + سماح) الأحد–الخميس.
+  workflow_run:
+    workflows: ["Daily EGX Data Refresh"]
+    types: [completed]
+  schedule:
+    - cron: "40 12,13,14,15 * * 0-4"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "تجاوز ALREADY_CURRENT / SKIP_EARLY"
+        type: boolean
+        default: false
+
+concurrency:
+  group: astra-quant-lane
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  quant:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip, cache-dependency-path: quant/requirements.txt }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: pip install -r quant/requirements.txt
+      - name: Tests (Node + Python)
+        run: |
+          npm test
+          npm run quant:test
+      - name: Bridge ASTRA atomic store -> session pack
+        run: python quant/tools/astra_bridge.py
+      - name: Guarded daily update + Stage 1 (quant engine)
+        working-directory: quant
+        run: python fetch/daily_update.py --no-yahoo ${{ inputs.force == true && '--force' || '' }}
+      - name: Publish astra-quant/v1 payload
+        working-directory: quant
+        run: python publish.py
+      - name: Build static site (GitHub Pages /docs)
+        run: python quant/web/build.py
+      - name: Validate published contract
+        run: node scripts/quant-validation.js
+      - name: Commit only if something really changed
+        run: |
+          git config user.name "astra-quant-bot"; git config user.email "astra-quant-bot@users.noreply.github.com"
+          git add -A data/quant quant/data docs
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          S=$(python -c "import json;print(json.load(open('data/quant/signals.json'))['session'])")
+          git commit -m "Quant lane: session $S"
+          git pull --rebase origin ${{ github.ref_name }} && git push

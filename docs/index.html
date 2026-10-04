@@ -1,0 +1,1670 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>EGX NEXT — ترتيب الفرص</title>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0e1116"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="EGX NEXT">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#14181f;--mut:#667085;--bd:#e3e6eb;--ok:#0a7d4f;--warn:#b26a00;--bad:#c0392b;--acc:#1d4ed8}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1116;--card:#171b22;--tx:#e8ebf0;--mut:#8b95a5;--bd:#272d38;--ok:#3ecf8e;--warn:#f0a93b;--bad:#ff6b5e;--acc:#6ea0ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,"Segoe UI",Tahoma,sans-serif;padding:env(safe-area-inset-top,0) 12px 24px;line-height:1.6}
+.w{max-width:980px;margin:auto}h1{font-size:20px;margin:16px 0 4px}h2{font-size:16px;margin:22px 0 8px}
+.mut{color:var(--mut);font-size:13px}.row{display:flex;gap:8px;flex-wrap:wrap}
+.k{flex:1 1 130px;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}.k b{display:block;font-size:19px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin:8px 0}
+.h{display:flex;justify-content:space-between;align-items:center;gap:8px}.t{font-size:17px;font-weight:700}
+.tag{border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700;border:1px solid}
+.A{color:var(--ok)}.B{color:var(--warn)}.C{color:var(--mut)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px;margin-top:8px;font-size:13px}.g div{background:var(--bg);border-radius:8px;padding:6px 8px}.g b{display:block;font-size:15px}
+.bar{height:6px;background:var(--bd);border-radius:4px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.al{background:color-mix(in srgb,var(--warn) 12%,var(--card));border:1px solid var(--warn);border-radius:10px;padding:10px 12px;font-size:13px;margin:10px 0}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:5px 8px;border-bottom:1px solid var(--bd);text-align:center;white-space:nowrap}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+</style></head><body><div class="w" id="app"></div>
+<script>
+const D={
+ "engine": "EGX-NEXT-V2.1",
+ "generated": "2026-10-02T19:43:16.653385+00:00",
+ "session": "2026-10-01",
+ "expected_session": "2026-10-01",
+ "stale": false,
+ "stale_lag_sessions": 0,
+ "universe": 154,
+ "symbols": 170,
+ "excluded": {
+  "AFMC": [
+   "تاريخ قصير (46 جلسة)"
+  ],
+  "AMES": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "BIOC": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)",
+   "تاريخ قصير (34 جلسة)"
+  ],
+  "CAED": [
+   "تاريخ قصير (55 جلسة)"
+  ],
+  "CANA": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "CFGH": [
+   "حالة تاريخ: current_session_only_second_source_seed",
+   "تاريخ قصير (14 جلسة)"
+  ],
+  "DAPH": [
+   "تاريخ قصير (25 جلسة)"
+  ],
+  "DTPP": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "EGSA": [
+   "بيانات غير موثّقة/بها فجوات",
+   "تاريخ قصير (15 جلسة)"
+  ],
+  "EGTS": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "ELSH": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "EOSB": [
+   "تاريخ قصير (1 جلسة)"
+  ],
+  "ESRS": [
+   "eligibleForDecision=false",
+   "مشطوب/موقوف",
+   "حالة تاريخ: inactive_delisted",
+   "تحذير شطب",
+   "بيانات غير موثّقة/بها فجوات"
+  ],
+  "FAITA": [
+   "بيانات غير موثّقة/بها فجوات"
+  ],
+  "GPPL": [
+   "بيانات غير موثّقة/بها فجوات"
+  ],
+  "GRCA": [
+   "تاريخ قصير (16 جلسة)"
+  ],
+  "HDBK": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "ICLE": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "KWIN": [
+   "تاريخ قصير (51 جلسة)"
+  ],
+  "LUTS": [
+   "تاريخ قصير (25 جلسة)"
+  ],
+  "MHOT": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "MILS": [
+   "تاريخ قصير (51 جلسة)"
+  ],
+  "MOSC": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "NINH": [
+   "تاريخ قصير (53 جلسة)"
+  ],
+  "OCPH": [
+   "تاريخ قصير (33 جلسة)"
+  ],
+  "ORAS": [
+   "تاريخ قصير (33 جلسة)"
+  ],
+  "PHGC": [
+   "حالة تاريخ: current_session_only_second_source_seed",
+   "تاريخ قصير (28 جلسة)"
+  ],
+  "SCTS": [
+   "إجراء مؤسسي قيد المراجعة (أسعار غير معدّلة)"
+  ],
+  "SEIGA": [
+   "تاريخ قصير (24 جلسة)"
+  ],
+  "SPHT": [
+   "بيانات غير موثّقة/بها فجوات"
+  ],
+  "TRTO": [
+   "تاريخ قصير (19 جلسة)"
+  ]
+ },
+ "excluded_unverified_last_bar": [],
+ "history_sessions": 267,
+ "regime": "هابط",
+ "breadth_pct": 17.3,
+ "market_r20_pct": -8.2,
+ "exposure_scale": 0.4,
+ "edge_found": false,
+ "recent_top5_avg_pct": -0.39,
+ "drift_guard": true,
+ "recommendations": [
+  {
+   "rank": 1,
+   "ticker": "MMAT",
+   "tier": "C",
+   "group_hit": 44.6,
+   "group_hit_low90": 39.9,
+   "evidence": {
+    "bucket": "top3",
+    "n": 287,
+    "hit": 44.6,
+    "avg": 1.31,
+    "pf": 1.66,
+    "regime_n": 21,
+    "regime_days": 9,
+    "regime_avg": 2.87
+   },
+   "stock_prob_experimental": 35.1,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (21 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "سيولة منخفضة (متوسط تداول 0.5 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 27 ألف ج",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 53.9,
+   "close": 5.69,
+   "entry_zone": [
+    5.63,
+    5.75
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 5.46,
+   "target1": 5.84,
+   "target2": 6.08,
+   "stop_pct": 4.1,
+   "target_pct": 2.7,
+   "target2_pct": 6.8,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 99,
+   "vol_ratio": 0.7,
+   "r5": 27.0,
+   "r20": 61.2,
+   "turnover_m": 0.5,
+   "liq_tier": "منخفضة",
+   "max_position_egp": 27000,
+   "setups": [
+    "اختراق",
+    "زخم بحجم",
+    "اتجاه صاعد"
+   ],
+   "horizon": 10
+  },
+  {
+   "rank": 2,
+   "ticker": "CPCI",
+   "tier": "C",
+   "group_hit": 44.6,
+   "group_hit_low90": 39.9,
+   "evidence": {
+    "bucket": "top3",
+    "n": 287,
+    "hit": 44.6,
+    "avg": 1.31,
+    "pf": 1.66,
+    "regime_n": 21,
+    "regime_days": 9,
+    "regime_avg": 2.87
+   },
+   "stock_prob_experimental": 35.1,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (21 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "سيولة منخفضة (متوسط تداول 3.7 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 183 ألف ج",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 51.0,
+   "close": 595.69,
+   "entry_zone": [
+    589.73,
+    601.65
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 571.1,
+   "target1": 612.09,
+   "target2": 636.68,
+   "stop_pct": 4.1,
+   "target_pct": 2.8,
+   "target2_pct": 6.9,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 80,
+   "vol_ratio": 2.2,
+   "r5": 6.1,
+   "r20": 9.5,
+   "turnover_m": 3.7,
+   "liq_tier": "منخفضة",
+   "max_position_egp": 183000,
+   "setups": [
+    "اختراق",
+    "زخم بحجم",
+    "اتجاه صاعد"
+   ],
+   "horizon": 10
+  },
+  {
+   "rank": 3,
+   "ticker": "MOIL",
+   "tier": "C",
+   "group_hit": 44.6,
+   "group_hit_low90": 39.9,
+   "evidence": {
+    "bucket": "top3",
+    "n": 287,
+    "hit": 44.6,
+    "avg": 1.31,
+    "pf": 1.66,
+    "regime_n": 21,
+    "regime_days": 9,
+    "regime_avg": 2.87
+   },
+   "stock_prob_experimental": 34.3,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (21 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "سيولة منخفضة (متوسط تداول 0.3 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 13 ألف ج",
+    "سعر منخفض (<2 ج): حجم الخطوة السعرية كبير نسبياً فقد لا يُنفَّذ الوقف عند مستواه",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 41.2,
+   "close": 0.71,
+   "entry_zone": [
+    0.703,
+    0.717
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 0.692,
+   "target1": 0.722,
+   "target2": 0.74,
+   "stop_pct": 2.5,
+   "target_pct": 1.7,
+   "target2_pct": 4.2,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 66,
+   "vol_ratio": 0.7,
+   "r5": 1.4,
+   "r20": 4.4,
+   "turnover_m": 0.3,
+   "liq_tier": "منخفضة",
+   "max_position_egp": 13000,
+   "setups": [
+    "اختراق",
+    "اتجاه صاعد"
+   ],
+   "horizon": 10
+  },
+  {
+   "rank": 4,
+   "ticker": "AJWA",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 34.0,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 36.9,
+   "close": 182.07,
+   "entry_zone": [
+    180.25,
+    183.89
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 175.97,
+   "target1": 186.13,
+   "target2": 192.23,
+   "stop_pct": 3.3,
+   "target_pct": 2.2,
+   "target2_pct": 5.6,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 53,
+   "vol_ratio": 0.6,
+   "r5": 0.5,
+   "r20": 1.7,
+   "turnover_m": 14.0,
+   "liq_tier": "متوسطة",
+   "max_position_egp": 701000,
+   "setups": [
+    "اختراق"
+   ],
+   "horizon": 10
+  },
+  {
+   "rank": 5,
+   "ticker": "CSAG",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 32.1,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 35.7,
+   "close": 36.5,
+   "entry_zone": [
+    36.13,
+    36.87
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 34.47,
+   "target1": 37.85,
+   "target2": 39.88,
+   "stop_pct": 5.6,
+   "target_pct": 3.7,
+   "target2_pct": 9.3,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 3.6,
+   "rsi": 42,
+   "vol_ratio": 0.4,
+   "r5": -2.7,
+   "r20": -11.4,
+   "turnover_m": 9.5,
+   "liq_tier": "متوسطة",
+   "max_position_egp": 475000,
+   "setups": [],
+   "horizon": 10
+  },
+  {
+   "rank": 6,
+   "ticker": "SNFC",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 29.9,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 32.8,
+   "close": 11.53,
+   "entry_zone": [
+    11.41,
+    11.65
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 11.07,
+   "target1": 11.84,
+   "target2": 12.3,
+   "stop_pct": 4.0,
+   "target_pct": 2.7,
+   "target2_pct": 6.7,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 62,
+   "vol_ratio": 0.8,
+   "r5": -0.1,
+   "r20": 8.6,
+   "turnover_m": 13.4,
+   "liq_tier": "متوسطة",
+   "max_position_egp": 670000,
+   "setups": [
+    "زخم بحجم",
+    "اتجاه صاعد"
+   ],
+   "horizon": 10
+  },
+  {
+   "rank": 7,
+   "ticker": "ECAP",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 29.9,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "سيولة منخفضة (متوسط تداول 4.8 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 239 ألف ج",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 32.7,
+   "close": 30.91,
+   "entry_zone": [
+    30.6,
+    31.22
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 29.45,
+   "target1": 31.89,
+   "target2": 33.35,
+   "stop_pct": 4.7,
+   "target_pct": 3.2,
+   "target2_pct": 7.9,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 40,
+   "vol_ratio": 0.8,
+   "r5": -1.1,
+   "r20": -8.1,
+   "turnover_m": 4.8,
+   "liq_tier": "منخفضة",
+   "max_position_egp": 239000,
+   "setups": [],
+   "horizon": 10
+  },
+  {
+   "rank": 8,
+   "ticker": "MPRC",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 28.9,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 32.2,
+   "close": 39.02,
+   "entry_zone": [
+    38.63,
+    39.41
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 37.43,
+   "target1": 40.08,
+   "target2": 41.66,
+   "stop_pct": 4.1,
+   "target_pct": 2.7,
+   "target2_pct": 6.8,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 44,
+   "vol_ratio": 1.0,
+   "r5": 0.1,
+   "r20": -8.6,
+   "turnover_m": 25.9,
+   "liq_tier": "عالية",
+   "max_position_egp": 1295000,
+   "setups": [],
+   "horizon": 10
+  },
+  {
+   "rank": 9,
+   "ticker": "ETRS",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 28.9,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 31.7,
+   "close": 10.5,
+   "entry_zone": [
+    10.39,
+    10.61
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 10.0,
+   "target1": 10.84,
+   "target2": 11.34,
+   "stop_pct": 4.8,
+   "target_pct": 3.2,
+   "target2_pct": 8.0,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 4.0,
+   "rsi": 44,
+   "vol_ratio": 0.4,
+   "r5": 0.2,
+   "r20": -7.6,
+   "turnover_m": 9.1,
+   "liq_tier": "متوسطة",
+   "max_position_egp": 453000,
+   "setups": [],
+   "horizon": 10
+  },
+  {
+   "rank": 10,
+   "ticker": "FERC",
+   "tier": "C",
+   "group_hit": 40.3,
+   "group_hit_low90": 37.2,
+   "evidence": {
+    "bucket": "top10",
+    "n": 642,
+    "hit": 40.3,
+    "avg": 0.79,
+    "pf": 1.4,
+    "regime_n": 42,
+    "regime_days": 7,
+    "regime_avg": -0.7
+   },
+   "stock_prob_experimental": 28.9,
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (42 صفقة/7 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "score": 31.6,
+   "close": 76.66,
+   "entry_zone": [
+    75.89,
+    77.43
+   ],
+   "entry_rule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "stop": 72.65,
+   "target1": 79.33,
+   "target2": 83.34,
+   "stop_pct": 5.2,
+   "target_pct": 3.5,
+   "target2_pct": 8.7,
+   "rr": 1.67,
+   "rr1": 0.67,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "size_pct": 3.8,
+   "rsi": 47,
+   "vol_ratio": 0.3,
+   "r5": -0.3,
+   "r20": -6.2,
+   "turnover_m": 8.5,
+   "liq_tier": "متوسطة",
+   "max_position_egp": 426000,
+   "setups": [],
+   "horizon": 10
+  }
+ ],
+ "integrity": {
+  "top5_excess_mean_pct": 0.75,
+  "top5_excess_ci90_block": [
+   -0.16,
+   1.33
+  ],
+  "folds_positive": "15/22",
+  "purge_rule": "train.end_date < test.start_date (لكل إشارة)",
+  "folds": 22,
+  "all_folds_clean": true,
+  "fill_rate_pct": 86.4,
+  "placebo": {
+   "seeds": 5,
+   "excess_list": [
+    0.38,
+    -0.16,
+    -0.53,
+    -0.08,
+    0.36
+   ],
+   "excess_mean": -0.01,
+   "excess_max": 0.38,
+   "baseline": 0.61
+  },
+  "brier": 0.2365,
+  "brier_constant": 0.2189,
+  "data_hash": "6845cc399b33bdfd",
+  "versions": {
+   "platform": "Linux-6.18.44-fc-v51-x86_64-with-glibc2.39",
+   "cpus": 1,
+   "python": "3.12.3",
+   "pandas": "3.0.2",
+   "numpy": "2.4.4",
+   "sklearn": "1.8.0"
+  }
+ },
+ "backtest": {
+  "method": "Walk-forward + تنقية بتاريخ انتهاء النتيجة + دخول عند الافتتاح داخل ±1% + فجوات بسعر الافتتاح + تكلفة 0.6% + الوقف أولاً",
+  "oos_sessions": 108,
+  "baseline_all": {
+   "n": 12680,
+   "days": 108,
+   "hit": 33.9,
+   "win": 47.5,
+   "avg": 0.61,
+   "med": -0.6,
+   "pf": 1.24
+  },
+  "calibration": {
+   "top3|صاعد": {
+    "n": 182,
+    "days": 67,
+    "hit": 45.6,
+    "win": 52.7,
+    "avg": 1.39,
+    "med": 1.84,
+    "pf": 1.69
+   },
+   "top3|متذبذب": {
+    "n": 84,
+    "days": 31,
+    "hit": 36.9,
+    "win": 51.2,
+    "avg": 0.75,
+    "med": 0.49,
+    "pf": 1.4
+   },
+   "top3|هابط": {
+    "n": 21,
+    "days": 9,
+    "hit": 66.7,
+    "win": 71.4,
+    "avg": 2.87,
+    "med": 5.02,
+    "pf": 2.31
+   },
+   "top3|الكل": {
+    "n": 287,
+    "days": 107,
+    "hit": 44.6,
+    "win": 53.7,
+    "avg": 1.31,
+    "med": 2.26,
+    "pf": 1.66
+   },
+   "top10|صاعد": {
+    "n": 407,
+    "days": 67,
+    "hit": 44.2,
+    "win": 54.3,
+    "avg": 1.13,
+    "med": 1.46,
+    "pf": 1.61
+   },
+   "top10|متذبذب": {
+    "n": 193,
+    "days": 31,
+    "hit": 31.6,
+    "win": 47.7,
+    "avg": 0.41,
+    "med": -0.32,
+    "pf": 1.2
+   },
+   "top10|هابط": {
+    "n": 42,
+    "days": 7,
+    "hit": 42.9,
+    "win": 45.2,
+    "avg": -0.7,
+    "med": -3.52,
+    "pf": 0.76
+   },
+   "top10|الكل": {
+    "n": 642,
+    "days": 105,
+    "hit": 40.3,
+    "win": 51.7,
+    "avg": 0.79,
+    "med": 0.53,
+    "pf": 1.4
+   },
+   "top25|صاعد": {
+    "n": 912,
+    "days": 67,
+    "hit": 42.2,
+    "win": 51.8,
+    "avg": 1.14,
+    "med": 0.63,
+    "pf": 1.56
+   },
+   "top25|متذبذب": {
+    "n": 421,
+    "days": 31,
+    "hit": 27.8,
+    "win": 40.6,
+    "avg": -0.05,
+    "med": -1.55,
+    "pf": 0.98
+   },
+   "top25|هابط": {
+    "n": 87,
+    "days": 7,
+    "hit": 28.7,
+    "win": 37.9,
+    "avg": -0.71,
+    "med": -3.53,
+    "pf": 0.77
+   },
+   "top25|الكل": {
+    "n": 1420,
+    "days": 105,
+    "hit": 37.1,
+    "win": 47.6,
+    "avg": 0.67,
+    "med": -0.59,
+    "pf": 1.31
+   },
+   "rest|صاعد": {
+    "n": 6555,
+    "days": 67,
+    "hit": 34.5,
+    "win": 49.0,
+    "avg": 0.9,
+    "med": -0.25,
+    "pf": 1.37
+   },
+   "rest|متذبذب": {
+    "n": 3171,
+    "days": 31,
+    "hit": 29.4,
+    "win": 43.7,
+    "avg": 0.11,
+    "med": -1.38,
+    "pf": 1.04
+   },
+   "rest|هابط": {
+    "n": 605,
+    "days": 7,
+    "hit": 31.1,
+    "win": 43.0,
+    "avg": -0.62,
+    "med": -3.26,
+    "pf": 0.83
+   },
+   "rest|الكل": {
+    "n": 10331,
+    "days": 105,
+    "hit": 32.7,
+    "win": 47.0,
+    "avg": 0.56,
+    "med": -0.72,
+    "pf": 1.22
+   }
+  },
+  "by_month_top5": [
+   {
+    "month": "2026-04",
+    "n": 33,
+    "days": 8,
+    "hit": 63.6,
+    "win": 66.7,
+    "avg": 4.28,
+    "med": 5.36,
+    "pf": 4.51
+   },
+   {
+    "month": "2026-05",
+    "n": 89,
+    "days": 21,
+    "hit": 39.3,
+    "win": 51.7,
+    "avg": 0.99,
+    "med": 0.35,
+    "pf": 1.6
+   },
+   {
+    "month": "2026-06",
+    "n": 94,
+    "days": 21,
+    "hit": 41.5,
+    "win": 54.3,
+    "avg": 1.25,
+    "med": 2.05,
+    "pf": 1.76
+   },
+   {
+    "month": "2026-07",
+    "n": 87,
+    "days": 22,
+    "hit": 55.2,
+    "win": 70.1,
+    "avg": 2.32,
+    "med": 3.57,
+    "pf": 3.09
+   },
+   {
+    "month": "2026-08",
+    "n": 100,
+    "days": 22,
+    "hit": 42.0,
+    "win": 52.0,
+    "avg": 0.98,
+    "med": 1.64,
+    "pf": 1.42
+   },
+   {
+    "month": "2026-09",
+    "n": 63,
+    "days": 13,
+    "hit": 38.1,
+    "win": 47.6,
+    "avg": -0.18,
+    "med": -0.6,
+    "pf": 0.93
+   }
+  ],
+  "reliability": [
+   {
+    "pred": 27.2,
+    "actual": 43.0,
+    "avg": 2.25,
+    "n": 1401
+   },
+   {
+    "pred": 31.9,
+    "actual": 30.1,
+    "avg": 0.03,
+    "n": 1401
+   },
+   {
+    "pred": 33.9,
+    "actual": 33.8,
+    "avg": 0.52,
+    "n": 1401
+   },
+   {
+    "pred": 35.7,
+    "actual": 49.8,
+    "avg": 2.66,
+    "n": 1401
+   },
+   {
+    "pred": 37.0,
+    "actual": 25.8,
+    "avg": -1.67,
+    "n": 1401
+   },
+   {
+    "pred": 37.9,
+    "actual": 26.4,
+    "avg": -0.7,
+    "n": 1401
+   },
+   {
+    "pred": 38.7,
+    "actual": 27.2,
+    "avg": -0.01,
+    "n": 1401
+   },
+   {
+    "pred": 52.6,
+    "actual": 22.6,
+    "avg": -0.05,
+    "n": 1401
+   }
+  ],
+  "params": {
+   "horizon": 10,
+   "stop_atr": 1.5,
+   "target_atr": 2.5,
+   "cost": 0.006,
+   "zone": 0.01
+  },
+  "top3": {
+   "n": 287,
+   "days": 107,
+   "hit": 44.6,
+   "win": 53.7,
+   "avg": 1.31,
+   "med": 2.26,
+   "pf": 1.66
+  },
+  "top5": {
+   "n": 466,
+   "days": 107,
+   "hit": 44.8,
+   "win": 56.2,
+   "avg": 1.36,
+   "med": 2.34,
+   "pf": 1.76
+  },
+  "top10": {
+   "n": 929,
+   "days": 108,
+   "hit": 41.7,
+   "win": 52.3,
+   "avg": 0.95,
+   "med": 0.78,
+   "pf": 1.48
+  }
+ },
+ "portfolio": {
+  "params": {
+   "K": 5,
+   "max_pos": 8,
+   "risk_pct": 0.5,
+   "pos_cap_pct": 10.0,
+   "adv_cap_pct": 5.0,
+   "start_equity": 1000000
+  },
+  "strategy": {
+   "total_return_pct": 11.94,
+   "max_drawdown_pct": -9.81,
+   "sharpe": 1.84,
+   "trades": 73,
+   "win_pct": 69.9,
+   "avg_exposure_pct": 63.8,
+   "days": 117
+  },
+  "market_equal_weight": {
+   "total_return_pct": 27.85,
+   "max_drawdown_pct": -11.2
+  },
+  "random_selection": {
+   "runs": 20,
+   "return_mean": 5.8,
+   "return_p10": 0.33,
+   "return_p90": 10.96,
+   "dd_mean": -8.01,
+   "strategy_beats_pct": 90.0
+  },
+  "curve": {
+   "dates": [
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-26",
+    "2026-04-27",
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30",
+    "2026-05-03",
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07",
+    "2026-05-10",
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-17",
+    "2026-05-18",
+    "2026-05-19",
+    "2026-05-20",
+    "2026-05-21",
+    "2026-05-24",
+    "2026-05-25",
+    "2026-05-26",
+    "2026-05-27",
+    "2026-05-28",
+    "2026-05-31",
+    "2026-06-01",
+    "2026-06-02",
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-07",
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-14",
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17",
+    "2026-06-18",
+    "2026-06-21",
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-28",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-26",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-09",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-23",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-30",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "strategy": [
+    995630.0,
+    997014.0,
+    997994.0,
+    1002913.0,
+    999701.0,
+    1000939.0,
+    1001057.0,
+    1012069.0,
+    1016230.0,
+    1023184.0,
+    1031544.0,
+    1031544.0,
+    1032093.0,
+    1047289.0,
+    1050287.0,
+    1047764.0,
+    1051509.0,
+    1057555.0,
+    1045562.0,
+    1044121.0,
+    1030840.0,
+    1039921.0,
+    1044167.0,
+    1046053.0,
+    1046053.0,
+    1046053.0,
+    1045742.0,
+    1045742.0,
+    1050266.0,
+    1053440.0,
+    1056960.0,
+    1058730.0,
+    1056857.0,
+    1062532.0,
+    1067701.0,
+    1056227.0,
+    1043671.0,
+    1039771.0,
+    1040964.0,
+    1060290.0,
+    1054684.0,
+    1054684.0,
+    1052614.0,
+    1064172.0,
+    1054657.0,
+    1053088.0,
+    1045614.0,
+    1046927.0,
+    1042421.0,
+    1045560.0,
+    1045537.0,
+    1045537.0,
+    1048264.0,
+    1058918.0,
+    1062719.0,
+    1062333.0,
+    1063026.0,
+    1078014.0,
+    1079353.0,
+    1085634.0,
+    1085741.0,
+    1085960.0,
+    1087303.0,
+    1087405.0,
+    1095320.0,
+    1091807.0,
+    1090456.0,
+    1091154.0,
+    1094907.0,
+    1096378.0,
+    1101398.0,
+    1088920.0,
+    1097854.0,
+    1097154.0,
+    1097231.0,
+    1118824.0,
+    1118724.0,
+    1123124.0,
+    1117655.0,
+    1121617.0,
+    1116000.0,
+    1142308.0,
+    1177372.0,
+    1190314.0,
+    1190343.0,
+    1163044.0,
+    1173991.0,
+    1189207.0,
+    1178737.0,
+    1158417.0,
+    1163553.0,
+    1163553.0,
+    1169850.0,
+    1162709.0,
+    1172318.0,
+    1176092.0,
+    1190654.0,
+    1203320.0,
+    1213549.0,
+    1207459.0,
+    1201274.0,
+    1201214.0,
+    1180540.0,
+    1165103.0,
+    1164690.0,
+    1159213.0,
+    1173827.0,
+    1174444.0,
+    1145501.0,
+    1142504.0,
+    1138083.0,
+    1130526.0,
+    1104907.0,
+    1098626.0,
+    1094765.0,
+    1094507.0,
+    1114468.0
+   ],
+   "market": [
+    995630.0,
+    1000612.0,
+    1005864.0,
+    1015194.0,
+    1018440.0,
+    1026083.0,
+    1028067.0,
+    1033793.0,
+    1040072.0,
+    1045471.0,
+    1046752.0,
+    1046752.0,
+    1052377.0,
+    1067414.0,
+    1074741.0,
+    1081548.0,
+    1087490.0,
+    1080251.0,
+    1070394.0,
+    1070168.0,
+    1054850.0,
+    1054127.0,
+    1056143.0,
+    1064313.0,
+    1066762.0,
+    1066762.0,
+    1066762.0,
+    1066762.0,
+    1071254.0,
+    1084070.0,
+    1089084.0,
+    1096974.0,
+    1099293.0,
+    1096497.0,
+    1098735.0,
+    1081549.0,
+    1072629.0,
+    1073655.0,
+    1084157.0,
+    1095050.0,
+    1099746.0,
+    1099746.0,
+    1105968.0,
+    1114530.0,
+    1101145.0,
+    1102738.0,
+    1096092.0,
+    1077223.0,
+    1077701.0,
+    1087841.0,
+    1101119.0,
+    1101119.0,
+    1109915.0,
+    1128501.0,
+    1140269.0,
+    1133640.0,
+    1148552.0,
+    1154216.0,
+    1162103.0,
+    1164889.0,
+    1171974.0,
+    1181950.0,
+    1192123.0,
+    1195950.0,
+    1203342.0,
+    1207979.0,
+    1206785.0,
+    1210169.0,
+    1219167.0,
+    1221256.0,
+    1219846.0,
+    1211904.0,
+    1237016.0,
+    1249737.0,
+    1255937.0,
+    1270865.0,
+    1271719.0,
+    1292215.0,
+    1310487.0,
+    1329097.0,
+    1327980.0,
+    1329745.0,
+    1348624.0,
+    1350472.0,
+    1349734.0,
+    1327845.0,
+    1327399.0,
+    1345324.0,
+    1345775.0,
+    1336729.0,
+    1342813.0,
+    1342813.0,
+    1348425.0,
+    1342155.0,
+    1354908.0,
+    1355754.0,
+    1359770.0,
+    1379167.0,
+    1386529.0,
+    1376497.0,
+    1372382.0,
+    1369265.0,
+    1361220.0,
+    1337743.0,
+    1344720.0,
+    1346486.0,
+    1363441.0,
+    1361318.0,
+    1332192.0,
+    1332553.0,
+    1323104.0,
+    1303588.0,
+    1264483.0,
+    1237584.0,
+    1232312.0,
+    1231261.0,
+    1272930.0
+   ]
+  }
+ },
+ "portfolio_hold": {
+  "strategy": {
+   "total_return_pct": 17.68,
+   "max_drawdown_pct": -9.28,
+   "sharpe": 2.46,
+   "trades": 83,
+   "win_pct": 56.6,
+   "avg_exposure_pct": 65.8,
+   "days": 117
+  },
+  "random_selection": {
+   "runs": 20,
+   "return_mean": 11.19,
+   "return_p10": 5.76,
+   "return_p90": 15.35,
+   "dd_mean": -8.43,
+   "strategy_beats_pct": 95.0
+  }
+ },
+ "forward": {
+  "sessions_recorded": 1,
+  "sessions_valid": 1,
+  "sessions_late": 0,
+  "pending": 154,
+  "open": 0,
+  "unfilled": 0,
+  "closed": 0,
+  "top": {
+   "n": 0
+  },
+  "all": {
+   "n": 0
+  },
+  "tierA": {
+   "n": 0
+  },
+  "by_liquidity": {
+   "منخفضة": {
+    "n": 0
+   },
+   "متوسطة": {
+    "n": 0
+   },
+   "عالية": {
+    "n": 0
+   }
+  },
+  "top_n": 5,
+  "first_valid": "2026-10-01",
+  "record_status": "exists"
+ },
+ "liquidity": {
+  "tiers": {
+   "منخفضة": {
+    "top_n": 158,
+    "top_share_pct": 34.0,
+    "top_avg": 0.81,
+    "base_avg": 0.54,
+    "excess": 0.27
+   },
+   "متوسطة": {
+    "top_n": 149,
+    "top_share_pct": 32.0,
+    "top_avg": 1.48,
+    "base_avg": 1.42,
+    "excess": 0.06
+   },
+   "عالية": {
+    "top_n": 159,
+    "top_share_pct": 34.0,
+    "top_avg": 1.81,
+    "base_avg": 0.31,
+    "excess": 1.5
+   }
+  },
+  "sensitivity": [
+   {
+    "scenario": "بدون انزلاق إضافي",
+    "top_avg": 1.36,
+    "base_avg": 0.61,
+    "excess": 0.76
+   },
+   {
+    "scenario": "معتدل (منخفضة +0.5% / متوسطة +0.15%)",
+    "top_avg": 1.15,
+    "base_avg": 0.5,
+    "excess": 0.65
+   },
+   {
+    "scenario": "قاسٍ (منخفضة +1.0% / متوسطة +0.3%)",
+    "top_avg": 0.93,
+    "base_avg": 0.39,
+    "excess": 0.54
+   }
+  ],
+  "cutoffs_m": [
+   5.0,
+   15.0
+  ],
+  "adv_cap_pct": 5.0
+ },
+ "plan": {
+  "top": {
+   "n": 466,
+   "hit1": 66.5,
+   "hit2": 38.0,
+   "no_t1": 33.5,
+   "avg": 0.76,
+   "win": 65.9,
+   "pf": 1.55
+  },
+  "base": {
+   "n": 12680,
+   "hit1": 61.7,
+   "hit2": 27.2,
+   "no_t1": 38.3,
+   "avg": 0.37,
+   "win": 62.4,
+   "pf": 1.2
+  },
+  "excess_avg": 0.39,
+  "excess_h1": 0.57,
+  "excess_h2": 0.21,
+  "recent45": {
+   "top": {
+    "n": 158,
+    "hit1": 63.3,
+    "hit2": 32.3,
+    "no_t1": 36.7,
+    "avg": -0.07,
+    "win": 61.4,
+    "pf": 0.96
+   },
+   "base": {
+    "n": 4869,
+    "hit1": 58.2,
+    "hit2": 23.4,
+    "no_t1": 41.8,
+    "avg": -0.33,
+    "win": 58.7,
+    "pf": 0.86
+   }
+  },
+  "params": {
+   "stop_atr": 1.5,
+   "t1_atr": 1.0,
+   "t2_atr": 2.5,
+   "frac_t1": 0.5,
+   "horizon": 10
+  }
+ }
+}, ST={
+  "expectedSession": "2026-10-01",
+  "actualAcceptedSession": "2026-10-01",
+  "generatedAt": "2026-10-02T19:42:28.909218+00:00",
+  "guard": "NOOP_NO_NEW_ROWS",
+  "sourceSessionReady": true,
+  "latestTimestamp": null,
+  "coveragePct": 88.9,
+  "universeCount": 198,
+  "acceptedRows": 176,
+  "staleRows": 22,
+  "failedRows": 1,
+  "realFetch": true,
+  "primarySource": "session_pack",
+  "fallbackUsed": false,
+  "historyUpdated": true,
+  "stage1Prepared": true,
+  "preparedCandidateCount": 10,
+  "originalRecommendationCount": 10,
+  "publicationEligible": false,
+  "finalStatus": "PARTIAL",
+  "sourceBreakdown": {
+    "mubasher_symbol_pages_precise_enriched": 176
+  },
+  "sessionsApplied": [
+    {
+      "session": "2026-10-01",
+      "coveragePct": 88.9,
+      "accepted": 176,
+      "inserted": 176,
+      "replaced": 0,
+      "kept_existing": 0,
+      "files_changed": 176
+    }
+  ],
+  "sessionsSkipped": [],
+  "staleSymbols": [
+    "ARVA",
+    "DCCC",
+    "DEIN",
+    "EFID",
+    "EGSA",
+    "ELNA",
+    "EOSB",
+    "EPPK",
+    "FAITA",
+    "GMCI",
+    "GPPL",
+    "ICLE",
+    "MEGM",
+    "NDRL",
+    "NEDA",
+    "PHTV",
+    "POUL",
+    "RAKT",
+    "SAIB",
+    "SEIGA",
+    "SPHT",
+    "TRTO"
+  ],
+  "failedSymbols": [],
+  "quarantinedCount": 1,
+  "notes": [
+    "لا صفوف جديدة؛ الجلسة مطبّقة بتغطية 88.9%"
+  ]
+}
+;
+const $=s=>document.getElementById(s),f=(x,n=1)=>(x==null?'—':Number(x).toFixed(n));
+const cls=x=>x>0?'pos':x<0?'neg':'';
+async function main(){
+  let d=null,src='';
+  try{const r=await fetch('data/signals.json',{cache:'no-store'});if(r.ok){d=await r.json();src='live'}}catch(e){}
+  if(!d&&D){d=D;src='embedded'}
+  if(!d){$('app').textContent='لا توجد بيانات — شغّل python update.py';return}
+  const b=d.backtest,t3=b.top3,t5=b.top5,bl=b.baseline_all,I=d.integrity,ex=Object.entries(d.excluded||{});
+  let h=`<h1>EGX NEXT V2.1 — ترتيب الفرص (دعم قرار)</h1><div class="mut">آخر جلسة في البيانات ${d.session} · المتوقعة ${d.expected_session} · ${d.universe} سهماً مفحوصاً من ${d.symbols} مؤهلاً · ${d.history_sessions} جلسة</div>`;
+  {let U=ST;try{const r=await fetch('data/daily-data-update-status.json',{cache:'no-store'});if(r.ok)U=await r.json()}catch(e){}
+   if(U){const c={SUCCESS:'var(--ok)',ALREADY_CURRENT:'var(--ok)',PARTIAL:'var(--warn)',WAITING_DATA:'var(--bad)',FAILED:'var(--bad)'}[U.finalStatus]||'var(--mut)';
+    h+=`<div class="al" style="border-color:${c}"><b style="color:${c}">تحديث البيانات: ${U.finalStatus}</b> · جلسة معتمدة ${U.actualAcceptedSession||'—'} من المتوقعة ${U.expectedSession} · تغطية ${U.coveragePct}% (${U.acceptedRows} سهماً جديداً، ${U.staleRows} بلا بيانات الجلسة، ${U.quarantinedCount} صفاً في الحجر)${U.finalStatus==='WAITING_DATA'?' — المصدر لم يسلّم جلسة اليوم بعد؛ التوصيات أدناه من الجلسة السابقة ولا تُنفَّذ.':''}</div>`}}
+  if(d.stale)h+=`<div class="al" style="border-color:var(--bad)">⛔ البيانات متأخرة ${d.stale_lag_sessions} جلسة عن المتوقعة (العطلات الرسمية غير محتسبة). لا تنفّذ أي توصية قبل تحديث البيانات ومطابقة السعر.</div>`;
+  h+=`<div class="row" style="margin-top:10px"><div class="k"><span class="mut">حالة السوق</span><b>${d.regime}</b><span class="mut">اتساع ${d.breadth_pct}%</span></div>
+  <div class="k"><span class="mut">تفوق Top5 على السوق</span><b class="${cls(I.top5_excess_mean_pct)}">${f(I.top5_excess_mean_pct,2)}%</b><span class="mut">فاصل 90%: ${I.top5_excess_ci90_block[0]} إلى ${I.top5_excess_ci90_block[1]}</span></div>
+  <div class="k"><span class="mut">طيات موجبة</span><b>${I.folds_positive}</b><span class="mut">Walk-forward</span></div>
+  <div class="k"><span class="mut">نسبة تحقق الدخول</span><b>${f(I.fill_rate_pct)}%</b><span class="mut">افتتاح ضمن ±1%</span></div></div>`;
+  const ok=I.top5_excess_ci90_block[0]>0;
+  h+=`<div class="al">${ok?'':'الميزة الإحصائية للنموذج <b>غير مثبتة بعد</b> (الفاصل يشمل الصفر) لذلك لا تُمنح أي درجة A. '}الفرص أدناه ترتيب نسبي للمراقبة وليست أوامر شراء. ${d.regime==='هابط'?'السوق هابط وعينة الاختبار في هذه الحالة صغيرة؛ خفّض الحجم. ':''}${d.drift_guard?'مفتاح الأداء الأخير مفعّل. ':''}</div><h2>الفرص (Top ${d.recommendations.length})</h2>`;
+  for(const r of d.recommendations){const e=r.evidence;
+    h+=`<div class="c"><div class="h"><span class="t">${r.rank}. ${r.ticker}</span><span class="tag ${r.tier}" style="border-color:currentColor">درجة ${r.tier}</span></div>
+    <div class="mut">${r.setups.length?r.setups.join(' · '):'ترتيب إحصائي (بدون نمط فني واضح)'} · سيولة <b style="color:${r.liq_tier==='منخفضة'?'var(--warn)':'inherit'}">${r.liq_tier}</b> (${f(r.turnover_m)} م.ج/يوم · أقصى مركز عملي ${Math.round(r.max_position_egp/1000).toLocaleString('en')} ألف ج) · RSI ${r.rsi} · حجم ${f(r.vol_ratio)}× · 5ج ${f(r.r5)}% · 20ج ${f(r.r20)}%</div>
+    <div class="g"><div>نطاق الدخول<b>${r.entry_zone[0]}–${r.entry_zone[1]}</b></div><div>وقف<b class="neg">${r.stop} (−${r.stop_pct}%)</b></div>
+    <div>هدف 1<b class="pos">${r.target1} (+${r.target_pct}%)</b></div><div>هدف 2<b class="pos">${r.target2} (+${r.target2_pct}%)</b></div><div>عائد/مخاطرة<b>${r.rr1} ← ${r.rr}</b></div><div>حجم مقترح<b>${r.size_pct}%</b></div></div>
+    <div class="mut" style="margin-top:6px">${r.entry_rule}.</div><div class="mut"><b>إدارة الصفقة:</b> ${r.manage}.</div>
+    <div class="mut">دليل مجموعة الرتبة (${e.bucket}) للاحتفاظ بالهدف 2 فقط: إصابة ${f(e.hit)}% (حد أدنى 90%: ${f(r.group_hit_low90)}%) · متوسط صافٍ ${f(e.avg,2)}% · ${e.n} صفقة · في حالة السوق الحالية: ${e.regime_n} صفقة/${e.regime_days} يوماً</div>
+    ${r.intraday?(r.intraday.status==='ok'?`<div class="mut" style="color:${r.intraday.open_in_zone?'var(--ok)':'var(--bad)'}">افتتاح ${r.intraday.open} ${r.intraday.open_in_zone?'داخل نطاق الدخول ✔':'خارج نطاق الدخول ✖ — لا تدخل'} · أول 15د: ${r.intraday.first15_ret_pct}% · حجم ${r.intraday.first15_vol_pct_of_avg_day}% من متوسط اليوم (تأكيد فقط، تجريبي)</div>`:`<div class="mut">أول 15 دقيقة: ${({not_entry_day:'ليست جلسة الدخول بعد',incomplete:'الشمعة الأولى لم تكتمل',unavailable:'غير متاح'})[r.intraday.status]||r.intraday.status}</div>`):''}
+    ${r.notes.length?`<div class="mut" style="color:var(--warn)">• ${r.notes.join('<br>• ')}</div>`:''}</div>`}
+  const P=d.portfolio,F=d.forward;
+  if(P){const S=P.strategy,M=P.market_equal_weight,R=P.random_selection,C=P.curve;
+    const mn=Math.min(...C.strategy,...C.market),mx=Math.max(...C.strategy,...C.market),W=640,Hh=170,X=i=>10+i*(W-20)/(C.dates.length-1),Y=v=>Hh-10-(v-mn)*(Hh-24)/(mx-mn||1);
+    const line=(a,col)=>`<polyline fill="none" stroke="${col}" stroke-width="2" points="${a.map((v,i)=>X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ')}"/>`;
+    h+=`<h2>محاكاة محفظة (خارج العينة)</h2><div class="c"><div class="sc"><svg viewBox="0 0 ${W} ${Hh}" style="width:100%;min-width:320px;height:auto">${line(C.market,'var(--mut)')}${line(C.strategy,'var(--acc)')}</svg></div>
+    <div class="mut">الأزرق: الاستراتيجية · الرمادي: متوسط السوق متساوي الوزن (${C.dates[0]} → ${C.dates[C.dates.length-1]})</div>
+    <table><tr><th></th><th>عائد</th><th>أقصى تراجع</th><th>شارب</th><th>صفقات</th><th>تعرض</th></tr>
+    <tr><td>خطة الهدفين (الافتراضية)</td><td class="${cls(S.total_return_pct)}">${f(S.total_return_pct)}%</td><td class="neg">${f(S.max_drawdown_pct)}%</td><td>${f(S.sharpe,2)}</td><td>${S.trades} (${f(S.win_pct,0)}% رابحة)</td><td>${f(S.avg_exposure_pct,0)}%</td></tr>
+    ${d.portfolio_hold?`<tr><td>احتفاظ بالهدف 2 فقط (بلا خروج جزئي)</td><td class="${cls(d.portfolio_hold.strategy.total_return_pct)}">${f(d.portfolio_hold.strategy.total_return_pct)}%</td><td class="neg">${f(d.portfolio_hold.strategy.max_drawdown_pct)}%</td><td>${f(d.portfolio_hold.strategy.sharpe,2)}</td><td>${d.portfolio_hold.strategy.trades} (${f(d.portfolio_hold.strategy.win_pct,0)}% رابحة)</td><td>${f(d.portfolio_hold.strategy.avg_exposure_pct,0)}%</td></tr>`:''}<tr><td>متوسط السوق</td><td class="${cls(M.total_return_pct)}">${f(M.total_return_pct)}%</td><td class="neg">${f(M.max_drawdown_pct)}%</td><td>—</td><td>—</td><td>100%</td></tr>
+    <tr><td>اختيار عشوائي (${R.runs} محاولة)</td><td>${f(R.return_mean)}% (${f(R.return_p10)} إلى ${f(R.return_p90)})</td><td class="neg">${f(R.dd_mean)}%</td><td>—</td><td>—</td><td>—</td></tr></table>
+    <div class="mut" style="margin-top:6px">تتفوق على الاختيار العشوائي بنفس القواعد في <b>${R.strategy_beats_pct}%</b> من المحاولات${S.total_return_pct<M.total_return_pct?'، لكنها <b style="color:var(--warn)">أقل من شراء السوق كله</b> في هذه الفترة (سوق صاعد قوي، والمؤشر المتساوي الوزن متفائل لأنه يشمل الأسهم الصغيرة بلا تكلفة)':''}. حد ${P.params.max_pos} مراكز، مخاطرة ${P.params.risk_pct}% للصفقة، سقف ${P.params.pos_cap_pct}% للمركز و${P.params.adv_cap_pct}% من سيولة السهم اليومية.</div></div>`}
+  if(F){h+=`<h2>المتابعة الحية (Forward Test)</h2><div class="c">`+(F.sessions_valid?`<div class="g"><div>جلسات مسجلة بصدق<b>${F.sessions_valid}</b></div><div>صفقات مغلقة<b>${F.closed}</b></div><div>قيد التنفيذ/الانتظار<b>${F.open+F.pending}</b></div><div>Top${F.top_n} متوسط صافٍ<b class="${cls(F.top.avg)}">${F.top.n?f(F.top.avg,2)+'%':'—'}</b></div><div>كل الأسهم متوسط<b>${F.all.n?f(F.all.avg,2)+'%':'—'}</b></div></div>`:`<div class="mut">لم يبدأ بعد: تُسجَّل التوصيات تلقائياً عند أول تحديث ببيانات حديثة <b>قبل افتتاح يوم الدخول</b>، ولا تُعدَّل بعدها. هذا الدليل الوحيد بلا انحياز، ويحتاج 2–3 أشهر. (${F.record_status==='skipped_stale'?'آخر محاولة تخطّت التسجيل لأن البيانات متأخرة':F.record_status})</div>`)+`</div>`}
+  const PL=d.plan;
+  if(PL){const T=PL.top,B=PL.base,R=PL.recent45;h+=`<h2>خطة الإدارة: احتمال بلوغ الأهداف (خارج العينة)</h2><div class="c"><div class="g">
+  <div>بلوغ الهدف 1<b class="pos">${f(T.hit1)}%</b></div><div>بلوغ الهدف 2<b>${f(T.hit2)}%</b></div><div>لم يبلغ الهدف 1<b class="neg">${f(T.no_t1)}%</b></div><div>متوسط صافٍ للصفقة<b class="${cls(T.avg)}">${f(T.avg,2)}%</b></div><div>Profit Factor<b>${f(T.pf,2)}</b></div><div>صفقات Top5<b>${T.n}</b></div></div>
+  <table style="margin-top:8px"><tr><th></th><th>الهدف 1</th><th>الهدف 2</th><th>متوسط صافٍ</th></tr>
+  <tr><td>Top 5 (التوصيات)</td><td>${f(T.hit1)}%</td><td>${f(T.hit2)}%</td><td class="${cls(T.avg)}">${f(T.avg,2)}%</td></tr>
+  <tr><td>كل الأسهم بنفس الخطة</td><td>${f(B.hit1)}%</td><td>${f(B.hit2)}%</td><td class="${cls(B.avg)}">${f(B.avg,2)}%</td></tr>
+  <tr><td>آخر 45 يوماً (Top5 / الأساس)</td><td>${f(R.top.hit1)}% / ${f(R.base.hit1)}%</td><td>${f(R.top.hit2)}% / ${f(R.base.hit2)}%</td><td>${f(R.top.avg,2)}% / ${f(R.base.avg,2)}%</td></tr></table>
+  <div class="mut" style="margin-top:6px"><b style="color:var(--warn)">اقرأ هذا بحذر:</b> الخطة نفسها (هدف قريب + نقل الوقف) هي سبب ارتفاع النسبة؛ <b>أي سهم</b> كان سيبلغ الهدف 1 بنسبة ${f(B.hit1)}% في هذه العينة الصاعدة. ما يضيفه الترتيب: +${f(T.hit1-B.hit1)} نقطة في بلوغ الهدف 1، وتفوق ${f(PL.excess_avg,2)}% للصفقة (نصف العينة الأول ${f(PL.excess_h1,2)}% / الثاني ${f(PL.excess_h2,2)}%). في سوق هابط ستنخفض هذه النسب للجميع. الاحتفاظ بالهدف 2 فقط يعطي عائداً أعلى للصفقة (راجع الجدول أدناه) لكن بنسبة إصابة أقل.</div></div>`}
+  const L=d.liquidity;
+  if(L){h+=`<h2>السيولة وحساسية الانزلاق</h2><div class="c"><div class="sc"><table><tr><th>شريحة السيولة</th><th>حصة Top5</th><th>عائد Top5</th><th>عائد كل الشريحة</th><th>التفوق</th></tr>`+['منخفضة','متوسطة','عالية'].map(k=>{const x=L.tiers[k];return `<tr><td>${k} ${k==='منخفضة'?'(&lt;'+L.cutoffs_m[0]+' م.ج)':k==='عالية'?'(≥'+L.cutoffs_m[1]+' م.ج)':''}</td><td>${f(x.top_share_pct,0)}%</td><td>${f(x.top_avg,2)}%</td><td>${f(x.base_avg,2)}%</td><td class="${cls(x.excess)}">${f(x.excess,2)}%</td></tr>`}).join('')+`</table></div>
+  <div class="sc"><table><tr><th>سيناريو انزلاق إضافي (افتراض)</th><th>Top5</th><th>السوق</th><th>التفوق</th></tr>`+L.sensitivity.map(x=>`<tr><td style="text-align:right">${x.scenario}</td><td>${f(x.top_avg,2)}%</td><td>${f(x.base_avg,2)}%</td><td class="${cls(x.excess)}">${f(x.excess,2)}%</td></tr>`).join('')+`</table></div>
+  <div class="mut">الميزة تظهر أوضح في الأسهم الأعلى سيولة، بينما معظم الاختيارات التاريخية من الشريحة الأقل سيولة حيث التنفيذ أصعب. سقف المركز = ${L.adv_cap_pct}% من متوسط التداول اليومي.</div></div>`}
+  h+=`<h2>الدليل: نتائج خارج العينة بتنفيذ مطابق للشاشة</h2><div class="sc"><table><tr><th>الفئة</th><th>صفقات</th><th>إصابة الهدف</th><th>ربح صافٍ</th><th>متوسط صافٍ</th><th>Profit Factor</th></tr>`;
+  for(const [n,s] of [['كل الأسهم (خط الأساس)',bl],['Top 10',b.top10],['Top 5',t5],['Top 3',t3]])h+=`<tr><td>${n}</td><td>${s.n}</td><td>${f(s.hit)}%</td><td>${f(s.win)}%</td><td class="${cls(s.avg)}">${f(s.avg,2)}%</td><td>${f(s.pf,2)}</td></tr>`;
+  h+=`</table></div><h2>ثبات Top 5 شهرياً</h2><div class="sc"><table><tr><th>الشهر</th><th>صفقات</th><th>إصابة</th><th>ربح</th><th>متوسط</th></tr>`;
+  for(const m of b.by_month_top5)h+=`<tr><td>${m.month}</td><td>${m.n}</td><td>${f(m.hit)}%</td><td>${f(m.win)}%</td><td class="${cls(m.avg)}">${f(m.avg,2)}%</td></tr>`;
+  h+=`</table></div><h2>سلامة الاختبار</h2><div class="mut">قاعدة التنقية: ${I.purge_rule} · طيات نظيفة: ${I.all_folds_clean?'نعم':'لا'} (${I.folds}) · Placebo (${I.placebo?I.placebo.seeds:0} تباديل عشوائية) تفوق Top5 على السوق: ${I.placebo?I.placebo.excess_list.join('، ')+'% (متوسط '+I.placebo.excess_mean+'%)':'—'} · Brier ${I.brier} مقابل ثابت ${I.brier_constant} (الاحتمال الفردي لا يتفوق على رقم ثابت، لذلك لا يُعرض) · بصمة البيانات ${I.data_hash} · sklearn ${I.versions.sklearn} · ${I.versions.platform}</div>
+  <details class="c"><summary>أسهم مستبعدة (${ex.length})</summary><div class="mut">${ex.map(([t,w])=>`<b>${t}</b>: ${w.join('، ')}`).join('<br>')}</div></details>
+  <p class="mut">${b.method}. هدف ${b.params.target_atr}×ATR ووقف ${b.params.stop_atr}×ATR وتكلفة ${b.params.cost*100}%. قد يحمل الاختبار انحياز البقاء (أسهم مدرجة اليوم فقط) وعيّنته قصيرة. أداة دعم قرار وليست نصيحة استثمارية.</p>`;
+  h+=`<p class="mut">مصدر العرض: ${src==='live'?'ملف البيانات الحي':'نسخة مضمّنة في الصفحة'} · وُلّد ${new Date(d.generated).toLocaleString('ar-EG')}</p>`;$('app').innerHTML=h;
+}
+main();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>

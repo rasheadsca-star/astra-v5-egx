@@ -1,0 +1,82 @@
+name: UCP Forward Evidence Ledger
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 12,13,14 * * 0-4'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/ucp-forward-ledger.yml'
+      - 'scripts/ucp-forward-ledger.js'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ucp-forward-evidence-ledger
+  cancel-in-progress: false
+
+jobs:
+  capture-and-resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cairo after-close preflight
+        id: preflight
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          node - <<'NODE' >> "$GITHUB_OUTPUT"
+          const bootstrap = process.env.EVENT_NAME === 'push';
+          const manual = process.env.EVENT_NAME === 'workflow_dispatch';
+          const parts = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Africa/Cairo',
+            weekday: 'short',
+            hour: '2-digit',
+            minute: '2-digit',
+            hourCycle: 'h23'
+          }).formatToParts(new Date());
+          const p = Object.fromEntries(parts.map(x => [x.type, x.value]));
+          const tradingDay = ['Sun','Mon','Tue','Wed','Thu'].includes(p.weekday);
+          const minute = Number(p.hour) * 60 + Number(p.minute);
+          const run = bootstrap || manual || (tradingDay && minute >= 15 * 60);
+          console.log(`run=${run ? 'true' : 'false'}`);
+          console.log(`bootstrap=${bootstrap ? 'true' : 'false'}`);
+          console.log(`cairo_clock=${p.weekday}_${p.hour}:${p.minute}`);
+          NODE
+
+      - name: Capture and resolve forward evidence
+        if: steps.preflight.outputs.run == 'true'
+        env:
+          UCP_PROD_URL: https://ras-egx-astra-v4.vercel.app
+          UCP_EXPECTED_COMMIT: ${{ github.sha }}
+          UCP_PROD_RETRY_ATTEMPTS: 12
+          UCP_PROD_RETRY_DELAY_MS: 10000
+        run: node scripts/ucp-forward-ledger.js cycle
+
+      - name: Commit ledger update
+        if: steps.preflight.outputs.run == 'true'
+        shell: bash
+        run: |
+          if git diff --quiet -- data/ucp/forward-ledger.json; then
+            echo "No forward-ledger change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ucp/forward-ledger.json
+          git commit -m "chore(ucp): capture prospective forward evidence"
+          git push

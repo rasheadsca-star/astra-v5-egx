@@ -1,0 +1,5456 @@
+{
+  "schemaVersion": "12.9.0",
+  "ticker": "MOIL",
+  "companyNameAr": "ماريدايف",
+  "companyNameEn": "Maridive and Oil Services",
+  "isin": "EGS44012C010",
+  "reutersCode": "MOIL.CA",
+  "yahooSymbol": "MOIL.CA",
+  "currency": "EGP",
+  "exchange": "EGX",
+  "generatedAt": "2026-09-29T00:00:33.639Z",
+  "availableSessions": 153,
+  "firstSession": "2026-02-04",
+  "lastSession": "2026-10-01",
+  "historyStatus": "historical_complete_100",
+  "primarySource": "mixed_history_with_starta_ohlc_api",
+  "verificationSources": [
+    "starta_egx_database_identity"
+  ],
+  "officiallyVerifiedLatestSession": false,
+  "symbolVerified": true,
+  "symbolVerification": {
+    "verified": true,
+    "policy": "historical_seed_ticker_map_match",
+    "identityConfidence": 80,
+    "priceOfficiallyVerified": false,
+    "source": "kaggle_yahoo_seed"
+  },
+  "averageConfidence": 75,
+  "staleData": false,
+  "updateFailed": false,
+  "warnings": [
+    "historical_seed_not_officially_verified",
+    "historical_seed_rows_quarantined:12",
+    "starta_ohlc_gap_completion_applied",
+    "non_official_public_database_fallback",
+    "not_independently_verified_by_egx"
+  ],
+  "seedImport": {
+    "source": "kaggle_yahoo_seed",
+    "sourceUrl": "https://www.kaggle.com/datasets/mahmoudalrefaey/egx-egyptian-stocks-2021-2026",
+    "importedAt": "2026-07-10T08:50:16Z",
+    "seedValidSessions": 88,
+    "seedQuarantinedRows": 12,
+    "seedLatestSession": "2026-02-03",
+    "requiresIncrementalGapFill": true
+  },
+  "sessions": [
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-04",
+      "open": 0.419,
+      "high": 0.452,
+      "low": 0.419,
+      "close": 0.44,
+      "adjustedClose": null,
+      "volume": 1225346,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-05",
+      "open": 0.44,
+      "high": 0.445,
+      "low": 0.425,
+      "close": 0.427,
+      "adjustedClose": null,
+      "volume": 730717,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-08",
+      "open": 0.427,
+      "high": 0.435,
+      "low": 0.425,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 214282,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-09",
+      "open": 0.43,
+      "high": 0.437,
+      "low": 0.426,
+      "close": 0.432,
+      "adjustedClose": null,
+      "volume": 60823,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-10",
+      "open": 0.432,
+      "high": 0.445,
+      "low": 0.43,
+      "close": 0.437,
+      "adjustedClose": null,
+      "volume": 524575,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-11",
+      "open": 0.442,
+      "high": 0.451,
+      "low": 0.442,
+      "close": 0.45,
+      "adjustedClose": null,
+      "volume": 397623,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-12",
+      "open": 0.45,
+      "high": 0.46,
+      "low": 0.45,
+      "close": 0.453,
+      "adjustedClose": null,
+      "volume": 585355,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-15",
+      "open": 0.453,
+      "high": 0.46,
+      "low": 0.453,
+      "close": 0.454,
+      "adjustedClose": null,
+      "volume": 363053,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-16",
+      "open": 0.454,
+      "high": 0.455,
+      "low": 0.45,
+      "close": 0.455,
+      "adjustedClose": null,
+      "volume": 150090,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-17",
+      "open": 0.454,
+      "high": 0.454,
+      "low": 0.45,
+      "close": 0.45,
+      "adjustedClose": null,
+      "volume": 220011,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.474Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-18",
+      "open": 0.45,
+      "high": 0.455,
+      "low": 0.445,
+      "close": 0.449,
+      "adjustedClose": null,
+      "volume": 268025,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-19",
+      "open": 0.447,
+      "high": 0.447,
+      "low": 0.437,
+      "close": 0.438,
+      "adjustedClose": null,
+      "volume": 399126,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-22",
+      "open": 0.438,
+      "high": 0.438,
+      "low": 0.41,
+      "close": 0.427,
+      "adjustedClose": null,
+      "volume": 622746,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-23",
+      "open": 0.427,
+      "high": 0.429,
+      "low": 0.42,
+      "close": 0.424,
+      "adjustedClose": null,
+      "volume": 131654,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-24",
+      "open": 0.424,
+      "high": 0.426,
+      "low": 0.42,
+      "close": 0.421,
+      "adjustedClose": null,
+      "volume": 257415,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-25",
+      "open": 0.421,
+      "high": 0.424,
+      "low": 0.414,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 161562,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-02-26",
+      "open": 0.415,
+      "high": 0.424,
+      "low": 0.41,
+      "close": 0.42,
+      "adjustedClose": null,
+      "volume": 548659,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-01",
+      "open": 0.403,
+      "high": 0.403,
+      "low": 0.389,
+      "close": 0.401,
+      "adjustedClose": null,
+      "volume": 1193559,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-02",
+      "open": 0.401,
+      "high": 0.404,
+      "low": 0.391,
+      "close": 0.399,
+      "adjustedClose": null,
+      "volume": 713308,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-03",
+      "open": 0.397,
+      "high": 0.397,
+      "low": 0.38,
+      "close": 0.385,
+      "adjustedClose": null,
+      "volume": 354289,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-04",
+      "open": 0.39,
+      "high": 0.404,
+      "low": 0.39,
+      "close": 0.401,
+      "adjustedClose": null,
+      "volume": 342933,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-05",
+      "open": 0.401,
+      "high": 0.407,
+      "low": 0.399,
+      "close": 0.404,
+      "adjustedClose": null,
+      "volume": 355435,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-08",
+      "open": 0.404,
+      "high": 0.412,
+      "low": 0.4,
+      "close": 0.411,
+      "adjustedClose": null,
+      "volume": 547264,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-09",
+      "open": 0.411,
+      "high": 0.45,
+      "low": 0.41,
+      "close": 0.449,
+      "adjustedClose": null,
+      "volume": 1268916,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.475Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-10",
+      "open": 0.449,
+      "high": 0.458,
+      "low": 0.435,
+      "close": 0.436,
+      "adjustedClose": null,
+      "volume": 865844,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.476Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-11",
+      "open": 0.436,
+      "high": 0.445,
+      "low": 0.435,
+      "close": 0.444,
+      "adjustedClose": null,
+      "volume": 238998,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.476Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-12",
+      "open": 0.441,
+      "high": 0.441,
+      "low": 0.434,
+      "close": 0.439,
+      "adjustedClose": null,
+      "volume": 212065,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.476Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-15",
+      "open": 0.439,
+      "high": 0.44,
+      "low": 0.425,
+      "close": 0.428,
+      "adjustedClose": null,
+      "volume": 251626,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.476Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-16",
+      "open": 0.427,
+      "high": 0.427,
+      "low": 0.415,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 212534,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.476Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-17",
+      "open": 0.416,
+      "high": 0.424,
+      "low": 0.416,
+      "close": 0.42,
+      "adjustedClose": null,
+      "volume": 113990,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-18",
+      "open": 0.422,
+      "high": 0.427,
+      "low": 0.422,
+      "close": 0.422,
+      "adjustedClose": null,
+      "volume": 99368,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-24",
+      "open": 0.422,
+      "high": 0.43,
+      "low": 0.413,
+      "close": 0.413,
+      "adjustedClose": null,
+      "volume": 701179,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-25",
+      "open": 0.413,
+      "high": 0.42,
+      "low": 0.41,
+      "close": 0.415,
+      "adjustedClose": null,
+      "volume": 450471,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-26",
+      "open": 0.415,
+      "high": 0.42,
+      "low": 0.411,
+      "close": 0.418,
+      "adjustedClose": null,
+      "volume": 242379,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-29",
+      "open": 0.415,
+      "high": 0.415,
+      "low": 0.41,
+      "close": 0.412,
+      "adjustedClose": null,
+      "volume": 599574,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-30",
+      "open": 0.411,
+      "high": 0.411,
+      "low": 0.41,
+      "close": 0.41,
+      "adjustedClose": null,
+      "volume": 181405,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-03-31",
+      "open": 0.41,
+      "high": 0.413,
+      "low": 0.407,
+      "close": 0.409,
+      "adjustedClose": null,
+      "volume": 315537,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-01",
+      "open": 0.409,
+      "high": 0.413,
+      "low": 0.409,
+      "close": 0.412,
+      "adjustedClose": null,
+      "volume": 134836,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-02",
+      "open": 0.412,
+      "high": 0.412,
+      "low": 0.409,
+      "close": 0.41,
+      "adjustedClose": null,
+      "volume": 84971,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-05",
+      "open": 0.41,
+      "high": 0.41,
+      "low": 0.392,
+      "close": 0.394,
+      "adjustedClose": null,
+      "volume": 836207,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-06",
+      "open": 0.396,
+      "high": 0.402,
+      "low": 0.396,
+      "close": 0.4,
+      "adjustedClose": null,
+      "volume": 69944,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-07",
+      "open": 0.403,
+      "high": 0.412,
+      "low": 0.403,
+      "close": 0.41,
+      "adjustedClose": null,
+      "volume": 466511,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.477Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-08",
+      "open": 0.41,
+      "high": 0.43,
+      "low": 0.4,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 13468162,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-09",
+      "open": 0.43,
+      "high": 0.431,
+      "low": 0.42,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 608788,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-14",
+      "open": 0.43,
+      "high": 0.431,
+      "low": 0.426,
+      "close": 0.429,
+      "adjustedClose": null,
+      "volume": 41696,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-15",
+      "open": 0.43,
+      "high": 0.433,
+      "low": 0.43,
+      "close": 0.433,
+      "adjustedClose": null,
+      "volume": 161374,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-16",
+      "open": 0.433,
+      "high": 0.439,
+      "low": 0.43,
+      "close": 0.436,
+      "adjustedClose": null,
+      "volume": 138595,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-19",
+      "open": 0.436,
+      "high": 0.441,
+      "low": 0.435,
+      "close": 0.439,
+      "adjustedClose": null,
+      "volume": 160600,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-20",
+      "open": 0.439,
+      "high": 0.439,
+      "low": 0.427,
+      "close": 0.43,
+      "adjustedClose": null,
+      "volume": 331689,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-21",
+      "open": 0.43,
+      "high": 0.435,
+      "low": 0.425,
+      "close": 0.425,
+      "adjustedClose": null,
+      "volume": 434477,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-22",
+      "open": 0.425,
+      "high": 0.43,
+      "low": 0.425,
+      "close": 0.426,
+      "adjustedClose": null,
+      "volume": 56961,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-23",
+      "open": 0.426,
+      "high": 0.426,
+      "low": 0.42,
+      "close": 0.42,
+      "adjustedClose": null,
+      "volume": 486818,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-26",
+      "open": 0.42,
+      "high": 0.424,
+      "low": 0.42,
+      "close": 0.42,
+      "adjustedClose": null,
+      "volume": 211470,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-27",
+      "open": 0.42,
+      "high": 0.429,
+      "low": 0.42,
+      "close": 0.428,
+      "adjustedClose": null,
+      "volume": 81977,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-28",
+      "open": 0.428,
+      "high": 0.439,
+      "low": 0.426,
+      "close": 0.434,
+      "adjustedClose": null,
+      "volume": 498677,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-29",
+      "open": 0.434,
+      "high": 0.438,
+      "low": 0.431,
+      "close": 0.433,
+      "adjustedClose": null,
+      "volume": 102667,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.478Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-04-30",
+      "open": 0.433,
+      "high": 0.442,
+      "low": 0.433,
+      "close": 0.439,
+      "adjustedClose": null,
+      "volume": 385865,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-03",
+      "open": 0.439,
+      "high": 0.445,
+      "low": 0.438,
+      "close": 0.445,
+      "adjustedClose": null,
+      "volume": 277029,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-04",
+      "open": 0.445,
+      "high": 0.455,
+      "low": 0.444,
+      "close": 0.452,
+      "adjustedClose": null,
+      "volume": 825806,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-05",
+      "open": 0.452,
+      "high": 0.454,
+      "low": 0.445,
+      "close": 0.449,
+      "adjustedClose": null,
+      "volume": 202679,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-06",
+      "open": 0.449,
+      "high": 0.45,
+      "low": 0.445,
+      "close": 0.449,
+      "adjustedClose": null,
+      "volume": 220470,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-10",
+      "open": 0.449,
+      "high": 0.45,
+      "low": 0.446,
+      "close": 0.447,
+      "adjustedClose": null,
+      "volume": 189984,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-11",
+      "open": 0.449,
+      "high": 0.458,
+      "low": 0.449,
+      "close": 0.458,
+      "adjustedClose": null,
+      "volume": 661455,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-12",
+      "open": 0.458,
+      "high": 0.474,
+      "low": 0.453,
+      "close": 0.471,
+      "adjustedClose": null,
+      "volume": 1019666,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-13",
+      "open": 0.471,
+      "high": 0.475,
+      "low": 0.465,
+      "close": 0.466,
+      "adjustedClose": null,
+      "volume": 140659,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-14",
+      "open": 0.467,
+      "high": 0.472,
+      "low": 0.467,
+      "close": 0.47,
+      "adjustedClose": null,
+      "volume": 274921,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-17",
+      "open": 0.47,
+      "high": 0.473,
+      "low": 0.467,
+      "close": 0.47,
+      "adjustedClose": null,
+      "volume": 256935,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-18",
+      "open": 0.469,
+      "high": 0.469,
+      "low": 0.461,
+      "close": 0.463,
+      "adjustedClose": null,
+      "volume": 167544,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-19",
+      "open": 0.463,
+      "high": 0.463,
+      "low": 0.458,
+      "close": 0.46,
+      "adjustedClose": null,
+      "volume": 244507,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.479Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-20",
+      "open": 0.46,
+      "high": 0.461,
+      "low": 0.451,
+      "close": 0.451,
+      "adjustedClose": null,
+      "volume": 330132,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-21",
+      "open": 0.451,
+      "high": 0.452,
+      "low": 0.441,
+      "close": 0.448,
+      "adjustedClose": null,
+      "volume": 310960,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-24",
+      "open": 0.45,
+      "high": 0.46,
+      "low": 0.45,
+      "close": 0.459,
+      "adjustedClose": null,
+      "volume": 203928,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-05-25",
+      "open": 0.459,
+      "high": 0.465,
+      "low": 0.458,
+      "close": 0.465,
+      "adjustedClose": null,
+      "volume": 247870,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-01",
+      "open": 0.465,
+      "high": 0.485,
+      "low": 0.461,
+      "close": 0.48,
+      "adjustedClose": null,
+      "volume": 1556078,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-02",
+      "open": 0.48,
+      "high": 0.489,
+      "low": 0.476,
+      "close": 0.477,
+      "adjustedClose": null,
+      "volume": 741760,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.480Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-03",
+      "open": 0.477,
+      "high": 0.48,
+      "low": 0.472,
+      "close": 0.474,
+      "adjustedClose": null,
+      "volume": 173583,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-04",
+      "open": 0.474,
+      "high": 0.483,
+      "low": 0.466,
+      "close": 0.479,
+      "adjustedClose": null,
+      "volume": 618368,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-07",
+      "open": 0.479,
+      "high": 0.48,
+      "low": 0.47,
+      "close": 0.473,
+      "adjustedClose": null,
+      "volume": 168839,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-08",
+      "open": 0.473,
+      "high": 0.48,
+      "low": 0.47,
+      "close": 0.479,
+      "adjustedClose": null,
+      "volume": 232099,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-09",
+      "open": 0.479,
+      "high": 0.483,
+      "low": 0.476,
+      "close": 0.48,
+      "adjustedClose": null,
+      "volume": 278244,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-10",
+      "open": 0.48,
+      "high": 0.48,
+      "low": 0.469,
+      "close": 0.469,
+      "adjustedClose": null,
+      "volume": 308339,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-11",
+      "open": 0.469,
+      "high": 0.47,
+      "low": 0.464,
+      "close": 0.467,
+      "adjustedClose": null,
+      "volume": 381057,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-14",
+      "open": 0.467,
+      "high": 0.475,
+      "low": 0.467,
+      "close": 0.475,
+      "adjustedClose": null,
+      "volume": 180596,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-15",
+      "open": 0.475,
+      "high": 0.477,
+      "low": 0.468,
+      "close": 0.474,
+      "adjustedClose": null,
+      "volume": 142032,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-16",
+      "open": 0.473,
+      "high": 0.474,
+      "low": 0.469,
+      "close": 0.472,
+      "adjustedClose": null,
+      "volume": 77283,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-17",
+      "open": 0.472,
+      "high": 0.481,
+      "low": 0.47,
+      "close": 0.481,
+      "adjustedClose": null,
+      "volume": 378869,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.481Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-21",
+      "open": 0.48,
+      "high": 0.481,
+      "low": 0.479,
+      "close": 0.481,
+      "adjustedClose": null,
+      "volume": 199546,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-22",
+      "open": 0.48,
+      "high": 0.485,
+      "low": 0.478,
+      "close": 0.48,
+      "adjustedClose": null,
+      "volume": 261803,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-23",
+      "open": 0.48,
+      "high": 0.485,
+      "low": 0.479,
+      "close": 0.485,
+      "adjustedClose": null,
+      "volume": 479561,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-24",
+      "open": 0.485,
+      "high": 0.485,
+      "low": 0.48,
+      "close": 0.485,
+      "adjustedClose": null,
+      "volume": 251833,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-25",
+      "open": 0.485,
+      "high": 0.486,
+      "low": 0.482,
+      "close": 0.483,
+      "adjustedClose": null,
+      "volume": 731999,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-28",
+      "open": 0.483,
+      "high": 0.487,
+      "low": 0.47,
+      "close": 0.47,
+      "adjustedClose": null,
+      "volume": 857572,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-29",
+      "open": 0.47,
+      "high": 0.47,
+      "low": 0.461,
+      "close": 0.464,
+      "adjustedClose": null,
+      "volume": 555302,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-06-30",
+      "open": 0.464,
+      "high": 0.479,
+      "low": 0.464,
+      "close": 0.47,
+      "adjustedClose": null,
+      "volume": 130366,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-01",
+      "open": 0.47,
+      "high": 0.482,
+      "low": 0.47,
+      "close": 0.482,
+      "adjustedClose": null,
+      "volume": 260595,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-05",
+      "open": 0.482,
+      "high": 0.524,
+      "low": 0.482,
+      "close": 0.505,
+      "adjustedClose": null,
+      "volume": 4587585,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-06",
+      "open": 0.505,
+      "high": 0.518,
+      "low": 0.505,
+      "close": 0.507,
+      "adjustedClose": null,
+      "volume": 253500,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-07",
+      "open": 0.507,
+      "high": 0.52,
+      "low": 0.507,
+      "close": 0.52,
+      "adjustedClose": null,
+      "volume": 498546,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-08",
+      "open": 0.52,
+      "high": 0.534,
+      "low": 0.515,
+      "close": 0.515,
+      "adjustedClose": null,
+      "volume": 1050659,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-07-09",
+      "open": 0.515,
+      "high": 0.526,
+      "low": 0.515,
+      "close": 0.52,
+      "adjustedClose": null,
+      "volume": 265372,
+      "currency": "EGP",
+      "primarySource": "starta_ohlc_api",
+      "officialVerified": false,
+      "verifiedBy": [
+        "starta_egx_database_identity"
+      ],
+      "sourceUrls": {
+        "primary": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+        "verification": []
+      },
+      "fetchedAt": "2026-07-10T10:15:12.465Z",
+      "validatedAt": "2026-07-10T10:15:12.482Z",
+      "confidence": {
+        "overall": 75,
+        "ohlc": 75,
+        "volume": 75,
+        "symbolIdentity": 90
+      },
+      "validationStatus": "public_egx_database_exact_symbol_validated",
+      "warnings": [
+        "non_official_fallback_source",
+        "starta_ohlc_database_uses_mixed_history_reservoir",
+        "not_independently_verified_by_egx"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "sessionDate": "2026-07-15",
+      "open": 0.55,
+      "high": 0.55,
+      "low": 0.54,
+      "close": 0.54,
+      "volume": 550158,
+      "turnover": 298718.81,
+      "valueTraded": 298718.81,
+      "previousClose": 0.55,
+      "changePct": -0.92,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-15T02:58:02.293Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-19",
+      "sessionDate": "2026-07-19",
+      "open": 0.55,
+      "high": 0.55,
+      "low": 0.55,
+      "close": 0.55,
+      "volume": 157992,
+      "turnover": 86860.64,
+      "valueTraded": 86860.64,
+      "previousClose": 0.55,
+      "changePct": 0.18,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-19T13:13:18.637Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-21",
+      "sessionDate": "2026-07-21",
+      "open": 0.57,
+      "high": 0.6,
+      "low": 0.57,
+      "close": 0.58,
+      "volume": 3049234,
+      "turnover": 1781368,
+      "valueTraded": 1781368,
+      "previousClose": 0.57,
+      "changePct": 2.65,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-21T18:28:06.195Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-22",
+      "sessionDate": "2026-07-22",
+      "open": 0.58,
+      "high": 0.59,
+      "low": 0.58,
+      "close": 0.59,
+      "volume": 267711,
+      "turnover": 157449.5,
+      "valueTraded": 157449.5,
+      "previousClose": 0.58,
+      "changePct": 1.55,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-22T12:14:45.641Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-23",
+      "sessionDate": "2026-07-23",
+      "open": 0.58,
+      "high": 0.59,
+      "low": 0.58,
+      "close": 0.59,
+      "volume": 267711,
+      "turnover": 157449.5,
+      "valueTraded": 157449.5,
+      "previousClose": 0.58,
+      "changePct": 1.55,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-23T12:12:58.639Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-27",
+      "sessionDate": "2026-07-27",
+      "open": 0.62,
+      "high": 0.65,
+      "low": 0.61,
+      "close": 0.65,
+      "volume": 2909626,
+      "turnover": 1827164.38,
+      "valueTraded": 1827164.38,
+      "previousClose": 0.62,
+      "changePct": 4.37,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-27T12:44:27.505Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-28",
+      "sessionDate": "2026-07-28",
+      "open": 0.65,
+      "high": 0.66,
+      "low": 0.63,
+      "close": 0.65,
+      "volume": 1279763,
+      "turnover": 829049.38,
+      "valueTraded": 829049.38,
+      "previousClose": 0.65,
+      "changePct": 0.78,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-28T12:51:00.689Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "date": "2026-07-30",
+      "sessionDate": "2026-07-30",
+      "open": 0.68,
+      "high": 0.69,
+      "low": 0.67,
+      "close": 0.68,
+      "volume": 1585320,
+      "turnover": 1084080.12,
+      "valueTraded": 1084080.12,
+      "previousClose": 0.68,
+      "changePct": 0.15,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-07-30T12:15:02.290Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-02",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 220308,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-02T23:28:06.102Z",
+      "validatedAt": "2026-08-02T23:29:01.558Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-03",
+      "open": 0.68,
+      "high": 0.69,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 508768,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-03T21:40:41.387Z",
+      "validatedAt": "2026-08-03T21:41:52.107Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-04",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 261449,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-04T21:48:56.843Z",
+      "validatedAt": "2026-08-04T21:50:10.324Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-05",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 271669,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-05T21:46:51.260Z",
+      "validatedAt": "2026-08-05T21:48:11.726Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-06",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 256828,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-06T15:26:36.886Z",
+      "validatedAt": "2026-08-06T15:27:33.744Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-09",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.68,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 150118,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-09T21:02:41.219Z",
+      "validatedAt": "2026-08-09T21:04:28.212Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-10",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 358707,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-10T21:12:50.723Z",
+      "validatedAt": "2026-08-10T21:13:56.859Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-11",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 231592,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-11T21:21:39.224Z",
+      "validatedAt": "2026-08-11T21:22:45.042Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-12",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.66,
+      "close": 0.66,
+      "adjustedClose": 0.66,
+      "volume": 738694,
+      "currency": "EGP",
+      "source": "v15_precise_public_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-12T21:19:09.699Z",
+      "validatedAt": "2026-08-12T21:20:28.986Z",
+      "confidence": {
+        "overall": 84,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95
+      },
+      "validationStatus": "precise_public_source_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SINGLE_SOURCE_WITH_ANOMALY_GUARD",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 2.94
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-13",
+      "sourceSessionDate": "2026-08-13",
+      "sourceMarketTime": "13 August 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-14T16:47:00.477Z",
+      "open": 0.66,
+      "high": 0.68,
+      "low": 0.65,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 360564,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-14T16:45:23.475Z",
+      "validatedAt": "2026-08-14T16:47:02.439Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.66,
+      "jumpPct": 1.52
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-16",
+      "sourceSessionDate": "2026-08-16",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": "mubasher_volume_statistics_explicit_date_volume_match",
+      "sourceSessionCheckedAt": "2026-08-17T07:20:46.435Z",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.65,
+      "close": 0.66,
+      "adjustedClose": 0.66,
+      "volume": 626694,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_volume_statistics_explicit_date_volume_match"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-17T07:18:43.624Z",
+      "validatedAt": "2026-08-17T07:20:48.025Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-17",
+      "sourceSessionDate": "2026-08-17",
+      "sourceMarketTime": "17 August 01:28 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-17T21:39:33.917Z",
+      "open": 0.66,
+      "high": 0.67,
+      "low": 0.65,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 357195,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-17T21:38:05.748Z",
+      "validatedAt": "2026-08-17T21:39:34.632Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.66,
+      "jumpPct": 1.52
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-18",
+      "sourceSessionDate": "2026-08-18",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-18T20:52:04.192Z",
+      "open": 0.67,
+      "high": 0.67,
+      "low": 0.65,
+      "close": 0.66,
+      "adjustedClose": 0.66,
+      "volume": 323846,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-18T20:50:21.678Z",
+      "validatedAt": "2026-08-18T20:52:04.310Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-19",
+      "sourceSessionDate": "2026-08-19",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-19T20:56:12.672Z",
+      "open": 0.66,
+      "high": 0.67,
+      "low": 0.65,
+      "close": 0.65,
+      "adjustedClose": 0.65,
+      "volume": 222167,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-19T20:54:57.527Z",
+      "validatedAt": "2026-08-19T20:56:12.793Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.66,
+      "jumpPct": 1.52
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-20",
+      "sourceSessionDate": "2026-08-20",
+      "sourceMarketTime": "01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-20T20:58:32.790Z",
+      "open": 0.65,
+      "high": 0.66,
+      "low": 0.65,
+      "close": 0.66,
+      "adjustedClose": 0.66,
+      "volume": 481011,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-20T20:57:24.752Z",
+      "validatedAt": "2026-08-20T20:58:33.260Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.65,
+      "jumpPct": 1.54
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-23",
+      "sourceSessionDate": "2026-08-23",
+      "sourceMarketTime": "01:12 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-23T20:51:14.136Z",
+      "open": 0.66,
+      "high": 0.69,
+      "low": 0.66,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 1280180,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-23T20:49:46.605Z",
+      "validatedAt": "2026-08-23T20:51:14.878Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.66,
+      "jumpPct": 3.03
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-24",
+      "sourceSessionDate": "2026-08-24",
+      "sourceMarketTime": "24 August 01:12 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-24T21:00:51.266Z",
+      "open": 0.68,
+      "high": 0.69,
+      "low": 0.68,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 150976,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-24T20:59:30.987Z",
+      "validatedAt": "2026-08-24T21:00:51.904Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-25",
+      "sourceSessionDate": "2026-08-25",
+      "sourceMarketTime": "01:06 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-08-25T20:59:44.710Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 39174,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-25T20:57:57.708Z",
+      "validatedAt": "2026-08-25T20:59:45.270Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-26",
+      "sourceSessionDate": "2026-08-26",
+      "sourceMarketTime": "26 August 01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-27T00:02:34.307Z",
+      "open": 0.67,
+      "high": 0.67,
+      "low": 0.66,
+      "close": 0.66,
+      "adjustedClose": 0.66,
+      "volume": 209091,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-27T00:01:23.451Z",
+      "validatedAt": "2026-08-27T00:02:34.955Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "date": "2026-08-27",
+      "sessionDate": "2026-08-27",
+      "open": 0.67,
+      "high": 0.67,
+      "low": 0.66,
+      "close": 0.66,
+      "volume": 209091,
+      "turnover": 139697.2,
+      "valueTraded": 139697.2,
+      "previousClose": 0.67,
+      "changePct": -0.59,
+      "source": "mubasher_symbol_pages",
+      "sourceUrl": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+      "fetchedAt": "2026-08-27T17:10:35.823Z",
+      "consolidatedBy": "v13-14-session-finalizer"
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-30",
+      "sourceSessionDate": "2026-08-30",
+      "sourceMarketTime": "30 August 01:11 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-30T21:24:02.509Z",
+      "open": 0.66,
+      "high": 0.69,
+      "low": 0.66,
+      "close": 0.69,
+      "adjustedClose": 0.69,
+      "volume": 851494,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-30T21:23:00.918Z",
+      "validatedAt": "2026-08-30T21:24:02.616Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 78,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "partial_ohlc_reconstructed_from_close_or_previous_close"
+      ],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.66,
+      "jumpPct": 4.55
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-08-31",
+      "sourceSessionDate": "2026-08-31",
+      "sourceMarketTime": "31 August 01:09 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-08-31T23:20:55.878Z",
+      "open": 0.69,
+      "high": 0.69,
+      "low": 0.68,
+      "close": 0.69,
+      "adjustedClose": 0.69,
+      "volume": 548967,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-08-31T23:19:20.789Z",
+      "validatedAt": "2026-08-31T23:20:56.651Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.69,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-01",
+      "sourceSessionDate": "2026-09-01",
+      "sourceMarketTime": "1 September 01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-01T22:45:11.572Z",
+      "open": 0.69,
+      "high": 0.69,
+      "low": 0.69,
+      "close": 0.69,
+      "adjustedClose": 0.69,
+      "volume": 33696,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-01T22:44:12.929Z",
+      "validatedAt": "2026-09-01T22:45:12.122Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.69,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-02",
+      "sourceSessionDate": "2026-09-02",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-02T17:16:40.516Z",
+      "open": 0.69,
+      "high": 0.69,
+      "low": 0.68,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 267984,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-02T17:15:19.773Z",
+      "validatedAt": "2026-09-02T17:16:41.300Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.69,
+      "jumpPct": 1.45
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-03",
+      "sourceSessionDate": "2026-09-03",
+      "sourceMarketTime": "01:08 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-03T20:03:35.523Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 162535,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-03T20:02:19.801Z",
+      "validatedAt": "2026-09-03T20:03:36.250Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-06",
+      "sourceSessionDate": "2026-09-06",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined",
+      "sourceSessionCheckedAt": "2026-09-06T20:43:29.809Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 142871,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum_stale_minority_quarantined"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-06T20:42:19.495Z",
+      "validatedAt": "2026-09-06T20:43:30.402Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-07",
+      "sourceSessionDate": "2026-09-07",
+      "sourceMarketTime": "7 September 01:06 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-07T21:48:11.160Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 426968,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-07T21:47:09.321Z",
+      "validatedAt": "2026-09-07T21:48:11.679Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-08",
+      "sourceSessionDate": "2026-09-08",
+      "sourceMarketTime": "8 September 01:12 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-08T23:00:18.431Z",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 308737,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-08T22:58:45.888Z",
+      "validatedAt": "2026-09-08T23:00:18.561Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-09",
+      "sourceSessionDate": "2026-09-09",
+      "sourceMarketTime": "01:09 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum",
+      "sourceSessionCheckedAt": "2026-09-09T12:21:04.934Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 224327,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-09T12:19:34.218Z",
+      "validatedAt": "2026-09-09T12:21:05.062Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-10",
+      "sourceSessionDate": "2026-09-10",
+      "sourceMarketTime": "10 September 01:25 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-10T22:48:40.572Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 83632,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-10T22:47:42.622Z",
+      "validatedAt": "2026-09-10T22:48:41.141Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-13",
+      "sourceSessionDate": "2026-09-13",
+      "sourceMarketTime": "13 September 01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-13T21:13:08.972Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 40943,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-13T21:11:36.756Z",
+      "validatedAt": "2026-09-13T21:13:09.100Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-14",
+      "sourceSessionDate": "2026-09-14",
+      "sourceMarketTime": "14 September 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-14T21:08:54.811Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 295818,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-14T21:07:54.262Z",
+      "validatedAt": "2026-09-14T21:08:54.938Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 78,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "partial_ohlc_reconstructed_from_close_or_previous_close"
+      ],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 1.47
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-15",
+      "sourceSessionDate": "2026-09-15",
+      "sourceMarketTime": "15 September 01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-15T23:15:02.220Z",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.67,
+      "adjustedClose": 0.67,
+      "volume": 281037,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-15T23:14:00.172Z",
+      "validatedAt": "2026-09-15T23:15:02.354Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-16",
+      "sourceSessionDate": "2026-09-16",
+      "sourceMarketTime": "16 September 01:25 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-16T22:23:58.445Z",
+      "open": 0.67,
+      "high": 0.68,
+      "low": 0.67,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 138510,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-16T22:23:03.437Z",
+      "validatedAt": "2026-09-16T22:23:59.091Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.67,
+      "jumpPct": 1.49
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-17",
+      "sourceSessionDate": "2026-09-17",
+      "sourceMarketTime": "17 September 01:07 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-17T23:10:06.370Z",
+      "open": 0.68,
+      "high": 0.68,
+      "low": 0.68,
+      "close": 0.68,
+      "adjustedClose": 0.68,
+      "volume": 82608,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-17T23:08:42.549Z",
+      "validatedAt": "2026-09-17T23:10:07.102Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-20",
+      "sourceSessionDate": "2026-09-20",
+      "sourceMarketTime": "20 September 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-20T21:09:02.542Z",
+      "open": 0.68,
+      "high": 0.71,
+      "low": 0.68,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 1203305,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-20T21:07:51.900Z",
+      "validatedAt": "2026-09-20T21:09:02.675Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.68,
+      "jumpPct": 2.94
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-21",
+      "sourceSessionDate": "2026-09-21",
+      "sourceMarketTime": "21 September 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-21T21:22:24.849Z",
+      "open": 0.7,
+      "high": 0.71,
+      "low": 0.7,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 835458,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-21T21:21:10.915Z",
+      "validatedAt": "2026-09-21T21:22:25.430Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-22",
+      "sourceSessionDate": "2026-09-22",
+      "sourceMarketTime": "22 September 01:25 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-22T23:21:42.797Z",
+      "open": 0.7,
+      "high": 0.7,
+      "low": 0.69,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 406813,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-22T23:20:16.952Z",
+      "validatedAt": "2026-09-22T23:21:43.536Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-23",
+      "sourceSessionDate": "2026-09-23",
+      "sourceMarketTime": "23 September 01:29 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-23T22:36:19.613Z",
+      "open": 0.7,
+      "high": 0.7,
+      "low": 0.7,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 543590,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-23T22:33:16.564Z",
+      "validatedAt": "2026-09-23T22:36:20.861Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-24",
+      "sourceSessionDate": "2026-09-24",
+      "sourceMarketTime": "24 September 01:27 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-24T23:31:33.844Z",
+      "open": 0.7,
+      "high": 0.72,
+      "low": 0.7,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 991165,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-24T23:30:05.271Z",
+      "validatedAt": "2026-09-24T23:31:34.615Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-27",
+      "sourceSessionDate": "2026-09-27",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": "mubasher_volume_statistics_explicit_date_volume_match",
+      "sourceSessionCheckedAt": "2026-09-28T06:56:19.616Z",
+      "open": 0.71,
+      "high": 0.71,
+      "low": 0.7,
+      "close": 0.71,
+      "adjustedClose": 0.71,
+      "volume": 42923,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_volume_statistics_explicit_date_volume_match"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-28T06:55:12.398Z",
+      "validatedAt": "2026-09-28T06:56:20.273Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 1.43
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-28",
+      "sourceSessionDate": "2026-09-28",
+      "sourceMarketTime": "28 September 01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "sourceSessionCheckedAt": "2026-09-29T00:00:32.484Z",
+      "open": 0.71,
+      "high": 0.72,
+      "low": 0.71,
+      "close": 0.71,
+      "adjustedClose": 0.71,
+      "volume": 251465,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-28T23:59:31.819Z",
+      "validatedAt": "2026-09-29T00:00:33.188Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.71,
+      "jumpPct": 0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-29",
+      "sourceSessionDate": "2026-09-29",
+      "sourceMarketTime": "29 September 01:14 PM market time",
+      "sourceSessionEvidence": "mubasher_page_last_update",
+      "open": 0.71,
+      "high": 0.72,
+      "low": 0.7,
+      "close": 0.71,
+      "adjustedClose": 0.71,
+      "volume": 388887,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_page_last_update"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-29T21:36:26.570Z",
+      "validatedAt": "2026-09-29T21:37:25.945Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.71,
+      "jumpPct": 0.0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-09-30",
+      "sourceSessionDate": "2026-09-30",
+      "sourceMarketTime": "01:13 PM market time",
+      "sourceSessionEvidence": "mubasher_time_only_same_day_cross_symbol_quorum",
+      "open": 0.71,
+      "high": 0.71,
+      "low": 0.7,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 298466,
+      "currency": "EGP",
+      "source": "v16_session_aware_price_truth",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [
+        "mubasher_symbol_pages_precise_enriched",
+        "mubasher_time_only_same_day_cross_symbol_quorum"
+      ],
+      "sourceUrls": {
+        "primary": "https://english.mubasher.info/markets/EGX/stocks/MOIL/",
+        "verification": []
+      },
+      "fetchedAt": "2026-09-30T17:50:47.808Z",
+      "validatedAt": "2026-09-30T17:52:09.641Z",
+      "confidence": {
+        "overall": 86,
+        "ohlc": 86,
+        "volume": 82,
+        "symbolIdentity": 95,
+        "sessionDate": 100
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
+      "previousTrustedClose": 0.71,
+      "jumpPct": -1.41
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-10-01",
+      "sourceSessionDate": "2026-10-01",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.7,
+      "high": 0.71,
+      "low": 0.7,
+      "close": 0.71,
+      "adjustedClose": 0.71,
+      "volume": 249788,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-02T09:03:38.589Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 1.43
+    }
+  ],
+  "lastUpdateError": "Yahoo history failed for MOIL: MOIL.CA: identity score 75",
+  "startaGapCompletion": {
+    "importedAt": "2026-07-10T10:15:12.483Z",
+    "source": "starta_ohlc_api",
+    "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/MOIL?period=1y&limit=500",
+    "identityEvidence": {
+      "verified": true,
+      "exactSymbol": true,
+      "egxMarket": true,
+      "nameAccepted": true,
+      "nameSimilarity": 1,
+      "identity": {
+        "symbol": "MOIL",
+        "marketCode": "EGX",
+        "nameEn": "Maridive & Oil Services SAE",
+        "nameAr": "ماريدايف",
+        "lastPrice": 0.52,
+        "raw": {
+          "symbol": "MOIL",
+          "name_ar": "ماريدايف",
+          "name_en": "Maridive & Oil Services SAE",
+          "market_code": "EGX",
+          "sector_name": "Industrial Services",
+          "currency": "USD",
+          "last_price": 0.52,
+          "change": 0.005,
+          "change_percent": 0.9709,
+          "volume": 265372,
+          "last_updated": "2026-07-09T17:26:18.985471+00:00",
+          "open_price": null,
+          "pe_ratio": null,
+          "pb_ratio": null,
+          "dividend_yield": 0,
+          "beta": 0.4405,
+          "high_52w": 0.534,
+          "low_52w": 0.338,
+          "target_price": null,
+          "market_cap": 12256158696,
+          "high": null,
+          "low": null,
+          "prev_close": null,
+          "revenue": 11537275697,
+          "net_income": 1829867015,
+          "industry": "Oil and Gas Field Exploration Services",
+          "logo_url": "https://s3-symbol-logo.tradingview.com/maridive-and-oil-services.svg",
+          "isin": "EGS44012C010",
+          "recommend_all": null,
+          "source": "tradingview",
+          "updated_at": "2026-07-09T17:26:21.032349+00:00",
+          "forward_pe": null,
+          "float_shares_percent": 46.231300000000005,
+          "float_shares": 217405462.12800002,
+          "shareholders_count": null
+        }
+      },
+      "warnings": []
+    },
+    "overlap": {
+      "overlapCount": 88,
+      "matches": 88,
+      "ratio": 1,
+      "accepted": true,
+      "samples": [
+        {
+          "date": "2026-01-19",
+          "existingClose": 0.4560000002384186,
+          "incomingClose": 0.456,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-20",
+          "existingClose": 0.46299999952316284,
+          "incomingClose": 0.463,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-21",
+          "existingClose": 0.453000009059906,
+          "incomingClose": 0.453,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-22",
+          "existingClose": 0.44999998807907104,
+          "incomingClose": 0.45,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-25",
+          "existingClose": 0.4449999928474426,
+          "incomingClose": 0.445,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-26",
+          "existingClose": 0.4449999928474426,
+          "incomingClose": 0.445,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-27",
+          "existingClose": 0.44200000166893005,
+          "incomingClose": 0.442,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-01-28",
+          "existingClose": 0.43299999833106995,
+          "incomingClose": 0.433,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-02-02",
+          "existingClose": 0.4189999997615814,
+          "incomingClose": 0.419,
+          "differencePct": 0,
+          "matched": true
+        },
+        {
+          "date": "2026-02-03",
+          "existingClose": 0.4169999957084656,
+          "incomingClose": 0.417,
+          "differencePct": 0,
+          "matched": true
+        }
+      ]
+    },
+    "rowsReceived": 500,
+    "rowsAccepted": 100,
+    "confidenceCap": 75
+  },
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-02T22:39:33.901793+03:00",
+  "lastUpdateSource": "daily_update:session_pack",
+  "priceTruthLatest": {
+    "date": "2026-09-28",
+    "close": 0.71,
+    "source": "mubasher_symbol_pages_precise_enriched",
+    "validationStatus": "precise_public_source_session_confirmed",
+    "confidence": 86,
+    "sourceSessionDate": "2026-09-28"
+  }
+}

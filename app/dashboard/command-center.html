@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASTRA V5 Command Center</title>
+<style>
+body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
+.card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
+.status{color:#4ade80;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.metric{background:#101827;padding:15px;border-radius:10px;min-height:54px}
+.label{font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.value{margin-top:7px;font-weight:700}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:700}
+.ready{color:#4ade80}.blocked{color:#f87171}.warn{color:#facc15}.muted{color:#94a3b8}
+.buy{color:#4ade80}.watch{color:#facc15}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td,th{padding:11px 8px;border-bottom:1px solid #334155;text-align:left}
+th{color:#94a3b8;font-size:11px;text-transform:uppercase}
+.small{font-size:11px;color:#94a3b8;margin-top:8px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){body{padding:15px}.grid{grid-template-columns:repeat(2,1fr)}table{font-size:11px}.card{overflow:auto}}
+</style>
+</head>
+<body>
+<h1>ASTRA V5 Command Center</h1>
+
+<div class="card">
+  <h2>Engine Status</h2>
+  <div id="engine" class="status">Checking...</div>
+  <p id="health">Loading data health...</p>
+  <div class="small" id="deployment">Deployment: -</div>
+</div>
+
+<div class="grid">
+  <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V4</div></div>
+  <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
+  <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
+  <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
+  <div class="metric"><div class="label">Paper Ready</div><div class="value" id="paper">-</div></div>
+</div>
+
+<div class="card">
+  <h2>Unified Opportunity Board</h2>
+  <div class="small" id="unifiedSummary">Combines ASTRA Native + RC2 + RR68 on one comparable scale. Confidence is shown separately because it currently duplicates ASTRA technical score.</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Symbol</th>
+        <th>Source</th>
+        <th>Unified</th>
+        <th>Technical</th>
+        <th>Research</th>
+        <th>Confidence</th>
+        <th>Risk</th>
+        <th>Liq.</th>
+        <th>S/R</th>
+        <th>Struct. RR</th>
+        <th>Entry Zone</th>
+        <th>Stop</th>
+        <th>Target 1</th>
+        <th>Target 2</th>
+        <th>Morning</th>
+      </tr>
+    </thead>
+    <tbody id="unifiedBoard">
+      <tr><td colspan="16">Loading unified opportunity board...</td></tr>
+    </tbody>
+  </table>
+  <div class="small">Unified weights: Technical 20% · Research 25% · Liquidity 10% · S/R 10% · Structural RR 15% · Risk Safety 15% · Data Quality 5%. Entry/Stop/Targets are the research trade plan when available. This is not an execution instruction.</div>
+</div>
+
+<div class="card">
+  <h2>Entry Opportunities — ASTRA Native</h2>
+  <div class="small" id="summary">Loading...</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Signal</th>
+        <th>Entry</th>
+        <th>Target 1</th>
+        <th>Target 2</th>
+        <th>Target 3</th>
+        <th>Stop</th>
+        <th>Confidence</th>
+        <th>Risk</th>
+        <th>Paper</th>
+      </tr>
+    </thead>
+    <tbody id="signals">
+      <tr><td colspan="10">Loading ASTRA entry opportunities...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Quant Lane — Research / Shadow <span id="quantBadge" class="badge muted">-</span></h2>
+  <div class="small" id="quantSummary">Loading quant lane...</div>
+  <div class="grid" id="quantMetrics" style="margin-top:12px"></div>
+  <table style="margin-top:14px">
+    <thead><tr><th>#</th><th>Symbol</th><th>Entry zone</th><th>Stop</th><th>Target 1 (sell 50%)</th><th>Target 2</th><th>Liquidity</th><th>Max position (EGP)</th><th>Tier</th></tr></thead>
+    <tbody id="quantBoard"><tr><td colspan="9">Loading...</td></tr></tbody>
+  </table>
+  <div class="small" id="quantPromotion"></div>
+  <div class="small">Quant candidates are statistical rankings for monitoring, never execution orders. Automatic execution is permanently disabled; promotion requires prospective forward evidence (30 sessions, 30 resolved trades, 90 calendar days, PF &ge; 1.2).</div>
+</div>
+
+<div class="card">
+  <h2>Watchlist — No Entry</h2>
+  <div class="small">These symbols do not currently meet ASTRA's entry criteria. They are not short recommendations.</div>
+  <div id="watchlist">Loading watchlist...</div>
+</div>
+
+<script>
+async function api(path){
+  const response=await fetch(path,{cache:'no-store'});
+  if(!response.ok) throw new Error('HTTP '+response.status);
+  return response.json();
+}
+
+function esc(value){
+  return String(value??'-').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function sourceBadge(source){
+  const label=source||'UNKNOWN';
+  const cls=label==='RC2_FROZEN'?'ready':
+    label==='RR68_CHALLENGER'?'warn':
+    label==='RC2_NEAR_MISS'?'warn':'muted';
+  return '<span class="badge '+cls+'">'+esc(label)+'</span>';
+}
+
+function scoreCell(value){
+  if(value===null||value===undefined) return '-';
+  return Number(value).toFixed(1);
+}
+
+function priceCell(value){
+  if(value===null||value===undefined||!Number.isFinite(Number(value))) return '-';
+  return Number(value).toFixed(4).replace(/0+$/,'').replace(/.$/,'');
+}
+
+function entryZoneCell(item){
+  const low=item.entryLow;
+  const high=item.entryHigh;
+  if(low==null&&high==null) return '-';
+  if(low!=null&&high!=null){
+    if(Number(low)===Number(high)) return priceCell(low);
+    return priceCell(low)+' – '+priceCell(high);
+  }
+  return priceCell(low??high);
+}
+
+function paperCell(item){
+  if(item.executionReady===true){
+    return '<span class="badge ready">PAPER READY</span>';
+  }
+  const blockers=(item.executionBlockers||[]).slice(0,2).join(', ');
+  return '<span class="badge blocked">BLOCKED</span><div class="small">'+esc(blockers||'Validation required')+'</div>';
+}
+
+async function loadSignals(){
+  document.getElementById('deployment').innerText='Deployment: checking...';
+
+  try{
+    const [data,h,unified]=await Promise.all([
+      api('/api/recommendations'),
+      api('/api/data-health'),
+      api('/api/unified-opportunities')
+    ]);
+
+    const rows=data.recommendations||[];
+    const watch=data.watchlist||[];
+    const unifiedRows=(unified.rows||[]).slice(0,30);
+
+    document.getElementById('mode').innerText=data.mode||'-';
+    document.getElementById('live').innerText=h.liveFeed||'-';
+    document.getElementById('entryCount').innerText=rows.length;
+    document.getElementById('paper').innerText=
+      (data.executionReadyCount||0)+' / '+rows.length;
+
+    document.getElementById('summary').innerText=
+      (rows.length||0)+' entry opportunities · '+
+      (data.dataSource||'-')+' · updated '+
+      new Date(data.updatedAt||Date.now()).toLocaleString();
+
+    document.getElementById('unifiedSummary').innerText=
+      (unifiedRows.length||0)+' ranked rows shown · session '+
+      (unified.sessionDate||'-')+
+      ' · UCP '+(unified.ucpStatus||'-')+
+      ' · Confidence displayed separately, not double-counted';
+
+    document.getElementById('unifiedBoard').innerHTML=unifiedRows.length
+      ? unifiedRows.map(x=>{
+          const conf=x.confidence&&x.confidence.value!=null?x.confidence.value:'-';
+          const risk=(x.riskLevel||'UNKNOWN')+
+            (x.stopRiskPct!=null?' / '+Number(x.stopRiskPct).toFixed(1)+'% stop':'');
+          const morning=x.morningStatus||'NOT_PREPARED';
+          const selected=x.selectedByUcp===true?' ★':'';
+          return '<tr>'+
+            '<td>'+esc(x.unifiedRank)+'</td>'+
+            '<td><b>'+esc(x.ticker)+selected+'</b></td>'+
+            '<td>'+sourceBadge(x.source)+'</td>'+
+            '<td><b>'+scoreCell(x.unifiedScore)+'</b></td>'+
+            '<td>'+scoreCell(x.technicalScore)+'</td>'+
+            '<td>'+scoreCell(x.researchScore)+'</td>'+
+            '<td>'+esc(conf)+'</td>'+
+            '<td>'+esc(risk)+'</td>'+
+            '<td>'+scoreCell(x.liquidityScore)+'</td>'+
+            '<td>'+scoreCell(x.supportResistanceScore)+'</td>'+
+            '<td>'+scoreCell(x.structuralNetRR)+'</td>'+
+            '<td><b>'+esc(entryZoneCell(x))+'</b></td>'+
+            '<td>'+esc(priceCell(x.stopLoss))+'</td>'+
+            '<td>'+esc(priceCell(x.target1))+'</td>'+
+            '<td>'+esc(priceCell(x.target2))+'</td>'+
+            '<td>'+esc(morning)+'</td>'+
+          '</tr>';
+        }).join('')
+      : '<tr><td colspan="16">Unified board unavailable or waiting for the RC2 scoreboard snapshot.</td></tr>';
+
+    document.getElementById('signals').innerHTML=rows.length
+      ? rows.map(x=>{
+          return '<tr>'+
+            '<td><b>'+esc(x.symbol)+'</b></td>'+
+            '<td class="buy">'+esc(x.signal)+'</td>'+
+            '<td>'+esc(x.entry)+'</td>'+
+            '<td>'+esc(x.target1)+'</td>'+
+            '<td>'+esc(x.target2)+'</td>'+
+            '<td>'+esc(x.target3)+'</td>'+
+            '<td>'+esc(x.stopLoss)+'</td>'+
+            '<td>'+esc(x.confidence)+'</td>'+
+            '<td>'+esc(x.riskLevel)+'</td>'+
+            '<td>'+paperCell(x)+'</td>'+
+          '</tr>';
+        }).join('')
+      : '<tr><td colspan="10">No entry opportunities currently. ASTRA is not converting bearish/weak setups into short entries.</td></tr>';
+
+    document.getElementById('watchlist').innerHTML=watch.length
+      ? '<table><thead><tr><th>Symbol</th><th>Status</th><th>Confidence</th><th>Risk</th><th>Reason</th></tr></thead><tbody>'+
+        watch.map(x=>'<tr>'+
+          '<td><b>'+esc(x.symbol)+'</b></td>'+
+          '<td class="watch">WATCH</td>'+
+          '<td>'+esc(x.confidence)+'</td>'+
+          '<td>'+esc(x.riskLevel)+'</td>'+
+          '<td>'+esc(x.reason)+'</td>'+
+        '</tr>').join('')+
+        '</tbody></table>'
+      : '<div class="muted">No watchlist items.</div>';
+
+    document.getElementById('health').innerText=
+      h.message||h.engineStatus||'Data health checked';
+
+    document.getElementById('engine').innerText=
+      h.engineStatus==='LIVE_READY'?'LIVE READY':
+      h.engineStatus==='HISTORICAL_READY'?'HISTORICAL READY':
+      h.engineStatus||'DEGRADED';
+
+    document.getElementById('engine').className=
+      h.engineStatus==='LIVE_READY'||h.engineStatus==='HISTORICAL_READY'
+        ? 'status'
+        : 'blocked';
+
+    document.getElementById('deployment').innerText=
+      'Deployment: '+(data.deploymentCommit||'unknown');
+  }catch(e){
+    document.getElementById('unifiedBoard').innerHTML=
+      '<tr><td colspan="16">Unified board unavailable</td></tr>';
+    document.getElementById('signals').innerHTML=
+      '<tr><td colspan="10">Runtime data unavailable</td></tr>';
+    document.getElementById('watchlist').innerText='Runtime data unavailable';
+    document.getElementById('engine').innerText='DEGRADED';
+    document.getElementById('engine').className='blocked';
+    document.getElementById('health').innerText='Waiting for API connection';
+    document.getElementById('deployment').innerText='Deployment: unavailable';
+  }
+}
+
+async function loadQuant(){
+  try{
+    const q=await api('/api/quant');
+    const b=document.getElementById('quantBadge');
+    b.innerText=q.status||'UNKNOWN';
+    b.className='badge '+(q.status==='READY'?'ready':(q.status==='STALE'||q.status==='MISALIGNED')?'warn':'blocked');
+    const reasons=(q.reasons||[]).join(', ');
+    document.getElementById('quantSummary').innerText=
+      'session '+(q.sessionDate||'-')+' / expected '+(q.expectedSession||'-')+
+      ' · regime '+(q.regime||'-')+(q.driftGuard?' · drift guard ON':'')+
+      (reasons?' · '+reasons:'')+(q.withheldCount?(' · '+q.withheldCount+' candidates withheld'):'');
+    const P=q.plan||{},T=P.top||{},B0=P.base||{};
+    const m=(label,value)=>'<div class="metric"><div class="label">'+esc(label)+'</div><div class="value">'+esc(value)+'</div></div>';
+    document.getElementById('quantMetrics').innerHTML=
+      m('Target 1 hit (Top5)',T.hit1!=null?T.hit1+'%':'-')+
+      m('Target 1 hit (all stocks)',B0.hit1!=null?B0.hit1+'%':'-')+
+      m('Target 2 hit (Top5)',T.hit2!=null?T.hit2+'%':'-')+
+      m('Avg net / trade',T.avg!=null?T.avg+'%':'-')+
+      m('Excess vs market',P.excess_avg!=null?P.excess_avg+'%':'-')+
+      m('Forward sessions',(q.forward&&q.forward.sessions_valid!=null)?q.forward.sessions_valid:'-');
+    const rows=q.candidates||[];
+    document.getElementById('quantBoard').innerHTML=rows.length
+      ? rows.map(c=>'<tr><td>'+esc(c.rank)+'</td><td><b>'+esc(c.ticker)+'</b></td><td>'+priceCell(c.entryLow)+' – '+priceCell(c.entryHigh)+'</td><td>'+priceCell(c.stopLoss)+' ('+esc(c.stopRiskPct)+'%)</td><td>'+priceCell(c.target1)+' (+'+esc(c.target1Pct)+'%)</td><td>'+priceCell(c.target2)+' (+'+esc(c.target2Pct)+'%)</td><td>'+esc(c.liquidityTier)+'</td><td>'+esc(Number(c.maxPositionEgp||0).toLocaleString())+'</td><td>'+esc(c.tier)+'</td></tr>').join('')
+      : '<tr><td colspan="9">No candidates published ('+esc(q.status||'unavailable')+')</td></tr>';
+    const pr=q.promotion||{};
+    document.getElementById('quantPromotion').innerText='Promotion: '+(pr.status||'-')+((pr.blockers||[]).length?' · blockers: '+pr.blockers.join(', '):'');
+  }catch(e){
+    document.getElementById('quantBadge').innerText='UNAVAILABLE';
+    document.getElementById('quantBadge').className='badge blocked';
+    document.getElementById('quantSummary').innerText='Quant lane unavailable';
+  }
+}
+
+loadSignals();
+loadQuant();
+setInterval(loadSignals,60000);
+setInterval(loadQuant,60000);
+</script>
+</body>
+</html>

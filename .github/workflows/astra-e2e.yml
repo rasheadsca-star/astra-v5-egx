@@ -1,0 +1,43 @@
+name: ASTRA E2E Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  astra-e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build check
+        run: npm run build
+
+      - name: Runtime validation
+        run: npm test
+
+      - name: Full ASTRA E2E validation
+        run: node scripts/astra-e2e-runner.js
+
+      - name: Production contract validation
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          ASTRA_PROD_URL: https://ras-egx-astra-v4.vercel.app
+        run: node scripts/production-contract-check.js
+
+      - name: Upload ASTRA Result Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astra-result
+          path: artifacts/astra-result.json

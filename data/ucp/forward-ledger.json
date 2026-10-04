@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "rasheed-egx-ucp-forward-ledger/v1",
+  "policyVersion": "ucp-forward-promotion/v1",
+  "updatedAt": "2026-10-01T22:44:17.332Z",
+  "entries": [
+    {
+      "recordId": "2026-10-01:cc73e3148f39db7f",
+      "capturedAt": "2026-10-01T22:44:17.332Z",
+      "source": "UCP_PRODUCTION_SHADOW",
+      "sessionDate": "2026-10-01",
+      "targetSessionDate": null,
+      "decisionHash": "cc73e3148f39db7fd08a13fedc72fd8fd9478162c1295b0edb070103176191df",
+      "deploymentCommit": "88973ba4936fcf9d1dbefcd7c0bb5315cb9c1598",
+      "alphaEngine": "TFE_V20_FUSION_RC2",
+      "alphaStatus": "SHADOW_READY",
+      "governance": {
+        "status": "GOVERNANCE_BLOCKED",
+        "referenceSession": "2026-09-13",
+        "sessionAligned": false,
+        "policySafe": true
+      },
+      "morning": {
+        "status": "NO_CANDIDATES",
+        "evidenceComplete": false
+      },
+      "blockers": [
+        "FORWARD_VALIDATION_REQUIRED",
+        "V17_SESSION_ALIGNMENT_REQUIRED"
+      ],
+      "candidates": [],
+      "outcomes": [],
+      "criticalBreaches": []
+    }
+  ],
+  "summary": {
+    "forwardSessions": 1,
+    "resolvedTrades": 0,
+    "wins": 0,
+    "losses": 0,
+    "notEntered": 0,
+    "open": 0,
+    "averageNetReturnPct": null,
+    "profitFactor": null,
+    "observedCalendarDays": 1,
+    "criticalBreaches": 0
+  },
+  "promotion": {
+    "eligible": false,
+    "automaticPromotionAllowed": false,
+    "executionAllowed": false,
+    "status": "FORWARD_VALIDATION_REQUIRED",
+    "blockers": [
+      "MIN_FORWARD_SESSIONS_NOT_MET",
+      "MIN_RESOLVED_TRADES_NOT_MET",
+      "MIN_CALENDAR_DAYS_NOT_MET",
+      "PROFIT_FACTOR_NOT_ESTABLISHED",
+      "AVERAGE_NET_RETURN_NOT_ESTABLISHED"
+    ],
+    "policy": {
+      "version": "ucp-forward-promotion/v1",
+      "minForwardSessions": 30,
+      "minResolvedTrades": 30,
+      "minObservedCalendarDays": 90,
+      "minProfitFactor": 1.2,
+      "minAverageNetReturnPct": 0,
+      "maxCriticalBreaches": 0,
+      "automaticPromotionAllowed": false,
+      "automaticExecutionAllowed": false,
+      "sameBarAmbiguity": "STOP_FIRST",
+      "roundTripCostPct": 0.6,
+      "entryExpirySessions": 3,
+      "maxHoldSessions": 10
+    }
+  }
+}
