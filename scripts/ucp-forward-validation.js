@@ -202,3 +202,25 @@ function main() {
 }
 
 main();
+
+// v2: real opening fills, gaps, and locked limit-down sessions.
+{
+  const entry={targetSessionDate:'2026-10-04'};
+  const candidate={ticker:'TEST',entry:10,stopLoss:9,target1:11};
+  const bar=(date,open,high,low,close)=>({date,open,high,low,close});
+  const entered=bar('2026-10-04',10.05,10.5,9.5,10);
+  const gap=resolveCandidate(entry,candidate,[entered,bar('2026-10-05',8.8,9.2,8.7,9)]);
+  assert.equal(gap.exitPrice,8.8); assert.equal(gap.entryPrice,10.05);
+  const gapUp=resolveCandidate(entry,candidate,[entered,bar('2026-10-05',11.3,11.5,8.8,11)]);
+  assert.equal(gapUp.outcome,'TARGET1'); assert.equal(gapUp.exitPrice,11.3);
+  const missed=resolveCandidate(entry,candidate,[4,5,6].map(d=>bar('2026-10-0'+d,10.2,10.5,9.9,10.1)));
+  assert.equal(missed.outcome,'NOT_ENTERED');
+  const lock=bar('2026-10-05',9,9,9,9);
+  assert.equal(resolveCandidate(entry,candidate,[entered,lock]).outcome,'OPEN');
+  const unlocked=resolveCandidate(entry,candidate,[entered,lock,bar('2026-10-06',8.5,8.8,8.4,8.6)]);
+  assert.equal(unlocked.exitPrice,8.5); assert.equal(unlocked.limitDownDeferred,true);
+  assert.equal(unlocked.policyVersion,'ucp-forward-promotion/v2');
+  const missing=resolveCandidate(entry,candidate,[{...entered,open:null}]);
+  assert.equal(missing.resolutionReason,'WAITING_OHLC');
+  console.log('PASS forward v2: gaps, opening zone, limit-down deferral, missing OHLC');
+}

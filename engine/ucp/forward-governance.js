@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const FORWARD_POLICY = Object.freeze({
-  version: 'ucp-forward-promotion/v1',
+  version: 'ucp-forward-promotion/v2',
   minForwardSessions: 30,
   minResolvedTrades: 30,
   minObservedCalendarDays: 90,

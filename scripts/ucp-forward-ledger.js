@@ -122,6 +122,7 @@ async function capture(ledger) {
   const candidates = (snapshot.alpha?.candidates || []).map(safeCandidate).filter((item) => item.ticker);
   const entry = {
     recordId: `${snapshot.sessionDate}:${decisionHash.slice(0, 16)}`,
+    policyVersion: FORWARD_POLICY.version,
     capturedAt: new Date().toISOString(),
     source: 'UCP_PRODUCTION_SHADOW',
     sessionDate: snapshot.sessionDate,
@@ -173,7 +174,7 @@ function historyRows(payload = {}) {
     .filter((row) => row && dateOnly(row.date) && Number(row.high) > 0 && Number(row.low) > 0 && Number(row.close) > 0)
     .map((row) => ({
       date: dateOnly(row.date),
-      open: Number(row.open || row.close),
+      open: row.open == null ? null : Number(row.open),
       high: Number(row.high),
       low: Number(row.low),
       close: Number(row.close)
@@ -187,6 +188,11 @@ function netReturn(entryPrice, exitPrice) {
 }
 
 function resolveCandidate(entry, candidate, rows, previous = {}) {
+  if (entry.policyVersion === 'ucp-forward-promotion/v1') return resolveCandidateLegacy(entry, candidate, rows, previous);
+  return require('./ucp-forward-realism').resolveRealistic(entry, candidate, rows, previous, FORWARD_POLICY);
+}
+
+function resolveCandidateLegacy(entry, candidate, rows, previous = {}) {
   const ticker = candidate.ticker;
   const targetSession = dateOnly(entry.targetSessionDate);
   const entryPrice = Number(candidate.entry);
@@ -316,7 +322,7 @@ async function resolve(ledger) {
 
       const rows = cache.get(ticker);
       if (!rows) continue;
-      const next = resolveCandidate(entry, candidate, rows, previous);
+      const next = resolveCandidate({ ...entry, policyVersion: entry.policyVersion || 'ucp-forward-promotion/v1' }, candidate, rows, previous);
       const index = entry.outcomes.findIndex((item) => item.ticker === ticker);
       if (JSON.stringify(previous) !== JSON.stringify(next)) {
         if (index >= 0) entry.outcomes[index] = next;
@@ -333,6 +339,7 @@ function finalizeLedger(ledger) {
   const summary = summarizeForwardLedger(ledger);
   const promotion = evaluatePromotionEligibility(summary);
   ledger.schemaVersion = 'rasheed-egx-ucp-forward-ledger/v1';
+  for (const entry of ledger.entries || []) entry.policyVersion ||= 'ucp-forward-promotion/v1';
   ledger.policyVersion = FORWARD_POLICY.version;
   ledger.updatedAt = new Date().toISOString();
   ledger.summary = summary;
