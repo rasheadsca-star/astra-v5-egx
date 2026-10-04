@@ -11,7 +11,9 @@
     "quant:update": "node scripts/run-python.js quant/tools/astra_bridge.py && node scripts/run-python.js --cwd quant fetch/daily_update.py --no-yahoo && node scripts/run-python.js --cwd quant publish.py && node scripts/run-python.js quant/web/build.py",
     "start": "node scripts/serve-local.js",
     "quant:setup": "node scripts/run-python.js -m pip install -r quant/requirements.txt",
-    "site:build": "node scripts/run-python.js quant/web/build.py"
+    "site:build": "node scripts/run-python.js quant/web/build.py",
+    "skills:find": "npx -y skills@latest find",
+    "skills:update": "npx -y skills@latest update"
   },
   "engines": {
     "node": ">=20"
