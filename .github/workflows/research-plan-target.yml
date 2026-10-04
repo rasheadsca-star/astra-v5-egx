@@ -1,0 +1,45 @@
+name: ASTRA Plan Target Research
+on:
+  push:
+    branches: [research/plan-target-ranking]
+    paths: ['.github/workflows/research-plan-target.yml', 'quant/research/plan_target_ranking.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: astra-plan-target-research
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.ref == 'refs/heads/research/plan-target-ranking'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -r quant/requirements.txt
+      - run: npm test && npm run quant:test
+      - run: python quant/research/plan_target_ranking.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plan-target-research
+          path: quant/research/results/plan-target/
+      - name: Commit research evidence and downloaded CSV only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add quant/research/results/plan-target
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: record paired plan-target ranking evidence'
+            git push origin HEAD:research/plan-target-ranking
+          fi
