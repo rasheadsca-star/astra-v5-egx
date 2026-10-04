@@ -50,6 +50,10 @@ async function main(){
     <div class="mut">دليل مجموعة الرتبة (${e.bucket}) للاحتفاظ بالهدف 2 فقط: إصابة ${f(e.hit)}% (حد أدنى 90%: ${f(r.group_hit_low90)}%) · متوسط صافٍ ${f(e.avg,2)}% · ${e.n} صفقة · في حالة السوق الحالية: ${e.regime_n} صفقة/${e.regime_days} يوماً</div>
     ${r.intraday?(r.intraday.status==='ok'?`<div class="mut" style="color:${r.intraday.open_in_zone?'var(--ok)':'var(--bad)'}">افتتاح ${r.intraday.open} ${r.intraday.open_in_zone?'داخل نطاق الدخول ✔':'خارج نطاق الدخول ✖ — لا تدخل'} · أول 15د: ${r.intraday.first15_ret_pct}% · حجم ${r.intraday.first15_vol_pct_of_avg_day}% من متوسط اليوم (تأكيد فقط، تجريبي)</div>`:`<div class="mut">أول 15 دقيقة: ${({not_entry_day:'ليست جلسة الدخول بعد',incomplete:'الشمعة الأولى لم تكتمل',unavailable:'غير متاح'})[r.intraday.status]||r.intraday.status}</div>`):''}
     ${r.notes.length?`<div class="mut" style="color:var(--warn)">• ${r.notes.join('<br>• ')}</div>`:''}</div>`}
+  {const v=d.v16_comparison;if(v){
+    const status=['MISALIGNED','WAITING_DATA','COLLECTING'].includes(v.status)?v.status:'WAITING_DATA';
+    h+=`<h2>مقارنة المسار الكمّي بسلة V16.9 متساوية الأوزان</h2><div class="c">الحالة: ${status} · جلسات مقارنة مكتملة: ${Number(v.pairedSessions)||0}<br>متوسط Top5 الكمّي: ${f(v.meanQuantPct,2)}% · سلة V16.9: ${f(v.meanV169Pct,2)}% · الفرق: ${f(v.meanExcessPct,2)}%<p class="mut">مقارنة مستقبلية للاختيار من إغلاق الجلسة إلى إغلاق التالية، بأوزان متساوية ودون تكاليف؛ ليست عائد خطة التداول. لا نعيد إسقاط سلة اليوم على الماضي. غياب السلة أو عدم تطابق الجلسة يمنع تسجيل مقارنة جديدة.</p></div>`;
+  }}
   const P=d.portfolio,F=d.forward;
   if(P){const S=P.strategy,M=P.market_equal_weight,R=P.random_selection,C=P.curve;
     const mn=Math.min(...C.strategy,...C.market),mx=Math.max(...C.strategy,...C.market),W=640,Hh=170,X=i=>10+i*(W-20)/(C.dates.length-1),Y=v=>Hh-10-(v-mn)*(Hh-24)/(mx-mn||1);

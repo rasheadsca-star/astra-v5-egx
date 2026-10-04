@@ -46,6 +46,8 @@ jobs:
       - name: Publish astra-quant/v1 payload
         working-directory: quant
         run: python publish.py
+      - name: Capture prospective V16.9 equal-weight comparison
+        run: python quant/research/v16_baseline.py
       - name: Build static site (GitHub Pages /docs)
         run: python quant/web/build.py
       - name: Validate published contract
