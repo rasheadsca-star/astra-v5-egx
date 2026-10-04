@@ -599,15 +599,15 @@
   }
  },
  "dataStatus": {
-  "finalStatus": "PARTIAL",
-  "guard": "NOOP_NO_NEW_ROWS",
-  "expectedSession": "2026-10-01",
+  "finalStatus": "WAITING_DATA",
+  "guard": "WAITING_DATA",
+  "expectedSession": "2026-10-04",
   "actualAcceptedSession": "2026-10-01",
-  "coveragePct": 88.9,
-  "acceptedRows": 176,
-  "staleRows": 22,
-  "quarantinedCount": 1,
-  "stage1Prepared": true,
+  "coveragePct": 0.0,
+  "acceptedRows": 0,
+  "staleRows": 198,
+  "quarantinedCount": 0,
+  "stage1Prepared": false,
   "preparedCandidateCount": 10
  }
 }
