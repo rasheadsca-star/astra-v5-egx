@@ -1,0 +1,45 @@
+name: ASTRA Five-year History Research
+on:
+  push:
+    branches: [research/five-year-history]
+    paths: ['.github/workflows/research-five-years.yml', 'quant/research/five_year_history.py', 'quant/fetch/fetch_free.py', 'quant/engine/egx_engine.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: astra-five-year-research
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.ref == 'refs/heads/research/five-year-history'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -r quant/requirements.txt
+      - run: npm test && npm run quant:test
+      - run: python quant/research/five_year_history.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: five-year-research
+          path: quant/research/results/five-year/
+      - name: Commit research evidence and downloaded CSV only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add quant/research/results/five-year quant/data/prices
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: record five-year fetch and paired evaluation'
+            git push origin HEAD:research/five-year-history
+          fi
