@@ -53,8 +53,10 @@ function bool(value) {
 }
 
 async function evaluate() {
-  const [fetchStatus, price, primary, regime, v17, rc2] = await Promise.all([
+  const [market, fetchStatus, sessionCalendar, price, primary, regime, v17, rc2] = await Promise.all([
+    fetchJson('market.json'),
     fetchJson('fetch-status.json'),
+    fetchJson('session-calendar.json'),
     fetchJson('stable/v15-price-truth.json'),
     fetchJson('stable/v16-v169-primary-decision.json'),
     fetchJson('stable/v16-market-regime.json'),
@@ -64,10 +66,22 @@ async function evaluate() {
 
   const local = readLocal();
   const expected =
+    sessionCalendar?.latestMarketSession ||
+    market?.marketDate ||
     fetchStatus?.expectedSession ||
     price?.expectedSession ||
     primary?.sessionDate ||
     null;
+
+  const marketRows = Array.isArray(market?.rows) ? market.rows : [];
+  const fetchSessionMatches = fetchStatus?.expectedSession
+    ? fetchStatus.expectedSession === expected
+    : market?.marketDate === expected;
+  const currentSessionRows = Number(
+    fetchStatus?.currentSessionRows ??
+    fetchStatus?.marketRows ??
+    marketRows.length
+  );
 
   const regimeSession = regime?.metrics?.sessionDate || regime?.sessionDate || null;
   const sourceFingerprint =
@@ -91,9 +105,9 @@ async function evaluate() {
 
   const sourceReady = Boolean(
     expected &&
-    fetchStatus?.expectedSession === expected &&
+    fetchSessionMatches &&
     bool(fetchStatus?.executionGrade) &&
-    Number(fetchStatus?.currentSessionRows || 0) >= MIN_CURRENT_SESSION_ROWS &&
+    currentSessionRows >= MIN_CURRENT_SESSION_ROWS &&
     price?.expectedSession === expected &&
     bool(price?.executionGrade) &&
     primary?.sessionDate === expected &&
@@ -126,9 +140,9 @@ async function evaluate() {
 
   const blockers = [];
   if (!expected) blockers.push('EXPECTED_SESSION_MISSING');
-  if (fetchStatus?.expectedSession !== expected) blockers.push('FETCH_SESSION_MISMATCH');
+  if (!fetchSessionMatches) blockers.push('FETCH_SESSION_MISMATCH');
   if (fetchStatus?.executionGrade !== true) blockers.push('FETCH_NOT_EXECUTION_GRADE');
-  if (Number(fetchStatus?.currentSessionRows || 0) < MIN_CURRENT_SESSION_ROWS) blockers.push('FETCH_CURRENT_SESSION_COVERAGE_LOW');
+  if (currentSessionRows < MIN_CURRENT_SESSION_ROWS) blockers.push('FETCH_CURRENT_SESSION_COVERAGE_LOW');
   if (price?.expectedSession !== expected || price?.executionGrade !== true) blockers.push('PRICE_TRUTH_NOT_READY');
   if (primary?.sessionDate !== expected || primary?.selectedModel?.id !== 'V16_9_EQUAL_WEIGHT_BASKET') blockers.push('V169_PRIMARY_NOT_READY');
   if (regimeSession !== expected) blockers.push('REGIME_SESSION_MISMATCH');
@@ -147,7 +161,7 @@ async function evaluate() {
     localFingerprint,
     sourceGeneratedAt: fetchStatus?.generatedAt || null,
     localFetchGeneratedAt,
-    currentSessionRows: Number(fetchStatus?.currentSessionRows || 0),
+    currentSessionRows,
     coveragePct: Number(fetchStatus?.coveragePct || 0),
     v17GeneratedAt: v17?.generatedAt || null,
     rc2GeneratedAt: rc2?.generatedAt || null,
