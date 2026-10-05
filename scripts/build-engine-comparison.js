@@ -70,10 +70,10 @@ function v4Rows(ledger,outcomes,session){
     });
 }
 function metrics(rows){
-  const resolved=rows.filter(x=>['TARGET1','TARGET2','STOP','WIN','LOSS','CLOSED','RESOLVED'].includes(String(x.state||'').toUpperCase()) || Number.isFinite(Number(x.returnPct)));
+  const resolved=rows.filter(x=>['TARGET1','TARGET2','STOP','WIN','LOSS','CLOSED','RESOLVED'].includes(String(x.state||'').toUpperCase()) || (x.returnPct != null && Number.isFinite(Number(x.returnPct))));
   const wins=resolved.filter(x=>Number(x.returnPct)>0 || /TARGET|WIN/.test(String(x.state||'').toUpperCase())).length;
   const losses=resolved.filter(x=>Number(x.returnPct)<0 || /STOP|LOSS/.test(String(x.state||'').toUpperCase())).length;
-  const returns=resolved.map(x=>Number(x.returnPct)).filter(Number.isFinite);
+  const returns=resolved.filter(x=>x.returnPct != null).map(x=>Number(x.returnPct)).filter(Number.isFinite);
   return {
     recommendations:rows.length,
     resolved:resolved.length,
