@@ -1564,8 +1564,8 @@ const D={
 }, ST={
   "expectedSession": "2026-10-05",
   "actualAcceptedSession": "2026-10-05",
-  "generatedAt": "2026-10-05T15:30:42.694144+00:00",
-  "guard": "APPLY",
+  "generatedAt": "2026-10-05T20:53:36.435985+00:00",
+  "guard": "NOOP_NO_NEW_ROWS",
   "sourceSessionReady": true,
   "latestTimestamp": "2026-10-05T13:29 (earliest 12:40)",
   "coveragePct": 91.9,
@@ -1627,7 +1627,9 @@ const D={
   ],
   "failedSymbols": [],
   "quarantinedCount": 4,
-  "notes": []
+  "notes": [
+    "لا صفوف جديدة؛ الجلسة مطبّقة بتغطية 91.9%"
+  ]
 }
 ;
 const $=s=>document.getElementById(s),f=(x,n=1)=>(x==null?'—':Number(x).toFixed(n));
@@ -1639,7 +1641,7 @@ async function main(){
   if(!d){$('app').textContent='لا توجد بيانات — شغّل python update.py';return}
   let U=ST;try{const r=await fetch('data/daily-data-update-status.json',{cache:'no-store'});if(r.ok)U=await r.json()}catch(e){}
   const b=d.backtest,t3=b.top3,t5=b.top5,bl=b.baseline_all,I=d.integrity,ex=Object.entries(d.excluded||{});
-  let h=`<h1>EGX NEXT V2.1 — ترتيب الفرص (دعم قرار)</h1><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0"><a href="v5/" style="text-decoration:none;border:1px solid var(--bd);border-radius:8px;padding:7px 10px;color:var(--tx);background:var(--card)"><b>فتح ASTRA V5</b></a><a href="data/engine-comparison.json" style="text-decoration:none;border:1px solid var(--bd);border-radius:8px;padding:7px 10px;color:var(--tx);background:var(--card)">مقارنة V2.1 / V4 / V5</a></div><div class="mut">آخر جلسة في البيانات ${d.session} · المتوقعة ${U?.expectedSession||d.expected_session} · ${d.universe} سهماً مفحوصاً من ${d.symbols} مؤهلاً · ${d.history_sessions} جلسة</div>`;
+  let h=`<h1>EGX NEXT V2.1 — ترتيب الفرص (دعم قرار)</h1><div class="mut">آخر جلسة في البيانات ${d.session} · المتوقعة ${U?.expectedSession||d.expected_session} · ${d.universe} سهماً مفحوصاً من ${d.symbols} مؤهلاً · ${d.history_sessions} جلسة</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a href="v5/" style="text-decoration:none;border:1px solid var(--bd);border-radius:8px;padding:7px 10px;color:var(--tx);background:var(--card)"><b>فتح ASTRA V5</b></a><a href="data/engine-comparison.json" style="text-decoration:none;border:1px solid var(--bd);border-radius:8px;padding:7px 10px;color:var(--tx);background:var(--card)">V2.1 / V4 / V5 مقارنة</a></div>`;
   {
    if(U){const c={SUCCESS:'var(--ok)',ALREADY_CURRENT:'var(--ok)',PARTIAL:'var(--warn)',WAITING_DATA:'var(--bad)',FAILED:'var(--bad)'}[U.finalStatus]||'var(--mut)';
     h+=`<div class="al" style="border-color:${c}"><b style="color:${c}">تحديث البيانات: ${U.finalStatus}</b> · جلسة معتمدة ${U.actualAcceptedSession||'—'} من المتوقعة ${U.expectedSession} · تغطية ${U.coveragePct}% (${U.acceptedRows} سهماً جديداً، ${U.staleRows} بلا بيانات الجلسة، ${U.quarantinedCount} صفاً في الحجر)${U.finalStatus==='WAITING_DATA'?' — المصدر لم يسلّم جلسة اليوم بعد؛ التوصيات أدناه من الجلسة السابقة ولا تُنفَّذ.':''}</div>`}}

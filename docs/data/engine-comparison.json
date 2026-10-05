@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-05T20:21:53.087Z",
+  "generatedAt": "2026-10-05T20:53:37.341Z",
   "session": "2026-10-05",
   "engines": {
     "v2": {
@@ -351,7 +351,7 @@
         "resolved": 0,
         "wins": 0,
         "losses": 0,
-        "open": 1,
+        "open": 0,
         "hitRatePct": null,
         "avgReturnPct": null
       }
@@ -384,16 +384,16 @@
     "v2AndV5IndependentToday": false,
     "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
   },
-  "safety": {
-    "executionAllowed": false,
-    "winnerDeclared": false,
-    "note": "No winner is declared from unresolved same-session recommendations."
-  },
   "identities": {
     "claude": {
       "ui": "EGX Pro Professional V16.9 UI CLAUDE",
       "engine": "TFE_V20_FUSION_RC2",
       "mode": "RESEARCH_ONLY"
     }
+  },
+  "safety": {
+    "executionAllowed": false,
+    "winnerDeclared": false,
+    "note": "No winner is declared from unresolved same-session recommendations."
   }
 }
