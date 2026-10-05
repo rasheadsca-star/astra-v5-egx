@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.639Z",
-  "availableSessions": 153,
+  "availableSessions": 155,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-01",
+  "lastSession": "2026-10-05",
   "historyStatus": "historical_complete_100",
   "primarySource": "mixed_history_with_starta_ohlc_api",
   "verificationSources": [
@@ -5301,6 +5301,76 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 0.7,
       "jumpPct": 1.43
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-10-04",
+      "sourceSessionDate": "2026-10-04",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.71,
+      "high": 0.71,
+      "low": 0.7,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 379829,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-05T15:25:21.011Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.71,
+      "jumpPct": -1.41
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-10-05",
+      "sourceSessionDate": "2026-10-05",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 0.7,
+      "high": 0.71,
+      "low": 0.69,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 164144,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-05T15:25:21.011Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.7,
+      "jumpPct": 0.0
     }
   ],
   "lastUpdateError": "Yahoo history failed for MOIL: MOIL.CA: identity score 75",
@@ -5442,8 +5512,8 @@
     "rowsAccepted": 100,
     "confidenceCap": 75
   },
-  "sessionsCount": 153,
-  "updatedAt": "2026-10-02T22:39:33.901793+03:00",
+  "sessionsCount": 155,
+  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-09-28",

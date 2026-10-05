@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-08-25T07:56:19.846Z",
-  "availableSessions": 128,
+  "availableSessions": 129,
   "firstSession": "2026-02-12",
-  "lastSession": "2026-09-30",
+  "lastSession": "2026-10-05",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -3591,6 +3591,38 @@
       "valueTraded": 30473338.0,
       "previousTrustedClose": 14.99,
       "jumpPct": 0.0
+    },
+    {
+      "ticker": "ARVA",
+      "date": "2026-10-05",
+      "sourceSessionDate": "2026-10-05",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 14.66,
+      "high": 14.99,
+      "low": 14.45,
+      "close": 14.99,
+      "adjustedClose": 14.99,
+      "volume": 2085049,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-05T15:25:21.011Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 14.99,
+      "jumpPct": 0.0
     }
   ],
   "priceTruthLatest": {
@@ -3601,7 +3633,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-08-18"
   },
-  "sessionsCount": 128,
-  "updatedAt": "2026-10-01T12:56:19.488003+03:00",
+  "sessionsCount": 129,
+  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

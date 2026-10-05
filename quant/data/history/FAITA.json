@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.534Z",
-  "availableSessions": 113,
+  "availableSessions": 114,
   "firstSession": "2025-09-14",
-  "lastSession": "2026-09-29",
+  "lastSession": "2026-10-04",
   "historyStatus": "historical_partial_50",
   "primarySource": "kaggle_yahoo_seed",
   "verificationSources": [],
@@ -3830,6 +3830,41 @@
       "priceTruthMode": "PRECISE_PUBLIC_SOURCE_WITH_EXPLICIT_SESSION_EVIDENCE",
       "previousTrustedClose": 0.98,
       "jumpPct": 0.0
+    },
+    {
+      "ticker": "FAITA",
+      "date": "2026-10-04",
+      "sourceSessionDate": "2026-10-04",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.98,
+      "high": 0.99,
+      "low": 0.98,
+      "close": 0.99,
+      "adjustedClose": 0.99,
+      "volume": 52002,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-05T15:25:21.011Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:24"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.98,
+      "jumpPct": 1.02
     }
   ],
   "lastUpdateError": "Yahoo history failed for FAITA: FAITA.CA: identity score 75",
@@ -3841,7 +3876,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 113,
-  "updatedAt": "2026-10-01T12:56:19.488003+03:00",
+  "sessionsCount": 114,
+  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
