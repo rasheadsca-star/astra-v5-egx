@@ -5,6 +5,10 @@ on:
   schedule:
     # Repeated readiness checks cover Cairo UTC+2/+3. Preflight skips expensive work unless needed.
     - cron: '45 12-16 * * 0-4'
+  workflow_run:
+    workflows: ["ASTRA Daily Stability Audit"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   # One-time immediate validation when this workflow definition is changed.
   push:
@@ -24,6 +28,7 @@ env:
 
 jobs:
   refresh:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
