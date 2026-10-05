@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-05T17:56:46.219Z",
+  "generatedAt": "2026-10-05T20:21:53.087Z",
   "session": "2026-10-05",
   "engines": {
     "v2": {
@@ -326,6 +326,35 @@
         "hitRatePct": null,
         "avgReturnPct": null
       }
+    },
+    "claude": {
+      "id": "EGX Pro Professional V16.9 UI CLAUDE",
+      "engine": "TFE_V20_FUSION_RC2",
+      "session": "2026-10-05",
+      "rows": [
+        {
+          "ticker": "RUBX",
+          "rank": 1,
+          "tier": "RC2",
+          "entryLow": 15.5467,
+          "entryHigh": 15.9983,
+          "stop": 14.7146,
+          "target1": 17.1021,
+          "target2": 17.2467,
+          "score": 75.3,
+          "state": "RESEARCH_PENDING_PULLBACK",
+          "returnPct": null
+        }
+      ],
+      "metrics": {
+        "recommendations": 1,
+        "resolved": 0,
+        "wins": 0,
+        "losses": 0,
+        "open": 1,
+        "hitRatePct": null,
+        "avgReturnPct": null
+      }
     }
   },
   "overlap": {
@@ -346,7 +375,10 @@
     ],
     "v4_v5": [
       "AJWA"
-    ]
+    ],
+    "v2_claude": [],
+    "v4_claude": [],
+    "v5_claude": []
   },
   "independence": {
     "v2AndV5IndependentToday": false,
@@ -356,5 +388,12 @@
     "executionAllowed": false,
     "winnerDeclared": false,
     "note": "No winner is declared from unresolved same-session recommendations."
+  },
+  "identities": {
+    "claude": {
+      "ui": "EGX Pro Professional V16.9 UI CLAUDE",
+      "engine": "TFE_V20_FUSION_RC2",
+      "mode": "RESEARCH_ONLY"
+    }
   }
 }

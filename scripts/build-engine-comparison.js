@@ -6,6 +6,7 @@ const path = require('path');
 const V4_REPO = 'rasheadsca-star/RAS-EGX-PRO2026-NEXT';
 const LEDGER_PATH = 'astra-prod/app/intelligence/recommendation-ledger.json';
 const OUTCOMES_PATH = 'astra-prod/app/intelligence/recommendation-outcomes.json';
+const CLAUDE_PATH = 'data/rc2/current-session.json';
 
 function readJson(file){
   return JSON.parse(fs.readFileSync(file,'utf8'));
@@ -48,6 +49,23 @@ function v5Rows(payload){
     score:x.score ?? null, state:'PREPARED'
   }));
 }
+function claudeRows(payload,session){
+  if(payload?.sessionDate !== session) return [];
+  return (payload.recommendations||[]).map(x=>({
+    ticker:x.ticker||x.symbol,
+    rank:x.rank??null,
+    tier:'RC2',
+    entryLow:x.tradePlan?.entryLow??null,
+    entryHigh:x.tradePlan?.entryHigh??null,
+    stop:x.tradePlan?.stop??x.tradePlan?.stopLoss??null,
+    target1:x.tradePlan?.target1??null,
+    target2:x.tradePlan?.target2??null,
+    score:x.scores?.fusionRank??x.scores?.technical??null,
+    state:x.decision||x.publicationState||'RESEARCH_CANDIDATE',
+    returnPct:null
+  }));
+}
+
 function v4Rows(ledger,outcomes,session){
   const om=new Map((outcomes.records||[])
     .filter(x=>sessionOf(x)===session)
@@ -94,15 +112,22 @@ function overlap(a,b){
   const session=v5.session || v2.session;
   if(!session) throw new Error('COMPARISON_SESSION_MISSING');
 
-  const [ledger,outcomes]=await Promise.all([
+  const [ledger,outcomes,claude]=await Promise.all([
     githubJson(V4_REPO,LEDGER_PATH),
-    githubJson(V4_REPO,OUTCOMES_PATH)
+    githubJson(V4_REPO,OUTCOMES_PATH),
+    githubJson(V4_REPO,CLAUDE_PATH)
   ]);
 
   const engines={
     v2:{id:'EGX-NEXT-V2.1',session,rows:v2Rows(v2)},
     v4:{id:'ASTRA-V4',session,rows:v4Rows(ledger,outcomes,session)},
-    v5:{id:'EGX-NEXT-QUANT-V5',session,rows:v5Rows(v5)}
+    v5:{id:'EGX-NEXT-QUANT-V5',session,rows:v5Rows(v5)},
+    claude:{
+      id:'EGX Pro Professional V16.9 UI CLAUDE',
+      engine:'TFE_V20_FUSION_RC2',
+      session,
+      rows:claudeRows(claude,session)
+    }
   };
   for(const e of Object.values(engines)) e.metrics=metrics(e.rows);
 
@@ -115,13 +140,23 @@ function overlap(a,b){
     overlap:{
       v2_v4:overlap(engines.v2.rows,engines.v4.rows),
       v2_v5:v2v5,
-      v4_v5:overlap(engines.v4.rows,engines.v5.rows)
+      v4_v5:overlap(engines.v4.rows,engines.v5.rows),
+      v2_claude:overlap(engines.v2.rows,engines.claude.rows),
+      v4_claude:overlap(engines.v4.rows,engines.claude.rows),
+      v5_claude:overlap(engines.v5.rows,engines.claude.rows)
     },
     independence:{
       v2AndV5IndependentToday:false,
       reason:v2v5.length===engines.v2.rows.length && v2v5.length===engines.v5.rows.length
         ? 'V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session.'
         : 'V2.1 and V5 recommendation sets differ for this session.'
+    },
+    identities:{
+      claude:{
+        ui:'EGX Pro Professional V16.9 UI CLAUDE',
+        engine:'TFE_V20_FUSION_RC2',
+        mode:claude?.mode||null
+      }
     },
     safety:{
       executionAllowed:false,
