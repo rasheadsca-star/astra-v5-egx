@@ -3,7 +3,7 @@
   "sessions": [
     {
       "session": "2026-10-05",
-      "generatedAt": "2026-10-05T17:56:46.219Z",
+      "generatedAt": "2026-10-05T20:21:53.087Z",
       "metrics": {
         "v2": {
           "recommendations": 10,
@@ -29,6 +29,15 @@
           "wins": 0,
           "losses": 0,
           "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "claude": {
+          "recommendations": 1,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 1,
           "hitRatePct": null,
           "avgReturnPct": null
         }
@@ -62,6 +71,9 @@
           "ADCI",
           "ECAP",
           "ASCM"
+        ],
+        "claude": [
+          "RUBX"
         ]
       },
       "overlap": {
@@ -82,7 +94,10 @@
         ],
         "v4_v5": [
           "AJWA"
-        ]
+        ],
+        "v2_claude": [],
+        "v4_claude": [],
+        "v5_claude": []
       },
       "independence": {
         "v2AndV5IndependentToday": false,
