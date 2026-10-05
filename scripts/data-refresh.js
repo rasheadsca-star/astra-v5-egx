@@ -21,10 +21,33 @@ const CONCURRENCY = 12;
 const HISTORY_SESSIONS = Number(process.env.ASTRA_HISTORY_SESSIONS || 150);
 const MIN_HISTORY_COVERAGE = 0.80;
 const MIN_MARKET_ROWS = 80;
+const SOURCE_REPO =
+  process.env.ASTRA_CANONICAL_SOURCE_REPO ||
+  'rasheadsca-star/RAS-EGX-PRO2026-NEXT';
 
 function writeJson(file, value) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n', 'utf8');
+}
+
+async function fetchGithubSourceJson(relativePath) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    const url = `https://api.github.com/repos/${SOURCE_REPO}/contents/data/${relativePath}?ref=main&fresh=${Date.now()}`;
+    const response = await fetch(url, {
+      headers: {
+        Accept: 'application/vnd.github.raw+json',
+        'Cache-Control': 'no-cache',
+        'User-Agent': 'ASTRA-V5-SOURCE-CONTENTS/1.0'
+      },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`GITHUB_HTTP_${response.status}:${relativePath}`);
+    return JSON.parse(await response.text());
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 async function fetchJson(url) {
@@ -199,7 +222,7 @@ function compareSession(a, b) {
 }
 
 async function main() {
-  const [
+  let [
     market,
     fetchStatus,
     sessionCalendar,
@@ -242,6 +265,36 @@ async function main() {
 
   if (compareSession(expectedSession, existingSession) < 0) {
     throw new Error(`SOURCE_SESSION_REGRESSION_BLOCKED:${expectedSession}<${existingSession}`);
+  }
+
+  const sourceFingerprint =
+    primary?.basketPlan?.sourceSessionDataHash ||
+    primary?.sourceSessionDataHash ||
+    null;
+  const v17NeedsApi =
+    expectedSession &&
+    (
+      v17?.sessionDate !== expectedSession ||
+      (sourceFingerprint && v17?.sourceSessionDataHash !== sourceFingerprint)
+    );
+  const rc2NeedsApi =
+    expectedSession &&
+    (
+      rc2?.sessionDate !== expectedSession ||
+      (sourceFingerprint && rc2?.sourceSessionDataHash !== sourceFingerprint)
+    );
+
+  if (v17NeedsApi || rc2NeedsApi) {
+    const [freshV17, freshRc2] = await Promise.all([
+      v17NeedsApi
+        ? fetchGithubSourceJson('v17/ucp-current-session.json').catch(() => null)
+        : Promise.resolve(null),
+      rc2NeedsApi
+        ? fetchGithubSourceJson('rc2/current-session.json').catch(() => null)
+        : Promise.resolve(null)
+    ]);
+    if (freshV17) v17 = freshV17;
+    if (freshRc2) rc2 = freshRc2;
   }
 
   const explicitSessionRows = expectedSession
