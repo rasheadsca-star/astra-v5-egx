@@ -9,6 +9,29 @@ const BASE =
 
 const TIMEOUT_MS = 12000;
 const MIN_CURRENT_SESSION_ROWS = 80;
+const SOURCE_REPO =
+  process.env.ASTRA_CANONICAL_SOURCE_REPO ||
+  'rasheadsca-star/RAS-EGX-PRO2026-NEXT';
+
+async function fetchGithubSourceJson(relativePath) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    const url = `https://api.github.com/repos/${SOURCE_REPO}/contents/data/${relativePath}?ref=main&fresh=${Date.now()}`;
+    const response = await fetch(url, {
+      headers: {
+        Accept: 'application/vnd.github.raw+json',
+        'Cache-Control': 'no-cache',
+        'User-Agent': 'ASTRA-V5-SOURCE-CONTENTS/1.0'
+      },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`GITHUB_HTTP_${response.status}:${relativePath}`);
+    return JSON.parse(await response.text());
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 async function fetchJson(relativePath) {
   const controller = new AbortController();
@@ -53,7 +76,7 @@ function bool(value) {
 }
 
 async function evaluate() {
-  const [market, fetchStatus, sessionCalendar, price, primary, regime, v17, rc2] = await Promise.all([
+  let [market, fetchStatus, sessionCalendar, price, primary, regime, v17, rc2] = await Promise.all([
     fetchJson('market.json'),
     fetchJson('fetch-status.json'),
     fetchJson('session-calendar.json'),
@@ -74,6 +97,36 @@ async function evaluate() {
     null;
 
   const marketRows = Array.isArray(market?.rows) ? market.rows : [];
+  const sourceFingerprint =
+    primary?.basketPlan?.sourceSessionDataHash ||
+    primary?.sourceSessionDataHash ||
+    null;
+
+  const v17NeedsApi =
+    expected &&
+    (
+      v17?.sessionDate !== expected ||
+      (sourceFingerprint && v17?.sourceSessionDataHash !== sourceFingerprint)
+    );
+  const rc2NeedsApi =
+    expected &&
+    (
+      rc2?.sessionDate !== expected ||
+      (sourceFingerprint && rc2?.sourceSessionDataHash !== sourceFingerprint)
+    );
+
+  if (v17NeedsApi || rc2NeedsApi) {
+    const [freshV17, freshRc2] = await Promise.all([
+      v17NeedsApi
+        ? fetchGithubSourceJson('v17/ucp-current-session.json').catch(() => null)
+        : Promise.resolve(null),
+      rc2NeedsApi
+        ? fetchGithubSourceJson('rc2/current-session.json').catch(() => null)
+        : Promise.resolve(null)
+    ]);
+    if (freshV17) v17 = freshV17;
+    if (freshRc2) rc2 = freshRc2;
+  }
   const fetchSessionMatches = fetchStatus?.expectedSession
     ? fetchStatus.expectedSession === expected
     : market?.marketDate === expected;
@@ -84,10 +137,6 @@ async function evaluate() {
   );
 
   const regimeSession = regime?.metrics?.sessionDate || regime?.sessionDate || null;
-  const sourceFingerprint =
-    primary?.basketPlan?.sourceSessionDataHash ||
-    primary?.sourceSessionDataHash ||
-    null;
 
   const v17FingerprintCurrent = Boolean(sourceFingerprint && v17?.sourceSessionDataHash === sourceFingerprint);
   const rc2FingerprintCurrent = Boolean(sourceFingerprint && rc2?.sourceSessionDataHash === sourceFingerprint);
