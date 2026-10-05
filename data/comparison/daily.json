@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "astra-engine-comparison-history/v1",
+  "sessions": [
+    {
+      "session": "2026-10-05",
+      "generatedAt": "2026-10-05T17:56:46.219Z",
+      "metrics": {
+        "v2": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v4": {
+          "recommendations": 3,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 3,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v5": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        }
+      },
+      "tickers": {
+        "v2": [
+          "APSW",
+          "MOIL",
+          "CPCI",
+          "SNFC",
+          "AMIA",
+          "AJWA",
+          "MPRC",
+          "ADCI",
+          "ECAP",
+          "ASCM"
+        ],
+        "v4": [
+          "TAQA",
+          "ARAB",
+          "AJWA"
+        ],
+        "v5": [
+          "APSW",
+          "MOIL",
+          "CPCI",
+          "SNFC",
+          "AMIA",
+          "AJWA",
+          "MPRC",
+          "ADCI",
+          "ECAP",
+          "ASCM"
+        ]
+      },
+      "overlap": {
+        "v2_v4": [
+          "AJWA"
+        ],
+        "v2_v5": [
+          "APSW",
+          "MOIL",
+          "CPCI",
+          "SNFC",
+          "AMIA",
+          "AJWA",
+          "MPRC",
+          "ADCI",
+          "ECAP",
+          "ASCM"
+        ],
+        "v4_v5": [
+          "AJWA"
+        ]
+      },
+      "independence": {
+        "v2AndV5IndependentToday": false,
+        "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
+      }
+    }
+  ]
+}
