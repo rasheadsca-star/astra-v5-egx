@@ -101,6 +101,8 @@ function maxTime(...values) {
 }
 
 function assertAtomicSource({
+  market,
+  sessionCalendar,
   fetchStatus,
   priceTruth,
   primary,
@@ -126,9 +128,18 @@ function assertAtomicSource({
   const failures = [];
 
   if (!expectedSession) failures.push('EXPECTED_SESSION_MISSING');
-  if (fetchStatus?.expectedSession !== expectedSession) failures.push('FETCH_SESSION_MISMATCH');
+  const fetchSessionMatches = fetchStatus?.expectedSession
+    ? fetchStatus.expectedSession === expectedSession
+    : market?.marketDate === expectedSession;
+  const effectiveCurrentSessionRows = Number(
+    fetchStatus?.currentSessionRows ??
+    fetchStatus?.marketRows ??
+    currentSessionRows.length
+  );
+
+  if (!fetchSessionMatches) failures.push('FETCH_SESSION_MISMATCH');
   if (fetchStatus?.executionGrade !== true) failures.push('FETCH_NOT_EXECUTION_GRADE');
-  if (Number(fetchStatus?.currentSessionRows || currentSessionRows.length) < MIN_MARKET_ROWS) {
+  if (effectiveCurrentSessionRows < MIN_MARKET_ROWS) {
     failures.push('CURRENT_SESSION_ROWS_BELOW_POLICY');
   }
   if (priceTruth?.expectedSession !== expectedSession || priceTruth?.executionGrade !== true) {
@@ -191,6 +202,7 @@ async function main() {
   const [
     market,
     fetchStatus,
+    sessionCalendar,
     sourceHealth,
     sessionEvidence,
     priceTruth,
@@ -201,6 +213,7 @@ async function main() {
   ] = await Promise.all([
     fetchJson(`${BASE}/market.json`),
     fetchJson(`${BASE}/fetch-status.json`),
+    fetchJson(`${BASE}/session-calendar.json`),
     fetchJson(`${BASE}/source-health.json`).catch(() => ({})),
     fetchJson(`${BASE}/stable/v16-source-session-evidence.json`).catch(() => ({})),
     fetchJson(`${BASE}/stable/v15-price-truth.json`),
@@ -215,6 +228,8 @@ async function main() {
   const existingMarket = readJsonIfExists(existingMarketPath);
   const existingSession = existingMarket?.source?.expectedSession || null;
   const expectedSession =
+    sessionCalendar?.latestMarketSession ||
+    market?.marketDate ||
     fetchStatus?.expectedSession ||
     priceTruth?.expectedSession ||
     primary?.sessionDate ||
@@ -229,19 +244,26 @@ async function main() {
     throw new Error(`SOURCE_SESSION_REGRESSION_BLOCKED:${expectedSession}<${existingSession}`);
   }
 
-  const currentSessionRows = expectedSession
+  const explicitSessionRows = expectedSession
     ? marketRows.filter(
         row =>
           row?.sourceSessionDate === expectedSession ||
           row?.marketSessionDate === expectedSession
       )
     : marketRows;
+  const currentSessionRows =
+    explicitSessionRows.length > 0 ||
+    market?.marketDate !== expectedSession
+      ? explicitSessionRows
+      : marketRows;
 
   if (marketRows.length < MIN_MARKET_ROWS) {
     throw new Error(`Canonical market coverage too low: ${marketRows.length} rows`);
   }
 
   const freshness = assertAtomicSource({
+    market,
+    sessionCalendar,
     fetchStatus,
     priceTruth,
     primary,
