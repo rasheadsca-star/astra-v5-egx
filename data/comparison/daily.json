@@ -107,6 +107,107 @@
         "v2AndV5IndependentToday": false,
         "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
       }
+    },
+    {
+      "session": "2026-10-06",
+      "generatedAt": "2026-10-06T13:33:12.735Z",
+      "metrics": {
+        "v2": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v4": {
+          "recommendations": 3,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 3,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v5": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "claude": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        }
+      },
+      "tickers": {
+        "v2": [
+          "CPCI",
+          "SNFC",
+          "AJWA",
+          "IRON",
+          "MOIL",
+          "OLFI",
+          "ETRS",
+          "ADCI",
+          "ARAB",
+          "AFDI"
+        ],
+        "v4": [
+          "ARAB",
+          "VALU",
+          "AMOC"
+        ],
+        "v5": [
+          "CPCI",
+          "SNFC",
+          "AJWA",
+          "IRON",
+          "MOIL",
+          "OLFI",
+          "ETRS",
+          "ADCI",
+          "ARAB",
+          "AFDI"
+        ],
+        "claude": []
+      },
+      "overlap": {
+        "v2_v4": [
+          "ARAB"
+        ],
+        "v2_v5": [
+          "CPCI",
+          "SNFC",
+          "AJWA",
+          "IRON",
+          "MOIL",
+          "OLFI",
+          "ETRS",
+          "ADCI",
+          "ARAB",
+          "AFDI"
+        ],
+        "v4_v5": [
+          "ARAB"
+        ],
+        "v2_claude": [],
+        "v4_claude": [],
+        "v5_claude": []
+      },
+      "independence": {
+        "v2AndV5IndependentToday": false,
+        "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
+      }
     }
   ]
 }

@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.668Z",
-  "availableSessions": 146,
+  "availableSessions": 147,
   "firstSession": "2026-02-09",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-06",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4800,6 +4800,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 182.01,
       "jumpPct": 4.52
+    },
+    {
+      "ticker": "AJWA",
+      "date": "2026-10-06",
+      "sourceSessionDate": "2026-10-06",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 190.23,
+      "high": 197.5,
+      "low": 187.0,
+      "close": 197.44,
+      "adjustedClose": 197.44,
+      "volume": 227633,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-06T12:34:53.729Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 190.23,
+      "jumpPct": 3.79
     }
   ],
   "priceTruthLatest": {
@@ -4810,7 +4842,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 146,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 147,
+  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

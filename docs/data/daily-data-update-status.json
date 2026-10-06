@@ -1,14 +1,14 @@
 {
-  "expectedSession": "2026-10-05",
-  "actualAcceptedSession": "2026-10-05",
-  "generatedAt": "2026-10-05T20:53:36.435985+00:00",
-  "guard": "NOOP_NO_NEW_ROWS",
+  "expectedSession": "2026-10-06",
+  "actualAcceptedSession": "2026-10-06",
+  "generatedAt": "2026-10-06T13:32:12.568288+00:00",
+  "guard": "APPLY",
   "sourceSessionReady": true,
-  "latestTimestamp": "2026-10-05T13:29 (earliest 12:40)",
-  "coveragePct": 91.9,
+  "latestTimestamp": "2026-10-06T13:29 (earliest 12:36)",
+  "coveragePct": 90.4,
   "universeCount": 198,
-  "acceptedRows": 182,
-  "staleRows": 16,
+  "acceptedRows": 179,
+  "staleRows": 19,
   "failedRows": 4,
   "realFetch": true,
   "primarySource": "session_pack",
@@ -20,51 +20,43 @@
   "publicationEligible": false,
   "finalStatus": "PARTIAL",
   "sourceBreakdown": {
-    "mubasher_symbol_pages_precise_enriched": 360,
+    "mubasher_symbol_pages_precise_enriched": 177,
     "mubasher_symbol_pages": 2
   },
   "sessionsApplied": [
     {
-      "session": "2026-10-04",
-      "coveragePct": 90.9,
-      "accepted": 180,
-      "inserted": 180,
+      "session": "2026-10-06",
+      "coveragePct": 90.4,
+      "accepted": 179,
+      "inserted": 179,
       "replaced": 0,
       "kept_existing": 0,
-      "files_changed": 180
-    },
-    {
-      "session": "2026-10-05",
-      "coveragePct": 91.9,
-      "accepted": 182,
-      "inserted": 182,
-      "replaced": 0,
-      "kept_existing": 0,
-      "files_changed": 182
+      "files_changed": 179
     }
   ],
   "sessionsSkipped": [],
   "staleSymbols": [
+    "CICH",
     "DCCC",
     "DEIN",
     "EFID",
+    "EGSA",
     "ELNA",
+    "ELWA",
     "EOSB",
     "EPPK",
-    "FAITA",
     "GPPL",
     "ICLE",
     "MEGM",
+    "NAHO",
     "NDRL",
     "NEDA",
-    "PHTV",
     "POUL",
     "SAIB",
-    "SPHT"
+    "SPHT",
+    "TRTO"
   ],
   "failedSymbols": [],
   "quarantinedCount": 4,
-  "notes": [
-    "لا صفوف جديدة؛ الجلسة مطبّقة بتغطية 91.9%"
-  ]
+  "notes": []
 }

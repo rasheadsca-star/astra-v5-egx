@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.543Z",
-  "availableSessions": 144,
+  "availableSessions": 145,
   "firstSession": "2026-01-21",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-06",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4745,6 +4745,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 11.73,
       "jumpPct": 2.47
+    },
+    {
+      "ticker": "ATQA",
+      "date": "2026-10-06",
+      "sourceSessionDate": "2026-10-06",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 12.01,
+      "high": 12.29,
+      "low": 11.89,
+      "close": 12.16,
+      "adjustedClose": 12.16,
+      "volume": 5887487,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-06T12:34:53.729Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 12.02,
+      "jumpPct": 1.16
     }
   ],
   "priceTruthLatest": {
@@ -4755,7 +4787,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 144,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 145,
+  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

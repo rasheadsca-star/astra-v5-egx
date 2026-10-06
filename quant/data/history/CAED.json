@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.706Z",
-  "availableSessions": 143,
+  "availableSessions": 144,
   "firstSession": "2026-02-05",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-06",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4707,6 +4707,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 123.57,
       "jumpPct": -0.37
+    },
+    {
+      "ticker": "CAED",
+      "date": "2026-10-06",
+      "sourceSessionDate": "2026-10-06",
+      "sourceMarketTime": "01:26 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 123.11,
+      "high": 125.0,
+      "low": 121.0,
+      "close": 121.24,
+      "adjustedClose": 121.24,
+      "volume": 43894,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-06T12:34:53.729Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 123.11,
+      "jumpPct": -1.52
     }
   ],
   "priceTruthLatest": {
@@ -4717,7 +4749,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 143,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 144,
+  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

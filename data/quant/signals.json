@@ -1,105 +1,36 @@
 {
  "schemaVersion": "astra-quant/v1",
  "engine": "EGX-NEXT-QUANT-V5",
- "generatedAt": "2026-10-05T15:31:20.517883+00:00",
- "session": "2026-10-05",
- "expectedSession": "2026-10-05",
+ "generatedAt": "2026-10-06T13:33:00.876676+00:00",
+ "session": "2026-10-06",
+ "expectedSession": "2026-10-06",
  "stale": false,
  "staleLagSessions": 0,
  "regime": "هابط",
- "breadthPct": 25.8,
+ "breadthPct": 27.4,
  "exposureScale": 0.4,
  "driftGuard": true,
- "recentTop5AvgPct": -0.9,
+ "recentTop5AvgPct": -1.01,
  "permissions": {
   "researchOnly": true,
   "executionAllowed": false,
   "productionAllocation": false,
   "automaticOrders": false
  },
- "universe": 157,
+ "universe": 156,
  "symbols": 170,
  "excludedCount": 31,
  "candidates": [
   {
-   "ticker": "APSW",
+   "ticker": "CPCI",
    "rank": 1,
    "tier": "C",
-   "entryLow": 8.47,
-   "entryHigh": 8.65,
-   "close": 8.56,
-   "stop": 8.23,
-   "target1": 8.78,
-   "target2": 9.11,
-   "stopPct": 3.9,
-   "target1Pct": 2.6,
-   "target2Pct": 6.5,
-   "rr1": 0.67,
-   "rr2": 1.67,
-   "sizePct": 4.0,
-   "horizonSessions": 10,
-   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
-   "setups": [],
-   "liquidity": {
-    "tier": "منخفضة",
-    "turnoverM": 0.8,
-    "maxPositionEgp": 38000
-   },
-   "notes": [
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (24 صفقة/10 يوم) أو غير موجبة",
-    "مفتاح الأداء الأخير مفعّل",
-    "سيولة منخفضة (متوسط تداول 0.8 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 38 ألف ج",
-    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
-   ],
-   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
-   "intraday": null
-  },
-  {
-   "ticker": "MOIL",
-   "rank": 2,
-   "tier": "C",
-   "entryLow": 0.693,
-   "entryHigh": 0.707,
-   "close": 0.7,
-   "stop": 0.682,
-   "target1": 0.712,
-   "target2": 0.73,
-   "stopPct": 2.6,
-   "target1Pct": 1.7,
-   "target2Pct": 4.3,
-   "rr1": 0.67,
-   "rr2": 1.67,
-   "sizePct": 4.0,
-   "horizonSessions": 10,
-   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
-   "setups": [
-    "اتجاه صاعد"
-   ],
-   "liquidity": {
-    "tier": "منخفضة",
-    "turnoverM": 0.3,
-    "maxPositionEgp": 13000
-   },
-   "notes": [
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (24 صفقة/10 يوم) أو غير موجبة",
-    "مفتاح الأداء الأخير مفعّل",
-    "سيولة منخفضة (متوسط تداول 0.3 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 13 ألف ج",
-    "سعر منخفض (<2 ج): حجم الخطوة السعرية كبير نسبياً فقد لا يُنفَّذ الوقف عند مستواه",
-    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
-   ],
-   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
-   "intraday": null
-  },
-  {
-   "ticker": "CPCI",
-   "rank": 3,
-   "tier": "C",
-   "entryLow": 596.08,
-   "entryHigh": 608.12,
-   "close": 602.1,
-   "stop": 575.9,
-   "target1": 619.56,
-   "target2": 645.76,
+   "entryLow": 593.45,
+   "entryHigh": 605.43,
+   "close": 599.44,
+   "stop": 573.31,
+   "target1": 616.86,
+   "target2": 642.99,
    "stopPct": 4.4,
    "target1Pct": 2.9,
    "target2Pct": 7.3,
@@ -109,6 +40,7 @@
    "horizonSessions": 10,
    "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
    "setups": [
+    "زخم بحجم",
     "اتجاه صاعد"
    ],
    "liquidity": {
@@ -117,7 +49,7 @@
     "maxPositionEgp": 186000
    },
    "notes": [
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (24 صفقة/10 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (27 صفقة/11 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
     "سيولة منخفضة (متوسط تداول 3.7 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 186 ألف ج",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
@@ -127,14 +59,14 @@
   },
   {
    "ticker": "SNFC",
-   "rank": 4,
+   "rank": 2,
    "tier": "C",
-   "entryLow": 11.49,
-   "entryHigh": 11.73,
-   "close": 11.61,
-   "stop": 11.18,
-   "target1": 11.9,
-   "target2": 12.33,
+   "entryLow": 11.4,
+   "entryHigh": 11.64,
+   "close": 11.52,
+   "stop": 11.09,
+   "target1": 11.8,
+   "target2": 12.23,
    "stopPct": 3.7,
    "target1Pct": 2.5,
    "target2Pct": 6.2,
@@ -144,53 +76,15 @@
    "horizonSessions": 10,
    "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
    "setups": [
-    "اختراق",
     "اتجاه صاعد"
    ],
    "liquidity": {
     "tier": "متوسطة",
-    "turnoverM": 12.1,
-    "maxPositionEgp": 607000
+    "turnoverM": 11.8,
+    "maxPositionEgp": 592000
    },
    "notes": [
-    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
-    "مفتاح الأداء الأخير مفعّل",
-    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
-   ],
-   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
-   "intraday": null
-  },
-  {
-   "ticker": "AMIA",
-   "rank": 5,
-   "tier": "C",
-   "entryLow": 19.16,
-   "entryHigh": 19.54,
-   "close": 19.35,
-   "stop": 18.28,
-   "target1": 20.06,
-   "target2": 21.13,
-   "stopPct": 5.5,
-   "target1Pct": 3.7,
-   "target2Pct": 9.2,
-   "rr1": 0.67,
-   "rr2": 1.67,
-   "sizePct": 3.6,
-   "horizonSessions": 10,
-   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
-   "setups": [
-    "اختراق",
-    "اتجاه صاعد"
-   ],
-   "liquidity": {
-    "tier": "عالية",
-    "turnoverM": 16.0,
-    "maxPositionEgp": 799000
-   },
-   "notes": [
-    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (27 صفقة/11 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
    ],
@@ -199,17 +93,155 @@
   },
   {
    "ticker": "AJWA",
+   "rank": 3,
+   "tier": "C",
+   "entryLow": 195.47,
+   "entryHigh": 199.41,
+   "close": 197.44,
+   "stop": 189.15,
+   "target1": 202.96,
+   "target2": 211.25,
+   "stopPct": 4.2,
+   "target1Pct": 2.8,
+   "target2Pct": 7.0,
+   "rr1": 0.67,
+   "rr2": 1.67,
+   "sizePct": 4.0,
+   "horizonSessions": 10,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "setups": [
+    "اختراق",
+    "زخم بحجم"
+   ],
+   "liquidity": {
+    "tier": "عالية",
+    "turnoverM": 17.3,
+    "maxPositionEgp": 864000
+   },
+   "notes": [
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (27 صفقة/11 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "intraday": null
+  },
+  {
+   "ticker": "IRON",
+   "rank": 4,
+   "tier": "C",
+   "entryLow": 30.41,
+   "entryHigh": 31.03,
+   "close": 30.72,
+   "stop": 28.69,
+   "target1": 32.07,
+   "target2": 34.1,
+   "stopPct": 6.6,
+   "target1Pct": 4.4,
+   "target2Pct": 11.0,
+   "rr1": 0.67,
+   "rr2": 1.67,
+   "sizePct": 3.0,
+   "horizonSessions": 10,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "setups": [
+    "اختراق"
+   ],
+   "liquidity": {
+    "tier": "متوسطة",
+    "turnoverM": 11.9,
+    "maxPositionEgp": 596000
+   },
+   "notes": [
+    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "intraday": null
+  },
+  {
+   "ticker": "MOIL",
+   "rank": 5,
+   "tier": "C",
+   "entryLow": 0.673,
+   "entryHigh": 0.687,
+   "close": 0.68,
+   "stop": 0.66,
+   "target1": 0.694,
+   "target2": 0.714,
+   "stopPct": 3.0,
+   "target1Pct": 2.0,
+   "target2Pct": 5.0,
+   "rr1": 0.67,
+   "rr2": 1.67,
+   "sizePct": 4.0,
+   "horizonSessions": 10,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "setups": [],
+   "liquidity": {
+    "tier": "منخفضة",
+    "turnoverM": 0.3,
+    "maxPositionEgp": 13000
+   },
+   "notes": [
+    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "سيولة منخفضة (متوسط تداول 0.3 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 13 ألف ج",
+    "سعر منخفض (<2 ج): حجم الخطوة السعرية كبير نسبياً فقد لا يُنفَّذ الوقف عند مستواه",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "intraday": null
+  },
+  {
+   "ticker": "OLFI",
    "rank": 6,
    "tier": "C",
-   "entryLow": 188.33,
-   "entryHigh": 192.13,
-   "close": 190.23,
-   "stop": 182.85,
-   "target1": 195.15,
-   "target2": 202.52,
-   "stopPct": 3.9,
-   "target1Pct": 2.6,
-   "target2Pct": 6.5,
+   "entryLow": 20.87,
+   "entryHigh": 21.29,
+   "close": 21.08,
+   "stop": 20.2,
+   "target1": 21.67,
+   "target2": 22.55,
+   "stopPct": 4.2,
+   "target1Pct": 2.8,
+   "target2Pct": 7.0,
+   "rr1": 0.67,
+   "rr2": 1.67,
+   "sizePct": 4.0,
+   "horizonSessions": 10,
+   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
+   "setups": [],
+   "liquidity": {
+    "tier": "عالية",
+    "turnoverM": 17.7,
+    "maxPositionEgp": 887000
+   },
+   "notes": [
+    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
+    "مفتاح الأداء الأخير مفعّل",
+    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
+   ],
+   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
+   "intraday": null
+  },
+  {
+   "ticker": "ETRS",
+   "rank": 7,
+   "tier": "C",
+   "entryLow": 10.94,
+   "entryHigh": 11.16,
+   "close": 11.05,
+   "stop": 10.52,
+   "target1": 11.41,
+   "target2": 11.94,
+   "stopPct": 4.8,
+   "target1Pct": 3.2,
+   "target2Pct": 8.1,
    "rr1": 0.67,
    "rr2": 1.67,
    "sizePct": 4.0,
@@ -219,46 +251,13 @@
     "اختراق"
    ],
    "liquidity": {
-    "tier": "عالية",
-    "turnoverM": 15.6,
-    "maxPositionEgp": 778000
+    "tier": "متوسطة",
+    "turnoverM": 9.6,
+    "maxPositionEgp": 479000
    },
    "notes": [
     "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
-    "مفتاح الأداء الأخير مفعّل",
-    "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
-   ],
-   "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
-   "intraday": null
-  },
-  {
-   "ticker": "MPRC",
-   "rank": 7,
-   "tier": "C",
-   "entryLow": 40.46,
-   "entryHigh": 41.28,
-   "close": 40.87,
-   "stop": 39.25,
-   "target1": 41.95,
-   "target2": 43.57,
-   "stopPct": 4.0,
-   "target1Pct": 2.6,
-   "target2Pct": 6.6,
-   "rr1": 0.67,
-   "rr2": 1.67,
-   "sizePct": 4.0,
-   "horizonSessions": 10,
-   "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
-   "setups": [],
-   "liquidity": {
-    "tier": "عالية",
-    "turnoverM": 21.6,
-    "maxPositionEgp": 1080000
-   },
-   "notes": [
-    "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
    ],
@@ -269,15 +268,15 @@
    "ticker": "ADCI",
    "rank": 8,
    "tier": "C",
-   "entryLow": 270.49,
-   "entryHigh": 275.95,
-   "close": 273.22,
-   "stop": 259.73,
-   "target1": 282.22,
-   "target2": 295.71,
-   "stopPct": 4.9,
+   "entryLow": 268.23,
+   "entryHigh": 273.65,
+   "close": 270.94,
+   "stop": 257.34,
+   "target1": 280.01,
+   "target2": 293.61,
+   "stopPct": 5.0,
    "target1Pct": 3.3,
-   "target2Pct": 8.2,
+   "target2Pct": 8.4,
    "rr1": 0.67,
    "rr2": 1.67,
    "sizePct": 4.0,
@@ -286,69 +285,72 @@
    "setups": [],
    "liquidity": {
     "tier": "منخفضة",
-    "turnoverM": 2.4,
-    "maxPositionEgp": 121000
+    "turnoverM": 2.3,
+    "maxPositionEgp": 116000
    },
    "notes": [
     "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
-    "سيولة منخفضة (متوسط تداول 2.4 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 121 ألف ج",
+    "سيولة منخفضة (متوسط تداول 2.3 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 116 ألف ج",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
    ],
    "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
    "intraday": null
   },
   {
-   "ticker": "ECAP",
+   "ticker": "ARAB",
    "rank": 9,
    "tier": "C",
-   "entryLow": 30.18,
-   "entryHigh": 30.78,
-   "close": 30.48,
-   "stop": 28.93,
-   "target1": 31.52,
-   "target2": 33.07,
-   "stopPct": 5.1,
-   "target1Pct": 3.4,
-   "target2Pct": 8.5,
+   "entryLow": 0.277,
+   "entryHigh": 0.283,
+   "close": 0.28,
+   "stop": 0.26,
+   "target1": 0.294,
+   "target2": 0.314,
+   "stopPct": 7.3,
+   "target1Pct": 4.8,
+   "target2Pct": 12.1,
    "rr1": 0.67,
    "rr2": 1.67,
-   "sizePct": 3.9,
+   "sizePct": 2.8,
    "horizonSessions": 10,
    "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
-   "setups": [],
+   "setups": [
+    "اختراق",
+    "زخم بحجم"
+   ],
    "liquidity": {
-    "tier": "منخفضة",
-    "turnoverM": 4.5,
-    "maxPositionEgp": 225000
+    "tier": "عالية",
+    "turnoverM": 75.9,
+    "maxPositionEgp": 3794000
    },
    "notes": [
     "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
-    "سيولة منخفضة (متوسط تداول 4.5 م.ج/يوم): خطر انزلاق وتأخر؛ لا يتجاوز المركز العملي 225 ألف ج",
+    "سعر منخفض (<2 ج): حجم الخطوة السعرية كبير نسبياً فقد لا يُنفَّذ الوقف عند مستواه",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
    ],
    "entryRule": "شراء عند الافتتاح فقط إذا وقع سعر الافتتاح داخل النطاق، وإلا لا تدخل",
    "intraday": null
   },
   {
-   "ticker": "ASCM",
+   "ticker": "AFDI",
    "rank": 10,
    "tier": "C",
-   "entryLow": 58.89,
-   "entryHigh": 60.07,
-   "close": 59.48,
-   "stop": 56.3,
-   "target1": 61.6,
-   "target2": 64.78,
-   "stopPct": 5.3,
-   "target1Pct": 3.6,
-   "target2Pct": 8.9,
+   "entryLow": 53.01,
+   "entryHigh": 54.09,
+   "close": 53.55,
+   "stop": 50.23,
+   "target1": 55.76,
+   "target2": 59.09,
+   "stopPct": 6.2,
+   "target1Pct": 4.1,
+   "target2Pct": 10.3,
    "rr1": 0.67,
    "rr2": 1.67,
-   "sizePct": 3.7,
+   "sizePct": 3.2,
    "horizonSessions": 10,
    "manage": "عند الهدف 1 بِع 50% وانقل الوقف إلى سعر الدخول؛ الباقي للهدف 2 أو التعادل، وأقصى مدة 10 جلسات",
    "setups": [
@@ -356,12 +358,12 @@
    ],
    "liquidity": {
     "tier": "متوسطة",
-    "turnoverM": 12.1,
-    "maxPositionEgp": 606000
+    "turnoverM": 7.0,
+    "maxPositionEgp": 351000
    },
    "notes": [
     "دليل مجموعة الرتبة غير كافٍ أو غير موجب",
-    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (47 صفقة/8 يوم) أو غير موجبة",
+    "عيّنة حالة السوق (هابط) لهذه المجموعة صغيرة (54 صفقة/9 يوم) أو غير موجبة",
     "مفتاح الأداء الأخير مفعّل",
     "حدّ الثقة الأدنى للتفوق على خط الأساس ≤ 0"
    ],
@@ -371,44 +373,44 @@
  ],
  "plan": {
   "top": {
-   "n": 478,
-   "hit1": 65.1,
-   "hit2": 37.7,
-   "no_t1": 34.9,
-   "avg": 0.63,
-   "win": 63.8,
-   "pf": 1.42
+   "n": 483,
+   "hit1": 64.6,
+   "hit2": 37.5,
+   "no_t1": 35.4,
+   "avg": 0.59,
+   "win": 63.4,
+   "pf": 1.39
   },
   "base": {
-   "n": 12976,
-   "hit1": 60.8,
-   "hit2": 26.6,
-   "no_t1": 39.2,
-   "avg": 0.25,
-   "win": 61.4,
-   "pf": 1.13
+   "n": 13124,
+   "hit1": 60.3,
+   "hit2": 26.4,
+   "no_t1": 39.7,
+   "avg": 0.19,
+   "win": 60.9,
+   "pf": 1.1
   },
-  "excess_avg": 0.38,
+  "excess_avg": 0.4,
   "excess_h1": 0.47,
-  "excess_h2": 0.25,
+  "excess_h2": 0.29,
   "recent45": {
    "top": {
-    "n": 151,
-    "hit1": 60.3,
-    "hit2": 29.8,
-    "no_t1": 39.7,
-    "avg": -0.33,
-    "win": 56.3,
-    "pf": 0.85
+    "n": 156,
+    "hit1": 59.0,
+    "hit2": 29.5,
+    "no_t1": 41.0,
+    "avg": -0.4,
+    "win": 55.1,
+    "pf": 0.81
    },
    "base": {
-    "n": 4580,
-    "hit1": 53.1,
-    "hit2": 18.7,
-    "no_t1": 46.9,
-    "avg": -0.98,
-    "win": 53.5,
-    "pf": 0.63
+    "n": 4728,
+    "hit1": 52.0,
+    "hit2": 18.3,
+    "no_t1": 48.0,
+    "avg": -1.11,
+    "win": 52.4,
+    "pf": 0.6
    }
   },
   "params": {
@@ -422,45 +424,45 @@
  "liquidity": {
   "tiers": {
    "منخفضة": {
-    "top_n": 155,
-    "top_share_pct": 32.0,
-    "top_avg": 0.59,
-    "base_avg": 0.48,
-    "excess": 0.11
+    "top_n": 158,
+    "top_share_pct": 33.0,
+    "top_avg": 0.56,
+    "base_avg": 0.44,
+    "excess": 0.13
    },
    "متوسطة": {
     "top_n": 157,
     "top_share_pct": 33.0,
     "top_avg": 1.3,
-    "base_avg": 1.3,
-    "excess": 0.0
+    "base_avg": 1.24,
+    "excess": 0.07
    },
    "عالية": {
-    "top_n": 166,
+    "top_n": 168,
     "top_share_pct": 35.0,
-    "top_avg": 1.68,
-    "base_avg": 0.15,
-    "excess": 1.52
+    "top_avg": 1.61,
+    "base_avg": 0.07,
+    "excess": 1.54
    }
   },
   "sensitivity": [
    {
     "scenario": "بدون انزلاق إضافي",
-    "top_avg": 1.2,
-    "base_avg": 0.47,
-    "excess": 0.73
+    "top_avg": 1.17,
+    "base_avg": 0.4,
+    "excess": 0.77
    },
    {
     "scenario": "معتدل (منخفضة +0.5% / متوسطة +0.15%)",
-    "top_avg": 0.99,
-    "base_avg": 0.36,
-    "excess": 0.63
+    "top_avg": 0.96,
+    "base_avg": 0.29,
+    "excess": 0.67
    },
    {
     "scenario": "قاسٍ (منخفضة +1.0% / متوسطة +0.3%)",
-    "top_avg": 0.78,
-    "base_avg": 0.25,
-    "excess": 0.53
+    "top_avg": 0.74,
+    "base_avg": 0.18,
+    "excess": 0.56
    }
   ],
   "cutoffs_m": [
@@ -470,120 +472,124 @@
   "adv_cap_pct": 5.0
  },
  "evidence": {
-  "top5ExcessMeanPct": 0.67,
+  "top5ExcessMeanPct": 0.7,
   "top5ExcessCi90": [
-   -0.17,
-   1.28
+   -0.08,
+   1.25
   ],
-  "foldsPositive": "15/22",
+  "foldsPositive": "16/23",
   "placebo": {
    "seeds": 5,
    "excess_list": [
-    -0.14,
-    0.37,
+    -0.13,
+    0.38,
+    -0.4,
     -0.43,
-    -0.44,
     0.31
    ],
-   "excess_mean": -0.07,
-   "excess_max": 0.37,
-   "baseline": 0.47
+   "excess_mean": -0.05,
+   "excess_max": 0.38,
+   "baseline": 0.4
   },
   "leakFree": true,
   "fillRatePct": 86.6,
   "baseline": {
-   "n": 12976,
-   "days": 110,
-   "hit": 33.2,
-   "win": 46.6,
-   "avg": 0.47,
-   "med": -0.85,
-   "pf": 1.18
+   "n": 13124,
+   "days": 111,
+   "hit": 32.9,
+   "win": 46.2,
+   "avg": 0.4,
+   "med": -1.01,
+   "pf": 1.15
   },
   "top5": {
-   "n": 478,
-   "days": 109,
-   "hit": 44.1,
-   "win": 54.4,
-   "avg": 1.2,
-   "med": 1.93,
-   "pf": 1.63
+   "n": 483,
+   "days": 110,
+   "hit": 43.9,
+   "win": 54.0,
+   "avg": 1.17,
+   "med": 1.73,
+   "pf": 1.6
   },
   "portfolioTwoTargets": {
-   "total_return_pct": 14.32,
+   "total_return_pct": 13.66,
    "max_drawdown_pct": -8.75,
-   "sharpe": 2.21,
+   "sharpe": 2.11,
    "trades": 78,
    "win_pct": 70.5,
-   "avg_exposure_pct": 64.9,
-   "days": 119
+   "avg_exposure_pct": 64.8,
+   "days": 120
   },
   "portfolioHoldT2": {
-   "total_return_pct": 19.59,
+   "total_return_pct": 18.9,
    "max_drawdown_pct": -11.17,
-   "sharpe": 2.31,
+   "sharpe": 2.23,
    "trades": 60,
    "win_pct": 56.7,
-   "avg_exposure_pct": 69.3,
-   "days": 119
+   "avg_exposure_pct": 69.4,
+   "days": 120
   },
-  "marketEqualWeightPct": 30.23,
+  "marketEqualWeightPct": 29.72,
   "randomSelection": {
    "runs": 20,
-   "return_mean": 5.22,
-   "return_p10": -1.02,
-   "return_p90": 12.55,
-   "dd_mean": -8.65,
+   "return_mean": 5.12,
+   "return_p10": -1.06,
+   "return_p90": 11.65,
+   "dd_mean": -8.55,
    "strategy_beats_pct": 90.0
   },
-  "oosSessions": 110
+  "oosSessions": 111
  },
  "integrity": {
-  "dataHash": "7d1a9bfdc99b66a1",
+  "dataHash": "811fcfd4a3564ad2",
   "versions": {
    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
    "cpus": 4,
-   "python": "3.12.14",
+   "python": "3.12.15",
    "pandas": "3.0.6",
    "numpy": "2.5.3",
    "sklearn": "1.9.1"
   }
  },
  "forward": {
-  "sessions_recorded": 2,
-  "sessions_valid": 2,
+  "sessions_recorded": 3,
+  "sessions_valid": 3,
   "sessions_late": 0,
-  "pending": 157,
-  "open": 130,
-  "unfilled": 9,
-  "closed": 15,
+  "pending": 158,
+  "open": 254,
+  "unfilled": 16,
+  "closed": 39,
   "top": {
-   "n": 2,
-   "hit": 0.0,
-   "avg": -3.88,
-   "win": 0.0,
-   "pf": 0.0
+   "n": 5,
+   "hit": 40.0,
+   "avg": -1.38,
+   "win": 40.0,
+   "pf": 0.37
   },
   "all": {
-   "n": 15,
-   "hit": 80.0,
-   "avg": 2.81,
-   "win": 80.0,
-   "pf": 3.57
+   "n": 39,
+   "hit": 79.5,
+   "avg": 2.29,
+   "win": 79.5,
+   "pf": 2.83
   },
   "tierA": {
    "n": 0
   },
   "by_liquidity": {
    "منخفضة": {
-    "n": 2,
-    "hit": 0.0,
-    "avg": -3.88,
-    "win": 0.0,
-    "pf": 0.0
+    "n": 4,
+    "hit": 25.0,
+    "avg": -2.55,
+    "win": 25.0,
+    "pf": 0.07
    },
    "متوسطة": {
-    "n": 0
+    "n": 1,
+    "hit": 100.0,
+    "avg": 3.31,
+    "win": 100.0,
+    "pf": null
    },
    "عالية": {
     "n": 0
@@ -618,12 +624,12 @@
  },
  "dataStatus": {
   "finalStatus": "PARTIAL",
-  "guard": "NOOP_NO_NEW_ROWS",
-  "expectedSession": "2026-10-05",
-  "actualAcceptedSession": "2026-10-05",
-  "coveragePct": 91.9,
-  "acceptedRows": 182,
-  "staleRows": 16,
+  "guard": "APPLY",
+  "expectedSession": "2026-10-06",
+  "actualAcceptedSession": "2026-10-06",
+  "coveragePct": 90.4,
+  "acceptedRows": 179,
+  "staleRows": 19,
   "quarantinedCount": 4,
   "stage1Prepared": true,
   "preparedCandidateCount": 10

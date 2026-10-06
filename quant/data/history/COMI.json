@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.450Z",
-  "availableSessions": 143,
+  "availableSessions": 144,
   "firstSession": "2025-12-22",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-06",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4715,6 +4715,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 127.04,
       "jumpPct": -0.44
+    },
+    {
+      "ticker": "COMI",
+      "date": "2026-10-06",
+      "sourceSessionDate": "2026-10-06",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 126.05,
+      "high": 127.19,
+      "low": 125.03,
+      "close": 125.24,
+      "adjustedClose": 125.24,
+      "volume": 2342336,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-06T12:34:53.729Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 126.48,
+      "jumpPct": -0.98
     }
   ],
   "priceTruthLatest": {
@@ -4725,7 +4757,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 143,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 144,
+  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

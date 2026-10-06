@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.532Z",
-  "availableSessions": 147,
+  "availableSessions": 148,
   "firstSession": "2026-02-11",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-06",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4826,6 +4826,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 25.51,
       "jumpPct": 0.27
+    },
+    {
+      "ticker": "JUFO",
+      "date": "2026-10-06",
+      "sourceSessionDate": "2026-10-06",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 25.91,
+      "high": 25.91,
+      "low": 25.08,
+      "close": 25.2,
+      "adjustedClose": 25.2,
+      "volume": 488794,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-06T12:34:53.729Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 25.58,
+      "jumpPct": -1.49
     }
   ],
   "priceTruthLatest": {
@@ -4836,7 +4868,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 147,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 148,
+  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
