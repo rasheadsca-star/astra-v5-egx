@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-05T20:53:37.341Z",
+  "generatedAt": "2026-10-06T00:15:42.101Z",
   "session": "2026-10-05",
   "engines": {
     "v2": {
@@ -156,6 +156,32 @@
           "returnPct": null
         },
         {
+          "ticker": "TAQA",
+          "rank": 1,
+          "tier": null,
+          "entryLow": 17.7503,
+          "entryHigh": 17.8697,
+          "stop": 17.1382,
+          "target1": 18.7057,
+          "target2": null,
+          "score": null,
+          "state": "WAITING_FOR_ENTRY",
+          "returnPct": null
+        },
+        {
+          "ticker": "ARAB",
+          "rank": 2,
+          "tier": null,
+          "entryLow": 0.2592,
+          "entryHigh": 0.2608,
+          "stop": 0.2512,
+          "target1": 0.2717,
+          "target2": null,
+          "score": null,
+          "state": "WAITING_FOR_ENTRY",
+          "returnPct": null
+        },
+        {
           "ticker": "ARAB",
           "rank": 2,
           "tier": null,
@@ -180,14 +206,27 @@
           "score": null,
           "state": "WAITING_FOR_ENTRY",
           "returnPct": null
+        },
+        {
+          "ticker": "AJWA",
+          "rank": 3,
+          "tier": null,
+          "entryLow": 189.8602,
+          "entryHigh": 190.5998,
+          "stop": 186.0694,
+          "target1": 195.7774,
+          "target2": null,
+          "score": null,
+          "state": "WAITING_FOR_ENTRY",
+          "returnPct": null
         }
       ],
       "metrics": {
-        "recommendations": 3,
+        "recommendations": 6,
         "resolved": 0,
         "wins": 0,
         "losses": 0,
-        "open": 3,
+        "open": 6,
         "hitRatePct": null,
         "avgReturnPct": null
       }
@@ -374,6 +413,7 @@
       "ASCM"
     ],
     "v4_v5": [
+      "AJWA",
       "AJWA"
     ],
     "v2_claude": [],
