@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.468Z",
-  "availableSessions": 148,
+  "availableSessions": 149,
   "firstSession": "2026-02-12",
-  "lastSession": "2026-10-06",
+  "lastSession": "2026-10-07",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4851,6 +4851,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 8.9,
       "jumpPct": -3.03
+    },
+    {
+      "ticker": "KABO",
+      "date": "2026-10-07",
+      "sourceSessionDate": "2026-10-07",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 8.71,
+      "high": 9.05,
+      "low": 8.6,
+      "close": 8.81,
+      "adjustedClose": 8.81,
+      "volume": 882026,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-07T12:28:00.550Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 8.63,
+      "jumpPct": 2.09
     }
   ],
   "priceTruthLatest": {
@@ -4861,7 +4893,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 148,
-  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
+  "sessionsCount": 149,
+  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

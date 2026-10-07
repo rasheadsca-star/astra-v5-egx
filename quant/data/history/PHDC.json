@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.433Z",
-  "availableSessions": 148,
+  "availableSessions": 149,
   "firstSession": "2026-01-26",
-  "lastSession": "2026-10-06",
+  "lastSession": "2026-10-07",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4867,6 +4867,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 13.18,
       "jumpPct": -1.9
+    },
+    {
+      "ticker": "PHDC",
+      "date": "2026-10-07",
+      "sourceSessionDate": "2026-10-07",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 12.9,
+      "high": 13.03,
+      "low": 12.51,
+      "close": 12.81,
+      "adjustedClose": 12.81,
+      "volume": 5810586,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-07T12:28:00.550Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 12.93,
+      "jumpPct": -0.93
     }
   ],
   "priceTruthLatest": {
@@ -4877,7 +4909,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 148,
-  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
+  "sessionsCount": 149,
+  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

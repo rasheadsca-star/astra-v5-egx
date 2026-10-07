@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.336Z",
-  "availableSessions": 146,
+  "availableSessions": 147,
   "firstSession": "2026-02-16",
-  "lastSession": "2026-10-06",
+  "lastSession": "2026-10-07",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4799,6 +4799,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 499.92,
       "jumpPct": 2.24
+    },
+    {
+      "ticker": "UEFM",
+      "date": "2026-10-07",
+      "sourceSessionDate": "2026-10-07",
+      "sourceMarketTime": "01:26 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 511.1,
+      "high": 520.8,
+      "low": 506.0,
+      "close": 520.0,
+      "adjustedClose": 520.0,
+      "volume": 13336,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-07T12:28:00.550Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 511.1,
+      "jumpPct": 1.74
     }
   ],
   "priceTruthLatest": {
@@ -4809,7 +4841,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 146,
-  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
+  "sessionsCount": 147,
+  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

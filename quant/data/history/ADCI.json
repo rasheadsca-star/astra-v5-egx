@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.675Z",
-  "availableSessions": 147,
+  "availableSessions": 148,
   "firstSession": "2026-01-28",
-  "lastSession": "2026-10-06",
+  "lastSession": "2026-10-07",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4845,6 +4845,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 273.22,
       "jumpPct": -0.83
+    },
+    {
+      "ticker": "ADCI",
+      "date": "2026-10-07",
+      "sourceSessionDate": "2026-10-07",
+      "sourceMarketTime": "01:13 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 270.94,
+      "high": 273.95,
+      "low": 268.77,
+      "close": 272.01,
+      "adjustedClose": 272.01,
+      "volume": 2600,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-07T12:28:00.550Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 270.94,
+      "jumpPct": 0.39
     }
   ],
   "priceTruthLatest": {
@@ -4855,7 +4887,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 147,
-  "updatedAt": "2026-10-06T16:32:12.568211+03:00",
+  "sessionsCount": 148,
+  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

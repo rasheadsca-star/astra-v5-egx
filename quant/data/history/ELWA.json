@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.689Z",
-  "availableSessions": 143,
+  "availableSessions": 144,
   "firstSession": "2026-03-03",
-  "lastSession": "2026-10-05",
+  "lastSession": "2026-10-07",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4686,6 +4686,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.48,
       "jumpPct": 4.73
+    },
+    {
+      "ticker": "ELWA",
+      "date": "2026-10-07",
+      "sourceSessionDate": "2026-10-07",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 1.55,
+      "high": 1.62,
+      "low": 1.49,
+      "close": 1.59,
+      "adjustedClose": 1.59,
+      "volume": 435586,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-07T12:28:00.550Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 1.55,
+      "jumpPct": 2.58
     }
   ],
   "priceTruthLatest": {
@@ -4696,7 +4728,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 143,
-  "updatedAt": "2026-10-05T18:30:42.694086+03:00",
+  "sessionsCount": 144,
+  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
