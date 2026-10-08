@@ -109,6 +109,7 @@ function overlap(a,b){
 (async()=>{
   const v5=readJson('data/quant/signals.json');
   const v2=readJson('docs/data/signals.json');
+  const confluence=readJson('data/confluence/signals.json');
   const session=v5.session || v2.session;
   if(!session) throw new Error('COMPARISON_SESSION_MISSING');
 
@@ -127,6 +128,17 @@ function overlap(a,b){
       engine:'TFE_V20_FUSION_RC2',
       session,
       rows:claudeRows(claude,session)
+    },
+    confluence:{
+      id:'Confluence Pullback V1',
+      engine:'CONFLUENCE_PULLBACK_V1',
+      session,
+      rows:(confluence.recommendations||[]).map(x=>({
+        ticker:x.ticker,rank:x.rank??null,tier:'CONFLUENCE',
+        entryLow:x.entryLow,entryHigh:x.entryHigh,
+        stop:x.structuralInvalidation,target1:x.targets?.t1??null,target2:x.targets?.t2??null,
+        score:x.score??null,state:x.state||'ENTRY_CONFIRMED',returnPct:null
+      }))
     }
   };
   for(const e of Object.values(engines)) e.metrics=metrics(e.rows);
@@ -143,7 +155,11 @@ function overlap(a,b){
       v4_v5:overlap(engines.v4.rows,engines.v5.rows),
       v2_claude:overlap(engines.v2.rows,engines.claude.rows),
       v4_claude:overlap(engines.v4.rows,engines.claude.rows),
-      v5_claude:overlap(engines.v5.rows,engines.claude.rows)
+      v5_claude:overlap(engines.v5.rows,engines.claude.rows),
+      v2_confluence:overlap(engines.v2.rows,engines.confluence.rows),
+      v4_confluence:overlap(engines.v4.rows,engines.confluence.rows),
+      v5_confluence:overlap(engines.v5.rows,engines.confluence.rows),
+      claude_confluence:overlap(engines.claude.rows,engines.confluence.rows)
     },
     independence:{
       v2AndV5IndependentToday:false,
@@ -156,6 +172,12 @@ function overlap(a,b){
         ui:'EGX Pro Professional V16.9 UI CLAUDE',
         engine:'TFE_V20_FUSION_RC2',
         mode:claude?.mode||null
+      },
+      confluence:{
+        engine:'CONFLUENCE_PULLBACK_V1',
+        mode:'RESEARCH_ONLY',
+        session:confluence.session,
+        marketStatus:confluence.marketStatus
       }
     },
     safety:{
