@@ -161,8 +161,32 @@ function profitableMap(input){
       scaleOut:'+8%, +15%, +22%, +30%'
     },
     permissions:{researchOnly:true,executionAllowed:false,automaticOrders:false,automaticPromotion:false},
-    counts:{scanned:all.length,published:top.length,actionable:actionable.length},
+    counts:{scanned:all.length,published:top.length,actionable:actionable.length,opportunityBrief:Math.min(10,top.length)},
     recommendations:actionable,
+    opportunityBrief:top.slice(0,10).map((x,i)=>({
+      rank:i+1,
+      ticker:x.ticker,
+      score:x.score,
+      state:x.state,
+      close:x.close,
+      watchEntryLow:x.entryLow,
+      watchEntryHigh:x.entryHigh,
+      structuralStop:x.structuralInvalidation,
+      targets:x.targets,
+      factors:x.factors,
+      missingConditions:[
+        ...(x.confluence?.fundamentals?.verified===true?[]:['VERIFIED_PROFITABILITY_MISSING']),
+        ...(x.confluence?.fundamentals?.verified===true&&x.confluence?.fundamentals?.profitable!==true?['PROFITABILITY_FAIL']:[]),
+        ...(x.confluence?.reaction?.ok===true?[]:['REACTION_NOT_CONFIRMED']),
+        ...(x.confluence?.inFib===true?[]:['FIB_ZONE_NOT_CONFIRMED']),
+        ...(x.confluence?.vwapHit===true?[]:['ANCHORED_VWAP_NOT_ALIGNED']),
+        ...(x.confluence?.ma50Hit===true||x.confluence?.supportHit===true?[]:['DAILY_MA50_OR_SUPPORT_NOT_ALIGNED']),
+        ...(x.confluence?.volumeConfirmed===true?[]:['VOLUME_NOT_CONFIRMED'])
+      ],
+      label:'WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION',
+      researchOnly:true,
+      executionAllowed:false
+    })),
     watchlist:top.filter(x=>!x.actionable),
     allTop:top
   };

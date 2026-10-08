@@ -10,6 +10,12 @@ if(d.permissions?.executionAllowed!==false)fail('EXECUTION_MUST_BE_FALSE');
 if(d.permissions?.researchOnly!==true)fail('RESEARCH_ONLY_REQUIRED');
 if(!d.session)fail('SESSION_MISSING');
 if(d.marketStatus==='MARKET_HOLIDAY'&&!d.holiday?.date)fail('HOLIDAY_METADATA_MISSING');
+for(const x of d.opportunityBrief||[]){
+  if(x.label!=='WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION')fail('BAD_BRIEF_LABEL:'+x.ticker);
+  if(x.executionAllowed!==false||x.researchOnly!==true)fail('BRIEF_EXECUTION_GATE:'+x.ticker);
+  if(!(Number(x.structuralStop)<Number(x.watchEntryLow)))fail('BRIEF_STOP_NOT_BELOW_ENTRY:'+x.ticker);
+  if(!x.targets||!Number.isFinite(Number(x.targets.t1)))fail('BRIEF_TARGETS_MISSING:'+x.ticker);
+}
 for(const x of d.recommendations||[]){
   if(x.state!=='ENTRY_CONFIRMED'||x.actionable!==true)fail('BAD_ACTIONABLE_STATE:'+x.ticker);
   if(!(x.score>=65))fail('SCORE_GATE:'+x.ticker);
