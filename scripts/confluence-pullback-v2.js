@@ -162,6 +162,32 @@ async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice,tv){
     return {available:false,status:'FETCH_FAILED',error:String(e.message||e)};
   }
 }
+function fundamentalEvidence(x,tv){
+  const official=x.confluence?.fundamentals||{};
+  if(official.verified===true&&official.profitable===true){
+    return {
+      qualified:true,
+      tier:'A_OFFICIAL_VERIFIED',
+      official,
+      secondary:tv?.fundamentals||null
+    };
+  }
+  const secondary=tv?.fundamentals||{};
+  if(secondary.secondaryProfitable===true){
+    return {
+      qualified:true,
+      tier:'B_TRADINGVIEW_CORROBORATED',
+      official,
+      secondary
+    };
+  }
+  return {
+    qualified:false,
+    tier:'MISSING_OR_NON_POSITIVE',
+    official,
+    secondary
+  };
+}
 function riskMetrics(x){
   const entry=(Number(x.entryLow)+Number(x.entryHigh))/2;
   const stop=Number(x.structuralInvalidation);
@@ -174,10 +200,9 @@ function riskMetrics(x){
     rrT2:risk>0&&t2>entry?+((t2-entry)/risk).toFixed(2):null
   };
 }
-function missing(x,h,r){
+function missing(x,h,r,fund){
   const m=[];
-  const f=x.confluence?.fundamentals||{};
-  if(!(f.verified&&f.profitable))m.push('VERIFIED_PROFITABILITY_REQUIRED');
+  if(!fund?.qualified)m.push('PROFITABILITY_EVIDENCE_REQUIRED');
   if(!(x.confluence?.inFib||x.confluence?.vwapHit))m.push('FIB_OR_AVWAP_REQUIRED');
   if(!(x.confluence?.ma50Hit||x.confluence?.supportHit||h.hourlyMa100Hit))m.push('MA50_OR_HOURLY_MA100_OR_SUPPORT_REQUIRED');
   if(!x.confluence?.reaction?.ok)m.push('REACTION_REQUIRED');
@@ -203,15 +228,18 @@ function missing(x,h,r){
     let yahooSymbol=null;
     const hp=path.join(historiesDir,x.ticker+'.json');
     if(fs.existsSync(hp)){try{yahooSymbol=read(hp).yahooSymbol||null}catch{}}
-    const h=await hourlyEvidence(x.ticker,yahooSymbol,session,Number(x.close));
+    const tv=await tradingViewSnapshot(x.ticker);
+    const h=await hourlyEvidence(x.ticker,yahooSymbol,session,Number(x.close),tv);
+    const fund=fundamentalEvidence(x,tv);
     const r=riskMetrics(x);
     const hourlyPoints=h.available&&h.sessionAligned&&h.identityOk&&h.currencyOk&&h.hourlyMa100Hit?10:0;
-    const score=Math.min(100,Number(x.score||0)+hourlyPoints);
-    const misses=missing(x,h,r);
+    const secondaryFundamentalPoints=fund.tier==='B_TRADINGVIEW_CORROBORATED'?10:0;
+    const score=Math.min(100,Number(x.score||0)+hourlyPoints+secondaryFundamentalPoints);
+    const misses=missing(x,h,r,fund);
     const entryReady=score>=MIN_SCORE&&misses.length===0;
     let state='WATCHLIST';
-    if(entryReady)state='ENTRY_READY';
-    else if(misses.includes('VERIFIED_PROFITABILITY_REQUIRED'))state='FUNDAMENTALS_PENDING';
+    if(entryReady)state=fund.tier==='A_OFFICIAL_VERIFIED'?'ENTRY_READY':'ENTRY_READY_SECONDARY';
+    else if(misses.includes('PROFITABILITY_EVIDENCE_REQUIRED'))state='FUNDAMENTALS_PENDING';
     else if(misses.includes('REACTION_REQUIRED')||misses.includes('VOLUME_CONFIRMATION_REQUIRED'))state='WAITING_FOR_TRIGGER';
     else if(misses.includes('HOURLY_1H_DATA_REQUIRED')||misses.includes('HOURLY_SESSION_MISMATCH'))state='HOURLY_DATA_PENDING';
     else if(misses.includes('RISK_GT_8_OR_INVALID')||misses.includes('RR_T2_LT_2'))state='RISK_REJECTED';
@@ -226,8 +254,13 @@ function missing(x,h,r){
       targets:x.targets,
       risk:r,
       hourly:h,
+      fundamentalEvidence:fund,
       dailyConfluence:x.confluence,
-      factors:[...(x.factors||[]),...(hourlyPoints?['HOURLY_MA100']:[])],
+      factors:[
+        ...(x.factors||[]),
+        ...(hourlyPoints?['HOURLY_MA100']:[]),
+        ...(secondaryFundamentalPoints?['TRADINGVIEW_PROFITABILITY_CORROBORATED']:[])
+      ],
       missingConditions:misses,
       signalRule:'ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER'
     });
@@ -242,7 +275,9 @@ function missing(x,h,r){
     marketStatus:v1.marketStatus,
     sourceV1GeneratedAt:v1.generatedAt,
     policy:{
-      verifiedProfitabilityRequired:true,
+      profitabilityEvidenceRequired:true,
+      acceptedProfitabilityTiers:['A_OFFICIAL_VERIFIED','B_TRADINGVIEW_CORROBORATED'],
+      secondaryFundamentalsManualReviewRequired:true,
       minScore:MIN_SCORE,
       hourlyMa100Required:true,
       hourlyMa100TolerancePct:HOURLY_TOL_PCT,
@@ -271,7 +306,7 @@ function missing(x,h,r){
         key,signalSession:session,capturedAt:payload.generatedAt,ticker:x.ticker,status:'PENDING_ENTRY',
         entryLow:x.entryLow,entryHigh:x.entryHigh,entryMid:x.risk.entryMid,stop:x.structuralStop,
         targets:x.targets,score:x.score,riskPct:x.risk.riskPct,rrT2:x.risk.rrT2,
-        factors:x.factors,hourlyMa100:x.hourly.hourlyMa100,
+        factors:x.factors,hourlyMa100:x.hourly.hourlyMa100,fundamentalTier:x.fundamentalEvidence?.tier||null,
         entrySession:null,entryPrice:null,exitSession:null,outcome:null,netReturnPct:null,
         maxHoldSessions:10,sameBarPolicy:'STOP_FIRST'
       });
