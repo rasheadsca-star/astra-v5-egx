@@ -211,7 +211,7 @@
     },
     {
       "session": "2026-10-07",
-      "generatedAt": "2026-10-08T20:03:14.287Z",
+      "generatedAt": "2026-10-08T21:54:12.771Z",
       "metrics": {
         "v2": {
           "recommendations": 10,
@@ -241,6 +241,15 @@
           "avgReturnPct": null
         },
         "claude": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "confluence": {
           "recommendations": 0,
           "resolved": 0,
           "wins": 0,
@@ -283,7 +292,8 @@
           "AJWA",
           "FERC"
         ],
-        "claude": []
+        "claude": [],
+        "confluence": []
       },
       "overlap": {
         "v2_v4": [],
@@ -302,7 +312,11 @@
         "v4_v5": [],
         "v2_claude": [],
         "v4_claude": [],
-        "v5_claude": []
+        "v5_claude": [],
+        "v2_confluence": [],
+        "v4_confluence": [],
+        "v5_confluence": [],
+        "claude_confluence": []
       },
       "independence": {
         "v2AndV5IndependentToday": false,

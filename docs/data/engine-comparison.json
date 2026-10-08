@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-08T20:03:14.287Z",
+  "generatedAt": "2026-10-08T21:54:12.771Z",
   "session": "2026-10-07",
   "engines": {
     "v2": {
@@ -380,6 +380,21 @@
         "hitRatePct": null,
         "avgReturnPct": null
       }
+    },
+    "confluence": {
+      "id": "Confluence Pullback V1",
+      "engine": "CONFLUENCE_PULLBACK_V1",
+      "session": "2026-10-07",
+      "rows": [],
+      "metrics": {
+        "recommendations": 0,
+        "resolved": 0,
+        "wins": 0,
+        "losses": 0,
+        "open": 0,
+        "hitRatePct": null,
+        "avgReturnPct": null
+      }
     }
   },
   "overlap": {
@@ -399,7 +414,11 @@
     "v4_v5": [],
     "v2_claude": [],
     "v4_claude": [],
-    "v5_claude": []
+    "v5_claude": [],
+    "v2_confluence": [],
+    "v4_confluence": [],
+    "v5_confluence": [],
+    "claude_confluence": []
   },
   "independence": {
     "v2AndV5IndependentToday": false,
@@ -410,6 +429,12 @@
       "ui": "EGX Pro Professional V16.9 UI CLAUDE",
       "engine": "TFE_V20_FUSION_RC2",
       "mode": "RESEARCH_ONLY"
+    },
+    "confluence": {
+      "engine": "CONFLUENCE_PULLBACK_V1",
+      "mode": "RESEARCH_ONLY",
+      "session": "2026-10-07",
+      "marketStatus": "TRADING_SESSION"
     }
   },
   "safety": {
