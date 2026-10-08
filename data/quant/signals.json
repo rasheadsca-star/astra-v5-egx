@@ -603,7 +603,7 @@
    "PROFIT_FACTOR_NOT_ESTABLISHED",
    "AVERAGE_NET_RETURN_NOT_ESTABLISHED"
   ],
-  "observedCalendarDays": 6,
+  "observedCalendarDays": 7,
   "policy": {
    "version": "ucp-forward-promotion/v1",
    "minForwardSessions": 30,
@@ -615,15 +615,15 @@
   }
  },
  "dataStatus": {
-  "finalStatus": "PARTIAL",
-  "guard": "NOOP_NO_NEW_ROWS",
-  "expectedSession": "2026-10-07",
+  "finalStatus": "WAITING_DATA",
+  "guard": "WAITING_DATA",
+  "expectedSession": "2026-10-08",
   "actualAcceptedSession": "2026-10-07",
-  "coveragePct": 89.9,
-  "acceptedRows": 178,
-  "staleRows": 20,
-  "quarantinedCount": 5,
-  "stage1Prepared": true,
+  "coveragePct": 0.0,
+  "acceptedRows": 0,
+  "staleRows": 198,
+  "quarantinedCount": 0,
+  "stage1Prepared": false,
   "preparedCandidateCount": 10
  }
 }
