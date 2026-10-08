@@ -9,13 +9,14 @@
 </style>
 </head>
 <body><div class="w">
-<div class="hero"><div><div class="title">ASTRA V5 — مقارنة V2.1 / V4 / V5 / CLAUDE / CLAUDE</div><div id="sub" class="mut">تحميل...</div></div><div class="pill">RESEARCH ONLY · EXECUTION DISABLED</div></div>
+<div class="hero"><div><div class="title">ASTRA V5 — مقارنة V2.1 / V4 / V5 / CLAUDE / Confluence / CLAUDE</div><div id="sub" class="mut">تحميل...</div></div><div class="pill">RESEARCH ONLY · EXECUTION DISABLED</div></div>
 <div class="nav"><a href="../">EGX NEXT V2.1</a><a href="../data/signals.json">V2.1 JSON</a><a href="../data/engine-comparison.json">Comparison JSON</a></div>
 <div id="metrics" class="grid"></div>
 <div class="card block"><h2>المقارنة اليومية</h2><div class="scroll"><table><thead><tr><th>المحرك</th><th>الجلسة</th><th>عدد التوصيات/المرشحين</th><th>Resolved</th><th>Wins</th><th>Losses</th><th>Open/Waiting</th><th>Hit Rate</th><th>Avg Return</th></tr></thead><tbody id="cmp"></tbody></table></div><div id="independence" class="note"></div></div>
 <div class="card block"><h2>V5 — المرشحون الحاليون</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Tier</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>Target 2</th></tr></thead><tbody id="v5rows"></tbody></table></div></div>
 <div class="card block"><h2>V4 — توصيات الجلسة</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>الحالة</th></tr></thead><tbody id="v4rows"></tbody></table></div></div>
 <div class="card block"><h2>EGX Pro Professional V16.9 UI CLAUDE — TFE V20 Fusion RC2</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>Target 2</th><th>الحالة</th></tr></thead><tbody id="clauderows"></tbody></table></div></div>
+<div class="card block"><h2>Confluence Pullback V1 — Challenger</h2><div class="mut" id="cfsummary"></div><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Score</th><th>الحالة</th><th>Entry Zone</th><th>Structural Invalidation</th><th>T1 +8%</th><th>T2 +15%</th><th>Fib</th><th>AVWAP</th><th>MA50</th><th>Reaction</th><th>Volume</th><th>Fundamentals</th></tr></thead><tbody id="cfrows"></tbody></table></div></div>
 <div class="note">لا يتم إعلان فائز من توصيات جلسة لم تُحسم بعد. V2.1 وV5 قد يتطابقان إذا كانت واجهة V2.1 تعرض نفس astra-quant/v1 payload الخاص بـV5؛ يظهر ذلك صراحة في قسم الاستقلالية.</div>
 </div>
 <script>
@@ -23,12 +24,13 @@ const $=id=>document.getElementById(id);
 const f=v=>v==null?'—':Number(v).toLocaleString('en-US',{maximumFractionDigits:4});
 const zone=r=>r.entryLow==null&&r.entryHigh==null?'—':f(r.entryLow)+' – '+f(r.entryHigh);
 async function load(){
-  const [c,s]=await Promise.all([
+  const [c,s,cf]=await Promise.all([
     fetch('../data/engine-comparison.json',{cache:'no-store'}).then(r=>r.json()),
-    fetch('../data/signals.json',{cache:'no-store'}).then(r=>r.json())
+    fetch('../data/signals.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('../data/confluence-signals.json',{cache:'no-store'}).then(r=>r.json())
   ]);
   $('sub').textContent='جلسة '+c.session+' · V5 '+(s.regime||'-')+' · generated '+new Date(c.generatedAt).toLocaleString('ar-EG');
-  const ids=[['v2','EGX NEXT V2.1'],['v4','ASTRA V4'],['v5','ASTRA V5'],['claude','EGX Pro V16.9 CLAUDE']];
+  const ids=[['v2','EGX NEXT V2.1'],['v4','ASTRA V4'],['v5','ASTRA V5'],['claude','EGX Pro V16.9 CLAUDE'],['confluence','Confluence Pullback V1']];
   $('metrics').innerHTML=ids.map(([k,n])=>'<div class="card m"><div class="k">'+n+'</div><div class="v">'+c.engines[k].metrics.recommendations+'</div><div class="mut">توصيات/مرشحين</div></div>').join('')+
     '<div class="card m"><div class="k">V2↔V5 overlap</div><div class="v">'+c.overlap.v2_v5.length+'</div><div class="mut">أسهم مشتركة</div></div>'+
     '<div class="card m"><div class="k">V4↔V5 overlap</div><div class="v">'+c.overlap.v4_v5.length+'</div><div class="mut">أسهم مشتركة</div></div>'+
@@ -42,6 +44,10 @@ async function load(){
   $('v4rows').innerHTML=v4.map(r=>'<tr><td>'+f(r.rank)+'</td><td class="ticker">'+r.ticker+'</td><td>'+zone(r)+'</td><td>'+f(r.stop)+'</td><td>'+f(r.target1)+'</td><td>'+r.state+'</td></tr>').join('')||'<tr><td colspan="6">لا توجد بيانات</td></tr>';
   const claude=c.engines.claude?.rows||[];
   $('clauderows').innerHTML=claude.map(r=>'<tr><td>'+f(r.rank)+'</td><td class="ticker">'+r.ticker+'</td><td>'+zone(r)+'</td><td>'+f(r.stop)+'</td><td>'+f(r.target1)+'</td><td>'+f(r.target2)+'</td><td>'+r.state+'</td></tr>').join('')||'<tr><td colspan="7">لا توجد بيانات</td></tr>';
+
+  $('cfsummary').textContent='Session '+cf.session+' · '+cf.marketStatus+' · scanned '+cf.counts.scanned+' · actionable '+cf.counts.actionable+' · Hourly MA100: '+cf.methodology.hourlyMa100;
+  const cfr=(cf.recommendations||[]).concat((cf.watchlist||[]).slice(0,15));
+  $('cfrows').innerHTML=cfr.map((r,i)=>'<tr><td>'+(i+1)+'</td><td class="ticker">'+r.ticker+'</td><td><b>'+r.score+'</b></td><td>'+r.state+'</td><td>'+f(r.entryLow)+' – '+f(r.entryHigh)+'</td><td>'+f(r.structuralInvalidation)+'</td><td>'+f(r.targets?.t1)+'</td><td>'+f(r.targets?.t2)+'</td><td>'+(r.confluence?.inFib?'✔':'—')+'</td><td>'+(r.confluence?.vwapHit?'✔':'—')+'</td><td>'+(r.confluence?.ma50Hit?'✔':'—')+'</td><td>'+(r.confluence?.reaction?.ok?'✔':'—')+'</td><td>'+(r.confluence?.volumeConfirmed?'✔':'—')+'</td><td>'+(r.confluence?.fundamentals?.profitable?'PROFITABLE':r.confluence?.fundamentals?.verified?'FAIL':'MISSING')+'</td></tr>').join('')||'<tr><td colspan="14">لا توجد إعدادات منشورة</td></tr>';
 }
 load().catch(e=>{$('sub').textContent='تعذر تحميل المقارنة: '+e.message});
 </script></body></html>
