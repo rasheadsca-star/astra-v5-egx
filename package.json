@@ -12,7 +12,9 @@
     "start": "node scripts/serve-local.js",
     "quant:setup": "node scripts/run-python.js -m pip install -r quant/requirements.txt",
     "site:build": "node scripts/run-python.js quant/web/build.py",
-    "confluence:update": "node scripts/confluence-pullback-v1.js"
+    "confluence:update": "node scripts/confluence-pullback-v1.js",
+    "confluence:v2": "node scripts/confluence-pullback-v2.js",
+    "confluence:v2:forward": "node scripts/confluence-v2-forward.js"
   },
   "engines": {
     "node": ">=20"
