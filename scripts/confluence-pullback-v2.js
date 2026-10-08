@@ -27,6 +27,60 @@ async function fetchJson(url,attempt=0){
     throw e;
   }finally{clearTimeout(timer)}
 }
+async function postJson(url,body,attempt=0){
+  const c=new AbortController(); const timer=setTimeout(()=>c.abort(),12000);
+  try{
+    const r=await fetch(url,{
+      method:'POST',
+      headers:{'User-Agent':'Mozilla/5.0','Accept':'application/json','Content-Type':'application/json','Cache-Control':'no-cache'},
+      body:JSON.stringify(body),
+      signal:c.signal
+    });
+    if(!r.ok)throw new Error('HTTP_'+r.status);
+    return await r.json();
+  }catch(e){
+    if(attempt<1){await sleep(350);return postJson(url,body,attempt+1)}
+    throw e;
+  }finally{clearTimeout(timer)}
+}
+async function tradingViewSnapshot(ticker){
+  const symbol='EGX:'+ticker;
+  const columns=['name','close','close|60','SMA100|60','volume|60','net_income','earnings_per_share_diluted_ttm','fundamental_currency_code'];
+  try{
+    const j=await postJson('https://scanner.tradingview.com/global/scan',{
+      symbols:{tickers:[symbol],query:{types:[]}},
+      columns,
+      range:[0,5],
+      options:{lang:'en'}
+    });
+    const row=(j?.data||[]).find(x=>String(x?.s||'').toUpperCase()===symbol.toUpperCase()) || j?.data?.[0];
+    if(!row||!Array.isArray(row.d))return {available:false,status:'TV_SYMBOL_NOT_FOUND',symbol};
+    const d=Object.fromEntries(columns.map((k,i)=>[k,row.d[i]]));
+    const close60=Number(d['close|60']),sma100=Number(d['SMA100|60']),netIncome=Number(d.net_income),eps=Number(d.earnings_per_share_diluted_ttm);
+    const identityOk=String(row.s||'').toUpperCase()===symbol.toUpperCase();
+    const currency=d.fundamental_currency_code||null;
+    return {
+      available:Number.isFinite(sma100)&&Number.isFinite(close60),
+      status:Number.isFinite(sma100)&&Number.isFinite(close60)?'READY':'TV_HOURLY_FIELDS_MISSING',
+      source:'TRADINGVIEW_SCANNER_60M',
+      symbol:row.s||symbol,
+      identityOk,
+      closeDaily:Number.isFinite(Number(d.close))?Number(d.close):null,
+      close60:Number.isFinite(close60)?close60:null,
+      hourlyMa100:Number.isFinite(sma100)?sma100:null,
+      volume60:Number.isFinite(Number(d['volume|60']))?Number(d['volume|60']):null,
+      fundamentals:{
+        source:'TRADINGVIEW_SCANNER',
+        netIncomeFy:Number.isFinite(netIncome)?netIncome:null,
+        epsTtm:Number.isFinite(eps)?eps:null,
+        currency,
+        secondaryProfitable:Number.isFinite(netIncome)&&netIncome>0&&Number.isFinite(eps)&&eps>0&&(currency==null||currency==='EGP')
+      }
+    };
+  }catch(e){
+    return {available:false,status:'TV_FETCH_FAILED',symbol,error:String(e.message||e),fundamentals:{source:'TRADINGVIEW_SCANNER',secondaryProfitable:false}};
+  }
+}
 function extractBars(j){
   const r=j?.chart?.result?.[0], meta=r?.meta||{}, ts=r?.timestamp||[], q=r?.indicators?.quote?.[0]||{};
   const bars=[];
