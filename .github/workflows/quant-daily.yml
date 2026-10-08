@@ -2,6 +2,13 @@ name: ASTRA Quant Lane (daily)
 
 on:
   # يعمل بعد نجاح تحديث بيانات ASTRA الذري، ولديه جدولة احتياطية بعد الإغلاق (14:30 القاهرة + سماح) الأحد–الخميس.
+  push:
+    branches: [main]
+    paths:
+      - "scripts/confluence-pullback-v1.js"
+      - "scripts/confluence-validation.js"
+      - "quant/config/holidays.json"
+      - ".github/workflows/quant-daily.yml"
   workflow_run:
     workflows: ["Daily EGX Data Refresh"]
     types: [completed]
@@ -52,6 +59,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/confluence-pullback-v1.js
+      - name: Validate Confluence Pullback V1
+        run: node scripts/confluence-validation.js
       - name: Build V2.1 vs V4 vs V5 vs CLAUDE vs Confluence comparison
         env:
           GITHUB_TOKEN: ${{ github.token }}
