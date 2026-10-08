@@ -110,6 +110,7 @@ function overlap(a,b){
   const v5=readJson('data/quant/signals.json');
   const v2=readJson('docs/data/signals.json');
   const confluence=readJson('data/confluence/signals.json');
+  const confluenceV2=readJson('data/confluence-v2/signals.json');
   const session=v5.session || v2.session;
   if(!session) throw new Error('COMPARISON_SESSION_MISSING');
 
@@ -139,6 +140,17 @@ function overlap(a,b){
         stop:x.structuralInvalidation,target1:x.targets?.t1??null,target2:x.targets?.t2??null,
         score:x.score??null,state:x.state||'ENTRY_CONFIRMED',returnPct:null
       }))
+    },
+    confluenceV2:{
+      id:'Confluence Pullback V2',
+      engine:'CONFLUENCE_PULLBACK_V2',
+      session,
+      rows:(confluenceV2.entryReady||[]).map((x,i)=>({
+        ticker:x.ticker,rank:i+1,tier:'ENTRY_READY',
+        entryLow:x.entryLow,entryHigh:x.entryHigh,
+        stop:x.structuralStop,target1:x.targets?.t1??null,target2:x.targets?.t2??null,
+        score:x.score??null,state:x.state,returnPct:null
+      }))
     }
   };
   for(const e of Object.values(engines)) e.metrics=metrics(e.rows);
@@ -159,7 +171,11 @@ function overlap(a,b){
       v2_confluence:overlap(engines.v2.rows,engines.confluence.rows),
       v4_confluence:overlap(engines.v4.rows,engines.confluence.rows),
       v5_confluence:overlap(engines.v5.rows,engines.confluence.rows),
-      claude_confluence:overlap(engines.claude.rows,engines.confluence.rows)
+      claude_confluence:overlap(engines.claude.rows,engines.confluence.rows),
+      v2_confluenceV2:overlap(engines.v2.rows,engines.confluenceV2.rows),
+      v4_confluenceV2:overlap(engines.v4.rows,engines.confluenceV2.rows),
+      v5_confluenceV2:overlap(engines.v5.rows,engines.confluenceV2.rows),
+      claude_confluenceV2:overlap(engines.claude.rows,engines.confluenceV2.rows)
     },
     independence:{
       v2AndV5IndependentToday:false,
@@ -178,6 +194,12 @@ function overlap(a,b){
         mode:'RESEARCH_ONLY',
         session:confluence.session,
         marketStatus:confluence.marketStatus
+      },
+      confluenceV2:{
+        engine:'CONFLUENCE_PULLBACK_V2',
+        mode:'ENTRY_READY_RESEARCH_SIGNAL_ONLY',
+        session:confluenceV2.session,
+        entryReady:confluenceV2.counts?.entryReady??0
       }
     },
     safety:{
