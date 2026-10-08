@@ -4,6 +4,7 @@ const fs=require('fs'), path=require('path');
 const OUT='data/confluence-v2/signals.json';
 const DOC='docs/data/confluence-v2-signals.json';
 const LEDGER='data/confluence-v2/forward-ledger.json';
+const OFFICIAL_OVERRIDES='data/confluence/fundamentals-verified-overrides.json';
 const MAX_HOURLY_FETCH=30;
 const HOURLY_TOL_PCT=3;
 const MAX_RISK_PCT=8;
@@ -163,14 +164,27 @@ async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice,tv){
     return {available:false,status:'FETCH_FAILED',error:String(e.message||e)};
   }
 }
-function fundamentalEvidence(x,tv){
-  const official=x.confluence?.fundamentals||{};
+function fundamentalEvidence(x,tv,override){
+  const upstream=x.confluence?.fundamentals||{};
+  const official=(override&&override.verified===true)?{
+    verified:true,
+    profitable:override.profitable===true,
+    netProfit:Number(override.netProfit),
+    period:override.periodEnd||null,
+    sourceConfidence:'HIGH',
+    source:override.source||null,
+    sourceUrl:override.sourceUrl||null,
+    auditStatus:override.auditStatus||null,
+    publicationDate:override.publicationDate||null,
+    statementScope:override.statementScope||null
+  }:upstream;
   if(official.verified===true&&official.profitable===true){
     return {
       qualified:true,
       tier:'A_OFFICIAL_VERIFIED',
       official,
-      secondary:tv?.fundamentals||null
+      secondary:tv?.fundamentals||null,
+      officialOverrideApplied:!!override
     };
   }
   const secondary=tv?.fundamentals||{};
@@ -224,6 +238,9 @@ function missing(x,h,r,fund){
   if(!session)throw new Error('V2_SESSION_MISSING');
 
   const sourceCandidates=(v1.allTop||[]).slice(0,MAX_HOURLY_FETCH);
+  let overrides={schemaVersion:null,records:[]};
+  if(fs.existsSync(OFFICIAL_OVERRIDES)){try{overrides=read(OFFICIAL_OVERRIDES)}catch{}}
+  const overrideMap=new Map((overrides.records||[]).map(x=>[x.ticker,x]));
   const rows=[];
   for(const x of sourceCandidates){
     let yahooSymbol=null;
@@ -231,11 +248,12 @@ function missing(x,h,r,fund){
     if(fs.existsSync(hp)){try{yahooSymbol=read(hp).yahooSymbol||null}catch{}}
     const tv=await tradingViewSnapshot(x.ticker);
     const h=await hourlyEvidence(x.ticker,yahooSymbol,session,Number(x.close),tv);
-    const fund=fundamentalEvidence(x,tv);
+    const fund=fundamentalEvidence(x,tv,overrideMap.get(x.ticker));
     const r=riskMetrics(x);
     const hourlyPoints=h.available&&h.sessionAligned&&h.identityOk&&h.currencyOk&&h.hourlyMa100Hit?10:0;
     const secondaryFundamentalPoints=fund.tier==='B_TRADINGVIEW_CORROBORATED'?10:0;
-    const score=Math.min(100,Number(x.score||0)+hourlyPoints+secondaryFundamentalPoints);
+    const officialTopup=(fund.tier==='A_OFFICIAL_VERIFIED'&&!(x.confluence?.fundamentals?.verified&&x.confluence?.fundamentals?.profitable))?15:0;
+    const score=Math.min(100,Number(x.score||0)+hourlyPoints+secondaryFundamentalPoints+officialTopup);
     const misses=missing(x,h,r,fund);
     const entryReady=score>=MIN_SCORE&&misses.length===0;
     let state='WATCHLIST';
@@ -260,7 +278,8 @@ function missing(x,h,r,fund){
       factors:[
         ...(x.factors||[]),
         ...(hourlyPoints?['HOURLY_MA100']:[]),
-        ...(secondaryFundamentalPoints?['TRADINGVIEW_PROFITABILITY_CORROBORATED']:[])
+        ...(secondaryFundamentalPoints?['TRADINGVIEW_PROFITABILITY_CORROBORATED']:[]),
+        ...(officialTopup?['OFFICIAL_PROFITABILITY_VERIFIED_OVERRIDE']:[])
       ],
       missingConditions:misses,
       signalRule:'ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER'
