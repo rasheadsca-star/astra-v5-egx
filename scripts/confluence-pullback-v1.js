@@ -71,7 +71,7 @@ function profitableMap(input){
   const status=read('quant/data/daily-data-update-status.json');
   const holidays=read('quant/config/holidays.json');
   const expected=status.expectedSession||market.source?.expectedSession;
-  const isHoliday=holidays.some(x=>x.market==='EGX'&&x.date===expected);
+  const isHoliday=holidays.some(x=>typeof x==='string'?x===expected:(x?.market==='EGX'&&x?.date===expected));
   const session=market.source?.expectedSession||null;
   if(!session)throw new Error('CONFLUENCE_SESSION_MISSING');
   if(!isHoliday && expected && session!==expected)throw new Error('CONFLUENCE_FAIL_CLOSED_SESSION_MISMATCH:'+session+'!='+expected);
@@ -149,7 +149,7 @@ function profitableMap(input){
     generatedAt:new Date().toISOString(),
     session,expectedSession:expected,
     marketStatus:isHoliday?'MARKET_HOLIDAY':'TRADING_SESSION',
-    holiday:isHoliday?holidays.find(x=>x.market==='EGX'&&x.date===expected):null,
+    holiday:isHoliday?{date:expected,market:'EGX'}:null,
     methodology:{
       philosophy:'MULTI_FACTOR_CONFLUENCE_PULLBACK',
       fib:'61.8%-78.6% retracement of detected impulse',
