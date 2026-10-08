@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-confluence-pullback/v1",
   "engine": "CONFLUENCE_PULLBACK_V1",
-  "generatedAt": "2026-10-08T21:54:12.211Z",
+  "generatedAt": "2026-10-08T22:01:35.829Z",
   "session": "2026-10-07",
   "expectedSession": "2026-10-07",
   "marketStatus": "TRADING_SESSION",
@@ -25,9 +25,312 @@
   "counts": {
     "scanned": 175,
     "published": 30,
-    "actionable": 0
+    "actionable": 0,
+    "opportunityBrief": 10
   },
   "recommendations": [],
+  "opportunityBrief": [
+    {
+      "rank": 1,
+      "ticker": "UEFM",
+      "score": 65,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 520,
+      "watchEntryLow": 520,
+      "watchEntryHigh": 520,
+      "structuralStop": 474.1491,
+      "targets": {
+        "t1": 561.6,
+        "t2": 598,
+        "t3": 634.4,
+        "t4": 676
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 2,
+      "ticker": "CERA",
+      "score": 60,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 1.37,
+      "watchEntryLow": 1.37,
+      "watchEntryHigh": 1.37,
+      "structuralStop": 1.2304,
+      "targets": {
+        "t1": 1.4796,
+        "t2": 1.5755,
+        "t3": 1.6714,
+        "t4": 1.781
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 3,
+      "ticker": "DAPH",
+      "score": 50,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 107.08,
+      "watchEntryLow": 98.426,
+      "watchEntryHigh": 107.08,
+      "structuralStop": 78.1522,
+      "targets": {
+        "t1": 115.6464,
+        "t2": 123.142,
+        "t3": 130.6376,
+        "t4": 139.204
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 4,
+      "ticker": "FWRY",
+      "score": 50,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 19.08,
+      "watchEntryLow": 18.4326,
+      "watchEntryHigh": 19.08,
+      "structuralStop": 17.2899,
+      "targets": {
+        "t1": 20.6064,
+        "t2": 21.942,
+        "t3": 23.2776,
+        "t4": 24.804
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 5,
+      "ticker": "SKPC",
+      "score": 48,
+      "state": "REJECTED",
+      "close": 16.25,
+      "watchEntryLow": 16.25,
+      "watchEntryHigh": 16.25,
+      "structuralStop": 15.4737,
+      "targets": {
+        "t1": 17.55,
+        "t2": 18.6875,
+        "t3": 19.825,
+        "t4": 21.125
+      },
+      "factors": [
+        "PROFITABLE_VERIFIED",
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION"
+      ],
+      "missingConditions": [
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 6,
+      "ticker": "GSSC",
+      "score": 43,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 282.98,
+      "watchEntryLow": 261.6558,
+      "watchEntryHigh": 282.98,
+      "structuralStop": 232.9884,
+      "targets": {
+        "t1": 305.6184,
+        "t2": 325.427,
+        "t3": 345.2356,
+        "t4": 367.874
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 7,
+      "ticker": "PHAR",
+      "score": 43,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 113.97,
+      "watchEntryLow": 113.97,
+      "watchEntryHigh": 113.97,
+      "structuralStop": 96.6956,
+      "targets": {
+        "t1": 123.0876,
+        "t2": 131.0655,
+        "t3": 139.0434,
+        "t4": 148.161
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 8,
+      "ticker": "SUGR",
+      "score": 43,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 55.76,
+      "watchEntryLow": 52.6024,
+      "watchEntryHigh": 55.76,
+      "structuralStop": 48.2399,
+      "targets": {
+        "t1": 60.2208,
+        "t2": 64.124,
+        "t3": 68.0272,
+        "t4": 72.488
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 9,
+      "ticker": "MCQE",
+      "score": 42,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 196.74,
+      "watchEntryLow": 196.74,
+      "watchEntryHigh": 196.74,
+      "structuralStop": 187.6634,
+      "targets": {
+        "t1": 212.4792,
+        "t2": 226.251,
+        "t3": 240.0228,
+        "t4": 255.762
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "rank": 10,
+      "ticker": "MENA",
+      "score": 42,
+      "state": "FUNDAMENTALS_MISSING",
+      "close": 6.7,
+      "watchEntryLow": 6.137,
+      "watchEntryHigh": 6.7,
+      "structuralStop": 5.5621,
+      "targets": {
+        "t1": 7.236,
+        "t2": 7.705,
+        "t3": 8.174,
+        "t4": 8.71
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "missingConditions": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED"
+      ],
+      "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
+      "researchOnly": true,
+      "executionAllowed": false
+    }
+  ],
   "watchlist": [
     {
       "ticker": "UEFM",
