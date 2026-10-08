@@ -27,19 +27,41 @@ async function fetchJson(url,attempt=0){
     throw e;
   }finally{clearTimeout(timer)}
 }
+function extractBars(j){
+  const r=j?.chart?.result?.[0], meta=r?.meta||{}, ts=r?.timestamp||[], q=r?.indicators?.quote?.[0]||{};
+  const bars=[];
+  for(let i=0;i<ts.length;i++){
+    const close=Number(q.close?.[i]),vol=Number(q.volume?.[i]||0);
+    if(Number.isFinite(close))bars.push({ts:ts[i],date:cairoDate(ts[i]),close,volume:vol});
+  }
+  return {r,meta,bars};
+}
+function aggregateToHourly(bars){
+  const buckets=new Map();
+  for(const b of bars){
+    const hour=Math.floor(Number(b.ts)/3600)*3600;
+    const prev=buckets.get(hour);
+    if(!prev||b.ts>prev.ts)buckets.set(hour,b);
+  }
+  return [...buckets.values()].sort((a,b)=>a.ts-b.ts);
+}
 async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice){
   if(!yahooSymbol)return {available:false,status:'YAHOO_SYMBOL_MISSING'};
-  const url='https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(yahooSymbol)+'?range=60d&interval=1h&includePrePost=false&events=history';
   try{
-    const j=await fetchJson(url);
-    const r=j?.chart?.result?.[0], meta=r?.meta||{}, ts=r?.timestamp||[], q=r?.indicators?.quote?.[0]||{};
-    if(!r||!ts.length)return {available:false,status:'HOURLY_EMPTY'};
-    const bars=[];
-    for(let i=0;i<ts.length;i++){
-      const close=Number(q.close?.[i]),vol=Number(q.volume?.[i]||0);
-      if(Number.isFinite(close))bars.push({ts:ts[i],date:cairoDate(ts[i]),close,volume:vol});
+    let interval='1h';
+    let raw=extractBars(await fetchJson('https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(yahooSymbol)+'?range=60d&interval=1h&includePrePost=false&events=history'));
+    let bars=raw.bars, meta=raw.meta;
+    let eligible=bars.filter(x=>x.date<=session);
+    if(eligible.length<100){
+      interval='30m_aggregated_to_1h';
+      const half=extractBars(await fetchJson('https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(yahooSymbol)+'?range=60d&interval=30m&includePrePost=false&events=history'));
+      if(half.bars.length){
+        bars=aggregateToHourly(half.bars);
+        meta=half.meta;
+        eligible=bars.filter(x=>x.date<=session);
+      }
     }
-    const eligible=bars.filter(x=>x.date<=session);
+    if(!bars.length)return {available:false,status:'HOURLY_EMPTY'};
     const latest=eligible.at(-1);
     if(!latest)return {available:false,status:'NO_BAR_ON_OR_BEFORE_SESSION'};
     const last100=eligible.slice(-100).map(x=>x.close).filter(Number.isFinite);
@@ -51,7 +73,8 @@ async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice){
     return {
       available:Number.isFinite(ma100),
       status:Number.isFinite(ma100)?'READY':'INSUFFICIENT_100_HOURLY_BARS',
-      source:'YAHOO_CHART_1H',
+      source:'YAHOO_CHART_INTRADAY',
+      intervalUsed:interval,
       yahooSymbol,
       identityOk,currencyOk,sessionAligned,
       latestBarSession:latest.date,
