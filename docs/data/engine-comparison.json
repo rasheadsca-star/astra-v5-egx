@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-08T22:01:36.469Z",
+  "generatedAt": "2026-10-08T22:15:29.929Z",
   "session": "2026-10-07",
   "engines": {
     "v2": {
@@ -395,6 +395,21 @@
         "hitRatePct": null,
         "avgReturnPct": null
       }
+    },
+    "confluenceV2": {
+      "id": "Confluence Pullback V2",
+      "engine": "CONFLUENCE_PULLBACK_V2",
+      "session": "2026-10-07",
+      "rows": [],
+      "metrics": {
+        "recommendations": 0,
+        "resolved": 0,
+        "wins": 0,
+        "losses": 0,
+        "open": 0,
+        "hitRatePct": null,
+        "avgReturnPct": null
+      }
     }
   },
   "overlap": {
@@ -418,7 +433,11 @@
     "v2_confluence": [],
     "v4_confluence": [],
     "v5_confluence": [],
-    "claude_confluence": []
+    "claude_confluence": [],
+    "v2_confluenceV2": [],
+    "v4_confluenceV2": [],
+    "v5_confluenceV2": [],
+    "claude_confluenceV2": []
   },
   "independence": {
     "v2AndV5IndependentToday": false,
@@ -435,6 +454,12 @@
       "mode": "RESEARCH_ONLY",
       "session": "2026-10-07",
       "marketStatus": "TRADING_SESSION"
+    },
+    "confluenceV2": {
+      "engine": "CONFLUENCE_PULLBACK_V2",
+      "mode": "ENTRY_READY_RESEARCH_SIGNAL_ONLY",
+      "session": "2026-10-07",
+      "entryReady": 0
     }
   },
   "safety": {
