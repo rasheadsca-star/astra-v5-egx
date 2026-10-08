@@ -1,10 +1,10 @@
 {
   "schemaVersion": "astra-confluence-pullback/v2",
   "engine": "CONFLUENCE_PULLBACK_V2",
-  "generatedAt": "2026-10-08T22:22:00.379Z",
+  "generatedAt": "2026-10-08T22:24:24.100Z",
   "session": "2026-10-07",
   "marketStatus": "TRADING_SESSION",
-  "sourceV1GeneratedAt": "2026-10-08T22:21:57.213Z",
+  "sourceV1GeneratedAt": "2026-10-08T22:24:20.654Z",
   "policy": {
     "profitabilityEvidenceRequired": true,
     "acceptedProfitabilityTiers": [
@@ -32,8 +32,8 @@
     {
       "ticker": "FWRY",
       "session": "2026-10-07",
-      "state": "ENTRY_READY_SECONDARY",
-      "score": 70,
+      "state": "ENTRY_READY",
+      "score": 75,
       "dailyScore": 50,
       "researchSignal": true,
       "executionAllowed": false,
@@ -89,12 +89,18 @@
       },
       "fundamentalEvidence": {
         "qualified": true,
-        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "tier": "A_OFFICIAL_VERIFIED",
         "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
+          "verified": true,
+          "profitable": true,
+          "netProfit": 1727558263,
+          "period": "2026-06-30",
+          "sourceConfidence": "HIGH",
+          "source": "FAWRY_INVESTOR_RELATIONS_DISCLOSURE",
+          "sourceUrl": "https://www.fawry.com/investor-relations/disclosures/",
+          "auditStatus": "REVIEWED",
+          "publicationDate": "2026-08-13",
+          "statementScope": "CONSOLIDATED"
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
@@ -103,7 +109,8 @@
           "currency": "USD",
           "secondaryProfitable": true,
           "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
-        }
+        },
+        "officialOverrideApplied": true
       },
       "dailyConfluence": {
         "fib618": 18.4326,
@@ -138,7 +145,7 @@
         "PRICE_REACTION",
         "VOLUME_CONFIRMATION",
         "HOURLY_MA100",
-        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+        "OFFICIAL_PROFITABILITY_VERIFIED_OVERRIDE"
       ],
       "missingConditions": [],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
@@ -1621,7 +1628,8 @@
           "currency": "USD",
           "secondaryProfitable": false,
           "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
-        }
+        },
+        "officialOverrideApplied": false
       },
       "dailyConfluence": {
         "fib618": 16.5419,
@@ -3526,8 +3534,8 @@
     {
       "ticker": "FWRY",
       "session": "2026-10-07",
-      "state": "ENTRY_READY_SECONDARY",
-      "score": 70,
+      "state": "ENTRY_READY",
+      "score": 75,
       "dailyScore": 50,
       "researchSignal": true,
       "executionAllowed": false,
@@ -3583,12 +3591,18 @@
       },
       "fundamentalEvidence": {
         "qualified": true,
-        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "tier": "A_OFFICIAL_VERIFIED",
         "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
+          "verified": true,
+          "profitable": true,
+          "netProfit": 1727558263,
+          "period": "2026-06-30",
+          "sourceConfidence": "HIGH",
+          "source": "FAWRY_INVESTOR_RELATIONS_DISCLOSURE",
+          "sourceUrl": "https://www.fawry.com/investor-relations/disclosures/",
+          "auditStatus": "REVIEWED",
+          "publicationDate": "2026-08-13",
+          "statementScope": "CONSOLIDATED"
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
@@ -3597,7 +3611,8 @@
           "currency": "USD",
           "secondaryProfitable": true,
           "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
-        }
+        },
+        "officialOverrideApplied": true
       },
       "dailyConfluence": {
         "fib618": 18.4326,
@@ -3632,7 +3647,7 @@
         "PRICE_REACTION",
         "VOLUME_CONFIRMATION",
         "HOURLY_MA100",
-        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+        "OFFICIAL_PROFITABILITY_VERIFIED_OVERRIDE"
       ],
       "missingConditions": [],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
@@ -5113,7 +5128,8 @@
           "currency": "USD",
           "secondaryProfitable": false,
           "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
-        }
+        },
+        "officialOverrideApplied": false
       },
       "dailyConfluence": {
         "fib618": 16.5419,
