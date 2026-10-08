@@ -1,10 +1,49 @@
 {
   "schemaVersion": "astra-confluence-v2-forward/v1",
-  "updatedAt": "2026-10-08T22:20:30.586Z",
-  "records": [],
+  "updatedAt": "2026-10-08T22:22:00.429Z",
+  "records": [
+    {
+      "key": "2026-10-07|FWRY",
+      "signalSession": "2026-10-07",
+      "capturedAt": "2026-10-08T22:22:00.379Z",
+      "ticker": "FWRY",
+      "status": "PENDING_ENTRY",
+      "entryLow": 18.4326,
+      "entryHigh": 19.08,
+      "entryMid": 18.7563,
+      "stop": 17.2899,
+      "targets": {
+        "t1": 20.6064,
+        "t2": 21.942,
+        "t3": 23.2776,
+        "t4": 24.804
+      },
+      "score": 70,
+      "riskPct": 7.82,
+      "rrT2": 2.17,
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "hourlyMa100": 18.8549,
+      "fundamentalTier": "B_TRADINGVIEW_CORROBORATED",
+      "entrySession": null,
+      "entryPrice": null,
+      "exitSession": null,
+      "outcome": null,
+      "netReturnPct": null,
+      "maxHoldSessions": 10,
+      "sameBarPolicy": "STOP_FIRST"
+    }
+  ],
   "metrics": {
-    "total": 0,
-    "pending": 0,
+    "total": 1,
+    "pending": 1,
     "open": 0,
     "unfilled": 0,
     "resolved": 0,

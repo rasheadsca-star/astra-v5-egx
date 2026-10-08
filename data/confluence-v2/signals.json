@@ -1,10 +1,10 @@
 {
   "schemaVersion": "astra-confluence-pullback/v2",
   "engine": "CONFLUENCE_PULLBACK_V2",
-  "generatedAt": "2026-10-08T22:20:30.533Z",
+  "generatedAt": "2026-10-08T22:22:00.379Z",
   "session": "2026-10-07",
   "marketStatus": "TRADING_SESSION",
-  "sourceV1GeneratedAt": "2026-10-08T22:20:27.525Z",
+  "sourceV1GeneratedAt": "2026-10-08T22:21:57.213Z",
   "policy": {
     "profitabilityEvidenceRequired": true,
     "acceptedProfitabilityTiers": [
@@ -25,16 +25,131 @@
   },
   "counts": {
     "evaluated": 30,
-    "entryReady": 0,
-    "watchlist": 30
+    "entryReady": 1,
+    "watchlist": 29
   },
-  "entryReady": [],
+  "entryReady": [
+    {
+      "ticker": "FWRY",
+      "session": "2026-10-07",
+      "state": "ENTRY_READY_SECONDARY",
+      "score": 70,
+      "dailyScore": 50,
+      "researchSignal": true,
+      "executionAllowed": false,
+      "entryLow": 18.4326,
+      "entryHigh": 19.08,
+      "structuralStop": 17.2899,
+      "targets": {
+        "t1": 20.6064,
+        "t2": 21.942,
+        "t3": 23.2776,
+        "t4": 24.804
+      },
+      "risk": {
+        "entryMid": 18.7563,
+        "riskPct": 7.82,
+        "rrT1": 1.26,
+        "rrT2": 2.17
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:FWRY",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 19.06,
+        "hourlyMa100": 18.8549,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:FWRY",
+          "identityOk": true,
+          "closeDaily": 19.06,
+          "close60": 19.06,
+          "hourlyMa100": 18.8549,
+          "volume60": 1572608,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 59401729.10903999,
+            "epsTtm": 0.019046265,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 59401729.10903999,
+          "epsTtm": 0.019046265,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 18.4326,
+        "fib786": 17.5607,
+        "inFib": false,
+        "anchoredVwap": 19.0515,
+        "vwapHit": true,
+        "dailyMa50": 18.9984,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 19.08,
+        "supportHit": true,
+        "correctionPct": 11.83,
+        "reaction": {
+          "ok": true,
+          "type": "BULLISH_ENGULFING"
+        },
+        "volumeRatio": 3.54,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    }
+  ],
   "watchlist": [
     {
       "ticker": "CERA",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 70,
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 80,
       "dailyScore": 60,
       "researchSignal": false,
       "executionAllowed": false,
@@ -83,13 +198,14 @@
             "netIncomeFy": 772384.05808,
             "epsTtm": 0.0005701740000000001,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -101,7 +217,8 @@
           "netIncomeFy": 772384.05808,
           "epsTtm": 0.0005701740000000001,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -136,10 +253,10 @@
         "DAILY_MA50",
         "PRIOR_SUPPORT",
         "CORRECTION_30_38",
-        "HOURLY_MA100"
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
         "REACTION_REQUIRED",
         "VOLUME_CONFIRMATION_REQUIRED",
         "RISK_GT_8_OR_INVALID",
@@ -200,7 +317,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -218,7 +336,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -316,7 +435,8 @@
             "netIncomeFy": -2845532.0027199998,
             "epsTtm": -0.06305796,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -334,7 +454,8 @@
           "netIncomeFy": -2845532.0027199998,
           "epsTtm": -0.06305796,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -379,65 +500,66 @@
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
     {
-      "ticker": "FWRY",
+      "ticker": "ROTO",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
+      "state": "RISK_REJECTED",
       "score": 60,
-      "dailyScore": 50,
+      "dailyScore": 40,
       "researchSignal": false,
       "executionAllowed": false,
-      "entryLow": 18.4326,
-      "entryHigh": 19.08,
-      "structuralStop": 17.2899,
+      "entryLow": 37.3651,
+      "entryHigh": 40.86,
+      "structuralStop": 31.9357,
       "targets": {
-        "t1": 20.6064,
-        "t2": 21.942,
-        "t3": 23.2776,
-        "t4": 24.804
+        "t1": 44.1288,
+        "t2": 46.989,
+        "t3": 49.8492,
+        "t4": 53.118
       },
       "risk": {
-        "entryMid": 18.7563,
-        "riskPct": 7.82,
-        "rrT1": 1.26,
-        "rrT2": 2.17
+        "entryMid": 39.1125,
+        "riskPct": 18.35,
+        "rrT1": 0.7,
+        "rrT2": 1.1
       },
       "hourly": {
         "available": true,
         "status": "READY",
         "source": "TRADINGVIEW_SCANNER_60M",
         "intervalUsed": "60m",
-        "symbol": "EGX:FWRY",
+        "symbol": "EGX:ROTO",
         "identityOk": true,
         "currencyOk": true,
         "sessionAligned": true,
         "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
         "latestBarSession": "2026-10-07",
-        "latestBarClose": 19.06,
-        "hourlyMa100": 18.8549,
+        "latestBarClose": 40.86,
+        "hourlyMa100": 40.269,
         "hourlyMa100Hit": true,
         "barsUsed": null,
         "tradingView": {
           "available": true,
           "status": "READY",
           "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:FWRY",
+          "symbol": "EGX:ROTO",
           "identityOk": true,
-          "closeDaily": 19.06,
-          "close60": 19.06,
-          "hourlyMa100": 18.8549,
-          "volume60": 1572608,
+          "closeDaily": 40.86,
+          "close60": 40.86,
+          "hourlyMa100": 40.269,
+          "volume60": 16181,
           "fundamentals": {
             "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 59401729.10903999,
-            "epsTtm": 0.019046265,
+            "netIncomeFy": 775050.5667199999,
+            "epsTtm": 0.035042174999999995,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -446,31 +568,263 @@
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 59401729.10903999,
-          "epsTtm": 0.019046265,
+          "netIncomeFy": 775050.5667199999,
+          "epsTtm": 0.035042174999999995,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
-        "fib618": 18.4326,
-        "fib786": 17.5607,
+        "fib618": 37.3651,
+        "fib786": 32.9518,
         "inFib": false,
-        "anchoredVwap": 19.0515,
+        "anchoredVwap": 40.6355,
         "vwapHit": true,
-        "dailyMa50": 18.9984,
-        "ma50Hit": true,
+        "dailyMa50": 43.753,
+        "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 19.08,
+        "priorSupport": 40.83,
         "supportHit": true,
-        "correctionPct": 11.83,
+        "correctionPct": 23.77,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 3.54,
+        "volumeRatio": 1.22,
         "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "CIEB",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 55,
+      "dailyScore": 35,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 24,
+      "entryHigh": 24,
+      "structuralStop": 23.5406,
+      "targets": {
+        "t1": 25.92,
+        "t2": 27.6,
+        "t3": 29.28,
+        "t4": 31.2
+      },
+      "risk": {
+        "entryMid": 24,
+        "riskPct": 1.91,
+        "rrT1": 4.18,
+        "rrT2": 7.84
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:CIEB",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 24,
+        "hourlyMa100": 24.489800000000006,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:CIEB",
+          "identityOk": true,
+          "closeDaily": 24,
+          "close60": 24,
+          "hourlyMa100": 24.489800000000006,
+          "volume60": 79777,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 127406948.16,
+            "epsTtm": 0.10214799,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 127406948.16,
+          "epsTtm": 0.10214799,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 24.7686,
+        "fib786": 23.8413,
+        "inFib": true,
+        "anchoredVwap": 25.0277,
+        "vwapHit": false,
+        "dailyMa50": 24.6648,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 24,
+        "supportHit": true,
+        "correctionPct": 14.83,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.68,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "SAUD",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 55,
+      "dailyScore": 35,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 21.6038,
+      "entryHigh": 22.97,
+      "structuralStop": 19.9716,
+      "targets": {
+        "t1": 24.8076,
+        "t2": 26.4155,
+        "t3": 28.0234,
+        "t4": 29.861
+      },
+      "risk": {
+        "entryMid": 22.2869,
+        "riskPct": 10.39,
+        "rrT1": 1.09,
+        "rrT2": 1.78
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:SAUD",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 23.12,
+        "hourlyMa100": 23.397,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:SAUD",
+          "identityOk": true,
+          "closeDaily": 23.12,
+          "close60": 23.12,
+          "hourlyMa100": 23.397,
+          "volume60": 17936,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 71472337.36,
+            "epsTtm": 0.09221089499999999,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 71472337.36,
+          "epsTtm": 0.09221089499999999,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 21.6038,
+        "fib786": 20.4631,
+        "inFib": false,
+        "anchoredVwap": 22.9916,
+        "vwapHit": true,
+        "dailyMa50": 23.2692,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 23,
+        "supportHit": true,
+        "correctionPct": 10.97,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.19,
+        "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -482,12 +836,14 @@
         "ANCHORED_VWAP",
         "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION",
-        "HOURLY_MA100"
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED"
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -544,7 +900,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -562,7 +919,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -659,7 +1017,8 @@
             "netIncomeFy": 29640482.312,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -677,7 +1036,8 @@
           "netIncomeFy": 29640482.312,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -774,7 +1134,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -792,7 +1153,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -889,7 +1251,8 @@
             "netIncomeFy": 7095159.429679999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -907,7 +1270,8 @@
           "netIncomeFy": 7095159.429679999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -949,65 +1313,66 @@
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
     {
-      "ticker": "ROTO",
+      "ticker": "OCDI",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 50,
-      "dailyScore": 40,
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 48,
+      "dailyScore": 38,
       "researchSignal": false,
       "executionAllowed": false,
-      "entryLow": 37.3651,
-      "entryHigh": 40.86,
-      "structuralStop": 31.9357,
+      "entryLow": 24.9066,
+      "entryHigh": 27.51,
+      "structuralStop": 21.0505,
       "targets": {
-        "t1": 44.1288,
-        "t2": 46.989,
-        "t3": 49.8492,
-        "t4": 53.118
+        "t1": 29.7108,
+        "t2": 31.6365,
+        "t3": 33.5622,
+        "t4": 35.763
       },
       "risk": {
-        "entryMid": 39.1125,
-        "riskPct": 18.35,
-        "rrT1": 0.7,
-        "rrT2": 1.1
+        "entryMid": 26.2083,
+        "riskPct": 19.68,
+        "rrT1": 0.68,
+        "rrT2": 1.05
       },
       "hourly": {
         "available": true,
         "status": "READY",
         "source": "TRADINGVIEW_SCANNER_60M",
         "intervalUsed": "60m",
-        "symbol": "EGX:ROTO",
+        "symbol": "EGX:OCDI",
         "identityOk": true,
         "currencyOk": true,
         "sessionAligned": true,
         "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
         "latestBarSession": "2026-10-07",
-        "latestBarClose": 40.86,
-        "hourlyMa100": 40.269,
-        "hourlyMa100Hit": true,
+        "latestBarClose": 27.32,
+        "hourlyMa100": 28.73530000000001,
+        "hourlyMa100Hit": false,
         "barsUsed": null,
         "tradingView": {
           "available": true,
           "status": "READY",
           "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:ROTO",
+          "symbol": "EGX:OCDI",
           "identityOk": true,
-          "closeDaily": 40.86,
-          "close60": 40.86,
-          "hourlyMa100": 40.269,
-          "volume60": 16181,
+          "closeDaily": 27.32,
+          "close60": 27.32,
+          "hourlyMa100": 28.73530000000001,
+          "volume60": 170225,
           "fundamentals": {
             "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 775050.5667199999,
-            "epsTtm": 0.035042174999999995,
+            "netIncomeFy": 92098915.96504,
+            "epsTtm": 0.062140259999999996,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -1016,31 +1381,32 @@
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 775050.5667199999,
-          "epsTtm": 0.035042174999999995,
+          "netIncomeFy": 92098915.96504,
+          "epsTtm": 0.062140259999999996,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
-        "fib618": 37.3651,
-        "fib786": 32.9518,
+        "fib618": 24.9066,
+        "fib786": 21.6273,
         "inFib": false,
-        "anchoredVwap": 40.6355,
+        "anchoredVwap": 26.9403,
         "vwapHit": true,
-        "dailyMa50": 43.753,
+        "dailyMa50": 30.7488,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 40.83,
+        "priorSupport": 27.5,
         "supportHit": true,
-        "correctionPct": 23.77,
+        "correctionPct": 25.59,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 1.22,
-        "volumeConfirmed": true,
+        "volumeRatio": 0.31,
+        "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -1051,12 +1417,130 @@
       "factors": [
         "ANCHORED_VWAP",
         "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
         "PRICE_REACTION",
-        "VOLUME_CONFIRMATION",
-        "HOURLY_MA100"
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "RMDA",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 48,
+      "dailyScore": 38,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 5.3012,
+      "entryHigh": 5.41,
+      "structuralStop": 4.5762,
+      "targets": {
+        "t1": 5.8428,
+        "t2": 6.2215,
+        "t3": 6.6002,
+        "t4": 7.033
+      },
+      "risk": {
+        "entryMid": 5.3556,
+        "riskPct": 14.55,
+        "rrT1": 0.63,
+        "rrT2": 1.11
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:RMDA",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 5.41,
+        "hourlyMa100": 5.803299999999999,
+        "hourlyMa100Hit": false,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:RMDA",
+          "identityOk": true,
+          "closeDaily": 5.41,
+          "close60": 5.41,
+          "hourlyMa100": 5.803299999999999,
+          "volume60": 415513,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 5522718.17032,
+            "epsTtm": 0.0033795299999999995,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 5522718.17032,
+          "epsTtm": 0.0033795299999999995,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 5.3012,
+        "fib786": 4.7333,
+        "inFib": false,
+        "anchoredVwap": 5.4291,
+        "vwapHit": true,
+        "dailyMa50": 6.0064,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 5.28,
+        "supportHit": true,
+        "correctionPct": 26.79,
+        "reaction": {
+          "ok": true,
+          "type": "BULLISH_REJECTION"
+        },
+        "volumeRatio": 0.44,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
         "RISK_GT_8_OR_INVALID",
         "RR_T2_LT_2"
       ],
@@ -1115,7 +1599,8 @@
             "netIncomeFy": 20577790.794159997,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1134,7 +1619,8 @@
           "netIncomeFy": 20577790.794159997,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -1173,119 +1659,6 @@
       "missingConditions": [
         "VOLUME_CONFIRMATION_REQUIRED",
         "HOURLY_MA100_NOT_ALIGNED"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "CIEB",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 45,
-      "dailyScore": 35,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 24,
-      "entryHigh": 24,
-      "structuralStop": 23.5406,
-      "targets": {
-        "t1": 25.92,
-        "t2": 27.6,
-        "t3": 29.28,
-        "t4": 31.2
-      },
-      "risk": {
-        "entryMid": 24,
-        "riskPct": 1.91,
-        "rrT1": 4.18,
-        "rrT2": 7.84
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:CIEB",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 24,
-        "hourlyMa100": 24.489800000000006,
-        "hourlyMa100Hit": true,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:CIEB",
-          "identityOk": true,
-          "closeDaily": 24,
-          "close60": 24,
-          "hourlyMa100": 24.489800000000006,
-          "volume60": 79777,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 127406948.16,
-            "epsTtm": 0.10214799,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 127406948.16,
-          "epsTtm": 0.10214799,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 24.7686,
-        "fib786": 23.8413,
-        "inFib": true,
-        "anchoredVwap": 25.0277,
-        "vwapHit": false,
-        "dailyMa50": 24.6648,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 24,
-        "supportHit": true,
-        "correctionPct": 14.83,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.68,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "HOURLY_MA100"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "REACTION_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -1342,7 +1715,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1360,7 +1734,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -1457,7 +1832,8 @@
             "netIncomeFy": 15853949.8456,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1475,7 +1851,8 @@
           "netIncomeFy": 15853949.8456,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -1570,7 +1947,8 @@
             "netIncomeFy": 7765577.1751999995,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1588,7 +1966,8 @@
           "netIncomeFy": 7765577.1751999995,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -1685,7 +2064,8 @@
             "netIncomeFy": 25947594.39624,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1703,7 +2083,8 @@
           "netIncomeFy": 25947594.39624,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -1742,121 +2123,6 @@
         "PROFITABILITY_EVIDENCE_REQUIRED",
         "REACTION_REQUIRED",
         "VOLUME_CONFIRMATION_REQUIRED"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "SAUD",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 45,
-      "dailyScore": 35,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 21.6038,
-      "entryHigh": 22.97,
-      "structuralStop": 19.9716,
-      "targets": {
-        "t1": 24.8076,
-        "t2": 26.4155,
-        "t3": 28.0234,
-        "t4": 29.861
-      },
-      "risk": {
-        "entryMid": 22.2869,
-        "riskPct": 10.39,
-        "rrT1": 1.09,
-        "rrT2": 1.78
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:SAUD",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 23.12,
-        "hourlyMa100": 23.397,
-        "hourlyMa100Hit": true,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:SAUD",
-          "identityOk": true,
-          "closeDaily": 23.12,
-          "close60": 23.12,
-          "hourlyMa100": 23.397,
-          "volume60": 17936,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 71472337.36,
-            "epsTtm": 0.09221089499999999,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 71472337.36,
-          "epsTtm": 0.09221089499999999,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 21.6038,
-        "fib786": 20.4631,
-        "inFib": false,
-        "anchoredVwap": 22.9916,
-        "vwapHit": true,
-        "dailyMa50": 23.2692,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 23,
-        "supportHit": true,
-        "correctionPct": 10.97,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.19,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "HOURLY_MA100"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "REACTION_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -1913,7 +2179,8 @@
             "netIncomeFy": -10817176.19832,
             "epsTtm": -0.19515488999999997,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -1931,7 +2198,8 @@
           "netIncomeFy": -10817176.19832,
           "epsTtm": -0.19515488999999997,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2028,7 +2296,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2046,7 +2315,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2141,7 +2411,8 @@
             "netIncomeFy": 83438833.03999999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2159,7 +2430,8 @@
           "netIncomeFy": 83438833.03999999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2254,7 +2526,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2272,7 +2545,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2366,7 +2640,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2384,7 +2659,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2405,236 +2681,6 @@
           "type": "BULLISH_ENGULFING"
         },
         "volumeRatio": 0.46,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "HOURLY_MA100_NOT_ALIGNED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "OCDI",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 38,
-      "dailyScore": 38,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 24.9066,
-      "entryHigh": 27.51,
-      "structuralStop": 21.0505,
-      "targets": {
-        "t1": 29.7108,
-        "t2": 31.6365,
-        "t3": 33.5622,
-        "t4": 35.763
-      },
-      "risk": {
-        "entryMid": 26.2083,
-        "riskPct": 19.68,
-        "rrT1": 0.68,
-        "rrT2": 1.05
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:OCDI",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 27.32,
-        "hourlyMa100": 28.73530000000001,
-        "hourlyMa100Hit": false,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:OCDI",
-          "identityOk": true,
-          "closeDaily": 27.32,
-          "close60": 27.32,
-          "hourlyMa100": 28.73530000000001,
-          "volume60": 170225,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 92098915.96504,
-            "epsTtm": 0.062140259999999996,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 92098915.96504,
-          "epsTtm": 0.062140259999999996,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 24.9066,
-        "fib786": 21.6273,
-        "inFib": false,
-        "anchoredVwap": 26.9403,
-        "vwapHit": true,
-        "dailyMa50": 30.7488,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 27.5,
-        "supportHit": true,
-        "correctionPct": 25.59,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.31,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "HOURLY_MA100_NOT_ALIGNED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "RMDA",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 38,
-      "dailyScore": 38,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 5.3012,
-      "entryHigh": 5.41,
-      "structuralStop": 4.5762,
-      "targets": {
-        "t1": 5.8428,
-        "t2": 6.2215,
-        "t3": 6.6002,
-        "t4": 7.033
-      },
-      "risk": {
-        "entryMid": 5.3556,
-        "riskPct": 14.55,
-        "rrT1": 0.63,
-        "rrT2": 1.11
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:RMDA",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 5.41,
-        "hourlyMa100": 5.803299999999999,
-        "hourlyMa100Hit": false,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:RMDA",
-          "identityOk": true,
-          "closeDaily": 5.41,
-          "close60": 5.41,
-          "hourlyMa100": 5.803299999999999,
-          "volume60": 415513,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 5522718.17032,
-            "epsTtm": 0.0033795299999999995,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 5522718.17032,
-          "epsTtm": 0.0033795299999999995,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 5.3012,
-        "fib786": 4.7333,
-        "inFib": false,
-        "anchoredVwap": 5.4291,
-        "vwapHit": true,
-        "dailyMa50": 6.0064,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.28,
-        "supportHit": true,
-        "correctionPct": 26.79,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
-        },
-        "volumeRatio": 0.44,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -2711,7 +2757,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2729,7 +2776,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2826,7 +2874,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2844,7 +2893,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -2941,7 +2991,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -2959,7 +3010,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3056,7 +3108,8 @@
             "netIncomeFy": 14979928.969519999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3074,7 +3127,8 @@
           "netIncomeFy": 14979928.969519999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3169,7 +3223,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3187,7 +3242,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3284,7 +3340,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3302,7 +3359,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3399,7 +3457,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3417,7 +3476,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3464,10 +3524,124 @@
   ],
   "all": [
     {
+      "ticker": "FWRY",
+      "session": "2026-10-07",
+      "state": "ENTRY_READY_SECONDARY",
+      "score": 70,
+      "dailyScore": 50,
+      "researchSignal": true,
+      "executionAllowed": false,
+      "entryLow": 18.4326,
+      "entryHigh": 19.08,
+      "structuralStop": 17.2899,
+      "targets": {
+        "t1": 20.6064,
+        "t2": 21.942,
+        "t3": 23.2776,
+        "t4": 24.804
+      },
+      "risk": {
+        "entryMid": 18.7563,
+        "riskPct": 7.82,
+        "rrT1": 1.26,
+        "rrT2": 2.17
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:FWRY",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 19.06,
+        "hourlyMa100": 18.8549,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:FWRY",
+          "identityOk": true,
+          "closeDaily": 19.06,
+          "close60": 19.06,
+          "hourlyMa100": 18.8549,
+          "volume60": 1572608,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 59401729.10903999,
+            "epsTtm": 0.019046265,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 59401729.10903999,
+          "epsTtm": 0.019046265,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 18.4326,
+        "fib786": 17.5607,
+        "inFib": false,
+        "anchoredVwap": 19.0515,
+        "vwapHit": true,
+        "dailyMa50": 18.9984,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 19.08,
+        "supportHit": true,
+        "correctionPct": 11.83,
+        "reaction": {
+          "ok": true,
+          "type": "BULLISH_ENGULFING"
+        },
+        "volumeRatio": 3.54,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
       "ticker": "CERA",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 70,
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 80,
       "dailyScore": 60,
       "researchSignal": false,
       "executionAllowed": false,
@@ -3516,13 +3690,14 @@
             "netIncomeFy": 772384.05808,
             "epsTtm": 0.0005701740000000001,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -3534,7 +3709,8 @@
           "netIncomeFy": 772384.05808,
           "epsTtm": 0.0005701740000000001,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3569,10 +3745,10 @@
         "DAILY_MA50",
         "PRIOR_SUPPORT",
         "CORRECTION_30_38",
-        "HOURLY_MA100"
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
         "REACTION_REQUIRED",
         "VOLUME_CONFIRMATION_REQUIRED",
         "RISK_GT_8_OR_INVALID",
@@ -3633,7 +3809,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3651,7 +3828,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3749,7 +3927,8 @@
             "netIncomeFy": -2845532.0027199998,
             "epsTtm": -0.06305796,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3767,7 +3946,8 @@
           "netIncomeFy": -2845532.0027199998,
           "epsTtm": -0.06305796,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -3812,65 +3992,66 @@
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
     {
-      "ticker": "FWRY",
+      "ticker": "ROTO",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
+      "state": "RISK_REJECTED",
       "score": 60,
-      "dailyScore": 50,
+      "dailyScore": 40,
       "researchSignal": false,
       "executionAllowed": false,
-      "entryLow": 18.4326,
-      "entryHigh": 19.08,
-      "structuralStop": 17.2899,
+      "entryLow": 37.3651,
+      "entryHigh": 40.86,
+      "structuralStop": 31.9357,
       "targets": {
-        "t1": 20.6064,
-        "t2": 21.942,
-        "t3": 23.2776,
-        "t4": 24.804
+        "t1": 44.1288,
+        "t2": 46.989,
+        "t3": 49.8492,
+        "t4": 53.118
       },
       "risk": {
-        "entryMid": 18.7563,
-        "riskPct": 7.82,
-        "rrT1": 1.26,
-        "rrT2": 2.17
+        "entryMid": 39.1125,
+        "riskPct": 18.35,
+        "rrT1": 0.7,
+        "rrT2": 1.1
       },
       "hourly": {
         "available": true,
         "status": "READY",
         "source": "TRADINGVIEW_SCANNER_60M",
         "intervalUsed": "60m",
-        "symbol": "EGX:FWRY",
+        "symbol": "EGX:ROTO",
         "identityOk": true,
         "currencyOk": true,
         "sessionAligned": true,
         "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
         "latestBarSession": "2026-10-07",
-        "latestBarClose": 19.06,
-        "hourlyMa100": 18.8549,
+        "latestBarClose": 40.86,
+        "hourlyMa100": 40.269,
         "hourlyMa100Hit": true,
         "barsUsed": null,
         "tradingView": {
           "available": true,
           "status": "READY",
           "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:FWRY",
+          "symbol": "EGX:ROTO",
           "identityOk": true,
-          "closeDaily": 19.06,
-          "close60": 19.06,
-          "hourlyMa100": 18.8549,
-          "volume60": 1572608,
+          "closeDaily": 40.86,
+          "close60": 40.86,
+          "hourlyMa100": 40.269,
+          "volume60": 16181,
           "fundamentals": {
             "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 59401729.10903999,
-            "epsTtm": 0.019046265,
+            "netIncomeFy": 775050.5667199999,
+            "epsTtm": 0.035042174999999995,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -3879,31 +4060,263 @@
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 59401729.10903999,
-          "epsTtm": 0.019046265,
+          "netIncomeFy": 775050.5667199999,
+          "epsTtm": 0.035042174999999995,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
-        "fib618": 18.4326,
-        "fib786": 17.5607,
+        "fib618": 37.3651,
+        "fib786": 32.9518,
         "inFib": false,
-        "anchoredVwap": 19.0515,
+        "anchoredVwap": 40.6355,
         "vwapHit": true,
-        "dailyMa50": 18.9984,
-        "ma50Hit": true,
+        "dailyMa50": 43.753,
+        "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 19.08,
+        "priorSupport": 40.83,
         "supportHit": true,
-        "correctionPct": 11.83,
+        "correctionPct": 23.77,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 3.54,
+        "volumeRatio": 1.22,
         "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "CIEB",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 55,
+      "dailyScore": 35,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 24,
+      "entryHigh": 24,
+      "structuralStop": 23.5406,
+      "targets": {
+        "t1": 25.92,
+        "t2": 27.6,
+        "t3": 29.28,
+        "t4": 31.2
+      },
+      "risk": {
+        "entryMid": 24,
+        "riskPct": 1.91,
+        "rrT1": 4.18,
+        "rrT2": 7.84
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:CIEB",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 24,
+        "hourlyMa100": 24.489800000000006,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:CIEB",
+          "identityOk": true,
+          "closeDaily": 24,
+          "close60": 24,
+          "hourlyMa100": 24.489800000000006,
+          "volume60": 79777,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 127406948.16,
+            "epsTtm": 0.10214799,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 127406948.16,
+          "epsTtm": 0.10214799,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 24.7686,
+        "fib786": 23.8413,
+        "inFib": true,
+        "anchoredVwap": 25.0277,
+        "vwapHit": false,
+        "dailyMa50": 24.6648,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 24,
+        "supportHit": true,
+        "correctionPct": 14.83,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.68,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "SAUD",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 55,
+      "dailyScore": 35,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 21.6038,
+      "entryHigh": 22.97,
+      "structuralStop": 19.9716,
+      "targets": {
+        "t1": 24.8076,
+        "t2": 26.4155,
+        "t3": 28.0234,
+        "t4": 29.861
+      },
+      "risk": {
+        "entryMid": 22.2869,
+        "riskPct": 10.39,
+        "rrT1": 1.09,
+        "rrT2": 1.78
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:SAUD",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 23.12,
+        "hourlyMa100": 23.397,
+        "hourlyMa100Hit": true,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:SAUD",
+          "identityOk": true,
+          "closeDaily": 23.12,
+          "close60": 23.12,
+          "hourlyMa100": 23.397,
+          "volume60": 17936,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 71472337.36,
+            "epsTtm": 0.09221089499999999,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 71472337.36,
+          "epsTtm": 0.09221089499999999,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 21.6038,
+        "fib786": 20.4631,
+        "inFib": false,
+        "anchoredVwap": 22.9916,
+        "vwapHit": true,
+        "dailyMa50": 23.2692,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 23,
+        "supportHit": true,
+        "correctionPct": 10.97,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.19,
+        "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -3915,12 +4328,14 @@
         "ANCHORED_VWAP",
         "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION",
-        "HOURLY_MA100"
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED"
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -3977,7 +4392,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -3995,7 +4411,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4092,7 +4509,8 @@
             "netIncomeFy": 29640482.312,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4110,7 +4528,8 @@
           "netIncomeFy": 29640482.312,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4207,7 +4626,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4225,7 +4645,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4322,7 +4743,8 @@
             "netIncomeFy": 7095159.429679999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4340,7 +4762,8 @@
           "netIncomeFy": 7095159.429679999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4382,65 +4805,66 @@
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
     {
-      "ticker": "ROTO",
+      "ticker": "OCDI",
       "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 50,
-      "dailyScore": 40,
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 48,
+      "dailyScore": 38,
       "researchSignal": false,
       "executionAllowed": false,
-      "entryLow": 37.3651,
-      "entryHigh": 40.86,
-      "structuralStop": 31.9357,
+      "entryLow": 24.9066,
+      "entryHigh": 27.51,
+      "structuralStop": 21.0505,
       "targets": {
-        "t1": 44.1288,
-        "t2": 46.989,
-        "t3": 49.8492,
-        "t4": 53.118
+        "t1": 29.7108,
+        "t2": 31.6365,
+        "t3": 33.5622,
+        "t4": 35.763
       },
       "risk": {
-        "entryMid": 39.1125,
-        "riskPct": 18.35,
-        "rrT1": 0.7,
-        "rrT2": 1.1
+        "entryMid": 26.2083,
+        "riskPct": 19.68,
+        "rrT1": 0.68,
+        "rrT2": 1.05
       },
       "hourly": {
         "available": true,
         "status": "READY",
         "source": "TRADINGVIEW_SCANNER_60M",
         "intervalUsed": "60m",
-        "symbol": "EGX:ROTO",
+        "symbol": "EGX:OCDI",
         "identityOk": true,
         "currencyOk": true,
         "sessionAligned": true,
         "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
         "latestBarSession": "2026-10-07",
-        "latestBarClose": 40.86,
-        "hourlyMa100": 40.269,
-        "hourlyMa100Hit": true,
+        "latestBarClose": 27.32,
+        "hourlyMa100": 28.73530000000001,
+        "hourlyMa100Hit": false,
         "barsUsed": null,
         "tradingView": {
           "available": true,
           "status": "READY",
           "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:ROTO",
+          "symbol": "EGX:OCDI",
           "identityOk": true,
-          "closeDaily": 40.86,
-          "close60": 40.86,
-          "hourlyMa100": 40.269,
-          "volume60": 16181,
+          "closeDaily": 27.32,
+          "close60": 27.32,
+          "hourlyMa100": 28.73530000000001,
+          "volume60": 170225,
           "fundamentals": {
             "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 775050.5667199999,
-            "epsTtm": 0.035042174999999995,
+            "netIncomeFy": 92098915.96504,
+            "epsTtm": 0.062140259999999996,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
       "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
         "official": {
           "verified": false,
           "profitable": false,
@@ -4449,31 +4873,32 @@
         },
         "secondary": {
           "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 775050.5667199999,
-          "epsTtm": 0.035042174999999995,
+          "netIncomeFy": 92098915.96504,
+          "epsTtm": 0.062140259999999996,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
-        "fib618": 37.3651,
-        "fib786": 32.9518,
+        "fib618": 24.9066,
+        "fib786": 21.6273,
         "inFib": false,
-        "anchoredVwap": 40.6355,
+        "anchoredVwap": 26.9403,
         "vwapHit": true,
-        "dailyMa50": 43.753,
+        "dailyMa50": 30.7488,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 40.83,
+        "priorSupport": 27.5,
         "supportHit": true,
-        "correctionPct": 23.77,
+        "correctionPct": 25.59,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 1.22,
-        "volumeConfirmed": true,
+        "volumeRatio": 0.31,
+        "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -4484,12 +4909,130 @@
       "factors": [
         "ANCHORED_VWAP",
         "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
         "PRICE_REACTION",
-        "VOLUME_CONFIRMATION",
-        "HOURLY_MA100"
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
       ],
       "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
+    },
+    {
+      "ticker": "RMDA",
+      "session": "2026-10-07",
+      "state": "WAITING_FOR_TRIGGER",
+      "score": 48,
+      "dailyScore": 38,
+      "researchSignal": false,
+      "executionAllowed": false,
+      "entryLow": 5.3012,
+      "entryHigh": 5.41,
+      "structuralStop": 4.5762,
+      "targets": {
+        "t1": 5.8428,
+        "t2": 6.2215,
+        "t3": 6.6002,
+        "t4": 7.033
+      },
+      "risk": {
+        "entryMid": 5.3556,
+        "riskPct": 14.55,
+        "rrT1": 0.63,
+        "rrT2": 1.11
+      },
+      "hourly": {
+        "available": true,
+        "status": "READY",
+        "source": "TRADINGVIEW_SCANNER_60M",
+        "intervalUsed": "60m",
+        "symbol": "EGX:RMDA",
+        "identityOk": true,
+        "currencyOk": true,
+        "sessionAligned": true,
+        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
+        "latestBarSession": "2026-10-07",
+        "latestBarClose": 5.41,
+        "hourlyMa100": 5.803299999999999,
+        "hourlyMa100Hit": false,
+        "barsUsed": null,
+        "tradingView": {
+          "available": true,
+          "status": "READY",
+          "source": "TRADINGVIEW_SCANNER_60M",
+          "symbol": "EGX:RMDA",
+          "identityOk": true,
+          "closeDaily": 5.41,
+          "close60": 5.41,
+          "hourlyMa100": 5.803299999999999,
+          "volume60": 415513,
+          "fundamentals": {
+            "source": "TRADINGVIEW_SCANNER",
+            "netIncomeFy": 5522718.17032,
+            "epsTtm": 0.0033795299999999995,
+            "currency": "USD",
+            "secondaryProfitable": true,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+          }
+        }
+      },
+      "fundamentalEvidence": {
+        "qualified": true,
+        "tier": "B_TRADINGVIEW_CORROBORATED",
+        "official": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        },
+        "secondary": {
+          "source": "TRADINGVIEW_SCANNER",
+          "netIncomeFy": 5522718.17032,
+          "epsTtm": 0.0033795299999999995,
+          "currency": "USD",
+          "secondaryProfitable": true,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
+        }
+      },
+      "dailyConfluence": {
+        "fib618": 5.3012,
+        "fib786": 4.7333,
+        "inFib": false,
+        "anchoredVwap": 5.4291,
+        "vwapHit": true,
+        "dailyMa50": 6.0064,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 5.28,
+        "supportHit": true,
+        "correctionPct": 26.79,
+        "reaction": {
+          "ok": true,
+          "type": "BULLISH_REJECTION"
+        },
+        "volumeRatio": 0.44,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "missingConditions": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
         "RISK_GT_8_OR_INVALID",
         "RR_T2_LT_2"
       ],
@@ -4548,7 +5091,8 @@
             "netIncomeFy": 20577790.794159997,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4567,7 +5111,8 @@
           "netIncomeFy": 20577790.794159997,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4606,119 +5151,6 @@
       "missingConditions": [
         "VOLUME_CONFIRMATION_REQUIRED",
         "HOURLY_MA100_NOT_ALIGNED"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "CIEB",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 45,
-      "dailyScore": 35,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 24,
-      "entryHigh": 24,
-      "structuralStop": 23.5406,
-      "targets": {
-        "t1": 25.92,
-        "t2": 27.6,
-        "t3": 29.28,
-        "t4": 31.2
-      },
-      "risk": {
-        "entryMid": 24,
-        "riskPct": 1.91,
-        "rrT1": 4.18,
-        "rrT2": 7.84
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:CIEB",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 24,
-        "hourlyMa100": 24.489800000000006,
-        "hourlyMa100Hit": true,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:CIEB",
-          "identityOk": true,
-          "closeDaily": 24,
-          "close60": 24,
-          "hourlyMa100": 24.489800000000006,
-          "volume60": 79777,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 127406948.16,
-            "epsTtm": 0.10214799,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 127406948.16,
-          "epsTtm": 0.10214799,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 24.7686,
-        "fib786": 23.8413,
-        "inFib": true,
-        "anchoredVwap": 25.0277,
-        "vwapHit": false,
-        "dailyMa50": 24.6648,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 24,
-        "supportHit": true,
-        "correctionPct": 14.83,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.68,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "HOURLY_MA100"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "REACTION_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -4775,7 +5207,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4793,7 +5226,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -4890,7 +5324,8 @@
             "netIncomeFy": 15853949.8456,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -4908,7 +5343,8 @@
           "netIncomeFy": 15853949.8456,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5003,7 +5439,8 @@
             "netIncomeFy": 7765577.1751999995,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5021,7 +5458,8 @@
           "netIncomeFy": 7765577.1751999995,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5118,7 +5556,8 @@
             "netIncomeFy": 25947594.39624,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5136,7 +5575,8 @@
           "netIncomeFy": 25947594.39624,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5175,121 +5615,6 @@
         "PROFITABILITY_EVIDENCE_REQUIRED",
         "REACTION_REQUIRED",
         "VOLUME_CONFIRMATION_REQUIRED"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "SAUD",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 45,
-      "dailyScore": 35,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 21.6038,
-      "entryHigh": 22.97,
-      "structuralStop": 19.9716,
-      "targets": {
-        "t1": 24.8076,
-        "t2": 26.4155,
-        "t3": 28.0234,
-        "t4": 29.861
-      },
-      "risk": {
-        "entryMid": 22.2869,
-        "riskPct": 10.39,
-        "rrT1": 1.09,
-        "rrT2": 1.78
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:SAUD",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 23.12,
-        "hourlyMa100": 23.397,
-        "hourlyMa100Hit": true,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:SAUD",
-          "identityOk": true,
-          "closeDaily": 23.12,
-          "close60": 23.12,
-          "hourlyMa100": 23.397,
-          "volume60": 17936,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 71472337.36,
-            "epsTtm": 0.09221089499999999,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 71472337.36,
-          "epsTtm": 0.09221089499999999,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 21.6038,
-        "fib786": 20.4631,
-        "inFib": false,
-        "anchoredVwap": 22.9916,
-        "vwapHit": true,
-        "dailyMa50": 23.2692,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 23,
-        "supportHit": true,
-        "correctionPct": 10.97,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.19,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "HOURLY_MA100"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "REACTION_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
       ],
       "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
     },
@@ -5346,7 +5671,8 @@
             "netIncomeFy": -10817176.19832,
             "epsTtm": -0.19515488999999997,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5364,7 +5690,8 @@
           "netIncomeFy": -10817176.19832,
           "epsTtm": -0.19515488999999997,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5461,7 +5788,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5479,7 +5807,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5574,7 +5903,8 @@
             "netIncomeFy": 83438833.03999999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5592,7 +5922,8 @@
           "netIncomeFy": 83438833.03999999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5687,7 +6018,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5705,7 +6037,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5799,7 +6132,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -5817,7 +6151,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -5838,236 +6173,6 @@
           "type": "BULLISH_ENGULFING"
         },
         "volumeRatio": 0.46,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "HOURLY_MA100_NOT_ALIGNED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "OCDI",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 38,
-      "dailyScore": 38,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 24.9066,
-      "entryHigh": 27.51,
-      "structuralStop": 21.0505,
-      "targets": {
-        "t1": 29.7108,
-        "t2": 31.6365,
-        "t3": 33.5622,
-        "t4": 35.763
-      },
-      "risk": {
-        "entryMid": 26.2083,
-        "riskPct": 19.68,
-        "rrT1": 0.68,
-        "rrT2": 1.05
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:OCDI",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 27.32,
-        "hourlyMa100": 28.73530000000001,
-        "hourlyMa100Hit": false,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:OCDI",
-          "identityOk": true,
-          "closeDaily": 27.32,
-          "close60": 27.32,
-          "hourlyMa100": 28.73530000000001,
-          "volume60": 170225,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 92098915.96504,
-            "epsTtm": 0.062140259999999996,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 92098915.96504,
-          "epsTtm": 0.062140259999999996,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 24.9066,
-        "fib786": 21.6273,
-        "inFib": false,
-        "anchoredVwap": 26.9403,
-        "vwapHit": true,
-        "dailyMa50": 30.7488,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 27.5,
-        "supportHit": true,
-        "correctionPct": 25.59,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.31,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "missingConditions": [
-        "PROFITABILITY_EVIDENCE_REQUIRED",
-        "VOLUME_CONFIRMATION_REQUIRED",
-        "HOURLY_MA100_NOT_ALIGNED",
-        "RISK_GT_8_OR_INVALID",
-        "RR_T2_LT_2"
-      ],
-      "signalRule": "ENTRY_READY_IS_RESEARCH_SIGNAL_NOT_AUTOMATIC_ORDER"
-    },
-    {
-      "ticker": "RMDA",
-      "session": "2026-10-07",
-      "state": "FUNDAMENTALS_PENDING",
-      "score": 38,
-      "dailyScore": 38,
-      "researchSignal": false,
-      "executionAllowed": false,
-      "entryLow": 5.3012,
-      "entryHigh": 5.41,
-      "structuralStop": 4.5762,
-      "targets": {
-        "t1": 5.8428,
-        "t2": 6.2215,
-        "t3": 6.6002,
-        "t4": 7.033
-      },
-      "risk": {
-        "entryMid": 5.3556,
-        "riskPct": 14.55,
-        "rrT1": 0.63,
-        "rrT2": 1.11
-      },
-      "hourly": {
-        "available": true,
-        "status": "READY",
-        "source": "TRADINGVIEW_SCANNER_60M",
-        "intervalUsed": "60m",
-        "symbol": "EGX:RMDA",
-        "identityOk": true,
-        "currencyOk": true,
-        "sessionAligned": true,
-        "sessionAlignmentMethod": "CURRENT_CLOSE_CORROBORATION",
-        "latestBarSession": "2026-10-07",
-        "latestBarClose": 5.41,
-        "hourlyMa100": 5.803299999999999,
-        "hourlyMa100Hit": false,
-        "barsUsed": null,
-        "tradingView": {
-          "available": true,
-          "status": "READY",
-          "source": "TRADINGVIEW_SCANNER_60M",
-          "symbol": "EGX:RMDA",
-          "identityOk": true,
-          "closeDaily": 5.41,
-          "close60": 5.41,
-          "hourlyMa100": 5.803299999999999,
-          "volume60": 415513,
-          "fundamentals": {
-            "source": "TRADINGVIEW_SCANNER",
-            "netIncomeFy": 5522718.17032,
-            "epsTtm": 0.0033795299999999995,
-            "currency": "USD",
-            "secondaryProfitable": false
-          }
-        }
-      },
-      "fundamentalEvidence": {
-        "qualified": false,
-        "tier": "MISSING_OR_NON_POSITIVE",
-        "official": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        },
-        "secondary": {
-          "source": "TRADINGVIEW_SCANNER",
-          "netIncomeFy": 5522718.17032,
-          "epsTtm": 0.0033795299999999995,
-          "currency": "USD",
-          "secondaryProfitable": false
-        }
-      },
-      "dailyConfluence": {
-        "fib618": 5.3012,
-        "fib786": 4.7333,
-        "inFib": false,
-        "anchoredVwap": 5.4291,
-        "vwapHit": true,
-        "dailyMa50": 6.0064,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.28,
-        "supportHit": true,
-        "correctionPct": 26.79,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
-        },
-        "volumeRatio": 0.44,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -6144,7 +6249,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6162,7 +6268,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6259,7 +6366,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6277,7 +6385,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6374,7 +6483,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6392,7 +6502,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6489,7 +6600,8 @@
             "netIncomeFy": 14979928.969519999,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6507,7 +6619,8 @@
           "netIncomeFy": 14979928.969519999,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6602,7 +6715,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6620,7 +6734,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6717,7 +6832,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6735,7 +6851,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {
@@ -6832,7 +6949,8 @@
             "netIncomeFy": 0,
             "epsTtm": 0,
             "currency": "USD",
-            "secondaryProfitable": false
+            "secondaryProfitable": false,
+            "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
           }
         }
       },
@@ -6850,7 +6968,8 @@
           "netIncomeFy": 0,
           "epsTtm": 0,
           "currency": "USD",
-          "secondaryProfitable": false
+          "secondaryProfitable": false,
+          "currencyNormalizationNote": "PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN"
         }
       },
       "dailyConfluence": {

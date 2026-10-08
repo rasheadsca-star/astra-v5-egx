@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-engine-comparison/v1",
-  "generatedAt": "2026-10-08T22:20:31.058Z",
+  "generatedAt": "2026-10-08T22:22:00.805Z",
   "session": "2026-10-07",
   "engines": {
     "v2": {
@@ -400,9 +400,23 @@
       "id": "Confluence Pullback V2",
       "engine": "CONFLUENCE_PULLBACK_V2",
       "session": "2026-10-07",
-      "rows": [],
+      "rows": [
+        {
+          "ticker": "FWRY",
+          "rank": 1,
+          "tier": "ENTRY_READY",
+          "entryLow": 18.4326,
+          "entryHigh": 19.08,
+          "stop": 17.2899,
+          "target1": 20.6064,
+          "target2": 21.942,
+          "score": 70,
+          "state": "ENTRY_READY_SECONDARY",
+          "returnPct": null
+        }
+      ],
       "metrics": {
-        "recommendations": 0,
+        "recommendations": 1,
         "resolved": 0,
         "wins": 0,
         "losses": 0,
@@ -459,7 +473,7 @@
       "engine": "CONFLUENCE_PULLBACK_V2",
       "mode": "ENTRY_READY_RESEARCH_SIGNAL_ONLY",
       "session": "2026-10-07",
-      "entryReady": 0
+      "entryReady": 1
     }
   },
   "safety": {
