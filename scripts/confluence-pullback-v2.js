@@ -74,7 +74,8 @@ async function tradingViewSnapshot(ticker){
         netIncomeFy:Number.isFinite(netIncome)?netIncome:null,
         epsTtm:Number.isFinite(eps)?eps:null,
         currency,
-        secondaryProfitable:Number.isFinite(netIncome)&&netIncome>0&&Number.isFinite(eps)&&eps>0&&(currency==null||currency==='EGP')
+        secondaryProfitable:Number.isFinite(netIncome)&&netIncome>0&&Number.isFinite(eps)&&eps>0,
+        currencyNormalizationNote:'PROFIT_SIGN_ONLY_CURRENCY_CONVERSION_DOES_NOT_CHANGE_SIGN'
       }
     };
   }catch(e){
