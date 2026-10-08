@@ -99,8 +99,28 @@ function aggregateToHourly(bars){
   }
   return [...buckets.values()].sort((a,b)=>a.ts-b.ts);
 }
-async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice){
-  if(!yahooSymbol)return {available:false,status:'YAHOO_SYMBOL_MISSING'};
+async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice,tv){
+  if(tv?.available&&tv?.identityOk){
+    const closeCorroborated=near(Number(tv.close60),Number(currentPrice),3);
+    return {
+      available:true,
+      status:'READY',
+      source:'TRADINGVIEW_SCANNER_60M',
+      intervalUsed:'60m',
+      symbol:tv.symbol,
+      identityOk:true,
+      currencyOk:true,
+      sessionAligned:closeCorroborated,
+      sessionAlignmentMethod:'CURRENT_CLOSE_CORROBORATION',
+      latestBarSession:session,
+      latestBarClose:Number(tv.close60),
+      hourlyMa100:Number(tv.hourlyMa100),
+      hourlyMa100Hit:near(Number(tv.close60),Number(tv.hourlyMa100),HOURLY_TOL_PCT),
+      barsUsed:null,
+      tradingView:tv
+    };
+  }
+  if(!yahooSymbol)return {available:false,status:'YAHOO_SYMBOL_MISSING',tradingView:tv||null};
   try{
     let interval='1h';
     let raw=extractBars(await fetchJson('https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(yahooSymbol)+'?range=60d&interval=1h&includePrePost=false&events=history'));
@@ -135,7 +155,8 @@ async function hourlyEvidence(ticker,yahooSymbol,session,currentPrice){
       latestBarClose:+latest.close.toFixed(4),
       hourlyMa100:ma100?+ma100.toFixed(4):null,
       hourlyMa100Hit:ma100Hit,
-      barsUsed:last100.length
+      barsUsed:last100.length,
+      tradingView:tv||null
     };
   }catch(e){
     return {available:false,status:'FETCH_FAILED',error:String(e.message||e)};
