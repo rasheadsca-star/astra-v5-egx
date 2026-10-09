@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.8 Decision Cockpit</title>
+<title>ASTRA V6.9 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.8 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.9 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.8 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.9 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.8 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.9 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -539,10 +539,10 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 <div class="card">
   <div class="v52-header">
     <div>
-      <h2 style="margin:0">Final Decision Score — V5.6</h2>
-      <div class="small">Technical + Entry Quality + Context + R:R + Risk + Evidence + Forward Evidence. Research ranking only.</div>
+      <h2 style="margin:0">Final Decision Score — V6.9</h2>
+      <div class="small">Missing-aware weighted ranking. No neutral 50 imputation and no global forward-evidence boost. ±20% weight sensitivity is audited.</div>
     </div>
-    <span class="badge ready">V5.6</span>
+    <span class="badge ready">V6.9</span>
   </div>
   <div class="grid" style="margin-top:14px">
     <div class="metric"><div class="label">A+</div><div class="value grade-aplus" id="fdAPlus">-</div></div>
@@ -550,7 +550,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
     <div class="metric"><div class="label">B</div><div class="value grade-b" id="fdB">-</div></div>
     <div class="metric"><div class="label">C</div><div class="value grade-c" id="fdC">-</div></div>
     <div class="metric"><div class="label">REJECT</div><div class="value grade-reject" id="fdReject">-</div></div>
-    <div class="metric"><div class="label">Forward Evidence</div><div class="value" id="fdForward">-</div></div>
+    <div class="metric"><div class="label">Avg Score Coverage</div><div class="value" id="fdCoverage">-</div></div>
   </div>
 </div>
 
@@ -613,7 +613,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.8 Decision Cockpit":"لوحة قرارات ASTRA V6.8",
+    "ASTRA V6.9 Decision Cockpit":"لوحة قرارات ASTRA V6.9",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -627,7 +627,7 @@ const I18N={
     "Entry Opportunities — ASTRA Native":"فرص الدخول — ASTRA الأصلي","Signal":"الإشارة","Entry":"الدخول","Target 3":"الهدف 3","Paper":"ورقي",
     "Decision Gate — V5.7":"بوابة القرار — V5.7","Eligible":"مؤهل","Blocked":"محجوب","Min R:R":"الحد الأدنى R:R",
     "Min Final Score":"الحد الأدنى للدرجة النهائية","Fresh Data":"بيانات حديثة","Auto Orders":"الأوامر الآلية",
-    "Final Decision Score — V5.6":"الدرجة النهائية للقرار — V5.6","Forward Evidence":"الدليل المستقبلي",
+    "Final Decision Score — V6.9":"الدرجة النهائية للقرار — V6.9","Avg Score Coverage":"متوسط اكتمال الدرجة",
     "Market & Sector Context — V5.5":"سياق السوق والقطاع — V5.5","Market Score":"درجة السوق","Adv / Dec":"صاعد / هابط",
     "Median Change":"التغير الوسيط","Sector Context":"سياق القطاع","Context Version":"إصدار السياق",
     "Prospective Evidence — V5.3":"الدليل المستقبلي — V5.3","Recorded":"مسجل","Open":"مفتوح","Resolved":"محسوم",
@@ -684,13 +684,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.8':'ASTRA V6.8 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.9':'ASTRA V6.9 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.8 TRUST UI</b> · '+(uiLang==='ar'
+  if(releaseText) releaseText.innerHTML='<b>V6.9 TRUST UI</b> · '+(uiLang==='ar'
     ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.8 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.9 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();
@@ -1022,13 +1022,13 @@ async function loadV52(){
     document.getElementById('gateFresh').innerText=d.dataHealth?.stale===false?t('PASS'):t('FAIL');
     const gel=(dg.eligible||[]).slice(0,8);
     document.getElementById('gateList').innerHTML=gel.length?'<b>'+esc(t('Eligible:'))+'</b> '+gel.map(x=>esc(x.ticker)+' ('+esc(x.grade)+' / '+esc(x.score)+')').join(' · '):'<span class="gate-block">'+esc(t('No setup currently passes every mandatory gate.'))+'</span>';
-    const fd=d.finalDecisionEngine||{}, gc=fd.gradeCounts||{}, fe=fd.forwardEvidence||{};
+    const fd=d.finalDecisionEngine||{}, gc=fd.gradeCounts||{};
     document.getElementById('fdAPlus').innerText=gc['A+']??0;
     document.getElementById('fdA').innerText=gc['A']??0;
     document.getElementById('fdB').innerText=gc['B']??0;
     document.getElementById('fdC').innerText=gc['C']??0;
     document.getElementById('fdReject').innerText=gc['REJECT']??0;
-    document.getElementById('fdForward').innerText=fe.maturity==='ACTIVE'?(String(fe.score??'-')+'/100'):t('NEUTRAL');
+    document.getElementById('fdCoverage').innerText=fd.completeness?.averageCoveragePct!=null?fd.completeness.averageCoveragePct+'%':'-';
     const ctx=d.marketSectorContextEngine||{}, cm=ctx.market||{}, cs=ctx.sector||{};
     document.getElementById('ctxMarketScore').innerText=cm.score!=null?cm.score+'/100':'-';
     document.getElementById('ctxBreadth').innerText=cm.breadthPct!=null?cm.breadthPct+'%':'-';
@@ -1418,7 +1418,9 @@ async function loadV52(){
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
-          '<div><span class="v52-k">Final Score</span><div class="v52-v">'+esc(x.finalDecisionScore??'-')+'/100</div></div>'+
+          '<div><span class="v52-k">Final Score</span><div class="v52-v">'+esc(x.finalDecisionScore??'-')+'/100</div></div>'+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'اكتمال الدرجة':'Score Coverage')+'</span><div class="v52-v">'+esc(x.finalDecisionCompleteness?.coveragePct!=null?x.finalDecisionCompleteness.coveragePct+'%':'-')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'حساسية الأوزان':'Weight Sensitivity')+'</span><div class="v52-v">'+esc(x.finalDecisionSensitivity?.status||'-')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'اتساع عائلات المحركات':'Engine Family Breadth')+'</span><div class="v52-v">'+esc(x.familyBreadthCount??x.agreementCount??0)+'</div></div>'+
           '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'احتمال T1 مُعتمد':'تقدير T1'):(x.targetAchievement?.calibrated?'T1 Validated Prob.':'T1 Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.t1ProbabilityPct??x.targetAchievement?.t1EstimatePct)!=null?(x.targetAchievement?.t1ProbabilityPct??x.targetAchievement?.t1EstimatePct)+'%':'—')+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'احتمال T2 مُعتمد':'تقدير T2'):(x.targetAchievement?.calibrated?'T2 Validated Prob.':'T2 Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.t2ProbabilityPct??x.targetAchievement?.t2EstimatePct)!=null?(x.targetAchievement?.t2ProbabilityPct??x.targetAchievement?.t2EstimatePct)+'%':'—')+'</div></div>'+
