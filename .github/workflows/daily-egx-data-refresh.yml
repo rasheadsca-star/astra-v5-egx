@@ -106,6 +106,16 @@ jobs:
             echo "persist_needed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Determine same-session rebuild need
+        id: rebuild
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "rebuild_needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "rebuild_needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Refresh canonical market and history stores
         if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
         run: npm run data:refresh
@@ -162,25 +172,25 @@ jobs:
         run: node scripts/build-engine-comparison.js
 
       - name: Build canonical decision cockpit and persistent evidence
-        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         run: npm run cockpit:build
 
       - name: Verify persistent ledgers
-        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         run: npm run ledger:verify
 
       - name: Write operations summary
-        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         run: node scripts/operations-health-engine.js --summary >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit all canonical production outputs once
-        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         shell: bash
         run: |
           git config user.name "astra-production-bot"
           git config user.email "astra-production-bot@users.noreply.github.com"
 
-          git add -A             data/canonical-market.json data/history-index.json             data/quant data/comparison data/confluence data/confluence-v2 quant/data             data/decision-cockpit.json data/prospective-evidence.json data/evidence-event-ledger.json             data/daily-decision-brief-history.json data/prediction-ledger.json data/replay             data/walk-forward-validation.json data/model-governance.json             docs/index.html docs/v2.html docs/v5.html docs/v5             docs/data/decision-cockpit.json docs/data/prospective-evidence.json docs/data/evidence-event-ledger.json             docs/data/daily-decision-brief-history.json docs/data/prediction-ledger.json docs/data/replay             docs/data/walk-forward-validation.json docs/data/model-governance.json docs/data/source-health.json docs/data/operations-health.json
+          git add -A             data/canonical-market.json data/history-index.json             data/quant data/comparison data/confluence data/confluence-v2 quant/data             data/decision-cockpit.json data/prospective-evidence.json data/evidence-event-ledger.json             data/daily-decision-brief-history.json data/prediction-ledger.json data/replay             data/walk-forward-validation.json data/model-governance.json data/source-health.json data/operations-health.json             docs/index.html docs/v2.html docs/v5.html docs/v5             docs/data/decision-cockpit.json docs/data/prospective-evidence.json docs/data/evidence-event-ledger.json             docs/data/daily-decision-brief-history.json docs/data/prediction-ledger.json docs/data/replay             docs/data/walk-forward-validation.json docs/data/model-governance.json docs/data/source-health.json docs/data/operations-health.json
 
           # Technical JSON is reproducible build output and intentionally not committed.
           git reset -- data/technical docs/data/technical 2>/dev/null || true

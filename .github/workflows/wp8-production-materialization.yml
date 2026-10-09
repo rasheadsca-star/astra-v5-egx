@@ -1,0 +1,53 @@
+name: WP8 Production Materialization Gate
+
+on:
+  push:
+    branches:
+      - wp8-production-materialization-hotfix
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+      - name: Test suites
+        run: |
+          npm test
+          npm run quant:test
+      - name: Full same-session build
+        run: npm run build
+      - name: Verify materialized health outputs
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const must=[
+            'data/source-health.json',
+            'docs/data/source-health.json',
+            'data/operations-health.json',
+            'docs/data/operations-health.json'
+          ];
+          for(const p of must){
+            if(!fs.existsSync(p))throw new Error('missing '+p);
+            JSON.parse(fs.readFileSync(p,'utf8'));
+          }
+          const d=JSON.parse(fs.readFileSync('data/decision-cockpit.json','utf8'));
+          if(!d.sourceHealthEngine)throw new Error('sourceHealthEngine not embedded');
+          if(!d.operationsHealthEngine)throw new Error('operationsHealthEngine not embedded');
+          if(d?.safety?.researchOnly!==true||d?.safety?.executionAllowed!==false||d?.safety?.automaticOrders!==false)
+            throw new Error('execution safety changed');
+          console.log({session:d.session,sourceHealth:true,operationsHealth:true,automaticOrders:false});
+          NODE
+      - name: Ownership validation
+        run: npm run output:ownership:validate
