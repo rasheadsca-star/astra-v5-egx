@@ -4,6 +4,7 @@
 const assert = require('assert');
 const http = require('http');
 const { createServer, resolveApi } = require('./serve-local');
+const pkg = require('../package.json');
 
 function get(port, p) {
   return new Promise((resolve, reject) => {
@@ -24,7 +25,7 @@ function get(port, p) {
   const port = server.address().port;
   try {
     const home = await get(port, '/');
-    assert.strictEqual(home.code, 200); assert.match(home.type, /text\/html/); assert.ok(home.body.includes('ASTRA V5 Command Center'));
+    assert.strictEqual(home.code, 200); assert.match(home.type, /text\/html/); assert.ok(home.body.includes(`ASTRA V${pkg.version} Decision Cockpit`));
     const q = await get(port, '/api/quant');
     assert.strictEqual(q.code, 200); assert.match(q.type, /application\/json/);
     const body = JSON.parse(q.body);
