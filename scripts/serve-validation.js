@@ -27,6 +27,14 @@ function get(port, p) {
   try {
     const home = await get(port, '/');
     assert.strictEqual(home.code, 200); assert.match(home.type, /text\/html/); assert.ok(home.body.includes(`ASTRA V${displayVersion} Decision Cockpit`));
+    const techIndex = await get(port, '/data/technical/index.json');
+    assert.strictEqual(techIndex.code, 200); assert.match(techIndex.type, /application\/json/);
+    const techMeta=JSON.parse(techIndex.body);
+    assert.ok(Array.isArray(techMeta.symbols)&&techMeta.symbols.length>0);
+    const sampleTicker=techMeta.symbols[0].ticker;
+    const stock = await get(port, '/api/stock-analysis?symbol='+encodeURIComponent(sampleTicker));
+    assert.strictEqual(stock.code, 200); assert.match(stock.type, /application\/json/);
+    const stockBody=JSON.parse(stock.body); assert.strictEqual(stockBody.ticker,sampleTicker); assert.ok(Array.isArray(stockBody.bars));
     const q = await get(port, '/api/quant');
     assert.strictEqual(q.code, 200); assert.match(q.type, /application\/json/);
     const body = JSON.parse(q.body);
