@@ -3,6 +3,7 @@
 const fs=require('fs'), path=require('path');
 const OUT='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
+const ENGINE_REGISTRY='config/engine-family-registry.json';
 
 function read(p){return JSON.parse(fs.readFileSync(p,'utf8'))}
 function write(p,v){fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n')}
@@ -60,6 +61,8 @@ function stageFor(x){
 }
 
 const cmp=read('docs/data/engine-comparison.json');
+const engineRegistry=read(ENGINE_REGISTRY);
+const registeredFamilies=new Set((engineRegistry.families||[]).map(x=>x.id));
 const sig=read('docs/data/signals.json');
 const cf1=read('docs/data/confluence-signals.json');
 const cf2=read('docs/data/confluence-v2-signals.json');
@@ -155,8 +158,12 @@ for(const x of map.values()){
     x.warnings=uniq([...currentC2Warnings,...operationalWarnings]);
   }
   const quality=Math.max(0,...x.rawScores.filter(Number.isFinite));
-  const agreementCount=x.families.length;
-  const consensusBonus=Math.max(0,(agreementCount-1)*6);
+  const familyBreadthCount=x.families.length;
+  for(const family of x.families){
+    if(!registeredFamilies.has(family))throw new Error('UNREGISTERED_ENGINE_FAMILY:'+family);
+  }
+  const agreementCount=familyBreadthCount; // compatibility alias; counts declared families, not engine labels.
+  const familyBreadthBonus=Math.max(0,(familyBreadthCount-1)*4);
   let readinessBonus=0;
   const c2state=x.engines.confluenceV2?.state;
   if(c2state==='ENTRY_READY')readinessBonus=8;
@@ -169,7 +176,7 @@ for(const x of map.values()){
   if(Number.isFinite(rp)&&rp>8)riskPenalty-=8;
   if(Number.isFinite(rr2)&&rr2<2)riskPenalty-=6;
   if(x.liquidity?.tier==='منخفضة')riskPenalty-=5;
-  const conviction=clamp(Math.round(quality+consensusBonus+readinessBonus+regimeAdj+riskPenalty));
+  const conviction=clamp(Math.round(quality+familyBreadthBonus+readinessBonus+regimeAdj+riskPenalty));
   const entryMid=mid(x.entryLow,x.entryHigh);
   const riskPct=Number.isFinite(rp)?rp:(entryMid&&Number.isFinite(Number(x.stop))?+(((entryMid-Number(x.stop))/entryMid)*100).toFixed(2):null);
   const rrT2=Number.isFinite(rr2)?rr2:rr(entryMid,x.stop,x.target2);
@@ -180,7 +187,9 @@ for(const x of map.values()){
     conviction,
     qualityScore:+quality.toFixed(1),
     agreementCount,
+    familyBreadthCount,
     engineFamilies:x.families,
+    engineFamilyBreadthBonus:familyBreadthBonus,
     engineAgreement:{
       quant:!!x.engines.quant,
       v4:!!x.engines.v4,
@@ -231,8 +240,14 @@ const payload={
     regimeAdjustment:regimeAdj
   },
   methodology:{
-    note:'V2.1 and V5 are treated as one NEXT_QUANT family when they are not independent. Conviction is a transparent ranking score, not a probability of profit.',
-    formula:'max(source quality) + 6 per additional independent engine family + readiness bonus + market regime adjustment - risk/liquidity penalties',
+    note:'Engine agreement is counted by declared family, never raw engine labels. V2.1 and V5 count once as NEXT_QUANT; Confluence V1/V2 count once as CONFLUENCE. Family breadth is descriptive and does not claim statistical independence. Conviction is a ranking score, not a probability.',
+    formula:'max(source quality) + 4 per additional declared engine family + readiness bonus + market regime adjustment - risk/liquidity penalties',
+    engineFamilyPolicy:{
+      version:engineRegistry.policyVersion,
+      countingRule:engineRegistry.countingRule,
+      statisticalIndependenceClaim:false,
+      families:(engineRegistry.families||[]).map(x=>({id:x.id,members:x.members,maxAgreementVotes:x.maxAgreementVotes,relationship:x.relationship}))
+    },
     stages:['ENTRY_READY','ENTRY_READY_SECONDARY','WAITING_FOR_TRIGGER','NEAR_ENTRY','WAITING_FOR_ENTRY','WATCHLIST','REJECTED_RISK','REJECTED']
   },
   counts:{
