@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASTRA V6.11 Live Acceptance</title>
+<style>
+body{font-family:Arial,sans-serif;background:#07101c;color:#eef6ff;margin:0;padding:24px}main{max-width:1000px;margin:auto}
+.card{background:#101c2c;border:1px solid #273b54;border-radius:14px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{background:#0b1624;border-radius:10px;padding:12px}.k{font-size:11px;color:#91a6bc;text-transform:uppercase}.v{font-size:20px;font-weight:800;margin-top:7px}.pass{color:#4ade80}.warn{color:#facc15}.fail{color:#f87171}.muted{color:#91a6bc}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #26384e;text-align:left;font-size:13px}a{color:#7dd3fc}@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}body{padding:12px}}
+</style>
+</head>
+<body><main>
+<h1>ASTRA V6.11 · Live Acceptance</h1>
+<p class="muted">Two real forward sessions are required. Research only · Automatic execution OFF.</p>
+<div class="card"><div id="status" class="v warn">Loading...</div><div id="note" class="muted" style="margin-top:8px"></div></div>
+<div class="grid">
+<div class="metric"><div class="k">Baseline</div><div class="v" id="baseline">-</div></div>
+<div class="metric"><div class="k">Accepted</div><div class="v" id="accepted">-</div></div>
+<div class="metric"><div class="k">Remaining</div><div class="v" id="remaining">-</div></div>
+<div class="metric"><div class="k">Current session</div><div class="v" id="current">-</div></div>
+</div>
+<div class="card"><h2>Session acceptance</h2><div id="sessions" class="muted">No post-freeze sessions yet.</div></div>
+<div class="card"><h2>Integrity</h2><div id="global"></div><div id="issues" style="margin-top:12px"></div></div>
+<p class="muted"><a href="/">Decision Cockpit</a> · <a href="/recommendations">Recommendations</a> · <a href="/health">Operations Health</a></p>
+</main>
+<script>
+function e(id){return document.getElementById(id)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function load(){
+  let r=await fetch('/docs/data/live-acceptance.json',{cache:'no-store'});
+  if(!r.ok)r=await fetch('/data/live-acceptance.json',{cache:'no-store'});
+  if(!r.ok)throw new Error('acceptance report unavailable');
+  const d=await r.json();
+  const cls=d.status==='ACCEPTANCE_COMPLETE'?'pass':d.status==='ACCEPTANCE_FAILED'?'fail':'warn';
+  e('status').className='v '+cls;e('status').textContent=d.status;
+  e('note').textContent=d.note||'';
+  e('baseline').textContent=d.baselineSession||'-';
+  e('accepted').textContent=(d.acceptedSessions||[]).length+'/'+d.requiredDistinctSessions;
+  e('remaining').textContent=d.remainingSessions;
+  e('current').textContent=d.currentSession||'-';
+  e('global').innerHTML='<table><tbody>'+
+    '<tr><td>Prediction chain</td><td>'+esc(d.global?.predictionChain)+'</td></tr>'+
+    '<tr><td>Event chain</td><td>'+esc(d.global?.eventChain)+'</td></tr>'+
+    '<tr><td>Replay ledger chain</td><td>'+esc(d.global?.replayLedgerChain)+'</td></tr>'+
+    '<tr><td>Safety</td><td>'+(d.global?.currentSafetyOk?'PASS':'FAIL')+'</td></tr>'+
+    '<tr><td>Atomic handoff</td><td>'+(d.global?.currentAtomicHandoff?'PASS':'FAIL')+'</td></tr>'+
+    '</tbody></table>';
+  const rows=(d.sessionReports||[]).map(s=>'<tr><td>'+esc(s.session)+'</td><td class="'+(s.passed?'pass':'fail')+'">'+(s.passed?'PASS':'FAIL')+'</td><td>'+esc(s.captureTiming)+'</td><td>'+s.evidenceCaptureEvents+'</td><td>'+s.prospectiveEvidenceRecords+'</td></tr>').join('');
+  e('sessions').innerHTML=rows?'<table><thead><tr><th>Session</th><th>Result</th><th>Timing</th><th>Events</th><th>Evidence</th></tr></thead><tbody>'+rows+'</tbody></table>':'No post-freeze sessions yet.';
+  const issues=d.issues||[];
+  e('issues').innerHTML=issues.length?'<h3 class="fail">Issues</h3><ul>'+issues.map(x=>'<li><code>'+esc(x.code)+'</code> · '+esc(x.scope)+' · '+esc(x.detail)+'</li>').join('')+'</ul>':'<span class="pass">No acceptance integrity findings.</span>';
+}
+load().catch(err=>{e('status').className='v fail';e('status').textContent='REPORT UNAVAILABLE';e('note').textContent=err.message});
+setInterval(load,60000);
+</script></body></html>

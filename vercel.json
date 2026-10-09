@@ -19,6 +19,14 @@
     {
       "source": "/health/",
       "destination": "/docs/health.html"
+    },
+    {
+      "source": "/acceptance",
+      "destination": "/docs/acceptance.html"
+    },
+    {
+      "source": "/acceptance/",
+      "destination": "/docs/acceptance.html"
     }
   ],
   "headers": [
@@ -159,6 +167,51 @@
     },
     {
       "source": "/docs/data/operations-health.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/acceptance",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/acceptance/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/docs/acceptance.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/data/live-acceptance.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/docs/data/live-acceptance.json",
       "headers": [
         {
           "key": "Cache-Control",

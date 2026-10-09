@@ -48,6 +48,11 @@ on:
       - 'scripts/source-health-engine.js'
       - 'scripts/source-health-validation.js'
       - 'scripts/lib/source-health.js'
+      - 'config/release-freeze.json'
+      - 'scripts/lib/live-acceptance.js'
+      - 'scripts/live-acceptance-engine.js'
+      - 'scripts/live-acceptance-validation.js'
+      - 'scripts/release-freeze-validation.js'
 
 concurrency:
   group: astra-state-writer
@@ -179,6 +184,10 @@ jobs:
         if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         run: npm run ledger:verify
 
+      - name: Write live acceptance summary
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
+        run: node scripts/live-acceptance-engine.js --summary >> "$GITHUB_STEP_SUMMARY"
+
       - name: Write operations summary
         if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true' || steps.rebuild.outputs.rebuild_needed == 'true'
         run: node scripts/operations-health-engine.js --summary >> "$GITHUB_STEP_SUMMARY"
@@ -190,7 +199,7 @@ jobs:
           git config user.name "astra-production-bot"
           git config user.email "astra-production-bot@users.noreply.github.com"
 
-          git add -A             data/canonical-market.json data/history-index.json             data/quant data/comparison data/confluence data/confluence-v2 quant/data             data/decision-cockpit.json data/prospective-evidence.json data/evidence-event-ledger.json             data/daily-decision-brief-history.json data/prediction-ledger.json data/replay             data/walk-forward-validation.json data/model-governance.json data/source-health.json data/operations-health.json             docs/index.html docs/v2.html docs/v5.html docs/v5             docs/data/decision-cockpit.json docs/data/prospective-evidence.json docs/data/evidence-event-ledger.json             docs/data/daily-decision-brief-history.json docs/data/prediction-ledger.json docs/data/replay             docs/data/walk-forward-validation.json docs/data/model-governance.json docs/data/source-health.json docs/data/operations-health.json
+          git add -A             data/canonical-market.json data/history-index.json             data/quant data/comparison data/confluence data/confluence-v2 quant/data             data/decision-cockpit.json data/prospective-evidence.json data/evidence-event-ledger.json             data/daily-decision-brief-history.json data/prediction-ledger.json data/replay             data/walk-forward-validation.json data/model-governance.json data/source-health.json data/operations-health.json data/live-acceptance.json             docs/index.html docs/v2.html docs/v5.html docs/v5             docs/data/decision-cockpit.json docs/data/prospective-evidence.json docs/data/evidence-event-ledger.json             docs/data/daily-decision-brief-history.json docs/data/prediction-ledger.json docs/data/replay             docs/data/walk-forward-validation.json docs/data/model-governance.json docs/data/source-health.json docs/data/operations-health.json docs/data/live-acceptance.json
 
           # Technical JSON is reproducible build output and intentionally not committed.
           git reset -- data/technical docs/data/technical 2>/dev/null || true
