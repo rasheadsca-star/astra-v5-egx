@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {stableEvidenceKey,dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
 const IN='data/decision-cockpit.json';
 const OUT='data/prospective-evidence.json';
 const DOC='docs/data/prospective-evidence.json';
@@ -13,13 +14,22 @@ const cockpit=read(IN,null);
 if(!cockpit) throw new Error('decision cockpit missing');
 
 const prior=read(OUT,{schemaVersion:'astra-prospective-evidence/v1',records:[]});
+const dedupe=dedupeEvidenceRecords(prior.records||[]);
 const map=new Map((prior.records||[]).map(r=>[r.id,r]));
+const stableKeys=new Set(dedupe.primary.map(stableEvidenceKey));
+for(const dup of dedupe.duplicates){
+  dup.record.excludedFromAnalytics=true;
+  dup.record.duplicateOf=dup.primary.id;
+}
 
 for(const x of [...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[]),...(cockpit.rejected||[])]){
-  const id=[cockpit.session,x.ticker,x.stage].join('|');
-  if(map.has(id)) continue;
+  const stableKey=[cockpit.session,x.ticker].join('|');
+  if(stableKeys.has(stableKey)) continue;
+  const id=stableKey;
+  stableKeys.add(stableKey);
   map.set(id,{
     id,
+    evidenceKeyVersion:'session+ticker/v2',
     capturedAt:cockpit.generatedAt,
     session:cockpit.session,
     ticker:x.ticker,
