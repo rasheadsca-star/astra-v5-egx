@@ -1,0 +1,63 @@
+name: WP7 Code Quality Gate
+
+on:
+  push:
+    branches:
+      - wp7-code-quality
+    paths:
+      - 'scripts/lib/technical-indicators.js'
+      - 'scripts/build-technical-analysis.js'
+      - 'app/api/stock-analysis.js'
+      - 'config/node-validation-suite.json'
+      - 'scripts/run-node-validation-suite.js'
+      - 'scripts/technical-indicators-validation.js'
+      - 'scripts/static-quality-validation.js'
+      - 'tests/egx-connector-pipeline.test.js'
+      - 'scripts/build-check.js'
+      - '.gitignore'
+      - 'package.json'
+      - 'app/dashboard/command-center.html'
+      - 'docs/CODE-QUALITY.md'
+      - '.github/workflows/wp7-code-quality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp7-code-quality-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+
+      - name: Consolidated Node suite
+        run: npm test
+
+      - name: Python quant + compile gate
+        run: npm run quant:test
+
+      - name: Full build
+        run: npm run build
+
+      - name: Generated-output cleanliness policy
+        run: |
+          git status --short
+          if git ls-files data/technical docs/data/technical | grep -q .; then
+            echo "Tracked technical build artifacts found"
+            exit 1
+          fi
+
+      - name: Ten-cycle release audit
+        run: npm run release:audit
