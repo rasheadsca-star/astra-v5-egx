@@ -88,7 +88,8 @@ jobs:
           git config user.name "astra-quant-bot"; git config user.email "astra-quant-bot@users.noreply.github.com"
           git add -A data/quant data/comparison data/confluence data/confluence-v2 quant/data docs
           # Daily EGX Data Refresh is the sole owner of cockpit/trust/forward ledgers.
-          git reset -- data/decision-cockpit.json docs/data/decision-cockpit.json             data/prospective-evidence.json docs/data/prospective-evidence.json             data/evidence-event-ledger.json docs/data/evidence-event-ledger.json             data/prediction-ledger.json docs/data/prediction-ledger.json             data/replay docs/data/replay             data/walk-forward-validation.json docs/data/walk-forward-validation.json             data/model-governance.json docs/data/model-governance.json             data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json >/dev/null 2>&1 || true
+          AUTHORITATIVE_STATE="data/decision-cockpit.json docs/data/decision-cockpit.json data/prospective-evidence.json docs/data/prospective-evidence.json data/evidence-event-ledger.json docs/data/evidence-event-ledger.json data/prediction-ledger.json docs/data/prediction-ledger.json data/replay docs/data/replay data/walk-forward-validation.json docs/data/walk-forward-validation.json data/model-governance.json docs/data/model-governance.json data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json"
+          git restore --source=HEAD --staged --worktree -- $AUTHORITATIVE_STATE >/dev/null 2>&1 || true
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           S=$(python -c "import json;print(json.load(open('data/quant/signals.json'))['session'])")
           git commit -m "Quant lane: session $S"
