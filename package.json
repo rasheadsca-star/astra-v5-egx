@@ -1,6 +1,6 @@
 {
   "name": "ras-egx-astra-v5",
-  "version": "6.10.0",
+  "version": "6.11.0",
   "private": true,
   "scripts": {
     "build": "node scripts/build-check.js && npm run cockpit:build",
@@ -15,7 +15,7 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/walk-forward-validation.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/risk-state-override-engine.js && node scripts/capture-prospective-evidence.js && node scripts/persistent-evidence-ledger.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/source-health-engine.js && node scripts/archive-trust-snapshot.js && node scripts/model-governance-engine.js && node scripts/verify-persistent-ledgers.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/walk-forward-validation.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/risk-state-override-engine.js && node scripts/capture-prospective-evidence.js && node scripts/persistent-evidence-ledger.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/source-health-engine.js && node scripts/archive-trust-snapshot.js && node scripts/model-governance-engine.js && node scripts/verify-persistent-ledgers.js && node scripts/operations-health-engine.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js",
     "evidence:resolve": "node scripts/resolve-prospective-outcomes.js",
     "entry:quality": "node scripts/entry-quality-engine.js",
@@ -48,7 +48,9 @@
     "final-score:validate": "node scripts/final-score-validation.js",
     "quality:static": "node scripts/static-quality-validation.js",
     "quality:technical": "node scripts/technical-indicators-validation.js",
-    "quality:node-suite": "node scripts/run-node-validation-suite.js"
+    "quality:node-suite": "node scripts/run-node-validation-suite.js",
+    "ops:health": "node scripts/operations-health-engine.js",
+    "ops:validate": "node scripts/operations-health-validation.js"
   },
   "engines": {
     "node": ">=20"
