@@ -1304,8 +1304,8 @@ async function loadV52(){
     const pc=d.probabilityCalibrationEngine||{};
     document.getElementById('probTitle').innerText=uiLang==='ar'?'احتمالية تحقيق الأهداف — V5.8':'Target Achievement Probability — V5.8';
     document.getElementById('probNote').innerText=uiLang==='ar'
-      ?'لا يعرض ASTRA نسب احتمالية معايرة إلا بعد توفر عدد كافٍ من النتائج المستقبلية المحسومة. قبل ذلك يظهر نقص البيانات بدل اختراع نسبة.'
-      :'Forward-calibrated probabilities appear only after enough resolved evidence. Until then ASTRA shows insufficient data instead of inventing a percentage.';
+      ?'لا يعرض ASTRA تقديرات مستقبلية ذات أفق زمني ثابت إلا بعد توفر عدد كافٍ من النتائج المحسومة. قبل ذلك يظهر نقص البيانات بدل اختراع نسبة.'
+      :'Fixed-horizon forward estimates appear only after enough resolved evidence. Until then ASTRA shows insufficient data instead of inventing a percentage.';
     const pcs=pc.status||'INSUFFICIENT_DATA';
     document.getElementById('probStatus').innerText=uiLang==='ar'
       ?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[pcs]||pcs)
@@ -1314,10 +1314,10 @@ async function loadV52(){
     document.getElementById('probT1Label').innerText=uiLang==='ar'?'احتمال الهدف 1':'T1 Probability';
     document.getElementById('probT2Label').innerText=uiLang==='ar'?'احتمال الهدف 2':'T2 Probability';
     document.getElementById('probStopLabel').innerText=uiLang==='ar'?'احتمال وقف الخسارة':'Stop Probability';
-    document.getElementById('probEvLabel').innerText=uiLang==='ar'?'القيمة المتوقعة':'Expected Value';
+    document.getElementById('probEvLabel').innerText=uiLang==='ar'?'متوسط العائد المستقبلي':'Forward Expectancy';
     document.getElementById('probNLabel').innerText=uiLang==='ar'?'حجم العينة':'Sample Size';
     document.getElementById('probResolved').innerText=pc.forwardResolved??0;
-    const pb=pc.bestByCalibratedT1||null;
+    const pb=pc.bestByEstimatedT1||null;
     document.getElementById('probT1').innerText=pb?.t1ProbabilityPct!=null?pb.t1ProbabilityPct+'%':'—';
     document.getElementById('probT2').innerText=pb?.t2ProbabilityPct!=null?pb.t2ProbabilityPct+'%':'—';
     document.getElementById('probStop').innerText=pb?.stopProbabilityPct!=null?pb.stopProbabilityPct+'%':'—';
@@ -1328,14 +1328,14 @@ async function loadV52(){
         ?'الأعلى حسب الاحتمال المعاير للهدف 1: '+pb.ticker+' · الحالة '+pb.status
         :'Highest calibrated T1 probability: '+pb.ticker+' · '+pb.status)
       :(uiLang==='ar'
-        ?'لا توجد احتمالات معايرة حتى الآن. يستمر النظام في استخدام Final Decision Score للترتيب البحثي.'
-        :'No calibrated probabilities yet. Final Decision Score remains the research ranking signal.');
+        ?'لا توجد تقديرات مستقبلية كافية حتى الآن. يستمر النظام في استخدام Final Decision Score للترتيب البحثي.'
+        :'No sufficient forward estimates yet. Final Decision Score remains the research ranking signal.');
     const allTop=(d.topOpportunities||[]);
     const eligibleTop=allTop.filter(x=>x.decisionGate?.pass);
     const best=(eligibleTop.length?eligibleTop:allTop)
       .slice()
       .sort((a,b)=>(Number(b.finalDecisionScore||0)-Number(a.finalDecisionScore||0))||(Number(b.rrT2||0)-Number(a.rrT2||0)))[0];
-    document.getElementById('bestSetupTitle').innerText=uiLang==='ar'?'الفرصة البحثية الأكثر ترجيحًا لتحقيق الأهداف':'Highest-Probability Research Setup';
+    document.getElementById('bestSetupTitle').innerText=uiLang==='ar'?'أعلى فرصة بحثية حسب نموذج القرار':'Top Research Setup by Decision Model';
     document.getElementById('bestSetupNote').innerText=uiLang==='ar'
       ?'الترتيب يعتمد على الدرجة النهائية لـ ASTRA مع بوابة القرار وجودة الدخول والسياق وR:R. هذه ليست نسبة احتمال ربح حرفية.'
       :'Ranked by ASTRA Final Decision Score with decision gate, entry quality, context and R:R. This is not a literal probability of profit.';
