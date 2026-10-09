@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASTRA V5 — مقارنة المحركات</title>
+<style>
+:root{--bg:#071018;--card:#0d1824;--line:#1b2b3b;--text:#eef4fb;--muted:#8ca0b3;--ok:#4dd4ac;--warn:#f6c85f;--bad:#ff7b7b;--acc:#7aa2ff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#061019,#09131d);color:var(--text);font-family:system-ui,"Segoe UI",Tahoma,sans-serif}.w{max-width:1380px;margin:auto;padding:20px}.hero{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.title{font-size:30px;font-weight:900}.mut{color:var(--muted)}.pill{border:1px solid #285e50;color:var(--ok);border-radius:999px;padding:8px 12px;font-size:12px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.nav a{color:var(--text);text-decoration:none;border:1px solid var(--line);background:#0a141e;padding:8px 12px;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0}.card{background:linear-gradient(180deg,#0d1824,#0a141e);border:1px solid var(--line);border-radius:14px}.m{padding:14px}.k{font-size:11px;color:var(--muted)}.v{font-size:22px;font-weight:900;margin-top:6px}.block{padding:15px;margin-top:14px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:right;font-size:13px;white-space:nowrap}th{color:var(--muted)}.ticker{font-weight:900;color:#bcd0ff}.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}.note{padding:12px;border:1px dashed #42566d;border-radius:12px;color:#b4c0cd;font-size:13px;line-height:1.7;margin-top:12px}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr)}.w{padding:12px}.title{font-size:24px}}
+</style>
+</head>
+<body><div class="w">
+<div class="hero"><div><div class="title">ASTRA V5 — مقارنة V2.1 / V4 / V5 / CLAUDE / Confluence / CLAUDE</div><div id="sub" class="mut">تحميل...</div></div><div class="pill">RESEARCH ONLY · EXECUTION DISABLED</div></div>
+<div class="nav"><a href="../">EGX NEXT V2.1</a><a href="../data/signals.json">V2.1 JSON</a><a href="../data/engine-comparison.json">Comparison JSON</a></div>
+<div id="metrics" class="grid"></div>
+<div class="card block"><h2>المقارنة اليومية</h2><div class="scroll"><table><thead><tr><th>المحرك</th><th>الجلسة</th><th>عدد التوصيات/المرشحين</th><th>Resolved</th><th>Wins</th><th>Losses</th><th>Open/Waiting</th><th>Hit Rate</th><th>Avg Return</th></tr></thead><tbody id="cmp"></tbody></table></div><div id="independence" class="note"></div></div>
+<div class="card block"><h2>V5 — المرشحون الحاليون</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Tier</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>Target 2</th></tr></thead><tbody id="v5rows"></tbody></table></div></div>
+<div class="card block"><h2>V4 — توصيات الجلسة</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>الحالة</th></tr></thead><tbody id="v4rows"></tbody></table></div></div>
+<div class="card block"><h2>EGX Pro Professional V16.9 UI CLAUDE — TFE V20 Fusion RC2</h2><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Entry Zone</th><th>Stop</th><th>Target 1</th><th>Target 2</th><th>الحالة</th></tr></thead><tbody id="clauderows"></tbody></table></div></div>
+<div class="card block"><h2>Confluence Pullback V2 — ENTRY READY</h2><div class="note"><b>إشارة بحثية جاهزة للتنفيذ اليدوي فقط، وليست أمر شراء آلي.</b> لا تظهر هنا إلا الحالات التي اجتازت الربحية الموثقة + Reaction + Volume + MA100 ساعة + Risk + RR.</div><div class="mut" id="cf2summary"></div><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Score</th><th>Evidence Tier</th><th>Entry Zone</th><th>Stop</th><th>Risk%</th><th>RR T2</th><th>MA100 1H</th><th>T1</th><th>T2</th></tr></thead><tbody id="cf2rows"></tbody></table></div></div>
+<div class="card block"><h2>Confluence Pullback V1 — أفضل فرص للمراقبة</h2><div class="note"><b>ليست توصية شراء.</b> هذا بيان فرص للمراقبة فقط. نقاط الدخول والوقف والأهداف هي مستويات بحثية مشروطة وليست أوامر تنفيذ.</div><div class="mut" id="cfsummary"></div><div class="scroll"><table><thead><tr><th>#</th><th>السهم</th><th>Score</th><th>الحالة</th><th>Watch Entry</th><th>Structural Stop</th><th>T1 +8%</th><th>T2 +15%</th><th>T3 +22%</th><th>T4 +30%</th><th>الشروط الناقصة</th></tr></thead><tbody id="cfrows"></tbody></table></div></div>
+<div class="note">لا يتم إعلان فائز من توصيات جلسة لم تُحسم بعد. V2.1 وV5 قد يتطابقان إذا كانت واجهة V2.1 تعرض نفس astra-quant/v1 payload الخاص بـV5؛ يظهر ذلك صراحة في قسم الاستقلالية.</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const f=v=>v==null?'—':Number(v).toLocaleString('en-US',{maximumFractionDigits:4});
+const zone=r=>r.entryLow==null&&r.entryHigh==null?'—':f(r.entryLow)+' – '+f(r.entryHigh);
+async function load(){
+  const [c,s,cf,cf2]=await Promise.all([
+    fetch('../data/engine-comparison.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('../data/signals.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('../data/confluence-signals.json',{cache:'no-store'}).then(r=>r.json()),
+    fetch('../data/confluence-v2-signals.json',{cache:'no-store'}).then(r=>r.json())
+  ]);
+  $('sub').textContent='جلسة '+c.session+' · V5 '+(s.regime||'-')+' · generated '+new Date(c.generatedAt).toLocaleString('ar-EG');
+  const ids=[['v2','EGX NEXT V2.1'],['v4','ASTRA V4'],['v5','ASTRA V5'],['claude','EGX Pro V16.9 CLAUDE'],['confluence','Confluence Pullback V1']];
+  $('metrics').innerHTML=ids.map(([k,n])=>'<div class="card m"><div class="k">'+n+'</div><div class="v">'+c.engines[k].metrics.recommendations+'</div><div class="mut">توصيات/مرشحين</div></div>').join('')+
+    '<div class="card m"><div class="k">V2↔V5 overlap</div><div class="v">'+c.overlap.v2_v5.length+'</div><div class="mut">أسهم مشتركة</div></div>'+
+    '<div class="card m"><div class="k">V4↔V5 overlap</div><div class="v">'+c.overlap.v4_v5.length+'</div><div class="mut">أسهم مشتركة</div></div>'+
+    '<div class="card m"><div class="k">CLAUDE↔V5</div><div class="v">'+(c.overlap.v5_claude||[]).length+'</div><div class="mut">أسهم مشتركة</div></div>'+
+    '<div class="card m"><div class="k">Execution</div><div class="v bad">OFF</div><div class="mut">Research only</div></div>';
+  $('cmp').innerHTML=ids.map(([k,n])=>{const e=c.engines[k],m=e.metrics;return '<tr><td><b>'+n+'</b></td><td>'+e.session+'</td><td>'+m.recommendations+'</td><td>'+m.resolved+'</td><td>'+m.wins+'</td><td>'+m.losses+'</td><td>'+m.open+'</td><td>'+(m.hitRatePct==null?'—':m.hitRatePct+'%')+'</td><td>'+(m.avgReturnPct==null?'—':m.avgReturnPct+'%')+'</td></tr>'}).join('');
+  $('independence').textContent=(c.independence.v2AndV5IndependentToday?'V2.1 وV5 مستقلان اليوم. ':'V2.1 وV5 غير مستقلين اليوم. ')+c.independence.reason;
+  const v5=c.engines.v5.rows||[];
+  $('v5rows').innerHTML=v5.map(r=>'<tr><td>'+f(r.rank)+'</td><td class="ticker">'+r.ticker+'</td><td>'+ (r.tier||'—') +'</td><td>'+zone(r)+'</td><td>'+f(r.stop)+'</td><td>'+f(r.target1)+'</td><td>'+f(r.target2)+'</td></tr>').join('')||'<tr><td colspan="7">لا توجد بيانات</td></tr>';
+  const v4=c.engines.v4.rows||[];
+  $('v4rows').innerHTML=v4.map(r=>'<tr><td>'+f(r.rank)+'</td><td class="ticker">'+r.ticker+'</td><td>'+zone(r)+'</td><td>'+f(r.stop)+'</td><td>'+f(r.target1)+'</td><td>'+r.state+'</td></tr>').join('')||'<tr><td colspan="6">لا توجد بيانات</td></tr>';
+  const claude=c.engines.claude?.rows||[];
+  $('clauderows').innerHTML=claude.map(r=>'<tr><td>'+f(r.rank)+'</td><td class="ticker">'+r.ticker+'</td><td>'+zone(r)+'</td><td>'+f(r.stop)+'</td><td>'+f(r.target1)+'</td><td>'+f(r.target2)+'</td><td>'+r.state+'</td></tr>').join('')||'<tr><td colspan="7">لا توجد بيانات</td></tr>';
+
+  $('cfsummary').textContent='Session '+cf.session+' · '+cf.marketStatus+' · scanned '+cf.counts.scanned+' · actionable '+cf.counts.actionable+' · Hourly MA100: '+cf.methodology.hourlyMa100;
+  $('cf2summary').textContent='Session '+cf2.session+' · evaluated '+cf2.counts.evaluated+' · ENTRY_READY '+cf2.counts.entryReady+' · executionAllowed=false';
+  const cf2r=cf2.entryReady||[];
+  $('cf2rows').innerHTML=cf2r.map((r,i)=>'<tr><td>'+(i+1)+'</td><td class="ticker">'+r.ticker+'</td><td><b>'+r.score+'</b></td><td>'+((r.fundamentalEvidence?.tier)||'—')+'</td><td>'+f(r.entryLow)+' – '+f(r.entryHigh)+'</td><td>'+f(r.structuralStop)+'</td><td>'+f(r.risk?.riskPct)+'%</td><td>'+f(r.risk?.rrT2)+'</td><td>'+f(r.hourly?.hourlyMa100)+'</td><td>'+f(r.targets?.t1)+'</td><td>'+f(r.targets?.t2)+'</td></tr>').join('')||'<tr><td colspan="11">لا توجد ENTRY_READY حالياً؛ المحرك ينتظر اكتمال الشروط.</td></tr>';
+
+  const cfr=cf.opportunityBrief||[];
+  $('cfrows').innerHTML=cfr.map(r=>'<tr><td>'+r.rank+'</td><td class="ticker">'+r.ticker+'</td><td><b>'+r.score+'</b></td><td>'+r.state+'</td><td>'+f(r.watchEntryLow)+' – '+f(r.watchEntryHigh)+'</td><td>'+f(r.structuralStop)+'</td><td>'+f(r.targets?.t1)+'</td><td>'+f(r.targets?.t2)+'</td><td>'+f(r.targets?.t3)+'</td><td>'+f(r.targets?.t4)+'</td><td>'+(r.missingConditions||[]).join(', ')+'</td></tr>').join('')||'<tr><td colspan="11">لا توجد فرص مراقبة منشورة</td></tr>';
+}
+load().catch(e=>{$('sub').textContent='تعذر تحميل المقارنة: '+e.message});
+</script></body></html>
