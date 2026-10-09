@@ -61,12 +61,12 @@ function buildHierarchy(records){
   }
   return maps;
 }
-function selectHierarchicalPool(target,records){
+function selectHierarchicalPool(target,records,requirements=MATURITY_THRESHOLDS.bucket){
   const maps=buildHierarchy(records);
   for(const {level,key} of hierarchyKeys(target)){
     const rows=maps[level].get(key)||[];
-    if(rows.length>=MATURITY_THRESHOLDS.bucket.resolved&&distinctSessions(rows)>=MATURITY_THRESHOLDS.bucket.sessions){
-      return {level,key,records:rows,fallback:false};
+    if(rows.length>=requirements.resolved&&distinctSessions(rows)>=requirements.sessions){
+      return {level,key,records:rows,fallback:level!=='L4_EXACT'};
     }
   }
   return {level:'L0_OVERALL',key:'ALL',records:maps.L0_OVERALL.get('ALL')||[],fallback:true};
