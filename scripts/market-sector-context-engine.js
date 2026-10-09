@@ -48,10 +48,9 @@ function liquidityScore(x){
   }
   return 50;
 }
-function sectorScore(){
-  // No trustworthy sector taxonomy exists in the current canonical payload.
-  // Stay neutral rather than invent sector membership or strength.
-  return 50;
+function sectorScore(x){
+  const s=n(x.sectorStrengthScore);
+  return s==null?50:s;
 }
 const mScore=marketScore(cockpit.market?.regime,breadth??n(cockpit.market?.breadthPct));
 
@@ -72,7 +71,7 @@ function adjust(x){
     adjustedConviction:adjusted,
     marketContextScore:round(mScore,1),
     sectorContextScore:sec,
-    sectorContextStatus:'UNAVAILABLE_NEUTRAL',
+    sectorContextStatus:x.sectorSource==='CONTROLLED_SYMBOL_MAP'?'VERIFIED_MAP':'UNCLASSIFIED_NEUTRAL',
     liquidityContextScore:liq,
     warnings
   };
@@ -100,9 +99,9 @@ cockpit.marketSectorContextEngine={
   weights:{market:0.50,liquidity:0.30,sector:0.20},
   convictionAdjustmentScale:0.30,
   sector:{
-    status:'UNAVAILABLE_NEUTRAL',
-    score:50,
-    note:'No trustworthy sector taxonomy is present in the current canonical dataset; sector contribution is neutral until verified sector metadata is added.'
+    status:cockpit.sectorCorrelationEngine?.taxonomy?.coveragePct>0?'CONTROLLED_MAP_ACTIVE':'UNAVAILABLE_NEUTRAL',
+    coveragePct:cockpit.sectorCorrelationEngine?.taxonomy?.coveragePct??0,
+    note:'Sector contribution uses controlled symbol mappings only; unmapped symbols remain neutral.'
   },
   automaticExecution:false
 };
