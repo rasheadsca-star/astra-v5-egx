@@ -18,9 +18,15 @@ on:
       - '.github/workflows/daily-egx-data-refresh.yml'
       - 'scripts/data-refresh-preflight.js'
       - 'scripts/data-refresh.js'
+      - 'scripts/archive-trust-snapshot.js'
+      - 'scripts/capture-prospective-evidence.js'
+      - 'scripts/persistent-evidence-ledger.js'
+      - 'scripts/verify-persistent-ledgers.js'
+      - 'scripts/lib/persistent-evidence.js'
+      - 'scripts/lib/evidence-event-store.js'
 
 concurrency:
-  group: astra-v5-daily-data-refresh
+  group: astra-state-writer
   cancel-in-progress: false
 
 env:
@@ -47,6 +53,16 @@ jobs:
         id: preflight
         run: node scripts/data-refresh-preflight.js
 
+      - name: Check persistence bootstrap
+        id: persistence
+        shell: bash
+        run: |
+          if [ ! -f data/prediction-ledger.json ] || [ ! -f data/evidence-event-ledger.json ] || [ ! -f data/replay/index.json ] || [ ! -f data/prospective-evidence.json ]; then
+            echo "persist_needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "persist_needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Refresh canonical market and history stores
         if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
         run: npm run data:refresh
@@ -56,16 +72,16 @@ jobs:
         run: |
           node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('data/canonical-market.json'));const h=JSON.parse(fs.readFileSync('data/history-index.json'));if(m.schemaVersion!=='5.0.0'||h.schemaVersion!=='5.0.0')throw new Error('Atomic schema v5 required');if(m?.source?.atomicHandoff!==true||h?.source?.atomicHandoff!==true)throw new Error('Atomic handoff required');if(m?.source?.expectedSession!==h?.source?.expectedSession)throw new Error('Market/history session mismatch');if(m?.source?.sourceSessionDataHash!==h?.source?.sourceSessionDataHash)throw new Error('Market/history fingerprint mismatch');if(!Array.isArray(m.rows)||m.rows.length<80)throw new Error('Canonical market coverage too low');if(!h.coverage||h.coverage.coveragePct<80)throw new Error('History coverage below 80%');console.log({marketRows:m.rows.length,historyCoveragePct:h.coverage.coveragePct,expectedSession:m.source.expectedSession,fingerprint:m.source.sourceSessionDataHash});"
 
-      - name: Build V5 decision cockpit and persistent evidence
-        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+      - name: Build decision cockpit and persistent evidence
+        if: steps.preflight.outputs.source_ready == 'true' && (steps.preflight.outputs.refresh_needed == 'true' || steps.persistence.outputs.persist_needed == 'true')
         run: npm run cockpit:build
 
-      - name: Commit refreshed data and V5 decision state
-        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+      - name: Commit refreshed data and persistent decision state
+        if: steps.preflight.outputs.source_ready == 'true' && (steps.preflight.outputs.refresh_needed == 'true' || steps.persistence.outputs.persist_needed == 'true')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/canonical-market.json data/history-index.json data/decision-cockpit.json docs/data/decision-cockpit.json data/prospective-evidence.json docs/data/prospective-evidence.json data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json data/prediction-ledger.json docs/data/prediction-ledger.json data/replay docs/data/replay data/walk-forward-validation.json docs/data/walk-forward-validation.json data/model-governance.json docs/data/model-governance.json
+          git add data/canonical-market.json data/history-index.json data/decision-cockpit.json docs/data/decision-cockpit.json data/prospective-evidence.json docs/data/prospective-evidence.json data/evidence-event-ledger.json docs/data/evidence-event-ledger.json data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json data/prediction-ledger.json docs/data/prediction-ledger.json data/replay docs/data/replay data/walk-forward-validation.json docs/data/walk-forward-validation.json data/model-governance.json docs/data/model-governance.json
           if git diff --cached --quiet; then
             echo "No canonical data changes."
           else
