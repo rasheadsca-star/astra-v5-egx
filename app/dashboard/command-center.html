@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.2.1 Decision Cockpit</title>
+<title>ASTRA V6.3 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.2.1 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.3 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.2.1 TRUST UI</b> · Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.3 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.2.1 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.3 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -267,8 +267,8 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 <div class="card" style="border:1px solid #a78bfa">
   <div class="v52-header">
     <div>
-      <h2 id="riskTitle" style="margin:0">Risk Budget & Position Sizing — V5.13</h2>
-      <div class="small" id="riskNote">Research-only sizing from stop distance, volatility, liquidity, market regime, correlation, sector strength and decision score.</div>
+      <h2 id="riskTitle" style="margin:0">Risk-State Aware Position Sizing — V6.3</h2>
+      <div class="small" id="riskNote">Theoretical sizing is preserved, but actionable new-entry size is zero unless price is inside the entry zone and the Decision Gate passes.</div>
     </div>
     <span class="badge warn" id="riskBadge">AUTO ORDERS OFF</span>
   </div>
@@ -279,10 +279,10 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
     <span class="small" id="capitalHint">Sizing scales linearly; no orders are sent.</span>
   </div>
   <div class="grid" style="margin-top:14px">
-    <div class="metric"><div class="label" id="riskTotalLabel">Portfolio Risk Budget</div><div class="value" id="riskTotal">-</div></div>
-    <div class="metric"><div class="label" id="riskMaxLossLabel">Max Loss at Stops</div><div class="value" id="riskMaxLoss">-</div></div>
-    <div class="metric"><div class="label" id="riskValueLabel">Planned Position Value</div><div class="value" id="riskValue">-</div></div>
-    <div class="metric"><div class="label" id="riskPositionsLabel">Sized Positions</div><div class="value" id="riskPositions">-</div></div>
+    <div class="metric"><div class="label" id="riskTotalLabel">Actionable Portfolio Risk</div><div class="value" id="riskTotal">-</div></div>
+    <div class="metric"><div class="label" id="riskMaxLossLabel">Actionable Max Loss</div><div class="value" id="riskMaxLoss">-</div></div>
+    <div class="metric"><div class="label" id="riskValueLabel">Actionable Position Value</div><div class="value" id="riskValue">-</div></div>
+    <div class="metric"><div class="label" id="riskPositionsLabel">Actionable Positions</div><div class="value" id="riskPositions">-</div></div>
     <div class="metric"><div class="label" id="riskPerTradeLabel">Max Risk / Position</div><div class="value" id="riskPerTrade">1.0%</div></div>
     <div class="metric"><div class="label" id="riskOrdersLabel">Automatic Orders</div><div class="value gate-block">OFF</div></div>
   </div>
@@ -594,7 +594,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.2.1 Decision Cockpit":"لوحة قرارات ASTRA V6.2",
+    "ASTRA V6.3 Decision Cockpit":"لوحة قرارات ASTRA V6.2",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -665,13 +665,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.2.1':'ASTRA V6.2.1 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.3':'ASTRA V6.3 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.2.1 TRUST UI</b> · '+(uiLang==='ar'
-    ?'حوكمة النموذج + درجة الموثوقية + Walk-Forward + Replay Archive + Prediction Ledger'
+  if(releaseText) releaseText.innerHTML='<b>V6.3 TRUST UI</b> · '+(uiLang==='ar'
+    ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.2.1 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.3 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();
@@ -755,52 +755,77 @@ function renderRiskSizing(){
   if(!rb)return;
   const capital=Math.max(1000,Number(document.getElementById('capitalInput')?.value)||rb.referenceCapital||100000);
   const positions=rb.positions||[];
+  const reasonAr={
+    IN_ENTRY_ZONE_GATE_PASSED:'داخل منطقة الدخول والبوابة مجتازة',
+    STOP_HIT:'تم ضرب وقف الخسارة',
+    NEAR_STOP_CRITICAL:'قريب من وقف الخسارة — حرج',
+    CHASE_RISK:'مخاطرة مطاردة سعرية',
+    DECISION_GATE_BLOCKED:'محجوب ببوابة القرار',
+    ABOVE_ENTRY_ZONE_DO_NOT_CHASE:'أعلى منطقة الدخول — لا تطارد',
+    SLIGHTLY_ABOVE_ENTRY_WAIT:'أعلى منطقة الدخول قليلًا — انتظار',
+    BELOW_ENTRY_ZONE_WAIT:'أسفل منطقة الدخول — انتظار',
+    T1_ALREADY_HIT_NO_NEW_ENTRY:'الهدف الأول تحقق — لا دخول جديد',
+    T2_ALREADY_HIT_NO_NEW_ENTRY:'الهدف الثاني تحقق — لا دخول جديد',
+    CURRENT_PRICE_MISSING:'السعر الحالي غير متاح',
+    STATE_NOT_ENTRY_ACTIONABLE:'الحالة الحالية غير صالحة لدخول جديد',
+    MONITORING_STATE_MISSING:'حالة المراقبة غير متاحة'
+  };
   const rows=positions.map(x=>{
-    const entry=Number(x.entryReference), stopDistance=Number(x.stopDistance), riskPct=Number(x.riskBudgetPct)||0, capPct=Number(x.maxPositionPct)||0;
-    let shares=0, value=0, maxLoss=0;
-    if(entry>0&&stopDistance>0&&riskPct>0){
-      const byRisk=Math.floor((capital*riskPct/100)/stopDistance);
-      const byExposure=capPct>0?Math.floor((capital*capPct/100)/entry):byRisk;
-      shares=Math.max(0,Math.min(byRisk,byExposure||byRisk));
-      value=shares*entry;
-      maxLoss=shares*stopDistance;
-    }
-    return {...x,_shares:shares,_value:value,_maxLoss:maxLoss};
+    const entry=Number(x.entryReference), stopDistance=Number(x.stopDistance);
+    const theoreticalRiskPct=Number(x.theoreticalRiskBudgetPct??x.riskBudgetPct)||0;
+    const actionableRiskPct=Number(x.actionableRiskBudgetPct)||0;
+    const capPct=Number(x.maxPositionPct)||0;
+    const sizeFor=(riskPct)=>{
+      let shares=0,value=0,maxLoss=0;
+      if(entry>0&&stopDistance>0&&riskPct>0){
+        const byRisk=Math.floor((capital*riskPct/100)/stopDistance);
+        const byExposure=capPct>0?Math.floor((capital*capPct/100)/entry):byRisk;
+        shares=Math.max(0,Math.min(byRisk,byExposure||byRisk));
+        value=shares*entry;
+        maxLoss=shares*stopDistance;
+      }
+      return {shares,value,maxLoss};
+    };
+    const theoretical=sizeFor(theoreticalRiskPct);
+    const actionable=sizeFor(actionableRiskPct);
+    return {...x,_theoretical:theoretical,_actionable:actionable,_theoreticalRiskPct:theoreticalRiskPct,_actionableRiskPct:actionableRiskPct};
   });
-  const totalLoss=rows.reduce((s,x)=>s+x._maxLoss,0);
-  const totalValue=rows.reduce((s,x)=>s+x._value,0);
-  document.getElementById('riskTotal').innerText=(rb.totals?.riskBudgetPct??0)+'%';
+  const totalLoss=rows.reduce((s,x)=>s+x._actionable.maxLoss,0);
+  const totalValue=rows.reduce((s,x)=>s+x._actionable.value,0);
+  const totalRisk=rows.reduce((s,x)=>s+x._actionableRiskPct,0);
+  document.getElementById('riskTotal').innerText=totalRisk.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')+'%';
   document.getElementById('riskMaxLoss').innerText=fmtEgp(totalLoss);
   document.getElementById('riskValue').innerText=fmtEgp(totalValue);
-  document.getElementById('riskPositions').innerText=rows.filter(x=>x._shares>0).length;
+  document.getElementById('riskPositions').innerText=rows.filter(x=>x._actionable.shares>0).length;
   document.getElementById('riskPerTrade').innerText=(rb.policy?.maxRiskPerPositionPct??1)+'%';
   document.getElementById('riskTable').innerHTML=rows.length
     ?'<table><thead><tr>'+
       '<th>'+esc(uiLang==='ar'?'السهم':'Symbol')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'حالة المتابعة':'Monitoring')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'السبب':'Risk-State Rule')+'</th>'+
       '<th>'+esc(uiLang==='ar'?'الدخول المرجعي':'Entry Ref')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'وقف الخسارة':'Stop')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'بعد الوقف':'Stop Distance')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'التذبذب اليومي':'Daily Vol')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'مخاطرة الصفقة':'Risk Budget')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'عدد الأسهم':'Shares')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'قيمة المركز':'Position Value')+'</th>'+
-      '<th>'+esc(uiLang==='ar'?'أقصى خسارة عند الوقف':'Max Loss @ Stop')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'الوقف':'Stop')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'الحجم النظري':'Theoretical Shares')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'الحجم المتاح الآن':'Actionable Shares Now')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'مخاطرة متاحة الآن':'Actionable Risk')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'قيمة المركز الآن':'Actionable Value')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'أقصى خسارة الآن':'Max Loss Now')+'</th>'+
       '</tr></thead><tbody>'+
       rows.map(x=>'<tr>'+
         '<td>'+stockLink(x.ticker)+'</td>'+
+        '<td class="'+(x.monitoringSeverity==='CRITICAL'?'gate-block':x.actionableNow?'gate-pass':'warn')+'">'+esc(uiLang==='ar'?(({NEAR_STOP:'قريب من الوقف',STOP_HIT:'ضرب الوقف',IN_ENTRY_ZONE:'داخل منطقة الدخول',CHASE_RISK:'مطاردة سعرية',GATE_BLOCKED:'محجوب',ABOVE_ENTRY_ZONE:'أعلى الدخول',SLIGHTLY_ABOVE_ENTRY:'أعلى الدخول قليلًا',BELOW_ENTRY_ZONE:'أسفل الدخول',T1_HIT:'وصل T1',T2_HIT:'وصل T2',NO_CURRENT_PRICE:'لا يوجد سعر'}[x.monitoringState])||x.monitoringState||'-'):((x.monitoringState||'-').replaceAll('_',' ')))+'</td>'+
+        '<td>'+esc(uiLang==='ar'?(reasonAr[x.riskStateOverrideReason]||x.riskStateOverrideReason||'-'):((x.riskStateOverrideReason||'-').replaceAll('_',' ')))+'</td>'+
         '<td>'+esc(priceCell(x.entryReference))+'</td>'+
         '<td>'+esc(priceCell(x.stop))+'</td>'+
-        '<td>'+esc(x.stopDistancePct!=null?x.stopDistancePct+'%':'-')+'</td>'+
-        '<td>'+esc(x.dailyVolatilityPct!=null?x.dailyVolatilityPct+'%':'-')+'</td>'+
-        '<td>'+esc(x.riskBudgetPct!=null?x.riskBudgetPct+'%':'-')+'</td>'+
-        '<td>'+esc(x._shares)+'</td>'+
-        '<td>'+esc(fmtEgp(x._value))+'</td>'+
-        '<td>'+esc(fmtEgp(x._maxLoss))+'</td>'+
+        '<td>'+esc(x._theoretical.shares)+'</td>'+
+        '<td class="'+(x._actionable.shares>0?'gate-pass':'gate-block')+'"><b>'+esc(x._actionable.shares)+'</b></td>'+
+        '<td>'+esc(x._actionableRiskPct.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')+'%')+'</td>'+
+        '<td>'+esc(fmtEgp(x._actionable.value))+'</td>'+
+        '<td>'+esc(fmtEgp(x._actionable.maxLoss))+'</td>'+
       '</tr>').join('')+
       '</tbody></table>'
     :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد مراكز مؤهلة للحجم حاليًا.':'No positions currently eligible for sizing.')+'</span>';
 }
-
 
 let replayIndexCache=null;
 async function loadReplayIndex(){
@@ -1144,18 +1169,18 @@ async function loadV52(){
       :'Near stop = within 2.5% of stop · slightly above entry = up to 2% above entry high · not a real-time feed and no orders are sent.';
     const rb=d.riskBudgetEngine||{};
     latestRiskBudget=rb;
-    document.getElementById('riskTitle').innerText=uiLang==='ar'?'ميزانية المخاطر وحجم المركز — V5.13':'Risk Budget & Position Sizing — V5.13';
+    document.getElementById('riskTitle').innerText=uiLang==='ar'?'حجم المركز الواعي بحالة المخاطر — V6.3':'Risk-State Aware Position Sizing — V6.3';
     document.getElementById('riskNote').innerText=uiLang==='ar'
-      ?'تحديد حجم بحثي فقط اعتمادًا على بُعد وقف الخسارة والتذبذب والسيولة وحالة السوق والارتباط وقوة القطاع والدرجة النهائية.'
-      :'Research-only sizing from stop distance, volatility, liquidity, market regime, correlation, sector strength and decision score.';
+      ?'يحتفظ بالحجم النظري للتحليل، لكن حجم الدخول المتاح الآن يصبح صفرًا إلا إذا كان السعر داخل منطقة الدخول وبوابة القرار مجتازة.'
+      :'Theoretical sizing is preserved, but actionable new-entry size is zero unless price is inside the entry zone and the Decision Gate passes.';
     document.getElementById('riskBadge').innerText=uiLang==='ar'?'الأوامر الآلية متوقفة':'AUTO ORDERS OFF';
     document.getElementById('capitalLabel').innerText=uiLang==='ar'?'رأس المال (جنيه)':'Capital (EGP)';
     document.getElementById('capitalApply').innerText=uiLang==='ar'?'تطبيق':'Apply';
     document.getElementById('capitalHint').innerText=uiLang==='ar'?'الحجم يتغير خطيًا مع رأس المال؛ لا يتم إرسال أي أوامر.':'Sizing scales linearly; no orders are sent.';
-    document.getElementById('riskTotalLabel').innerText=uiLang==='ar'?'إجمالي ميزانية المخاطر':'Portfolio Risk Budget';
-    document.getElementById('riskMaxLossLabel').innerText=uiLang==='ar'?'أقصى خسارة عند جميع الوقفات':'Max Loss at Stops';
-    document.getElementById('riskValueLabel').innerText=uiLang==='ar'?'قيمة المراكز المخططة':'Planned Position Value';
-    document.getElementById('riskPositionsLabel').innerText=uiLang==='ar'?'المراكز المحدد حجمها':'Sized Positions';
+    document.getElementById('riskTotalLabel').innerText=uiLang==='ar'?'مخاطرة المحفظة المتاحة الآن':'Actionable Portfolio Risk';
+    document.getElementById('riskMaxLossLabel').innerText=uiLang==='ar'?'أقصى خسارة متاحة الآن':'Actionable Max Loss';
+    document.getElementById('riskValueLabel').innerText=uiLang==='ar'?'قيمة المراكز المتاحة الآن':'Actionable Position Value';
+    document.getElementById('riskPositionsLabel').innerText=uiLang==='ar'?'المراكز المتاحة للدخول الآن':'Actionable Positions';
     document.getElementById('riskPerTradeLabel').innerText=uiLang==='ar'?'أقصى مخاطرة / مركز':'Max Risk / Position';
     document.getElementById('riskOrdersLabel').innerText=uiLang==='ar'?'الأوامر الآلية':'Automatic Orders';
     renderRiskSizing();
