@@ -139,6 +139,25 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 </div>
 
 
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 style="margin:0">Market & Sector Context — V5.5</h2>
+      <div class="small">Context-adjusted ranking: market 50% · liquidity 30% · sector 20%. Sector stays neutral until verified metadata exists.</div>
+    </div>
+    <span class="badge warn">CONTEXT ENGINE</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label">Market Score</div><div class="value" id="ctxMarketScore">-</div></div>
+    <div class="metric"><div class="label">Breadth</div><div class="value" id="ctxBreadth">-</div></div>
+    <div class="metric"><div class="label">Adv / Dec</div><div class="value" id="ctxAdvDec">-</div></div>
+    <div class="metric"><div class="label">Median Change</div><div class="value" id="ctxMedian">-</div></div>
+    <div class="metric"><div class="label">Sector Context</div><div class="value" id="ctxSector">-</div></div>
+    <div class="metric"><div class="label">Context Version</div><div class="value">V5.5</div></div>
+  </div>
+</div>
+
 <div class="card">
   <div class="v52-header">
     <div>
@@ -245,6 +264,12 @@ async function loadV52(){
     document.getElementById('v52Watch').innerText=d.counts?.watchlist??'-';
     const safe=!d.dataHealth?.stale && d.safety?.executionAllowed===false;
     document.getElementById('v52Safety').innerText=safe?'RESEARCH SAFE':'DEGRADED';
+    const ctx=d.marketSectorContextEngine||{}, cm=ctx.market||{}, cs=ctx.sector||{};
+    document.getElementById('ctxMarketScore').innerText=cm.score!=null?cm.score+'/100':'-';
+    document.getElementById('ctxBreadth').innerText=cm.breadthPct!=null?cm.breadthPct+'%':'-';
+    document.getElementById('ctxAdvDec').innerText=(cm.advancing??'-')+' / '+(cm.declining??'-');
+    document.getElementById('ctxMedian').innerText=cm.medianChangePct!=null?cm.medianChangePct+'%':'-';
+    document.getElementById('ctxSector').innerText=cs.status==='UNAVAILABLE_NEUTRAL'?'NEUTRAL / DATA NEEDED':(cs.status||'-');
     const eq=d.entryQualityEngine?.counts||{};
     document.getElementById('eqIdeal').innerText=eq.IDEAL??0;
     document.getElementById('eqEarly').innerText=eq.EARLY??0;
@@ -260,9 +285,11 @@ async function loadV52(){
         '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span></div>'+
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
+          '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
           '<div><span class="v52-k">R:R to T2</span><div class="v52-v">'+esc(rr)+'</div></div>'+
           '<div><span class="v52-k">Quality Score</span><div class="v52-v">'+esc(x.entryQualityScore??'-')+'/100</div></div>'+
+          '<div><span class="v52-k">Context Score</span><div class="v52-v">'+esc(x.contextScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Entry</span><div class="v52-v">'+esc(entryZoneCell(x))+'</div></div>'+
           '<div><span class="v52-k">Stop</span><div class="v52-v '+v52RiskClass(x.riskPct)+'">'+esc(priceCell(x.stop))+' ('+esc(risk)+'%)</div></div>'+
           '<div><span class="v52-k">Target 1</span><div class="v52-v">'+esc(priceCell(x.target1))+'</div></div>'+
