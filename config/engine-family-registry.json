@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "astra-engine-family-registry/v1",
+  "policyVersion": "engine-independence-policy/v1",
+  "purpose": "Prevent duplicate or highly related engine labels from creating fake agreement.",
+  "countingRule": "Agreement counts distinct declared engine families, never raw engine labels. Family count is descriptive breadth, not proof of statistical independence.",
+  "families": [
+    {
+      "id": "NEXT_QUANT",
+      "members": [
+        "V2.1",
+        "V5"
+      ],
+      "maxAgreementVotes": 1,
+      "relationship": "SAME_PUBLISHED_RANKING_PAYLOAD",
+      "statisticalIndependenceClaim": false
+    },
+    {
+      "id": "V4",
+      "members": [
+        "V4"
+      ],
+      "maxAgreementVotes": 1,
+      "relationship": "DISTINCT_LEGACY_DECISION_PATH",
+      "statisticalIndependenceClaim": false,
+      "note": "Distinct code path does not by itself prove statistical independence."
+    },
+    {
+      "id": "CLAUDE",
+      "members": [
+        "CLAUDE_RC2"
+      ],
+      "maxAgreementVotes": 1,
+      "relationship": "DISTINCT_MODEL_SHARED_MARKET_INFORMATION",
+      "statisticalIndependenceClaim": false
+    },
+    {
+      "id": "CONFLUENCE",
+      "members": [
+        "CONFLUENCE_V1",
+        "CONFLUENCE_V2"
+      ],
+      "maxAgreementVotes": 1,
+      "relationship": "RELATED_RULE_FAMILY",
+      "statisticalIndependenceClaim": false
+    }
+  ],
+  "safety": {
+    "automaticExecution": false
+  }
+}
