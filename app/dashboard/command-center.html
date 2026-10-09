@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.16.1 Decision Cockpit</title>
+<title>ASTRA V5.16.2 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -73,7 +73,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.16.1 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.16.2 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -83,7 +83,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.16.1 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
+  <div><b>V5.16.2 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -96,7 +96,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16.1 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16.2 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -515,7 +515,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.16.1 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.16.2 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -809,7 +809,7 @@ async function openStockAnalysis(ticker){
   document.getElementById('taKpis').innerHTML='';
   document.getElementById('taChart').innerHTML='<text x="40" y="60" fill="#94a3b8">'+(uiLang==='ar'?'تحميل البيانات الفنية...':'Loading technical data...')+'</text>';
   try{
-    const data=await api('/api/stock-analysis?symbol='+encodeURIComponent(ticker));
+    const data=await api('/data/technical/'+encodeURIComponent(ticker)+'.json').catch(()=>api('/docs/data/technical/'+encodeURIComponent(ticker)+'.json')).catch(()=>api('/api/stock-analysis?symbol='+encodeURIComponent(ticker)));
     if(!data.success)throw new Error(data.error||'Analysis unavailable');
     renderTechnicalAnalysis(data);
   }catch(e){
@@ -818,7 +818,7 @@ async function openStockAnalysis(ticker){
 }
 async function loadStockUniverse(){
   try{
-    const data=await api('/api/stock-analysis');
+    const data=await api('/data/technical/index.json').catch(()=>api('/docs/data/technical/index.json')).catch(()=>api('/api/stock-analysis'));
     const sel=document.getElementById('taSymbol');
     sel.innerHTML=(data.symbols||[]).map(x=>'<option value="'+esc(x.ticker)+'">'+esc(x.ticker+' — '+(x.name||x.ticker))+'</option>').join('');
     document.getElementById('taCoverage').innerText=(data.symbols||[]).length+' '+(uiLang==='ar'?'سهم مغطى':'covered stocks')+' · '+(data.session||'-')+(data.delayed?' · delayed':'');
