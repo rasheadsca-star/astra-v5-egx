@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.16 Decision Cockpit</title>
+<title>ASTRA V5.16.1 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -73,7 +73,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.16 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.16.1 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -83,7 +83,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.16 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
+  <div><b>V5.16.1 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -96,7 +96,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16.1 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -515,7 +515,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.16 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.16.1 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -1169,11 +1169,14 @@ async function loadSignals(){
   document.getElementById('deployment').innerText='Deployment: checking...';
 
   try{
-    const [data,h,unified]=await Promise.all([
+    const settled=await Promise.allSettled([
       api('/api/recommendations'),
       api('/api/data-health'),
       api('/api/unified-opportunities')
     ]);
+    const data=settled[0].status==='fulfilled'?settled[0].value:{recommendations:[],watchlist:[],executionReadyCount:0,mode:'DEGRADED',dataSource:'UNAVAILABLE',deploymentCommit:null};
+    const h=settled[1].status==='fulfilled'?settled[1].value:{engineStatus:'DEGRADED',liveFeed:'UNAVAILABLE',message:'Data health endpoint unavailable'};
+    const unified=settled[2].status==='fulfilled'?settled[2].value:{rows:[],sessionDate:null,ucpStatus:'UNAVAILABLE'};
 
     const rows=data.recommendations||[];
     const watch=data.watchlist||[];
@@ -1260,7 +1263,7 @@ async function loadSignals(){
       statusText(h.engineStatus||'DEGRADED');
 
     document.getElementById('engine').className=
-      h.engineStatus==='LIVE_READY'||h.engineStatus==='HISTORICAL_READY'
+      ['LIVE_READY','DELAYED_READY','HISTORICAL_READY'].includes(h.engineStatus)
         ? 'status'
         : 'blocked';
 
@@ -1333,26 +1336,66 @@ async function loadQuant(){
   }
 }
 
-document.addEventListener('click',e=>{
-  const b=e.target.closest?.('[data-stock]');
-  if(b)openStockAnalysis(b.getAttribute('data-stock'));
-});
-document.getElementById('taAnalyze').addEventListener('click',()=>openStockAnalysis(document.getElementById('taSymbol').value));
-document.getElementById('taClose').addEventListener('click',()=>{const m=document.getElementById('taModal');m.classList.remove('open');m.setAttribute('aria-hidden','true')});
-document.getElementById('taModal').addEventListener('click',e=>{if(e.target.id==='taModal'){e.currentTarget.classList.remove('open');e.currentTarget.setAttribute('aria-hidden','true')}});
-['showFib','showChannel','showSR','showMA'].forEach(id=>document.getElementById(id).addEventListener('change',()=>{if(currentTA)renderTechnicalChart(currentTA)}));
-document.getElementById('languageSelect').addEventListener('change',e=>applyLanguage(e.target.value,true));
-document.getElementById('capitalApply').addEventListener('click',renderRiskSizing);
-document.getElementById('capitalInput').addEventListener('change',renderRiskSizing);
-applyLanguage(uiLang,false);
-loadV52();
-loadProspective();
-loadSignals();
-loadQuant();
-setInterval(loadV52,60000);
-setInterval(loadProspective,60000);
-setInterval(loadSignals,60000);
-setInterval(loadQuant,60000);
+function bootAstraUI(){
+  try{
+    document.addEventListener('click',e=>{
+      const b=e.target.closest?.('[data-stock]');
+      if(b)openStockAnalysis(b.getAttribute('data-stock'));
+    });
+
+    const taAnalyze=document.getElementById('taAnalyze');
+    if(taAnalyze) taAnalyze.addEventListener('click',()=>openStockAnalysis(document.getElementById('taSymbol')?.value));
+
+    const taClose=document.getElementById('taClose');
+    if(taClose) taClose.addEventListener('click',()=>{
+      const m=document.getElementById('taModal');
+      if(m){m.classList.remove('open');m.setAttribute('aria-hidden','true')}
+    });
+
+    const taModal=document.getElementById('taModal');
+    if(taModal) taModal.addEventListener('click',e=>{
+      if(e.target.id==='taModal'){
+        e.currentTarget.classList.remove('open');
+        e.currentTarget.setAttribute('aria-hidden','true');
+      }
+    });
+
+    ['showFib','showChannel','showSR','showMA'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el) el.addEventListener('change',()=>{if(currentTA)renderTechnicalChart(currentTA)});
+    });
+
+    const lang=document.getElementById('languageSelect');
+    if(lang) lang.addEventListener('change',e=>applyLanguage(e.target.value,true));
+
+    const capApply=document.getElementById('capitalApply');
+    if(capApply) capApply.addEventListener('click',renderRiskSizing);
+    const capInput=document.getElementById('capitalInput');
+    if(capInput) capInput.addEventListener('change',renderRiskSizing);
+
+    applyLanguage(uiLang,false);
+    loadStockUniverse();
+    loadV52();
+    loadProspective();
+    loadSignals();
+    loadQuant();
+
+    setInterval(loadV52,60000);
+    setInterval(loadProspective,60000);
+    setInterval(loadSignals,60000);
+    setInterval(loadQuant,60000);
+  }catch(e){
+    const engine=document.getElementById('engine');
+    const health=document.getElementById('health');
+    if(engine){engine.innerText='DEGRADED';engine.className='blocked'}
+    if(health)health.innerText='UI initialization error: '+(e?.message||e);
+  }
+}
+if(document.readyState==='loading'){
+  window.addEventListener('DOMContentLoaded',bootAstraUI,{once:true});
+}else{
+  bootAstraUI();
+}
 </script>
 
 <div class="ta-modal" id="taModal" aria-hidden="true">
