@@ -1,0 +1,94 @@
+name: WP0 Test Stability
+
+on:
+  push:
+    branches:
+      - wp0-baseline-20261009
+    paths:
+      - 'docs/REVIEW-BASELINE.md'
+      - 'docs/baseline-metrics.json'
+      - 'scripts/wp0-baseline-validation.js'
+      - 'scripts/serve-validation.js'
+      - '.github/workflows/wp0-test-stability.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp0-test-stability-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  twenty-clean-runs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install quant Python requirements
+        run: python -m pip install -r quant/requirements.txt
+
+      - name: Validate frozen baseline
+        run: node scripts/wp0-baseline-validation.js
+
+      - name: Run npm test 20 times from a clean worktree
+        shell: bash
+        run: |
+          set -uo pipefail
+          LOG_DIR="$RUNNER_TEMP/wp0-test-logs"
+          mkdir -p "$LOG_DIR"
+          failures=0
+
+          for i in $(seq 1 20); do
+            echo "===== WP0 npm test iteration $i/20 ====="
+            git reset --hard HEAD >/dev/null
+            git clean -fd >/dev/null
+
+            if npm test >"$LOG_DIR/npm-test-$i.log" 2>&1; then
+              echo "PASS $i/20"
+            else
+              code=$?
+              echo "FAIL $i/20 (exit=$code)"
+              cat "$LOG_DIR/npm-test-$i.log"
+              failures=$((failures+1))
+            fi
+
+            if ! git diff --quiet || ! git diff --cached --quiet; then
+              echo "FAIL $i/20: test mutated tracked files"
+              git status --short
+              failures=$((failures+1))
+              git reset --hard HEAD >/dev/null
+            fi
+          done
+
+          {
+            echo "## WP0 npm test stability"
+            echo
+            echo "- attempts: 20"
+            echo "- failures: $failures"
+            echo "- passes: $((20-failures))"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$failures" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Upload all 20 test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp0-npm-test-20x-logs
+          path: ${{ runner.temp }}/wp0-test-logs
+          if-no-files-found: error
+          retention-days: 14

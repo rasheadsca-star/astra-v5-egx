@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "astra-wp0-baseline/v1",
+  "capturedAt": "2026-10-09T18:50:46Z",
+  "source": {
+    "branch": "main",
+    "commit": "90fe9acbec3ee2bccec1426b19ff872588b97d6d",
+    "session": "2026-10-07",
+    "quantSignalsPath": "quant/data/signals.json",
+    "quantSignalsBlobSha": "59ff171b6d0e52d4c4b2cfa07ea849ac39b6d30a",
+    "publishedQuantPath": "data/quant/signals.json",
+    "publishedQuantBlobSha": "cc9d73ef3c7e0ffe02a352ba552bf6a35848a512",
+    "cockpitPath": "data/decision-cockpit.json",
+    "cockpitBlobSha": "0623986ec27c357eec4cdca5de6112e605367fa2"
+  },
+  "safety": {
+    "researchOnly": true,
+    "executionAllowed": false,
+    "automaticOrders": false
+  },
+  "oos": {
+    "sessions": 112,
+    "baselineAll": {
+      "n": 13272,
+      "days": 112,
+      "hitPct": 32.6,
+      "winPct": 45.7,
+      "avgNetReturnPct": 0.33,
+      "medianNetReturnPct": -1.11,
+      "profitFactor": 1.12
+    },
+    "top3": {
+      "n": 301,
+      "days": 111,
+      "hitPct": 44.9,
+      "winPct": 55.5,
+      "avgNetReturnPct": 1.44,
+      "medianNetReturnPct": 2.34,
+      "profitFactor": 1.73
+    },
+    "top5": {
+      "n": 488,
+      "days": 111,
+      "hitPct": 43.9,
+      "winPct": 53.9,
+      "avgNetReturnPct": 1.15,
+      "medianNetReturnPct": 1.7,
+      "profitFactor": 1.59
+    },
+    "top10": {
+      "n": 968,
+      "days": 112,
+      "hitPct": 40.4,
+      "winPct": 50.8,
+      "avgNetReturnPct": 0.78,
+      "medianNetReturnPct": 0.39,
+      "profitFactor": 1.38
+    },
+    "top5ExcessMeanPct": 0.73,
+    "top5ExcessCi90BlockPct": [
+      -0.1,
+      1.28
+    ],
+    "foldsPositive": "16/23",
+    "fillRatePct": 86.7,
+    "leakFree": true
+  },
+  "placebo": {
+    "seeds": 5,
+    "excessPct": [
+      -0.16,
+      0.39,
+      -0.38,
+      -0.4,
+      0.32
+    ],
+    "excessMeanPct": -0.05,
+    "excessMaxPct": 0.39,
+    "baselineAvgPct": 0.33
+  },
+  "portfolio": {
+    "twoTargets": {
+      "totalReturnPct": 13.91,
+      "maxDrawdownPct": -8.75,
+      "sharpe": 2.13,
+      "trades": 78,
+      "winPct": 70.5,
+      "avgExposurePct": 64.8,
+      "days": 121
+    },
+    "holdTarget2": {
+      "totalReturnPct": 19.45,
+      "maxDrawdownPct": -11.17,
+      "sharpe": 2.27,
+      "trades": 60,
+      "winPct": 56.7,
+      "avgExposurePct": 69.4,
+      "days": 121
+    },
+    "marketEqualWeight": {
+      "totalReturnPct": 29.5,
+      "maxDrawdownPct": -11.2
+    },
+    "randomSelection": {
+      "runs": 20,
+      "returnMeanPct": 4.82,
+      "returnP10Pct": -1.4,
+      "returnP90Pct": 11.03,
+      "drawdownMeanPct": -8.9,
+      "strategyBeatsPct": 90
+    }
+  },
+  "forwardQuantLedger": {
+    "sessionsRecorded": 4,
+    "sessionsValid": 4,
+    "sessionsLate": 0,
+    "pending": 158,
+    "open": 377,
+    "unfilled": 25,
+    "closed": 62,
+    "top": {
+      "n": 6,
+      "hitPct": 50,
+      "avgNetReturnPct": -1.03,
+      "winPct": 50,
+      "profitFactor": 0.44
+    },
+    "all": {
+      "n": 62,
+      "hitPct": 75.8,
+      "avgNetReturnPct": 1.24,
+      "winPct": 75.8,
+      "profitFactor": 1.76
+    }
+  },
+  "dataStatus": {
+    "finalStatus": "PARTIAL",
+    "guard": "NOOP_NO_NEW_ROWS",
+    "coveragePct": 89.9,
+    "staleRows": 20,
+    "failedRows": 0,
+    "quarantinedCount": 0,
+    "staleSymbols": [
+      "DCCC",
+      "DEIN",
+      "EFID",
+      "EGSA",
+      "ELNA",
+      "EOSB",
+      "EPPK",
+      "EXPA",
+      "GPPL",
+      "ICLE",
+      "MEGM",
+      "NAHO",
+      "NDRL",
+      "NEDA",
+      "ORHD",
+      "POUL",
+      "RAKT",
+      "SAIB",
+      "SPHT",
+      "TRTO"
+    ]
+  },
+  "interpretation": {
+    "top5OutperformanceEstablished": false,
+    "reason": "90% block-bootstrap CI for Top5 excess includes zero (-0.10% to +1.28%).",
+    "frozen": true,
+    "changePolicy": "Any later metric change must be explained against this file using the same input data or explicitly attributed to changed data/specification."
+  }
+}
