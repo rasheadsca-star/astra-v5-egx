@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='astra-recommendations-v1';
+const CACHE='astra-recommendations-v2';
 const SHELL=['/recommendations','/recommendations-manifest.webmanifest','/recommendations-icon.svg'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));
