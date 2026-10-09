@@ -11,6 +11,14 @@
     {
       "source": "/recommendations/",
       "destination": "/app/dashboard/recommendations.html"
+    },
+    {
+      "source": "/health",
+      "destination": "/docs/health.html"
+    },
+    {
+      "source": "/health/",
+      "destination": "/docs/health.html"
     }
   ],
   "headers": [
@@ -106,6 +114,51 @@
     },
     {
       "source": "/recommendations-sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/health",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/health/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/docs/health.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/data/operations-health.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/docs/data/operations-health.json",
       "headers": [
         {
           "key": "Cache-Control",
