@@ -1,0 +1,77 @@
+name: WP4 Source Integrity Gate
+
+on:
+  push:
+    branches:
+      - wp4-source-integrity
+    paths:
+      - 'config/data-source-registry.json'
+      - 'config/output-ownership.json'
+      - 'scripts/lib/source-health.js'
+      - 'scripts/source-health-engine.js'
+      - 'scripts/source-health-validation.js'
+      - 'scripts/data-refresh.js'
+      - 'scripts/model-governance-engine.js'
+      - 'quant/fetch/daily_update.py'
+      - 'quant/tests/test_daily_update.py'
+      - 'package.json'
+      - 'app/dashboard/command-center.html'
+      - 'docs/DATA-SOURCES.md'
+      - '.github/workflows/daily-egx-data-refresh.yml'
+      - '.github/workflows/wp4-source-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp4-source-integrity-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+      - name: Source policy validation
+        run: npm run source:validate
+      - name: Existing Node tests
+        run: npm test
+      - name: Existing Python quant tests
+        run: npm run quant:test
+      - name: Full build including source-health generation
+        run: npm run build
+      - name: Validate generated source-health artifact
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const s=JSON.parse(fs.readFileSync('data/source-health.json','utf8'));
+          if(s.automaticExecution!==false)throw new Error('automatic execution changed');
+          if(s.independentVerification?.quorumMet!==false)throw new Error('unexpected independent quorum claim');
+          if(!(s.coverage?.activeCoveragePct>=80))throw new Error('active source coverage below 80%');
+          if(!Array.isArray(s.crossStoreConsistency?.canonicalCurrentButQuantStale))throw new Error('cross-store consistency output missing');
+          console.log({
+            activeCoveragePct:s.coverage.activeCoveragePct,
+            current:s.coverage.currentVerifiedSymbols,
+            stale:s.coverage.staleActiveSymbols,
+            failed:s.coverage.sourceFailedSymbols,
+            mismatch:s.crossStoreConsistency.canonicalCurrentButQuantStale
+          });
+          NODE
+      - name: Prove Yahoo automated fallback remains disabled
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'quant/fetch')
+          import daily_update as d
+          assert d.yahoo_automated_access_allowed() is False
+          print('Yahoo automated fallback blocked by registry policy.')
+          PY

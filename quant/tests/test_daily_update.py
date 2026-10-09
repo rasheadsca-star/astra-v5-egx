@@ -145,6 +145,10 @@ def test_partial_session_rerun_without_new_rows_stays_partial_and_stable():
     put_pack(root, [prow("T18"), prow("T19")], name="p2.json"); s3 = run(root, stage1=lambda: calls.append(1) or stage_ok())          # وصلت الأسهم الناقصة لاحقاً
     assert s3["finalStatus"] == "SUCCESS" and s3["coveragePct"] == 100.0 and len(calls) == 2
 
+
+def test_yahoo_automated_fallback_blocked_by_central_registry():
+    assert U.yahoo_automated_access_allowed() is False
+
 if __name__ == "__main__":
     fs = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for f in fs: f(); print("PASS", f.__name__)

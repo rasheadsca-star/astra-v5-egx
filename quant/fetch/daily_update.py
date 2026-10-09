@@ -8,11 +8,12 @@
   python fetch/daily_update.py --dry-run       تحقق وتقرير دون كتابة تاريخ ولا تشغيل المحرك
   python fetch/daily_update.py --no-stage1     تحديث التاريخ فقط
 
-ترتيب المصادر (config/sources.json): 1) حزم الجلسة session_pack في data/inbox (ناتج نظام مباشر مصر)  2) Yahoo للأسهم الناقصة فقط.
+ترتيب المصادر: 1) حزم الجلسة session_pack في data/inbox. 2) أي fallback خارجي لا يُفعّل إلا إذا سمح به سجل المصادر المركزي config/data-source-registry.json.
 الحالة النهائية finalStatus: SUCCESS | PARTIAL | WAITING_DATA | FAILED | ALREADY_CURRENT  ->  data/daily-data-update-status.json
 المبدأ: مشكلة بيانات ≠ إشارة سيئة. لا استبدال لبيانات صحيحة، ولا مسح للمرشحين، ولا ترتيب جديد على بيانات قديمة."""
 import os, sys, re, json, glob, shutil, math, datetime as dt, subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(ROOT)
 try:
     from zoneinfo import ZoneInfo; CAI = ZoneInfo("Africa/Cairo")
 except Exception: CAI = None
@@ -21,6 +22,16 @@ DEFAULTS = dict(close_time="14:30", grace_min=45, min_last_trade="12:30", succes
                 jump_quarantine=0.22, jump_warn=0.12, prev_close_tol=0.01, yahoo_conflict=0.15, keep_backups=3)
 TIER = {"official": 4, "precise": 3, "yahoo_daily_unverified": 2, "supplemental_unverified": 1}
 SYM = re.compile(r"^[A-Z0-9]{2,10}$")
+
+def yahoo_automated_access_allowed():
+    """Policy gate: Yahoo automated web collection is disabled unless the central registry explicitly permits it."""
+    p = os.path.join(REPO_ROOT, "config", "data-source-registry.json")
+    try:
+        reg = json.load(open(p, encoding="utf-8"))
+        src = next((x for x in reg.get("sources", []) if x.get("id") == "YAHOO_FINANCE_PUBLIC_WEB"), None)
+        return bool(src and src.get("enabled") is True and src.get("automatedAccessAllowed") is True)
+    except Exception:
+        return False
 
 # ---------------- تقويم الجلسات ----------------
 def now_cairo(): return dt.datetime.now(CAI) if CAI else dt.datetime.utcnow() + dt.timedelta(hours=3)
@@ -306,11 +317,18 @@ def finish(st, path, dry_run):
 
 if __name__ == "__main__":
     a = set(sys.argv[1:]); fetch = None
-    _sp = os.path.join(ROOT, "config", "sources.json"); _yahoo_on = json.load(open(_sp, encoding="utf-8")).get("yahoo_fallback", True) if os.path.exists(_sp) else True
+    _sp = os.path.join(ROOT, "config", "sources.json")
+    _legacy_yahoo_on = json.load(open(_sp, encoding="utf-8")).get("yahoo_fallback", True) if os.path.exists(_sp) else True
+    _registry_yahoo_allowed = yahoo_automated_access_allowed()
+    _yahoo_on = _legacy_yahoo_on and _registry_yahoo_allowed
     if "--no-yahoo" not in a and _yahoo_on:
         import urllib.request
         def fetch(t):
             req = urllib.request.Request(f"https://query1.finance.yahoo.com/v8/finance/chart/{t}.CA?range=5d&interval=1d", headers={"User-Agent": "Mozilla/5.0"}); return json.load(urllib.request.urlopen(req, timeout=20))
-    s = run(force="--force" in a, no_yahoo="--no-yahoo" in a, dry_run="--dry-run" in a, no_stage1="--no-stage1" in a, yahoo_fetcher=fetch)
+    forced_no_yahoo = "--no-yahoo" in a or not _yahoo_on
+    s = run(force="--force" in a, no_yahoo=forced_no_yahoo, dry_run="--dry-run" in a, no_stage1="--no-stage1" in a, yahoo_fetcher=fetch)
+    if not _registry_yahoo_allowed:
+        note="Yahoo automated fallback disabled by config/data-source-registry.json compliance policy"
+        if note not in s.get("notes", []): s.setdefault("notes", []).append(note)
     print(json.dumps({k: s[k] for k in ("expectedSession", "actualAcceptedSession", "guard", "finalStatus", "coveragePct", "universeCount", "acceptedRows", "staleRows", "quarantinedCount", "historyUpdated", "stage1Prepared", "preparedCandidateCount", "publicationEligible", "notes")}, ensure_ascii=False, indent=1))
     sys.exit({"SUCCESS": 0, "PARTIAL": 0, "ALREADY_CURRENT": 0, "WAITING_DATA": 0, "FAILED": 1}[s["finalStatus"]])
