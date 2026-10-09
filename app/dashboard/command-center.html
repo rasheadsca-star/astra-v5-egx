@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.11 Decision Cockpit</title>
+<title>ASTRA V5.12 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -48,7 +48,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.11 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.12 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -58,7 +58,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.11 LIVE UI</b> · Change Attribution + Daily Brief + Probability Calibration + Decision Gate + Research Basket</div>
+  <div><b>V5.12 LIVE UI</b> · Sector Intelligence + Correlation Control + Daily Brief + Decision Gate + Research Basket</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -71,7 +71,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.11 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.12 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -83,6 +83,29 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 id="scTitle" style="margin:0">Sector Intelligence & Correlation Control — V5.12</h2>
+      <div class="small" id="scNote">Controlled sector taxonomy, current sector strength and 60-session return-correlation controls for the research basket.</div>
+    </div>
+    <span class="badge ready" id="scBadge">DIVERSIFICATION ACTIVE</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="scCoverageLabel">Sector Coverage</div><div class="value" id="scCoverage">-</div></div>
+    <div class="metric"><div class="label" id="scMappingsLabel">Controlled Mappings</div><div class="value" id="scMappings">-</div></div>
+    <div class="metric"><div class="label" id="scPairsLabel">Correlation Pairs</div><div class="value" id="scPairs">-</div></div>
+    <div class="metric"><div class="label" id="scHighPairsLabel">High-Corr Pairs</div><div class="value" id="scHighPairs">-</div></div>
+    <div class="metric"><div class="label" id="scSectorLimitLabel">Max / Sector</div><div class="value">2</div></div>
+    <div class="metric"><div class="label" id="scCorrLimitLabel">Corr Limit</div><div class="value">0.85</div></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="hitem"><div class="k" id="scLeadersLabel">Strongest Sectors</div><div id="scLeaders" style="margin-top:8px"></div></div>
+    <div class="hitem"><div class="k" id="scCorrLabel">Highest Correlations</div><div id="scCorr" style="margin-top:8px"></div></div>
+  </div>
+</div>
 
 <div class="card">
   <div class="v52-header">
@@ -367,7 +390,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.11 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.12 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -537,13 +560,33 @@ async function loadV52(){
     document.getElementById('ctxBreadth').innerText=cm.breadthPct!=null?cm.breadthPct+'%':'-';
     document.getElementById('ctxAdvDec').innerText=(cm.advancing??'-')+' / '+(cm.declining??'-');
     document.getElementById('ctxMedian').innerText=cm.medianChangePct!=null?cm.medianChangePct+'%':'-';
-    document.getElementById('ctxSector').innerText=cs.status==='UNAVAILABLE_NEUTRAL'?(uiLang==='ar'?'محايد / يحتاج بيانات':'NEUTRAL / DATA NEEDED'):(cs.status||'-');
+    document.getElementById('ctxSector').innerText=cs.status==='CONTROLLED_MAP_ACTIVE'?(uiLang==='ar'?'مفعل / خريطة مضبوطة':'ACTIVE / CONTROLLED MAP'):(cs.status==='UNAVAILABLE_NEUTRAL'?(uiLang==='ar'?'محايد / يحتاج بيانات':'NEUTRAL / DATA NEEDED'):(cs.status||'-'));
     const eq=d.entryQualityEngine?.counts||{};
     document.getElementById('eqIdeal').innerText=eq.IDEAL??0;
     document.getElementById('eqEarly').innerText=eq.EARLY??0;
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const sci=d.sectorCorrelationEngine||{}, sct=sci.taxonomy||{}, scc=sci.correlation||{}, sectors=sci.sectorStats||[];
+    document.getElementById('scTitle').innerText=uiLang==='ar'?'ذكاء القطاعات والتحكم في الارتباط — V5.12':'Sector Intelligence & Correlation Control — V5.12';
+    document.getElementById('scNote').innerText=uiLang==='ar'
+      ?'تصنيف قطاعات مضبوط، قياس قوة القطاع الحالية، والتحكم في تكرار المخاطر باستخدام ارتباط عوائد آخر 60 جلسة.'
+      :'Controlled sector taxonomy, current sector strength and 60-session return-correlation controls for the research basket.';
+    document.getElementById('scBadge').innerText=uiLang==='ar'?'التنويع مفعل':'DIVERSIFICATION ACTIVE';
+    document.getElementById('scCoverageLabel').innerText=uiLang==='ar'?'تغطية القطاعات':'Sector Coverage';
+    document.getElementById('scMappingsLabel').innerText=uiLang==='ar'?'خرائط مصنفة':'Controlled Mappings';
+    document.getElementById('scPairsLabel').innerText=uiLang==='ar'?'أزواج الارتباط':'Correlation Pairs';
+    document.getElementById('scHighPairsLabel').innerText=uiLang==='ar'?'ارتباطات مرتفعة':'High-Corr Pairs';
+    document.getElementById('scSectorLimitLabel').innerText=uiLang==='ar'?'أقصى عدد / قطاع':'Max / Sector';
+    document.getElementById('scCorrLimitLabel').innerText=uiLang==='ar'?'حد الارتباط':'Corr Limit';
+    document.getElementById('scLeadersLabel').innerText=uiLang==='ar'?'أقوى القطاعات':'Strongest Sectors';
+    document.getElementById('scCorrLabel').innerText=uiLang==='ar'?'أعلى الارتباطات':'Highest Correlations';
+    document.getElementById('scCoverage').innerText=sct.coveragePct!=null?sct.coveragePct+'%':'-';
+    document.getElementById('scMappings').innerText=sct.symbolMappings??'-';
+    document.getElementById('scPairs').innerText=scc.evaluatedPairs??'-';
+    document.getElementById('scHighPairs').innerText=(scc.highPairs||[]).length;
+    document.getElementById('scLeaders').innerHTML=sectors.slice(0,5).map(x=>'<div style="margin:5px 0"><b>'+esc(x.sector)+'</b> · '+esc(x.strengthScore)+'/100 · '+esc(x.avgChangePct)+'% · '+esc(x.breadthPct)+'%</div>').join('')||'-';
+    document.getElementById('scCorr').innerHTML=(scc.highPairs||[]).slice(0,5).map(x=>'<div style="margin:5px 0"><b>'+esc(x.pair.replace('|',' ↔ '))+'</b> · '+esc(x.correlation)+' · n='+esc(x.overlap)+'</div>').join('')||esc(uiLang==='ar'?'لا توجد أزواج فوق 0.85':'No pairs above 0.85');
     const ca=d.changeAttributionEngine||{}, cah=ca.highlights||{};
     document.getElementById('attrTitle').innerText=uiLang==='ar'?'لماذا تغيّر الترتيب؟ — V5.11':'Why Did It Change? — V5.11';
     document.getElementById('attrNote').innerText=uiLang==='ar'
@@ -621,6 +664,9 @@ async function loadV52(){
         '<th>'+esc(uiLang==='ar'?'الدرجة':'Score')+'</th>'+
         '<th>'+esc(uiLang==='ar'?'جودة الدخول':'Entry Quality')+'</th>'+
         '<th>'+esc(uiLang==='ar'?'R:R':'R:R')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'القطاع':'Sector')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'قوة القطاع':'Sector Strength')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'أعلى ارتباط':'Max Corr')+'</th>'+
         '<th>'+esc(uiLang==='ar'?'الوزن البحثي':'Research Weight')+'</th>'+
         '<th>'+esc(uiLang==='ar'?'التعرض الفعلي':'Effective Exposure')+'</th>'+
         '</tr></thead><tbody>'+
@@ -630,6 +676,9 @@ async function loadV52(){
           '<td>'+esc(x.portfolioSelectionScore)+'</td>'+
           '<td>'+esc(ta(x.entryQuality||'UNKNOWN'))+'</td>'+
           '<td>'+esc(x.rrT2??'-')+'</td>'+
+          '<td>'+esc(x.sector||'-')+'</td>'+
+          '<td>'+esc(x.sectorStrengthScore??'-')+'</td>'+
+          '<td>'+esc(x.maxOpportunityCorrelation??'-')+(x.maxOpportunityCorrelationPeer?' ↔ '+esc(x.maxOpportunityCorrelationPeer):'')+'</td>'+
           '<td>'+esc(x.researchWeightPct??'-')+'%</td>'+
           '<td>'+esc(x.effectiveExposurePct??'-')+'%</td>'+
         '</tr>').join('')+
