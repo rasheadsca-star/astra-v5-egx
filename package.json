@@ -34,7 +34,8 @@
     "trust:archive": "node scripts/archive-trust-snapshot.js",
     "walkforward:validate": "node scripts/walk-forward-validation.js",
     "governance:build": "node scripts/model-governance-engine.js",
-    "risk:override": "node scripts/risk-state-override-engine.js"
+    "risk:override": "node scripts/risk-state-override-engine.js",
+    "release:audit": "node scripts/release-integrity-audit.js --cycles=10"
   },
   "engines": {
     "node": ">=20"
