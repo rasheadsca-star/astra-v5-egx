@@ -1,0 +1,78 @@
+name: WP6 Score & Independence Gate
+
+on:
+  push:
+    branches:
+      - wp6-score-independence
+    paths:
+      - 'config/engine-family-registry.json'
+      - 'scripts/lib/final-score-policy.js'
+      - 'scripts/final-score-validation.js'
+      - 'scripts/final-decision-score-engine.js'
+      - 'scripts/build-decision-cockpit.js'
+      - 'scripts/release-integrity-audit.js'
+      - 'package.json'
+      - 'app/dashboard/command-center.html'
+      - 'docs/SCORE-INDEPENDENCE.md'
+      - '.github/workflows/daily-egx-data-refresh.yml'
+      - '.github/workflows/wp6-score-independence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp6-score-independence-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+
+      - name: Score and engine-family policy tests
+        run: npm run final-score:validate
+
+      - name: Existing Node tests
+        run: npm test
+
+      - name: Existing Python quant tests
+        run: npm run quant:test
+
+      - name: Full build
+        run: npm run build
+
+      - name: Verify generated score contract
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const d=JSON.parse(fs.readFileSync('data/decision-cockpit.json','utf8'));
+          const fd=d.finalDecisionEngine||{};
+          if(fd.missingValuePolicy?.neutralImputationUsed!==false)throw new Error('neutral imputation enabled');
+          if(fd.forwardEvidencePolicy?.includedInFinalScore!==false)throw new Error('global forward evidence remains in score');
+          const all=[...(d.topOpportunities||[]),...(d.watchlist||[]),...(d.rejected||[])];
+          for(const x of all){
+            if(x.finalDecisionCompleteness?.neutralImputationUsed!==false)throw new Error('row imputation flag '+x.ticker);
+            if(!x.finalDecisionSensitivity?.perturbation?.includes('20_PERCENT'))throw new Error('missing sensitivity '+x.ticker);
+            if(new Set(x.engineFamilies||[]).size!==(x.engineFamilies||[]).length)throw new Error('duplicate family '+x.ticker);
+          }
+          if(d?.safety?.executionAllowed!==false||d?.safety?.automaticOrders!==false)throw new Error('execution safety changed');
+          console.log({
+            version:fd.version,
+            completeness:fd.completeness,
+            sensitivity:fd.sensitivityPolicy,
+            gradeCounts:fd.gradeCounts
+          });
+          NODE
+
+      - name: Ten-cycle release audit
+        run: npm run release:audit
