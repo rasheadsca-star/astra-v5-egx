@@ -17,7 +17,10 @@ const requiredFiles = [
   'scripts/lib/technical-indicators.js',
   'scripts/run-node-validation-suite.js',
   'scripts/static-quality-validation.js',
-  'config/node-validation-suite.json'
+  'config/node-validation-suite.json',
+  'scripts/lib/operations-health.js',
+  'scripts/operations-health-engine.js',
+  'docs/health.html'
 ];
 
 const missing = requiredFiles.filter((file) => !fs.existsSync(file));
