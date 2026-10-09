@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {allocateCappedWeights}=require('./lib/portfolio-allocation');
 const IN='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
 
@@ -21,7 +22,6 @@ const maxPairCorrelation=0.85;
 const minFinalScore=62;
 const lowLiquidityCapPct=15;
 const maxSingleWeightPct=30;
-const minSingleWeightPct=8;
 const exposureScale=n(d.market?.exposureScale)??1;
 const pairMatrix=d.sectorCorrelationEngine?.correlation?.pairMatrix||{};
 function pairCorrelation(a,b){
@@ -70,9 +70,9 @@ const diversificationRejected=[];
 
 for(const x of universe){
   if(selected.length>=maxPositions) break;
-  const fk=familyKey(x);
-  const count=familyCounts.get(fk)||0;
-  if(count>=maxSameFamily){diversificationRejected.push({ticker:x.ticker,reason:'ENGINE_FAMILY_CONCENTRATION'});continue;}
+  const families=(x.engineFamilies||[]).length?(x.engineFamilies||[]):['UNKNOWN'];
+  const blockedFamily=families.find(f=>(familyCounts.get(f)||0)>=maxSameFamily);
+  if(blockedFamily){diversificationRejected.push({ticker:x.ticker,reason:'ENGINE_FAMILY_CONCENTRATION',family:blockedFamily});continue;}
   const sector=x.sector||null;
   if(sector && (sectorCounts.get(sector)||0)>=maxSameSector){diversificationRejected.push({ticker:x.ticker,reason:'SECTOR_CONCENTRATION',sector});continue;}
   const correlatedWith=selected.find(s=>{
@@ -81,41 +81,15 @@ for(const x of universe){
   });
   if(correlatedWith){diversificationRejected.push({ticker:x.ticker,reason:'HIGH_CORRELATION',peer:correlatedWith.ticker});continue;}
   selected.push(x);
-  familyCounts.set(fk,count+1);
+  for(const f of families)familyCounts.set(f,(familyCounts.get(f)||0)+1);
   if(sector)sectorCounts.set(sector,(sectorCounts.get(sector)||0)+1);
 }
 
-let rawSum=selected.reduce((s,x)=>s+Math.max(1,n(x.portfolioSelectionScore)||1),0);
-let provisional=selected.map(x=>{
-  let w=rawSum?100*(n(x.portfolioSelectionScore)||1)/rawSum:0;
-  const low=(n(x.liquidityContextScore)??50)<40;
-  if(low) w=Math.min(w,lowLiquidityCapPct);
-  w=Math.min(w,maxSingleWeightPct);
-  return {...x,_weight:w};
-});
-
-// Redistribute remaining weight among uncapped names, but keep total research allocation at 100% of the basket.
-let sum=provisional.reduce((s,x)=>s+x._weight,0);
-let loops=0;
-while(sum<99.9 && loops<10 && provisional.length){
-  const roomers=provisional.filter(x=>{
-    const low=(n(x.liquidityContextScore)??50)<40;
-    const cap=low?lowLiquidityCapPct:maxSingleWeightPct;
-    return x._weight<cap-0.01;
-  });
-  if(!roomers.length) break;
-  const add=(100-sum)/roomers.length;
-  provisional=provisional.map(x=>{
-    const low=(n(x.liquidityContextScore)??50)<40;
-    const cap=low?lowLiquidityCapPct:maxSingleWeightPct;
-    return roomers.includes(x)?{...x,_weight:Math.min(cap,x._weight+add)}:x;
-  });
-  sum=provisional.reduce((s,x)=>s+x._weight,0);
-  loops++;
-}
+const allocation=allocateCappedWeights(selected,{maxSingleWeightPct,lowLiquidityCapPct,lowLiquidityThreshold:40});
+const provisional=selected.map((x,i)=>({...x,_weight:allocation.weights[i]||0}));
 
 const basket=provisional.map((x,i)=>{
-  const weight=selected.length===1?100:r1(x._weight);
+  const weight=r1(x._weight);
   return {
     rank:i+1,
     ticker:x.ticker,
@@ -154,6 +128,7 @@ const excluded=universe
       score:x.portfolioSelectionScore,
       reason:dr?.reason||(selected.length>=maxPositions?'MAX_POSITIONS':'DIVERSIFICATION_LIMIT'),
       peer:dr?.peer||null,
+      family:dr?.family||null,
       sector:dr?.sector||x.sector||null
     };
   });
@@ -166,14 +141,15 @@ d.portfolioSelectionEngine={
   automaticOrders:false,
   policy:{
     maxPositions,
-    maxSameEngineFamilySignature:maxSameFamily,
+    maxSameEngineFamily:maxSameFamily,
     maxSameSector,
     maxPairCorrelation,
     minFinalDecisionScore:minFinalScore,
     maxSingleWeightPct,
     lowLiquidityCapPct,
-    minSingleWeightPct,
     marketExposureScale:exposureScale,
+    allocatedResearchPct:r1(allocation.allocatedPct),
+    unallocatedResearchPct:r1(allocation.unallocatedPct),
     sectorConstraint:'CONTROLLED_MAP_MAX_2_PER_SECTOR',
     correlationConstraint:'MAX_PAIR_CORRELATION_0_85_WHEN_OBSERVED'
   },
@@ -183,7 +159,7 @@ d.portfolioSelectionEngine={
   },
   basket,
   excluded,
-  note:'Research basket only. Controlled sector mappings limit sector concentration; observed high daily-return correlation also blocks duplicate risk. Weights are research weights, not order sizes.'
+  note:'Research basket only. Per-name and low-liquidity caps are never exceeded; any unused allocation remains explicitly unallocated. Engine-family, sector and observed correlation controls reduce duplicate risk. Weights are research weights, not order sizes.'
 };
 
 const basketTickers=new Set(basket.map(x=>x.ticker));
