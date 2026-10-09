@@ -15,6 +15,11 @@ assert.match(daily,/Publish astra-quant\/v1 payload/);
 assert.match(daily,/Build Confluence Pullback V2/);
 assert.match(daily,/npm run cockpit:build/);
 assert.match(daily,/git add -A/);
+assert.match(daily,/data\/source-health\.json/);
+assert.match(daily,/data\/operations-health\.json/);
+assert.match(daily,/docs\/data\/source-health\.json/);
+assert.match(daily,/docs\/data\/operations-health\.json/);
+assert.match(daily,/rebuild_needed=true/);
 assert.match(daily,/git rebase origin\/main/);
 assert.match(daily,/git push origin HEAD:main/);
 
