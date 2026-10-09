@@ -121,8 +121,10 @@ function card(x,runtime){
   const entryHigh=x.entryHigh??p?.entry;
   const entry=(entryLow!=null&&entryHigh!=null&&entryLow!==entryHigh)?fmt(entryLow)+' – '+fmt(entryHigh):fmt(entryHigh??entryLow);
   const blockers=(p?.executionBlockers||[]).slice(0,4);
-  const prob=x.targetAchievement?.t1ProbabilityPct;
+  const calibrated=x.targetAchievement?.calibrated===true;
+  const prob=x.targetAchievement?.t1ProbabilityPct??x.targetAchievement?.t1EstimatePct;
   const probStatus=x.targetAchievement?.status;
+  const probSessions=x.targetAchievement?.distinctSessions;
   return '<article class="card">'+
     '<div class="head"><button class="ticker-link" data-analyze="'+esc(symbol)+'" dir="ltr" title="فتح الشارت والتحليل">'+esc(symbol)+'</button><span class="badge '+cls+'">'+esc(status)+'</span></div>'+
     '<div class="score">Decision Score: <b>'+esc(x.finalDecisionScore??'—')+'</b>/100 · Grade: <b>'+esc(x.finalDecisionGrade??'—')+'</b> · Entry: '+esc(x.entryQuality??'—')+'</div>'+
@@ -132,10 +134,10 @@ function card(x,runtime){
       '<div class="cell"><div class="k">الهدف 1</div><div class="v">'+esc(fmt(x.target1??p?.target1))+'</div></div>'+
       '<div class="cell"><div class="k">الهدف 2</div><div class="v">'+esc(fmt(x.target2??p?.target2))+'</div></div>'+
       '<div class="cell"><div class="k">R:R T2</div><div class="v">'+esc(fmt(x.rrT2??p?.riskReward2))+'</div></div>'+
-      '<div class="cell"><div class="k">T1 Forward</div><div class="v">'+(prob!=null?esc(fmt(prob,1))+'%':'—')+'</div></div>'+
+      '<div class="cell"><div class="k">'+(calibrated?'T1 Validated Prob.':'T1 Estimate')+'</div><div class="v">'+(prob!=null?esc(fmt(prob,1))+'%':'—')+'</div></div>'+
     '</div>'+
     '<div class="paper"><b>Runtime Validation:</b> '+(ready?'<span class="good">جاهز ورقيًا</span>':'<span class="warn">غير جاهز ورقيًا</span>')+
-      (probStatus?'<span class="muted"> · Forward status: '+esc(probStatus)+'</span>':'')+
+      (probStatus?'<span class="muted"> · Forward status: '+esc(probStatus)+(probSessions!=null?' · '+esc(probSessions)+' sessions':'')+'</span>':'')+
       (blockers.length?'<div class="blockers">Blockers: '+esc(blockers.join(' · '))+'</div>':'')+
     '</div></article>';
 }
