@@ -21,7 +21,7 @@ const exposureScale=clamp(n(d.market?.exposureScale)??1,0.25,1);
 const referenceCapital=100000;
 const baseRiskPct=1.0;
 const maxRiskPerPositionPct=1.0;
-const minRiskPerPositionPct=0.20;
+const minRiskPerPositionPct=0;
 const maxPortfolioRiskPct=r(3.0*exposureScale,2);
 
 function volatilityDailyPct(ticker){
@@ -98,7 +98,7 @@ let plans=basket.map(x=>{
   const riskAmountRef=referenceCapital*riskPct/100;
   const sharesByRisk=stopDistance>0?Math.floor(riskAmountRef/stopDistance):0;
   const sharesByExposure=entry>0?Math.floor(referenceCapital*maxPositionPct/100/entry):0;
-  const sharesRef=Math.max(0,Math.min(sharesByRisk,sharesByExposure||sharesByRisk));
+  const sharesRef=(entry>0&&stopDistance>0&&maxPositionPct>0)?Math.max(0,Math.min(sharesByRisk,sharesByExposure)):0;
   const positionValueRef=sharesRef*entry;
   const actualRiskRef=sharesRef*Math.max(0,stopDistance||0);
   return {
@@ -137,7 +137,7 @@ if(totalRisk>maxPortfolioRiskPct && totalRisk>0){
     const riskAmount=referenceCapital*rp/100;
     const byRisk=sd>0?Math.floor(riskAmount/sd):0;
     const byExposure=entry>0?Math.floor(referenceCapital*cap/100/entry):0;
-    const shares=Math.max(0,Math.min(byRisk,byExposure||byRisk));
+    const shares=(entry>0&&sd>0&&cap>0)?Math.max(0,Math.min(byRisk,byExposure)):0;
     return {...x,
       riskBudgetPct:r(rp,3),
       referenceShares:shares,
@@ -161,6 +161,7 @@ d.riskBudgetEngine={
     baseRiskPerTradePct:baseRiskPct,
     maxRiskPerPositionPct,
     minRiskPerPositionPct,
+    riskFloorPolicy:'NO_MINIMUM_FLOOR; risk factors may reduce sizing to zero',
     maxPortfolioRiskPct,
     marketExposureScale:exposureScale,
     sizingEntry:'ENTRY_HIGH_OR_ENTRY_LOW',
@@ -174,7 +175,7 @@ d.riskBudgetEngine={
     referenceMaxLossAtStops:totalRefLoss
   },
   positions:plans,
-  note:'Research-only risk sizing. Position size is the lower of stop-risk sizing and portfolio exposure cap. It scales linearly with user capital; no orders are created.'
+  note:'Research-only theoretical sizing. Position size is the strict lower of stop-risk sizing and portfolio exposure cap; a zero exposure cap produces zero shares. Risk factors never get lifted by a minimum floor. No orders are created.'
 };
 
 const pmap=new Map(plans.map(x=>[x.ticker,x]));
