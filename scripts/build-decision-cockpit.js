@@ -148,6 +148,12 @@ for(const x of map.values()){
   x.families=uniq(x.families);
   x.evidence=uniq(x.evidence);
   x.warnings=uniq(x.warnings);
+  const c2CurrentState=x.engines.confluenceV2?.state;
+  if(c2CurrentState==='ENTRY_READY'||c2CurrentState==='ENTRY_READY_SECONDARY'){
+    const currentC2Warnings=x.engines.confluenceV2?.missingConditions||[];
+    const operationalWarnings=x.warnings.filter(w=>w==='LOW_LIQUIDITY');
+    x.warnings=uniq([...currentC2Warnings,...operationalWarnings]);
+  }
   const quality=Math.max(0,...x.rawScores.filter(Number.isFinite));
   const agreementCount=x.families.length;
   const consensusBonus=Math.max(0,(agreementCount-1)*6);
