@@ -132,6 +132,7 @@ d.sectorCorrelationEngine={
     mediumThreshold:0.70,
     activeTickers:tickers.length,
     evaluatedPairs:Object.values(matrix).filter(x=>x.value!=null).length,
+    pairMatrix:Object.fromEntries(Object.entries(matrix).filter(([,v])=>v.value!=null).map(([k,v])=>[k,{correlation:v.value,overlap:v.n}])),
     highPairs
   },
   note:'Sector constraints use controlled symbol mappings only. Correlation is Pearson correlation of overlapping daily close-to-close returns and is used as a concentration-control signal, not as a forecast.',
