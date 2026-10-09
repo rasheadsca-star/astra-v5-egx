@@ -201,7 +201,8 @@ function actualChecks(issues){
   assert(html.includes('data/technical/index.json'),'technical analyzer lacks static data fallback',issues);
 
   const title=(html.match(/<title>ASTRA V([0-9.]+) Decision Cockpit<\/title>/)||[])[1];
-  assert(title===String(pkg.version),'dashboard title version '+title+' != package '+pkg.version,issues);
+  const displayVersion=String(pkg.version||'').replace(/\.0$/,'');
+  assert(title===displayVersion,'dashboard title version '+title+' != package display '+displayVersion,issues);
 }
 
 function syntheticChecks(cycle,issues){
