@@ -1,10 +1,10 @@
 {
   "name": "ras-egx-astra-v5",
-  "version": "6.5.0",
+  "version": "6.6.0",
   "private": true,
   "scripts": {
     "build": "node scripts/build-check.js && npm run cockpit:build",
-    "test": "node scripts/runtime-validation.js && node scripts/atomic-session-validation.js && node scripts/ucp-validation.js && node scripts/ucp-forward-validation.js && node scripts/ucp-forward-null-metrics-validation.js && node scripts/ucp-morning-evidence-validation.js && node scripts/ucp-meta-label-validation.js && node scripts/unified-opportunity-validation.js && node scripts/hygiene-validation.js && node scripts/quant-validation.js && node scripts/serve-validation.js && node scripts/recommendations-pwa-validation.js && node scripts/execution-contract-validation.js",
+    "test": "node scripts/runtime-validation.js && node scripts/atomic-session-validation.js && node scripts/ucp-validation.js && node scripts/ucp-forward-validation.js && node scripts/ucp-forward-null-metrics-validation.js && node scripts/ucp-morning-evidence-validation.js && node scripts/ucp-meta-label-validation.js && node scripts/unified-opportunity-validation.js && node scripts/hygiene-validation.js && node scripts/quant-validation.js && node scripts/serve-validation.js && node scripts/recommendations-pwa-validation.js && node scripts/execution-contract-validation.js && node scripts/output-ownership-validation.js",
     "data:refresh": "node scripts/data-refresh.js",
     "ucp:forward": "node scripts/ucp-forward-ledger.js cycle",
     "quant:test": "node scripts/run-python.js --cwd quant tests/test_engine.py && node scripts/run-python.js --cwd quant tests/test_daily_update.py && node scripts/run-python.js --cwd quant tests/test_bridge.py && node scripts/run-python.js --cwd quant tests/test_site.py && node scripts/run-python.js quant/tests/test_execution_contract.py",
@@ -40,7 +40,8 @@
     "ledger:events": "node scripts/persistent-evidence-ledger.js",
     "ledger:verify": "node scripts/verify-persistent-ledgers.js",
     "wp1:validate": "node scripts/wp1-ledger-validation.js",
-    "execution:validate": "node scripts/execution-contract-validation.js && node scripts/run-python.js quant/tests/test_execution_contract.py"
+    "execution:validate": "node scripts/execution-contract-validation.js && node scripts/run-python.js quant/tests/test_execution_contract.py",
+    "output:ownership:validate": "node scripts/output-ownership-validation.js"
   },
   "engines": {
     "node": ">=20"
