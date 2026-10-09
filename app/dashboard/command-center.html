@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.1 Decision Cockpit</title>
+<title>ASTRA V6.2 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.1 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.2 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V6.1 TRUST UI</b> · Walk-Forward Validation + Replay Archive + Prediction Ledger + Technical Chart + Outcome Analytics</div>
+  <div><b>V6.2 TRUST UI</b> · Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V6.1 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V6.2 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -119,6 +119,30 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #06b6d4">
+  <div class="v52-header">
+    <div>
+      <h2 id="govTitle" style="margin:0">Model Governance & Reliability — V6.2</h2>
+      <div class="small" id="govNote">Transparent operational/evidence reliability. This score is not probability of profit and not expected return.</div>
+    </div>
+    <span class="badge warn" id="govTier">CHECKING</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="govScoreLabel">ASTRA Reliability</div><div class="value" id="govScore">-</div></div>
+    <div class="metric"><div class="label" id="govGateLabel">Evidence Gate</div><div class="value" id="govGate">-</div></div>
+    <div class="metric"><div class="label" id="govLedgerLabel">Ledger Chain</div><div class="value" id="govLedger">-</div></div>
+    <div class="metric"><div class="label" id="govReplayLabel">Replay Sessions</div><div class="value" id="govReplay">-</div></div>
+    <div class="metric"><div class="label" id="govWfLabel">Valid W-F Folds</div><div class="value" id="govWf">-</div></div>
+    <div class="metric"><div class="label" id="govAutoLabel">Automatic Execution</div><div class="value gate-block">OFF</div></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="hitem"><div class="k" id="govChecksLabel">Governance Checks</div><div id="govChecks" style="margin-top:8px"></div></div>
+    <div class="hitem"><div class="k" id="govBlockersLabel">Current Limitations</div><div id="govBlockers" style="margin-top:8px"></div></div>
+  </div>
+  <div class="small" id="govMeaning" style="margin-top:12px"></div>
+</div>
 
 <div class="card" style="border:1px solid #14b8a6">
   <div class="v52-header">
@@ -570,7 +594,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.1 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V6.2 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -965,6 +989,38 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const gov=d.modelGovernanceEngine||{}, gr=gov.reliability||{}, ges=gov.evidenceState||{}, grg=gov.releaseGate||{};
+    const tierAr={HIGH:'مرتفع',GOOD:'جيد',BUILDING:'قيد البناء',LOW:'منخفض'};
+    const checkAr={DATA_INTEGRITY:'سلامة البيانات الذرية',DATA_FRESHNESS:'حداثة البيانات',LEDGER_CHAIN:'سلسلة سجل التوقعات',REPLAY_COVERAGE:'تغطية Replay',WALK_FORWARD:'التحقق المتقدم زمنيًا',PROBABILITY_EVIDENCE:'أدلة الاحتمالات المستقبلية',OUTCOME_SAMPLE:'حجم عينة النتائج',SECTOR_COVERAGE:'تغطية تصنيف القطاعات',MONITORING_SAFETY:'أمان المراقبة',MODEL_DRIFT:'حارس الانحراف'};
+    const blockerAr={ATOMIC_DATA_INTEGRITY_NOT_VERIFIED:'سلامة البيانات الذرية غير مؤكدة',LEDGER_CHAIN_NOT_VERIFIED:'سلسلة سجل التوقعات غير مؤكدة',REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD:'تغطية Replay أقل من أول Fold',MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED:'لم يتم إثبات Walk-Forward متعدد الـ folds بعد',FORWARD_PROBABILITY_SAMPLE_SMALL:'عينة الاحتمالات المستقبلية صغيرة',STALE_DATA:'البيانات قديمة',DRIFT_GUARD_ACTIVE:'حارس الانحراف مفعل'};
+    document.getElementById('govTitle').innerText=uiLang==='ar'?'حوكمة النموذج ودرجة الموثوقية — V6.2':'Model Governance & Reliability — V6.2';
+    document.getElementById('govNote').innerText=uiLang==='ar'
+      ?'درجة شفافة لجودة التشغيل والأدلة. هذا الرقم ليس احتمال ربح وليس عائدًا متوقعًا.'
+      :'Transparent operational/evidence reliability. This score is not probability of profit and not expected return.';
+    document.getElementById('govTier').innerText=uiLang==='ar'?(tierAr[gr.tier]||gr.tier||'-'):(gr.tier||'-');
+    document.getElementById('govTier').className='badge '+(gr.tier==='HIGH'?'ready':gr.tier==='GOOD'?'ready':gr.tier==='BUILDING'?'warn':'blocked');
+    document.getElementById('govScoreLabel').innerText=uiLang==='ar'?'موثوقية ASTRA':'ASTRA Reliability';
+    document.getElementById('govGateLabel').innerText=uiLang==='ar'?'بوابة الأدلة':'Evidence Gate';
+    document.getElementById('govLedgerLabel').innerText=uiLang==='ar'?'سلسلة السجل':'Ledger Chain';
+    document.getElementById('govReplayLabel').innerText=uiLang==='ar'?'جلسات Replay':'Replay Sessions';
+    document.getElementById('govWfLabel').innerText=uiLang==='ar'?'Folds Walk-Forward صالحة':'Valid W-F Folds';
+    document.getElementById('govAutoLabel').innerText=uiLang==='ar'?'التنفيذ الآلي':'Automatic Execution';
+    document.getElementById('govChecksLabel').innerText=uiLang==='ar'?'فحوص الحوكمة':'Governance Checks';
+    document.getElementById('govBlockersLabel').innerText=uiLang==='ar'?'القيود الحالية':'Current Limitations';
+    document.getElementById('govScore').innerText=gr.score!=null?gr.score+'/100':'-';
+    document.getElementById('govGate').innerText=grg.status?grg.status.replaceAll('_',' '):'-';
+    document.getElementById('govLedger').innerText=ges.ledgerChainStatus||'-';
+    document.getElementById('govReplay').innerText=ges.replaySessions??0;
+    document.getElementById('govWf').innerText=ges.validWalkForwardFolds??0;
+    document.getElementById('govChecks').innerHTML=(gov.checks||[]).map(x=>
+      '<div style="margin:7px 0"><b>'+esc(uiLang==='ar'?(checkAr[x.id]||x.label):x.label)+'</b> · '+esc(x.score)+'/100 · '+esc(x.status)+'</div>'
+    ).join('')||'-';
+    document.getElementById('govBlockers').innerHTML=(gov.blockers||[]).length
+      ?(gov.blockers||[]).map(x=>'<div style="margin:7px 0" class="gate-block">• '+esc(uiLang==='ar'?(blockerAr[x]||x):x.replaceAll('_',' '))+'</div>').join('')
+      :'<div class="gate-pass">'+esc(uiLang==='ar'?'لا توجد قيود حوكمة رئيسية حالياً.':'No major governance limitations currently.')+'</div>';
+    document.getElementById('govMeaning').innerText=uiLang==='ar'
+      ?'مهم: Reliability Score يقيس سلامة البيانات، قوة الأدلة، التحقق المستقبلي، سلامة السجل والتغطية. لا يقيس فرصة ربح الصفقة.'
+      :'Important: Reliability Score measures data integrity, evidence strength, forward validation, ledger integrity and coverage. It does not measure trade win probability.';
     const wf=d.walkForwardValidationEngine||{}, wfc=wf.coverage||{}, wfo=wf.outOfSample||{}, wfg=wf.governance||{};
     const wfAr={WAITING_FOR_MINIMUM_SESSIONS:'بانتظار الحد الأدنى من الجلسات',WAITING_FOR_RESOLVED_TEST_OUTCOMES:'بانتظار نتائج اختبار محسومة',PRELIMINARY:'مبدئي',ACTIVE:'نشط'};
     document.getElementById('wfTitle').innerText=uiLang==='ar'?'التحقق المتقدم زمنيًا — V6.1':'Walk-Forward Validation — V6.1';
