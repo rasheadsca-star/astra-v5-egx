@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.15 Decision Cockpit</title>
+<title>ASTRA V5.16 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -44,6 +44,28 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 .risk-input{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 .risk-input input{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 11px;width:180px;font-weight:700}
 .risk-input button{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 12px;cursor:pointer}
+.stock-link{background:none;border:0;padding:0;color:#93c5fd;font:inherit;font-weight:700;cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.stock-link:hover{color:#bfdbfe}
+.ta-controls{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin-top:14px}
+.ta-controls label{font-size:12px;color:#94a3b8;display:block;margin-bottom:5px}
+.ta-controls select,.ta-controls input{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 11px;min-width:210px}
+.ta-controls button{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:10px 14px;cursor:pointer}
+.ta-modal{display:none;position:fixed;inset:0;background:rgba(2,6,23,.86);z-index:9999;padding:24px;overflow:auto}
+.ta-modal.open{display:block}
+.ta-shell{max-width:1400px;margin:0 auto;background:#0b1220;border:1px solid #334155;border-radius:16px;padding:18px}
+.ta-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ta-close{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:8px 12px;cursor:pointer}
+.ta-chart-wrap{background:#070d18;border:1px solid #25324a;border-radius:12px;margin-top:14px;padding:10px;overflow:auto}
+.ta-chart-wrap svg{width:100%;min-width:780px;height:520px;display:block}
+.ta-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:#cbd5e1;margin:8px 0}
+.ta-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:12px}
+.ta-kpi{background:#101827;padding:11px;border-radius:9px}
+.ta-kpi .k{font-size:10px;color:#94a3b8;text-transform:uppercase}.ta-kpi .v{font-weight:700;margin-top:5px}
+.ta-analysis{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-top:12px}
+.ta-panel{background:#101827;border-radius:10px;padding:14px}
+.ta-toggle{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;font-size:12px}
+.ta-toggle label{display:flex;gap:5px;align-items:center}
+@media(max-width:900px){.ta-kpis{grid-template-columns:repeat(2,1fr)}.ta-analysis{grid-template-columns:1fr}.ta-modal{padding:8px}.ta-shell{padding:12px}}
 html[dir="rtl"] body{text-align:right}
 html[dir="rtl"] td,html[dir="rtl"] th{text-align:right}
 html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
@@ -51,7 +73,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.15 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.16 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -61,7 +83,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.15 LIVE UI</b> · Outcome Analytics + Monitoring + Risk Budget + Sector Intelligence + Decision Gate</div>
+  <div><b>V5.16 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -74,7 +96,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.15 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -90,6 +112,22 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #38bdf8">
+  <div class="v52-header">
+    <div>
+      <h2 id="taLaunchTitle" style="margin:0">Professional Technical Chart & Stock Analyzer — V5.16</h2>
+      <div class="small" id="taLaunchNote">Choose any covered EGX stock or click a stock name anywhere in the cockpit to open candlesticks with Fibonacci, price channel, support/resistance and ASTRA technical scenarios.</div>
+    </div>
+    <span class="badge ready">TECHNICAL LAB</span>
+  </div>
+  <div class="ta-controls">
+    <div><label id="taSymbolLabel" for="taSymbol">Stock</label><select id="taSymbol"><option value="">Loading symbols...</option></select></div>
+    <button id="taAnalyze" type="button">Analyze Stock</button>
+    <span class="small" id="taCoverage">Loading coverage...</span>
+  </div>
+</div>
 
 <div class="card" style="border:1px solid #22c55e">
   <div class="v52-header">
@@ -477,7 +515,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.15 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.16 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -549,7 +587,8 @@ function applyLanguage(lang,reloadDynamic=true){
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
-    loadV52(); loadProspective(); loadSignals(); loadQuant();
+    loadStockUniverse();
+loadV52(); loadProspective(); loadSignals(); loadQuant();
   }
 }
 function statusText(v){
@@ -660,7 +699,7 @@ function renderRiskSizing(){
       '<th>'+esc(uiLang==='ar'?'أقصى خسارة عند الوقف':'Max Loss @ Stop')+'</th>'+
       '</tr></thead><tbody>'+
       rows.map(x=>'<tr>'+
-        '<td><b>'+esc(x.ticker)+'</b></td>'+
+        '<td>'+stockLink(x.ticker)+'</td>'+
         '<td>'+esc(priceCell(x.entryReference))+'</td>'+
         '<td>'+esc(priceCell(x.stop))+'</td>'+
         '<td>'+esc(x.stopDistancePct!=null?x.stopDistancePct+'%':'-')+'</td>'+
@@ -673,6 +712,119 @@ function renderRiskSizing(){
       '</tbody></table>'
     :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد مراكز مؤهلة للحجم حاليًا.':'No positions currently eligible for sizing.')+'</span>';
 }
+
+let currentTA=null;
+function stockLink(ticker,label){
+  const t=String(ticker||'').trim();
+  return '<button type="button" class="stock-link" data-stock="'+esc(t)+'">'+esc(label||t)+'</button>';
+}
+function taNum(v,d=2){const x=Number(v);return Number.isFinite(x)?x.toFixed(d):'-'}
+function taEscText(s){return esc(String(s??''))}
+function taSma(bars,p){
+  return bars.map((b,i)=>i<p-1?null:bars.slice(i-p+1,i+1).reduce((s,x)=>s+Number(x.close||0),0)/p);
+}
+function taPath(vals,x,y){
+  let d=''; vals.forEach((v,i)=>{if(v==null||!Number.isFinite(v))return;d+=(d?' L ':'M ')+x(i)+' '+y(v)});return d;
+}
+function renderTechnicalChart(data){
+  currentTA=data;
+  const svg=document.getElementById('taChart');
+  const bars=(data.bars||[]).slice(-90);
+  if(!bars.length){svg.innerHTML='<text x="30" y="50" fill="#f87171">No chart data</text>';return}
+  const W=1200,H=520,pad={l:56,r:74,t:24,b:42};
+  const fibOn=document.getElementById('showFib').checked, chOn=document.getElementById('showChannel').checked, srOn=document.getElementById('showSR').checked, maOn=document.getElementById('showMA').checked;
+  const overlays=[];
+  if(fibOn)(data.fibonacci?.levels||[]).forEach(z=>overlays.push(Number(z.price)));
+  if(srOn)[...(data.supportResistance?.supports||[]),...(data.supportResistance?.resistances||[])].forEach(z=>overlays.push(Number(z.price)));
+  if(chOn&&data.channel)overlays.push(Number(data.channel.upperStart),Number(data.channel.upperEnd),Number(data.channel.lowerStart),Number(data.channel.lowerEnd));
+  const raw=[...bars.flatMap(b=>[Number(b.high),Number(b.low)]),...overlays].filter(Number.isFinite);
+  let min=Math.min(...raw),max=Math.max(...raw);const extra=(max-min)*.06||1;min-=extra;max+=extra;
+  const x=i=>pad.l+i*(W-pad.l-pad.r)/Math.max(1,bars.length-1);
+  const y=v=>pad.t+(max-v)*(H-pad.t-pad.b)/(max-min);
+  const cw=Math.max(2,Math.min(9,(W-pad.l-pad.r)/bars.length*.65));
+  let out='<rect x="0" y="0" width="'+W+'" height="'+H+'" fill="#070d18"/>';
+  for(let k=0;k<=5;k++){const yy=pad.t+k*(H-pad.t-pad.b)/5,price=max-k*(max-min)/5;out+='<line x1="'+pad.l+'" x2="'+(W-pad.r)+'" y1="'+yy+'" y2="'+yy+'" stroke="#1e293b" stroke-width="1"/><text x="'+(W-pad.r+8)+'" y="'+(yy+4)+'" fill="#94a3b8" font-size="11">'+taNum(price,2)+'</text>'}
+  bars.forEach((b,i)=>{
+    const o=Number(b.open),h=Number(b.high),l=Number(b.low),c=Number(b.close),xx=x(i),up=c>=o,col=up?'#22c55e':'#ef4444';
+    out+='<line x1="'+xx+'" x2="'+xx+'" y1="'+y(h)+'" y2="'+y(l)+'" stroke="'+col+'" stroke-width="1"/>';
+    const top=y(Math.max(o,c)),bot=y(Math.min(o,c));out+='<rect x="'+(xx-cw/2)+'" y="'+top+'" width="'+cw+'" height="'+Math.max(1,bot-top)+'" fill="'+col+'" opacity=".9"/>';
+  });
+  if(maOn){
+    const s20=taSma(bars,20),s50=taSma(bars,50);
+    out+='<path d="'+taPath(s20,x,y)+'" fill="none" stroke="#f59e0b" stroke-width="2"/>';
+    out+='<path d="'+taPath(s50,x,y)+'" fill="none" stroke="#8b5cf6" stroke-width="2"/>';
+  }
+  if(fibOn)(data.fibonacci?.levels||[]).forEach(z=>{const yy=y(Number(z.price));out+='<line x1="'+pad.l+'" x2="'+(W-pad.r)+'" y1="'+yy+'" y2="'+yy+'" stroke="#38bdf8" stroke-dasharray="5 5" opacity=".62"/><text x="'+(pad.l+5)+'" y="'+(yy-3)+'" fill="#7dd3fc" font-size="10">Fib '+Math.round(Number(z.ratio)*100)+'% · '+taNum(z.price,2)+'</text>'});
+  if(srOn){
+    (data.supportResistance?.supports||[]).forEach(z=>{const yy=y(Number(z.price));out+='<line x1="'+pad.l+'" x2="'+(W-pad.r)+'" y1="'+yy+'" y2="'+yy+'" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="10 4"/><text x="'+(W-pad.r-120)+'" y="'+(yy-3)+'" fill="#86efac" font-size="10">S '+taNum(z.price,2)+' ×'+z.touches+'</text>'});
+    (data.supportResistance?.resistances||[]).forEach(z=>{const yy=y(Number(z.price));out+='<line x1="'+pad.l+'" x2="'+(W-pad.r)+'" y1="'+yy+'" y2="'+yy+'" stroke="#f87171" stroke-width="1.5" stroke-dasharray="10 4"/><text x="'+(W-pad.r-120)+'" y="'+(yy-3)+'" fill="#fca5a5" font-size="10">R '+taNum(z.price,2)+' ×'+z.touches+'</text>'});
+  }
+  if(chOn&&data.channel){
+    const c=data.channel,N=bars.length-1,scale=bars.length/Math.max(1,c.lookback||60), xs=x(Math.max(0,bars.length-(c.lookback||60))),xe=x(N);
+    const lines=[[c.upperStart,c.upperEnd,'#60a5fa'],[c.centerStart,c.centerEnd,'#94a3b8'],[c.lowerStart,c.lowerEnd,'#60a5fa']];
+    lines.forEach(q=>{out+='<line x1="'+xs+'" y1="'+y(Number(q[0]))+'" x2="'+xe+'" y2="'+y(Number(q[1]))+'" stroke="'+q[2]+'" stroke-width="1.7" opacity=".75"/>'});
+  }
+  const step=Math.max(1,Math.floor(bars.length/6));
+  bars.forEach((b,i)=>{if(i%step===0||i===bars.length-1)out+='<text x="'+x(i)+'" y="'+(H-14)+'" text-anchor="middle" fill="#94a3b8" font-size="10">'+taEscText(b.date.slice(5))+'</text>'});
+  svg.innerHTML=out;
+}
+function renderTechnicalAnalysis(data){
+  document.getElementById('taTitle').innerText=(data.ticker||'')+' · '+(data.name||'');
+  document.getElementById('taSub').innerText=(uiLang==='ar'?'جلسة ':'Session ')+(data.session||'-')+(data.delayed?(uiLang==='ar'?' · بيانات متأخرة':' · delayed data'):'');
+  const i=data.indicators||{},a=data.technicalAssessment||{},c=data.astraContext||{};
+  const kpis=[
+    [uiLang==='ar'?'آخر سعر':'Last',taNum(i.last,2)],
+    ['SMA20',taNum(i.sma20,2)],['SMA50',taNum(i.sma50,2)],['RSI14',taNum(i.rsi14,1)],
+    [uiLang==='ar'?'ATR %':'ATR %',i.atrPct!=null?taNum(i.atrPct,2)+'%':'-'],
+    [uiLang==='ar'?'التقييم الفني':'Technical Score',a.score!=null?taNum(a.score,1)+'/100':'-']
+  ];
+  document.getElementById('taKpis').innerHTML=kpis.map(x=>'<div class="ta-kpi"><div class="k">'+esc(x[0])+'</div><div class="v">'+esc(x[1])+'</div></div>').join('');
+  const outAr={BULLISH_BIAS:'ميل صاعد',BEARISH_BIAS:'ميل هابط',NEUTRAL_MIXED:'محايد / مختلط'};
+  const reasonAr={PRICE_ABOVE_SMA20:'السعر أعلى SMA20',PRICE_BELOW_SMA20:'السعر أسفل SMA20',SMA20_ABOVE_SMA50:'SMA20 أعلى SMA50',SMA20_BELOW_SMA50:'SMA20 أسفل SMA50',RISING_PRICE_CHANNEL:'قناة سعرية صاعدة',FALLING_PRICE_CHANNEL:'قناة سعرية هابطة',RSI_POSITIVE:'RSI إيجابي',RSI_OVERBOUGHT:'RSI مرتفع',RSI_WEAK:'RSI ضعيف'};
+  document.getElementById('taAssessmentTitle').innerText=uiLang==='ar'?'التقييم الفني':'Technical Assessment';
+  document.getElementById('taAssessment').innerHTML=
+    '<div><b>'+esc(uiLang==='ar'?(outAr[a.outlook]||a.outlook||'-'):(a.outlook||'-').replaceAll('_',' '))+'</b> · '+esc(a.score??'-')+'/100</div>'+
+    '<div class="small" style="margin-top:8px">'+esc((a.reasons||[]).map(x=>uiLang==='ar'?(reasonAr[x]||x):x.replaceAll('_',' ')).join(' · ')||'-')+'</div>'+
+    (c.finalDecisionScore!=null?'<div style="margin-top:10px">'+esc(uiLang==='ar'?'ASTRA Final Score: ':'ASTRA Final Score: ')+esc(c.finalDecisionScore)+'/100 · '+esc(c.grade||'-')+' · '+esc(c.entryQuality||'-')+'</div>':'');
+  const s=data.scenario||{},sr=data.supportResistance||{};
+  document.getElementById('taScenarioTitle').innerText=uiLang==='ar'?'خريطة السيناريوهات':'Scenario Map';
+  document.getElementById('taScenario').innerHTML=
+    '<div><b>'+esc(uiLang==='ar'?'سيناريو إيجابي: ':'Bullish trigger: ')+'</b>'+esc(taNum(s.bullishTrigger,2))+' → '+esc(taNum(s.bullishObjective,2))+'</div>'+
+    '<div style="margin-top:7px"><b>'+esc(uiLang==='ar'?'النطاق المحايد: ':'Neutral range: ')+'</b>'+esc(taNum(s.neutralRangeLow,2))+' – '+esc(taNum(s.neutralRangeHigh,2))+'</div>'+
+    '<div style="margin-top:7px"><b>'+esc(uiLang==='ar'?'سيناريو سلبي: ':'Bearish trigger: ')+'</b>'+esc(taNum(s.bearishTrigger,2))+' → '+esc(taNum(s.bearishObjective,2))+'</div>'+
+    '<div class="small" style="margin-top:10px">'+esc(uiLang==='ar'?'هذه مستويات فنية شرطية وليست ضمانًا لحركة السعر.':'These are conditional technical levels, not guaranteed price forecasts.')+'</div>';
+  document.getElementById('taLegend').innerHTML=
+    '<span>🟩 '+esc(uiLang==='ar'?'شمعة صاعدة':'Up candle')+'</span><span>🟥 '+esc(uiLang==='ar'?'شمعة هابطة':'Down candle')+'</span><span>— SMA20</span><span>— SMA50</span><span>⋯ Fibonacci</span><span>━ '+esc(uiLang==='ar'?'دعم/مقاومة':'Support/Resistance')+'</span>';
+  document.getElementById('taDisclaimer').innerText=uiLang==='ar'
+    ?'تحليل بحثي مبني على البيانات التاريخية المتاحة. القناة السعرية انحدار خطي ±2σ، ومستويات الدعم/المقاومة ناتجة عن Pivot clustering. التنفيذ الآلي متوقف.'
+    :'Research analysis from available historical data. Price channel is linear regression ±2σ; support/resistance uses pivot clustering. Automatic execution is OFF.';
+  renderTechnicalChart(data);
+}
+async function openStockAnalysis(ticker){
+  if(!ticker)return;
+  const modal=document.getElementById('taModal');
+  modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+  document.getElementById('taTitle').innerText=ticker+' · '+(uiLang==='ar'?'جاري التحليل...':'Analyzing...');
+  document.getElementById('taSub').innerText='';
+  document.getElementById('taKpis').innerHTML='';
+  document.getElementById('taChart').innerHTML='<text x="40" y="60" fill="#94a3b8">'+(uiLang==='ar'?'تحميل البيانات الفنية...':'Loading technical data...')+'</text>';
+  try{
+    const data=await api('/api/stock-analysis?symbol='+encodeURIComponent(ticker));
+    if(!data.success)throw new Error(data.error||'Analysis unavailable');
+    renderTechnicalAnalysis(data);
+  }catch(e){
+    document.getElementById('taChart').innerHTML='<text x="40" y="60" fill="#f87171">'+taEscText(e.message||'Analysis unavailable')+'</text>';
+  }
+}
+async function loadStockUniverse(){
+  try{
+    const data=await api('/api/stock-analysis');
+    const sel=document.getElementById('taSymbol');
+    sel.innerHTML=(data.symbols||[]).map(x=>'<option value="'+esc(x.ticker)+'">'+esc(x.ticker+' — '+(x.name||x.ticker))+'</option>').join('');
+    document.getElementById('taCoverage').innerText=(data.symbols||[]).length+' '+(uiLang==='ar'?'سهم مغطى':'covered stocks')+' · '+(data.session||'-')+(data.delayed?' · delayed':'');
+  }catch(e){document.getElementById('taCoverage').innerText=uiLang==='ar'?'تعذر تحميل قائمة الأسهم':'Unable to load stock list'}
+}
+
 async function loadV52(){
   try{
     const d=await api('/data/decision-cockpit.json').catch(()=>api('/docs/data/decision-cockpit.json'));
@@ -982,7 +1134,7 @@ async function loadV52(){
       const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
       const fam=(x.engineFamilies||[]).map(v=>'<span class="v52-pill">'+esc(v)+'</span>').join('');
       return '<div class="v52-card">'+
-        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><div><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span> <span class="badge '+(x.finalDecisionGrade==='A+'||x.finalDecisionGrade==='A'?'ready':x.finalDecisionGrade==='REJECT'?'blocked':'warn')+'">'+esc(x.finalDecisionGrade||'-')+'</span> '+(x.portfolioSelected?'<span class="badge ready">'+esc(uiLang==='ar'?'ضمن السلة':'IN BASKET')+'</span>':'')+'</div></div>'+
+        '<div class="v52-header"><h3>'+stockLink(x.ticker)+'</h3><div><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span> <span class="badge '+(x.finalDecisionGrade==='A+'||x.finalDecisionGrade==='A'?'ready':x.finalDecisionGrade==='REJECT'?'blocked':'warn')+'">'+esc(x.finalDecisionGrade||'-')+'</span> '+(x.portfolioSelected?'<span class="badge ready">'+esc(uiLang==='ar'?'ضمن السلة':'IN BASKET')+'</span>':'')+'</div></div>'+
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
@@ -1053,7 +1205,7 @@ async function loadSignals(){
           const selected=x.selectedByUcp===true?' ★':'';
           return '<tr>'+
             '<td>'+esc(x.unifiedRank)+'</td>'+
-            '<td><b>'+esc(x.ticker)+selected+'</b></td>'+
+            '<td>'+stockLink(x.ticker,x.ticker+selected)+'</td>'+
             '<td>'+sourceBadge(x.source)+'</td>'+
             '<td><b>'+scoreCell(x.unifiedScore)+'</b></td>'+
             '<td>'+scoreCell(x.technicalScore)+'</td>'+
@@ -1075,7 +1227,7 @@ async function loadSignals(){
     document.getElementById('signals').innerHTML=rows.length
       ? rows.map(x=>{
           return '<tr>'+
-            '<td><b>'+esc(x.symbol)+'</b></td>'+
+            '<td>'+stockLink(x.symbol)+'</td>'+
             '<td class="buy">'+esc(x.signal)+'</td>'+
             '<td>'+esc(x.entry)+'</td>'+
             '<td>'+esc(x.target1)+'</td>'+
@@ -1092,7 +1244,7 @@ async function loadSignals(){
     document.getElementById('watchlist').innerHTML=watch.length
       ? '<table><thead><tr><th>Symbol</th><th>Status</th><th>Confidence</th><th>Risk</th><th>Reason</th></tr></thead><tbody>'+
         watch.map(x=>'<tr>'+
-          '<td><b>'+esc(x.symbol)+'</b></td>'+
+          '<td>'+stockLink(x.symbol)+'</td>'+
           '<td class="watch">'+esc(uiLang==='ar'?'مراقبة':'WATCH')+'</td>'+
           '<td>'+esc(x.confidence)+'</td>'+
           '<td>'+esc(x.riskLevel)+'</td>'+
@@ -1181,6 +1333,14 @@ async function loadQuant(){
   }
 }
 
+document.addEventListener('click',e=>{
+  const b=e.target.closest?.('[data-stock]');
+  if(b)openStockAnalysis(b.getAttribute('data-stock'));
+});
+document.getElementById('taAnalyze').addEventListener('click',()=>openStockAnalysis(document.getElementById('taSymbol').value));
+document.getElementById('taClose').addEventListener('click',()=>{const m=document.getElementById('taModal');m.classList.remove('open');m.setAttribute('aria-hidden','true')});
+document.getElementById('taModal').addEventListener('click',e=>{if(e.target.id==='taModal'){e.currentTarget.classList.remove('open');e.currentTarget.setAttribute('aria-hidden','true')}});
+['showFib','showChannel','showSR','showMA'].forEach(id=>document.getElementById(id).addEventListener('change',()=>{if(currentTA)renderTechnicalChart(currentTA)}));
 document.getElementById('languageSelect').addEventListener('change',e=>applyLanguage(e.target.value,true));
 document.getElementById('capitalApply').addEventListener('click',renderRiskSizing);
 document.getElementById('capitalInput').addEventListener('change',renderRiskSizing);
@@ -1194,5 +1354,34 @@ setInterval(loadProspective,60000);
 setInterval(loadSignals,60000);
 setInterval(loadQuant,60000);
 </script>
+
+<div class="ta-modal" id="taModal" aria-hidden="true">
+  <div class="ta-shell" role="dialog" aria-modal="true" aria-labelledby="taTitle">
+    <div class="ta-head">
+      <div>
+        <h2 id="taTitle" style="margin:0">Technical Analysis</h2>
+        <div class="small" id="taSub">-</div>
+      </div>
+      <button class="ta-close" id="taClose" type="button">Close</button>
+    </div>
+    <div class="ta-kpis" id="taKpis"></div>
+    <div class="ta-toggle">
+      <label><input type="checkbox" id="showFib" checked> Fibonacci</label>
+      <label><input type="checkbox" id="showChannel" checked> Price Channel</label>
+      <label><input type="checkbox" id="showSR" checked> Support / Resistance</label>
+      <label><input type="checkbox" id="showMA" checked> SMA20 / SMA50</label>
+    </div>
+    <div class="ta-chart-wrap">
+      <svg id="taChart" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-label="Technical price chart"></svg>
+    </div>
+    <div class="ta-legend" id="taLegend"></div>
+    <div class="ta-analysis">
+      <div class="ta-panel"><h3 id="taAssessmentTitle">Technical Assessment</h3><div id="taAssessment"></div></div>
+      <div class="ta-panel"><h3 id="taScenarioTitle">Scenario Map</h3><div id="taScenario"></div></div>
+    </div>
+    <div class="small" id="taDisclaimer" style="margin-top:12px"></div>
+  </div>
+</div>
+
 </body>
 </html>
