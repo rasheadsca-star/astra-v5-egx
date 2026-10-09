@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "astra-release-freeze/v1",
+  "release": "ASTRA V6.11",
+  "packageVersion": "6.11.0",
+  "codeFreeze": true,
+  "frozenAt": "2026-10-09T21:18:15Z",
+  "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
+  "stableBranch": "release-v6.11-stable",
+  "production": {
+    "provider": "Vercel",
+    "deploymentId": "dpl_BzvJHa47X6CtKyMrjuACHy1XV4Uf",
+    "stableUrl": "https://astra-v5-egx.vercel.app",
+    "recommendationsUrl": "https://astra-v5-egx.vercel.app/recommendations",
+    "readyState": "READY"
+  },
+  "baseline": {
+    "session": "2026-10-07",
+    "replaySessionCount": 1,
+    "predictionLedgerRecords": 1,
+    "snapshotSha256": "f931d52e08586bee704a5977d11f0ba9b9c0650319ea2203804f25faaa8f13db",
+    "predictionRecordHash": "656c18d62e54a3ba6c81b146af37802c4f4bb38a648675dc315e8d049e350b97",
+    "captureTiming": "LATE_CAPTURE",
+    "recordedForwardEligible": false
+  },
+  "liveAcceptance": {
+    "requiredDistinctSessions": 2,
+    "sessionRule": "First two distinct replay sessions strictly after baseline.session",
+    "requireRecordedForwardEligible": true,
+    "requireCaptureTiming": "ON_SESSION_AFTER_CLOSE",
+    "requireReplaySnapshot": true,
+    "requirePredictionLedgerLink": true,
+    "requireEvidenceEvents": true,
+    "requireProspectiveEvidence": true,
+    "requireAtomicFingerprint": true,
+    "requireHashChainsVerified": true,
+    "requireNoDuplicateSessions": true,
+    "requireBaselineImmutable": true,
+    "requireExecutionSafetyOff": true
+  },
+  "freezePolicy": {
+    "purpose": "Collect uncontaminated live evidence before model/score/data-source logic changes.",
+    "automaticExecution": false,
+    "strategyChangesAllowed": false,
+    "scoringChangesAllowed": false,
+    "executionContractChangesAllowed": false,
+    "dataSourceLogicChangesAllowed": false,
+    "emergencyUnfreeze": "Requires an explicit PR that documents the reason and resets the live-acceptance window."
+  }
+}
