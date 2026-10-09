@@ -43,6 +43,7 @@ const wf=read('data/walk-forward-validation.json',{});
 const gov=read('data/model-governance.json',{});
 const tech=read('data/technical/index.json',{symbols:[]});
 const engineRegistry=read('config/engine-family-registry.json',{families:[]});
+const ops=read('data/operations-health.json',{});
 const html=txt('app/dashboard/command-center.html');
 const buildChain=String(pkg.scripts?.['cockpit:build']||'');
 
@@ -211,6 +212,15 @@ function actualChecks(issues){
     assert((wf.outOfSample?.resolved||0)>=30,'calibration claim with <30 OOS resolved',issues);
     assert((wf.outOfSample?.distinctSessions||0)>=10,'calibration claim with <10 OOS distinct sessions',issues);
   }
+
+  assert(ops.schemaVersion==='astra-operations-health/v1','operations health artifact missing or wrong schema',issues);
+  assert(ops.session===d.session,'operations health session mismatch',issues);
+  assert(ops.automaticExecution===false,'operations health allows automatic execution',issues);
+  assert(ops.overall!=='CRITICAL','operations health is CRITICAL',issues);
+  const opCheckIds=(ops.checks||[]).map(x=>x.id);
+  assert(new Set(opCheckIds).size===opCheckIds.length,'duplicate operations health checks',issues);
+  const opIssueKeys=(ops.issueCandidates||[]).map(x=>x.key);
+  assert(new Set(opIssueKeys).size===opIssueKeys.length,'duplicate operations issue keys',issues);
 
   const gr=gov.reliability||{};
   assert(n(gr.score)!=null&&n(gr.score)>=0&&n(gr.score)<=100,'reliability score outside 0-100',issues);
