@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.16.2 Decision Cockpit</title>
+<title>ASTRA V6.0 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -50,6 +50,10 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 .ta-controls label{font-size:12px;color:#94a3b8;display:block;margin-bottom:5px}
 .ta-controls select,.ta-controls input{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 11px;min-width:210px}
 .ta-controls button{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:10px 14px;cursor:pointer}
+.trust-controls{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin-top:14px}
+.trust-controls select{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 11px;min-width:220px}
+.trust-controls button{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:10px 14px;cursor:pointer}
+.hash{font-family:monospace;font-size:10px;word-break:break-all;color:#94a3b8}
 .ta-modal{display:none;position:fixed;inset:0;background:rgba(2,6,23,.86);z-index:9999;padding:24px;overflow:auto}
 .ta-modal.open{display:block}
 .ta-shell{max-width:1400px;margin:0 auto;background:#0b1220;border:1px solid #334155;border-radius:16px;padding:18px}
@@ -73,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.16.2 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.0 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -83,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.16.2 LIVE UI</b> · Professional Technical Chart + Stock Analyzer + Outcome Analytics + Monitoring + Risk Budget</div>
+  <div><b>V6.0 TRUST UI</b> · Replay Archive + Prediction Ledger + Technical Chart + Outcome Analytics + Monitoring</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -96,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.16.2 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V6.0 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -113,6 +117,33 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #10b981">
+  <div class="v52-header">
+    <div>
+      <h2 id="trustTitle" style="margin:0">Trust Center & Replay Archive — V6.0</h2>
+      <div class="small" id="trustNote">Tamper-evident prediction ledger plus true no-look-ahead replay snapshots persisted from V6 activation forward.</div>
+    </div>
+    <span class="badge ready" id="trustChain">CHECKING</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="trustSessionsLabel">Persisted Sessions</div><div class="value" id="trustSessions">-</div></div>
+    <div class="metric"><div class="label" id="trustStartLabel">Coverage Start</div><div class="value" id="trustStart">-</div></div>
+    <div class="metric"><div class="label" id="trustEndLabel">Coverage End</div><div class="value" id="trustEnd">-</div></div>
+    <div class="metric"><div class="label" id="trustPredLabel">Predictions</div><div class="value" id="trustPred">-</div></div>
+    <div class="metric"><div class="label" id="trustGateLabel">Gate Passed</div><div class="value" id="trustGate">-</div></div>
+    <div class="metric"><div class="label" id="trustModelLabel">Model Version</div><div class="value" id="trustModel">-</div></div>
+  </div>
+  <div class="trust-controls">
+    <div><label id="replaySessionLabel" for="replaySession" class="small">Replay session</label><select id="replaySession"><option value="">Loading archive...</option></select></div>
+    <button id="replayLoad" type="button">Load Snapshot</button>
+    <span class="small" id="replayCaution"></span>
+  </div>
+  <div id="replaySummary" class="small" style="margin-top:12px"></div>
+  <div id="replayTable" style="margin-top:12px"></div>
+  <div id="replayHash" class="hash" style="margin-top:10px"></div>
+</div>
 
 <div class="card" style="border:1px solid #38bdf8">
   <div class="v52-header">
@@ -515,7 +546,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.16.2 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V6.0 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -587,6 +618,7 @@ function applyLanguage(lang,reloadDynamic=true){
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
+    loadReplayIndex();
     loadStockUniverse();
 loadV52(); loadProspective(); loadSignals(); loadQuant();
   }
@@ -711,6 +743,55 @@ function renderRiskSizing(){
       '</tr>').join('')+
       '</tbody></table>'
     :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد مراكز مؤهلة للحجم حاليًا.':'No positions currently eligible for sizing.')+'</span>';
+}
+
+
+let replayIndexCache=null;
+async function loadReplayIndex(){
+  try{
+    const idx=await api('/data/replay/index.json').catch(()=>api('/docs/data/replay/index.json'));
+    replayIndexCache=idx;
+    const sessions=idx.sessions||[];
+    const sel=document.getElementById('replaySession');
+    sel.innerHTML=sessions.slice().reverse().map(x=>'<option value="'+esc(x.session)+'">'+esc(x.session)+' · '+esc(x.marketRegime||'-')+' · '+esc(x.predictionCount||0)+' predictions</option>').join('')||'<option value="">No persisted sessions yet</option>';
+    document.getElementById('trustChain').innerText=idx.ledgerChainStatus||'UNKNOWN';
+    document.getElementById('trustChain').className='badge '+(idx.ledgerChainStatus==='VERIFIED'?'ready':'blocked');
+    document.getElementById('trustSessions').innerText=idx.sessionCount??0;
+    document.getElementById('trustStart').innerText=idx.coverageStart||'-';
+    document.getElementById('trustEnd').innerText=idx.coverageEnd||'-';
+    document.getElementById('replayCaution').innerText=uiLang==='ar'
+      ?'إعادة التشغيل الحقيقية متاحة فقط للجلسات المحفوظة بعد تفعيل V6؛ لا يتم اختلاق قرارات قديمة باستخدام بيانات مستقبلية.'
+      :'True replay is available only for sessions persisted after V6 activation; older decisions are not reconstructed with future-known data.';
+    if(sessions.length){sel.value=sessions.at(-1).session;await loadReplaySnapshot(sel.value)}
+  }catch(e){
+    document.getElementById('trustChain').innerText='UNAVAILABLE';
+    document.getElementById('trustChain').className='badge blocked';
+    document.getElementById('replaySummary').innerText=uiLang==='ar'?'أرشيف إعادة التشغيل غير متاح بعد.':'Replay archive is not available yet.';
+  }
+}
+async function loadReplaySnapshot(session){
+  if(!session)return;
+  try{
+    const snap=await api('/data/replay/sessions/'+encodeURIComponent(session)+'.json').catch(()=>api('/docs/data/replay/sessions/'+encodeURIComponent(session)+'.json'));
+    const preds=snap.predictions||[];
+    document.getElementById('trustPred').innerText=preds.length;
+    document.getElementById('trustGate').innerText=preds.filter(x=>x.decisionGatePass).length;
+    document.getElementById('trustModel').innerText=snap.modelVersion||'-';
+    document.getElementById('replaySummary').innerHTML=
+      '<b>'+esc(uiLang==='ar'?'جلسة محفوظة: ':'Frozen session: ')+'</b>'+esc(snap.session||'-')+
+      ' · '+esc(uiLang==='ar'?'نظام السوق: ':'Regime: ')+esc(snap.market?.regime||'-')+
+      ' · '+esc(uiLang==='ar'?'عرض السوق: ':'Breadth: ')+esc(snap.market?.breadthPct!=null?snap.market.breadthPct+'%':'-')+
+      ' · '+esc(uiLang==='ar'?'سلة: ':'Basket: ')+esc((snap.portfolioSelectionEngine?.basket||[]).map(x=>x.ticker).join(', ')||'-');
+    const top=preds.slice().sort((a,b)=>(b.finalDecisionScore??-1)-(a.finalDecisionScore??-1)).slice(0,12);
+    document.getElementById('replayTable').innerHTML=top.length
+      ?'<table><thead><tr><th>'+esc(uiLang==='ar'?'السهم':'Symbol')+'</th><th>'+esc(uiLang==='ar'?'الدرجة':'Score')+'</th><th>'+esc(uiLang==='ar'?'الرتبة':'Grade')+'</th><th>'+esc(uiLang==='ar'?'البوابة':'Gate')+'</th><th>'+esc(uiLang==='ar'?'الدخول':'Entry')+'</th><th>'+esc(uiLang==='ar'?'الوقف':'Stop')+'</th><th>T1</th><th>T2</th><th>'+esc(uiLang==='ar'?'في السلة':'Basket')+'</th></tr></thead><tbody>'+
+        top.map(x=>'<tr><td>'+stockLink(x.ticker)+'</td><td>'+esc(x.finalDecisionScore??'-')+'</td><td>'+esc(x.finalDecisionGrade||'-')+'</td><td class="'+(x.decisionGatePass?'gate-pass':'gate-block')+'">'+esc(x.decisionGatePass?(uiLang==='ar'?'اجتاز':'PASS'):(uiLang==='ar'?'محجوب':'BLOCKED'))+'</td><td>'+esc((x.entryLow??'-')+' – '+(x.entryHigh??'-'))+'</td><td>'+esc(x.stop??'-')+'</td><td>'+esc(x.target1??'-')+'</td><td>'+esc(x.target2??'-')+'</td><td>'+esc(x.portfolioSelected?'✓':'-')+'</td></tr>').join('')+
+        '</tbody></table>'
+      :'<div class="muted">'+esc(uiLang==='ar'?'لا توجد توقعات محفوظة في هذه الجلسة.':'No frozen predictions in this session.')+'</div>';
+    document.getElementById('replayHash').innerText='SHA-256: '+(snap.snapshotSha256||'-')+' · Source fingerprint: '+(snap.inputFingerprint?.sourceSessionDataHash||'-');
+  }catch(e){
+    document.getElementById('replaySummary').innerText=(uiLang==='ar'?'تعذر تحميل الجلسة: ':'Unable to load session: ')+(e?.message||e);
+  }
 }
 
 let currentTA=null;
@@ -860,6 +941,19 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const trust=d.trustArchitecture||{};
+    document.getElementById('trustTitle').innerText=uiLang==='ar'?'مركز الثقة وأرشيف إعادة التشغيل — V6.0':'Trust Center & Replay Archive — V6.0';
+    document.getElementById('trustNote').innerText=uiLang==='ar'
+      ?'سجل توقعات مترابط بالهاش + لقطات إعادة تشغيل حقيقية بدون معرفة مستقبلية، من تاريخ تفعيل V6 فصاعدًا.'
+      :'Tamper-evident prediction ledger plus true no-look-ahead replay snapshots persisted from V6 activation forward.';
+    document.getElementById('trustSessionsLabel').innerText=uiLang==='ar'?'الجلسات المحفوظة':'Persisted Sessions';
+    document.getElementById('trustStartLabel').innerText=uiLang==='ar'?'بداية التغطية':'Coverage Start';
+    document.getElementById('trustEndLabel').innerText=uiLang==='ar'?'نهاية التغطية':'Coverage End';
+    document.getElementById('trustPredLabel').innerText=uiLang==='ar'?'التوقعات':'Predictions';
+    document.getElementById('trustGateLabel').innerText=uiLang==='ar'?'اجتازت البوابة':'Gate Passed';
+    document.getElementById('trustModelLabel').innerText=uiLang==='ar'?'إصدار النموذج':'Model Version';
+    document.getElementById('replaySessionLabel').innerText=uiLang==='ar'?'جلسة إعادة التشغيل':'Replay session';
+    document.getElementById('replayLoad').innerText=uiLang==='ar'?'تحميل اللقطة':'Load Snapshot';
     const oa=d.outcomeAnalyticsEngine||{}, oo=oa.overall||{}, og=oa.groups||{};
     const ostatus=oa.status||'INSUFFICIENT_DATA';
     const ostatusAr={INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',MATURE_SAMPLE:'عينة ناضجة'};
@@ -1343,6 +1437,8 @@ function bootAstraUI(){
       if(b)openStockAnalysis(b.getAttribute('data-stock'));
     });
 
+    const replayLoad=document.getElementById('replayLoad');
+    if(replayLoad) replayLoad.addEventListener('click',()=>loadReplaySnapshot(document.getElementById('replaySession')?.value));
     const taAnalyze=document.getElementById('taAnalyze');
     if(taAnalyze) taAnalyze.addEventListener('click',()=>openStockAnalysis(document.getElementById('taSymbol')?.value));
 
