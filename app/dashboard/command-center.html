@@ -79,6 +79,18 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </div>
 
 
+
+<div class="card" id="bestSetupCard" style="border:1px solid #2b725e">
+  <div class="v52-header">
+    <div>
+      <h2 id="bestSetupTitle" style="margin:0">Highest-Probability Research Setup</h2>
+      <div class="small" id="bestSetupNote">Ranked by ASTRA Final Decision Score among setups that pass the mandatory gate. This is a ranking score, not a literal probability of profit.</div>
+    </div>
+    <span class="badge ready" id="bestSetupBadge">TOP SETUP</span>
+  </div>
+  <div id="bestSetupBody" style="margin-top:14px" class="muted">Loading...</div>
+</div>
+
 <div class="card">
   <div class="v52-header">
     <div>
@@ -106,6 +118,15 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </div>
 
 <div id="v52Cards" class="v52-grid"><div class="muted">Loading V5.2 decision layer...</div></div>
+</div>
+
+
+<div class="card">
+  <h2 id="listsTitle">What is the difference between the two lists?</h2>
+  <div id="listsExplain" class="small" style="line-height:1.8">
+    <b>Research Decision Cards:</b> ASTRA's filtered decision layer. It combines entry quality, final score, context, risk/reward and gate status.<br>
+    <b>Unified Opportunity Board:</b> a broader comparison board combining multiple engines/sources on one scale. It is useful for discovery and comparison, but a high rank there does not automatically mean the setup passed the V5.7 decision gate.
+  </div>
 </div>
 
 <div class="card">
@@ -303,6 +324,16 @@ const I18N={
     "Loading ASTRA entry opportunities...":"جاري تحميل فرص ASTRA..."
   }
 };
+
+const AR_TERMS={"Conviction":"القناعة","Context-adjusted":"القناعة بعد تعديل السياق","Final Score":"الدرجة النهائية","Current":"السعر الحالي","R:R to T2":"العائد/المخاطرة حتى الهدف 2","Quality Score":"درجة جودة الدخول","Context Score":"درجة السياق","Entry":"الدخول","Stop":"وقف الخسارة","Target 1":"الهدف 1","Target 2":"الهدف 2","TOP RESEARCH SETUP":"أفضل فرصة بحثية","STRONG RESEARCH SETUP":"فرصة بحثية قوية","WATCH / CONDITIONAL":"مراقبة / مشروطة","LOW PRIORITY":"أولوية منخفضة","REJECT / NO ACTION":"مرفوض / لا إجراء","ENTRY_READY":"جاهز للدخول","ENTRY_READY_SECONDARY":"جاهز للدخول - ثانوي","WAITING_FOR_TRIGGER":"بانتظار إشارة التفعيل","NEAR_ENTRY":"قريب من الدخول","WAITING_FOR_ENTRY":"بانتظار الدخول","WATCHLIST":"قائمة مراقبة","REJECTED_RISK":"مرفوض بسبب المخاطرة","REJECTED":"مرفوض","WEAK_MARKET_CONTEXT":"سياق السوق ضعيف","LOW_LIQUIDITY_CONTEXT":"سيولة منخفضة","PROFITABILITY_EVIDENCE_REQUIRED":"مطلوب تأكيد الربحية","REACTION_REQUIRED":"مطلوب تأكيد رد فعل السعر","VOLUME_CONFIRMATION_REQUIRED":"مطلوب تأكيد حجم التداول","HOURLY_MA100_NOT_ALIGNED":"متوسط 100 ساعة غير متوافق","RISK_GT_8_OR_INVALID":"المخاطرة أعلى من 8% أو غير صالحة","RR_T2_LT_2":"العائد/المخاطرة للهدف 2 أقل من 2","FIB_OR_AVWAP_REQUIRED":"مطلوب فيبوناتشي أو VWAP مثبت","FIB_ZONE_NOT_CONFIRMED":"منطقة فيبوناتشي غير مؤكدة","VERIFIED_PROFITABILITY_MISSING":"تأكيد الربحية غير متاح","ANCHORED_VWAP":"VWAP مثبت","DAILY_MA50":"متوسط 50 يوم","PRIOR_SUPPORT":"دعم سابق","PRICE_REACTION":"رد فعل سعري","VOLUME_CONFIRMATION":"تأكيد حجم التداول","HOURLY_MA100":"متوسط 100 ساعة","FIB_61_8_78_6":"منطقة فيبوناتشي 61.8–78.6%","CORRECTION_30_38":"تصحيح 30–38%","CORRECTION_NEAR_TARGET":"تصحيح قريب من النطاق المستهدف"};
+function ta(v){
+  const s=String(v??'');
+  return uiLang==='ar'?(AR_TERMS[s]||I18N.ar[s]||s):s;
+}
+function translateList(arr){
+  return (arr||[]).map(ta);
+}
+
 let uiLang=localStorage.getItem('astraLang')||'en';
 function t(v){
   const s=String(v??'');
@@ -323,6 +354,7 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageSelect').value=uiLang;
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
+  document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadV52(); loadProspective(); loadSignals(); loadQuant();
   }
@@ -385,11 +417,11 @@ function paperCell(item){
 
 
 function v52RiskClass(r){const n=Number(r);return n<=5?'v52-risk-low':n<=8?'v52-risk-med':'v52-risk-high'}
-function v52EntryQuality(x){ return statusText(x.entryQuality||'UNKNOWN'); }
+function v52EntryQuality(x){ return ta(x.entryQuality||'UNKNOWN'); }
 function v54QualityClass(q){return q==='IDEAL'?'ready':q==='INVALIDATED'?'blocked':(q==='CHASE_RISK'||q==='EXTENDED')?'warn':'muted'}
 function v52Explain(x){
-  const positives=(x.evidence||[]).slice(0,4).map(v=>String(v).replaceAll('_',' '));
-  const negatives=(x.warnings||[]).slice(0,3).map(v=>String(v).replaceAll('_',' '));
+  const positives=(x.evidence||[]).slice(0,4).map(v=>ta(v));
+  const negatives=(x.warnings||[]).slice(0,3).map(v=>ta(v));
   let s=positives.length?t('Supports:')+' '+positives.join(' · '):t('No multi-factor confirmation yet');
   if(negatives.length) s+=' | '+t('Risks:')+' '+negatives.join(' · ');
   return s;
@@ -429,7 +461,42 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
-    const rows=(d.topOpportunities||[]).slice(0,6);
+    const allTop=(d.topOpportunities||[]);
+    const eligibleTop=allTop.filter(x=>x.decisionGate?.pass);
+    const best=(eligibleTop.length?eligibleTop:allTop)
+      .slice()
+      .sort((a,b)=>(Number(b.finalDecisionScore||0)-Number(a.finalDecisionScore||0))||(Number(b.rrT2||0)-Number(a.rrT2||0)))[0];
+    document.getElementById('bestSetupTitle').innerText=uiLang==='ar'?'الفرصة البحثية الأكثر ترجيحًا لتحقيق الأهداف':'Highest-Probability Research Setup';
+    document.getElementById('bestSetupNote').innerText=uiLang==='ar'
+      ?'الترتيب يعتمد على الدرجة النهائية لـ ASTRA مع بوابة القرار وجودة الدخول والسياق وR:R. هذه ليست نسبة احتمال ربح حرفية.'
+      :'Ranked by ASTRA Final Decision Score with decision gate, entry quality, context and R:R. This is not a literal probability of profit.';
+    document.getElementById('bestSetupBadge').innerText=uiLang==='ar'?'أفضل فرصة':'TOP SETUP';
+    if(best){
+      const pass=best.decisionGate?.pass===true;
+      const reasons=translateList(best.decisionGate?.reasons||[]);
+      document.getElementById('bestSetupBody').innerHTML=
+        '<div class="v52-grid" style="grid-template-columns:repeat(3,minmax(0,1fr))">'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'السهم':'Symbol')+'</div><div class="value">'+esc(best.ticker)+'</div></div>'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'الدرجة النهائية':'Final Score')+'</div><div class="value">'+esc(best.finalDecisionScore??'-')+'/100 · '+esc(best.finalDecisionGrade??'-')+'</div></div>'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'حالة البوابة':'Gate Status')+'</div><div class="value '+(pass?'gate-pass':'gate-block')+'">'+esc(pass?(uiLang==='ar'?'مؤهل بحثيًا':'RESEARCH_ELIGIBLE'):(uiLang==='ar'?'محجوب':'BLOCKED'))+'</div></div>'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'جودة الدخول':'Entry Quality')+'</div><div class="value">'+esc(ta(best.entryQuality||'UNKNOWN'))+'</div></div>'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'R:R للهدف 2':'R:R to T2')+'</div><div class="value">'+esc(best.rrT2??'-')+'</div></div>'+
+          '<div class="metric"><div class="label">'+esc(uiLang==='ar'?'منطقة الدخول':'Entry Zone')+'</div><div class="value">'+esc(entryZoneCell(best))+'</div></div>'+
+        '</div>'+
+        '<div class="v52-reason" style="margin-top:12px"><b>'+esc(uiLang==='ar'?'لماذا هو الأعلى؟':'Why it ranks highest:')+'</b> '+
+        esc(uiLang==='ar'
+          ?('درجة نهائية '+(best.finalDecisionScore??'-')+'/100، جودة دخول '+ta(best.entryQuality||'UNKNOWN')+'، R:R '+(best.rrT2??'-')+'، ودرجة سياق '+(best.contextScore??'-')+'/100.')
+          :('Final score '+(best.finalDecisionScore??'-')+'/100, entry quality '+(best.entryQuality||'UNKNOWN')+', R:R '+(best.rrT2??'-')+', context '+(best.contextScore??'-')+'/100.'))+
+        (!pass && reasons.length?'<br><span class="gate-block">'+esc(uiLang==='ar'?'لكن ما زال محجوبًا بسبب: ':'Still blocked because: ')+esc(reasons.join(' · '))+'</span>':'')+
+        '</div>';
+    }else{
+      document.getElementById('bestSetupBody').innerText=uiLang==='ar'?'لا توجد فرص متاحة حاليًا.':'No setups available.';
+    }
+    document.getElementById('listsTitle').innerText=uiLang==='ar'?'ما الفرق بين القائمتين؟':'What is the difference between the two lists?';
+    document.getElementById('listsExplain').innerHTML=uiLang==='ar'
+      ?'<b>كروت القرار البحثي:</b> هي طبقة ASTRA المفلترة لاتخاذ القرار، وتجمع جودة الدخول والدرجة النهائية والسياق وR:R وحالة بوابة القرار.<br><b>لوحة الفرص الموحدة:</b> لوحة أوسع للمقارنة بين أكثر من محرك/مصدر على مقياس واحد. مفيدة لاكتشاف الفرص ومقارنتها، لكن الترتيب العالي فيها لا يعني تلقائيًا أن السهم اجتاز بوابة V5.7.'
+      :'<b>Research Decision Cards:</b> ASTRA\'s filtered decision layer. It combines entry quality, final score, context, risk/reward and gate status.<br><b>Unified Opportunity Board:</b> a broader comparison board combining multiple engines/sources on one scale. It is useful for discovery and comparison, but a high rank there does not automatically mean the setup passed the V5.7 decision gate.';
+    const rows=allTop.slice(0,6);
     document.getElementById('v52Cards').innerHTML=rows.length?rows.map(x=>{
       const rr=x.rrT2!=null?Number(x.rrT2).toFixed(2):'-';
       const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
@@ -450,7 +517,7 @@ async function loadV52(){
           '<div><span class="v52-k">Target 2</span><div class="v52-v">'+esc(priceCell(x.target2))+'</div></div>'+
         '</div>'+
         '<div style="margin-top:9px">'+fam+'</div>'+
-        '<div class="v52-reason"><b>'+esc(t(x.finalDecisionLabel||''))+'</b> · <b class="'+(x.decisionGate?.pass?'gate-pass':'gate-block')+'">'+esc(t(x.decisionGate?.status||'NOT GATED'))+'</b><br>'+esc(v52Explain(x))+(x.decisionGate?.reasons?.length?'<br><span class="gate-block">'+esc(t('Gate:'))+' '+esc(x.decisionGate.reasons.join(' · '))+'</span>':'')+'</div>'+
+        '<div class="v52-reason"><b>'+esc(ta(x.finalDecisionLabel||''))+'</b> · <b class="'+(x.decisionGate?.pass?'gate-pass':'gate-block')+'">'+esc(t(x.decisionGate?.status||'NOT GATED'))+'</b><br>'+esc(v52Explain(x))+(x.decisionGate?.reasons?.length?'<br><span class="gate-block">'+esc(t('Gate:'))+' '+esc(translateList(x.decisionGate.reasons).join(' · '))+'</span>':'')+'</div>'+
       '</div>';
     }).join(''):'<div class="muted">No ranked opportunities available.</div>';
   }catch(e){
