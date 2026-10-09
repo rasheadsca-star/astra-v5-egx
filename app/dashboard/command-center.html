@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.12 Decision Cockpit</title>
+<title>ASTRA V5.13 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -41,6 +41,9 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 .lang-box{display:flex;align-items:center;gap:8px;background:#101827;border:1px solid #334155;padding:8px 10px;border-radius:10px}
 .lang-box label{font-size:12px;color:#94a3b8}
 .lang-box select{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:7px 10px;font-weight:700}
+.risk-input{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.risk-input input{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 11px;width:180px;font-weight:700}
+.risk-input button{background:#17243a;color:#fff;border:1px solid #475569;border-radius:8px;padding:9px 12px;cursor:pointer}
 html[dir="rtl"] body{text-align:right}
 html[dir="rtl"] td,html[dir="rtl"] th{text-align:right}
 html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
@@ -48,7 +51,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.12 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.13 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -58,7 +61,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.12 LIVE UI</b> · Sector Intelligence + Correlation Control + Daily Brief + Decision Gate + Research Basket</div>
+  <div><b>V5.13 LIVE UI</b> · Risk Budget + Position Sizing + Sector Intelligence + Decision Gate + Research Basket</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -71,7 +74,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.12 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.13 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -84,6 +87,32 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #a78bfa">
+  <div class="v52-header">
+    <div>
+      <h2 id="riskTitle" style="margin:0">Risk Budget & Position Sizing — V5.13</h2>
+      <div class="small" id="riskNote">Research-only sizing from stop distance, volatility, liquidity, market regime, correlation, sector strength and decision score.</div>
+    </div>
+    <span class="badge warn" id="riskBadge">AUTO ORDERS OFF</span>
+  </div>
+  <div class="risk-input">
+    <label id="capitalLabel" for="capitalInput">Capital (EGP)</label>
+    <input id="capitalInput" type="number" min="1000" step="1000" value="100000">
+    <button id="capitalApply" type="button">Apply</button>
+    <span class="small" id="capitalHint">Sizing scales linearly; no orders are sent.</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="riskTotalLabel">Portfolio Risk Budget</div><div class="value" id="riskTotal">-</div></div>
+    <div class="metric"><div class="label" id="riskMaxLossLabel">Max Loss at Stops</div><div class="value" id="riskMaxLoss">-</div></div>
+    <div class="metric"><div class="label" id="riskValueLabel">Planned Position Value</div><div class="value" id="riskValue">-</div></div>
+    <div class="metric"><div class="label" id="riskPositionsLabel">Sized Positions</div><div class="value" id="riskPositions">-</div></div>
+    <div class="metric"><div class="label" id="riskPerTradeLabel">Max Risk / Position</div><div class="value" id="riskPerTrade">1.0%</div></div>
+    <div class="metric"><div class="label" id="riskOrdersLabel">Automatic Orders</div><div class="value gate-block">OFF</div></div>
+  </div>
+  <div id="riskTable" class="small" style="margin-top:12px">Loading...</div>
+</div>
 
 <div class="card">
   <div class="v52-header">
@@ -390,7 +419,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.12 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.13 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -532,6 +561,60 @@ function v52Explain(x){
   if(negatives.length) s+=' | '+t('Risks:')+' '+negatives.join(' · ');
   return s;
 }
+let latestRiskBudget=null;
+function fmtEgp(v){
+  return Number.isFinite(Number(v))?Number(v).toLocaleString(undefined,{maximumFractionDigits:0})+' EGP':'-';
+}
+function renderRiskSizing(){
+  const rb=latestRiskBudget;
+  if(!rb)return;
+  const capital=Math.max(1000,Number(document.getElementById('capitalInput')?.value)||rb.referenceCapital||100000);
+  const positions=rb.positions||[];
+  const rows=positions.map(x=>{
+    const entry=Number(x.entryReference), stopDistance=Number(x.stopDistance), riskPct=Number(x.riskBudgetPct)||0, capPct=Number(x.maxPositionPct)||0;
+    let shares=0, value=0, maxLoss=0;
+    if(entry>0&&stopDistance>0&&riskPct>0){
+      const byRisk=Math.floor((capital*riskPct/100)/stopDistance);
+      const byExposure=capPct>0?Math.floor((capital*capPct/100)/entry):byRisk;
+      shares=Math.max(0,Math.min(byRisk,byExposure||byRisk));
+      value=shares*entry;
+      maxLoss=shares*stopDistance;
+    }
+    return {...x,_shares:shares,_value:value,_maxLoss:maxLoss};
+  });
+  const totalLoss=rows.reduce((s,x)=>s+x._maxLoss,0);
+  const totalValue=rows.reduce((s,x)=>s+x._value,0);
+  document.getElementById('riskTotal').innerText=(rb.totals?.riskBudgetPct??0)+'%';
+  document.getElementById('riskMaxLoss').innerText=fmtEgp(totalLoss);
+  document.getElementById('riskValue').innerText=fmtEgp(totalValue);
+  document.getElementById('riskPositions').innerText=rows.filter(x=>x._shares>0).length;
+  document.getElementById('riskPerTrade').innerText=(rb.policy?.maxRiskPerPositionPct??1)+'%';
+  document.getElementById('riskTable').innerHTML=rows.length
+    ?'<table><thead><tr>'+
+      '<th>'+esc(uiLang==='ar'?'السهم':'Symbol')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'الدخول المرجعي':'Entry Ref')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'وقف الخسارة':'Stop')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'بعد الوقف':'Stop Distance')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'التذبذب اليومي':'Daily Vol')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'مخاطرة الصفقة':'Risk Budget')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'عدد الأسهم':'Shares')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'قيمة المركز':'Position Value')+'</th>'+
+      '<th>'+esc(uiLang==='ar'?'أقصى خسارة عند الوقف':'Max Loss @ Stop')+'</th>'+
+      '</tr></thead><tbody>'+
+      rows.map(x=>'<tr>'+
+        '<td><b>'+esc(x.ticker)+'</b></td>'+
+        '<td>'+esc(priceCell(x.entryReference))+'</td>'+
+        '<td>'+esc(priceCell(x.stop))+'</td>'+
+        '<td>'+esc(x.stopDistancePct!=null?x.stopDistancePct+'%':'-')+'</td>'+
+        '<td>'+esc(x.dailyVolatilityPct!=null?x.dailyVolatilityPct+'%':'-')+'</td>'+
+        '<td>'+esc(x.riskBudgetPct!=null?x.riskBudgetPct+'%':'-')+'</td>'+
+        '<td>'+esc(x._shares)+'</td>'+
+        '<td>'+esc(fmtEgp(x._value))+'</td>'+
+        '<td>'+esc(fmtEgp(x._maxLoss))+'</td>'+
+      '</tr>').join('')+
+      '</tbody></table>'
+    :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد مراكز مؤهلة للحجم حاليًا.':'No positions currently eligible for sizing.')+'</span>';
+}
 async function loadV52(){
   try{
     const d=await api('/data/decision-cockpit.json').catch(()=>api('/docs/data/decision-cockpit.json'));
@@ -567,6 +650,23 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const rb=d.riskBudgetEngine||{};
+    latestRiskBudget=rb;
+    document.getElementById('riskTitle').innerText=uiLang==='ar'?'ميزانية المخاطر وحجم المركز — V5.13':'Risk Budget & Position Sizing — V5.13';
+    document.getElementById('riskNote').innerText=uiLang==='ar'
+      ?'تحديد حجم بحثي فقط اعتمادًا على بُعد وقف الخسارة والتذبذب والسيولة وحالة السوق والارتباط وقوة القطاع والدرجة النهائية.'
+      :'Research-only sizing from stop distance, volatility, liquidity, market regime, correlation, sector strength and decision score.';
+    document.getElementById('riskBadge').innerText=uiLang==='ar'?'الأوامر الآلية متوقفة':'AUTO ORDERS OFF';
+    document.getElementById('capitalLabel').innerText=uiLang==='ar'?'رأس المال (جنيه)':'Capital (EGP)';
+    document.getElementById('capitalApply').innerText=uiLang==='ar'?'تطبيق':'Apply';
+    document.getElementById('capitalHint').innerText=uiLang==='ar'?'الحجم يتغير خطيًا مع رأس المال؛ لا يتم إرسال أي أوامر.':'Sizing scales linearly; no orders are sent.';
+    document.getElementById('riskTotalLabel').innerText=uiLang==='ar'?'إجمالي ميزانية المخاطر':'Portfolio Risk Budget';
+    document.getElementById('riskMaxLossLabel').innerText=uiLang==='ar'?'أقصى خسارة عند جميع الوقفات':'Max Loss at Stops';
+    document.getElementById('riskValueLabel').innerText=uiLang==='ar'?'قيمة المراكز المخططة':'Planned Position Value';
+    document.getElementById('riskPositionsLabel').innerText=uiLang==='ar'?'المراكز المحدد حجمها':'Sized Positions';
+    document.getElementById('riskPerTradeLabel').innerText=uiLang==='ar'?'أقصى مخاطرة / مركز':'Max Risk / Position';
+    document.getElementById('riskOrdersLabel').innerText=uiLang==='ar'?'الأوامر الآلية':'Automatic Orders';
+    renderRiskSizing();
     const sci=d.sectorCorrelationEngine||{}, sct=sci.taxonomy||{}, scc=sci.correlation||{}, sectors=sci.sectorStats||[];
     document.getElementById('scTitle').innerText=uiLang==='ar'?'ذكاء القطاعات والتحكم في الارتباط — V5.12':'Sector Intelligence & Correlation Control — V5.12';
     document.getElementById('scNote').innerText=uiLang==='ar'
@@ -953,6 +1053,8 @@ async function loadQuant(){
 }
 
 document.getElementById('languageSelect').addEventListener('change',e=>applyLanguage(e.target.value,true));
+document.getElementById('capitalApply').addEventListener('click',renderRiskSizing);
+document.getElementById('capitalInput').addEventListener('change',renderRiskSizing);
 applyLanguage(uiLang,false);
 loadV52();
 loadProspective();
