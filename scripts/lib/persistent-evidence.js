@@ -40,9 +40,17 @@ const IMMUTABLE_FIELDS=[
   'regime','breadthPct','exposureScale','warnings','evidence','capturedAt','captureTiming','recordedForwardEligible',
   'modelVersion','buildCommit'
 ];
+const V3_CALIBRATION_FIELDS=[
+  'exAnteT1ProbabilityPct','exAnteT2ProbabilityPct','exAnteStopProbabilityPct',
+  'probabilityStatusAtCapture','probabilitySourceAtCapture','probabilitySampleSizeAtCapture',
+  'probabilityDistinctSessionsAtCapture','probabilityPoolLevelAtCapture'
+];
 function immutableEvidencePayload(r){
   const o={};
   for(const k of IMMUTABLE_FIELDS)o[k]=r?.[k]??null;
+  if(r?.evidenceKeyVersion==='session+ticker/v3'){
+    for(const k of V3_CALIBRATION_FIELDS)o[k]=r?.[k]??null;
+  }
   return o;
 }
 function captureHash(r){return objectHash(immutableEvidencePayload(r))}
@@ -53,4 +61,4 @@ function verifyCaptureHash(r){
   const actual=captureHash(r);
   return {ok:actual===r.captureHash,reason:actual===r.captureHash?null:'CAPTURE_HASH_MISMATCH',actual,expected:r.captureHash};
 }
-module.exports={stable,objectHash,cairoDate,classifyCaptureTiming,immutableEvidencePayload,captureHash,outcomePayload,outcomeHash,verifyCaptureHash};
+module.exports={stable,objectHash,cairoDate,classifyCaptureTiming,immutableEvidencePayload,captureHash,outcomePayload,outcomeHash,verifyCaptureHash,IMMUTABLE_FIELDS,V3_CALIBRATION_FIELDS};
