@@ -1,0 +1,2768 @@
+{
+  "schemaVersion": "astra-source-health/v1",
+  "expectedSession": "2026-10-07",
+  "generatedAt": "2026-10-09T21:05:31.051Z",
+  "researchOnly": true,
+  "automaticExecution": false,
+  "coverage": {
+    "registeredSymbols": 201,
+    "explicitInactiveSymbols": 1,
+    "activeDenominator": 200,
+    "currentVerifiedSymbols": 182,
+    "activeCoveragePct": 91,
+    "staleActiveSymbols": 16,
+    "sourceFailedSymbols": 2,
+    "rule": "Only explicit DORMANT/SUSPENDED/DELISTED evidence removes a symbol from the denominator. ACTIVE_STALE and SOURCE_FAILED remain in it."
+  },
+  "independentVerification": {
+    "enabledSources": [],
+    "quorumMet": false,
+    "status": "SINGLE_SOURCE_NO_INDEPENDENT_QUORUM",
+    "claimAllowed": false
+  },
+  "crossStoreConsistency": {
+    "quantCoveragePct": 89.9,
+    "quantStaleCount": 20,
+    "canonicalCurrentButQuantStale": [
+      "EFID",
+      "EXPA"
+    ]
+  },
+  "counts": {
+    "CURRENT_VERIFIED": 182,
+    "ACTIVE_STALE": 16,
+    "SOURCE_FAILED": 2,
+    "DORMANT": 0,
+    "SUSPENDED": 0,
+    "DELISTED": 1
+  },
+  "lists": {
+    "activeStale": [
+      "DCCC",
+      "DEIN",
+      "EGSA",
+      "ELNA",
+      "EOSB",
+      "EPPK",
+      "GPPL",
+      "ICLE",
+      "MEGM",
+      "NAHO",
+      "NEDA",
+      "ORHD",
+      "POUL",
+      "RAKT",
+      "SAIB",
+      "TRTO"
+    ],
+    "sourceFailed": [
+      "NDRL",
+      "SPHT"
+    ]
+  },
+  "symbols": {
+    "AALR": {
+      "ticker": "AALR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:48.8557%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ABUK": {
+      "ticker": "ABUK",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.6261%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ACAMD": {
+      "ticker": "ACAMD",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.8889%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ACGC": {
+      "ticker": "ACGC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.0098%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ADCI": {
+      "ticker": "ADCI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:20.3469%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ADIB": {
+      "ticker": "ADIB",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:14.0652%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ADPC": {
+      "ticker": "ADPC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.1739%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ADRI": {
+      "ticker": "ADRI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:3.2033%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AFDI": {
+      "ticker": "AFDI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:23.9738%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AFMC": {
+      "ticker": "AFMC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:214.7321%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AIFI": {
+      "ticker": "AIFI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.8302%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AJWA": {
+      "ticker": "AJWA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.7292%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ALCN": {
+      "ticker": "ALCN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.5279%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ALUM": {
+      "ticker": "ALUM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.4172%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AMER": {
+      "ticker": "AMER",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:100.8264%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AMES": {
+      "ticker": "AMES",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:97.3723%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AMIA": {
+      "ticker": "AMIA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:45.0688%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AMOC": {
+      "ticker": "AMOC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.268%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "APSW": {
+      "ticker": "APSW",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.8349%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ARAB": {
+      "ticker": "ARAB",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:13.8095%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ARCC": {
+      "ticker": "ARCC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.6493%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AREH": {
+      "ticker": "AREH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.9231%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ARVA": {
+      "ticker": "ARVA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:11.9674%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ASCM": {
+      "ticker": "ASCM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:11.5761%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ASPI": {
+      "ticker": "ASPI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:37.8125%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ATLC": {
+      "ticker": "ATLC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.1385%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ATQA": {
+      "ticker": "ATQA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:3.4847%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "AXPH": {
+      "ticker": "AXPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.5154%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "BINV": {
+      "ticker": "BINV",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.3206%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "BIOC": {
+      "ticker": "BIOC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:383.0022%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "BTFH": {
+      "ticker": "BTFH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.3872%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CAED": {
+      "ticker": "CAED",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:70.3631%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CANA": {
+      "ticker": "CANA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.5546%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CCAP": {
+      "ticker": "CCAP",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.7619%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CCRS": {
+      "ticker": "CCRS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.8966%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CEFM": {
+      "ticker": "CEFM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:38.7529%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CERA": {
+      "ticker": "CERA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.5574%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CFGH": {
+      "ticker": "CFGH",
+      "lastSession": "2026-10-07",
+      "primarySource": "stockanalysis_egx_independent_session_confirmation",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_depth_not_established_current_session_seed_only"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CICH": {
+      "ticker": "CICH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:8.4246%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CIEB": {
+      "ticker": "CIEB",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.5886%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CIRA": {
+      "ticker": "CIRA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:23.0903%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CLHO": {
+      "ticker": "CLHO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.2727%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CNFN": {
+      "ticker": "CNFN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.9412%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "COMI": {
+      "ticker": "COMI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.0706%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "COPR": {
+      "ticker": "COPR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:13.3333%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "COSG": {
+      "ticker": "COSG",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.5263%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CPCI": {
+      "ticker": "CPCI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:20.9182%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "CSAG": {
+      "ticker": "CSAG",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.6783%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "DAPH": {
+      "ticker": "DAPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:23.9397%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "DCCC": {
+      "ticker": "DCCC",
+      "lastSession": "2026-07-30",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:81.8182%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "DEIN": {
+      "ticker": "DEIN",
+      "lastSession": "2026-08-24",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.0909%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "DOMT": {
+      "ticker": "DOMT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.4972%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "DSCW": {
+      "ticker": "DSCW",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.7168%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "DTPP": {
+      "ticker": "DTPP",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:24.4605%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EALR": {
+      "ticker": "EALR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:15.3154%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EASB": {
+      "ticker": "EASB",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.6419%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EAST": {
+      "ticker": "EAST",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.3081%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EBSC": {
+      "ticker": "EBSC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.9524%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ECAP": {
+      "ticker": "ECAP",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.7335%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EDFM": {
+      "ticker": "EDFM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.389%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EEII": {
+      "ticker": "EEII",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EFIC": {
+      "ticker": "EFIC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.3144%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EFID": {
+      "ticker": "EFID",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.475%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EFIH": {
+      "ticker": "EFIH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:8.2179%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGAL": {
+      "ticker": "EGAL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:3.6064%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGAS": {
+      "ticker": "EGAS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.3268%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGBE": {
+      "ticker": "EGBE",
+      "lastSession": "2026-10-07",
+      "primarySource": "mixed_history_with_starta_ohlc_api",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:21",
+        "starta_ohlc_gap_completion_applied",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGCH": {
+      "ticker": "EGCH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.3061%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGSA": {
+      "ticker": "EGSA",
+      "lastSession": "2026-10-05",
+      "primarySource": "kaggle_yahoo_seed",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_requires_recent_gap_fill",
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:36"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "EGTS": {
+      "ticker": "EGTS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.7514%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EHDR": {
+      "ticker": "EHDR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.2%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ELEC": {
+      "ticker": "ELEC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.9048%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ELKA": {
+      "ticker": "ELKA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:24.2647%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ELNA": {
+      "ticker": "ELNA",
+      "lastSession": "2026-09-20",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.1301%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "ELSH": {
+      "ticker": "ELSH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:15.5039%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ELWA": {
+      "ticker": "ELWA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.2564%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EMFD": {
+      "ticker": "EMFD",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.6817%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ENGC": {
+      "ticker": "ENGC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.7596%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EOSB": {
+      "ticker": "EOSB",
+      "lastSession": "2026-08-24",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.7297%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "EPCO": {
+      "ticker": "EPCO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:20.6897%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EPPK": {
+      "ticker": "EPPK",
+      "lastSession": "2026-09-09",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.2016%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "ESRS": {
+      "ticker": "ESRS",
+      "lastSession": "2026-10-07",
+      "primarySource": "kaggle_yahoo_seed",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_requires_recent_gap_fill",
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:26",
+        "official_egx_final_delisting:2025-03-12"
+      ],
+      "status": "DELISTED",
+      "reason": "EXPLICIT_DELISTING_EVIDENCE",
+      "activeDenominator": false
+    },
+    "ETEL": {
+      "ticker": "ETEL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.2362%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ETRS": {
+      "ticker": "ETRS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.7547%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "EXPA": {
+      "ticker": "EXPA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:9.1107%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "FAIT": {
+      "ticker": "FAIT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.1628%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "FAITA": {
+      "ticker": "FAITA",
+      "lastSession": "2026-10-07",
+      "primarySource": "kaggle_yahoo_seed",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_requires_recent_gap_fill",
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:24"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "FERC": {
+      "ticker": "FERC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:3.1951%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "FWRY": {
+      "ticker": "FWRY",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.1775%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GBCO": {
+      "ticker": "GBCO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.5148%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GDWA": {
+      "ticker": "GDWA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.7895%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GGCC": {
+      "ticker": "GGCC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:69.3878%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GIHD": {
+      "ticker": "GIHD",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:35.378%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GMCI": {
+      "ticker": "GMCI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.914%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GPPL": {
+      "ticker": "GPPL",
+      "lastSession": "2026-08-06",
+      "primarySource": "mixed_history_with_starta_targeted_repair",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:13",
+        "v13_targeted_sparse_repair_applied",
+        "v13_evidence_method:sparse_exact_overlap_with_isin",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "GRCA": {
+      "ticker": "GRCA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:13.9415%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GSSC": {
+      "ticker": "GSSC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:14.9525%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "GTWL": {
+      "ticker": "GTWL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.8817%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "HDBK": {
+      "ticker": "HDBK",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:50.201%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "HELI": {
+      "ticker": "HELI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:27.5272%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "HRHO": {
+      "ticker": "HRHO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.819%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ICID": {
+      "ticker": "ICID",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.7569%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ICLE": {
+      "ticker": "ICLE",
+      "lastSession": "2026-07-29",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "corporate_action_review_required"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "IDRE": {
+      "ticker": "IDRE",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.2165%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "IFAP": {
+      "ticker": "IFAP",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.9312%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "INFI": {
+      "ticker": "INFI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:14.2062%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "IRON": {
+      "ticker": "IRON",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.9364%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ISMA": {
+      "ticker": "ISMA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:8.9876%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ISMQ": {
+      "ticker": "ISMQ",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.8908%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ISPH": {
+      "ticker": "ISPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.0672%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "JUFO": {
+      "ticker": "JUFO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.4015%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "KABO": {
+      "ticker": "KABO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:27.6461%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "KWIN": {
+      "ticker": "KWIN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:44.2764%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "KZPC": {
+      "ticker": "KZPC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.3542%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "LCSW": {
+      "ticker": "LCSW",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:21.3805%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "LUTS": {
+      "ticker": "LUTS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:26.6216%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MAAL": {
+      "ticker": "MAAL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:21.931%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MASR": {
+      "ticker": "MASR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.8378%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MBSC": {
+      "ticker": "MBSC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MCQE": {
+      "ticker": "MCQE",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.0023%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MCRO": {
+      "ticker": "MCRO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:24.1667%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MEGM": {
+      "ticker": "MEGM",
+      "lastSession": "2026-08-24",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:29.1125%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "MENA": {
+      "ticker": "MENA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.4354%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MEPA": {
+      "ticker": "MEPA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:14.6497%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MFPC": {
+      "ticker": "MFPC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.5196%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MFSC": {
+      "ticker": "MFSC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.0631%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MHOT": {
+      "ticker": "MHOT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:51.9423%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MICH": {
+      "ticker": "MICH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.8194%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MILS": {
+      "ticker": "MILS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:46.7911%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MIPH": {
+      "ticker": "MIPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.4005%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MMAT": {
+      "ticker": "MMAT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MOED": {
+      "ticker": "MOED",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MOIL": {
+      "ticker": "MOIL",
+      "lastSession": "2026-10-07",
+      "primarySource": "mixed_history_with_starta_ohlc_api",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12",
+        "starta_ohlc_gap_completion_applied",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MOIN": {
+      "ticker": "MOIN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.5478%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MOSC": {
+      "ticker": "MOSC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.5255%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MPCI": {
+      "ticker": "MPCI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.8862%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MPCO": {
+      "ticker": "MPCO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.4348%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MPRC": {
+      "ticker": "MPRC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:16.5458%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "MTIE": {
+      "ticker": "MTIE",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.6424%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "NAHO": {
+      "ticker": "NAHO",
+      "lastSession": "2026-10-06",
+      "primarySource": "mixed_history_with_starta_ohlc_api",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:23",
+        "starta_ohlc_gap_completion_applied",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "NCCW": {
+      "ticker": "NCCW",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.013%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "NDRL": {
+      "ticker": "NDRL",
+      "lastSession": "2026-02-04",
+      "primarySource": "kaggle_yahoo_seed",
+      "staleData": true,
+      "updateFailed": true,
+      "warnings": [
+        "historical_seed_requires_recent_gap_fill",
+        "historical_seed_not_officially_verified"
+      ],
+      "status": "SOURCE_FAILED",
+      "reason": "UPSTREAM_HISTORY_UPDATE_FAILED",
+      "activeDenominator": true
+    },
+    "NEDA": {
+      "ticker": "NEDA",
+      "lastSession": "2026-09-30",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "NHPS": {
+      "ticker": "NHPS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:22.3382%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "NINH": {
+      "ticker": "NINH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:18.4939%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "NIPH": {
+      "ticker": "NIPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:24.403%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OBRI": {
+      "ticker": "OBRI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.2696%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OCDI": {
+      "ticker": "OCDI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.5284%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OCPH": {
+      "ticker": "OCPH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:30.0825%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ODIN": {
+      "ticker": "ODIN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:26.6055%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OFH": {
+      "ticker": "OFH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:16.8333%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OIH": {
+      "ticker": "OIH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:3.5461%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "OLFI": {
+      "ticker": "OLFI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.1534%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ORAS": {
+      "ticker": "ORAS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:90.1377%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ORHD": {
+      "ticker": "ORHD",
+      "lastSession": "2026-10-06",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.7712%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "ORWE": {
+      "ticker": "ORWE",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.9379%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PHAR": {
+      "ticker": "PHAR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.9005%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PHDC": {
+      "ticker": "PHDC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.5487%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PHGC": {
+      "ticker": "PHGC",
+      "lastSession": "2026-10-07",
+      "primarySource": "sigma_capital_independent_live_session_confirmation",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_depth_not_established_current_session_seed_only"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PHTV": {
+      "ticker": "PHTV",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.8315%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "POUL": {
+      "ticker": "POUL",
+      "lastSession": "2026-09-24",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.7105%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "PRCL": {
+      "ticker": "PRCL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.5455%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PRDC": {
+      "ticker": "PRDC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:18.8312%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "PRMH": {
+      "ticker": "PRMH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.1673%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RACC": {
+      "ticker": "RACC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.4213%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RAKT": {
+      "ticker": "RAKT",
+      "lastSession": "2026-10-06",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.3951%"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "RAYA": {
+      "ticker": "RAYA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.2164%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RMDA": {
+      "ticker": "RMDA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.3892%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ROTO": {
+      "ticker": "ROTO",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.5555%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RREI": {
+      "ticker": "RREI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:32.5648%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RTVC": {
+      "ticker": "RTVC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.5277%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "RUBX": {
+      "ticker": "RUBX",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.7287%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SAIB": {
+      "ticker": "SAIB",
+      "lastSession": "2026-08-23",
+      "primarySource": "mixed_history_with_starta_targeted_repair",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:3",
+        "v13_targeted_sparse_repair_applied",
+        "v13_evidence_method:exact_isin_contiguous_bridge",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "SAUD": {
+      "ticker": "SAUD",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.1726%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SCEM": {
+      "ticker": "SCEM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:26.5003%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SCFM": {
+      "ticker": "SCFM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:19.3147%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SCTS": {
+      "ticker": "SCTS",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.922%",
+        "corporate_action_review_required"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SDTI": {
+      "ticker": "SDTI",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:25.2799%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SEIG": {
+      "ticker": "SEIG",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:32.4919%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SEIGA": {
+      "ticker": "SEIGA",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1069.8706%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SIPC": {
+      "ticker": "SIPC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:18.0473%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SKPC": {
+      "ticker": "SKPC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:1.0705%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SMFR": {
+      "ticker": "SMFR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:19.9312%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SNFC": {
+      "ticker": "SNFC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:7.6159%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SPHT": {
+      "ticker": "SPHT",
+      "lastSession": "2026-02-04",
+      "primarySource": "kaggle_yahoo_seed",
+      "staleData": true,
+      "updateFailed": true,
+      "warnings": [
+        "historical_seed_requires_recent_gap_fill",
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:4"
+      ],
+      "status": "SOURCE_FAILED",
+      "reason": "UPSTREAM_HISTORY_UPDATE_FAILED",
+      "activeDenominator": true
+    },
+    "SPIN": {
+      "ticker": "SPIN",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.374%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SPMD": {
+      "ticker": "SPMD",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:4.6512%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SUGR": {
+      "ticker": "SUGR",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:0.9164%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SVCE": {
+      "ticker": "SVCE",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:5.1921%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "SWDY": {
+      "ticker": "SWDY",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:6.8966%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "TALM": {
+      "ticker": "TALM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.443%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "TMGH": {
+      "ticker": "TMGH",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:2.4534%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "TRTO": {
+      "ticker": "TRTO",
+      "lastSession": "2026-10-05",
+      "primarySource": "mixed_history_with_starta_ohlc_api",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:29",
+        "starta_ohlc_gap_completion_applied",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "activeDenominator": true
+    },
+    "UEFM": {
+      "ticker": "UEFM",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:12.6504%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "UEGC": {
+      "ticker": "UEGC",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:58.6207%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "UNIP": {
+      "ticker": "UNIP",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:14.2424%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "UNIT": {
+      "ticker": "UNIT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:34.749%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "WCDF": {
+      "ticker": "WCDF",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:15.3381%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "WKOL": {
+      "ticker": "WKOL",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:17.3876%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ZEOT": {
+      "ticker": "ZEOT",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.3261%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    },
+    "ZMID": {
+      "ticker": "ZMID",
+      "lastSession": "2026-10-07",
+      "primarySource": "yahoo",
+      "staleData": false,
+      "updateFailed": false,
+      "warnings": [
+        "latest_close_conflict:10.4777%"
+      ],
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "activeDenominator": true
+    }
+  },
+  "sources": [
+    {
+      "id": "RAS_EGX_PRO_CANONICAL",
+      "role": "AUTHORITATIVE_UPSTREAM_MIRROR",
+      "enabled": true,
+      "independentVerifier": false,
+      "complianceStatus": null,
+      "currentUse": "Canonical market/history handoff"
+    },
+    {
+      "id": "MUBASHER_PROVENANCE",
+      "role": "UPSTREAM_PROVENANCE_ONLY",
+      "enabled": false,
+      "independentVerifier": false,
+      "complianceStatus": null,
+      "currentUse": "Provenance label on rows already present in the canonical upstream"
+    },
+    {
+      "id": "YAHOO_FINANCE_PUBLIC_WEB",
+      "role": "VERIFIER_CANDIDATE",
+      "enabled": false,
+      "independentVerifier": true,
+      "complianceStatus": "BLOCKED_PENDING_EXPRESS_PERMISSION",
+      "currentUse": "Disabled"
+    },
+    {
+      "id": "STARTA_HISTORICAL_FALLBACK",
+      "role": "HISTORICAL_PROVENANCE_ONLY",
+      "enabled": false,
+      "independentVerifier": false,
+      "complianceStatus": null,
+      "currentUse": "Legacy historical repair provenance only"
+    },
+    {
+      "id": "KAGGLE_YAHOO_SEED",
+      "role": "HISTORICAL_SEED_ONLY",
+      "enabled": false,
+      "independentVerifier": false,
+      "complianceStatus": null,
+      "currentUse": "Legacy seed provenance only"
+    }
+  ],
+  "sourcePolicy": {
+    "noPaidDependencyRequired": true,
+    "independentQuorumRequiredForClaim": false,
+    "independentQuorumClaimWhenAbsent": false,
+    "dormantExclusionRule": "A symbol may leave the active coverage denominator only with explicit instrument-status evidence. Staleness alone never makes a symbol dormant.",
+    "fallbackRule": "Fallback may fill missing data only if its access terms permit automated use and its session/price checks pass.",
+    "safety": "Data-source status never enables automatic execution."
+  }
+}

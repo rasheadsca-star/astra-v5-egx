@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-09T19:42:31.627Z",
-  "modelVersion": "ASTRA_V6.2_GOVERNANCE",
+  "generatedAt": "2026-10-09T21:05:31.186Z",
+  "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
     "score": 51.4,
     "tier": "BUILDING",
@@ -25,6 +25,22 @@
       "weight": 12,
       "status": "PASS",
       "detail": "Decision data is not marked stale."
+    },
+    {
+      "id": "SOURCE_COVERAGE",
+      "label": "Active-universe source coverage",
+      "score": 91,
+      "weight": 0,
+      "status": "PARTIAL",
+      "detail": "91% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
+    },
+    {
+      "id": "SOURCE_QUORUM",
+      "label": "Independent source quorum",
+      "score": 0,
+      "weight": 0,
+      "status": "INFO",
+      "detail": "No independent verifier is enabled; governance must not claim independent source quorum."
     },
     {
       "id": "LEDGER_CHAIN",
@@ -55,16 +71,16 @@
       "label": "Forward probability evidence",
       "score": 0,
       "weight": 10,
-      "status": "INSUFFICIENT_DATA",
-      "detail": "0 resolved forward outcome(s); probability validation threshold is 90."
+      "status": "INSUFFICIENT_EVIDENCE",
+      "detail": "0 resolved forward outcome(s) across 0 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
     },
     {
       "id": "OUTCOME_SAMPLE",
       "label": "Outcome analytics sample",
       "score": 0,
       "weight": 8,
-      "status": "INSUFFICIENT",
-      "detail": "0 resolved prospective outcome(s)."
+      "status": "INSUFFICIENT_EVIDENCE",
+      "detail": "0 resolved prospective outcome(s) across 0 distinct session(s)."
     },
     {
       "id": "SECTOR_COVERAGE",
@@ -104,15 +120,46 @@
     "validWalkForwardFolds": 0,
     "outOfSampleResolved": 0,
     "prospectiveResolved": 0,
-    "probabilityStatus": "INSUFFICIENT_DATA",
+    "prospectiveDistinctSessions": 0,
+    "probabilityResolved": 0,
+    "probabilityDistinctSessions": 0,
+    "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+    "calibrationScoring": {
+      "t1": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      },
+      "t2": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      },
+      "stop": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      }
+    },
     "ledgerRecords": 1,
-    "ledgerChainStatus": "VERIFIED"
+    "ledgerChainStatus": "VERIFIED",
+    "activeSourceCoveragePct": 91,
+    "independentSourceQuorum": false
   },
   "releaseGate": {
     "status": "EVIDENCE_BUILDING",
     "canClaimValidatedProbability": false,
     "canEnableAutomaticExecution": false,
-    "automaticExecutionReason": "Automatic trading is outside V6.2 governance scope and remains OFF."
+    "automaticExecutionReason": "Automatic trading is outside V6.8 governance scope and remains OFF."
   },
   "researchOnly": true,
   "automaticExecution": false

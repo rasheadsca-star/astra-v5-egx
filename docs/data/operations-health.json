@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "astra-operations-health/v1",
+  "generatedAt": "2026-10-09T21:05:31.496Z",
+  "version": "6.11.0",
+  "session": "2026-10-07",
+  "overall": "DEGRADED",
+  "researchOnly": true,
+  "automaticExecution": false,
+  "summary": {
+    "checks": 11,
+    "pass": 5,
+    "warn": 3,
+    "fail": 0,
+    "info": 3,
+    "activeIssueCandidates": 2
+  },
+  "checks": [
+    {
+      "id": "EXECUTION_SAFETY",
+      "status": "PASS",
+      "severity": "CRITICAL",
+      "detail": "Research-only safety invariant verified."
+    },
+    {
+      "id": "ATOMIC_HANDOFF",
+      "status": "PASS",
+      "severity": "CRITICAL",
+      "detail": "Market/history session and fingerprint match."
+    },
+    {
+      "id": "DECISION_DATA_FRESHNESS",
+      "status": "PASS",
+      "severity": "INFO",
+      "detail": "Decision cockpit freshness gate is current."
+    },
+    {
+      "id": "SOURCE_COVERAGE",
+      "status": "WARN",
+      "severity": "MEDIUM",
+      "detail": "91% active coverage · 16 active stale · 2 source failed.",
+      "activeCoveragePct": 91,
+      "staleActiveSymbols": 16,
+      "sourceFailedSymbols": 2
+    },
+    {
+      "id": "CROSS_STORE_FRESHNESS",
+      "status": "WARN",
+      "severity": "MEDIUM",
+      "detail": "Canonical-current but quant-stale: EFID, EXPA",
+      "tickers": [
+        "EFID",
+        "EXPA"
+      ]
+    },
+    {
+      "id": "LEDGER_INTEGRITY",
+      "status": "PASS",
+      "severity": "CRITICAL",
+      "detail": "Prediction/event hash chains verified (1/60 records)."
+    },
+    {
+      "id": "SESSION_PERSISTENCE",
+      "status": "PASS",
+      "severity": "HIGH",
+      "detail": "Session 2026-10-07 exists in replay and prediction ledger."
+    },
+    {
+      "id": "QUANT_PIPELINE",
+      "status": "WARN",
+      "severity": "MEDIUM",
+      "detail": "Quant update status: PARTIAL; coverage=89.9%."
+    },
+    {
+      "id": "CALIBRATION_MATURITY",
+      "status": "INFO",
+      "severity": "INFO",
+      "detail": "Calibration status: INSUFFICIENT_EVIDENCE; resolved=0, sessions=0."
+    },
+    {
+      "id": "WALK_FORWARD_MATURITY",
+      "status": "INFO",
+      "severity": "INFO",
+      "detail": "Walk-forward status: WAITING_FOR_MINIMUM_SESSIONS; valid folds=0."
+    },
+    {
+      "id": "INDEPENDENT_SOURCE_QUORUM",
+      "status": "INFO",
+      "severity": "INFO",
+      "detail": "No independent source quorum is currently claimed."
+    }
+  ],
+  "issueCandidates": [
+    {
+      "key": "EXECUTION_SAFETY",
+      "title": "[ASTRA OPS][EXECUTION_SAFETY] Execution safety invariant failed",
+      "severity": "CRITICAL",
+      "active": false,
+      "body": "ASTRA detected that research-only / execution-OFF invariants are not satisfied."
+    },
+    {
+      "key": "ATOMIC_HANDOFF",
+      "title": "[ASTRA OPS][ATOMIC_HANDOFF] Market/history atomic handoff failed",
+      "severity": "CRITICAL",
+      "active": false,
+      "body": "Canonical market/history session, atomic flag, or source fingerprint is inconsistent."
+    },
+    {
+      "key": "LEDGER_INTEGRITY",
+      "title": "[ASTRA OPS][LEDGER_INTEGRITY] Persistent evidence ledger integrity failed",
+      "severity": "CRITICAL",
+      "active": false,
+      "body": "Prediction chain: VERIFIED; event chain: VERIFIED."
+    },
+    {
+      "key": "SESSION_PERSISTENCE",
+      "title": "[ASTRA OPS][SESSION_PERSISTENCE] Current session is not fully persisted",
+      "severity": "HIGH",
+      "active": false,
+      "body": "Current session 2026-10-07 is missing from replay and/or prediction-ledger state."
+    },
+    {
+      "key": "SOURCE_COVERAGE",
+      "title": "[ASTRA OPS][SOURCE_COVERAGE] Active source coverage below hard floor",
+      "severity": "HIGH",
+      "active": false,
+      "body": "Active coverage is 91%. Hard operational floor is 80%."
+    },
+    {
+      "key": "SOURCE_FAILURES",
+      "title": "[ASTRA OPS][SOURCE_FAILURES] One or more active symbols have source failures",
+      "severity": "MEDIUM",
+      "active": true,
+      "body": "2 active symbol(s) report explicit source update failure. Review data/source-health.json."
+    },
+    {
+      "key": "CROSS_STORE_FRESHNESS",
+      "title": "[ASTRA OPS][CROSS_STORE_FRESHNESS] Canonical and quant freshness disagree",
+      "severity": "MEDIUM",
+      "active": true,
+      "body": "Affected tickers: EFID, EXPA"
+    },
+    {
+      "key": "DECISION_DATA_FRESHNESS",
+      "title": "[ASTRA OPS][DECISION_DATA_FRESHNESS] Decision data is stale",
+      "severity": "HIGH",
+      "active": false,
+      "body": "Decision cockpit session 2026-10-07 reports stale data or a non-zero stale lag."
+    }
+  ],
+  "release": {
+    "governanceGate": "EVIDENCE_BUILDING",
+    "reliabilityScore": 51.4,
+    "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+    "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS"
+  }
+}

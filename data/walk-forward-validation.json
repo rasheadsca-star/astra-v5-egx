@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-walk-forward-validation/v1",
-  "generatedAt": "2026-10-09T19:42:31.578Z",
+  "generatedAt": "2026-10-09T21:05:30.537Z",
   "methodology": {
     "noLookAhead": true,
     "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -23,6 +23,7 @@
   "status": "WAITING_FOR_MINIMUM_SESSIONS",
   "outOfSample": {
     "resolved": 0,
+    "distinctSessions": 0,
     "winRatePct": null,
     "expectancyPct": null,
     "profitFactor": null,
@@ -34,6 +35,11 @@
     "automaticExecution": false,
     "researchOnly": true,
     "calibrationClaimAllowed": false,
-    "trustClaim": "NOT_YET_ESTABLISHED"
+    "trustClaim": "NOT_YET_ESTABLISHED",
+    "calibrationGateRequirements": {
+      "validFolds": 3,
+      "outOfSampleResolved": 30,
+      "outOfSampleDistinctSessions": 10
+    }
   }
 }

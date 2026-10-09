@@ -1,13 +1,13 @@
 {
   "version": "daily-brief-history/v1",
-  "updatedAt": "2026-10-09T19:42:31.334Z",
+  "updatedAt": "2026-10-09T21:05:30.865Z",
   "records": [
     {
       "session": "2026-10-07",
-      "generatedAt": "2026-10-09T19:42:31.329Z",
+      "generatedAt": "2026-10-09T21:05:30.858Z",
       "headline": {
         "ticker": "FWRY",
-        "finalDecisionScore": 71.3,
+        "finalDecisionScore": 72.7,
         "grade": "B",
         "gateStatus": "RESEARCH_ELIGIBLE",
         "entryQuality": "IDEAL",
@@ -20,13 +20,13 @@
         "contextScore": 43.2,
         "t1ProbabilityPct": 0,
         "t2ProbabilityPct": 0,
-        "probabilityStatus": "INSUFFICIENT_DATA"
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE"
       },
       "top3": [
         {
           "rank": 1,
           "ticker": "FWRY",
-          "finalDecisionScore": 71.3,
+          "finalDecisionScore": 72.7,
           "grade": "B",
           "gateStatus": "RESEARCH_ELIGIBLE",
           "entryQuality": "IDEAL",
@@ -38,7 +38,7 @@
         {
           "rank": 2,
           "ticker": "CIEB",
-          "finalDecisionScore": 68.9,
+          "finalDecisionScore": 70.1,
           "grade": "B",
           "gateStatus": "RESEARCH_ELIGIBLE",
           "entryQuality": "IDEAL",
@@ -50,7 +50,7 @@
         {
           "rank": 3,
           "ticker": "CNFN",
-          "finalDecisionScore": 67.6,
+          "finalDecisionScore": 68.8,
           "grade": "B",
           "gateStatus": "RESEARCH_ELIGIBLE",
           "entryQuality": "IDEAL",
@@ -71,7 +71,7 @@
           "ticker": "CIEB",
           "researchWeightPct": 30,
           "effectiveExposurePct": 12,
-          "score": 79.9,
+          "score": 81.1,
           "entryQuality": "IDEAL",
           "rrT2": 7.84
         },
@@ -80,7 +80,7 @@
           "ticker": "CNFN",
           "researchWeightPct": 30,
           "effectiveExposurePct": 12,
-          "score": 77.9,
+          "score": 79.1,
           "entryQuality": "IDEAL",
           "rrT2": 4.15
         },
@@ -89,7 +89,7 @@
           "ticker": "FWRY",
           "researchWeightPct": 30,
           "effectiveExposurePct": 12,
-          "score": 77.6,
+          "score": 79,
           "entryQuality": "IDEAL",
           "rrT2": 2.17
         }
@@ -110,7 +110,7 @@
       "opportunitySnapshots": [
         {
           "ticker": "FWRY",
-          "finalDecisionScore": 71.3,
+          "finalDecisionScore": 72.7,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 43.2,
@@ -124,7 +124,7 @@
         },
         {
           "ticker": "CIEB",
-          "finalDecisionScore": 68.9,
+          "finalDecisionScore": 70.1,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 36.9,
@@ -138,7 +138,7 @@
         },
         {
           "ticker": "CNFN",
-          "finalDecisionScore": 67.6,
+          "finalDecisionScore": 68.8,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 41.5,
@@ -152,7 +152,7 @@
         },
         {
           "ticker": "MTIE",
-          "finalDecisionScore": 65.6,
+          "finalDecisionScore": 66.6,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 41.6,
@@ -166,7 +166,7 @@
         },
         {
           "ticker": "SKPC",
-          "finalDecisionScore": 64,
+          "finalDecisionScore": 65,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 41.4,
@@ -180,39 +180,21 @@
         },
         {
           "ticker": "HRHO",
-          "finalDecisionScore": 61.3,
+          "finalDecisionScore": 62.1,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 41.5,
           "rrT2": 3.44,
           "liquidityContextScore": 50,
           "currentPrice": 26.7,
-          "gatePass": false,
-          "gateReasons": [
-            "FINAL_SCORE_BELOW_B"
-          ],
-          "portfolioSelected": false,
-          "portfolioRank": null
-        },
-        {
-          "ticker": "MCQE",
-          "finalDecisionScore": 60.2,
-          "entryQualityScore": 100,
-          "entryQuality": "IDEAL",
-          "contextScore": 36.5,
-          "rrT2": 3.25,
-          "liquidityContextScore": 50,
-          "currentPrice": 196.74,
-          "gatePass": false,
-          "gateReasons": [
-            "FINAL_SCORE_BELOW_B"
-          ],
+          "gatePass": true,
+          "gateReasons": [],
           "portfolioSelected": false,
           "portfolioRank": null
         },
         {
           "ticker": "ISPH",
-          "finalDecisionScore": 60.1,
+          "finalDecisionScore": 60.9,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 38.6,
@@ -227,8 +209,24 @@
           "portfolioRank": null
         },
         {
+          "ticker": "MCQE",
+          "finalDecisionScore": 60.9,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 36.5,
+          "rrT2": 3.25,
+          "liquidityContextScore": 50,
+          "currentPrice": 196.74,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
           "ticker": "SNFC",
-          "finalDecisionScore": 58.7,
+          "finalDecisionScore": 59.4,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 42.2,
@@ -244,7 +242,7 @@
         },
         {
           "ticker": "UEFM",
-          "finalDecisionScore": 57.8,
+          "finalDecisionScore": 58.4,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -261,7 +259,7 @@
         },
         {
           "ticker": "CERA",
-          "finalDecisionScore": 57.7,
+          "finalDecisionScore": 58.3,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -278,7 +276,7 @@
         },
         {
           "ticker": "SAUD",
-          "finalDecisionScore": 55.3,
+          "finalDecisionScore": 55.8,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 36.9,
@@ -295,7 +293,7 @@
         },
         {
           "ticker": "ENGC",
-          "finalDecisionScore": 54.5,
+          "finalDecisionScore": 55,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -311,7 +309,7 @@
         },
         {
           "ticker": "MENA",
-          "finalDecisionScore": 49.8,
+          "finalDecisionScore": 50,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -328,7 +326,7 @@
         },
         {
           "ticker": "RMDA",
-          "finalDecisionScore": 48.3,
+          "finalDecisionScore": 48.4,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 38.6,
@@ -345,7 +343,7 @@
         },
         {
           "ticker": "OCDI",
-          "finalDecisionScore": 48.2,
+          "finalDecisionScore": 48.3,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 38.2,
@@ -362,7 +360,7 @@
         },
         {
           "ticker": "EDFM",
-          "finalDecisionScore": 47.4,
+          "finalDecisionScore": 47.5,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -379,7 +377,7 @@
         },
         {
           "ticker": "DAPH",
-          "finalDecisionScore": 47.3,
+          "finalDecisionScore": 47.4,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -396,7 +394,7 @@
         },
         {
           "ticker": "GSSC",
-          "finalDecisionScore": 47,
+          "finalDecisionScore": 47.1,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.7,
@@ -413,7 +411,7 @@
         },
         {
           "ticker": "PHAR",
-          "finalDecisionScore": 43.4,
+          "finalDecisionScore": 43.3,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 38.6,
@@ -430,7 +428,7 @@
         },
         {
           "ticker": "MPRC",
-          "finalDecisionScore": 54.2,
+          "finalDecisionScore": 54.6,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 49.7,
@@ -447,7 +445,7 @@
         },
         {
           "ticker": "OLFI",
-          "finalDecisionScore": 53.9,
+          "finalDecisionScore": 54.4,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 49.1,
@@ -464,7 +462,7 @@
         },
         {
           "ticker": "AJWA",
-          "finalDecisionScore": 53.8,
+          "finalDecisionScore": 54.2,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 49.7,
@@ -481,7 +479,7 @@
         },
         {
           "ticker": "FERC",
-          "finalDecisionScore": 52.6,
+          "finalDecisionScore": 53,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 42.2,
@@ -498,7 +496,7 @@
         },
         {
           "ticker": "AFDI",
-          "finalDecisionScore": 51.2,
+          "finalDecisionScore": 51.5,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 42.2,
@@ -515,7 +513,7 @@
         },
         {
           "ticker": "CSAG",
-          "finalDecisionScore": 50,
+          "finalDecisionScore": 50.3,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 37.6,
@@ -532,7 +530,7 @@
         },
         {
           "ticker": "MOIL",
-          "finalDecisionScore": 46.7,
+          "finalDecisionScore": 47,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 31.7,
@@ -550,7 +548,7 @@
         },
         {
           "ticker": "CPCI",
-          "finalDecisionScore": 46.3,
+          "finalDecisionScore": 46.6,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 32.6,
@@ -568,7 +566,7 @@
         },
         {
           "ticker": "ADCI",
-          "finalDecisionScore": 42.6,
+          "finalDecisionScore": 42.7,
           "entryQualityScore": 100,
           "entryQuality": "IDEAL",
           "contextScore": 31.7,
