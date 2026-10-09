@@ -1,0 +1,43 @@
+name: ASTRA Release Hardening Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'app/dashboard/**'
+      - 'package.json'
+      - 'vercel.json'
+      - '.github/workflows/release-hardening.yml'
+
+concurrency:
+  group: astra-release-hardening
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install quant Python requirements
+        run: python -m pip install -r quant/requirements.txt
+      - name: Build full ASTRA cockpit
+        run: npm run build
+      - name: Legacy/runtime validation suite
+        run: npm test
+      - name: Quant unit/integration tests
+        run: npm run quant:test
+      - name: Decision cockpit validation
+        run: npm run cockpit:validate
+      - name: Ten consecutive developer-innovator-critic audit cycles
+        run: node scripts/release-integrity-audit.js --cycles=10
