@@ -1,10 +1,10 @@
 {
   "name": "ras-egx-astra-v5",
-  "version": "6.7.0",
+  "version": "6.8.0",
   "private": true,
   "scripts": {
     "build": "node scripts/build-check.js && npm run cockpit:build",
-    "test": "node scripts/runtime-validation.js && node scripts/atomic-session-validation.js && node scripts/ucp-validation.js && node scripts/ucp-forward-validation.js && node scripts/ucp-forward-null-metrics-validation.js && node scripts/ucp-morning-evidence-validation.js && node scripts/ucp-meta-label-validation.js && node scripts/unified-opportunity-validation.js && node scripts/hygiene-validation.js && node scripts/quant-validation.js && node scripts/serve-validation.js && node scripts/recommendations-pwa-validation.js && node scripts/execution-contract-validation.js && node scripts/output-ownership-validation.js && node scripts/source-health-validation.js",
+    "test": "node scripts/runtime-validation.js && node scripts/atomic-session-validation.js && node scripts/ucp-validation.js && node scripts/ucp-forward-validation.js && node scripts/ucp-forward-null-metrics-validation.js && node scripts/ucp-morning-evidence-validation.js && node scripts/ucp-meta-label-validation.js && node scripts/unified-opportunity-validation.js && node scripts/hygiene-validation.js && node scripts/quant-validation.js && node scripts/serve-validation.js && node scripts/recommendations-pwa-validation.js && node scripts/execution-contract-validation.js && node scripts/output-ownership-validation.js && node scripts/source-health-validation.js && node scripts/calibration-validation.js",
     "data:refresh": "node scripts/data-refresh.js",
     "ucp:forward": "node scripts/ucp-forward-ledger.js cycle",
     "quant:test": "node scripts/run-python.js --cwd quant tests/test_engine.py && node scripts/run-python.js --cwd quant tests/test_daily_update.py && node scripts/run-python.js --cwd quant tests/test_bridge.py && node scripts/run-python.js --cwd quant tests/test_site.py && node scripts/run-python.js quant/tests/test_execution_contract.py",
@@ -15,7 +15,7 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/risk-state-override-engine.js && node scripts/capture-prospective-evidence.js && node scripts/persistent-evidence-ledger.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/source-health-engine.js && node scripts/archive-trust-snapshot.js && node scripts/walk-forward-validation.js && node scripts/model-governance-engine.js && node scripts/verify-persistent-ledgers.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/walk-forward-validation.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/risk-state-override-engine.js && node scripts/capture-prospective-evidence.js && node scripts/persistent-evidence-ledger.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/source-health-engine.js && node scripts/archive-trust-snapshot.js && node scripts/model-governance-engine.js && node scripts/verify-persistent-ledgers.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js",
     "evidence:resolve": "node scripts/resolve-prospective-outcomes.js",
     "entry:quality": "node scripts/entry-quality-engine.js",
@@ -43,7 +43,8 @@
     "execution:validate": "node scripts/execution-contract-validation.js && node scripts/run-python.js quant/tests/test_execution_contract.py",
     "output:ownership:validate": "node scripts/output-ownership-validation.js",
     "source:health": "node scripts/source-health-engine.js",
-    "source:validate": "node scripts/source-health-validation.js"
+    "source:validate": "node scripts/source-health-validation.js",
+    "calibration:validate": "node scripts/calibration-validation.js"
   },
   "engines": {
     "node": ">=20"

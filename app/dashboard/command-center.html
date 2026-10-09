@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.7 Decision Cockpit</title>
+<title>ASTRA V6.8 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.7 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.8 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.7 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.8 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.7 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.8 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -613,7 +613,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.7 Decision Cockpit":"لوحة قرارات ASTRA V6.7",
+    "ASTRA V6.8 Decision Cockpit":"لوحة قرارات ASTRA V6.8",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -684,13 +684,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.7':'ASTRA V6.7 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.8':'ASTRA V6.8 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.7 TRUST UI</b> · '+(uiLang==='ar'
+  if(releaseText) releaseText.innerHTML='<b>V6.8 TRUST UI</b> · '+(uiLang==='ar'
     ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.7 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.8 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();
@@ -1347,25 +1347,25 @@ async function loadV52(){
     const pc=d.probabilityCalibrationEngine||{};
     document.getElementById('probTitle').innerText=uiLang==='ar'?'تقديرات تحقيق الأهداف مستقبلًا':'Forward Target Estimates';
     document.getElementById('probNote').innerText=uiLang==='ar'
-      ?'لا يعرض ASTRA تقديرات مستقبلية ذات أفق زمني ثابت إلا بعد توفر عدد كافٍ من النتائج المحسومة. قبل ذلك يظهر نقص البيانات بدل اختراع نسبة.'
-      :'Fixed-horizon forward estimates appear only after enough resolved evidence. Until then ASTRA shows insufficient data instead of inventing a percentage.';
-    const pcs=pc.status||'INSUFFICIENT_DATA';
+      ?'يعرض ASTRA التقدير التجريبي فقط بعد حد أدنى من الأدلة، ولا يسميه احتمالاً مُعتمدًا قبل 90 نتيجة محسومة عبر 30 جلسة مستقلة واجتياز بوابة Walk-Forward.'
+      :'ASTRA may show an empirical forward estimate after minimum evidence, but validated probability is withheld until 90 resolved outcomes across 30 distinct sessions and the Walk-Forward gate passes.';
+    const pcs=pc.status||'INSUFFICIENT_EVIDENCE';
     document.getElementById('probStatus').innerText=uiLang==='ar'
-      ?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[pcs]||pcs)
+      ?({INSUFFICIENT_EVIDENCE:'أدلة غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',MATURE_SAMPLE_WAITING_WALK_FORWARD:'عينة ناضجة بانتظار Walk-Forward',VALIDATED:'مُعتمد'}[pcs]||pcs)
       :pcs.replaceAll('_',' ');
-    document.getElementById('probResolvedLabel').innerText=uiLang==='ar'?'نتائج مستقبلية محسومة':'Resolved Forward';
+    document.getElementById('probResolvedLabel').innerText=uiLang==='ar'?'نتائج / جلسات مستقلة':'Outcomes / Sessions';
     document.getElementById('probT1Label').innerText=uiLang==='ar'?'تقدير الهدف 1':'T1 Estimate';
     document.getElementById('probT2Label').innerText=uiLang==='ar'?'تقدير الهدف 2':'T2 Estimate';
     document.getElementById('probStopLabel').innerText=uiLang==='ar'?'تقدير وقف الخسارة':'Stop Estimate';
     document.getElementById('probEvLabel').innerText=uiLang==='ar'?'متوسط العائد المستقبلي':'Forward Expectancy';
-    document.getElementById('probNLabel').innerText=uiLang==='ar'?'حجم العينة':'Sample Size';
-    document.getElementById('probResolved').innerText=pc.forwardResolved??0;
+    document.getElementById('probNLabel').innerText=uiLang==='ar'?'عينة مجموعة التقدير':'Estimate Pool';
+    document.getElementById('probResolved').innerText=(pc.forwardResolved??0)+' / '+(pc.forwardDistinctSessions??0);
     const pb=pc.bestByEstimatedT1||null;
-    document.getElementById('probT1').innerText=pb?.t1ProbabilityPct!=null?pb.t1ProbabilityPct+'%':'—';
-    document.getElementById('probT2').innerText=pb?.t2ProbabilityPct!=null?pb.t2ProbabilityPct+'%':'—';
-    document.getElementById('probStop').innerText=pb?.stopProbabilityPct!=null?pb.stopProbabilityPct+'%':'—';
-    document.getElementById('probEV').innerText=pb?.expectedValuePct!=null?pb.expectedValuePct+'%':'—';
-    document.getElementById('probN').innerText=pb?.sampleSize??(pc.forwardResolved??0);
+    document.getElementById('probT1').innerText=pb?.t1EstimatePct!=null?pb.t1EstimatePct+'%':'—';
+    document.getElementById('probT2').innerText=pb?.t2EstimatePct!=null?pb.t2EstimatePct+'%':'—';
+    document.getElementById('probStop').innerText=pb?.stopEstimatePct!=null?pb.stopEstimatePct+'%':'—';
+    document.getElementById('probEV').innerText=pb?.expectedValueEstimatePct!=null?pb.expectedValueEstimatePct+'%':'—';
+    document.getElementById('probN').innerText=pb?((pb.sampleSize??0)+' / '+(pb.distinctSessions??0)):(pc.forwardResolved??0);
     document.getElementById('probBest').innerText=pb
       ?(uiLang==='ar'
         ?'أعلى تقدير مستقبلي للهدف 1: '+pb.ticker+' · الحالة '+pb.status
@@ -1420,11 +1420,11 @@ async function loadV52(){
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Final Score</span><div class="v52-v">'+esc(x.finalDecisionScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T1':'T1 Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t1ProbabilityPct!=null?x.targetAchievement.t1ProbabilityPct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T2':'T2 Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t2ProbabilityPct!=null?x.targetAchievement.t2ProbabilityPct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال الوقف':'Stop Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.stopProbabilityPct!=null?x.targetAchievement.stopProbabilityPct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'القيمة المتوقعة':'Expected Value')+'</span><div class="v52-v">'+esc(x.targetAchievement?.expectedValuePct!=null?x.targetAchievement.expectedValuePct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المعايرة':'Calibration')+'</span><div class="v52-v">'+esc(uiLang==='ar'?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[x.targetAchievement?.status]||x.targetAchievement?.status||'-'):(x.targetAchievement?.status||'-').replaceAll('_',' '))+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'احتمال T1 مُعتمد':'تقدير T1'):(x.targetAchievement?.calibrated?'T1 Validated Prob.':'T1 Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.t1ProbabilityPct??x.targetAchievement?.t1EstimatePct)!=null?(x.targetAchievement?.t1ProbabilityPct??x.targetAchievement?.t1EstimatePct)+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'احتمال T2 مُعتمد':'تقدير T2'):(x.targetAchievement?.calibrated?'T2 Validated Prob.':'T2 Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.t2ProbabilityPct??x.targetAchievement?.t2EstimatePct)!=null?(x.targetAchievement?.t2ProbabilityPct??x.targetAchievement?.t2EstimatePct)+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'احتمال الوقف مُعتمد':'تقدير الوقف'):(x.targetAchievement?.calibrated?'Stop Validated Prob.':'Stop Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.stopProbabilityPct??x.targetAchievement?.stopEstimatePct)!=null?(x.targetAchievement?.stopProbabilityPct??x.targetAchievement?.stopEstimatePct)+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?(x.targetAchievement?.calibrated?'القيمة المتوقعة المُعتمدة':'تقدير العائد'):(x.targetAchievement?.calibrated?'Validated Expected Value':'Forward EV Estimate'))+'</span><div class="v52-v">'+esc((x.targetAchievement?.expectedValuePct??x.targetAchievement?.expectedValueEstimatePct)!=null?(x.targetAchievement?.expectedValuePct??x.targetAchievement?.expectedValueEstimatePct)+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المعايرة':'Calibration')+'</span><div class="v52-v">'+esc(uiLang==='ar'?({INSUFFICIENT_EVIDENCE:'أدلة غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',MATURE_SAMPLE_WAITING_WALK_FORWARD:'عينة ناضجة/بانتظار Walk-Forward',VALIDATED:'مُعتمد'}[x.targetAchievement?.status]||x.targetAchievement?.status||'-'):(x.targetAchievement?.status||'-').replaceAll('_',' '))+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حجم العينة':'Sample Size')+'</span><div class="v52-v">'+esc(x.targetAchievement?.sampleSize??0)+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المتابعة':'Monitoring')+'</span><div class="v52-v">'+esc(uiLang==='ar'?(stateAr[x.monitoringState]||x.monitoringState||'-'):((x.monitoringState||'-').replaceAll('_',' ')))+'</div></div>'+
           '<div><span class="v52-k">'+esc(t('R:R to T2'))+'</span><div class="v52-v">'+esc(rr)+'</div></div>'+

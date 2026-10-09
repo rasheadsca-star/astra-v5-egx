@@ -2,6 +2,7 @@
 
 const fs=require('fs'),path=require('path');
 const {dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
+const {distinctSessions,maturity:calibrationMaturity}=require('./lib/calibration-stats');
 const COCKPIT='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
 const EVID='data/prospective-evidence.json';
@@ -50,6 +51,7 @@ function aggregate(rows){
 
   return {
     captured:rows.length,
+    distinctSessions:distinctSessions(res),
     activated:act.length,
     resolved:res.length,
     ambiguous:amb.length,
@@ -95,12 +97,7 @@ const byMonitoringAtCapture=groupBy('monitoringState',v=>v||'UNKNOWN');
 
 const overall=aggregate(records);
 
-function maturity(n){
-  if(n<10)return 'INSUFFICIENT_DATA';
-  if(n<30)return 'PRELIMINARY';
-  if(n<90)return 'CALIBRATING';
-  return 'MATURE_SAMPLE';
-}
+function maturity(rows){return calibrationMaturity(rows)}
 
 const bestGrade=byGrade.filter(x=>x.resolved>=5&&x.expectancyPct!=null).sort((a,b)=>b.expectancyPct-a.expectancyPct)[0]||null;
 const bestEntry=byEntryQuality.filter(x=>x.resolved>=5&&x.expectancyPct!=null).sort((a,b)=>b.expectancyPct-a.expectancyPct)[0]||null;
@@ -110,10 +107,10 @@ d.outcomeAnalyticsEngine={
   version:'outcome-analytics/v3-recorded-forward-only',
   generatedAt:new Date().toISOString(),
   evidenceGeneratedAt:e.generatedAt||null,
-  status:maturity(overall.resolved),
+  status:maturity(resolved),
   samplePolicy:{
     groupLeaderboardMinimumResolved:5,
-    probabilityValidationThreshold:90,
+    probabilityValidationThreshold:{resolved:90,distinctSessions:30},
     ambiguousExcludedFromReturnMetrics:true,
     t1Denominator:'deduped activated records; ambiguous entry/OHLC cases remain descriptive and are excluded from return metrics',
     returnMetricsDenominator:'RESOLVED only'

@@ -27,6 +27,7 @@ function aggregate(rows){
   const grossWin=wins.reduce((s,x)=>s+x,0),grossLoss=Math.abs(losses.reduce((s,x)=>s+x,0));
   return {
     resolved:resolved.length,
+    distinctSessions:new Set(resolved.map(x=>String(x.session||'')).filter(Boolean)).size,
     winRatePct:resolved.length?r(100*wins.length/resolved.length,1):null,
     expectancyPct:returns.length?r(mean(returns),2):null,
     profitFactor:grossLoss>0?r(grossWin/grossLoss,2):(grossWin>0?null:null),
@@ -118,8 +119,9 @@ const payload={
   governance:{
     automaticExecution:false,
     researchOnly:true,
-    calibrationClaimAllowed:validFolds.length>=3&&oos.resolved>=30,
-    trustClaim:status==='ACTIVE'?'MULTI_FOLD_FORWARD_EVIDENCE_AVAILABLE':'NOT_YET_ESTABLISHED'
+    calibrationClaimAllowed:validFolds.length>=3&&oos.resolved>=30&&oos.distinctSessions>=10,
+    trustClaim:status==='ACTIVE'?'MULTI_FOLD_FORWARD_EVIDENCE_AVAILABLE':'NOT_YET_ESTABLISHED',
+    calibrationGateRequirements:{validFolds:3,outOfSampleResolved:30,outOfSampleDistinctSessions:10}
   }
 };
 

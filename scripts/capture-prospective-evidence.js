@@ -37,7 +37,7 @@ for(const x of [...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[]),...
   stableKeys.add(stableKey);
   const rec={
     id,
-    evidenceKeyVersion:'session+ticker/v2',
+    evidenceKeyVersion:'session+ticker/v3',
     capturedAt,
     captureTiming,
     recordedForwardEligible,
@@ -97,6 +97,14 @@ for(const x of [...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[]),...
     exposureScale:finite(cockpit.market?.exposureScale),
     warnings:x.warnings||[],
     evidence:x.evidence||[],
+    exAnteT1ProbabilityPct:finite(x.targetAchievement?.t1ProbabilityPct),
+    exAnteT2ProbabilityPct:finite(x.targetAchievement?.t2ProbabilityPct),
+    exAnteStopProbabilityPct:finite(x.targetAchievement?.stopProbabilityPct),
+    probabilityStatusAtCapture:x.targetAchievement?.status??null,
+    probabilitySourceAtCapture:x.targetAchievement?.source??null,
+    probabilitySampleSizeAtCapture:finite(x.targetAchievement?.sampleSize),
+    probabilityDistinctSessionsAtCapture:finite(x.targetAchievement?.distinctSessions),
+    probabilityPoolLevelAtCapture:x.targetAchievement?.poolLevel??null,
     outcome:{status:'PENDING',resolvedAt:null,fillPrice:null,exitPrice:null,netReturnPct:null,maxFavorablePct:null,maxAdversePct:null}
   };
   rec.captureHash=captureHash(rec);
@@ -108,7 +116,7 @@ const payload={
   generatedAt:new Date().toISOString(),
   researchOnly:true,
   automaticExecution:false,
-  identityPolicy:'one immutable prediction capture per session+ticker; outcomes may evolve only through append-only evidence events',
+  identityPolicy:'one immutable prediction capture per session+ticker; v3 freezes ex-ante calibration fields; outcomes may evolve only through append-only evidence events',
   capturePolicy:{currentCaptureTiming:captureTiming,recordedForwardEligible},
   records,
   counts:{
