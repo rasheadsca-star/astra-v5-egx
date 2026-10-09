@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-decision-cockpit/v1",
   "product": "ASTRA V5.1 DECISION COCKPIT",
-  "generatedAt": "2026-10-09T21:25:58.061Z",
+  "generatedAt": "2026-10-09T21:36:18.820Z",
   "session": "2026-10-07",
   "safety": {
     "researchOnly": true,
@@ -9757,7 +9757,7 @@
   },
   "entryQualityEngine": {
     "version": "entry-quality/v1",
-    "generatedAt": "2026-10-09T21:25:58.094Z",
+    "generatedAt": "2026-10-09T21:36:18.843Z",
     "marketSession": "2026-10-07",
     "rules": {
       "invalidated": "current price <= stop",
@@ -9779,7 +9779,7 @@
   },
   "sectorCorrelationEngine": {
     "version": "sector-correlation/v1",
-    "generatedAt": "2026-10-09T21:25:58.186Z",
+    "generatedAt": "2026-10-09T21:36:18.897Z",
     "taxonomy": {
       "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
       "symbolMappings": 80,
@@ -11602,7 +11602,7 @@
   },
   "marketSectorContextEngine": {
     "version": "market-sector-context/v1",
-    "generatedAt": "2026-10-09T21:25:58.242Z",
+    "generatedAt": "2026-10-09T21:36:18.937Z",
     "marketSession": "2026-10-07",
     "market": {
       "regime": "هابط",
@@ -11628,7 +11628,7 @@
   },
   "finalDecisionEngine": {
     "version": "final-decision-score/v2-missing-aware",
-    "generatedAt": "2026-10-09T21:25:58.288Z",
+    "generatedAt": "2026-10-09T21:36:18.966Z",
     "weights": {
       "technical": 0.25,
       "entryQuality": 0.2,
@@ -11690,7 +11690,7 @@
   },
   "walkForwardValidationEngine": {
     "schemaVersion": "astra-walk-forward-validation/v1",
-    "generatedAt": "2026-10-09T21:25:58.408Z",
+    "generatedAt": "2026-10-09T21:36:19.043Z",
     "methodology": {
       "noLookAhead": true,
       "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -11735,7 +11735,7 @@
   },
   "probabilityCalibrationEngine": {
     "version": "probability-calibration/v3-session-aware",
-    "generatedAt": "2026-10-09T21:25:58.451Z",
+    "generatedAt": "2026-10-09T21:36:19.073Z",
     "forwardResolved": 0,
     "forwardDistinctSessions": 0,
     "sampleMaturity": "INSUFFICIENT_EVIDENCE",
@@ -11833,7 +11833,7 @@
   },
   "decisionGateEngine": {
     "version": "decision-gate/v1",
-    "generatedAt": "2026-10-09T21:25:58.488Z",
+    "generatedAt": "2026-10-09T21:36:19.100Z",
     "rules": {
       "dataFreshness": "stale=false and staleLagSessions=0",
       "entryQuality": "not INVALIDATED, CHASE_RISK or UNKNOWN",
@@ -11904,7 +11904,7 @@
   },
   "portfolioSelectionEngine": {
     "version": "portfolio-selection/v1",
-    "generatedAt": "2026-10-09T21:25:58.529Z",
+    "generatedAt": "2026-10-09T21:36:19.126Z",
     "researchOnly": true,
     "executionAllowed": false,
     "automaticOrders": false,
@@ -12042,7 +12042,7 @@
   },
   "riskBudgetEngine": {
     "version": "risk-budget/v2-risk-state-aware",
-    "generatedAt": "2026-10-09T21:25:58.688Z",
+    "generatedAt": "2026-10-09T21:36:19.228Z",
     "referenceCapital": 100000,
     "currency": "EGP",
     "policy": {
@@ -12226,7 +12226,7 @@
   },
   "monitoringAlertsEngine": {
     "version": "monitoring-alerts/v1",
-    "generatedAt": "2026-10-09T21:25:58.648Z",
+    "generatedAt": "2026-10-09T21:36:19.201Z",
     "session": "2026-10-07",
     "dataMode": "DELAYED_SESSION_MONITORING",
     "delayed": true,
@@ -13229,7 +13229,7 @@
   },
   "riskStateOverrideEngine": {
     "version": "risk-state-override/v1",
-    "generatedAt": "2026-10-09T21:25:58.688Z",
+    "generatedAt": "2026-10-09T21:36:19.228Z",
     "policy": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
     "positions": [
       {
@@ -13273,8 +13273,8 @@
   },
   "outcomeAnalyticsEngine": {
     "version": "outcome-analytics/v3-recorded-forward-only",
-    "generatedAt": "2026-10-09T21:25:58.837Z",
-    "evidenceGeneratedAt": "2026-10-09T21:25:58.751Z",
+    "generatedAt": "2026-10-09T21:36:19.326Z",
+    "evidenceGeneratedAt": "2026-10-09T21:36:19.268Z",
     "status": "INSUFFICIENT_EVIDENCE",
     "samplePolicy": {
       "groupLeaderboardMinimumResolved": 5,
@@ -13334,7 +13334,7 @@
   },
   "dailyDecisionBrief": {
     "version": "daily-decision-brief/v1",
-    "generatedAt": "2026-10-09T21:25:58.876Z",
+    "generatedAt": "2026-10-09T21:36:19.352Z",
     "session": "2026-10-07",
     "headline": {
       "ticker": "FWRY",
@@ -13454,7 +13454,7 @@
   },
   "changeAttributionEngine": {
     "version": "change-attribution/v1",
-    "generatedAt": "2026-10-09T21:25:58.918Z",
+    "generatedAt": "2026-10-09T21:36:19.380Z",
     "session": "2026-10-07",
     "priorSession": null,
     "status": "NO_PRIOR_PERSISTED_SESSION",
@@ -13994,7 +13994,7 @@
   "sourceHealthEngine": {
     "schemaVersion": "astra-source-health/v1",
     "expectedSession": "2026-10-07",
-    "generatedAt": "2026-10-09T21:25:59.189Z",
+    "generatedAt": "2026-10-09T21:36:19.537Z",
     "researchOnly": true,
     "automaticExecution": false,
     "coverage": {
@@ -16761,7 +16761,7 @@
   },
   "trustArchitecture": {
     "version": "trust-architecture/v1",
-    "generatedAt": "2026-10-09T21:25:59.431Z",
+    "generatedAt": "2026-10-09T21:36:19.617Z",
     "session": "2026-10-07",
     "replaySnapshotSha256": "f931d52e08586bee704a5977d11f0ba9b9c0650319ea2203804f25faaa8f13db",
     "ledgerRecordHash": "656c18d62e54a3ba6c81b146af37802c4f4bb38a648675dc315e8d049e350b97",
@@ -16776,7 +16776,7 @@
   },
   "modelGovernanceEngine": {
     "schemaVersion": "astra-model-governance/v1",
-    "generatedAt": "2026-10-09T21:25:59.520Z",
+    "generatedAt": "2026-10-09T21:36:19.670Z",
     "modelVersion": "ASTRA_V6.8_GOVERNANCE",
     "reliability": {
       "score": 51.4,
@@ -16949,7 +16949,7 @@
   },
   "operationsHealthEngine": {
     "schemaVersion": "astra-operations-health/v1",
-    "generatedAt": "2026-10-09T21:26:00.154Z",
+    "generatedAt": "2026-10-09T21:36:20.091Z",
     "version": "6.11.0",
     "session": "2026-10-07",
     "overall": "DEGRADED",
@@ -17109,7 +17109,7 @@
     "packageVersion": "6.11.0",
     "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
     "stableBranch": "release-v6.11-stable",
-    "generatedAt": "2026-10-09T21:26:00.044Z",
+    "generatedAt": "2026-10-09T21:36:20.020Z",
     "baselineSession": "2026-10-07",
     "requiredDistinctSessions": 2,
     "currentSession": "2026-10-07",
