@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "astra-output-ownership/v1",
+  "authoritativeProducerWorkflow": ".github/workflows/daily-egx-data-refresh.yml",
+  "policy": "Canonical production state is committed only by the Daily EGX Data Refresh workflow. Other workflows may build/validate in ephemeral workspaces but must not push canonical state.",
+  "canonicalPaths": [
+    "data/canonical-market.json",
+    "data/history-index.json",
+    "data/decision-cockpit.json",
+    "data/prospective-evidence.json",
+    "data/evidence-event-ledger.json",
+    "data/prediction-ledger.json",
+    "data/replay/**",
+    "data/walk-forward-validation.json",
+    "data/model-governance.json",
+    "data/daily-decision-brief-history.json",
+    "data/quant/**",
+    "data/comparison/**",
+    "data/confluence/**",
+    "data/confluence-v2/**",
+    "quant/data/**",
+    "docs/**"
+  ],
+  "independentLedgers": [
+    {
+      "path": "data/ucp/forward-ledger.json",
+      "workflow": ".github/workflows/ucp-forward-ledger.yml",
+      "isolation": "Independent experimental UCP ledger; it must not write canonical decision-cockpit/trust paths."
+    }
+  ],
+  "safety": {
+    "automaticExecution": false
+  }
+}
