@@ -39,7 +39,9 @@ function resolveApi(urlPath) {
 
 function createServer() {
   return http.createServer(async (req, nodeRes) => {
-    const urlPath = decodeURIComponent((req.url || '/').split('?')[0]);
+    const parsed = new URL(req.url || '/', 'http://localhost');
+    const urlPath = decodeURIComponent(parsed.pathname);
+    const query = Object.fromEntries(parsed.searchParams.entries());
     try {
       if (urlPath === '/' || urlPath === '/index.html') {
         nodeRes.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -50,7 +52,36 @@ function createServer() {
         const file = resolveApi(urlPath);
         if (!file) { nodeRes.statusCode = 404; return nodeRes.end(JSON.stringify({ error: 'NOT_FOUND' })); }
         const handler = require(file);
-        return await handler({ method: req.method, url: req.url, headers: req.headers, query: {} }, makeRes(nodeRes));
+        return await handler({ method: req.method, url: req.url, headers: req.headers, query }, makeRes(nodeRes));
+      }
+      const publicStatic =
+        urlPath === '/data/decision-cockpit.json' ||
+        urlPath === '/data/prospective-evidence.json' ||
+        urlPath === '/data/prediction-ledger.json' ||
+        urlPath === '/data/walk-forward-validation.json' ||
+        urlPath === '/data/model-governance.json' ||
+        urlPath.startsWith('/data/technical/') ||
+        urlPath.startsWith('/data/replay/') ||
+        urlPath === '/docs/data/decision-cockpit.json' ||
+        urlPath === '/docs/data/prospective-evidence.json' ||
+        urlPath === '/docs/data/prediction-ledger.json' ||
+        urlPath === '/docs/data/walk-forward-validation.json' ||
+        urlPath === '/docs/data/model-governance.json' ||
+        urlPath.startsWith('/docs/data/technical/') ||
+        urlPath.startsWith('/docs/data/replay/');
+      if(publicStatic){
+        const rel=urlPath.replace(/^\//,'');
+        const file=path.resolve(ROOT,rel);
+        const allowedRoot=path.resolve(ROOT,urlPath.startsWith('/docs/')?'docs/data':'data');
+        if(!file.startsWith(allowedRoot+path.sep) && file!==allowedRoot){
+          nodeRes.statusCode=403;return nodeRes.end('Forbidden');
+        }
+        if(!fs.existsSync(file)||!fs.statSync(file).isFile()){
+          nodeRes.statusCode=404;return nodeRes.end('Not found');
+        }
+        nodeRes.setHeader('Content-Type','application/json; charset=utf-8');
+        nodeRes.setHeader('Cache-Control','no-store');
+        return nodeRes.end(fs.readFileSync(file));
       }
       nodeRes.statusCode = 404;
       return nodeRes.end('Not found');
