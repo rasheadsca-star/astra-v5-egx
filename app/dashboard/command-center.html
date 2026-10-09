@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.0 Decision Cockpit</title>
+<title>ASTRA V6.1 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.0 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.1 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V6.0 TRUST UI</b> · Replay Archive + Prediction Ledger + Technical Chart + Outcome Analytics + Monitoring</div>
+  <div><b>V6.1 TRUST UI</b> · Walk-Forward Validation + Replay Archive + Prediction Ledger + Technical Chart + Outcome Analytics</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V6.0 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V6.1 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -118,6 +118,30 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #14b8a6">
+  <div class="v52-header">
+    <div>
+      <h2 id="wfTitle" style="margin:0">Walk-Forward Validation — V6.1</h2>
+      <div class="small" id="wfNote">Frozen model evaluated only on later persisted sessions. No pre-V6 reconstruction and no look-ahead.</div>
+    </div>
+    <span class="badge warn" id="wfStatus">WAITING</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="wfReplayLabel">Replay Sessions</div><div class="value" id="wfReplay">-</div></div>
+    <div class="metric"><div class="label" id="wfRemainLabel">Sessions to First Fold</div><div class="value" id="wfRemain">-</div></div>
+    <div class="metric"><div class="label" id="wfFoldsLabel">Valid Folds</div><div class="value" id="wfFolds">-</div></div>
+    <div class="metric"><div class="label" id="wfResolvedLabel">OOS Resolved</div><div class="value" id="wfResolved">-</div></div>
+    <div class="metric"><div class="label" id="wfExpLabel">OOS Expectancy</div><div class="value" id="wfExp">-</div></div>
+    <div class="metric"><div class="label" id="wfPfLabel">OOS Profit Factor</div><div class="value" id="wfPf">-</div></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="hitem"><div class="k" id="wfMethodLabel">Protocol</div><div id="wfMethod" class="small" style="margin-top:8px"></div></div>
+    <div class="hitem"><div class="k" id="wfTrustLabel">Trust Status</div><div id="wfTrust" class="small" style="margin-top:8px"></div></div>
+  </div>
+  <div id="wfTable" style="margin-top:12px"></div>
+</div>
 
 <div class="card" style="border:1px solid #10b981">
   <div class="v52-header">
@@ -546,7 +570,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.0 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V6.1 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -941,6 +965,36 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const wf=d.walkForwardValidationEngine||{}, wfc=wf.coverage||{}, wfo=wf.outOfSample||{}, wfg=wf.governance||{};
+    const wfAr={WAITING_FOR_MINIMUM_SESSIONS:'بانتظار الحد الأدنى من الجلسات',WAITING_FOR_RESOLVED_TEST_OUTCOMES:'بانتظار نتائج اختبار محسومة',PRELIMINARY:'مبدئي',ACTIVE:'نشط'};
+    document.getElementById('wfTitle').innerText=uiLang==='ar'?'التحقق المتقدم زمنيًا — V6.1':'Walk-Forward Validation — V6.1';
+    document.getElementById('wfNote').innerText=uiLang==='ar'
+      ?'يتم تقييم النموذج المجمد فقط على جلسات لاحقة محفوظة. لا إعادة بناء لما قبل V6 ولا استخدام لمعلومات مستقبلية.'
+      :'Frozen model evaluated only on later persisted sessions. No pre-V6 reconstruction and no look-ahead.';
+    document.getElementById('wfStatus').innerText=uiLang==='ar'?(wfAr[wf.status]||wf.status||'-'):(wf.status||'-').replaceAll('_',' ');
+    document.getElementById('wfStatus').className='badge '+(wf.status==='ACTIVE'?'ready':wf.status==='PRELIMINARY'?'warn':'muted');
+    document.getElementById('wfReplayLabel').innerText=uiLang==='ar'?'جلسات Replay':'Replay Sessions';
+    document.getElementById('wfRemainLabel').innerText=uiLang==='ar'?'جلسات حتى أول Fold':'Sessions to First Fold';
+    document.getElementById('wfFoldsLabel').innerText=uiLang==='ar'?'Folds صالحة':'Valid Folds';
+    document.getElementById('wfResolvedLabel').innerText=uiLang==='ar'?'نتائج OOS محسومة':'OOS Resolved';
+    document.getElementById('wfExpLabel').innerText=uiLang==='ar'?'Expectancy خارج العينة':'OOS Expectancy';
+    document.getElementById('wfPfLabel').innerText=uiLang==='ar'?'Profit Factor خارج العينة':'OOS Profit Factor';
+    document.getElementById('wfReplay').innerText=wfc.replaySessions??0;
+    document.getElementById('wfRemain').innerText=wfc.sessionsRemainingForFirstFold??'-';
+    document.getElementById('wfFolds').innerText=wfc.validFolds??0;
+    document.getElementById('wfResolved').innerText=wfo.resolved??0;
+    document.getElementById('wfExp').innerText=wfo.expectancyPct!=null?wfo.expectancyPct+'%':'—';
+    document.getElementById('wfPf').innerText=wfo.profitFactor!=null?wfo.profitFactor:'—';
+    document.getElementById('wfMethodLabel').innerText=uiLang==='ar'?'البروتوكول':'Protocol';
+    document.getElementById('wfTrustLabel').innerText=uiLang==='ar'?'حالة الثقة':'Trust Status';
+    document.getElementById('wfMethod').innerText=(uiLang==='ar'?'تدريب ':'Train ')+(wf.methodology?.trainWindowSessions??20)+(uiLang==='ar'?' جلسة → اختبار ':' sessions → Test ')+(wf.methodology?.testWindowSessions??5)+(uiLang==='ar'?' جلسات · خطوة ':' sessions · Step ')+(wf.methodology?.stepSessions??5)+(uiLang==='ar'?' · بدون ضبط بارامترات في V6.1':' · no parameter optimization in V6.1');
+    document.getElementById('wfTrust').innerText=(uiLang==='ar'?'ادعاء الثقة: ':'Trust claim: ')+(wfg.trustClaim||'-')+' · '+(uiLang==='ar'?'السماح بادعاء المعايرة: ':'Calibration claim allowed: ')+(wfg.calibrationClaimAllowed?'YES':'NO');
+    const folds=wf.folds||[];
+    document.getElementById('wfTable').innerHTML=folds.length
+      ?'<table><thead><tr><th>Fold</th><th>'+esc(uiLang==='ar'?'تدريب':'Train')+'</th><th>'+esc(uiLang==='ar'?'اختبار':'Test')+'</th><th>'+esc(uiLang==='ar'?'نتائج اختبار':'Test Resolved')+'</th><th>'+esc(uiLang==='ar'?'Win Rate':'Win Rate')+'</th><th>Expectancy</th><th>PF</th><th>Max DD</th><th>'+esc(uiLang==='ar'?'الحالة':'Valid')+'</th></tr></thead><tbody>'+
+        folds.map(x=>'<tr><td>'+esc(x.fold)+'</td><td>'+esc(x.trainStart+' → '+x.trainEnd)+'</td><td>'+esc(x.testStart+' → '+x.testEnd)+'</td><td>'+esc(x.testResolved??0)+'</td><td>'+esc(x.test?.winRatePct!=null?x.test.winRatePct+'%':'—')+'</td><td>'+esc(x.test?.expectancyPct!=null?x.test.expectancyPct+'%':'—')+'</td><td>'+esc(x.test?.profitFactor??'—')+'</td><td>'+esc(x.test?.maxDrawdownPct!=null?x.test.maxDrawdownPct+'%':'—')+'</td><td class="'+(x.valid?'gate-pass':'muted')+'">'+esc(x.valid?'YES':'NO')+'</td></tr>').join('')+
+        '</tbody></table>'
+      :'<div class="small">'+esc(uiLang==='ar'?'لا توجد Folds بعد. أول Fold حقيقي يبدأ بعد تراكم 25 جلسة محفوظة، بدون اختلاق تاريخ قديم.':'No folds yet. The first true fold starts after 25 persisted sessions, without inventing pre-V6 history.')+'</div>';
     const trust=d.trustArchitecture||{};
     document.getElementById('trustTitle').innerText=uiLang==='ar'?'مركز الثقة وأرشيف إعادة التشغيل — V6.0':'Trust Center & Replay Archive — V6.0';
     document.getElementById('trustNote').innerText=uiLang==='ar'
