@@ -1,0 +1,3139 @@
+{
+  "schemaVersion": "astra-decision-cockpit/v1",
+  "product": "ASTRA V5.1 DECISION COCKPIT",
+  "generatedAt": "2026-10-09T08:28:31.055Z",
+  "session": "2026-10-07",
+  "safety": {
+    "researchOnly": true,
+    "executionAllowed": false,
+    "automaticOrders": false
+  },
+  "market": {
+    "regime": "هابط",
+    "breadthPct": 26.9,
+    "marketR20Pct": -8.5,
+    "exposureScale": 0.4,
+    "driftGuard": true,
+    "regimeAdjustment": -8
+  },
+  "methodology": {
+    "note": "V2.1 and V5 are treated as one NEXT_QUANT family when they are not independent. Conviction is a transparent ranking score, not a probability of profit.",
+    "formula": "max(source quality) + 6 per additional independent engine family + readiness bonus + market regime adjustment - risk/liquidity penalties",
+    "stages": [
+      "ENTRY_READY",
+      "ENTRY_READY_SECONDARY",
+      "WAITING_FOR_TRIGGER",
+      "NEAR_ENTRY",
+      "WAITING_FOR_ENTRY",
+      "WATCHLIST",
+      "REJECTED_RISK",
+      "REJECTED"
+    ]
+  },
+  "counts": {
+    "total": 42,
+    "entryReady": 1,
+    "nearEntry": 31,
+    "watchlist": 9,
+    "rejected": 1
+  },
+  "topOpportunities": [
+    {
+      "ticker": "FWRY",
+      "stage": "ENTRY_READY",
+      "conviction": 75,
+      "qualityScore": 75,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 18.4326,
+      "entryHigh": 19.08,
+      "stop": 17.2899,
+      "target1": 20.6064,
+      "target2": 21.942,
+      "riskPct": 7.82,
+      "rrT2": 2.17,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "OFFICIAL_PROFITABILITY_VERIFIED_OVERRIDE"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 4,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 50,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "ENTRY_READY",
+          "score": 75,
+          "dailyScore": 50,
+          "evidenceTier": "A_OFFICIAL_VERIFIED",
+          "riskPct": 7.82,
+          "rrT2": 2.17,
+          "hourlyMa100": 18.8549,
+          "missingConditions": []
+        }
+      },
+      "rank": 1
+    },
+    {
+      "ticker": "CERA",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 60,
+      "qualityScore": 80,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 1.37,
+      "entryHigh": 1.37,
+      "stop": 1.2304,
+      "target1": 1.4796,
+      "target2": 1.5755,
+      "riskPct": 10.19,
+      "rrT2": 1.47,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 2,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 60,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 80,
+          "dailyScore": 60,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 10.19,
+          "rrT2": 1.47,
+          "hourlyMa100": 1.4006000000000005,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 2
+    },
+    {
+      "ticker": "CIEB",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 49,
+      "qualityScore": 55,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 24,
+      "entryHigh": 24,
+      "stop": 23.5406,
+      "target1": 25.92,
+      "target2": 27.6,
+      "riskPct": 1.91,
+      "rrT2": 7.84,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 55,
+          "dailyScore": 35,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 1.91,
+          "rrT2": 7.84,
+          "hourlyMa100": 24.489800000000006,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 3
+    },
+    {
+      "ticker": "SKPC",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 42,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 16.25,
+      "entryHigh": 16.25,
+      "stop": 15.4737,
+      "target1": 17.55,
+      "target2": 18.6875,
+      "riskPct": 4.78,
+      "rrT2": 3.14,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "PROFITABLE_VERIFIED",
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION"
+      ],
+      "warnings": [
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 5,
+          "state": "REJECTED",
+          "score": 48,
+          "missingConditions": [
+            "ANCHORED_VWAP_NOT_ALIGNED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 48,
+          "evidenceTier": "A_OFFICIAL_VERIFIED",
+          "riskPct": 4.78,
+          "rrT2": 3.14,
+          "hourlyMa100": 17.266300000000008,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 4
+    },
+    {
+      "ticker": "SAUD",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 35,
+      "qualityScore": 55,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 21.6038,
+      "entryHigh": 22.97,
+      "stop": 19.9716,
+      "target1": 24.8076,
+      "target2": 26.4155,
+      "riskPct": 10.39,
+      "rrT2": 1.78,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 55,
+          "dailyScore": 35,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 10.39,
+          "rrT2": 1.78,
+          "hourlyMa100": 23.397,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 5
+    },
+    {
+      "ticker": "OCDI",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 28,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 24.9066,
+      "entryHigh": 27.51,
+      "stop": 21.0505,
+      "target1": 29.7108,
+      "target2": 31.6365,
+      "riskPct": 19.68,
+      "rrT2": 1.05,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 38,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 19.68,
+          "rrT2": 1.05,
+          "hourlyMa100": 28.73530000000001,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 6
+    },
+    {
+      "ticker": "RMDA",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 28,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 5.3012,
+      "entryHigh": 5.41,
+      "stop": 4.5762,
+      "target1": 5.8428,
+      "target2": 6.2215,
+      "riskPct": 14.55,
+      "rrT2": 1.11,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 38,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 14.55,
+          "rrT2": 1.11,
+          "hourlyMa100": 5.803299999999999,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 7
+    },
+    {
+      "ticker": "UEFM",
+      "stage": "NEAR_ENTRY",
+      "conviction": 43,
+      "qualityScore": 65,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 520,
+      "entryHigh": 520,
+      "stop": 474.1491,
+      "target1": 561.6,
+      "target2": 598,
+      "riskPct": 8.82,
+      "rrT2": 1.7,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 1,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 65,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 65,
+          "dailyScore": 65,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 8.82,
+          "rrT2": 1.7,
+          "hourlyMa100": 499.19709999999975,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 8
+    },
+    {
+      "ticker": "CNFN",
+      "stage": "NEAR_ENTRY",
+      "conviction": 42,
+      "qualityScore": 50,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 4.33,
+      "entryHigh": 4.33,
+      "stop": 4.1736,
+      "target1": 4.6764,
+      "target2": 4.9795,
+      "riskPct": 3.61,
+      "rrT2": 4.15,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 50,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 3.61,
+          "rrT2": 4.15,
+          "hourlyMa100": 4.386199999999999,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED"
+          ]
+        }
+      },
+      "rank": 9
+    },
+    {
+      "ticker": "DAPH",
+      "stage": "NEAR_ENTRY",
+      "conviction": 38,
+      "qualityScore": 60,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 98.426,
+      "entryHigh": 107.08,
+      "stop": 78.1522,
+      "target1": 115.6464,
+      "target2": 123.142,
+      "riskPct": 23.94,
+      "rrT2": 0.83,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 3,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 50,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 60,
+          "dailyScore": 50,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 23.94,
+          "rrT2": 0.83,
+          "hourlyMa100": 109.47880000000012,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 10
+    },
+    {
+      "ticker": "SNFC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 38,
+      "qualityScore": 40,
+      "agreementCount": 2,
+      "engineFamilies": [
+        "NEXT_QUANT",
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 11.136,
+      "entryHigh": 11.64,
+      "stop": 10.4934,
+      "target1": 12.5712,
+      "target2": 13.386,
+      "riskPct": 7.86,
+      "rrT2": 2.23,
+      "close": 11.64,
+      "liquidity": {
+        "tier": "متوسطة",
+        "turnoverM": 12.3,
+        "maxPositionEgp": 613000
+      },
+      "marketEvidence": {
+        "groupHit": 44.9,
+        "groupHitLow90": 40.2,
+        "groupAvg": 1.44,
+        "groupPf": 1.73,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 29.1,
+          "state": "PREPARED",
+          "rank": 3
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 40,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 7.86,
+          "rrT2": 2.23,
+          "hourlyMa100": 11.285599999999999,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 11
+    },
+    {
+      "ticker": "ISPH",
+      "stage": "NEAR_ENTRY",
+      "conviction": 37,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 11.65,
+      "entryHigh": 11.65,
+      "stop": 11.0172,
+      "target1": 12.582,
+      "target2": 13.3975,
+      "riskPct": 5.43,
+      "rrT2": 2.76,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 5.43,
+          "rrT2": 2.76,
+          "hourlyMa100": 12.037899999999993,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 12
+    },
+    {
+      "ticker": "MTIE",
+      "stage": "NEAR_ENTRY",
+      "conviction": 37,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 8.06,
+      "entryHigh": 8.212,
+      "stop": 7.9768,
+      "target1": 8.7048,
+      "target2": 9.269,
+      "riskPct": 1.96,
+      "rrT2": 7.12,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 1.96,
+          "rrT2": 7.12,
+          "hourlyMa100": 8.208499999999994,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 13
+    },
+    {
+      "ticker": "MCQE",
+      "stage": "NEAR_ENTRY",
+      "conviction": 34,
+      "qualityScore": 42,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 196.74,
+      "entryHigh": 196.74,
+      "stop": 187.6634,
+      "target1": 212.4792,
+      "target2": 226.251,
+      "riskPct": 4.61,
+      "rrT2": 3.25,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 9,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 42,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "ANCHORED_VWAP_NOT_ALIGNED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 42,
+          "dailyScore": 42,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 4.61,
+          "rrT2": 3.25,
+          "hourlyMa100": 207.41249999999948,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 14
+    },
+    {
+      "ticker": "HRHO",
+      "stage": "NEAR_ENTRY",
+      "conviction": 32,
+      "qualityScore": 40,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 26.7,
+      "entryHigh": 26.7,
+      "stop": 25.5356,
+      "target1": 28.836,
+      "target2": 30.705,
+      "riskPct": 4.36,
+      "rrT2": 3.44,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 40,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 4.36,
+          "rrT2": 3.44,
+          "hourlyMa100": 25.031600000000036,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 15
+    },
+    {
+      "ticker": "GSSC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 31,
+      "qualityScore": 53,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 261.6558,
+      "entryHigh": 282.98,
+      "stop": 232.9884,
+      "target1": 305.6184,
+      "target2": 325.427,
+      "riskPct": 14.44,
+      "rrT2": 1.35,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 6,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 43,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 53,
+          "dailyScore": 43,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 14.44,
+          "rrT2": 1.35,
+          "hourlyMa100": 290.21420000000035,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 16
+    },
+    {
+      "ticker": "PHAR",
+      "stage": "NEAR_ENTRY",
+      "conviction": 31,
+      "qualityScore": 53,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 113.97,
+      "entryHigh": 113.97,
+      "stop": 96.6956,
+      "target1": 123.0876,
+      "target2": 131.0655,
+      "riskPct": 15.16,
+      "rrT2": 0.99,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 7,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 43,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "ANCHORED_VWAP_NOT_ALIGNED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 53,
+          "dailyScore": 43,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 15.16,
+          "rrT2": 0.99,
+          "hourlyMa100": 115.81150000000005,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 17
+    },
+    {
+      "ticker": "MENA",
+      "stage": "NEAR_ENTRY",
+      "conviction": 30,
+      "qualityScore": 52,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 6.137,
+      "entryHigh": 6.7,
+      "stop": 5.5621,
+      "target1": 7.236,
+      "target2": 7.705,
+      "riskPct": 13.34,
+      "rrT2": 1.5,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 10,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 42,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 52,
+          "dailyScore": 42,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 13.34,
+          "rrT2": 1.5,
+          "hourlyMa100": 6.566100000000001,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 18
+    },
+    {
+      "ticker": "ENGC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 27,
+      "qualityScore": 35,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 37,
+      "entryHigh": 37,
+      "stop": 34.711,
+      "target1": 39.96,
+      "target2": 42.55,
+      "riskPct": 6.19,
+      "rrT2": 2.42,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 35,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 6.19,
+          "rrT2": 2.42,
+          "hourlyMa100": 40.134899999999995,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 19
+    },
+    {
+      "ticker": "EDFM",
+      "stage": "NEAR_ENTRY",
+      "conviction": 23,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 360.0451,
+      "entryHigh": 410,
+      "stop": 322.0993,
+      "target1": 442.8,
+      "target2": 471.5,
+      "riskPct": 16.34,
+      "rrT2": 1.37,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "FIB_OR_AVWAP_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 16.34,
+          "rrT2": 1.37,
+          "hourlyMa100": 402.42759999999936,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "FIB_OR_AVWAP_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 20
+    }
+  ],
+  "entryReady": [
+    {
+      "ticker": "FWRY",
+      "stage": "ENTRY_READY",
+      "conviction": 75,
+      "qualityScore": 75,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 18.4326,
+      "entryHigh": 19.08,
+      "stop": 17.2899,
+      "target1": 20.6064,
+      "target2": 21.942,
+      "riskPct": 7.82,
+      "rrT2": 2.17,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "OFFICIAL_PROFITABILITY_VERIFIED_OVERRIDE"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 4,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 50,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "ENTRY_READY",
+          "score": 75,
+          "dailyScore": 50,
+          "evidenceTier": "A_OFFICIAL_VERIFIED",
+          "riskPct": 7.82,
+          "rrT2": 2.17,
+          "hourlyMa100": 18.8549,
+          "missingConditions": []
+        }
+      },
+      "rank": 1
+    }
+  ],
+  "nearEntry": [
+    {
+      "ticker": "CERA",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 60,
+      "qualityScore": 80,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 1.37,
+      "entryHigh": 1.37,
+      "stop": 1.2304,
+      "target1": 1.4796,
+      "target2": 1.5755,
+      "riskPct": 10.19,
+      "rrT2": 1.47,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 2,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 60,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 80,
+          "dailyScore": 60,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 10.19,
+          "rrT2": 1.47,
+          "hourlyMa100": 1.4006000000000005,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 2
+    },
+    {
+      "ticker": "CIEB",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 49,
+      "qualityScore": 55,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 24,
+      "entryHigh": 24,
+      "stop": 23.5406,
+      "target1": 25.92,
+      "target2": 27.6,
+      "riskPct": 1.91,
+      "rrT2": 7.84,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 55,
+          "dailyScore": 35,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 1.91,
+          "rrT2": 7.84,
+          "hourlyMa100": 24.489800000000006,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 3
+    },
+    {
+      "ticker": "SKPC",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 42,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 16.25,
+      "entryHigh": 16.25,
+      "stop": 15.4737,
+      "target1": 17.55,
+      "target2": 18.6875,
+      "riskPct": 4.78,
+      "rrT2": 3.14,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "PROFITABLE_VERIFIED",
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION"
+      ],
+      "warnings": [
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 5,
+          "state": "REJECTED",
+          "score": 48,
+          "missingConditions": [
+            "ANCHORED_VWAP_NOT_ALIGNED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 48,
+          "evidenceTier": "A_OFFICIAL_VERIFIED",
+          "riskPct": 4.78,
+          "rrT2": 3.14,
+          "hourlyMa100": 17.266300000000008,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 4
+    },
+    {
+      "ticker": "SAUD",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 35,
+      "qualityScore": 55,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 21.6038,
+      "entryHigh": 22.97,
+      "stop": 19.9716,
+      "target1": 24.8076,
+      "target2": 26.4155,
+      "riskPct": 10.39,
+      "rrT2": 1.78,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 55,
+          "dailyScore": 35,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 10.39,
+          "rrT2": 1.78,
+          "hourlyMa100": 23.397,
+          "missingConditions": [
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 5
+    },
+    {
+      "ticker": "OCDI",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 28,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 24.9066,
+      "entryHigh": 27.51,
+      "stop": 21.0505,
+      "target1": 29.7108,
+      "target2": 31.6365,
+      "riskPct": 19.68,
+      "rrT2": 1.05,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 38,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 19.68,
+          "rrT2": 1.05,
+          "hourlyMa100": 28.73530000000001,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 6
+    },
+    {
+      "ticker": "RMDA",
+      "stage": "WAITING_FOR_TRIGGER",
+      "conviction": 28,
+      "qualityScore": 48,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 5.3012,
+      "entryHigh": 5.41,
+      "stop": 4.5762,
+      "target1": 5.8428,
+      "target2": 6.2215,
+      "riskPct": 14.55,
+      "rrT2": 1.11,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "PRICE_REACTION",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "WAITING_FOR_TRIGGER",
+          "score": 48,
+          "dailyScore": 38,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 14.55,
+          "rrT2": 1.11,
+          "hourlyMa100": 5.803299999999999,
+          "missingConditions": [
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 7
+    },
+    {
+      "ticker": "UEFM",
+      "stage": "NEAR_ENTRY",
+      "conviction": 43,
+      "qualityScore": 65,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 520,
+      "entryHigh": 520,
+      "stop": 474.1491,
+      "target1": 561.6,
+      "target2": 598,
+      "riskPct": 8.82,
+      "rrT2": 1.7,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 1,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 65,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 65,
+          "dailyScore": 65,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 8.82,
+          "rrT2": 1.7,
+          "hourlyMa100": 499.19709999999975,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 8
+    },
+    {
+      "ticker": "CNFN",
+      "stage": "NEAR_ENTRY",
+      "conviction": 42,
+      "qualityScore": 50,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 4.33,
+      "entryHigh": 4.33,
+      "stop": 4.1736,
+      "target1": 4.6764,
+      "target2": 4.9795,
+      "riskPct": 3.61,
+      "rrT2": 4.15,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 50,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 3.61,
+          "rrT2": 4.15,
+          "hourlyMa100": 4.386199999999999,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED"
+          ]
+        }
+      },
+      "rank": 9
+    },
+    {
+      "ticker": "DAPH",
+      "stage": "NEAR_ENTRY",
+      "conviction": 38,
+      "qualityScore": 60,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 98.426,
+      "entryHigh": 107.08,
+      "stop": 78.1522,
+      "target1": 115.6464,
+      "target2": 123.142,
+      "riskPct": 23.94,
+      "rrT2": 0.83,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 3,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 50,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 60,
+          "dailyScore": 50,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 23.94,
+          "rrT2": 0.83,
+          "hourlyMa100": 109.47880000000012,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 10
+    },
+    {
+      "ticker": "SNFC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 38,
+      "qualityScore": 40,
+      "agreementCount": 2,
+      "engineFamilies": [
+        "NEXT_QUANT",
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 11.136,
+      "entryHigh": 11.64,
+      "stop": 10.4934,
+      "target1": 12.5712,
+      "target2": 13.386,
+      "riskPct": 7.86,
+      "rrT2": 2.23,
+      "close": 11.64,
+      "liquidity": {
+        "tier": "متوسطة",
+        "turnoverM": 12.3,
+        "maxPositionEgp": 613000
+      },
+      "marketEvidence": {
+        "groupHit": 44.9,
+        "groupHitLow90": 40.2,
+        "groupAvg": 1.44,
+        "groupPf": 1.73,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 29.1,
+          "state": "PREPARED",
+          "rank": 3
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 40,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 7.86,
+          "rrT2": 2.23,
+          "hourlyMa100": 11.285599999999999,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 11
+    },
+    {
+      "ticker": "ISPH",
+      "stage": "NEAR_ENTRY",
+      "conviction": 37,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 11.65,
+      "entryHigh": 11.65,
+      "stop": 11.0172,
+      "target1": 12.582,
+      "target2": 13.3975,
+      "riskPct": 5.43,
+      "rrT2": 2.76,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 5.43,
+          "rrT2": 2.76,
+          "hourlyMa100": 12.037899999999993,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 12
+    },
+    {
+      "ticker": "MTIE",
+      "stage": "NEAR_ENTRY",
+      "conviction": 37,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 8.06,
+      "entryHigh": 8.212,
+      "stop": 7.9768,
+      "target1": 8.7048,
+      "target2": 9.269,
+      "riskPct": 1.96,
+      "rrT2": 7.12,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 1.96,
+          "rrT2": 7.12,
+          "hourlyMa100": 8.208499999999994,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED"
+          ]
+        }
+      },
+      "rank": 13
+    },
+    {
+      "ticker": "MCQE",
+      "stage": "NEAR_ENTRY",
+      "conviction": 34,
+      "qualityScore": 42,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 196.74,
+      "entryHigh": 196.74,
+      "stop": 187.6634,
+      "target1": 212.4792,
+      "target2": 226.251,
+      "riskPct": 4.61,
+      "rrT2": 3.25,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 9,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 42,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "ANCHORED_VWAP_NOT_ALIGNED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 42,
+          "dailyScore": 42,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 4.61,
+          "rrT2": 3.25,
+          "hourlyMa100": 207.41249999999948,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 14
+    },
+    {
+      "ticker": "HRHO",
+      "stage": "NEAR_ENTRY",
+      "conviction": 32,
+      "qualityScore": 40,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 26.7,
+      "entryHigh": 26.7,
+      "stop": 25.5356,
+      "target1": 28.836,
+      "target2": 30.705,
+      "riskPct": 4.36,
+      "rrT2": 3.44,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 40,
+          "dailyScore": 40,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 4.36,
+          "rrT2": 3.44,
+          "hourlyMa100": 25.031600000000036,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 15
+    },
+    {
+      "ticker": "GSSC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 31,
+      "qualityScore": 53,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 261.6558,
+      "entryHigh": 282.98,
+      "stop": 232.9884,
+      "target1": 305.6184,
+      "target2": 325.427,
+      "riskPct": 14.44,
+      "rrT2": 1.35,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "VOLUME_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 6,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 43,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "FIB_ZONE_NOT_CONFIRMED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 53,
+          "dailyScore": 43,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 14.44,
+          "rrT2": 1.35,
+          "hourlyMa100": 290.21420000000035,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 16
+    },
+    {
+      "ticker": "PHAR",
+      "stage": "NEAR_ENTRY",
+      "conviction": 31,
+      "qualityScore": 53,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 113.97,
+      "entryHigh": 113.97,
+      "stop": 96.6956,
+      "target1": 123.0876,
+      "target2": 131.0655,
+      "riskPct": 15.16,
+      "rrT2": 0.99,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "ANCHORED_VWAP_NOT_ALIGNED",
+        "VOLUME_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 7,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 43,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "ANCHORED_VWAP_NOT_ALIGNED",
+            "VOLUME_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 53,
+          "dailyScore": 43,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 15.16,
+          "rrT2": 0.99,
+          "hourlyMa100": 115.81150000000005,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 17
+    },
+    {
+      "ticker": "MENA",
+      "stage": "NEAR_ENTRY",
+      "conviction": 30,
+      "qualityScore": 52,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 6.137,
+      "entryHigh": 6.7,
+      "stop": 5.5621,
+      "target1": 7.236,
+      "target2": 7.705,
+      "riskPct": 13.34,
+      "rrT2": 1.5,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED",
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV1": {
+          "rank": 10,
+          "state": "FUNDAMENTALS_MISSING",
+          "score": 42,
+          "missingConditions": [
+            "VERIFIED_PROFITABILITY_MISSING",
+            "REACTION_NOT_CONFIRMED",
+            "FIB_ZONE_NOT_CONFIRMED"
+          ]
+        },
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 52,
+          "dailyScore": 42,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 13.34,
+          "rrT2": 1.5,
+          "hourlyMa100": 6.566100000000001,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 18
+    },
+    {
+      "ticker": "ENGC",
+      "stage": "NEAR_ENTRY",
+      "conviction": 27,
+      "qualityScore": 35,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 37,
+      "entryHigh": 37,
+      "stop": 34.711,
+      "target1": 39.96,
+      "target2": 42.55,
+      "riskPct": 6.19,
+      "rrT2": 2.42,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "HOURLY_MA100_NOT_ALIGNED"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 35,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 6.19,
+          "rrT2": 2.42,
+          "hourlyMa100": 40.134899999999995,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "HOURLY_MA100_NOT_ALIGNED"
+          ]
+        }
+      },
+      "rank": 19
+    },
+    {
+      "ticker": "EDFM",
+      "stage": "NEAR_ENTRY",
+      "conviction": 23,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 360.0451,
+      "entryHigh": 410,
+      "stop": 322.0993,
+      "target1": 442.8,
+      "target2": 471.5,
+      "riskPct": 16.34,
+      "rrT2": 1.37,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "FIB_OR_AVWAP_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 16.34,
+          "rrT2": 1.37,
+          "hourlyMa100": 402.42759999999936,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "FIB_OR_AVWAP_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 20
+    },
+    {
+      "ticker": "MOIN",
+      "stage": "NEAR_ENTRY",
+      "conviction": 23,
+      "qualityScore": 45,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 30.095,
+      "entryHigh": 35.49,
+      "stop": 24.8348,
+      "target1": 38.3292,
+      "target2": 40.8135,
+      "riskPct": 24.27,
+      "rrT2": 1.01,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT",
+        "HOURLY_MA100"
+      ],
+      "warnings": [
+        "PROFITABILITY_EVIDENCE_REQUIRED",
+        "REACTION_REQUIRED",
+        "VOLUME_CONFIRMATION_REQUIRED",
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "FUNDAMENTALS_PENDING",
+          "score": 45,
+          "dailyScore": 35,
+          "evidenceTier": "MISSING_OR_NON_POSITIVE",
+          "riskPct": 24.27,
+          "rrT2": 1.01,
+          "hourlyMa100": 35.95790000000001,
+          "missingConditions": [
+            "PROFITABILITY_EVIDENCE_REQUIRED",
+            "REACTION_REQUIRED",
+            "VOLUME_CONFIRMATION_REQUIRED",
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 21
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "MOIL",
+      "stage": "WATCHLIST",
+      "conviction": 20,
+      "qualityScore": 33.3,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 0.683,
+      "entryHigh": 0.697,
+      "stop": 0.669,
+      "target1": 0.704,
+      "target2": 0.726,
+      "riskPct": 3.04,
+      "rrT2": 1.71,
+      "close": 0.69,
+      "liquidity": {
+        "tier": "منخفضة",
+        "turnoverM": 0.3,
+        "maxPositionEgp": 13000
+      },
+      "marketEvidence": {
+        "groupHit": 44.9,
+        "groupHitLow90": 40.2,
+        "groupAvg": 1.44,
+        "groupPf": 1.73,
+        "stockProbExperimental": 27
+      },
+      "evidence": [],
+      "warnings": [
+        "LOW_LIQUIDITY"
+      ],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 33.3,
+          "state": "PREPARED",
+          "rank": 1
+        }
+      },
+      "rank": 33
+    },
+    {
+      "ticker": "AFDI",
+      "stage": "WATCHLIST",
+      "conviction": 19,
+      "qualityScore": 26.7,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 53.53,
+      "entryHigh": 54.61,
+      "stop": 51,
+      "target1": 56.12,
+      "target2": 59.19,
+      "riskPct": 5.68,
+      "rrT2": 1.67,
+      "close": 54.07,
+      "liquidity": {
+        "tier": "متوسطة",
+        "turnoverM": 7.1,
+        "maxPositionEgp": 353000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 26.7,
+          "state": "PREPARED",
+          "rank": 4
+        }
+      },
+      "rank": 34
+    },
+    {
+      "ticker": "CPCI",
+      "stage": "WATCHLIST",
+      "conviction": 18,
+      "qualityScore": 31.3,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 596.87,
+      "entryHigh": 608.93,
+      "stop": 575.58,
+      "target1": 621.12,
+      "target2": 648.44,
+      "riskPct": 4.53,
+      "rrT2": 1.67,
+      "close": 602.9,
+      "liquidity": {
+        "tier": "منخفضة",
+        "turnoverM": 3.8,
+        "maxPositionEgp": 192000
+      },
+      "marketEvidence": {
+        "groupHit": 44.9,
+        "groupHitLow90": 40.2,
+        "groupAvg": 1.44,
+        "groupPf": 1.73,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [
+        "LOW_LIQUIDITY"
+      ],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 31.3,
+          "state": "PREPARED",
+          "rank": 2
+        }
+      },
+      "rank": 35
+    },
+    {
+      "ticker": "MPRC",
+      "stage": "WATCHLIST",
+      "conviction": 18,
+      "qualityScore": 26.2,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 39.83,
+      "entryHigh": 40.63,
+      "stop": 38.59,
+      "target1": 41.33,
+      "target2": 42.97,
+      "riskPct": 4.08,
+      "rrT2": 1.67,
+      "close": 40.23,
+      "liquidity": {
+        "tier": "عالية",
+        "turnoverM": 20.5,
+        "maxPositionEgp": 1024000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 26.2,
+          "state": "PREPARED",
+          "rank": 5
+        }
+      },
+      "rank": 36
+    },
+    {
+      "ticker": "OLFI",
+      "stage": "WATCHLIST",
+      "conviction": 18,
+      "qualityScore": 25.5,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 20.88,
+      "entryHigh": 21.3,
+      "stop": 20.24,
+      "target1": 21.66,
+      "target2": 22.51,
+      "riskPct": 4.03,
+      "rrT2": 1.67,
+      "close": 21.09,
+      "liquidity": {
+        "tier": "عالية",
+        "turnoverM": 17.7,
+        "maxPositionEgp": 883000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 25.5,
+          "state": "PREPARED",
+          "rank": 6
+        }
+      },
+      "rank": 37
+    },
+    {
+      "ticker": "CSAG",
+      "stage": "WATCHLIST",
+      "conviction": 17,
+      "qualityScore": 24.8,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 36.45,
+      "entryHigh": 37.19,
+      "stop": 34.92,
+      "target1": 38.09,
+      "target2": 39.99,
+      "riskPct": 5.16,
+      "rrT2": 1.67,
+      "close": 36.82,
+      "liquidity": {
+        "tier": "متوسطة",
+        "turnoverM": 8.2,
+        "maxPositionEgp": 409000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 24.8,
+          "state": "PREPARED",
+          "rank": 8
+        }
+      },
+      "rank": 38
+    },
+    {
+      "ticker": "AJWA",
+      "stage": "WATCHLIST",
+      "conviction": 16,
+      "qualityScore": 24.4,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 194.2,
+      "entryHigh": 198.12,
+      "stop": 187.53,
+      "target1": 201.92,
+      "target2": 210.55,
+      "riskPct": 4.4,
+      "rrT2": 1.67,
+      "close": 196.16,
+      "liquidity": {
+        "tier": "عالية",
+        "turnoverM": 19,
+        "maxPositionEgp": 952000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 24.4,
+          "state": "PREPARED",
+          "rank": 9
+        }
+      },
+      "rank": 39
+    },
+    {
+      "ticker": "FERC",
+      "stage": "WATCHLIST",
+      "conviction": 16,
+      "qualityScore": 24.3,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 74.52,
+      "entryHigh": 76.02,
+      "stop": 71.7,
+      "target1": 77.65,
+      "target2": 81.23,
+      "riskPct": 4.74,
+      "rrT2": 1.67,
+      "close": 75.27,
+      "liquidity": {
+        "tier": "متوسطة",
+        "turnoverM": 6.3,
+        "maxPositionEgp": 313000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 24.3,
+          "state": "PREPARED",
+          "rank": 10
+        }
+      },
+      "rank": 40
+    },
+    {
+      "ticker": "ADCI",
+      "stage": "WATCHLIST",
+      "conviction": 12,
+      "qualityScore": 25,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "NEXT_QUANT"
+      ],
+      "engineAgreement": {
+        "quant": true,
+        "v4": false,
+        "claude": false,
+        "confluence": false
+      },
+      "entryLow": 269.29,
+      "entryHigh": 274.73,
+      "stop": 258.39,
+      "target1": 281.09,
+      "target2": 294.71,
+      "riskPct": 5.01,
+      "rrT2": 1.67,
+      "close": 272.01,
+      "liquidity": {
+        "tier": "منخفضة",
+        "turnoverM": 2.3,
+        "maxPositionEgp": 115000
+      },
+      "marketEvidence": {
+        "groupHit": 38.4,
+        "groupHitLow90": 35.3,
+        "groupAvg": 0.49,
+        "groupPf": 1.23,
+        "stockProbExperimental": 26.4
+      },
+      "evidence": [],
+      "warnings": [
+        "LOW_LIQUIDITY"
+      ],
+      "engines": {
+        "quant": {
+          "source": "V2.1/V5_FAMILY",
+          "v2": true,
+          "v5": true,
+          "score": 25,
+          "state": "PREPARED",
+          "rank": 7
+        }
+      },
+      "rank": 41
+    }
+  ],
+  "rejected": [
+    {
+      "ticker": "ROTO",
+      "stage": "REJECTED_RISK",
+      "conviction": 38,
+      "qualityScore": 60,
+      "agreementCount": 1,
+      "engineFamilies": [
+        "CONFLUENCE"
+      ],
+      "engineAgreement": {
+        "quant": false,
+        "v4": false,
+        "claude": false,
+        "confluence": true
+      },
+      "entryLow": 37.3651,
+      "entryHigh": 40.86,
+      "stop": 31.9357,
+      "target1": 44.1288,
+      "target2": 46.989,
+      "riskPct": 18.35,
+      "rrT2": 1.1,
+      "close": null,
+      "liquidity": null,
+      "marketEvidence": null,
+      "evidence": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION",
+        "HOURLY_MA100",
+        "TRADINGVIEW_PROFITABILITY_CORROBORATED"
+      ],
+      "warnings": [
+        "RISK_GT_8_OR_INVALID",
+        "RR_T2_LT_2"
+      ],
+      "engines": {
+        "confluenceV2": {
+          "state": "RISK_REJECTED",
+          "score": 60,
+          "dailyScore": 40,
+          "evidenceTier": "B_TRADINGVIEW_CORROBORATED",
+          "riskPct": 18.35,
+          "rrT2": 1.1,
+          "hourlyMa100": 40.269,
+          "missingConditions": [
+            "RISK_GT_8_OR_INVALID",
+            "RR_T2_LT_2"
+          ]
+        }
+      },
+      "rank": 42
+    }
+  ],
+  "performance": {
+    "quantBacktest": {
+      "top3": {
+        "n": 301,
+        "days": 111,
+        "hit": 44.9,
+        "win": 55.5,
+        "avg": 1.44,
+        "med": 2.34,
+        "pf": 1.73
+      },
+      "top5": {
+        "n": 488,
+        "days": 111,
+        "hit": 43.9,
+        "win": 53.9,
+        "avg": 1.15,
+        "med": 1.7,
+        "pf": 1.59
+      },
+      "top10": {
+        "n": 968,
+        "days": 112,
+        "hit": 40.4,
+        "win": 50.8,
+        "avg": 0.78,
+        "med": 0.39,
+        "pf": 1.38
+      },
+      "baseline": {
+        "n": 13272,
+        "days": 112,
+        "hit": 32.6,
+        "win": 45.7,
+        "avg": 0.33,
+        "med": -1.11,
+        "pf": 1.12
+      },
+      "fillRatePct": 86.7,
+      "top5ExcessMeanPct": 0.73,
+      "top5ExcessCi90": [
+        -0.1,
+        1.28
+      ]
+    },
+    "confluenceForward": {
+      "total": 1,
+      "pending": 1,
+      "open": 0,
+      "unfilled": 0,
+      "resolved": 0,
+      "wins": 0,
+      "losses": 0,
+      "hitRatePct": null,
+      "avgNetReturnPct": null,
+      "profitFactor": null,
+      "roundTripCostPct": 0.6
+    }
+  },
+  "dataHealth": {
+    "session": "2026-10-07",
+    "generatedAt": "2026-10-09T08:28:30.971Z",
+    "stale": false,
+    "staleLagSessions": 0,
+    "universe": 155,
+    "symbols": 170,
+    "excludedCount": 31,
+    "executionAllowed": false,
+    "v2V5Independent": false,
+    "confluenceV2Evaluated": 30,
+    "confluenceV2EntryReady": 1,
+    "forwardRecords": 1,
+    "forwardResolved": 0
+  }
+}
