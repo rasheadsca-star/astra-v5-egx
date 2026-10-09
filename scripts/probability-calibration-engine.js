@@ -58,22 +58,25 @@ for(const r of resolved){
 
 function aggregate(records){
   const total=records.length;
-  let t1=0,t2=0,stop=0;
-  let net=0;
+  let t1=0,t2=0,stop=0,timeExit=0;
+  let net=0,netN=0;
   for(const r of records){
     const result=String(r.outcome?.result||'');
-    if(result==='TARGET2'){t1++;t2++}
-    else if(result==='TARGET1'){t1++}
-    else if(result==='STOP'){stop++}
-    const ret=n(r.outcome?.netReturnPct); if(ret!=null) net+=ret;
+    if(r.outcome?.t1HitAt||result==='TARGET2')t1++;
+    if(result==='TARGET2')t2++;
+    if(result==='STOP')stop++;
+    if(result==='TIME_EXIT')timeExit++;
+    const ret=n(r.outcome?.netReturnPct);
+    if(ret!=null){net+=ret;netN++}
   }
   return {
     n:total,
-    t1Hits:t1,t2Hits:t2,stops:stop,
+    t1Hits:t1,t2Hits:t2,stops:stop,timeExits:timeExit,
     t1Pct:total?r1(100*t1/total):null,
     t2Pct:total?r1(100*t2/total):null,
     stopPct:total?r1(100*stop/total):null,
-    avgNetReturnPct:total?r1(net/total):null,
+    timeExitPct:total?r1(100*timeExit/total):null,
+    avgNetReturnPct:netN?r1(net/netN):null,
     t1Ci90:wilson(t1,total),
     t2Ci90:wilson(t2,total),
     stopCi90:wilson(stop,total),
@@ -101,20 +104,8 @@ function probabilityFor(x){
   const mat=maturity(base.n);
   const available=base.n>=10;
 
-  let expectedValue=null;
-  if(available){
-    const entry=n(x.entryHigh??x.entryLow);
-    const stop=n(x.stop),t1=n(x.target1),t2=n(x.target2);
-    if(entry&&stop&&t1&&t2){
-      const p2=(base.t2Pct||0)/100;
-      const p1only=Math.max(0,((base.t1Pct||0)-(base.t2Pct||0))/100);
-      const ps=(base.stopPct||0)/100;
-      const r2=(t2-entry)/entry*100;
-      const r1=(t1-entry)/entry*100;
-      const rs=(stop-entry)/entry*100;
-      expectedValue=r1round(p2*r2+p1only*r1+ps*rs);
-    }
-  }
+  const expectedValue=available?base.avgNetReturnPct:null;
+
 
   return {
     signature:key,
@@ -129,9 +120,12 @@ function probabilityFor(x){
     stopProbabilityPct:available?base.stopPct:null,
     stopCi90:available?base.stopCi90:[null,null],
     expectedValuePct:available?expectedValue:null,
+    expectedValueMethod:'empirical_fixed_horizon_net_return',
+    holdingHorizonSessions:e.policy?.holdingHorizonSessions??10,
+    timeExitPct:available?base.timeExitPct:null,
     historicalBenchmark:(x.engineFamilies||[]).includes('NEXT_QUANT')?quantBenchmark:null,
     note:available
-      ?'Forward empirical estimate with 90% Wilson interval; not a guarantee.'
+      ?'Forward empirical estimate within a fixed research horizon with 90% Wilson interval; not a guarantee.'
       :'Insufficient resolved forward evidence. No calibrated probability is shown.'
   };
 }
@@ -149,15 +143,25 @@ const bestByT1=withProb.slice().sort((a,b)=>
 )[0]||null;
 
 d.probabilityCalibrationEngine={
-  version:'probability-calibration/v1',
+  version:'probability-calibration/v2-fixed-horizon',
   generatedAt:new Date().toISOString(),
   forwardResolved:resolved.length,
   status:maturity(resolved.length),
+  holdingHorizonSessions:e.policy?.holdingHorizonSessions??10,
   thresholds:{preliminary:10,calibrating:30,validated:90},
-  methodology:'Empirical forward outcomes, matched by grade + entry quality + R:R bucket + context bucket. Falls back to overall forward pool only after 10 resolved records. 90% Wilson intervals are reported. No probability is emitted below the minimum evidence threshold.',
+  methodology:'Empirical forward outcomes resolved at a fixed holding horizon, matched by grade + entry quality + R:R bucket + context bucket. T1 counts any observed T1 touch before terminal resolution; T2 and stop use terminal outcomes. Expected Value is empirical average net return at the fixed horizon. Falls back to overall forward pool only after 10 resolved records. 90% Wilson intervals are reported.',
   overall,
   quantHistoricalBenchmark:quantBenchmark,
-  bestByCalibratedT1:bestByT1?{
+  bestByEstimatedT1:bestByT1?{
+    ticker:bestByT1.ticker,
+    t1ProbabilityPct:bestByT1.targetAchievement.t1ProbabilityPct,
+    t2ProbabilityPct:bestByT1.targetAchievement.t2ProbabilityPct,
+    stopProbabilityPct:bestByT1.targetAchievement.stopProbabilityPct,
+    expectedValuePct:bestByT1.targetAchievement.expectedValuePct,
+    sampleSize:bestByT1.targetAchievement.sampleSize,
+    status:bestByT1.targetAchievement.status
+  }:null,
+  bestByValidatedT1:bestByT1?.targetAchievement?.status==='VALIDATED'?{
     ticker:bestByT1.ticker,
     t1ProbabilityPct:bestByT1.targetAchievement.t1ProbabilityPct,
     t2ProbabilityPct:bestByT1.targetAchievement.t2ProbabilityPct,
