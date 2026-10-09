@@ -15,7 +15,7 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/capture-prospective-evidence.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js"
   },
   "engines": {
