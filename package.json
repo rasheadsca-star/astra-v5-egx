@@ -1,6 +1,6 @@
 {
   "name": "ras-egx-astra-v5",
-  "version": "6.2.1",
+  "version": "6.3.0",
   "private": true,
   "scripts": {
     "build": "node scripts/build-check.js && npm run cockpit:build",
@@ -15,7 +15,7 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/capture-prospective-evidence.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/archive-trust-snapshot.js && node scripts/walk-forward-validation.js && node scripts/model-governance-engine.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/risk-state-override-engine.js && node scripts/capture-prospective-evidence.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js && node scripts/archive-trust-snapshot.js && node scripts/walk-forward-validation.js && node scripts/model-governance-engine.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js",
     "evidence:resolve": "node scripts/resolve-prospective-outcomes.js",
     "entry:quality": "node scripts/entry-quality-engine.js",
@@ -33,7 +33,8 @@
     "technical:build": "node scripts/build-technical-analysis.js",
     "trust:archive": "node scripts/archive-trust-snapshot.js",
     "walkforward:validate": "node scripts/walk-forward-validation.js",
-    "governance:build": "node scripts/model-governance-engine.js"
+    "governance:build": "node scripts/model-governance-engine.js",
+    "risk:override": "node scripts/risk-state-override-engine.js"
   },
   "engines": {
     "node": ">=20"
