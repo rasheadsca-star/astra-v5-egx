@@ -10,7 +10,11 @@ const MATURITY_THRESHOLDS={
   scoring:{resolved:30,sessions:10}
 };
 
-function n(v){const x=Number(v);return Number.isFinite(x)?x:null}
+function n(v){
+  if(v===null||v===undefined||v==='')return null;
+  const x=Number(v);
+  return Number.isFinite(x)?x:null;
+}
 function r(v,d=2){return Number.isFinite(v)?+v.toFixed(d):null}
 function distinctSessions(records){return new Set((records||[]).map(x=>String(x.session||'')).filter(Boolean)).size}
 function maturity(records){
