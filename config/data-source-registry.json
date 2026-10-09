@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "astra-data-source-registry/v1",
+  "reviewedAt": "2026-10-09",
+  "policy": {
+    "noPaidDependencyRequired": true,
+    "independentQuorumRequiredForClaim": false,
+    "independentQuorumClaimWhenAbsent": false,
+    "dormantExclusionRule": "A symbol may leave the active coverage denominator only with explicit instrument-status evidence. Staleness alone never makes a symbol dormant.",
+    "fallbackRule": "Fallback may fill missing data only if its access terms permit automated use and its session/price checks pass.",
+    "safety": "Data-source status never enables automatic execution."
+  },
+  "sources": [
+    {
+      "id": "RAS_EGX_PRO_CANONICAL",
+      "role": "AUTHORITATIVE_UPSTREAM_MIRROR",
+      "enabled": true,
+      "transport": "GitHub raw/API JSON",
+      "repository": "rasheadsca-star/RAS-EGX-PRO2026-NEXT",
+      "currentUse": "Canonical market/history handoff",
+      "independentVerifier": false,
+      "notes": "ASTRA consumes the user's canonical repository and validates atomic session/fingerprint alignment before publishing."
+    },
+    {
+      "id": "MUBASHER_PROVENANCE",
+      "role": "UPSTREAM_PROVENANCE_ONLY",
+      "enabled": false,
+      "directFetchByAstra": false,
+      "currentUse": "Provenance label on rows already present in the canonical upstream",
+      "independentVerifier": false,
+      "notes": "ASTRA WP4 does not add a new direct scraper."
+    },
+    {
+      "id": "YAHOO_FINANCE_PUBLIC_WEB",
+      "role": "VERIFIER_CANDIDATE",
+      "enabled": false,
+      "automatedAccessAllowed": false,
+      "currentUse": "Disabled",
+      "independentVerifier": true,
+      "complianceStatus": "BLOCKED_PENDING_EXPRESS_PERMISSION",
+      "complianceReason": "Yahoo Terms prohibit automated collection from the Services without express prior permission. WP4 therefore does not enable automated Yahoo verification.",
+      "reviewedAt": "2026-10-09",
+      "termsUrl": "https://legal.yahoo.com/in/en/yahoo/terms/otos/index.html"
+    },
+    {
+      "id": "STARTA_HISTORICAL_FALLBACK",
+      "role": "HISTORICAL_PROVENANCE_ONLY",
+      "enabled": false,
+      "directFetchByAstra": false,
+      "currentUse": "Legacy historical repair provenance only",
+      "independentVerifier": false
+    },
+    {
+      "id": "KAGGLE_YAHOO_SEED",
+      "role": "HISTORICAL_SEED_ONLY",
+      "enabled": false,
+      "directFetchByAstra": false,
+      "currentUse": "Legacy seed provenance only",
+      "independentVerifier": false
+    }
+  ]
+}
