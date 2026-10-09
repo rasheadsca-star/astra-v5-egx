@@ -9,7 +9,7 @@
 - Production deployment at freeze: `dpl_BzvJHa47X6CtKyMrjuACHy1XV4Uf`
 - Automatic execution: **OFF**
 
-The stable branch is an immutable reference point for the acceptance window. Main may receive only acceptance/operations plumbing while the code-freeze is active.
+The stable branch is an immutable reference point for the acceptance window. CI now verifies that `release-v6.11-stable` still resolves exactly to the frozen commit; moving or deleting that branch fails the freeze validation. Main may receive only acceptance/operations plumbing while the code-freeze is active.
 
 ## Acceptance window
 

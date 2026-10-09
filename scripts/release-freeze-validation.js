@@ -3,6 +3,7 @@
 const fs=require('fs');
 const assert=require('assert');
 const crypto=require('crypto');
+const {execFileSync}=require('child_process');
 
 function read(p){return JSON.parse(fs.readFileSync(p,'utf8'))}
 
@@ -31,6 +32,28 @@ assert.strictEqual(freeze.freezePolicy.strategyChangesAllowed,false);
 assert.strictEqual(freeze.freezePolicy.scoringChangesAllowed,false);
 assert.strictEqual(freeze.freezePolicy.executionContractChangesAllowed,false);
 assert.strictEqual(freeze.freezePolicy.dataSourceLogicChangesAllowed,false);
+assert.strictEqual(freeze.freezePolicy.requireStableBranchPointer,true);
+
+function verifyStableBranchPointer(){
+  const shouldCheck=process.env.GITHUB_ACTIONS==='true'||process.env.REQUIRE_RELEASE_BRANCH_POINTER==='1';
+  if(!shouldCheck)return {checked:false,reason:'non-ci'};
+  let out='';
+  try{
+    out=execFileSync('git',['ls-remote','--heads','origin',freeze.stableBranch],{
+      encoding:'utf8',stdio:['ignore','pipe','pipe']
+    }).trim();
+  }catch(err){
+    assert.fail('unable to verify stable release branch pointer: '+String(err.stderr||err.message||err));
+  }
+  const ref='refs/heads/'+freeze.stableBranch;
+  const line=out.split(/\r?\n/).find(x=>x.trim().endsWith(ref));
+  assert.ok(line,'stable release branch missing: '+freeze.stableBranch);
+  const remoteSha=line.trim().split(/\s+/)[0];
+  assert.strictEqual(remoteSha,freeze.frozenCommit,'stable release branch moved from frozen commit');
+  return {checked:true,sha:remoteSha};
+}
+
+const branchPointer=verifyStableBranchPointer();
 const protectedFiles=freeze.freezePolicy.protectedBlobShas||{};
 assert.ok(Object.keys(protectedFiles).length>=20,'protected release file set too small');
 for(const [p,expected] of Object.entries(protectedFiles)){
@@ -55,5 +78,5 @@ console.log(JSON.stringify({
   release:freeze.release,
   frozenCommit:freeze.frozenCommit,
   baselineSession:b.session,
-  execution:'OFF',protectedFiles:Object.keys(protectedFiles).length
+  execution:'OFF',protectedFiles:Object.keys(protectedFiles).length,stableBranchPointer:branchPointer
 },null,2));
