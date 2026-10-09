@@ -374,16 +374,16 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 <div class="card">
   <div class="v52-header">
     <div>
-      <h2 id="probTitle" style="margin:0">Target Achievement Probability — V5.8</h2>
+      <h2 id="probTitle" style="margin:0">Forward Target Estimates</h2>
       <div class="small" id="probNote">Forward-calibrated probabilities appear only after enough resolved evidence. Until then ASTRA shows insufficient data instead of inventing a percentage.</div>
     </div>
     <span class="badge warn" id="probStatus">INSUFFICIENT DATA</span>
   </div>
   <div class="grid" style="margin-top:14px">
     <div class="metric"><div class="label" id="probResolvedLabel">Resolved Forward</div><div class="value" id="probResolved">-</div></div>
-    <div class="metric"><div class="label" id="probT1Label">T1 Probability</div><div class="value" id="probT1">-</div></div>
-    <div class="metric"><div class="label" id="probT2Label">T2 Probability</div><div class="value" id="probT2">-</div></div>
-    <div class="metric"><div class="label" id="probStopLabel">Stop Probability</div><div class="value" id="probStop">-</div></div>
+    <div class="metric"><div class="label" id="probT1Label">T1 Estimate</div><div class="value" id="probT1">-</div></div>
+    <div class="metric"><div class="label" id="probT2Label">T2 Estimate</div><div class="value" id="probT2">-</div></div>
+    <div class="metric"><div class="label" id="probStopLabel">Stop Estimate</div><div class="value" id="probStop">-</div></div>
     <div class="metric"><div class="label" id="probEvLabel">Expected Value</div><div class="value" id="probEV">-</div></div>
     <div class="metric"><div class="label" id="probNLabel">Sample Size</div><div class="value" id="probN">-</div></div>
   </div>
@@ -393,7 +393,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 <div class="card" id="bestSetupCard" style="border:1px solid #2b725e">
   <div class="v52-header">
     <div>
-      <h2 id="bestSetupTitle" style="margin:0">Highest-Probability Research Setup</h2>
+      <h2 id="bestSetupTitle" style="margin:0">Top Research Setup by Decision Model</h2>
       <div class="small" id="bestSetupNote">Ranked by ASTRA Final Decision Score among setups that pass the mandatory gate. This is a ranking score, not a literal probability of profit.</div>
     </div>
     <span class="badge ready" id="bestSetupBadge">TOP SETUP</span>
@@ -1302,7 +1302,7 @@ async function loadV52(){
         '</tbody></table>'
       :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد فرص اجتازت كل شروط السلة حاليًا.':'No setups currently pass all basket conditions.')+'</span>';
     const pc=d.probabilityCalibrationEngine||{};
-    document.getElementById('probTitle').innerText=uiLang==='ar'?'احتمالية تحقيق الأهداف — V5.8':'Target Achievement Probability — V5.8';
+    document.getElementById('probTitle').innerText=uiLang==='ar'?'تقديرات تحقيق الأهداف مستقبلًا':'Forward Target Estimates';
     document.getElementById('probNote').innerText=uiLang==='ar'
       ?'لا يعرض ASTRA تقديرات مستقبلية ذات أفق زمني ثابت إلا بعد توفر عدد كافٍ من النتائج المحسومة. قبل ذلك يظهر نقص البيانات بدل اختراع نسبة.'
       :'Fixed-horizon forward estimates appear only after enough resolved evidence. Until then ASTRA shows insufficient data instead of inventing a percentage.';
@@ -1311,9 +1311,9 @@ async function loadV52(){
       ?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[pcs]||pcs)
       :pcs.replaceAll('_',' ');
     document.getElementById('probResolvedLabel').innerText=uiLang==='ar'?'نتائج مستقبلية محسومة':'Resolved Forward';
-    document.getElementById('probT1Label').innerText=uiLang==='ar'?'احتمال الهدف 1':'T1 Probability';
-    document.getElementById('probT2Label').innerText=uiLang==='ar'?'احتمال الهدف 2':'T2 Probability';
-    document.getElementById('probStopLabel').innerText=uiLang==='ar'?'احتمال وقف الخسارة':'Stop Probability';
+    document.getElementById('probT1Label').innerText=uiLang==='ar'?'تقدير الهدف 1':'T1 Estimate';
+    document.getElementById('probT2Label').innerText=uiLang==='ar'?'تقدير الهدف 2':'T2 Estimate';
+    document.getElementById('probStopLabel').innerText=uiLang==='ar'?'تقدير وقف الخسارة':'Stop Estimate';
     document.getElementById('probEvLabel').innerText=uiLang==='ar'?'متوسط العائد المستقبلي':'Forward Expectancy';
     document.getElementById('probNLabel').innerText=uiLang==='ar'?'حجم العينة':'Sample Size';
     document.getElementById('probResolved').innerText=pc.forwardResolved??0;
@@ -1325,8 +1325,8 @@ async function loadV52(){
     document.getElementById('probN').innerText=pb?.sampleSize??(pc.forwardResolved??0);
     document.getElementById('probBest').innerText=pb
       ?(uiLang==='ar'
-        ?'الأعلى حسب الاحتمال المعاير للهدف 1: '+pb.ticker+' · الحالة '+pb.status
-        :'Highest calibrated T1 probability: '+pb.ticker+' · '+pb.status)
+        ?'أعلى تقدير مستقبلي للهدف 1: '+pb.ticker+' · الحالة '+pb.status
+        :'Highest forward T1 estimate: '+pb.ticker+' · '+pb.status)
       :(uiLang==='ar'
         ?'لا توجد تقديرات مستقبلية كافية حتى الآن. يستمر النظام في استخدام Final Decision Score للترتيب البحثي.'
         :'No sufficient forward estimates yet. Final Decision Score remains the research ranking signal.');
@@ -1377,9 +1377,9 @@ async function loadV52(){
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Final Score</span><div class="v52-v">'+esc(x.finalDecisionScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T1':'T1 Probability')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t1ProbabilityPct!=null?x.targetAchievement.t1ProbabilityPct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T2':'T2 Probability')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t2ProbabilityPct!=null?x.targetAchievement.t2ProbabilityPct+'%':'—')+'</div></div>'+
-          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال الوقف':'Stop Probability')+'</span><div class="v52-v">'+esc(x.targetAchievement?.stopProbabilityPct!=null?x.targetAchievement.stopProbabilityPct+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T1':'T1 Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t1ProbabilityPct!=null?x.targetAchievement.t1ProbabilityPct+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال T2':'T2 Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.t2ProbabilityPct!=null?x.targetAchievement.t2ProbabilityPct+'%':'—')+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'احتمال الوقف':'Stop Estimate')+'</span><div class="v52-v">'+esc(x.targetAchievement?.stopProbabilityPct!=null?x.targetAchievement.stopProbabilityPct+'%':'—')+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'القيمة المتوقعة':'Expected Value')+'</span><div class="v52-v">'+esc(x.targetAchievement?.expectedValuePct!=null?x.targetAchievement.expectedValuePct+'%':'—')+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المعايرة':'Calibration')+'</span><div class="v52-v">'+esc(uiLang==='ar'?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[x.targetAchievement?.status]||x.targetAchievement?.status||'-'):(x.targetAchievement?.status||'-').replaceAll('_',' '))+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حجم العينة':'Sample Size')+'</span><div class="v52-v">'+esc(x.targetAchievement?.sampleSize??0)+'</div></div>'+
