@@ -17,8 +17,15 @@ warnings.filterwarnings("ignore")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ledger, portfolio
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-H, COST, STOP_ATR, TGT_ATR, ZONE = 10, 0.006, 1.5, 2.5, 0.01
-LIMIT_DOWN = 0.10      # الحد اليومي للبورصة المصرية
+REPO_ROOT = os.path.dirname(ROOT)
+with open(os.path.join(REPO_ROOT, "config", "execution-contract.json"), encoding="utf-8") as _f:
+    EXECUTION_SPEC = json.load(_f)
+H = int(EXECUTION_SPEC["plan"]["holdingHorizonSessions"])
+COST = float(EXECUTION_SPEC["plan"]["roundTripCostRate"])
+STOP_ATR = float(EXECUTION_SPEC["plan"]["stopAtrMultiple"])
+TGT_ATR = float(EXECUTION_SPEC["plan"]["target2AtrMultiple"])
+ZONE = float(EXECUTION_SPEC["entry"]["referenceZonePct"])
+LIMIT_DOWN = float(EXECUTION_SPEC["limitDown"]["nominalPct"])
 MIN_SESSIONS, MIN_TURNOVER = 60, 2e5
 COLS = ["date", "open", "high", "low", "close", "volume"]
 LAST_BAR = {}        # ticker -> حالة/تحذيرات آخر شريط في ملف التاريخ (provenance)
@@ -108,7 +115,11 @@ def run_trade(o, h, l, c, d, i, stp, tgt, refc):
         else: return dict(status="open", e=e, last=c[n-1])                    # الأفق لم يكتمل بعد
     return dict(status="closed", e=e, ex=ex, hit=hit, end=end, locked=locked)
 
-PLAN = dict(t1=1.0, t2=2.5, frac=0.5)     # الهدف 1 = 1.0×ATR (بيع frac ثم نقل الوقف لسعر الدخول)، الهدف 2 = 2.5×ATR، الوقف 1.5×ATR، الأفق H
+PLAN = dict(
+    t1=float(EXECUTION_SPEC["plan"]["target1AtrMultiple"]),
+    t2=float(EXECUTION_SPEC["plan"]["target2AtrMultiple"]),
+    frac=float(EXECUTION_SPEC["plan"]["target1Fraction"]),
+)     # الهدف 1 = 1.0×ATR (بيع frac ثم نقل الوقف لسعر الدخول)، الهدف 2 = 2.5×ATR، الوقف 1.5×ATR، الأفق H
 
 def run_plan(o, h, l, c, d, i, refc, sd):
     """خطة إدارة بهدفين. الجزء الأول يخرج عند T1؛ بعدها يُنقل الوقف إلى سعر الدخول (تعادل) وينتظر الباقي T2 حتى نهاية الأفق.

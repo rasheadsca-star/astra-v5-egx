@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.4 Decision Cockpit</title>
+<title>ASTRA V6.5 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.4 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.5 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.4 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.5 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.4 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.5 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -594,7 +594,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.4 Decision Cockpit":"لوحة قرارات ASTRA V6.2",
+    "ASTRA V6.5 Decision Cockpit":"لوحة قرارات ASTRA V6.5",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -665,13 +665,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.4':'ASTRA V6.4 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.5':'ASTRA V6.5 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.4 TRUST UI</b> · '+(uiLang==='ar'
+  if(releaseText) releaseText.innerHTML='<b>V6.5 TRUST UI</b> · '+(uiLang==='ar'
     ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.4 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.5 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();

@@ -1,0 +1,3715 @@
+{
+  "schemaVersion": "astra-execution-golden-vectors/v1",
+  "specVersion": "execution-contract/v1",
+  "count": 36,
+  "vectors": [
+    {
+      "id": "unfilled_high_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 51.5,
+          "high": 52,
+          "low": 51,
+          "close": 51.5
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "unfilled_low_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 49,
+          "high": 49.5,
+          "low": 48.5,
+          "close": 49
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_day_stop_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 50.25,
+          "low": 48.25,
+          "close": 49
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_be_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 51.25,
+          "low": 49.75,
+          "close": 51
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50.5,
+          "high": 51,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_t2_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 51.25,
+          "low": 49.75,
+          "close": 51
+        },
+        {
+          "date": "2026-01-06",
+          "open": 51,
+          "high": 53,
+          "low": 50.5,
+          "close": 52.5
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.029,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_gap_below_be_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 51.25,
+          "low": 49.75,
+          "close": 51
+        },
+        {
+          "date": "2026-01-06",
+          "open": 49,
+          "high": 49.5,
+          "low": 48.5,
+          "close": 49
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "later_gap_above_t2_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 53,
+          "high": 53.5,
+          "low": 52,
+          "close": 53
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.054,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_no_lock_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-06",
+          "open": 46,
+          "high": 46.5,
+          "low": 45.5,
+          "close": 46
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.086,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_locked_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-06",
+          "open": 45,
+          "high": 45,
+          "low": 45,
+          "close": 45
+        },
+        {
+          "date": "2026-01-07",
+          "open": 42.5,
+          "high": 43,
+          "low": 42,
+          "close": 42.5
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.156,
+        "locked": true
+      }
+    },
+    {
+      "id": "time_exit_flat_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_bar_both_stop_t1_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 51.5,
+          "low": 48,
+          "close": 50
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "after_t1_both_be_t2_50",
+      "signalIndex": 0,
+      "referenceClose": 50,
+      "stop": 48.5,
+      "target1": 51,
+      "target2": 52.5,
+      "entryLow": 49.5,
+      "entryHigh": 50.5,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-05",
+          "open": 50,
+          "high": 51.25,
+          "low": 49.75,
+          "close": 51
+        },
+        {
+          "date": "2026-01-06",
+          "open": 50.5,
+          "high": 53,
+          "low": 49.5,
+          "close": 52
+        },
+        {
+          "date": "2026-01-07",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-08",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-11",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-12",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-13",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-14",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-15",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-18",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        },
+        {
+          "date": "2026-01-19",
+          "open": 50,
+          "high": 50.5,
+          "low": 49.5,
+          "close": 50
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    },
+    {
+      "id": "unfilled_high_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 103,
+          "high": 104,
+          "low": 102,
+          "close": 103
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "unfilled_low_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 98,
+          "high": 99,
+          "low": 97,
+          "close": 98
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_day_stop_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 100.5,
+          "low": 96.5,
+          "close": 98
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_be_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 102.5,
+          "low": 99.5,
+          "close": 102
+        },
+        {
+          "date": "2026-01-06",
+          "open": 101,
+          "high": 102,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_t2_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 102.5,
+          "low": 99.5,
+          "close": 102
+        },
+        {
+          "date": "2026-01-06",
+          "open": 102,
+          "high": 106,
+          "low": 101,
+          "close": 105
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.029,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_gap_below_be_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 102.5,
+          "low": 99.5,
+          "close": 102
+        },
+        {
+          "date": "2026-01-06",
+          "open": 98,
+          "high": 99,
+          "low": 97,
+          "close": 98
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "later_gap_above_t2_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 106,
+          "high": 107,
+          "low": 104,
+          "close": 106
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.054,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_no_lock_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-06",
+          "open": 92,
+          "high": 93,
+          "low": 91,
+          "close": 92
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.086,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_locked_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-06",
+          "open": 90,
+          "high": 90,
+          "low": 90,
+          "close": 90
+        },
+        {
+          "date": "2026-01-07",
+          "open": 85,
+          "high": 86,
+          "low": 84,
+          "close": 85
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.156,
+        "locked": true
+      }
+    },
+    {
+      "id": "time_exit_flat_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_bar_both_stop_t1_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 103,
+          "low": 96,
+          "close": 100
+        },
+        {
+          "date": "2026-01-06",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "after_t1_both_be_t2_100",
+      "signalIndex": 0,
+      "referenceClose": 100,
+      "stop": 97,
+      "target1": 102,
+      "target2": 105,
+      "entryLow": 99,
+      "entryHigh": 101,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-05",
+          "open": 100,
+          "high": 102.5,
+          "low": 99.5,
+          "close": 102
+        },
+        {
+          "date": "2026-01-06",
+          "open": 101,
+          "high": 106,
+          "low": 99,
+          "close": 104
+        },
+        {
+          "date": "2026-01-07",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-08",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-11",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-12",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-13",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-14",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-15",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-18",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        },
+        {
+          "date": "2026-01-19",
+          "open": 100,
+          "high": 101,
+          "low": 99,
+          "close": 100
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    },
+    {
+      "id": "unfilled_high_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 206,
+          "high": 208,
+          "low": 204,
+          "close": 206
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "unfilled_low_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 196,
+          "high": 198,
+          "low": 194,
+          "close": 196
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "unfilled",
+        "hit1": null,
+        "hit2": null,
+        "netReturnRate": null,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_day_stop_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 201,
+          "low": 193,
+          "close": 196
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_be_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 205,
+          "low": 199,
+          "close": 204
+        },
+        {
+          "date": "2026-01-06",
+          "open": 202,
+          "high": 204,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_t2_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 205,
+          "low": 199,
+          "close": 204
+        },
+        {
+          "date": "2026-01-06",
+          "open": 204,
+          "high": 212,
+          "low": 202,
+          "close": 210
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.029,
+        "locked": false
+      }
+    },
+    {
+      "id": "t1_then_gap_below_be_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 205,
+          "low": 199,
+          "close": 204
+        },
+        {
+          "date": "2026-01-06",
+          "open": 196,
+          "high": 198,
+          "low": 194,
+          "close": 196
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "later_gap_above_t2_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 212,
+          "high": 214,
+          "low": 208,
+          "close": 212
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 1,
+        "netReturnRate": 0.054,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_no_lock_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-06",
+          "open": 184,
+          "high": 186,
+          "low": 182,
+          "close": 184
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.086,
+        "locked": false
+      }
+    },
+    {
+      "id": "gap_stop_locked_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-06",
+          "open": 180,
+          "high": 180,
+          "low": 180,
+          "close": 180
+        },
+        {
+          "date": "2026-01-07",
+          "open": 170,
+          "high": 172,
+          "low": 168,
+          "close": 170
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.156,
+        "locked": true
+      }
+    },
+    {
+      "id": "time_exit_flat_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.006,
+        "locked": false
+      }
+    },
+    {
+      "id": "entry_bar_both_stop_t1_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 206,
+          "low": 192,
+          "close": 200
+        },
+        {
+          "date": "2026-01-06",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 0,
+        "hit2": 0,
+        "netReturnRate": -0.036,
+        "locked": false
+      }
+    },
+    {
+      "id": "after_t1_both_be_t2_200",
+      "signalIndex": 0,
+      "referenceClose": 200,
+      "stop": 194,
+      "target1": 204,
+      "target2": 210,
+      "entryLow": 198,
+      "entryHigh": 202,
+      "bars": [
+        {
+          "date": "2026-01-04",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-05",
+          "open": 200,
+          "high": 205,
+          "low": 199,
+          "close": 204
+        },
+        {
+          "date": "2026-01-06",
+          "open": 202,
+          "high": 212,
+          "low": 198,
+          "close": 208
+        },
+        {
+          "date": "2026-01-07",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-08",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-11",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-12",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-13",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-14",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-15",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-18",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        },
+        {
+          "date": "2026-01-19",
+          "open": 200,
+          "high": 202,
+          "low": 198,
+          "close": 200
+        }
+      ],
+      "expected": {
+        "status": "closed",
+        "hit1": 1,
+        "hit2": 0,
+        "netReturnRate": 0.004,
+        "locked": false
+      }
+    }
+  ]
+}

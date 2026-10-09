@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "astra-execution-contract/v1",
+  "version": "execution-contract/v1",
+  "market": "EGX",
+  "side": "LONG_ONLY",
+  "researchOnly": true,
+  "automaticExecution": false,
+  "signalTiming": "SESSION_CLOSE",
+  "entry": {
+    "sessionOffset": 1,
+    "method": "NEXT_SESSION_OPEN_ONLY",
+    "zoneRule": "EXPLICIT_ENTRY_LOW_HIGH_OR_REFERENCE_CLOSE_PLUS_MINUS_ZONE",
+    "referenceZonePct": 0.01,
+    "expireIfNextOpenOutsideZone": true
+  },
+  "barriers": {
+    "stopFirstOnIntradayTie": true,
+    "laterSessionGapPriority": [
+      "STOP",
+      "TARGET"
+    ],
+    "stopGapFill": "OPEN",
+    "targetGapFill": "OPEN",
+    "intradayStopFill": "STOP_LEVEL",
+    "intradayTargetFill": "TARGET_LEVEL"
+  },
+  "plan": {
+    "holdingHorizonSessions": 10,
+    "stopAtrMultiple": 1.5,
+    "target1AtrMultiple": 1,
+    "target2AtrMultiple": 2.5,
+    "target1Fraction": 0.5,
+    "afterTarget1Stop": "BREAKEVEN",
+    "sameBarAfterTarget1Priority": [
+      "BREAKEVEN",
+      "TARGET2"
+    ],
+    "roundTripCostRate": 0.006
+  },
+  "limitDown": {
+    "nominalPct": 0.1,
+    "lockDetectionTolerancePct": 0.005,
+    "rule": "IF_STOP_HIT_AND_CLOSE_LE_PREV_CLOSE_TIMES_0_905_EXIT_NEXT_OPEN;_IF_NO_NEXT_BAR_EXIT_CURRENT_CLOSE"
+  },
+  "timeExit": {
+    "method": "CLOSE",
+    "barIndexRule": "signalIndex + holdingHorizonSessions"
+  },
+  "invariants": [
+    "No delayed entry after the next session open.",
+    "No look-ahead: later bars cannot change whether entry occurred.",
+    "On an intraday bar where stop and target are both touched, stop wins.",
+    "After T1, the remaining half uses breakeven before T2 on the same bar.",
+    "One round-trip cost is deducted from the combined plan return.",
+    "This contract is research evaluation logic only and never enables order execution."
+  ]
+}
