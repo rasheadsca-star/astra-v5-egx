@@ -104,7 +104,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
-  <div class="metric"><div class="label">Paper Ready</div><div class="value" id="paper">-</div></div>
+  <div class="metric"><div class="label">Paper Ready</div><div class="value" id="paper" dir="ltr">-</div></div>
 </div>
 
 
@@ -1364,7 +1364,7 @@ async function loadV52(){
     document.getElementById('listsTitle').innerText=uiLang==='ar'?'ما الفرق بين القائمتين؟':'What is the difference between the two lists?';
     document.getElementById('listsExplain').innerHTML=uiLang==='ar'
       ?'<b>كروت القرار البحثي:</b> هي طبقة ASTRA المفلترة لاتخاذ القرار، وتجمع جودة الدخول والدرجة النهائية والسياق وR:R وحالة بوابة القرار.<br><b>لوحة الفرص الموحدة:</b> لوحة أوسع للمقارنة بين أكثر من محرك/مصدر على مقياس واحد. مفيدة لاكتشاف الفرص ومقارنتها، لكن الترتيب العالي فيها لا يعني تلقائيًا أن السهم اجتاز بوابة القرار الإلزامية.'
-      :'<b>Research Decision Cards:</b> ASTRA\'s filtered decision layer. It combines entry quality, final score, context, risk/reward and gate status.<br><b>Unified Opportunity Board:</b> a broader comparison board combining multiple engines/sources on one scale. It is useful for discovery and comparison, but a high rank there does not automatically mean the setup passed the V5.7 decision gate.';
+      :'<b>Research Decision Cards:</b> ASTRA\'s filtered decision layer. It combines entry quality, final score, context, risk/reward and gate status.<br><b>Unified Opportunity Board:</b> a broader comparison board combining multiple engines/sources on one scale. It is useful for discovery and comparison, but a high rank there does not automatically mean the setup passed the mandatory decision gate.';
     const rows=allTop.slice(0,6);
     document.getElementById('v52Cards').innerHTML=rows.length?rows.map(x=>{
       const rr=x.rrT2!=null?Number(x.rrT2).toFixed(2):'-';
@@ -1613,6 +1613,7 @@ function bootAstraUI(){
     if(capInput) capInput.addEventListener('change',renderRiskSizing);
 
     applyLanguage(uiLang,false);
+    loadReplayIndex();
     loadStockUniverse();
     loadV52();
     loadProspective();
