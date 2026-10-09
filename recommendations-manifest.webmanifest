@@ -1,0 +1,23 @@
+{
+  "id": "/recommendations",
+  "name": "ASTRA Recommendations",
+  "short_name": "ASTRA Recs",
+  "description": "EGX research recommendations only. Automatic execution is OFF.",
+  "start_url": "/recommendations",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#06101d",
+  "theme_color": "#08111f",
+  "orientation": "any",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/recommendations-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
