@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.13 Decision Cockpit</title>
+<title>ASTRA V5.14 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -51,7 +51,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.13 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.14 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -61,7 +61,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.13 LIVE UI</b> · Risk Budget + Position Sizing + Sector Intelligence + Decision Gate + Research Basket</div>
+  <div><b>V5.14 LIVE UI</b> · Monitoring + Alerts + Risk Budget + Sector Intelligence + Decision Gate + Research Basket</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -74,7 +74,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.13 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.14 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -88,6 +88,36 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #f59e0b">
+  <div class="v52-header">
+    <div>
+      <h2 id="monTitle" style="margin:0">Monitoring & Alerts — V5.14</h2>
+      <div class="small" id="monNote">Tracks the latest available session price against entry, stop, targets and decision-gate state. Alerts are research-only.</div>
+    </div>
+    <span class="badge warn" id="monMode">DELAYED SESSION</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="monTrackedLabel">Monitored</div><div class="value" id="monTracked">-</div></div>
+    <div class="metric"><div class="label" id="monBasketLabel">Basket Monitored</div><div class="value" id="monBasket">-</div></div>
+    <div class="metric"><div class="label" id="monEntryLabel">In Entry Zone</div><div class="value" id="monEntry">-</div></div>
+    <div class="metric"><div class="label" id="monRiskLabel">Risk Alerts</div><div class="value" id="monRisk">-</div></div>
+    <div class="metric"><div class="label" id="monTargetsLabel">Targets Hit</div><div class="value" id="monTargets">-</div></div>
+    <div class="metric"><div class="label" id="monOrdersLabel">Automatic Orders</div><div class="value gate-block">OFF</div></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="hitem">
+      <div class="k" id="monAlertsLabel">Alert Center</div>
+      <div id="monAlerts" style="margin-top:8px"></div>
+    </div>
+    <div class="hitem">
+      <div class="k" id="monBasketStatesLabel">Basket States</div>
+      <div id="monBasketStates" style="margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="small" id="monPolicy" style="margin-top:12px"></div>
+</div>
 
 <div class="card" style="border:1px solid #a78bfa">
   <div class="v52-header">
@@ -419,7 +449,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.13 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.14 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -650,6 +680,39 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const ma=d.monitoringAlertsEngine||{}, mac=ma.counts||{}, malerts=ma.alerts||[], marows=ma.rows||[];
+    const stateAr={IN_ENTRY_ZONE:'داخل منطقة الدخول',BELOW_ENTRY_ZONE:'أسفل منطقة الدخول',SLIGHTLY_ABOVE_ENTRY:'أعلى الدخول قليلًا',ABOVE_ENTRY_ZONE:'أعلى منطقة الدخول',NEAR_STOP:'قريب من وقف الخسارة',STOP_HIT:'ضرب وقف الخسارة',T1_HIT:'وصل الهدف 1',T2_HIT:'وصل الهدف 2',CHASE_RISK:'مطاردة سعرية',GATE_BLOCKED:'محجوب ببوابة القرار',NO_CURRENT_PRICE:'السعر الحالي غير متاح',WATCH:'مراقبة'};
+    const sevAr={CRITICAL:'حرج',ACTION:'يتطلب مراجعة',WARN:'تحذير',SUCCESS:'هدف تحقق',INFO:'معلومة'};
+    document.getElementById('monTitle').innerText=uiLang==='ar'?'المراقبة والتنبيهات — V5.14':'Monitoring & Alerts — V5.14';
+    document.getElementById('monNote').innerText=uiLang==='ar'
+      ?'يتابع أحدث سعر جلسة متاح مقابل منطقة الدخول ووقف الخسارة والأهداف وحالة بوابة القرار. التنبيهات بحثية فقط.'
+      :'Tracks the latest available session price against entry, stop, targets and decision-gate state. Alerts are research-only.';
+    document.getElementById('monMode').innerText=ma.delayed
+      ?(uiLang==='ar'?'بيانات جلسة متأخرة':'DELAYED SESSION')
+      :(uiLang==='ar'?'أحدث جلسة متاحة':'LATEST SESSION');
+    document.getElementById('monTrackedLabel').innerText=uiLang==='ar'?'الفرص المتابعة':'Monitored';
+    document.getElementById('monBasketLabel').innerText=uiLang==='ar'?'السلة تحت المتابعة':'Basket Monitored';
+    document.getElementById('monEntryLabel').innerText=uiLang==='ar'?'داخل منطقة الدخول':'In Entry Zone';
+    document.getElementById('monRiskLabel').innerText=uiLang==='ar'?'تنبيهات المخاطر':'Risk Alerts';
+    document.getElementById('monTargetsLabel').innerText=uiLang==='ar'?'الأهداف المحققة':'Targets Hit';
+    document.getElementById('monOrdersLabel').innerText=uiLang==='ar'?'الأوامر الآلية':'Automatic Orders';
+    document.getElementById('monAlertsLabel').innerText=uiLang==='ar'?'مركز التنبيهات':'Alert Center';
+    document.getElementById('monBasketStatesLabel').innerText=uiLang==='ar'?'حالة أسهم السلة':'Basket States';
+    document.getElementById('monTracked').innerText=ma.monitored??0;
+    document.getElementById('monBasket').innerText=ma.monitoredBasket??0;
+    document.getElementById('monEntry').innerText=mac.IN_ENTRY_ZONE??0;
+    document.getElementById('monRisk').innerText=(mac.NEAR_STOP??0)+(mac.STOP_HIT??0);
+    document.getElementById('monTargets').innerText=(mac.T1_HIT??0)+(mac.T2_HIT??0);
+    document.getElementById('monAlerts').innerHTML=malerts.length
+      ?malerts.slice(0,10).map(x=>'<div style="margin:6px 0"><b>'+esc(x.ticker)+'</b> · '+esc(uiLang==='ar'?(stateAr[x.state]||x.state):x.state.replaceAll('_',' '))+' · '+esc(uiLang==='ar'?(sevAr[x.severity]||x.severity):x.severity)+'</div>').join('')
+      :esc(uiLang==='ar'?'لا توجد تنبيهات نشطة.':'No active alerts.');
+    const basketStates=marows.filter(x=>x.portfolioSelected).sort((a,b)=>(a.portfolioRank??999)-(b.portfolioRank??999));
+    document.getElementById('monBasketStates').innerHTML=basketStates.length
+      ?basketStates.map(x=>'<div style="margin:6px 0"><b>'+esc(x.ticker)+'</b> · '+esc(uiLang==='ar'?(stateAr[x.state]||x.state):x.state.replaceAll('_',' '))+' · '+esc(priceCell(x.currentPrice))+'</div>').join('')
+      :esc(uiLang==='ar'?'لا توجد أسهم في السلة حاليًا.':'No basket positions currently.');
+    document.getElementById('monPolicy').innerText=uiLang==='ar'
+      ?'قريب من الوقف = في نطاق 2.5% من وقف الخسارة · أعلى الدخول قليلًا = حتى 2% فوق الحد الأعلى · ليست تغذية لحظية ولا تنفذ أوامر.'
+      :'Near stop = within 2.5% of stop · slightly above entry = up to 2% above entry high · not a real-time feed and no orders are sent.';
     const rb=d.riskBudgetEngine||{};
     latestRiskBudget=rb;
     document.getElementById('riskTitle').innerText=uiLang==='ar'?'ميزانية المخاطر وحجم المركز — V5.13':'Risk Budget & Position Sizing — V5.13';
@@ -866,6 +929,7 @@ async function loadV52(){
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'القيمة المتوقعة':'Expected Value')+'</span><div class="v52-v">'+esc(x.targetAchievement?.expectedValuePct!=null?x.targetAchievement.expectedValuePct+'%':'—')+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المعايرة':'Calibration')+'</span><div class="v52-v">'+esc(uiLang==='ar'?({INSUFFICIENT_DATA:'بيانات غير كافية',PRELIMINARY:'مبدئي',CALIBRATING:'قيد المعايرة',VALIDATED:'مُعتمد'}[x.targetAchievement?.status]||x.targetAchievement?.status||'-'):(x.targetAchievement?.status||'-').replaceAll('_',' '))+'</div></div>'+
           '<div><span class="v52-k">'+esc(uiLang==='ar'?'حجم العينة':'Sample Size')+'</span><div class="v52-v">'+esc(x.targetAchievement?.sampleSize??0)+'</div></div>'+
+          '<div><span class="v52-k">'+esc(uiLang==='ar'?'حالة المتابعة':'Monitoring')+'</span><div class="v52-v">'+esc(uiLang==='ar'?(stateAr[x.monitoringState]||x.monitoringState||'-'):((x.monitoringState||'-').replaceAll('_',' ')))+'</div></div>'+
           '<div><span class="v52-k">'+esc(t('R:R to T2'))+'</span><div class="v52-v">'+esc(rr)+'</div></div>'+
           '<div><span class="v52-k">Quality Score</span><div class="v52-v">'+esc(x.entryQualityScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Context Score</span><div class="v52-v">'+esc(x.contextScore??'-')+'/100</div></div>'+
