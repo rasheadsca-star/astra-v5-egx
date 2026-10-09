@@ -32,6 +32,8 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 @media(max-width:1000px){.v52-grid{grid-template-columns:1fr}}
 
 .v54-ideal{color:#4ade80}.v54-early{color:#60a5fa}.v54-extended{color:#facc15}.v54-chase{color:#fb923c}.v54-invalid{color:#f87171}
+
+.grade-aplus{color:#4ade80}.grade-a{color:#86efac}.grade-b{color:#60a5fa}.grade-c{color:#facc15}.grade-reject{color:#f87171}
 </style>
 </head>
 <body>
@@ -139,6 +141,25 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 </div>
 
 
+
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 style="margin:0">Final Decision Score — V5.6</h2>
+      <div class="small">Technical + Entry Quality + Context + R:R + Risk + Evidence + Forward Evidence. Research ranking only.</div>
+    </div>
+    <span class="badge ready">V5.6</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label">A+</div><div class="value grade-aplus" id="fdAPlus">-</div></div>
+    <div class="metric"><div class="label">A</div><div class="value grade-a" id="fdA">-</div></div>
+    <div class="metric"><div class="label">B</div><div class="value grade-b" id="fdB">-</div></div>
+    <div class="metric"><div class="label">C</div><div class="value grade-c" id="fdC">-</div></div>
+    <div class="metric"><div class="label">REJECT</div><div class="value grade-reject" id="fdReject">-</div></div>
+    <div class="metric"><div class="label">Forward Evidence</div><div class="value" id="fdForward">-</div></div>
+  </div>
+</div>
 
 <div class="card">
   <div class="v52-header">
@@ -264,6 +285,13 @@ async function loadV52(){
     document.getElementById('v52Watch').innerText=d.counts?.watchlist??'-';
     const safe=!d.dataHealth?.stale && d.safety?.executionAllowed===false;
     document.getElementById('v52Safety').innerText=safe?'RESEARCH SAFE':'DEGRADED';
+    const fd=d.finalDecisionEngine||{}, gc=fd.gradeCounts||{}, fe=fd.forwardEvidence||{};
+    document.getElementById('fdAPlus').innerText=gc['A+']??0;
+    document.getElementById('fdA').innerText=gc['A']??0;
+    document.getElementById('fdB').innerText=gc['B']??0;
+    document.getElementById('fdC').innerText=gc['C']??0;
+    document.getElementById('fdReject').innerText=gc['REJECT']??0;
+    document.getElementById('fdForward').innerText=fe.maturity==='ACTIVE'?(String(fe.score??'-')+'/100'):'NEUTRAL';
     const ctx=d.marketSectorContextEngine||{}, cm=ctx.market||{}, cs=ctx.sector||{};
     document.getElementById('ctxMarketScore').innerText=cm.score!=null?cm.score+'/100':'-';
     document.getElementById('ctxBreadth').innerText=cm.breadthPct!=null?cm.breadthPct+'%':'-';
@@ -282,10 +310,11 @@ async function loadV52(){
       const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
       const fam=(x.engineFamilies||[]).map(v=>'<span class="v52-pill">'+esc(v)+'</span>').join('');
       return '<div class="v52-card">'+
-        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span></div>'+
+        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><div><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span> <span class="badge '+(x.finalDecisionGrade==='A+'||x.finalDecisionGrade==='A'?'ready':x.finalDecisionGrade==='REJECT'?'blocked':'warn')+'">'+esc(x.finalDecisionGrade||'-')+'</span></div></div>'+
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
+          '<div><span class="v52-k">Final Score</span><div class="v52-v">'+esc(x.finalDecisionScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
           '<div><span class="v52-k">R:R to T2</span><div class="v52-v">'+esc(rr)+'</div></div>'+
           '<div><span class="v52-k">Quality Score</span><div class="v52-v">'+esc(x.entryQualityScore??'-')+'/100</div></div>'+
@@ -296,7 +325,7 @@ async function loadV52(){
           '<div><span class="v52-k">Target 2</span><div class="v52-v">'+esc(priceCell(x.target2))+'</div></div>'+
         '</div>'+
         '<div style="margin-top:9px">'+fam+'</div>'+
-        '<div class="v52-reason">'+esc(v52Explain(x))+'</div>'+
+        '<div class="v52-reason"><b>'+esc(x.finalDecisionLabel||'')+'</b><br>'+esc(v52Explain(x))+'</div>'+
       '</div>';
     }).join(''):'<div class="muted">No ranked opportunities available.</div>';
   }catch(e){
