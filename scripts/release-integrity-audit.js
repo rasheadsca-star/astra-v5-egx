@@ -4,6 +4,7 @@ const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const {allocateCappedWeights}=require('./lib/portfolio-allocation');
 const {riskStatePolicy}=require('./lib/risk-state-policy');
 const {stableEvidenceKey,dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
+const {sizeByRiskAndExposure}=require('./lib/position-sizing');
 
 const ROOT=process.cwd();
 function read(p,fallback=null){try{return JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'))}catch{return fallback}}
@@ -219,6 +220,13 @@ function syntheticChecks(cycle,issues){
   const al=allocateCappedWeights(randomItems,{maxSingleWeightPct:30,lowLiquidityCapPct:15});
   assert(al.weights.every((w,i)=>w<=((randomItems[i].liquidityContextScore<40)?15:30)+1e-6),'random allocation cap failed cycle '+cycle,issues);
   assert(al.allocatedPct<=100.0001&&al.unallocatedPct>=-0.0001,'random allocation conservation failed cycle '+cycle,issues);
+
+  const z=sizeByRiskAndExposure({capital:100000,riskPct:1,entry:100,stopDistance:5,maxPositionPct:0});
+  assert(z.shares===0,'zero exposure cap produced shares',issues);
+  const tiny=sizeByRiskAndExposure({capital:1000,riskPct:1,entry:5000,stopDistance:100,maxPositionPct:30});
+  assert(tiny.shares===0,'unaffordable exposure produced shares',issues);
+  const strict=sizeByRiskAndExposure({capital:100000,riskPct:1,entry:100,stopDistance:5,maxPositionPct:10});
+  assert(strict.shares===100&&strict.sharesByRisk===200&&strict.sharesByExposure===100,'strict min(risk,exposure) sizing failed',issues);
 
   const states=['IN_ENTRY_ZONE','STOP_HIT','NEAR_STOP','CHASE_RISK','GATE_BLOCKED','ABOVE_ENTRY_ZONE','SLIGHTLY_ABOVE_ENTRY','BELOW_ENTRY_ZONE','T1_HIT','T2_HIT','NO_CURRENT_PRICE','WATCH'];
   for(const st of states){
