@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
 const EVID='data/prospective-evidence.json';
 const DOC='docs/data/prospective-evidence.json';
 const MARKET='data/canonical-market.json';
@@ -31,7 +32,12 @@ function barsFor(ticker){
     .sort((a,b)=>a.date.localeCompare(b.date));
 }
 
-for(const rec of book.records||[]){
+const dedupe=dedupeEvidenceRecords(book.records||[]);
+for(const dup of dedupe.duplicates){
+  dup.record.excludedFromAnalytics=true;
+  dup.record.duplicateOf=dup.primary.id;
+}
+for(const rec of dedupe.primary){
   rec.outcome=rec.outcome||{status:'PENDING'};
   const o=rec.outcome;
   if(terminal(o.status))continue;
@@ -122,7 +128,7 @@ for(const rec of book.records||[]){
   }
 }
 
-const records=book.records||[];
+const records=(book.records||[]).filter(r=>r.excludedFromAnalytics!==true);
 const resolved=records.filter(r=>r.outcome?.status==='RESOLVED');
 const ambiguous=records.filter(r=>['AMBIGUOUS_OHLC_ORDER','AMBIGUOUS_ENTRY_BAR'].includes(r.outcome?.status));
 const positive=resolved.filter(r=>(n(r.outcome?.netReturnPct)||0)>0);
@@ -148,6 +154,7 @@ book.policy={
   missedSessionRecovery:'Replays every unseen history-index bar sequentially',
   automaticExecution:false
 };
+book.duplicateRecordsExcluded=(book.records||[]).filter(r=>r.excludedFromAnalytics===true).length;
 book.counts={
   total:records.length,
   pending:records.filter(r=>r.outcome?.status==='PENDING').length,
