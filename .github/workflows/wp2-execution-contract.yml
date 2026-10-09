@@ -1,0 +1,61 @@
+name: WP2 Execution Contract Parity
+
+on:
+  push:
+    branches:
+      - wp2-execution-contract
+    paths:
+      - 'config/execution-contract.json'
+      - 'config/execution-golden-vectors.json'
+      - 'scripts/lib/execution-contract.js'
+      - 'scripts/execution-contract-validation.js'
+      - 'scripts/resolve-prospective-outcomes.js'
+      - 'scripts/walk-forward-validation.js'
+      - 'quant/engine/egx_engine.py'
+      - 'quant/tests/test_execution_contract.py'
+      - 'package.json'
+      - 'docs/EXECUTION-CONTRACT.md'
+      - '.github/workflows/wp2-execution-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp2-execution-contract-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python requirements
+        run: python -m pip install -r quant/requirements.txt
+      - name: Cross-language execution contract
+        run: npm run execution:validate
+      - name: Existing Node validation suite
+        run: npm test
+      - name: Existing Python quant suite
+        run: npm run quant:test
+      - name: Full cockpit build
+        run: npm run build
+      - name: Verify execution safety remains OFF
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const d=JSON.parse(fs.readFileSync('data/decision-cockpit.json','utf8'));
+          if(d?.safety?.researchOnly!==true)throw new Error('researchOnly changed');
+          if(d?.safety?.executionAllowed!==false)throw new Error('executionAllowed changed');
+          if(d?.safety?.automaticOrders!==false)throw new Error('automaticOrders changed');
+          console.log({researchOnly:d.safety.researchOnly,executionAllowed:d.safety.executionAllowed,automaticOrders:d.safety.automaticOrders});
+          NODE
