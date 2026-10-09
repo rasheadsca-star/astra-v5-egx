@@ -2,9 +2,14 @@
 
 const assert=require('assert');
 const {
-  maturity,distinctSessions,selectHierarchicalPool,blockBootstrap,aggregate,scoreCalibration
+  n,maturity,distinctSessions,selectHierarchicalPool,blockBootstrap,aggregate,scoreCalibration
 }=require('./lib/calibration-stats');
 const {captureHash}=require('./lib/persistent-evidence');
+
+assert.strictEqual(n(null),null);
+assert.strictEqual(n(undefined),null);
+assert.strictEqual(n(''),null);
+assert.strictEqual(n(0),0);
 
 function rec(i,sessions=30,opts={}){
   const s='2026-09-'+String(1+(i%sessions)).padStart(2,'0');
