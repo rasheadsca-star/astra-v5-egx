@@ -1,6 +1,6 @@
 {
   "name": "ras-egx-astra-v5",
-  "version": "5.16.1",
+  "version": "5.16.2",
   "private": true,
   "scripts": {
     "build": "node scripts/build-check.js && npm run cockpit:build",
@@ -15,7 +15,7 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/capture-prospective-evidence.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/sector-correlation-intelligence.js && node scripts/market-sector-context-engine.js && node scripts/final-decision-score-engine.js && node scripts/resolve-prospective-outcomes.js && node scripts/probability-calibration-engine.js && node scripts/decision-gate-engine.js && node scripts/portfolio-selection-engine.js && node scripts/risk-budget-engine.js && node scripts/monitoring-alerts-engine.js && node scripts/capture-prospective-evidence.js && node scripts/outcome-analytics-engine.js && node scripts/daily-decision-brief.js && node scripts/change-attribution-engine.js && node scripts/build-technical-analysis.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js",
     "evidence:resolve": "node scripts/resolve-prospective-outcomes.js",
     "entry:quality": "node scripts/entry-quality-engine.js",
@@ -29,7 +29,8 @@
     "sector:correlation": "node scripts/sector-correlation-intelligence.js",
     "risk:budget": "node scripts/risk-budget-engine.js",
     "monitor:alerts": "node scripts/monitoring-alerts-engine.js",
-    "outcomes:analytics": "node scripts/outcome-analytics-engine.js"
+    "outcomes:analytics": "node scripts/outcome-analytics-engine.js",
+    "technical:build": "node scripts/build-technical-analysis.js"
   },
   "engines": {
     "node": ">=20"
