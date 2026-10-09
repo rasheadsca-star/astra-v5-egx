@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const {classifyCaptureTiming}=require('./lib/persistent-evidence');
 const ROOT=process.cwd();
 const COCKPIT='data/decision-cockpit.json';
 const MARKET='data/canonical-market.json';
@@ -42,7 +43,8 @@ const inputFingerprint={
 };
 
 const opportunities=[...(d.topOpportunities||[]),...(d.watchlist||[]),...(d.rejected||[])];
-const frozenPredictions=opportunities.map(x=>({
+const uniqueOpportunities=[...new Map(opportunities.filter(x=>x?.ticker).map(x=>[x.ticker,x])).values()];
+const frozenPredictions=uniqueOpportunities.map(x=>({
   ticker:x.ticker,
   stage:x.stage||null,
   rank:x.rank??null,
@@ -76,11 +78,16 @@ const frozenPredictions=opportunities.map(x=>({
   probabilityStatus:x.targetAchievement?.status||null
 }));
 
+const archivedAt=new Date().toISOString();
+const captureTiming=classifyCaptureTiming(session,archivedAt);
+const recordedForwardEligible=captureTiming==='ON_SESSION_AFTER_CLOSE';
 const currentDecisionFingerprint=objectHash({inputFingerprint,predictions:frozenPredictions});
 let snapshot={
   schemaVersion:'astra-replay-snapshot/v1',
   session,
-  archivedAt:new Date().toISOString(),
+  archivedAt,
+  captureTiming,
+  recordedForwardEligible,
   modelVersion,
   buildCommit,
   decisionFingerprint:currentDecisionFingerprint,
@@ -145,6 +152,8 @@ if(existing){
     archivedAt:snapshot.archivedAt,
     modelVersion:snapshot.modelVersion||modelVersion,
     buildCommit:snapshot.buildCommit||buildCommit,
+    captureTiming:snapshot.captureTiming||null,
+    recordedForwardEligible:snapshot.recordedForwardEligible===true,
     previousRecordHash:prior?.recordHash||null,
     snapshotSha256:snapshot.snapshotSha256,
     sourceSessionDataHash:snapshot.inputFingerprint?.sourceSessionDataHash||null,
@@ -175,6 +184,8 @@ const item={
   archivedAt:snapshot.archivedAt,
   modelVersion:snapshot.modelVersion||modelVersion,
   buildCommit:snapshot.buildCommit||buildCommit,
+  captureTiming:snapshot.captureTiming||null,
+  recordedForwardEligible:snapshot.recordedForwardEligible===true,
   snapshotSha256:snapshot.snapshotSha256,
   predictionCount:(snapshot.predictions||[]).length,
   gatePassedCount:(snapshot.predictions||[]).filter(x=>x.decisionGatePass).length,
@@ -208,6 +219,8 @@ d.trustArchitecture={
   ledgerRecordHash:recordHash,
   ledgerChainStatus:ledger.chain.status,
   persistedReplaySessions:newIndex.sessionCount,
+  captureTiming:snapshot.captureTiming||null,
+  recordedForwardEligible:snapshot.recordedForwardEligible===true,
   replayCoverageStart:newIndex.coverageStart,
   researchOnly:true,
   automaticExecution:false,
