@@ -32,12 +32,18 @@ async function load(){
     const r=await fetch('./data/operations-health.json',{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
     const d=await r.json();
     const o=document.getElementById('overall');o.textContent=d.overall;o.className='pill '+d.overall;
-    session.textContent=d.session||'—';pass.textContent=d.summary?.pass??0;warn.textContent=d.summary?.warn??0;fail.textContent=d.summary?.fail??0;
-    checks.innerHTML=(d.checks||[]).map(x=>'<tr><td>'+x.id+'</td><td class="'+x.status+'"><b>'+x.status+'</b></td><td>'+String(x.detail||'')+'</td></tr>').join('');
+    document.getElementById('session').textContent=d.session||'—';
+    document.getElementById('pass').textContent=d.summary?.pass??0;
+    document.getElementById('warn').textContent=d.summary?.warn??0;
+    document.getElementById('fail').textContent=d.summary?.fail??0;
+    document.getElementById('checks').innerHTML=(d.checks||[]).map(x=>'<tr><td>'+x.id+'</td><td class="'+x.status+'"><b>'+x.status+'</b></td><td>'+String(x.detail||'')+'</td></tr>').join('');
     const active=(d.issueCandidates||[]).filter(x=>x.active);
-    issues.innerHTML=active.length?active.map(x=>'<div class="'+(x.severity==='CRITICAL'?'FAIL':'WARN')+'"><b>'+x.key+'</b> · '+x.severity+' · '+x.body+'</div>').join(''):'No active automatic issue candidates.';
-    updated.textContent='Generated '+(d.generatedAt||'—')+' · Version '+(d.version||'—')+' · Auto execution OFF';
-  }catch(e){overall.textContent='UNAVAILABLE';overall.className='pill FAIL';checks.innerHTML='<tr><td colspan="3">'+e.message+'</td></tr>'}
+    document.getElementById('issues').innerHTML=active.length?active.map(x=>'<div class="'+(x.severity==='CRITICAL'?'FAIL':'WARN')+'"><b>'+x.key+'</b> · '+x.severity+' · '+x.body+'</div>').join(''):'No active automatic issue candidates.';
+    document.getElementById('updated').textContent='Generated '+(d.generatedAt||'—')+' · Version '+(d.version||'—')+' · Auto execution OFF';
+  }catch(e){
+    const o=document.getElementById('overall');o.textContent='UNAVAILABLE';o.className='pill FAIL';
+    document.getElementById('checks').innerHTML='<tr><td colspan="3">'+e.message+'</td></tr>';
+  }
 }
 load();setInterval(load,60000);
 </script></body></html>
