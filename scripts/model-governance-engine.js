@@ -76,16 +76,24 @@ check('WALK_FORWARD','Walk-forward validation',wfScore,16,wf.status||wfStatus,
   (wf.coverage?.validFolds||0)+' valid fold(s), '+(wf.outOfSample?.resolved||0)+' resolved out-of-sample outcome(s).');
 
 const resolved=n(d.probabilityCalibrationEngine?.forwardResolved)??n(evid.counts?.resolved)??0;
-const probStatus=d.probabilityCalibrationEngine?.status||'INSUFFICIENT_DATA';
-const probScore=probStatus==='VALIDATED'?100:probStatus==='CALIBRATING'?75:probStatus==='PRELIMINARY'?45:clamp(resolved/10*25);
+const probSessions=n(d.probabilityCalibrationEngine?.forwardDistinctSessions)??0;
+const probStatus=d.probabilityCalibrationEngine?.status||'INSUFFICIENT_EVIDENCE';
+const maturityProgress=Math.min(resolved/90,probSessions/30);
+const probScore=probStatus==='VALIDATED'?100:
+  probStatus==='MATURE_SAMPLE_WAITING_WALK_FORWARD'?85:
+  probStatus==='CALIBRATING'?70:
+  probStatus==='PRELIMINARY'?45:
+  clamp(maturityProgress*40);
 check('PROBABILITY_EVIDENCE','Forward probability evidence',probScore,10,probStatus,
-  resolved+' resolved forward outcome(s); probability validation threshold is 90.');
+  resolved+' resolved forward outcome(s) across '+probSessions+' distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate.');
 
 const outcomeResolved=n(d.outcomeAnalyticsEngine?.overall?.resolved)??n(evid.counts?.resolved)??0;
-const outcomeScore=outcomeResolved>=90?100:outcomeResolved>=30?75:outcomeResolved>=10?45:clamp(outcomeResolved/10*30);
-check('OUTCOME_SAMPLE','Outcome analytics sample',outcomeScore,8,
-  outcomeResolved>=90?'MATURE':outcomeResolved>=30?'CALIBRATING':outcomeResolved>=10?'PRELIMINARY':'INSUFFICIENT',
-  outcomeResolved+' resolved prospective outcome(s).');
+const outcomeSessions=n(d.outcomeAnalyticsEngine?.overall?.distinctSessions)??0;
+const outcomeProgress=Math.min(outcomeResolved/90,outcomeSessions/30);
+const outcomeStatus=d.outcomeAnalyticsEngine?.status||'INSUFFICIENT_EVIDENCE';
+const outcomeScore=outcomeStatus==='MATURE_SAMPLE'?100:outcomeStatus==='CALIBRATING'?70:outcomeStatus==='PRELIMINARY'?45:clamp(outcomeProgress*40);
+check('OUTCOME_SAMPLE','Outcome analytics sample',outcomeScore,8,outcomeStatus,
+  outcomeResolved+' resolved prospective outcome(s) across '+outcomeSessions+' distinct session(s).');
 
 const sectorCoverage=n(d.sectorCorrelationEngine?.taxonomy?.coveragePct);
 const sectorScore=sectorCoverage==null?20:clamp(sectorCoverage);
@@ -118,7 +126,8 @@ if(!atomicOk)blockers.push('ATOMIC_DATA_INTEGRITY_NOT_VERIFIED');
 if(trustHistoryExists&&!chainOk)blockers.push('LEDGER_CHAIN_NOT_VERIFIED');
 if(replaySessions<25)blockers.push('REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD');
 if((wf.coverage?.validFolds||0)<3)blockers.push('MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED');
-if(resolved<30)blockers.push('FORWARD_PROBABILITY_SAMPLE_SMALL');
+if(resolved<90||probSessions<30)blockers.push('FORWARD_PROBABILITY_SAMPLE_SMALL');
+if(probStatus==='MATURE_SAMPLE_WAITING_WALK_FORWARD')blockers.push('PROBABILITY_WALK_FORWARD_GATE_PENDING');
 if(stale)blockers.push('STALE_DATA');
 if(drift)blockers.push('DRIFT_GUARD_ACTIVE');
 if(activeCoverage!=null&&activeCoverage<80)blockers.push('ACTIVE_SOURCE_COVERAGE_BELOW_80');
@@ -126,7 +135,7 @@ if(activeCoverage!=null&&activeCoverage<80)blockers.push('ACTIVE_SOURCE_COVERAGE
 const payload={
   schemaVersion:'astra-model-governance/v1',
   generatedAt:new Date().toISOString(),
-  modelVersion:'ASTRA_V6.2_GOVERNANCE',
+  modelVersion:'ASTRA_V6.8_GOVERNANCE',
   reliability:{
     score,
     tier,
@@ -143,7 +152,11 @@ const payload={
     validWalkForwardFolds:wf.coverage?.validFolds||0,
     outOfSampleResolved:wf.outOfSample?.resolved||0,
     prospectiveResolved:outcomeResolved,
+    prospectiveDistinctSessions:outcomeSessions,
+    probabilityResolved:resolved,
+    probabilityDistinctSessions:probSessions,
     probabilityStatus:probStatus,
+    calibrationScoring:d.probabilityCalibrationEngine?.calibrationScoring||null,
     ledgerRecords:ledgerRecordCount,
     ledgerChainStatus:ledger.chain?.status||replay.ledgerChainStatus||'UNKNOWN',
     activeSourceCoveragePct:activeCoverage,
@@ -153,7 +166,7 @@ const payload={
     status:score>=85&&blockers.length===0?'EVIDENCE_STRONG':score>=70?'EVIDENCE_GOOD_WITH_LIMITATIONS':score>=50?'EVIDENCE_BUILDING':'EVIDENCE_LOW',
     canClaimValidatedProbability:!!wf.governance?.calibrationClaimAllowed && probStatus==='VALIDATED',
     canEnableAutomaticExecution:false,
-    automaticExecutionReason:'Automatic trading is outside V6.2 governance scope and remains OFF.'
+    automaticExecutionReason:'Automatic trading is outside V6.8 governance scope and remains OFF.'
   },
   researchOnly:true,
   automaticExecution:false
