@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('assert');
+const fs=require('fs');
+const page=fs.readFileSync('app/dashboard/recommendations.html','utf8');
+const manifest=JSON.parse(fs.readFileSync('recommendations-manifest.webmanifest','utf8'));
+const sw=fs.readFileSync('recommendations-sw.js','utf8');
+const vercel=JSON.parse(fs.readFileSync('vercel.json','utf8'));
+
+assert.match(page,/rel="manifest" href="\/recommendations-manifest\.webmanifest"/);
+assert.match(page,/serviceWorker\.register\('\/recommendations-sw\.js'\)/);
+assert.match(page,/\/api\/recommendations/);
+assert.match(page,/\/data\/decision-cockpit\.json/);
+assert.match(page,/Automatic Execution OFF|التنفيذ التلقائي/);
+assert.strictEqual(manifest.start_url,'/recommendations');
+assert.strictEqual(manifest.display,'standalone');
+assert.ok(Array.isArray(manifest.icons)&&manifest.icons.length>0);
+assert.match(sw,/\/api\//);
+assert.match(sw,/cache:'no-store'/);
+assert.ok((vercel.rewrites||[]).some(x=>x.source==='/recommendations'&&x.destination==='/app/dashboard/recommendations.html'));
+console.log('ASTRA recommendations PWA validation passed');
