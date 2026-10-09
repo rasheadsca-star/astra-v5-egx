@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "astra-node-validation-suite/v1",
+  "policy": "Only deterministic, non-mutating validations belong in npm test. Build/mutating engines run in their dedicated build gates.",
+  "validations": [
+    "scripts/runtime-validation.js",
+    "scripts/atomic-session-validation.js",
+    "scripts/ucp-validation.js",
+    "scripts/ucp-forward-validation.js",
+    "scripts/ucp-forward-null-metrics-validation.js",
+    "scripts/ucp-morning-evidence-validation.js",
+    "scripts/ucp-meta-label-validation.js",
+    "scripts/unified-opportunity-validation.js",
+    "scripts/hygiene-validation.js",
+    "scripts/quant-validation.js",
+    "scripts/serve-validation.js",
+    "scripts/recommendations-pwa-validation.js",
+    "scripts/execution-contract-validation.js",
+    "scripts/output-ownership-validation.js",
+    "scripts/source-health-validation.js",
+    "scripts/calibration-validation.js",
+    "scripts/final-score-validation.js",
+    "scripts/validate-decision-cockpit.js",
+    "scripts/confluence-validation.js",
+    "scripts/confluence-v2-validation.js",
+    "scripts/wp1-ledger-validation.js",
+    "tests/dashboard-health-state.test.js",
+    "tests/runtime-pipeline.test.js",
+    "tests/egx-connector-pipeline.test.js",
+    "scripts/technical-indicators-validation.js"
+  ]
+}
