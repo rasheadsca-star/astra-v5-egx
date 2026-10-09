@@ -126,6 +126,26 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
   </table>
 </div>
 
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 style="margin:0">Prospective Evidence — V5.3</h2>
+      <div class="small">Forward-only resolver. Conservative fill assumptions; same-bar target/stop order is never guessed.</div>
+    </div>
+    <span class="badge warn">FORWARD EVIDENCE</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label">Recorded</div><div class="value" id="peTotal">-</div></div>
+    <div class="metric"><div class="label">Open</div><div class="value" id="peOpen">-</div></div>
+    <div class="metric"><div class="label">Resolved</div><div class="value" id="peResolved">-</div></div>
+    <div class="metric"><div class="label">Hit Rate</div><div class="value" id="peHit">-</div></div>
+    <div class="metric"><div class="label">Avg Net</div><div class="value" id="peAvg">-</div></div>
+    <div class="metric"><div class="label">Ambiguous Bars</div><div class="value" id="peAmb">-</div></div>
+  </div>
+  <div class="small" id="pePolicy" style="margin-top:12px">Loading resolver policy...</div>
+</div>
+
 <div class="card">
   <h2>Quant Lane — Research / Shadow <span id="quantBadge" class="badge muted">-</span></h2>
   <div class="small" id="quantSummary">Loading quant lane...</div>
@@ -359,6 +379,27 @@ async function loadSignals(){
   }
 }
 
+
+async function loadProspective(){
+  try{
+    const p=await api('/data/prospective-evidence.json').catch(()=>api('/docs/data/prospective-evidence.json'));
+    const c=p.counts||{},m=p.metrics||{},pol=p.policy||{};
+    document.getElementById('peTotal').innerText=c.total??0;
+    document.getElementById('peOpen').innerText=c.open??0;
+    document.getElementById('peResolved').innerText=c.resolved??0;
+    document.getElementById('peHit').innerText=m.hitRatePct!=null?m.hitRatePct+'%':'-';
+    document.getElementById('peAvg').innerText=m.avgNetReturnPct!=null?m.avgNetReturnPct+'%':'-';
+    document.getElementById('peAmb').innerText=c.ambiguous??0;
+    document.getElementById('pePolicy').innerText=
+      'Market session '+(p.lastMarketSession||'-')+
+      ' · Fill: '+(pol.fillAssumption||'-')+
+      ' · Cost: '+(pol.roundTripCostPct??'-')+'%'+
+      ' · Same-bar stop/target => ambiguous, never forced.';
+  }catch(e){
+    document.getElementById('pePolicy').innerText='Prospective evidence file not generated yet.';
+  }
+}
+
 async function loadQuant(){
   try{
     const q=await api('/api/quant');
@@ -393,9 +434,11 @@ async function loadQuant(){
 }
 
 loadV52();
+loadProspective();
 loadSignals();
 loadQuant();
 setInterval(loadV52,60000);
+setInterval(loadProspective,60000);
 setInterval(loadSignals,60000);
 setInterval(loadQuant,60000);
 </script>
