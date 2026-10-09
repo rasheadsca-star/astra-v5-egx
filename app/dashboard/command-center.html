@@ -19,6 +19,17 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 .small{font-size:11px;color:#94a3b8;margin-top:8px}
 @media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:700px){body{padding:15px}.grid{grid-template-columns:repeat(2,1fr)}table{font-size:11px}.card{overflow:auto}}
+
+.v52-header{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.v52-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.v52-card{background:#0f1a2b;border:1px solid #29405e;border-radius:12px;padding:16px}
+.v52-card h3{margin:0 0 8px;font-size:20px}
+.v52-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;font-size:12px}
+.v52-k{color:#94a3b8}.v52-v{font-weight:700}
+.v52-reason{margin-top:10px;color:#cbd5e1;font-size:12px;line-height:1.45}
+.v52-pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#17243a;border:1px solid #334e70;font-size:10px;margin:2px 3px 2px 0}
+.v52-risk-low{color:#4ade80}.v52-risk-med{color:#facc15}.v52-risk-high{color:#f87171}
+@media(max-width:1000px){.v52-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -38,6 +49,26 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
   <div class="metric"><div class="label">Paper Ready</div><div class="value" id="paper">-</div></div>
+</div>
+
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 style="margin:0">V5.2 Research Decision Layer</h2>
+      <div class="small">Ranked decision setups with entry quality, risk/reward and explainability. Research only · Auto execution OFF.</div>
+    </div>
+    <span class="badge ready">V5.2</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label">Market State</div><div class="value" id="v52Market">-</div></div>
+    <div class="metric"><div class="label">Breadth</div><div class="value" id="v52Breadth">-</div></div>
+    <div class="metric"><div class="label">Entry Ready</div><div class="value" id="v52Ready">-</div></div>
+    <div class="metric"><div class="label">Near Entry</div><div class="value" id="v52Near">-</div></div>
+    <div class="metric"><div class="label">Watchlist</div><div class="value" id="v52Watch">-</div></div>
+    <div class="metric"><div class="label">Data Safety</div><div class="value" id="v52Safety">-</div></div>
+  </div>
+  <div id="v52Cards" class="v52-grid"><div class="muted">Loading V5.2 decision layer...</div></div>
 </div>
 
 <div class="card">
@@ -159,6 +190,57 @@ function paperCell(item){
   }
   const blockers=(item.executionBlockers||[]).slice(0,2).join(', ');
   return '<span class="badge blocked">BLOCKED</span><div class="small">'+esc(blockers||'Validation required')+'</div>';
+}
+
+
+function v52RiskClass(r){const n=Number(r);return n<=5?'v52-risk-low':n<=8?'v52-risk-med':'v52-risk-high'}
+function v52EntryQuality(x){
+  if(x.stage==='ENTRY_READY'||x.stage==='ENTRY_READY_SECONDARY') return 'IDEAL / READY';
+  if(x.stage==='WAITING_FOR_TRIGGER') return 'WAIT TRIGGER';
+  if(x.stage==='NEAR_ENTRY') return 'NEAR ENTRY';
+  if(x.stage==='REJECTED_RISK') return 'INVALID / RISK';
+  return 'WATCH';
+}
+function v52Explain(x){
+  const positives=(x.evidence||[]).slice(0,4).map(v=>String(v).replaceAll('_',' '));
+  const negatives=(x.warnings||[]).slice(0,3).map(v=>String(v).replaceAll('_',' '));
+  let s=positives.length?'Supports: '+positives.join(' · '):'No multi-factor confirmation yet';
+  if(negatives.length) s+=' | Risks: '+negatives.join(' · ');
+  return s;
+}
+async function loadV52(){
+  try{
+    const d=await api('/data/decision-cockpit.json').catch(()=>api('/docs/data/decision-cockpit.json'));
+    document.getElementById('v52Market').innerText=d.market?.regime||'-';
+    document.getElementById('v52Breadth').innerText=d.market?.breadthPct!=null?d.market.breadthPct+'%':'-';
+    document.getElementById('v52Ready').innerText=d.counts?.entryReady??'-';
+    document.getElementById('v52Near').innerText=d.counts?.nearEntry??'-';
+    document.getElementById('v52Watch').innerText=d.counts?.watchlist??'-';
+    const safe=!d.dataHealth?.stale && d.safety?.executionAllowed===false;
+    document.getElementById('v52Safety').innerText=safe?'RESEARCH SAFE':'DEGRADED';
+    const rows=(d.topOpportunities||[]).slice(0,6);
+    document.getElementById('v52Cards').innerHTML=rows.length?rows.map(x=>{
+      const rr=x.rrT2!=null?Number(x.rrT2).toFixed(2):'-';
+      const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
+      const fam=(x.engineFamilies||[]).map(v=>'<span class="v52-pill">'+esc(v)+'</span>').join('');
+      return '<div class="v52-card">'+
+        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><span class="badge '+(x.stage==='ENTRY_READY'?'ready':x.stage==='REJECTED_RISK'?'blocked':'warn')+'">'+esc(v52EntryQuality(x))+'</span></div>'+
+        '<div class="v52-row">'+
+          '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
+          '<div><span class="v52-k">R:R to T2</span><div class="v52-v">'+esc(rr)+'</div></div>'+
+          '<div><span class="v52-k">Entry</span><div class="v52-v">'+esc(entryZoneCell(x))+'</div></div>'+
+          '<div><span class="v52-k">Stop</span><div class="v52-v '+v52RiskClass(x.riskPct)+'">'+esc(priceCell(x.stop))+' ('+esc(risk)+'%)</div></div>'+
+          '<div><span class="v52-k">Target 1</span><div class="v52-v">'+esc(priceCell(x.target1))+'</div></div>'+
+          '<div><span class="v52-k">Target 2</span><div class="v52-v">'+esc(priceCell(x.target2))+'</div></div>'+
+        '</div>'+
+        '<div style="margin-top:9px">'+fam+'</div>'+
+        '<div class="v52-reason">'+esc(v52Explain(x))+'</div>'+
+      '</div>';
+    }).join(''):'<div class="muted">No ranked opportunities available.</div>';
+  }catch(e){
+    document.getElementById('v52Cards').innerHTML='<div class="blocked">V5.2 decision layer unavailable</div>';
+    document.getElementById('v52Safety').innerText='DEGRADED';
+  }
 }
 
 async function loadSignals(){
@@ -310,8 +392,10 @@ async function loadQuant(){
   }
 }
 
+loadV52();
 loadSignals();
 loadQuant();
+setInterval(loadV52,60000);
 setInterval(loadSignals,60000);
 setInterval(loadQuant,60000);
 </script>
