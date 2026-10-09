@@ -15,10 +15,11 @@
     "confluence:update": "node scripts/confluence-pullback-v1.js",
     "confluence:v2": "node scripts/confluence-pullback-v2.js",
     "confluence:v2:forward": "node scripts/confluence-v2-forward.js",
-    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/capture-prospective-evidence.js && node scripts/resolve-prospective-outcomes.js",
+    "cockpit:build": "node scripts/build-decision-cockpit.js && node scripts/entry-quality-engine.js && node scripts/market-sector-context-engine.js && node scripts/capture-prospective-evidence.js && node scripts/resolve-prospective-outcomes.js",
     "cockpit:validate": "node scripts/validate-decision-cockpit.js",
     "evidence:resolve": "node scripts/resolve-prospective-outcomes.js",
-    "entry:quality": "node scripts/entry-quality-engine.js"
+    "entry:quality": "node scripts/entry-quality-engine.js",
+    "context:build": "node scripts/market-sector-context-engine.js"
   },
   "engines": {
     "node": ">=20"
