@@ -1,0 +1,86 @@
+name: ASTRA Operations Watch
+
+on:
+  workflow_run:
+    workflows: ["Daily EGX Data Refresh"]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '30 16 * * 0-4'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: astra-operations-watch
+  cancel-in-progress: false
+
+jobs:
+  health:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Recompute operations health
+        run: npm run ops:health
+
+      - name: Write Actions summary
+        run: node scripts/operations-health-engine.js --summary >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open, update, or close ASTRA operational issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs');
+            const health=JSON.parse(fs.readFileSync('data/operations-health.json','utf8'));
+            const {owner,repo}=context.repo;
+            try {
+              const all=await github.paginate(github.rest.issues.listForRepo,{owner,repo,state:'all',per_page:100});
+              const issues=all.filter(x=>!x.pull_request);
+              for(const c of health.issueCandidates||[]){
+                const existing=issues.find(x=>x.title===c.title);
+                const body=[
+                  '<!-- ASTRA_OPS_KEY:'+c.key+' -->',
+                  '## Automated ASTRA operational finding',
+                  '',
+                  '- Severity: **'+c.severity+'**',
+                  '- Session: `'+(health.session||'UNKNOWN')+'`',
+                  '- Overall health: **'+health.overall+'**',
+                  '- Generated: `'+health.generatedAt+'`',
+                  '- Automatic execution: **OFF**',
+                  '',
+                  c.body,
+                  '',
+                  'This issue is maintained automatically by ASTRA Operations Watch. It will be closed automatically when the condition clears.'
+                ].join('\n');
+                if(c.active){
+                  if(existing){
+                    await github.rest.issues.update({owner,repo,issue_number:existing.number,state:'open',body});
+                  }else{
+                    await github.rest.issues.create({owner,repo,title:c.title,body});
+                  }
+                }else if(existing&&existing.state==='open'){
+                  await github.rest.issues.createComment({owner,repo,issue_number:existing.number,body:'ASTRA Operations Watch reports this condition cleared at '+health.generatedAt+' for session '+(health.session||'UNKNOWN')+'. Closing automatically.'});
+                  await github.rest.issues.update({owner,repo,issue_number:existing.number,state:'closed'});
+                }
+              }
+              await core.summary.addRaw('\nOperational issue reconciliation completed. Active candidates: '+health.summary.activeIssueCandidates+'.\n').write();
+            } catch(error) {
+              if([403,404,410].includes(error.status)){
+                core.warning('GitHub Issues automation unavailable: '+error.message);
+                await core.summary.addRaw('\nIssue automation unavailable in this repository/account configuration. Health evaluation still completed.\n').write();
+              } else {
+                throw error;
+              }
+            }

@@ -1,0 +1,74 @@
+name: WP8 Operations Gate
+
+on:
+  push:
+    branches:
+      - wp8-operations
+    paths:
+      - 'scripts/lib/operations-health.js'
+      - 'scripts/operations-health-engine.js'
+      - 'scripts/operations-health-validation.js'
+      - 'scripts/operations-workflow-validation.js'
+      - '.github/workflows/operations-watch.yml'
+      - '.github/workflows/daily-egx-data-refresh.yml'
+      - '.github/workflows/wp8-operations.yml'
+      - 'docs/health.html'
+      - 'docs/OPERATIONS.md'
+      - 'vercel.json'
+      - 'package.json'
+      - 'config/node-validation-suite.json'
+      - 'config/output-ownership.json'
+      - 'scripts/release-integrity-audit.js'
+      - 'scripts/build-check.js'
+      - 'app/dashboard/command-center.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp8-operations-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+
+      - name: Consolidated Node validations
+        run: npm test
+
+      - name: Existing Python quant + compile tests
+        run: npm run quant:test
+
+      - name: Full build with operations health
+        run: npm run build
+
+      - name: Validate generated operations health
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const d=JSON.parse(fs.readFileSync('data/decision-cockpit.json','utf8'));
+          const h=JSON.parse(fs.readFileSync('data/operations-health.json','utf8'));
+          if(h.schemaVersion!=='astra-operations-health/v1')throw new Error('bad ops schema');
+          if(h.session!==d.session)throw new Error('ops session mismatch');
+          if(h.automaticExecution!==false)throw new Error('ops execution safety changed');
+          if(h.overall==='CRITICAL')throw new Error('critical operational health');
+          if(d.operationsHealthEngine?.generatedAt!==h.generatedAt)throw new Error('cockpit ops snapshot mismatch');
+          console.log({overall:h.overall,session:h.session,summary:h.summary,activeIssues:h.issueCandidates.filter(x=>x.active).map(x=>x.key)});
+          NODE
+
+      - name: Render Actions-style health summary
+        run: node scripts/operations-health-engine.js --summary
+
+      - name: Ten-cycle release audit
+        run: npm run release:audit
