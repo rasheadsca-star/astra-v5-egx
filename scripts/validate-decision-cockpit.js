@@ -1,4 +1,5 @@
 'use strict';
+// V5.1 cockpit validation trigger: root-preservation test aligned.
 const fs=require('fs');
 function fail(m){console.error('COCKPIT_VALIDATION_FAILED',m);process.exit(1)}
 const p='data/decision-cockpit.json';
