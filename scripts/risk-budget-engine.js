@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {sizeByRiskAndExposure}=require('./lib/position-sizing');
 const IN='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
 const HISTORY='data/history-index.json';
@@ -95,12 +96,10 @@ let plans=basket.map(x=>{
   const raw=baseRiskPct*Object.values(factors).reduce((a,b)=>a*b,1);
   const riskPct=entry&&stopDistance>0?clamp(raw,minRiskPerPositionPct,maxRiskPerPositionPct):0;
   const maxPositionPct=clamp(n(x.effectiveExposurePct)??0,0,30);
-  const riskAmountRef=referenceCapital*riskPct/100;
-  const sharesByRisk=stopDistance>0?Math.floor(riskAmountRef/stopDistance):0;
-  const sharesByExposure=entry>0?Math.floor(referenceCapital*maxPositionPct/100/entry):0;
-  const sharesRef=(entry>0&&stopDistance>0&&maxPositionPct>0)?Math.max(0,Math.min(sharesByRisk,sharesByExposure)):0;
-  const positionValueRef=sharesRef*entry;
-  const actualRiskRef=sharesRef*Math.max(0,stopDistance||0);
+  const sized=sizeByRiskAndExposure({capital:referenceCapital,riskPct,entry,stopDistance,maxPositionPct});
+  const sharesRef=sized.shares;
+  const positionValueRef=sized.positionValue;
+  const actualRiskRef=sized.maxLossAtStop;
   return {
     ticker:x.ticker,
     rank:x.rank,
@@ -134,15 +133,13 @@ if(totalRisk>maxPortfolioRiskPct && totalRisk>0){
   plans=plans.map(x=>{
     const rp=(n(x.riskBudgetPct)||0)*scale;
     const entry=n(x.entryReference), sd=n(x.stopDistance), cap=n(x.maxPositionPct)||0;
-    const riskAmount=referenceCapital*rp/100;
-    const byRisk=sd>0?Math.floor(riskAmount/sd):0;
-    const byExposure=entry>0?Math.floor(referenceCapital*cap/100/entry):0;
-    const shares=(entry>0&&sd>0&&cap>0)?Math.max(0,Math.min(byRisk,byExposure)):0;
+    const sized=sizeByRiskAndExposure({capital:referenceCapital,riskPct:rp,entry,stopDistance:sd,maxPositionPct:cap});
+    const shares=sized.shares;
     return {...x,
       riskBudgetPct:r(rp,3),
       referenceShares:shares,
-      referencePositionValue:r(shares*entry,2),
-      referenceMaxLossAtStop:r(shares*sd,2),
+      referencePositionValue:r(sized.positionValue,2),
+      referenceMaxLossAtStop:r(sized.maxLossAtStop,2),
       portfolioRiskScaled:true
     };
   });
