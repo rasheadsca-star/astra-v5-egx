@@ -44,11 +44,14 @@ const freshness=stale?Math.max(0,55-(lag||1)*15):100;
 check('DATA_FRESHNESS','Data freshness',freshness,12,stale?'WARN':'PASS',
   stale?'Decision data is stale'+(lag!=null?' by '+lag+' session(s).':'.'):'Decision data is not marked stale.');
 
-const chainOk=ledger.chain?.status==='VERIFIED'||replay.ledgerChainStatus==='VERIFIED';
-check('LEDGER_CHAIN','Prediction ledger chain',chainOk?100:(ledger.records?.length?20:0),12,chainOk?'PASS':(ledger.records?.length?'FAIL':'WAIT'),
-  chainOk?'Prediction ledger hash chain verifies.':(ledger.records?.length?'Prediction ledger exists but chain is not verified.':'No persisted ledger records yet.'));
+const ledgerRecordCount=ledger.records?.length||0;
+const replaySessionCount=n(replay.sessionCount)??(replay.sessions||[]).length;
+const trustHistoryExists=ledgerRecordCount>0||replaySessionCount>0;
+const chainOk=ledgerRecordCount>0&&ledger.chain?.status==='VERIFIED';
+check('LEDGER_CHAIN','Prediction ledger chain',chainOk?100:0,12,chainOk?'PASS':trustHistoryExists?'FAIL':'WAIT',
+  chainOk?'Prediction ledger hash chain verifies.':trustHistoryExists?'Persisted trust history exists but the current ledger chain is not verified.':'No persisted ledger records yet.');
 
-const replaySessions=n(replay.sessionCount)??(replay.sessions||[]).length;
+const replaySessions=replaySessionCount;
 const replayScore=clamp(replaySessions/25*100);
 check('REPLAY_COVERAGE','Replay archive coverage',replayScore,10,replaySessions>=25?'PASS':replaySessions>0?'BUILDING':'WAIT',
   replaySessions+' persisted no-look-ahead session(s); 25 required for first standard walk-forward fold.');
@@ -90,7 +93,7 @@ check('MODEL_DRIFT','Drift guard',regimeScore,3,drift?'WARN':'PASS',
 
 const totalWeight=checks.reduce((s,x)=>s+x.weight,0);
 const reliability=checks.reduce((s,x)=>s+x.score*x.weight,0)/totalWeight;
-const hardFail=!atomicOk || (ledger.records?.length>0 && !chainOk);
+const hardFail=!atomicOk || (trustHistoryExists && !chainOk);
 const capped=hardFail?Math.min(reliability,49):reliability;
 const score=r(capped,1);
 
@@ -101,7 +104,7 @@ else if(score>=50)tier='BUILDING';
 
 const blockers=[];
 if(!atomicOk)blockers.push('ATOMIC_DATA_INTEGRITY_NOT_VERIFIED');
-if(ledger.records?.length>0&&!chainOk)blockers.push('LEDGER_CHAIN_NOT_VERIFIED');
+if(trustHistoryExists&&!chainOk)blockers.push('LEDGER_CHAIN_NOT_VERIFIED');
 if(replaySessions<25)blockers.push('REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD');
 if((wf.coverage?.validFolds||0)<3)blockers.push('MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED');
 if(resolved<30)blockers.push('FORWARD_PROBABILITY_SAMPLE_SMALL');
@@ -128,7 +131,7 @@ const payload={
     outOfSampleResolved:wf.outOfSample?.resolved||0,
     prospectiveResolved:outcomeResolved,
     probabilityStatus:probStatus,
-    ledgerRecords:ledger.records?.length||0,
+    ledgerRecords:ledgerRecordCount,
     ledgerChainStatus:ledger.chain?.status||replay.ledgerChainStatus||'UNKNOWN'
   },
   releaseGate:{
