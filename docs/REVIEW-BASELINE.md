@@ -28,7 +28,7 @@ No WP0 change modifies strategy rules, weights, promotion thresholds, or executi
 | P1-9 Permanent partial coverage | **CONFIRMED in current status** | `quant/data/daily-data-update-status.json` reports `coveragePct=89.9`, `staleRows=20`, and the same 20 symbols listed in the review. There is no dormant/suspended denominator policy in this status file. |
 | P2-10 Test/code duplication debt | **CONFIRMED in substance** | Current tree has 53 Node scripts. `npm test` runs 12 validation scripts but does not run confluence validation, confluence-v2 validation, cockpit validation, walk-forward validation, or the three `tests/*.test.js` files. RSI/ATR logic exists independently in Python, `build-technical-analysis.js`, and `app/api/stock-analysis.js`. Docs contain `index.html`, `v2.html`, `v5.html`, `v5/index.html`. |
 | P2-11 Build creates uncommitted generated output | **CONFIRMED** | Successful release-hardening build reports technical `count=200`. The repository currently tracks zero files under `data/technical/` or `docs/data/technical/`; therefore the build creates hundreds of files in tracked directories without a committed/generated-output policy. |
-| Prior “first-run npm test transient” | **NOT REPRODUCED YET** | Current release-hardening run 37947211507 passed `npm test`. WP0 adds a dedicated clean-worktree 20-run stability gate; acceptance waits for its result. |
+| Prior “first-run npm test transient” | **REPRODUCED AS A DETERMINISTIC CLEAN-CHECKOUT FAILURE AND FIXED IN THIS PR** | First WP0 run 37976496926 failed 20/20 at `serve-validation.js`: `/data/technical/index.json` returned 404 because `data/technical/*` is generated only by `npm run build` and is not committed. Release-hardening had hidden the dependency by building before `npm test`. The validation now tests the static index when present and otherwise exercises the existing `/api/stock-analysis` fallback used by the PWA. No strategy/runtime decision rule changed. |
 
 ## Frozen quantitative baseline
 
@@ -191,7 +191,7 @@ The stale title assertion is fixed on current main; release-hardening currently 
 
 A dedicated branch-only workflow `.github/workflows/wp0-test-stability.yml` performs **20 consecutive `npm test` executions**. Before each iteration it resets and cleans the worktree, so every test starts from the same checked-out source. Logs for all 20 iterations are uploaded as an artifact and the workflow fails after completing all attempts if any attempt fails.
 
-WP0 acceptance is not complete until that workflow reports **20/20**.
+Initial stability run **37976496926** reproduced a deterministic clean-checkout failure 20/20: `serve-validation.js` incorrectly required a build-generated technical index. The test was corrected to validate the existing API fallback on clean checkout. WP0 acceptance now requires the replacement workflow run to report **20/20**.
 
 ## Baseline conclusion
 
