@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.8 Decision Cockpit</title>
+<title>ASTRA V5.9 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -48,7 +48,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.8 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.9 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -58,7 +58,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.8 LIVE UI</b> · Final Score + Entry Quality + Market Context + Probability Calibration + Decision Gate</div>
+  <div><b>V5.9 LIVE UI</b> · Final Score + Probability Calibration + Decision Gate + Research Basket</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -71,7 +71,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.8 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.9 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -80,6 +80,26 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card">
+  <div class="v52-header">
+    <div>
+      <h2 id="portfolioTitle" style="margin:0">Research Basket — V5.9</h2>
+      <div class="small" id="portfolioNote">Selects up to five gate-passed setups and assigns relative research weights. No automatic orders.</div>
+    </div>
+    <span class="badge ready" id="portfolioBadge">PORTFOLIO RESEARCH</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="portfolioEligibleLabel">Eligible Universe</div><div class="value" id="portfolioEligible">-</div></div>
+    <div class="metric"><div class="label" id="portfolioSelectedLabel">Selected</div><div class="value" id="portfolioSelected">-</div></div>
+    <div class="metric"><div class="label" id="portfolioExposureLabel">Market Exposure Scale</div><div class="value" id="portfolioExposure">-</div></div>
+    <div class="metric"><div class="label" id="portfolioSectorLabel">Sector Diversification</div><div class="value" id="portfolioSector">-</div></div>
+    <div class="metric"><div class="label" id="portfolioMaxLabel">Max Positions</div><div class="value" id="portfolioMax">5</div></div>
+    <div class="metric"><div class="label" id="portfolioOrdersLabel">Auto Orders</div><div class="value gate-block">OFF</div></div>
+  </div>
+  <div id="portfolioTable" class="small" style="margin-top:12px">Loading...</div>
+</div>
 
 <div class="card">
   <div class="v52-header">
@@ -304,7 +324,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.8 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.9 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -481,6 +501,43 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const ps=d.portfolioSelectionEngine||{}, pbasket=ps.basket||[];
+    document.getElementById('portfolioTitle').innerText=uiLang==='ar'?'سلة الفرص البحثية — V5.9':'Research Basket — V5.9';
+    document.getElementById('portfolioNote').innerText=uiLang==='ar'
+      ?'يختار حتى 5 فرص اجتازت بوابة القرار ويوزع أوزانًا بحثية نسبية. لا توجد أوامر آلية.'
+      :'Selects up to five gate-passed setups and assigns relative research weights. No automatic orders.';
+    document.getElementById('portfolioBadge').innerText=uiLang==='ar'?'سلة بحثية':'PORTFOLIO RESEARCH';
+    document.getElementById('portfolioEligibleLabel').innerText=uiLang==='ar'?'الفرص المؤهلة':'Eligible Universe';
+    document.getElementById('portfolioSelectedLabel').innerText=uiLang==='ar'?'المختارة':'Selected';
+    document.getElementById('portfolioExposureLabel').innerText=uiLang==='ar'?'مقياس التعرض للسوق':'Market Exposure Scale';
+    document.getElementById('portfolioSectorLabel').innerText=uiLang==='ar'?'تنويع القطاعات':'Sector Diversification';
+    document.getElementById('portfolioMaxLabel').innerText=uiLang==='ar'?'أقصى عدد فرص':'Max Positions';
+    document.getElementById('portfolioOrdersLabel').innerText=uiLang==='ar'?'الأوامر الآلية':'Auto Orders';
+    document.getElementById('portfolioEligible').innerText=ps.counts?.eligibleUniverse??0;
+    document.getElementById('portfolioSelected').innerText=ps.counts?.selected??0;
+    document.getElementById('portfolioExposure').innerText=ps.policy?.marketExposureScale!=null?Math.round(ps.policy.marketExposureScale*100)+'%':'-';
+    document.getElementById('portfolioSector').innerText=uiLang==='ar'?'موقوف حتى تتوفر بيانات موثقة':'WAITING FOR VERIFIED DATA';
+    document.getElementById('portfolioTable').innerHTML=pbasket.length
+      ?'<table><thead><tr>'+
+        '<th>'+esc(uiLang==='ar'?'#':'#')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'السهم':'Symbol')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'الدرجة':'Score')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'جودة الدخول':'Entry Quality')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'R:R':'R:R')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'الوزن البحثي':'Research Weight')+'</th>'+
+        '<th>'+esc(uiLang==='ar'?'التعرض الفعلي':'Effective Exposure')+'</th>'+
+        '</tr></thead><tbody>'+
+        pbasket.map(x=>'<tr>'+
+          '<td>'+esc(x.rank)+'</td>'+
+          '<td><b>'+esc(x.ticker)+'</b></td>'+
+          '<td>'+esc(x.portfolioSelectionScore)+'</td>'+
+          '<td>'+esc(ta(x.entryQuality||'UNKNOWN'))+'</td>'+
+          '<td>'+esc(x.rrT2??'-')+'</td>'+
+          '<td>'+esc(x.researchWeightPct??'-')+'%</td>'+
+          '<td>'+esc(x.effectiveExposurePct??'-')+'%</td>'+
+        '</tr>').join('')+
+        '</tbody></table>'
+      :'<span class="gate-block">'+esc(uiLang==='ar'?'لا توجد فرص اجتازت كل شروط السلة حاليًا.':'No setups currently pass all basket conditions.')+'</span>';
     const pc=d.probabilityCalibrationEngine||{};
     document.getElementById('probTitle').innerText=uiLang==='ar'?'احتمالية تحقيق الأهداف — V5.8':'Target Achievement Probability — V5.8';
     document.getElementById('probNote').innerText=uiLang==='ar'
@@ -551,7 +608,7 @@ async function loadV52(){
       const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
       const fam=(x.engineFamilies||[]).map(v=>'<span class="v52-pill">'+esc(v)+'</span>').join('');
       return '<div class="v52-card">'+
-        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><div><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span> <span class="badge '+(x.finalDecisionGrade==='A+'||x.finalDecisionGrade==='A'?'ready':x.finalDecisionGrade==='REJECT'?'blocked':'warn')+'">'+esc(x.finalDecisionGrade||'-')+'</span></div></div>'+
+        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><div><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span> <span class="badge '+(x.finalDecisionGrade==='A+'||x.finalDecisionGrade==='A'?'ready':x.finalDecisionGrade==='REJECT'?'blocked':'warn')+'">'+esc(x.finalDecisionGrade||'-')+'</span> '+(x.portfolioSelected?'<span class="badge ready">'+esc(uiLang==='ar'?'ضمن السلة':'IN BASKET')+'</span>':'')+'</div></div>'+
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
           '<div><span class="v52-k">Context-adjusted</span><div class="v52-v">'+esc(x.adjustedConviction??'-')+'/100</div></div>'+
