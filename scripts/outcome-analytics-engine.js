@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
 const COCKPIT='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
 const EVID='data/prospective-evidence.json';
@@ -14,13 +15,13 @@ const d=read(COCKPIT,null);
 const e=read(EVID,{records:[]});
 if(!d)throw new Error('decision cockpit missing');
 
-const records=e.records||[];
-const activated=records.filter(x=>['OPEN','OPEN_T1_HIT','RESOLVED','AMBIGUOUS_OHLC_ORDER'].includes(x.outcome?.status));
+const records=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true)).primary;
+const activated=records.filter(x=>['OPEN','OPEN_T1_HIT','RESOLVED','AMBIGUOUS_OHLC_ORDER','AMBIGUOUS_ENTRY_BAR'].includes(x.outcome?.status));
 const resolved=records.filter(x=>x.outcome?.status==='RESOLVED');
 const ambiguous=records.filter(x=>x.outcome?.status==='AMBIGUOUS_OHLC_ORDER');
 
 function aggregate(rows){
-  const act=rows.filter(x=>['OPEN','OPEN_T1_HIT','RESOLVED','AMBIGUOUS_OHLC_ORDER'].includes(x.outcome?.status));
+  const act=rows.filter(x=>['OPEN','OPEN_T1_HIT','RESOLVED','AMBIGUOUS_OHLC_ORDER','AMBIGUOUS_ENTRY_BAR'].includes(x.outcome?.status));
   const res=rows.filter(x=>x.outcome?.status==='RESOLVED');
   const amb=rows.filter(x=>x.outcome?.status==='AMBIGUOUS_OHLC_ORDER');
 
@@ -106,7 +107,7 @@ const bestEntry=byEntryQuality.filter(x=>x.resolved>=5&&x.expectancyPct!=null).s
 const bestSector=bySector.filter(x=>x.key!=='UNCLASSIFIED'&&x.resolved>=5&&x.expectancyPct!=null).sort((a,b)=>b.expectancyPct-a.expectancyPct)[0]||null;
 
 d.outcomeAnalyticsEngine={
-  version:'outcome-analytics/v1',
+  version:'outcome-analytics/v2-deduped-fixed-horizon',
   generatedAt:new Date().toISOString(),
   evidenceGeneratedAt:e.generatedAt||null,
   status:maturity(overall.resolved),
@@ -114,7 +115,7 @@ d.outcomeAnalyticsEngine={
     groupLeaderboardMinimumResolved:5,
     probabilityValidationThreshold:90,
     ambiguousExcludedFromReturnMetrics:true,
-    t1Denominator:'activated records including OPEN/OPEN_T1_HIT/RESOLVED/AMBIGUOUS',
+    t1Denominator:'deduped activated records; ambiguous entry/OHLC cases remain descriptive and are excluded from return metrics',
     returnMetricsDenominator:'RESOLVED only'
   },
   overall,
