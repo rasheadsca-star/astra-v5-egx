@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {dedupeEvidenceRecords,stableEvidenceKey}=require('./lib/evidence-dedupe');
 const ROOT=process.cwd();
 const INDEX='data/replay/index.json';
 const EVID='data/prospective-evidence.json';
@@ -39,7 +40,7 @@ if(!d)throw new Error('decision cockpit missing');
 
 const sessions=(idx.sessions||[]).map(x=>x.session).filter(Boolean).sort();
 const sessionSet=new Set(sessions);
-const eligibleEvidence=(evid.records||[]).filter(r=>sessionSet.has(r.session));
+const eligibleEvidence=dedupeEvidenceRecords((evid.records||[]).filter(r=>r.excludedFromAnalytics!==true&&sessionSet.has(r.session))).primary;
 
 const trainWindow=20;
 const testWindow=5;
@@ -78,7 +79,7 @@ for(const f of validFolds){
     if(r0.session>=f.testStart&&r0.session<=f.testEnd&&r0.outcome?.status==='RESOLVED')allTestRows.push(r0);
   }
 }
-const unique=new Map(allTestRows.map(x=>[x.id,x]));
+const unique=new Map(allTestRows.map(x=>[stableEvidenceKey(x),x]));
 const oos=aggregate([...unique.values()]);
 
 const status=sessions.length<trainWindow+testWindow
