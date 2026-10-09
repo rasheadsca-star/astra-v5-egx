@@ -30,6 +30,8 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 .v52-pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#17243a;border:1px solid #334e70;font-size:10px;margin:2px 3px 2px 0}
 .v52-risk-low{color:#4ade80}.v52-risk-med{color:#facc15}.v52-risk-high{color:#f87171}
 @media(max-width:1000px){.v52-grid{grid-template-columns:1fr}}
+
+.v54-ideal{color:#4ade80}.v54-early{color:#60a5fa}.v54-extended{color:#facc15}.v54-chase{color:#fb923c}.v54-invalid{color:#f87171}
 </style>
 </head>
 <body>
@@ -68,7 +70,17 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
     <div class="metric"><div class="label">Watchlist</div><div class="value" id="v52Watch">-</div></div>
     <div class="metric"><div class="label">Data Safety</div><div class="value" id="v52Safety">-</div></div>
   </div>
-  <div id="v52Cards" class="v52-grid"><div class="muted">Loading V5.2 decision layer...</div></div>
+  
+<div class="grid" style="margin-top:12px">
+  <div class="metric"><div class="label">IDEAL</div><div class="value v54-ideal" id="eqIdeal">-</div></div>
+  <div class="metric"><div class="label">EARLY</div><div class="value v54-early" id="eqEarly">-</div></div>
+  <div class="metric"><div class="label">EXTENDED</div><div class="value v54-extended" id="eqExtended">-</div></div>
+  <div class="metric"><div class="label">CHASE RISK</div><div class="value v54-chase" id="eqChase">-</div></div>
+  <div class="metric"><div class="label">INVALIDATED</div><div class="value v54-invalid" id="eqInvalid">-</div></div>
+  <div class="metric"><div class="label">Quality Engine</div><div class="value">V5.4</div></div>
+</div>
+
+<div id="v52Cards" class="v52-grid"><div class="muted">Loading V5.2 decision layer...</div></div>
 </div>
 
 <div class="card">
@@ -214,13 +226,8 @@ function paperCell(item){
 
 
 function v52RiskClass(r){const n=Number(r);return n<=5?'v52-risk-low':n<=8?'v52-risk-med':'v52-risk-high'}
-function v52EntryQuality(x){
-  if(x.stage==='ENTRY_READY'||x.stage==='ENTRY_READY_SECONDARY') return 'IDEAL / READY';
-  if(x.stage==='WAITING_FOR_TRIGGER') return 'WAIT TRIGGER';
-  if(x.stage==='NEAR_ENTRY') return 'NEAR ENTRY';
-  if(x.stage==='REJECTED_RISK') return 'INVALID / RISK';
-  return 'WATCH';
-}
+function v52EntryQuality(x){ return x.entryQuality||'UNKNOWN'; }
+function v54QualityClass(q){return q==='IDEAL'?'ready':q==='INVALIDATED'?'blocked':(q==='CHASE_RISK'||q==='EXTENDED')?'warn':'muted'}
 function v52Explain(x){
   const positives=(x.evidence||[]).slice(0,4).map(v=>String(v).replaceAll('_',' '));
   const negatives=(x.warnings||[]).slice(0,3).map(v=>String(v).replaceAll('_',' '));
@@ -238,16 +245,24 @@ async function loadV52(){
     document.getElementById('v52Watch').innerText=d.counts?.watchlist??'-';
     const safe=!d.dataHealth?.stale && d.safety?.executionAllowed===false;
     document.getElementById('v52Safety').innerText=safe?'RESEARCH SAFE':'DEGRADED';
+    const eq=d.entryQualityEngine?.counts||{};
+    document.getElementById('eqIdeal').innerText=eq.IDEAL??0;
+    document.getElementById('eqEarly').innerText=eq.EARLY??0;
+    document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
+    document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
+    document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
     const rows=(d.topOpportunities||[]).slice(0,6);
     document.getElementById('v52Cards').innerHTML=rows.length?rows.map(x=>{
       const rr=x.rrT2!=null?Number(x.rrT2).toFixed(2):'-';
       const risk=x.riskPct!=null?Number(x.riskPct).toFixed(2):'-';
       const fam=(x.engineFamilies||[]).map(v=>'<span class="v52-pill">'+esc(v)+'</span>').join('');
       return '<div class="v52-card">'+
-        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><span class="badge '+(x.stage==='ENTRY_READY'?'ready':x.stage==='REJECTED_RISK'?'blocked':'warn')+'">'+esc(v52EntryQuality(x))+'</span></div>'+
+        '<div class="v52-header"><h3>'+esc(x.ticker)+'</h3><span class="badge '+v54QualityClass(x.entryQuality)+'">'+esc(v52EntryQuality(x))+'</span></div>'+
         '<div class="v52-row">'+
           '<div><span class="v52-k">Conviction</span><div class="v52-v">'+esc(x.conviction)+'/100</div></div>'+
+          '<div><span class="v52-k">Current</span><div class="v52-v">'+esc(priceCell(x.currentPrice))+'</div></div>'+
           '<div><span class="v52-k">R:R to T2</span><div class="v52-v">'+esc(rr)+'</div></div>'+
+          '<div><span class="v52-k">Quality Score</span><div class="v52-v">'+esc(x.entryQualityScore??'-')+'/100</div></div>'+
           '<div><span class="v52-k">Entry</span><div class="v52-v">'+esc(entryZoneCell(x))+'</div></div>'+
           '<div><span class="v52-k">Stop</span><div class="v52-v '+v52RiskClass(x.riskPct)+'">'+esc(priceCell(x.stop))+' ('+esc(risk)+'%)</div></div>'+
           '<div><span class="v52-k">Target 1</span><div class="v52-v">'+esc(priceCell(x.target1))+'</div></div>'+
