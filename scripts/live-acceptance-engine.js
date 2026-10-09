@@ -4,7 +4,7 @@ const fs=require('fs'),path=require('path');
 const {evaluateLiveAcceptance}=require('./lib/live-acceptance');
 
 function read(p,fallback){try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return fallback}}
-function write(p,v){fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\\n')}
+function write(p,v){fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n')}
 
 const freeze=read('config/release-freeze.json',null);
 if(!freeze)throw new Error('release freeze config missing');
