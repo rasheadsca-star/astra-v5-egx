@@ -5,6 +5,7 @@ const ROOT=process.cwd();
 const COCKPIT='data/decision-cockpit.json';
 const MARKET='data/canonical-market.json';
 const HISTORY='data/history-index.json';
+const PACKAGE='package.json';
 const LEDGER='data/prediction-ledger.json';
 const DOC_LEDGER='docs/data/prediction-ledger.json';
 const INDEX='data/replay/index.json';
@@ -29,7 +30,9 @@ if(!d||!market||!hist)throw new Error('V6 trust archive inputs missing');
 const session=d.session||market.source?.expectedSession||hist.source?.expectedSession;
 if(!session)throw new Error('Session missing');
 
-const modelVersion='ASTRA_V6_TRUST_FOUNDATION';
+const pkg=read(PACKAGE,{version:'unknown'});
+const modelVersion='ASTRA_'+String(pkg.version||'unknown');
+const buildCommit=process.env.VERCEL_GIT_COMMIT_SHA||process.env.GITHUB_SHA||process.env.COMMIT_SHA||null;
 const inputFingerprint={
   canonicalMarketSha256:fileHash(MARKET),
   historyIndexSha256:fileHash(HISTORY),
@@ -67,11 +70,14 @@ const frozenPredictions=opportunities.map(x=>({
   probabilityStatus:x.targetAchievement?.status||null
 }));
 
-const snapshot={
+const currentDecisionFingerprint=objectHash({inputFingerprint,predictions:frozenPredictions});
+let snapshot={
   schemaVersion:'astra-replay-snapshot/v1',
   session,
   archivedAt:new Date().toISOString(),
   modelVersion,
+  buildCommit,
+  decisionFingerprint:currentDecisionFingerprint,
   researchOnly:true,
   automaticExecution:false,
   inputFingerprint,
@@ -92,32 +98,58 @@ snapshot.snapshotSha256=objectHash({...snapshot,snapshotSha256:undefined});
 const replayPath='data/replay/sessions/'+session+'.json';
 const docReplayPath='docs/data/replay/sessions/'+session+'.json';
 const priorReplay=read(replayPath,null);
-// Never silently overwrite a different frozen snapshot for the same session.
-if(priorReplay&&priorReplay.snapshotSha256&&priorReplay.snapshotSha256!==snapshot.snapshotSha256){
-  throw new Error('REPLAY_IMMUTABILITY_VIOLATION: existing session snapshot differs for '+session);
+let currentBuildDiffersFromFrozen=false;
+
+if(priorReplay){
+  const priorHash=priorReplay.snapshotSha256;
+  const recomputed=objectHash({...priorReplay,snapshotSha256:undefined});
+  if(!priorHash||priorHash!==recomputed){
+    throw new Error('REPLAY_STORED_HASH_INVALID: '+session);
+  }
+  const priorDecisionFingerprint=priorReplay.decisionFingerprint||
+    objectHash({inputFingerprint:priorReplay.inputFingerprint,predictions:priorReplay.predictions||[]});
+  currentBuildDiffersFromFrozen=priorDecisionFingerprint!==currentDecisionFingerprint;
+  // First persisted snapshot wins for the session. Never rewrite history during same-session code changes.
+  snapshot=priorReplay;
+}else{
+  snapshot.snapshotSha256=objectHash({...snapshot,snapshotSha256:undefined});
+  write(replayPath,snapshot);write(docReplayPath,snapshot);
 }
-if(!priorReplay){write(replayPath,snapshot);write(docReplayPath,snapshot)}
 
 const ledger=read(LEDGER,{schemaVersion:'astra-prediction-ledger/v1',records:[]});
 const existing=(ledger.records||[]).find(x=>x.session===session);
-const prior=(ledger.records||[]).at(-1)||null;
-const recordCore={
-  session,
-  archivedAt:snapshot.archivedAt,
-  modelVersion,
-  previousRecordHash:prior?.recordHash||null,
-  snapshotSha256:snapshot.snapshotSha256,
-  sourceSessionDataHash:inputFingerprint.sourceSessionDataHash,
-  predictionCount:frozenPredictions.length,
-  gatePassedCount:frozenPredictions.filter(x=>x.decisionGatePass).length,
-  basketTickers:frozenPredictions.filter(x=>x.portfolioSelected).sort((a,b)=>(a.portfolioRank??999)-(b.portfolioRank??999)).map(x=>x.ticker),
-  headline:d.dailyDecisionBrief?.headline||null
-};
-const recordHash=objectHash(recordCore);
-if(existing&&existing.recordHash!==recordHash){
-  throw new Error('LEDGER_IMMUTABILITY_VIOLATION: existing session record differs for '+session);
+let recordHash=null;
+
+if(existing){
+  const core={...existing};delete core.recordHash;
+  if(objectHash(core)!==existing.recordHash){
+    throw new Error('LEDGER_EXISTING_RECORD_HASH_INVALID: '+session);
+  }
+  if(existing.snapshotSha256!==snapshot.snapshotSha256){
+    throw new Error('LEDGER_SNAPSHOT_LINK_MISMATCH: '+session);
+  }
+  recordHash=existing.recordHash;
+}else{
+  const prior=(ledger.records||[]).at(-1)||null;
+  if(prior&&String(session)<=String(prior.session)){
+    throw new Error('LEDGER_OUT_OF_ORDER_APPEND: '+session+' after '+prior.session);
+  }
+  const recordCore={
+    session,
+    archivedAt:snapshot.archivedAt,
+    modelVersion:snapshot.modelVersion||modelVersion,
+    buildCommit:snapshot.buildCommit||buildCommit,
+    previousRecordHash:prior?.recordHash||null,
+    snapshotSha256:snapshot.snapshotSha256,
+    sourceSessionDataHash:snapshot.inputFingerprint?.sourceSessionDataHash||null,
+    predictionCount:(snapshot.predictions||[]).length,
+    gatePassedCount:(snapshot.predictions||[]).filter(x=>x.decisionGatePass).length,
+    basketTickers:(snapshot.predictions||[]).filter(x=>x.portfolioSelected).sort((a,b)=>(a.portfolioRank??999)-(b.portfolioRank??999)).map(x=>x.ticker),
+    headline:snapshot.dailyDecisionBrief?.headline||null
+  };
+  recordHash=objectHash(recordCore);
+  ledger.records.push({...recordCore,recordHash});
 }
-if(!existing)ledger.records.push({...recordCore,recordHash});
 
 let chainOk=true,chainErrors=[];
 for(let i=0;i<ledger.records.length;i++){
@@ -135,14 +167,15 @@ const index=read(INDEX,{schemaVersion:'astra-replay-index/v1',sessions:[]});
 const item={
   session,
   archivedAt:snapshot.archivedAt,
-  modelVersion,
+  modelVersion:snapshot.modelVersion||modelVersion,
+  buildCommit:snapshot.buildCommit||buildCommit,
   snapshotSha256:snapshot.snapshotSha256,
-  predictionCount:frozenPredictions.length,
-  gatePassedCount:frozenPredictions.filter(x=>x.decisionGatePass).length,
-  basketTickers:recordCore.basketTickers,
-  marketRegime:d.market?.regime||null,
-  breadthPct:n(d.market?.breadthPct),
-  dataStale:d.dataHealth?.stale===true
+  predictionCount:(snapshot.predictions||[]).length,
+  gatePassedCount:(snapshot.predictions||[]).filter(x=>x.decisionGatePass).length,
+  basketTickers:(snapshot.predictions||[]).filter(x=>x.portfolioSelected).sort((a,b)=>(a.portfolioRank??999)-(b.portfolioRank??999)).map(x=>x.ticker),
+  marketRegime:snapshot.market?.regime||null,
+  breadthPct:n(snapshot.market?.breadthPct),
+  dataStale:snapshot.dataHealth?.stale===true
 };
 const idxSessions=(index.sessions||[]).filter(x=>x.session!==session);
 idxSessions.push(item);idxSessions.sort((a,b)=>String(a.session).localeCompare(String(b.session)));
@@ -153,6 +186,9 @@ const newIndex={
   coverageEnd:idxSessions.at(-1)?.session||null,
   sessionCount:idxSessions.length,
   ledgerChainStatus:ledger.chain.status,
+  currentBuildDiffersFromFrozenSession:currentBuildDiffersFromFrozen,
+  frozenModelVersion:snapshot.modelVersion||modelVersion,
+  frozenBuildCommit:snapshot.buildCommit||null,
   sessions:idxSessions,
   note:'True no-look-ahead replay is available only for sessions persisted after V6 Trust Archive activation. Earlier dates are not reconstructed from future-known data.'
 };
@@ -169,7 +205,7 @@ d.trustArchitecture={
   replayCoverageStart:newIndex.coverageStart,
   researchOnly:true,
   automaticExecution:false,
-  note:newIndex.note
+  note:newIndex.note+(currentBuildDiffersFromFrozen?' Current same-session build differs from the already-frozen snapshot; the frozen record was preserved unchanged.':'')
 };
 write(COCKPIT,d);write('docs/data/decision-cockpit.json',d);
 console.log(JSON.stringify(d.trustArchitecture,null,2));
