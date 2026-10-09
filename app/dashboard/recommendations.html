@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08111f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ASTRA">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="ASTRA Recommendations">
+  <meta name="description" content="ASTRA EGX research recommendations only. Automatic execution is OFF.">
+  <title>ASTRA Recommendations</title>
+  <link rel="manifest" href="/recommendations-manifest.webmanifest">
+  <link rel="icon" href="/recommendations-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/recommendations-icon.svg">
+  <style>
+    :root{color-scheme:dark;--bg:#06101d;--panel:#0d1928;--panel2:#111f31;--line:#24364d;--text:#f7fbff;--muted:#90a3ba;--good:#43d17f;--warn:#ffd166;--bad:#ff6b6b;--accent:#4bb8ff}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#0c2137 0,#06101d 46%);color:var(--text);font-family:Arial,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+    .wrap{max-width:980px;margin:auto;padding:18px 14px 36px}.top{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+    h1{font-size:25px;margin:0}.sub{font-size:12px;color:var(--muted);margin-top:5px}.actions{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:#10233a;color:#fff;border-radius:10px;padding:10px 13px;font-weight:700;cursor:pointer}.install{border-color:#226a4a;background:#0d3b29}.hide{display:none!important}
+    .banner{border:1px solid #225471;background:#0a2032;padding:12px 14px;border-radius:13px;font-size:13px;margin-bottom:13px}.banner b{color:#8bd3ff}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-bottom:15px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;min-height:72px}.k{font-size:11px;color:var(--muted)}.v{font-size:18px;font-weight:800;margin-top:7px}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 2px 9px}.section-title h2{font-size:17px;margin:0}.count{font-size:11px;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:15px;padding:14px}
+    .head{display:flex;align-items:center;justify-content:space-between;gap:8px}.ticker{font-size:22px;font-weight:900;letter-spacing:.03em}.badge{font-size:10px;font-weight:800;padding:5px 8px;border-radius:999px;border:1px solid currentColor}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.muted{color:var(--muted)}
+    .score{font-size:12px;color:var(--muted);margin:7px 0 12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.cell{background:#091524;border-radius:9px;padding:9px;min-height:58px}.cell .k{font-size:10px}.cell .v{font-size:14px;margin-top:5px;direction:ltr;text-align:center}
+    .paper{margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:12px}.blockers{color:var(--muted);font-size:11px;margin-top:5px;line-height:1.55}
+    .empty{border:1px dashed var(--line);padding:22px;text-align:center;color:var(--muted);border-radius:14px}.footer{text-align:center;color:var(--muted);font-size:11px;margin-top:24px;line-height:1.7}
+    .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111e2f;border:1px solid var(--line);border-radius:12px;padding:12px 14px;max-width:90vw;z-index:20;box-shadow:0 12px 35px #0008;font-size:12px}
+    @media(max-width:720px){.metrics{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,1fr)}h1{font-size:22px}.wrap{padding-top:12px}}
+    @media(display-mode:standalone){.install{display:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div><h1>ASTRA · التوصيات</h1><div class="sub">EGX Research Recommendations · صفحة مستقلة قابلة للتثبيت</div></div>
+    <div class="actions"><button id="refreshBtn">تحديث</button><button id="installBtn" class="install">تثبيت التطبيق</button></div>
+  </div>
+  <div class="banner"><b>Research Only</b> · الأوامر الآلية والتنفيذ التلقائي: <strong>OFF</strong> · الصفحة تعرض توصيات/فرص بحثية ولا تنفذ أوامر شراء أو بيع.</div>
+  <div class="metrics">
+    <div class="metric"><div class="k">حالة البيانات</div><div class="v" id="dataStatus">—</div></div>
+    <div class="metric"><div class="k">جلسة السوق</div><div class="v" id="session" dir="ltr">—</div></div>
+    <div class="metric"><div class="k">التوصيات المعروضة</div><div class="v" id="recCount">—</div></div>
+    <div class="metric"><div class="k">Paper Ready</div><div class="v" id="paperCount" dir="ltr">—</div></div>
+  </div>
+
+  <div class="section-title"><h2>التوصيات الحالية</h2><span class="count" id="updatedAt">—</span></div>
+  <div id="cards" class="cards"><div class="empty">جارٍ تحميل التوصيات...</div></div>
+  <div class="footer">ASTRA Decision Cockpit · Automatic Execution OFF<br>اضغط «تثبيت التطبيق» لإضافته إلى سطح المكتب أو الشاشة الرئيسية.</div>
+</div>
+<div id="toast" class="toast hide"></div>
+
+<script>
+'use strict';
+let deferredPrompt=null;
+const el=id=>document.getElementById(id);
+const n=v=>Number.isFinite(Number(v))?Number(v):null;
+const fmt=(v,d=2)=>n(v)==null?'—':Number(v).toFixed(d).replace(/\.?0+$/,'');
+const esc=s=>String(s??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showToast(msg){el('toast').textContent=msg;el('toast').classList.remove('hide');setTimeout(()=>el('toast').classList.add('hide'),5200)}
+function paperMatch(runtime,symbol){
+  return (runtime.entryCandidates||runtime.recommendations||[]).find(x=>x.symbol===symbol)||null;
+}
+function card(x,runtime){
+  const symbol=x.ticker||x.symbol;
+  const p=paperMatch(runtime,symbol);
+  const ready=p?.executionReady===true;
+  const gate=x.decisionGate?.pass===true;
+  const status=ready?'PAPER READY':gate?'RESEARCH ELIGIBLE':'WATCH';
+  const cls=ready?'good':gate?'warn':'muted';
+  const entryLow=x.entryLow??p?.entry;
+  const entryHigh=x.entryHigh??p?.entry;
+  const entry=(entryLow!=null&&entryHigh!=null&&entryLow!==entryHigh)?fmt(entryLow)+' – '+fmt(entryHigh):fmt(entryHigh??entryLow);
+  const blockers=(p?.executionBlockers||[]).slice(0,4);
+  const prob=x.targetAchievement?.t1ProbabilityPct;
+  const probStatus=x.targetAchievement?.status;
+  return '<article class="card">'+
+    '<div class="head"><div class="ticker" dir="ltr">'+esc(symbol)+'</div><span class="badge '+cls+'">'+esc(status)+'</span></div>'+
+    '<div class="score">Decision Score: <b>'+esc(x.finalDecisionScore??'—')+'</b>/100 · Grade: <b>'+esc(x.finalDecisionGrade??'—')+'</b> · Entry: '+esc(x.entryQuality??'—')+'</div>'+
+    '<div class="grid">'+
+      '<div class="cell"><div class="k">منطقة الدخول</div><div class="v">'+esc(entry)+'</div></div>'+
+      '<div class="cell"><div class="k">وقف الخسارة</div><div class="v">'+esc(fmt(x.stop??p?.stopLoss))+'</div></div>'+
+      '<div class="cell"><div class="k">الهدف 1</div><div class="v">'+esc(fmt(x.target1??p?.target1))+'</div></div>'+
+      '<div class="cell"><div class="k">الهدف 2</div><div class="v">'+esc(fmt(x.target2??p?.target2))+'</div></div>'+
+      '<div class="cell"><div class="k">R:R T2</div><div class="v">'+esc(fmt(x.rrT2??p?.riskReward2))+'</div></div>'+
+      '<div class="cell"><div class="k">T1 Forward</div><div class="v">'+(prob!=null?esc(fmt(prob,1))+'%':'—')+'</div></div>'+
+    '</div>'+
+    '<div class="paper"><b>Runtime Validation:</b> '+(ready?'<span class="good">جاهز ورقيًا</span>':'<span class="warn">غير جاهز ورقيًا</span>')+
+      (probStatus?'<span class="muted"> · Forward status: '+esc(probStatus)+'</span>':'')+
+      (blockers.length?'<div class="blockers">Blockers: '+esc(blockers.join(' · '))+'</div>':'')+
+    '</div></article>';
+}
+async function getJson(url){
+  const r=await fetch(url,{cache:'no-store'});
+  if(!r.ok)throw new Error(url+' HTTP '+r.status);
+  return r.json();
+}
+async function load(){
+  el('refreshBtn').disabled=true;
+  try{
+    const [runtime,cockpit,health]=await Promise.all([
+      getJson('/api/recommendations'),
+      getJson('/data/decision-cockpit.json').catch(()=>getJson('/docs/data/decision-cockpit.json')),
+      getJson('/api/data-health')
+    ]);
+    const basket=cockpit.portfolioSelectionEngine?.basket||[];
+    const all=[...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[])];
+    const byTicker=new Map(all.map(x=>[x.ticker,x]));
+    let rows=basket.map(b=>({...byTicker.get(b.ticker),...b})).filter(x=>x.ticker);
+    if(!rows.length) rows=all.filter(x=>x.decisionGate?.pass===true).slice(0,8);
+    if(!rows.length) rows=all.slice().sort((a,b)=>(Number(b.finalDecisionScore||0)-Number(a.finalDecisionScore||0))).slice(0,5);
+    const ready=(runtime.entryCandidates||runtime.recommendations||[]).filter(x=>x.executionReady===true).length;
+    el('dataStatus').textContent=health.engineStatus||runtime.status||'—';
+    el('dataStatus').className='v '+((health.engineStatus||'').includes('READY')?'good':'warn');
+    el('session').textContent=cockpit.session||runtime.marketSessionDate||health.marketSessionDate||'—';
+    el('recCount').textContent=rows.length;
+    el('paperCount').textContent=ready+'/'+((runtime.entryCandidates||runtime.recommendations||[]).length||0);
+    el('updatedAt').textContent='آخر تحديث: '+new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
+    el('cards').innerHTML=rows.length?rows.map(x=>card(x,runtime)).join(''):'<div class="empty">لا توجد توصيات بحثية متاحة حاليًا.</div>';
+  }catch(e){
+    el('cards').innerHTML='<div class="empty bad">تعذر تحميل التوصيات الآن. اضغط تحديث للمحاولة مرة أخرى.<br><small>'+esc(e.message)+'</small></div>';
+  }finally{el('refreshBtn').disabled=false}
+}
+el('refreshBtn').addEventListener('click',load);
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;el('installBtn').classList.remove('hide')});
+window.addEventListener('appinstalled',()=>{deferredPrompt=null;el('installBtn').classList.add('hide');showToast('تم تثبيت ASTRA Recommendations.')});
+el('installBtn').addEventListener('click',async()=>{
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt=null;
+    return;
+  }
+  const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(ios)showToast('على iPhone/iPad: اضغط مشاركة ثم Add to Home Screen / إضافة إلى الشاشة الرئيسية.');
+  else showToast('من قائمة المتصفح اختر Install app / تثبيت التطبيق أو Add to Home screen.');
+});
+if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true)el('installBtn').classList.add('hide');
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/recommendations-sw.js').catch(()=>{}));
+load();
+setInterval(load,60000);
+</script>
+</body>
+</html>
