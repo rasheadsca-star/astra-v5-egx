@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5 Command Center</title>
+<title>ASTRA V5.7 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -37,10 +37,26 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 
 .release-banner{background:#0f2b1d;border:1px solid #22c55e;border-radius:12px;padding:12px 16px;margin:12px 0 18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .gate-pass{color:#4ade80}.gate-block{color:#f87171}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.lang-box{display:flex;align-items:center;gap:8px;background:#101827;border:1px solid #334155;padding:8px 10px;border-radius:10px}
+.lang-box label{font-size:12px;color:#94a3b8}
+.lang-box select{background:#0b1220;color:#fff;border:1px solid #475569;border-radius:8px;padding:7px 10px;font-weight:700}
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] td,html[dir="rtl"] th{text-align:right}
+html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </style>
 </head>
 <body>
-<h1>ASTRA V5.7 Decision Cockpit</h1>
+<div class="topbar">
+  <h1 id="appTitle">ASTRA V5.7 Decision Cockpit</h1>
+  <div class="lang-box">
+    <label for="languageSelect" id="languageLabel">Language</label>
+    <select id="languageSelect" aria-label="Display language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+    </select>
+  </div>
+</div>
 <div class="release-banner">
   <div><b>V5.7 LIVE UI</b> · Final Score + Entry Quality + Market Context + Prospective Evidence + Decision Gate</div>
   <div class="small">Research only · Automatic execution OFF</div>
@@ -55,7 +71,7 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V4</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.7 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -244,6 +260,82 @@ th{color:#94a3b8;font-size:11px;text-transform:uppercase}
 </div>
 
 <script>
+const I18N={
+  ar:{
+    "Language":"اللغة",
+    "ASTRA V5.7 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "Engine Status":"حالة المحرك",
+    "Checking...":"جاري الفحص...",
+    "Loading data health...":"جاري تحميل حالة البيانات...",
+    "Market":"السوق","Engine":"المحرك","Data Mode":"وضع البيانات","Live Feed":"تغذية السوق",
+    "Entry Opportunities":"فرص الدخول","Paper Ready":"جاهز للاختبار الورقي",
+    "Market State":"حالة السوق","Breadth":"اتساع السوق","Entry Ready":"جاهز للدخول","Near Entry":"قريب من الدخول",
+    "Watchlist":"قائمة المراقبة","Data Safety":"سلامة البيانات","Quality Engine":"محرك جودة الدخول",
+    "Unified Opportunity Board":"لوحة الفرص الموحدة","Rank":"الترتيب","Symbol":"السهم","Source":"المصدر","Unified":"الدرجة الموحدة",
+    "Technical":"فني","Research":"بحثي","Confidence":"الثقة","Risk":"المخاطرة","Liq.":"السيولة","S/R":"الدعم/المقاومة",
+    "Struct. RR":"العائد/المخاطرة الهيكلي","Entry Zone":"منطقة الدخول","Stop":"وقف الخسارة","Target 1":"الهدف 1","Target 2":"الهدف 2","Morning":"الصباح",
+    "Entry Opportunities — ASTRA Native":"فرص الدخول — ASTRA الأصلي","Signal":"الإشارة","Entry":"الدخول","Target 3":"الهدف 3","Paper":"ورقي",
+    "Decision Gate — V5.7":"بوابة القرار — V5.7","Eligible":"مؤهل","Blocked":"محجوب","Min R:R":"الحد الأدنى R:R",
+    "Min Final Score":"الحد الأدنى للدرجة النهائية","Fresh Data":"بيانات حديثة","Auto Orders":"الأوامر الآلية",
+    "Final Decision Score — V5.6":"الدرجة النهائية للقرار — V5.6","Forward Evidence":"الدليل المستقبلي",
+    "Market & Sector Context — V5.5":"سياق السوق والقطاع — V5.5","Market Score":"درجة السوق","Adv / Dec":"صاعد / هابط",
+    "Median Change":"التغير الوسيط","Sector Context":"سياق القطاع","Context Version":"إصدار السياق",
+    "Prospective Evidence — V5.3":"الدليل المستقبلي — V5.3","Recorded":"مسجل","Open":"مفتوح","Resolved":"محسوم",
+    "Hit Rate":"نسبة النجاح","Avg Net":"متوسط الصافي","Ambiguous Bars":"شموع ملتبسة",
+    "Watchlist — No Entry":"قائمة المراقبة — لا دخول","Status":"الحالة","Reason":"السبب",
+    "RESEARCH SAFE":"آمن للبحث","DEGRADED":"متدهور","PASS":"ناجح","FAIL":"فشل","NEUTRAL":"محايد",
+    "IDEAL":"مثالي","EARLY":"مبكر","EXTENDED":"ممتد","CHASE_RISK":"خطر مطاردة","INVALIDATED":"ملغي","UNKNOWN":"غير معروف",
+    "RESEARCH_ELIGIBLE":"مؤهل بحثيًا","BLOCKED":"محجوب",
+    "TOP RESEARCH SETUP":"أفضل إعداد بحثي","STRONG RESEARCH SETUP":"إعداد بحثي قوي",
+    "WATCH / CONDITIONAL":"مراقبة / مشروط","LOW PRIORITY":"أولوية منخفضة","REJECT / NO ACTION":"مرفوض / لا إجراء",
+    "Current":"السعر الحالي","Context-adjusted":"بعد تعديل السياق","Final Score":"الدرجة النهائية",
+    "Quality Score":"درجة جودة الدخول","Context Score":"درجة السياق","R:R to T2":"R:R للهدف 2",
+    "Deployment":"النشر","Research only · Automatic execution OFF":"للبحث فقط · التنفيذ الآلي متوقف",
+    "MANDATORY GATE":"بوابة إلزامية","CONTEXT ENGINE":"محرك السياق","FORWARD EVIDENCE":"الدليل المستقبلي",
+    "No setup currently passes every mandatory gate.":"لا توجد فرصة تجتاز كل البوابات الإلزامية حاليًا.",
+    "Eligible:":"المؤهل:",
+    "Supports:":"عوامل داعمة:","Risks:":"مخاطر:","Gate:":"البوابة:",
+    "No multi-factor confirmation yet":"لا يوجد تأكيد متعدد العوامل حتى الآن",
+    "Research only":"للبحث فقط","Automatic execution OFF":"التنفيذ الآلي متوقف",
+    "Loading...":"جاري التحميل...","Loading eligible research setups...":"جاري تحميل الفرص المؤهلة بحثيًا...",
+    "Loading V5.2 decision layer...":"جاري تحميل طبقة القرار V5.2...",
+    "Loading unified opportunity board...":"جاري تحميل لوحة الفرص الموحدة...",
+    "Loading ASTRA entry opportunities...":"جاري تحميل فرص ASTRA..."
+  }
+};
+let uiLang=localStorage.getItem('astraLang')||'en';
+function t(v){
+  const s=String(v??'');
+  return uiLang==='ar'?(I18N.ar[s]||s):s;
+}
+function translateLeaf(el){
+  if(!el || el.children.length) return;
+  if(!el.dataset.enText) el.dataset.enText=el.textContent.trim();
+  const en=el.dataset.enText;
+  if(!en) return;
+  el.textContent=uiLang==='ar'?(I18N.ar[en]||en):en;
+}
+function applyLanguage(lang,reloadDynamic=true){
+  uiLang=lang==='ar'?'ar':'en';
+  localStorage.setItem('astraLang',uiLang);
+  document.documentElement.lang=uiLang;
+  document.documentElement.dir=uiLang==='ar'?'rtl':'ltr';
+  document.getElementById('languageSelect').value=uiLang;
+  document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
+  document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
+  if(reloadDynamic){
+    loadV52(); loadProspective(); loadSignals(); loadQuant();
+  }
+}
+function statusText(v){
+  const mapAr={
+    LIVE_READY:'جاهز مباشر',HISTORICAL_READY:'جاهز تاريخيًا',DELAYED_READY:'جاهز ببيانات متأخرة',
+    DELAYED_CURRENT_SESSION:'بيانات الجلسة الحالية متأخرة',MIXED_MODE:'وضع مختلط',
+    READY:'جاهز',STALE:'قديم',MISALIGNED:'غير متوافق',UNAVAILABLE:'غير متاح',
+    WATCH:'مراقبة',PAPER_READY:'جاهز ورقيًا'
+  };
+  return uiLang==='ar'?(mapAr[String(v)]||t(v)):String(v??'-');
+}
 async function api(path){
   const response=await fetch(path,{cache:'no-store'});
   if(!response.ok) throw new Error('HTTP '+response.status);
@@ -293,13 +385,13 @@ function paperCell(item){
 
 
 function v52RiskClass(r){const n=Number(r);return n<=5?'v52-risk-low':n<=8?'v52-risk-med':'v52-risk-high'}
-function v52EntryQuality(x){ return x.entryQuality||'UNKNOWN'; }
+function v52EntryQuality(x){ return statusText(x.entryQuality||'UNKNOWN'); }
 function v54QualityClass(q){return q==='IDEAL'?'ready':q==='INVALIDATED'?'blocked':(q==='CHASE_RISK'||q==='EXTENDED')?'warn':'muted'}
 function v52Explain(x){
   const positives=(x.evidence||[]).slice(0,4).map(v=>String(v).replaceAll('_',' '));
   const negatives=(x.warnings||[]).slice(0,3).map(v=>String(v).replaceAll('_',' '));
-  let s=positives.length?'Supports: '+positives.join(' · '):'No multi-factor confirmation yet';
-  if(negatives.length) s+=' | Risks: '+negatives.join(' · ');
+  let s=positives.length?t('Supports:')+' '+positives.join(' · '):t('No multi-factor confirmation yet');
+  if(negatives.length) s+=' | '+t('Risks:')+' '+negatives.join(' · ');
   return s;
 }
 async function loadV52(){
@@ -311,26 +403,26 @@ async function loadV52(){
     document.getElementById('v52Near').innerText=d.counts?.nearEntry??'-';
     document.getElementById('v52Watch').innerText=d.counts?.watchlist??'-';
     const safe=!d.dataHealth?.stale && d.safety?.executionAllowed===false;
-    document.getElementById('v52Safety').innerText=safe?'RESEARCH SAFE':'DEGRADED';
+    document.getElementById('v52Safety').innerText=safe?t('RESEARCH SAFE'):t('DEGRADED');
     const dg=d.decisionGateEngine||{}, dgc=dg.counts||{};
     document.getElementById('gateEligible').innerText=dgc.eligible??0;
     document.getElementById('gateBlocked').innerText=dgc.blocked??0;
-    document.getElementById('gateFresh').innerText=d.dataHealth?.stale===false?'PASS':'FAIL';
+    document.getElementById('gateFresh').innerText=d.dataHealth?.stale===false?t('PASS'):t('FAIL');
     const gel=(dg.eligible||[]).slice(0,8);
-    document.getElementById('gateList').innerHTML=gel.length?'<b>Eligible:</b> '+gel.map(x=>esc(x.ticker)+' ('+esc(x.grade)+' / '+esc(x.score)+')').join(' · '):'<span class="gate-block">No setup currently passes every mandatory gate.</span>';
+    document.getElementById('gateList').innerHTML=gel.length?'<b>'+esc(t('Eligible:'))+'</b> '+gel.map(x=>esc(x.ticker)+' ('+esc(x.grade)+' / '+esc(x.score)+')').join(' · '):'<span class="gate-block">'+esc(t('No setup currently passes every mandatory gate.'))+'</span>';
     const fd=d.finalDecisionEngine||{}, gc=fd.gradeCounts||{}, fe=fd.forwardEvidence||{};
     document.getElementById('fdAPlus').innerText=gc['A+']??0;
     document.getElementById('fdA').innerText=gc['A']??0;
     document.getElementById('fdB').innerText=gc['B']??0;
     document.getElementById('fdC').innerText=gc['C']??0;
     document.getElementById('fdReject').innerText=gc['REJECT']??0;
-    document.getElementById('fdForward').innerText=fe.maturity==='ACTIVE'?(String(fe.score??'-')+'/100'):'NEUTRAL';
+    document.getElementById('fdForward').innerText=fe.maturity==='ACTIVE'?(String(fe.score??'-')+'/100'):t('NEUTRAL');
     const ctx=d.marketSectorContextEngine||{}, cm=ctx.market||{}, cs=ctx.sector||{};
     document.getElementById('ctxMarketScore').innerText=cm.score!=null?cm.score+'/100':'-';
     document.getElementById('ctxBreadth').innerText=cm.breadthPct!=null?cm.breadthPct+'%':'-';
     document.getElementById('ctxAdvDec').innerText=(cm.advancing??'-')+' / '+(cm.declining??'-');
     document.getElementById('ctxMedian').innerText=cm.medianChangePct!=null?cm.medianChangePct+'%':'-';
-    document.getElementById('ctxSector').innerText=cs.status==='UNAVAILABLE_NEUTRAL'?'NEUTRAL / DATA NEEDED':(cs.status||'-');
+    document.getElementById('ctxSector').innerText=cs.status==='UNAVAILABLE_NEUTRAL'?(uiLang==='ar'?'محايد / يحتاج بيانات':'NEUTRAL / DATA NEEDED'):(cs.status||'-');
     const eq=d.entryQualityEngine?.counts||{};
     document.getElementById('eqIdeal').innerText=eq.IDEAL??0;
     document.getElementById('eqEarly').innerText=eq.EARLY??0;
@@ -358,7 +450,7 @@ async function loadV52(){
           '<div><span class="v52-k">Target 2</span><div class="v52-v">'+esc(priceCell(x.target2))+'</div></div>'+
         '</div>'+
         '<div style="margin-top:9px">'+fam+'</div>'+
-        '<div class="v52-reason"><b>'+esc(x.finalDecisionLabel||'')+'</b> · <b class="'+(x.decisionGate?.pass?'gate-pass':'gate-block')+'">'+esc(x.decisionGate?.status||'NOT GATED')+'</b><br>'+esc(v52Explain(x))+(x.decisionGate?.reasons?.length?'<br><span class="gate-block">Gate: '+esc(x.decisionGate.reasons.join(' · '))+'</span>':'')+'</div>'+
+        '<div class="v52-reason"><b>'+esc(t(x.finalDecisionLabel||''))+'</b> · <b class="'+(x.decisionGate?.pass?'gate-pass':'gate-block')+'">'+esc(t(x.decisionGate?.status||'NOT GATED'))+'</b><br>'+esc(v52Explain(x))+(x.decisionGate?.reasons?.length?'<br><span class="gate-block">'+esc(t('Gate:'))+' '+esc(x.decisionGate.reasons.join(' · '))+'</span>':'')+'</div>'+
       '</div>';
     }).join(''):'<div class="muted">No ranked opportunities available.</div>';
   }catch(e){
@@ -381,8 +473,8 @@ async function loadSignals(){
     const watch=data.watchlist||[];
     const unifiedRows=(unified.rows||[]).slice(0,30);
 
-    document.getElementById('mode').innerText=data.mode||'-';
-    document.getElementById('live').innerText=h.liveFeed||'-';
+    document.getElementById('mode').innerText=statusText(data.mode||'-');
+    document.getElementById('live').innerText=statusText(h.liveFeed||'-');
     document.getElementById('entryCount').innerText=rows.length;
     document.getElementById('paper').innerText=
       (data.executionReadyCount||0)+' / '+rows.length;
@@ -447,7 +539,7 @@ async function loadSignals(){
       ? '<table><thead><tr><th>Symbol</th><th>Status</th><th>Confidence</th><th>Risk</th><th>Reason</th></tr></thead><tbody>'+
         watch.map(x=>'<tr>'+
           '<td><b>'+esc(x.symbol)+'</b></td>'+
-          '<td class="watch">WATCH</td>'+
+          '<td class="watch">'+esc(uiLang==='ar'?'مراقبة':'WATCH')+'</td>'+
           '<td>'+esc(x.confidence)+'</td>'+
           '<td>'+esc(x.riskLevel)+'</td>'+
           '<td>'+esc(x.reason)+'</td>'+
@@ -456,12 +548,10 @@ async function loadSignals(){
       : '<div class="muted">No watchlist items.</div>';
 
     document.getElementById('health').innerText=
-      h.message||h.engineStatus||'Data health checked';
+      (uiLang==='ar' && h.message ? 'حالة البيانات: '+statusText(h.engineStatus||'') : (h.message||h.engineStatus||'Data health checked'));
 
     document.getElementById('engine').innerText=
-      h.engineStatus==='LIVE_READY'?'LIVE READY':
-      h.engineStatus==='HISTORICAL_READY'?'HISTORICAL READY':
-      h.engineStatus||'DEGRADED';
+      statusText(h.engineStatus||'DEGRADED');
 
     document.getElementById('engine').className=
       h.engineStatus==='LIVE_READY'||h.engineStatus==='HISTORICAL_READY'
@@ -469,7 +559,7 @@ async function loadSignals(){
         : 'blocked';
 
     document.getElementById('deployment').innerText=
-      'Deployment: '+(data.deploymentCommit||'unknown');
+      (uiLang==='ar'?'النشر: ':'Deployment: ')+(data.deploymentCommit||'unknown');
   }catch(e){
     document.getElementById('unifiedBoard').innerHTML=
       '<tr><td colspan="16">Unified board unavailable</td></tr>';
@@ -518,12 +608,12 @@ async function loadQuant(){
     const P=q.plan||{},T=P.top||{},B0=P.base||{};
     const m=(label,value)=>'<div class="metric"><div class="label">'+esc(label)+'</div><div class="value">'+esc(value)+'</div></div>';
     document.getElementById('quantMetrics').innerHTML=
-      m('Target 1 hit (Top5)',T.hit1!=null?T.hit1+'%':'-')+
-      m('Target 1 hit (all stocks)',B0.hit1!=null?B0.hit1+'%':'-')+
-      m('Target 2 hit (Top5)',T.hit2!=null?T.hit2+'%':'-')+
-      m('Avg net / trade',T.avg!=null?T.avg+'%':'-')+
-      m('Excess vs market',P.excess_avg!=null?P.excess_avg+'%':'-')+
-      m('Forward sessions',(q.forward&&q.forward.sessions_valid!=null)?q.forward.sessions_valid:'-');
+      m(uiLang==='ar'?'نجاح الهدف 1 (أفضل 5)':'Target 1 hit (Top5)',T.hit1!=null?T.hit1+'%':'-')+
+      m(uiLang==='ar'?'نجاح الهدف 1 (كل الأسهم)':'Target 1 hit (all stocks)',B0.hit1!=null?B0.hit1+'%':'-')+
+      m(uiLang==='ar'?'نجاح الهدف 2 (أفضل 5)':'Target 2 hit (Top5)',T.hit2!=null?T.hit2+'%':'-')+
+      m(uiLang==='ar'?'متوسط الصافي / صفقة':'Avg net / trade',T.avg!=null?T.avg+'%':'-')+
+      m(uiLang==='ar'?'التفوق على السوق':'Excess vs market',P.excess_avg!=null?P.excess_avg+'%':'-')+
+      m(uiLang==='ar'?'الجلسات المستقبلية':'Forward sessions',(q.forward&&q.forward.sessions_valid!=null)?q.forward.sessions_valid:'-');
     const rows=q.candidates||[];
     document.getElementById('quantBoard').innerHTML=rows.length
       ? rows.map(c=>'<tr><td>'+esc(c.rank)+'</td><td><b>'+esc(c.ticker)+'</b></td><td>'+priceCell(c.entryLow)+' – '+priceCell(c.entryHigh)+'</td><td>'+priceCell(c.stopLoss)+' ('+esc(c.stopRiskPct)+'%)</td><td>'+priceCell(c.target1)+' (+'+esc(c.target1Pct)+'%)</td><td>'+priceCell(c.target2)+' (+'+esc(c.target2Pct)+'%)</td><td>'+esc(c.liquidityTier)+'</td><td>'+esc(Number(c.maxPositionEgp||0).toLocaleString())+'</td><td>'+esc(c.tier)+'</td></tr>').join('')
@@ -537,6 +627,8 @@ async function loadQuant(){
   }
 }
 
+document.getElementById('languageSelect').addEventListener('change',e=>applyLanguage(e.target.value,true));
+applyLanguage(uiLang,false);
 loadV52();
 loadProspective();
 loadSignals();
