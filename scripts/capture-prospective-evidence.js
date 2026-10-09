@@ -2,9 +2,11 @@
 
 const fs=require('fs'),path=require('path');
 const {stableEvidenceKey,dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
+const {classifyCaptureTiming,captureHash}=require('./lib/persistent-evidence');
 const IN='data/decision-cockpit.json';
 const OUT='data/prospective-evidence.json';
 const DOC='docs/data/prospective-evidence.json';
+const PACKAGE='package.json';
 
 function read(p,fallback){try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return fallback}}
 function write(p,v){fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n')}
@@ -12,6 +14,12 @@ function finite(v){return Number.isFinite(Number(v))?Number(v):null}
 
 const cockpit=read(IN,null);
 if(!cockpit) throw new Error('decision cockpit missing');
+const pkg=read(PACKAGE,{version:'unknown'});
+const buildCommit=process.env.GITHUB_SHA||process.env.VERCEL_GIT_COMMIT_SHA||process.env.COMMIT_SHA||null;
+const modelVersion='ASTRA_'+String(pkg.version||'unknown');
+const capturedAt=cockpit.generatedAt||new Date().toISOString();
+const captureTiming=classifyCaptureTiming(cockpit.session,capturedAt);
+const recordedForwardEligible=captureTiming==='ON_SESSION_AFTER_CLOSE';
 
 const prior=read(OUT,{schemaVersion:'astra-prospective-evidence/v1',records:[]});
 const dedupe=dedupeEvidenceRecords(prior.records||[]);
@@ -27,10 +35,14 @@ for(const x of [...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[]),...
   if(stableKeys.has(stableKey)) continue;
   const id=stableKey;
   stableKeys.add(stableKey);
-  map.set(id,{
+  const rec={
     id,
     evidenceKeyVersion:'session+ticker/v2',
-    capturedAt:cockpit.generatedAt,
+    capturedAt,
+    captureTiming,
+    recordedForwardEligible,
+    modelVersion,
+    buildCommit,
     session:cockpit.session,
     ticker:x.ticker,
     stage:x.stage,
@@ -86,7 +98,9 @@ for(const x of [...(cockpit.topOpportunities||[]),...(cockpit.watchlist||[]),...
     warnings:x.warnings||[],
     evidence:x.evidence||[],
     outcome:{status:'PENDING',resolvedAt:null,fillPrice:null,exitPrice:null,netReturnPct:null,maxFavorablePct:null,maxAdversePct:null}
-  });
+  };
+  rec.captureHash=captureHash(rec);
+  map.set(id,rec);
 }
 const records=[...map.values()].sort((a,b)=>String(a.session).localeCompare(String(b.session))||String(a.ticker).localeCompare(String(b.ticker)));
 const payload={
@@ -94,6 +108,8 @@ const payload={
   generatedAt:new Date().toISOString(),
   researchOnly:true,
   automaticExecution:false,
+  identityPolicy:'one immutable prediction capture per session+ticker; outcomes may evolve only through append-only evidence events',
+  capturePolicy:{currentCaptureTiming:captureTiming,recordedForwardEligible},
   records,
   counts:{
     total:records.length,

@@ -38,7 +38,7 @@ function aggregate(rows){
 const idx=read(INDEX,{sessions:[]}),evid=read(EVID,{records:[]}),d=read(COCKPIT,null);
 if(!d)throw new Error('decision cockpit missing');
 
-const sessions=(idx.sessions||[]).map(x=>x.session).filter(Boolean).sort();
+const sessions=(idx.sessions||[]).filter(x=>x.recordedForwardEligible===true).map(x=>x.session).filter(Boolean).sort();
 const sessionSet=new Set(sessions);
 const eligibleEvidence=dedupeEvidenceRecords((evid.records||[]).filter(r=>r.excludedFromAnalytics!==true&&sessionSet.has(r.session))).primary;
 
@@ -95,7 +95,7 @@ const payload={
   generatedAt:new Date().toISOString(),
   methodology:{
     noLookAhead:true,
-    source:'persisted V6 replay sessions + prospective evidence only',
+    source:'persisted contemporaneous replay sessions + recorded-forward prospective evidence only',
     trainWindowSessions:trainWindow,
     testWindowSessions:testWindow,
     stepSessions:testWindow,

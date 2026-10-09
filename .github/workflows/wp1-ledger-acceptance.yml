@@ -1,0 +1,102 @@
+name: WP1 Persistent Ledger Acceptance
+
+on:
+  push:
+    branches:
+      - wp1-persistent-ledgers
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp1-ledger-acceptance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install quant requirements
+        run: python -m pip install -r quant/requirements.txt
+
+      - name: Runtime tests
+        run: npm test
+
+      - name: Synthetic append-only acceptance
+        run: node scripts/wp1-ledger-validation.js
+
+      - name: First full build
+        run: npm run build
+
+      - name: Verify persistent ledgers after first build
+        run: npm run ledger:verify
+
+      - name: Snapshot immutable counts
+        run: |
+          node - <<'NODE' > /tmp/wp1-before.json
+          const fs=require('fs');
+          const p=JSON.parse(fs.readFileSync('data/prediction-ledger.json'));
+          const e=JSON.parse(fs.readFileSync('data/evidence-event-ledger.json'));
+          const r=JSON.parse(fs.readFileSync('data/replay/index.json'));
+          const s=r.sessions.at(-1);
+          console.log(JSON.stringify({
+            predictionRecords:p.records.length,
+            eventRecords:e.records.length,
+            captureEvents:e.captureEvents,
+            outcomeEvents:e.outcomeEvents,
+            replaySessions:r.sessions.length,
+            latestSession:s?.session||null,
+            latestSnapshotHash:s?.snapshotSha256||null
+          }));
+          NODE
+          cat /tmp/wp1-before.json
+
+      - name: Re-run same-session build
+        run: npm run build
+
+      - name: Verify same-session rerun is idempotent
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'),assert=require('assert');
+          const before=JSON.parse(fs.readFileSync('/tmp/wp1-before.json'));
+          const p=JSON.parse(fs.readFileSync('data/prediction-ledger.json'));
+          const e=JSON.parse(fs.readFileSync('data/evidence-event-ledger.json'));
+          const r=JSON.parse(fs.readFileSync('data/replay/index.json'));
+          const s=r.sessions.at(-1);
+          const after={
+            predictionRecords:p.records.length,
+            eventRecords:e.records.length,
+            captureEvents:e.captureEvents,
+            outcomeEvents:e.outcomeEvents,
+            replaySessions:r.sessions.length,
+            latestSession:s?.session||null,
+            latestSnapshotHash:s?.snapshotSha256||null
+          };
+          assert.deepStrictEqual(after,before,'same-session rerun changed append-only ledger counts/hash');
+          console.log(JSON.stringify({sameSessionRerun:'IDEMPOTENT',...after},null,2));
+          NODE
+          npm run ledger:verify
+
+      - name: Quant tests
+        run: npm run quant:test
+
+      - name: Decision cockpit validation
+        run: npm run cockpit:validate
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## WP1 Persistent Ledger Acceptance" >> "$GITHUB_STEP_SUMMARY"
+          echo "- synthetic A → B → rerun B: tested" >> "$GITHUB_STEP_SUMMARY"
+          echo "- full build twice on same session: tested" >> "$GITHUB_STEP_SUMMARY"
+          echo "- ledger integrity verifier: tested" >> "$GITHUB_STEP_SUMMARY"
+          echo "- automatic execution: remains OFF" >> "$GITHUB_STEP_SUMMARY"

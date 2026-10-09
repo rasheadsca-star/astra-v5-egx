@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.3 Decision Cockpit</title>
+<title>ASTRA V6.4 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.3 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.4 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.3 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.4 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.3 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.4 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -267,7 +267,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 <div class="card" style="border:1px solid #a78bfa">
   <div class="v52-header">
     <div>
-      <h2 id="riskTitle" style="margin:0">Risk-State Aware Position Sizing — V6.3</h2>
+      <h2 id="riskTitle" style="margin:0">Risk-State Aware Position Sizing — V6.4</h2>
       <div class="small" id="riskNote">Theoretical sizing is preserved, but actionable new-entry size is zero unless price is inside the entry zone and the Decision Gate passes.</div>
     </div>
     <span class="badge warn" id="riskBadge">AUTO ORDERS OFF</span>
@@ -594,7 +594,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.3 Decision Cockpit":"لوحة قرارات ASTRA V6.2",
+    "ASTRA V6.4 Decision Cockpit":"لوحة قرارات ASTRA V6.2",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -665,13 +665,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.3':'ASTRA V6.3 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.4':'ASTRA V6.4 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.3 TRUST UI</b> · '+(uiLang==='ar'
+  if(releaseText) releaseText.innerHTML='<b>V6.4 TRUST UI</b> · '+(uiLang==='ar'
     ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.3 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.4 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();
@@ -1169,7 +1169,7 @@ async function loadV52(){
       :'Near stop = within 2.5% of stop · slightly above entry = up to 2% above entry high · not a real-time feed and no orders are sent.';
     const rb=d.riskBudgetEngine||{};
     latestRiskBudget=rb;
-    document.getElementById('riskTitle').innerText=uiLang==='ar'?'حجم المركز الواعي بحالة المخاطر — V6.3':'Risk-State Aware Position Sizing — V6.3';
+    document.getElementById('riskTitle').innerText=uiLang==='ar'?'حجم المركز الواعي بحالة المخاطر — V6.4':'Risk-State Aware Position Sizing — V6.4';
     document.getElementById('riskNote').innerText=uiLang==='ar'
       ?'يحتفظ بالحجم النظري للتحليل، لكن حجم الدخول المتاح الآن يصبح صفرًا إلا إذا كان السعر داخل منطقة الدخول وبوابة القرار مجتازة.'
       :'Theoretical sizing is preserved, but actionable new-entry size is zero unless price is inside the entry zone and the Decision Gate passes.';

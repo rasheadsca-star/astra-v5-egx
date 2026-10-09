@@ -15,7 +15,7 @@ const d=read(COCKPIT,null);
 const e=read(EVID,{records:[]});
 if(!d)throw new Error('decision cockpit missing');
 
-const records=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true)).primary;
+const records=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true&&r.recordedForwardEligible===true)).primary;
 const activated=records.filter(x=>['OPEN','OPEN_T1_HIT','RESOLVED','AMBIGUOUS_OHLC_ORDER','AMBIGUOUS_ENTRY_BAR'].includes(x.outcome?.status));
 const resolved=records.filter(x=>x.outcome?.status==='RESOLVED');
 const ambiguous=records.filter(x=>x.outcome?.status==='AMBIGUOUS_OHLC_ORDER');
@@ -107,7 +107,7 @@ const bestEntry=byEntryQuality.filter(x=>x.resolved>=5&&x.expectancyPct!=null).s
 const bestSector=bySector.filter(x=>x.key!=='UNCLASSIFIED'&&x.resolved>=5&&x.expectancyPct!=null).sort((a,b)=>b.expectancyPct-a.expectancyPct)[0]||null;
 
 d.outcomeAnalyticsEngine={
-  version:'outcome-analytics/v2-deduped-fixed-horizon',
+  version:'outcome-analytics/v3-recorded-forward-only',
   generatedAt:new Date().toISOString(),
   evidenceGeneratedAt:e.generatedAt||null,
   status:maturity(overall.resolved),

@@ -2,6 +2,7 @@
 
 const fs=require('fs'),path=require('path');
 const {dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
+const {verifyCaptureHash}=require('./lib/persistent-evidence');
 const EVID='data/prospective-evidence.json';
 const DOC='docs/data/prospective-evidence.json';
 const MARKET='data/canonical-market.json';
@@ -38,6 +39,10 @@ for(const dup of dedupe.duplicates){
   dup.record.duplicateOf=dup.primary.id;
 }
 for(const rec of dedupe.primary){
+  if(rec.captureHash){
+    const integrity=verifyCaptureHash(rec);
+    if(!integrity.ok)throw new Error(integrity.reason+': '+rec.session+'|'+rec.ticker);
+  }
   rec.outcome=rec.outcome||{status:'PENDING'};
   const o=rec.outcome;
   if(terminal(o.status))continue;
