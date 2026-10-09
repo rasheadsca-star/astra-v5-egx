@@ -13,7 +13,11 @@ const requiredFiles = [
   'scripts/archive-trust-snapshot.js',
   'scripts/walk-forward-validation.js',
   'scripts/model-governance-engine.js',
-  'scripts/release-integrity-audit.js'
+  'scripts/release-integrity-audit.js',
+  'scripts/lib/technical-indicators.js',
+  'scripts/run-node-validation-suite.js',
+  'scripts/static-quality-validation.js',
+  'config/node-validation-suite.json'
 ];
 
 const missing = requiredFiles.filter((file) => !fs.existsSync(file));
