@@ -49,7 +49,7 @@ if(!d)throw new Error('decision cockpit missing');
 const e=read(EVID,{records:[],counts:{},metrics:{}});
 const q=read(QUANT,null);
 
-const cleanEvidence=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true)).primary;
+const cleanEvidence=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true&&r.recordedForwardEligible===true)).primary;
 const resolved=cleanEvidence.filter(r=>r.outcome?.status==='RESOLVED');
 const groups=new Map();
 for(const r of resolved){
@@ -151,7 +151,7 @@ d.probabilityCalibrationEngine={
   status:maturity(resolved.length),
   holdingHorizonSessions:e.policy?.holdingHorizonSessions??10,
   thresholds:{preliminary:10,calibrating:30,validated:90},
-  methodology:'Empirical forward outcomes resolved at a fixed holding horizon, matched by grade + entry quality + R:R bucket + context bucket. T1 counts any observed T1 touch before terminal resolution; T2 and stop use terminal outcomes. Expected Value is empirical average net return at the fixed horizon. Falls back to overall forward pool only after 10 resolved records. 90% Wilson intervals are reported.',
+  methodology:'Only contemporaneously recorded forward evidence (recordedForwardEligible=true) is eligible. Empirical forward outcomes resolved at a fixed holding horizon, matched by grade + entry quality + R:R bucket + context bucket. T1 counts any observed T1 touch before terminal resolution; T2 and stop use terminal outcomes. Expected Value is empirical average net return at the fixed horizon. Falls back to overall forward pool only after 10 resolved records. 90% Wilson intervals are reported.',
   overall,
   quantHistoricalBenchmark:quantBenchmark,
   bestByEstimatedT1:bestByT1?{
