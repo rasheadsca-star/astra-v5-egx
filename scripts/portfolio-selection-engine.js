@@ -23,6 +23,11 @@ const lowLiquidityCapPct=15;
 const maxSingleWeightPct=30;
 const minSingleWeightPct=8;
 const exposureScale=n(d.market?.exposureScale)??1;
+const pairMatrix=d.sectorCorrelationEngine?.correlation?.pairMatrix||{};
+function pairCorrelation(a,b){
+  const v=pairMatrix[a+'|'+b]||pairMatrix[b+'|'+a];
+  return n(v?.correlation);
+}
 
 function probabilityBonus(x){
   const p=n(x.targetAchievement?.t1ProbabilityPct);
@@ -71,9 +76,8 @@ for(const x of universe){
   const sector=x.sector||null;
   if(sector && (sectorCounts.get(sector)||0)>=maxSameSector){diversificationRejected.push({ticker:x.ticker,reason:'SECTOR_CONCENTRATION',sector});continue;}
   const correlatedWith=selected.find(s=>{
-    const peer=x.maxOpportunityCorrelationPeer===s.ticker ? n(x.maxOpportunityCorrelation) : 
-      (s.maxOpportunityCorrelationPeer===x.ticker ? n(s.maxOpportunityCorrelation) : null);
-    return peer!=null && peer>=maxPairCorrelation;
+    const c=pairCorrelation(x.ticker,s.ticker);
+    return c!=null && c>=maxPairCorrelation;
   });
   if(correlatedWith){diversificationRejected.push({ticker:x.ticker,reason:'HIGH_CORRELATION',peer:correlatedWith.ticker});continue;}
   selected.push(x);
