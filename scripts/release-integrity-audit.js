@@ -51,8 +51,9 @@ function actualChecks(issues){
   assert(market?.source?.sourceSessionDataHash===history?.source?.sourceSessionDataHash,'market/history fingerprint mismatch',issues);
 
   const order=[
+    'resolve-prospective-outcomes.js','walk-forward-validation.js','probability-calibration-engine.js',
     'risk-budget-engine.js','monitoring-alerts-engine.js','risk-state-override-engine.js',
-    'capture-prospective-evidence.js','archive-trust-snapshot.js','walk-forward-validation.js','model-governance-engine.js'
+    'capture-prospective-evidence.js','archive-trust-snapshot.js','model-governance-engine.js'
   ];
   let last=-1;
   for(const name of order){
@@ -124,12 +125,28 @@ function actualChecks(issues){
 
   const pc=d.probabilityCalibrationEngine||{};
   const resolved=n(pc.forwardResolved)||0;
-  const expectedStatus=resolved<10?'INSUFFICIENT_DATA':resolved<30?'PRELIMINARY':resolved<90?'CALIBRATING':'VALIDATED';
+  const distinct=n(pc.forwardDistinctSessions)||0;
+  const sampleMaturity=(resolved<30||distinct<10)?'INSUFFICIENT_EVIDENCE':
+    (resolved<60||distinct<20)?'PRELIMINARY':
+    (resolved<90||distinct<30)?'CALIBRATING':'MATURE_SAMPLE';
+  const expectedStatus=sampleMaturity==='MATURE_SAMPLE'
+    ?(wf.governance?.calibrationClaimAllowed===true?'VALIDATED':'MATURE_SAMPLE_WAITING_WALK_FORWARD')
+    :sampleMaturity;
   assert(pc.status===expectedStatus,'probability maturity status mismatch',issues);
   assert((n(pc.holdingHorizonSessions)||10)===10,'probability horizon is not 10 sessions',issues);
+  assert(pc.overall?.intervalMethod==='90% session-block bootstrap','probability intervals are not session-block bootstrap',issues);
   if(pc.bestByValidatedT1)assert(pc.bestByValidatedT1.status==='VALIDATED','validated best probability is not validated',issues);
-  if(resolved<10){
-    for(const x of all)assert(x.targetAchievement?.t1ProbabilityPct==null,'probability emitted below minimum sample for '+x.ticker,issues);
+  for(const x of all){
+    const ta=x.targetAchievement||{};
+    if(pc.status!=='VALIDATED'){
+      assert(ta.t1ProbabilityPct==null,'validated probability emitted before release gate for '+x.ticker,issues);
+      assert(ta.t2ProbabilityPct==null,'validated T2 probability emitted before release gate for '+x.ticker,issues);
+      assert(ta.stopProbabilityPct==null,'validated stop probability emitted before release gate for '+x.ticker,issues);
+    }
+  }
+  if(pc.status==='VALIDATED'){
+    assert(resolved>=90&&distinct>=30,'probability validated below 90 outcomes / 30 sessions',issues);
+    assert(wf.governance?.calibrationClaimAllowed===true,'probability validated without walk-forward gate',issues);
   }
 
   const sessions=replay.sessions||[];
@@ -166,6 +183,7 @@ function actualChecks(issues){
   if(wf.governance?.calibrationClaimAllowed){
     assert((wf.coverage?.validFolds||0)>=3,'calibration claim with <3 valid folds',issues);
     assert((wf.outOfSample?.resolved||0)>=30,'calibration claim with <30 OOS resolved',issues);
+    assert((wf.outOfSample?.distinctSessions||0)>=10,'calibration claim with <10 OOS distinct sessions',issues);
   }
 
   const gr=gov.reliability||{};
