@@ -1,19 +1,16 @@
-# Canonical EGX refresh: mirrors the validated post-market PRO dataset into V4.
+# Sole canonical production writer for ASTRA market, quant, decision and trust state.
 name: Daily EGX Data Refresh
 
 on:
   schedule:
-    # Repeated readiness checks cover Cairo UTC+2/+3. Preflight skips expensive work unless needed.
     - cron: '45 12-16 * * 0-4'
   workflow_run:
     workflows: ["ASTRA Daily Stability Audit"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
-  # One-time immediate validation when this workflow definition is changed.
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - '.github/workflows/daily-egx-data-refresh.yml'
       - 'scripts/data-refresh-preflight.js'
@@ -24,6 +21,11 @@ on:
       - 'scripts/verify-persistent-ledgers.js'
       - 'scripts/lib/persistent-evidence.js'
       - 'scripts/lib/evidence-event-store.js'
+      - 'scripts/lib/execution-contract.js'
+      - 'scripts/resolve-prospective-outcomes.js'
+      - 'quant/**'
+      - 'config/execution-contract.json'
+      - 'config/output-ownership.json'
 
 concurrency:
   group: astra-state-writer
@@ -33,12 +35,12 @@ env:
   ASTRA_CANONICAL_SOURCE_BASE: ${{ vars.ASTRA_CANONICAL_SOURCE_BASE || 'https://raw.githubusercontent.com/rasheadsca-star/RAS-EGX-PRO2026-NEXT/main/data' }}
 
 jobs:
-  refresh:
+  produce:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout latest main
@@ -51,6 +53,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: quant/requirements.txt
+
+      - name: Install quant Python requirements
+        run: python -m pip install -r quant/requirements.txt
+
+      - name: Validate code before production
+        run: |
+          npm test
+          npm run quant:test
+          node scripts/output-ownership-validation.js
 
       - name: Check atomic source readiness
         id: preflight
@@ -75,25 +93,89 @@ jobs:
         run: |
           node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('data/canonical-market.json'));const h=JSON.parse(fs.readFileSync('data/history-index.json'));if(m.schemaVersion!=='5.0.0'||h.schemaVersion!=='5.0.0')throw new Error('Atomic schema v5 required');if(m?.source?.atomicHandoff!==true||h?.source?.atomicHandoff!==true)throw new Error('Atomic handoff required');if(m?.source?.expectedSession!==h?.source?.expectedSession)throw new Error('Market/history session mismatch');if(m?.source?.sourceSessionDataHash!==h?.source?.sourceSessionDataHash)throw new Error('Market/history fingerprint mismatch');if(!Array.isArray(m.rows)||m.rows.length<80)throw new Error('Canonical market coverage too low');if(!h.coverage||h.coverage.coveragePct<80)throw new Error('History coverage below 80%');console.log({marketRows:m.rows.length,historyCoveragePct:h.coverage.coveragePct,expectedSession:m.source.expectedSession,fingerprint:m.source.sourceSessionDataHash});"
 
-      - name: Build decision cockpit and persistent evidence
+      - name: Bridge ASTRA atomic store -> session pack
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: python quant/tools/astra_bridge.py
+
+      - name: Guarded Stage 1 quant update
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        working-directory: quant
+        run: python fetch/daily_update.py --no-yahoo
+
+      - name: Publish astra-quant/v1 payload
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        working-directory: quant
+        run: python publish.py
+
+      - name: Build static site
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: python quant/web/build.py
+
+      - name: Build Confluence Pullback V1 challenger
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/confluence-pullback-v1.js
+
+      - name: Validate Confluence Pullback V1
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: node scripts/confluence-validation.js
+
+      - name: Build Confluence Pullback V2
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: node scripts/confluence-pullback-v2.js
+
+      - name: Resolve Confluence V2 forward evidence
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: node scripts/confluence-v2-forward.js
+
+      - name: Validate Confluence Pullback V2
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: node scripts/confluence-v2-validation.js
+
+      - name: Build engine comparison
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/build-engine-comparison.js
+
+      - name: Build canonical decision cockpit and persistent evidence
         if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
         run: npm run cockpit:build
 
-      - name: Commit refreshed data and persistent decision state
+      - name: Verify persistent ledgers
         if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        run: npm run ledger:verify
+
+      - name: Commit all canonical production outputs once
+        if: (steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true') || steps.persistence.outputs.persist_needed == 'true'
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/canonical-market.json data/history-index.json data/decision-cockpit.json docs/data/decision-cockpit.json data/prospective-evidence.json docs/data/prospective-evidence.json data/evidence-event-ledger.json docs/data/evidence-event-ledger.json data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json data/prediction-ledger.json docs/data/prediction-ledger.json data/replay docs/data/replay data/walk-forward-validation.json docs/data/walk-forward-validation.json data/model-governance.json docs/data/model-governance.json
+          git config user.name "astra-production-bot"
+          git config user.email "astra-production-bot@users.noreply.github.com"
+
+          git add -A             data/canonical-market.json data/history-index.json             data/quant data/comparison data/confluence data/confluence-v2 quant/data             data/decision-cockpit.json data/prospective-evidence.json data/evidence-event-ledger.json             data/daily-decision-brief-history.json data/prediction-ledger.json data/replay             data/walk-forward-validation.json data/model-governance.json             docs/index.html docs/v2.html docs/v5.html docs/v5             docs/data/decision-cockpit.json docs/data/prospective-evidence.json docs/data/evidence-event-ledger.json             docs/data/daily-decision-brief-history.json docs/data/prediction-ledger.json docs/data/replay             docs/data/walk-forward-validation.json docs/data/model-governance.json
+
+          # Technical JSON is reproducible build output and intentionally not committed.
+          git reset -- data/technical docs/data/technical 2>/dev/null || true
+
           if git diff --cached --quiet; then
-            echo "No canonical data changes."
-          else
-            git commit -m "chore(data): refresh canonical EGX market store"
-            for attempt in 1 2 3; do
-              git fetch origin main
-              if git rebase origin/main && git push origin HEAD:main; then break; fi
-              git rebase --abort >/dev/null 2>&1 || true
-              [ "$attempt" = "3" ] && exit 1
-              sleep $((attempt * 8))
-            done
+            echo "No canonical production changes."
+            exit 0
           fi
+
+          S=$(node -e "const d=require('./data/decision-cockpit.json');process.stdout.write(String(d.session||'unknown'))")
+          git commit -m "chore(production): session $S"
+
+          # Rebase/push retry loop; never force-push.
+          git reset --hard HEAD
+          git clean -fd
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort >/dev/null 2>&1 || true
+            [ "$attempt" = "3" ] && exit 1
+            sleep $((attempt * 8))
+          done

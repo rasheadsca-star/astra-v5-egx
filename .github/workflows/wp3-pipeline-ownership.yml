@@ -1,0 +1,54 @@
+name: WP3 Pipeline Ownership Gate
+
+on:
+  push:
+    branches:
+      - wp3-single-writer-pipeline
+    paths:
+      - '.github/workflows/daily-egx-data-refresh.yml'
+      - '.github/workflows/quant-daily.yml'
+      - '.github/workflows/wp3-pipeline-ownership.yml'
+      - 'config/output-ownership.json'
+      - 'scripts/output-ownership-validation.js'
+      - 'package.json'
+      - 'app/dashboard/command-center.html'
+      - 'docs/PIPELINE-OWNERSHIP.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wp3-pipeline-ownership-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r quant/requirements.txt
+      - name: Validate output ownership contract
+        run: npm run output:ownership:validate
+      - name: Existing Node tests
+        run: npm test
+      - name: Existing Python quant tests
+        run: npm run quant:test
+      - name: Full build
+        run: npm run build
+      - name: Verify execution remains disabled
+        run: |
+          node - <<'NODE'
+          const d=require('./data/decision-cockpit.json');
+          if(d?.safety?.researchOnly!==true)throw new Error('researchOnly changed');
+          if(d?.safety?.executionAllowed!==false)throw new Error('executionAllowed changed');
+          if(d?.safety?.automaticOrders!==false)throw new Error('automaticOrders changed');
+          console.log('Execution safety invariant verified.');
+          NODE

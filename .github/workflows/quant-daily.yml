@@ -1,160 +1,81 @@
-name: ASTRA Quant Lane (daily)
+name: ASTRA Quant Validation (read-only)
 
 on:
-  # يعمل بعد نجاح تحديث بيانات ASTRA الذري، ولديه جدولة احتياطية بعد الإغلاق (14:30 القاهرة + سماح) الأحد–الخميس.
   push:
     branches: [main]
     paths:
+      - "quant/**"
       - "scripts/confluence-pullback-v1.js"
       - "scripts/confluence-validation.js"
       - "scripts/confluence-pullback-v2.js"
       - "scripts/confluence-v2-forward.js"
       - "scripts/confluence-v2-validation.js"
+      - "scripts/build-engine-comparison.js"
       - "scripts/build-decision-cockpit.js"
       - "scripts/validate-decision-cockpit.js"
-      - "data/confluence/fundamentals-verified-overrides.json"
-      - "quant/config/holidays.json"
+      - "config/execution-contract.json"
       - ".github/workflows/quant-daily.yml"
-  workflow_run:
-    workflows: ["Daily EGX Data Refresh"]
-    types: [completed]
-    branches: [main]
-  schedule:
-    - cron: "40 12,13,14,15 * * 0-4"
   workflow_dispatch:
-    inputs:
-      force:
-        description: "تجاوز ALREADY_CURRENT / SKIP_EARLY"
-        type: boolean
-        default: false
-
-concurrency:
-  group: astra-state-writer
-  cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: astra-quant-validation-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  quant:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+  validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
-          fetch-depth: 0
+          fetch-depth: 1
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12", cache: pip, cache-dependency-path: quant/requirements.txt }
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: quant/requirements.txt
       - uses: actions/setup-node@v4
-        with: { node-version: "20" }
+        with:
+          node-version: "22"
       - run: pip install -r quant/requirements.txt
-      - name: Tests (Node + Python)
+      - name: Tests
         run: |
           npm test
           npm run quant:test
-      - name: Bridge ASTRA atomic store -> session pack
+          npm run execution:validate
+      - name: Build quant outputs in ephemeral workspace
         run: python quant/tools/astra_bridge.py
-      - name: Guarded daily update + Stage 1 (quant engine)
+      - name: Guarded quant update in ephemeral workspace
         working-directory: quant
-        run: python fetch/daily_update.py --no-yahoo ${{ inputs.force == true && '--force' || '' }}
-      - name: Publish astra-quant/v1 payload
+        run: python fetch/daily_update.py --no-yahoo
+      - name: Publish payload in ephemeral workspace
         working-directory: quant
         run: python publish.py
-      - name: Build static site (GitHub Pages /docs)
+      - name: Build static site in ephemeral workspace
         run: python quant/web/build.py
-      - name: Build Confluence Pullback V1 challenger
+      - name: Build and validate Confluence V1
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/confluence-pullback-v1.js
-      - name: Validate Confluence Pullback V1
-        run: node scripts/confluence-validation.js
-      - name: Build Confluence Pullback V2 ENTRY_READY engine
-        run: node scripts/confluence-pullback-v2.js
-      - name: Resolve Confluence V2 forward evidence
-        run: node scripts/confluence-v2-forward.js
-      - name: Validate Confluence Pullback V2
-        run: node scripts/confluence-v2-validation.js
-      - name: Build V2.1 vs V4 vs V5 vs CLAUDE vs Confluence comparison
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/build-engine-comparison.js
-      - name: Build ASTRA V5.1 Decision Cockpit
-        run: node scripts/build-decision-cockpit.js
-      - name: Validate ASTRA V5.1 Decision Cockpit
-        run: node scripts/validate-decision-cockpit.js
-      - name: Validate published contract
-        run: node scripts/quant-validation.js
-      - name: Commit only if something really changed
         run: |
-          git config user.name "astra-quant-bot"; git config user.email "astra-quant-bot@users.noreply.github.com"
-          git add -A data/quant data/comparison data/confluence data/confluence-v2 quant/data docs
-          # Daily EGX Data Refresh is the sole owner of cockpit/trust/forward ledgers.
-          # Quant computes a cockpit for validation only; Daily EGX Data Refresh owns canonical cockpit/trust state.
-          git restore --source=HEAD --staged --worktree -- data/decision-cockpit.json docs/data/decision-cockpit.json
-
-          # Hard ownership guard: quant must never commit canonical cockpit/trust paths.
-          STAGED_FILES="$(git diff --cached --name-only)"
-          if printf '%s\n' "$STAGED_FILES" | grep -E '^(data|docs/data)/(decision-cockpit\.json|prospective-evidence\.json|evidence-event-ledger\.json|prediction-ledger\.json|replay/|walk-forward-validation\.json|model-governance\.json|daily-decision-brief-history\.json)'; then
-            echo "ERROR: quant attempted to stage authoritative cockpit/trust state"
-            exit 1
-          fi
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          S=$(python -c "import json;print(json.load(open('data/quant/signals.json'))['session'])")
-          git commit -m "Quant lane: session $S"
-          # Rebase requires a clean worktree. Keep the desired commit, discard all remaining generated scratch changes.
-          git reset --hard HEAD
-          git clean -fd
-          for attempt in 1 2 3; do
-            git fetch origin ${{ github.ref_name }}
-            if git rebase origin/${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }}; then break; fi
-            git rebase --abort >/dev/null 2>&1 || true
-            [ "$attempt" = "3" ] && exit 1
-            sleep $((attempt * 8))
-          done
-
-  deploy-pages:
-    needs: quant
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Check Pages configuration explicitly
-        id: pages
-        uses: actions/github-script@v7
-        with:
-          script: |
-            let enabled = false;
-            try {
-              const {data} = await github.rest.repos.getPages(context.repo);
-              core.info(JSON.stringify({pagesExists: true, buildType: data.build_type ?? null, source: data.source ?? null, status: data.status ?? null}));
-              enabled = true; // GET success proves the site exists; deploy-pages validates deployment mode.
-            } catch (error) {
-              core.info(`Pages API status: ${error.status}`);
-              if (error.status !== 404) throw error;
-            }
-            core.setOutput('enabled', String(enabled));
-            if (!enabled) {
-              core.warning('PAGES_SETUP_REQUIRED: Settings > Pages > Source > GitHub Actions');
-              await core.summary.addRaw('Pages NOT deployed: select GitHub Actions in Settings > Pages, then dispatch ASTRA Quant Lane (daily).').write();
-            }
-      - uses: actions/checkout@v4
-        if: steps.pages.outputs.enabled == 'true'
-        with:
-          ref: main
-      - uses: actions/upload-pages-artifact@v3
-        if: steps.pages.outputs.enabled == 'true'
-        with:
-          path: docs
-      - name: Deploy the quant output directly
-        id: deployment
-        if: steps.pages.outputs.enabled == 'true'
-        uses: actions/deploy-pages@v4
+          node scripts/confluence-pullback-v1.js
+          node scripts/confluence-validation.js
+      - name: Build and validate Confluence V2
+        run: |
+          node scripts/confluence-pullback-v2.js
+          node scripts/confluence-v2-forward.js
+          node scripts/confluence-v2-validation.js
+      - name: Build comparison and cockpit for validation only
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/build-engine-comparison.js
+          npm run cockpit:build
+          npm run cockpit:validate
+          npm run ledger:verify
+      - name: Prove workflow is read-only
+        run: |
+          echo "This workflow intentionally has contents: read and contains no commit/push step."
+          git status --short | head -200
