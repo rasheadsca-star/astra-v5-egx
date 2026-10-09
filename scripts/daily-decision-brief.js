@@ -121,7 +121,21 @@ const rec={
   basketTickers:currentTickers,
   basket:brief.basket,
   risks:brief.risks,
-  market:brief.market
+  market:brief.market,
+  opportunitySnapshots:[...(d.topOpportunities||[]),...(d.watchlist||[])].map(x=>({
+    ticker:x.ticker,
+    finalDecisionScore:n(x.finalDecisionScore),
+    entryQualityScore:n(x.entryQualityScore),
+    entryQuality:x.entryQuality||null,
+    contextScore:n(x.contextScore),
+    rrT2:n(x.rrT2),
+    liquidityContextScore:n(x.liquidityContextScore),
+    currentPrice:n(x.currentPrice),
+    gatePass:x.decisionGate?.pass===true,
+    gateReasons:x.decisionGate?.reasons||[],
+    portfolioSelected:x.portfolioSelected===true,
+    portfolioRank:x.portfolioRank??null
+  }))
 };
 const filtered=(history.records||[]).filter(r=>r.session!==session);
 filtered.push(rec);
