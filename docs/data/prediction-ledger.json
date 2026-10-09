@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "astra-prediction-ledger/v1",
+  "records": [
+    {
+      "session": "2026-10-07",
+      "archivedAt": "2026-10-09T19:42:31.535Z",
+      "modelVersion": "ASTRA_6.4.0",
+      "buildCommit": "0bc9c687493924722ae81c5844d2dcac4b674eb2",
+      "captureTiming": "LATE_CAPTURE",
+      "recordedForwardEligible": false,
+      "previousRecordHash": null,
+      "snapshotSha256": "f931d52e08586bee704a5977d11f0ba9b9c0650319ea2203804f25faaa8f13db",
+      "sourceSessionDataHash": "40d0ca0fc6e9006f5487d1c91560d50057000e2de418a669663e45690eb3ae14",
+      "predictionCount": 30,
+      "gatePassedCount": 5,
+      "basketTickers": [
+        "CIEB",
+        "CNFN",
+        "FWRY"
+      ],
+      "headline": {
+        "ticker": "FWRY",
+        "finalDecisionScore": 71.3,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 2.17,
+        "entryLow": 18.4326,
+        "entryHigh": 19.08,
+        "stop": 17.2899,
+        "target1": 20.6064,
+        "target2": 21.942,
+        "contextScore": 43.2,
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_DATA"
+      },
+      "recordHash": "656c18d62e54a3ba6c81b146af37802c4f4bb38a648675dc315e8d049e350b97"
+    }
+  ],
+  "generatedAt": "2026-10-09T19:42:31.549Z",
+  "chain": {
+    "status": "VERIFIED",
+    "records": 1,
+    "errors": []
+  },
+  "note": "Tamper-evident hash-chained research ledger committed to Git. It is not a blockchain and does not claim legal immutability."
+}

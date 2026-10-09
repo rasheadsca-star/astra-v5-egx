@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "astra-replay-index/v1",
+  "generatedAt": "2026-10-09T19:42:31.549Z",
+  "coverageStart": "2026-10-07",
+  "coverageEnd": "2026-10-07",
+  "sessionCount": 1,
+  "ledgerChainStatus": "VERIFIED",
+  "currentBuildDiffersFromFrozenSession": false,
+  "frozenModelVersion": "ASTRA_6.4.0",
+  "frozenBuildCommit": "0bc9c687493924722ae81c5844d2dcac4b674eb2",
+  "sessions": [
+    {
+      "session": "2026-10-07",
+      "archivedAt": "2026-10-09T19:42:31.535Z",
+      "modelVersion": "ASTRA_6.4.0",
+      "buildCommit": "0bc9c687493924722ae81c5844d2dcac4b674eb2",
+      "captureTiming": "LATE_CAPTURE",
+      "recordedForwardEligible": false,
+      "snapshotSha256": "f931d52e08586bee704a5977d11f0ba9b9c0650319ea2203804f25faaa8f13db",
+      "predictionCount": 30,
+      "gatePassedCount": 5,
+      "basketTickers": [
+        "CIEB",
+        "CNFN",
+        "FWRY"
+      ],
+      "marketRegime": "هابط",
+      "breadthPct": 26.9,
+      "dataStale": false
+    }
+  ],
+  "note": "True no-look-ahead replay is available only for sessions persisted after V6 Trust Archive activation. Earlier dates are not reconstructed from future-known data."
+}

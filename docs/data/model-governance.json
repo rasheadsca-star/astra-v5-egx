@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "astra-model-governance/v1",
+  "generatedAt": "2026-10-09T19:42:31.627Z",
+  "modelVersion": "ASTRA_V6.2_GOVERNANCE",
+  "reliability": {
+    "score": 51.4,
+    "tier": "BUILDING",
+    "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
+    "hardCapApplied": false,
+    "hardCapRule": "Atomic data-integrity failure or broken persisted ledger chain caps reliability below 50."
+  },
+  "checks": [
+    {
+      "id": "DATA_INTEGRITY",
+      "label": "Atomic data integrity",
+      "score": 100,
+      "weight": 20,
+      "status": "PASS",
+      "detail": "Market/history atomic handoff, session and fingerprint match."
+    },
+    {
+      "id": "DATA_FRESHNESS",
+      "label": "Data freshness",
+      "score": 100,
+      "weight": 12,
+      "status": "PASS",
+      "detail": "Decision data is not marked stale."
+    },
+    {
+      "id": "LEDGER_CHAIN",
+      "label": "Prediction ledger chain",
+      "score": 100,
+      "weight": 12,
+      "status": "PASS",
+      "detail": "Prediction ledger hash chain verifies."
+    },
+    {
+      "id": "REPLAY_COVERAGE",
+      "label": "Replay archive coverage",
+      "score": 0,
+      "weight": 10,
+      "status": "WAIT",
+      "detail": "0 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
+    },
+    {
+      "id": "WALK_FORWARD",
+      "label": "Walk-forward validation",
+      "score": 0,
+      "weight": 16,
+      "status": "WAITING_FOR_MINIMUM_SESSIONS",
+      "detail": "0 valid fold(s), 0 resolved out-of-sample outcome(s)."
+    },
+    {
+      "id": "PROBABILITY_EVIDENCE",
+      "label": "Forward probability evidence",
+      "score": 0,
+      "weight": 10,
+      "status": "INSUFFICIENT_DATA",
+      "detail": "0 resolved forward outcome(s); probability validation threshold is 90."
+    },
+    {
+      "id": "OUTCOME_SAMPLE",
+      "label": "Outcome analytics sample",
+      "score": 0,
+      "weight": 8,
+      "status": "INSUFFICIENT",
+      "detail": "0 resolved prospective outcome(s)."
+    },
+    {
+      "id": "SECTOR_COVERAGE",
+      "label": "Verified sector taxonomy coverage",
+      "score": 34.6,
+      "weight": 5,
+      "status": "PARTIAL",
+      "detail": "34.6% of current market rows classified by controlled symbol mapping."
+    },
+    {
+      "id": "MONITORING_SAFETY",
+      "label": "Monitoring safety state",
+      "score": 100,
+      "weight": 4,
+      "status": "PASS",
+      "detail": "Monitoring is research-only and automatic execution is OFF."
+    },
+    {
+      "id": "MODEL_DRIFT",
+      "label": "Drift guard",
+      "score": 55,
+      "weight": 3,
+      "status": "WARN",
+      "detail": "Drift guard is active; reliability is conservatively reduced."
+    }
+  ],
+  "blockers": [
+    "REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD",
+    "MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED",
+    "FORWARD_PROBABILITY_SAMPLE_SMALL",
+    "DRIFT_GUARD_ACTIVE"
+  ],
+  "evidenceState": {
+    "replaySessions": 0,
+    "totalPersistedReplaySessions": 1,
+    "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS",
+    "validWalkForwardFolds": 0,
+    "outOfSampleResolved": 0,
+    "prospectiveResolved": 0,
+    "probabilityStatus": "INSUFFICIENT_DATA",
+    "ledgerRecords": 1,
+    "ledgerChainStatus": "VERIFIED"
+  },
+  "releaseGate": {
+    "status": "EVIDENCE_BUILDING",
+    "canClaimValidatedProbability": false,
+    "canEnableAutomaticExecution": false,
+    "automaticExecutionReason": "Automatic trading is outside V6.2 governance scope and remains OFF."
+  },
+  "researchOnly": true,
+  "automaticExecution": false
+}
