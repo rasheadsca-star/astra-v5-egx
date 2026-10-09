@@ -1,0 +1,54 @@
+name: ASTRA V6.11 Live Acceptance Watch
+
+on:
+  workflow_run:
+    workflows: ["Daily EGX Data Refresh"]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '30 15 * * 0-4'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astra-v611-live-acceptance
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify frozen release
+        run: node scripts/release-freeze-validation.js
+      - name: Evaluate acceptance
+        run: |
+          node scripts/live-acceptance-engine.js --summary | tee acceptance-summary.md
+          cat acceptance-summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Fail on acceptance integrity error
+        run: |
+          node - <<'NODE'
+          const d=require('./data/live-acceptance.json');
+          if(d.status==='ACCEPTANCE_FAILED'){
+            console.error(JSON.stringify(d.issues,null,2));
+            process.exit(1);
+          }
+          console.log({status:d.status,accepted:d.acceptedSessions,remaining:d.remainingSessions});
+          NODE
+      - name: Upload acceptance report
+        uses: actions/upload-artifact@v4
+        with:
+          name: astra-v611-live-acceptance
+          path: |
+            data/live-acceptance.json
+            acceptance-summary.md
+          retention-days: 30
