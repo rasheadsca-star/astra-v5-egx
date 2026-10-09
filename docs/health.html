@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>ASTRA Operations Health</title>
+<style>
+:root{color-scheme:dark;--bg:#07101c;--panel:#101d2d;--line:#263b54;--text:#eef6ff;--muted:#8fa5bb;--good:#45d483;--warn:#ffd166;--bad:#ff6b6b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Segoe UI,sans-serif}.wrap{max-width:1100px;margin:auto;padding:24px 14px 44px}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.pill{padding:7px 11px;border:1px solid currentColor;border-radius:999px;font-weight:800}.HEALTHY,.PASS{color:var(--good)}.DEGRADED,.WARN{color:var(--warn)}.CRITICAL,.FAIL{color:var(--bad)}.INFO{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}.metric,.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:13px}.k{font-size:11px;color:var(--muted)}.v{font-size:20px;font-weight:800;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:11px}.small{font-size:11px;color:var(--muted);line-height:1.6}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}table{font-size:11px}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><div><h1>ASTRA Operations Health</h1><div class="small">Operational integrity, data freshness, ledgers and evidence maturity. Research only · Automatic execution OFF.</div></div><div id="overall" class="pill INFO">LOADING</div></div>
+<div class="grid">
+<div class="metric"><div class="k">Session</div><div class="v" id="session">—</div></div>
+<div class="metric"><div class="k">Pass</div><div class="v PASS" id="pass">—</div></div>
+<div class="metric"><div class="k">Warnings</div><div class="v WARN" id="warn">—</div></div>
+<div class="metric"><div class="k">Failures</div><div class="v FAIL" id="fail">—</div></div>
+</div>
+<div class="card"><h2>Checks</h2><table><thead><tr><th>Check</th><th>Status</th><th>Detail</th></tr></thead><tbody id="checks"><tr><td colspan="3">Loading...</td></tr></tbody></table></div>
+<div class="card" style="margin-top:12px"><h2>Operational issue candidates</h2><div id="issues" class="small">Loading...</div></div>
+<div class="small" id="updated" style="margin-top:14px"></div>
+</div>
+<script>
+async function load(){
+  try{
+    const r=await fetch('./data/operations-health.json',{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    const o=document.getElementById('overall');o.textContent=d.overall;o.className='pill '+d.overall;
+    session.textContent=d.session||'—';pass.textContent=d.summary?.pass??0;warn.textContent=d.summary?.warn??0;fail.textContent=d.summary?.fail??0;
+    checks.innerHTML=(d.checks||[]).map(x=>'<tr><td>'+x.id+'</td><td class="'+x.status+'"><b>'+x.status+'</b></td><td>'+String(x.detail||'')+'</td></tr>').join('');
+    const active=(d.issueCandidates||[]).filter(x=>x.active);
+    issues.innerHTML=active.length?active.map(x=>'<div class="'+(x.severity==='CRITICAL'?'FAIL':'WARN')+'"><b>'+x.key+'</b> · '+x.severity+' · '+x.body+'</div>').join(''):'No active automatic issue candidates.';
+    updated.textContent='Generated '+(d.generatedAt||'—')+' · Version '+(d.version||'—')+' · Auto execution OFF';
+  }catch(e){overall.textContent='UNAVAILABLE';overall.className='pill FAIL';checks.innerHTML='<tr><td colspan="3">'+e.message+'</td></tr>'}
+}
+load();setInterval(load,60000);
+</script></body></html>
