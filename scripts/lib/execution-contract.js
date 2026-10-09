@@ -58,7 +58,7 @@ function evaluatePlan(input,spec=DEFAULT_SPEC){
   }
 
   if(hit1===0){
-    return {status:'closed',e,hit1:0,hit2:0,ret:x1/e-1-cost,xeq:x1,end:end1,locked,firstExitType,secondExitType:null,reason:firstExitType};
+    return {status:'closed',e,hit1:0,hit2:0,ret:x1/e-1-cost,xeq:x1,end:end1,locked,firstExitType,firstExitAt:end1,secondExitType:null,secondExitAt:null,reason:firstExitType};
   }
 
   const j0=bars.findIndex(b=>String(b.date)===String(end1));
@@ -79,7 +79,7 @@ function evaluatePlan(input,spec=DEFAULT_SPEC){
     }
   }
   const gross=frac*(x1/e-1)+(1-frac)*(ex2/e-1);
-  return {status:'closed',e,hit1:1,hit2,ret:gross-cost,xeq:e*(1+gross),end:end2,locked:false,firstExitType,secondExitType,reason:secondExitType};
+  return {status:'closed',e,hit1:1,hit2,ret:gross-cost,xeq:e*(1+gross),end:end2,locked:false,firstExitType,firstExitAt:end1,secondExitType,secondExitAt:end2,reason:secondExitType};
 }
 
 module.exports={evaluatePlan,DEFAULT_SPEC};
