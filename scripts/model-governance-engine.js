@@ -45,8 +45,9 @@ check('DATA_FRESHNESS','Data freshness',freshness,12,stale?'WARN':'PASS',
   stale?'Decision data is stale'+(lag!=null?' by '+lag+' session(s).':'.'):'Decision data is not marked stale.');
 
 const ledgerRecordCount=ledger.records?.length||0;
-const replaySessionCount=n(replay.sessionCount)??(replay.sessions||[]).length;
-const trustHistoryExists=ledgerRecordCount>0||replaySessionCount>0;
+const replaySessionCount=(replay.sessions||[]).filter(x=>x.recordedForwardEligible===true).length;
+const totalPersistedReplaySessions=n(replay.sessionCount)??(replay.sessions||[]).length;
+const trustHistoryExists=ledgerRecordCount>0||totalPersistedReplaySessions>0;
 const chainOk=ledgerRecordCount>0&&ledger.chain?.status==='VERIFIED';
 check('LEDGER_CHAIN','Prediction ledger chain',chainOk?100:0,12,chainOk?'PASS':trustHistoryExists?'FAIL':'WAIT',
   chainOk?'Prediction ledger hash chain verifies.':trustHistoryExists?'Persisted trust history exists but the current ledger chain is not verified.':'No persisted ledger records yet.');
@@ -126,6 +127,7 @@ const payload={
   blockers,
   evidenceState:{
     replaySessions,
+    totalPersistedReplaySessions,
     walkForwardStatus:wf.status||null,
     validWalkForwardFolds:wf.coverage?.validFolds||0,
     outOfSampleResolved:wf.outOfSample?.resolved||0,
