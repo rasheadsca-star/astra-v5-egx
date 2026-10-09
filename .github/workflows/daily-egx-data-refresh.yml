@@ -26,6 +26,10 @@ on:
       - 'quant/**'
       - 'config/execution-contract.json'
       - 'config/output-ownership.json'
+      - 'config/data-source-registry.json'
+      - 'scripts/source-health-engine.js'
+      - 'scripts/source-health-validation.js'
+      - 'scripts/lib/source-health.js'
 
 concurrency:
   group: astra-state-writer
