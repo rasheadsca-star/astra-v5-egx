@@ -9,7 +9,8 @@ function read(p){return JSON.parse(fs.readFileSync(p,'utf8'))}
 function gitBlobSha(p){
   const b=fs.readFileSync(p);
   const h=crypto.createHash('sha1');
-  h.update(Buffer.from('blob '+b.length+'\\0'));
+  h.update(Buffer.from('blob '+b.length));
+  h.update(Buffer.from([0]));
   h.update(b);
   return h.digest('hex');
 }
