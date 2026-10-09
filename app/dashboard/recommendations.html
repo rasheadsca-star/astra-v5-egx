@@ -29,7 +29,9 @@
     .paper{margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:12px}.blockers{color:var(--muted);font-size:11px;margin-top:5px;line-height:1.55}
     .empty{border:1px dashed var(--line);padding:22px;text-align:center;color:var(--muted);border-radius:14px}.footer{text-align:center;color:var(--muted);font-size:11px;margin-top:24px;line-height:1.7}
     .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111e2f;border:1px solid var(--line);border-radius:12px;padding:12px 14px;max-width:90vw;z-index:20;box-shadow:0 12px 35px #0008;font-size:12px}
-    @media(max-width:720px){.metrics{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,1fr)}h1{font-size:22px}.wrap{padding-top:12px}}
+    .analyzer{background:linear-gradient(180deg,#0c2033,#0a1725);border:1px solid #2b5c7a;border-radius:15px;padding:14px;margin:15px 0}.analyzer h2{font-size:17px;margin:0 0 5px}.analyzer-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:11px}.analyzer input{flex:1;min-width:190px;background:#071421;color:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-weight:700;text-transform:uppercase}.analyzer button{border-color:#2b78a4;background:#0d3552}.ticker-link{font:inherit;font-size:22px;font-weight:900;letter-spacing:.03em;color:#8bd3ff;background:none!important;border:0!important;padding:0!important;text-decoration:underline;text-decoration-color:#315e79;text-underline-offset:4px;cursor:pointer}
+    .modal{position:fixed;inset:0;background:#02070dd9;z-index:50;display:flex;align-items:center;justify-content:center;padding:12px}.modal-card{width:min(1180px,100%);max-height:94vh;overflow:auto;background:#081421;border:1px solid #31506e;border-radius:18px;box-shadow:0 30px 100px #000b}.modal-head{position:sticky;top:0;z-index:4;display:flex;justify-content:space-between;gap:12px;align-items:center;background:#081421f4;border-bottom:1px solid var(--line);padding:13px 15px}.modal-title{font-size:20px;font-weight:900}.close{font-size:20px;min-width:42px}.modal-body{padding:14px}.ta-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-bottom:10px}.ta-kpi{background:#0c1b2b;border:1px solid #1f344b;border-radius:10px;padding:9px}.ta-kpi .v{font-size:15px}.chart-wrap{background:#050d16;border:1px solid #1f344b;border-radius:13px;padding:8px;overflow:hidden}.chart-wrap svg{width:100%;height:auto;display:block}.chart-controls{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin:10px 0;font-size:11px;color:#b9c9d8}.chart-controls label{display:flex;gap:5px;align-items:center}.analysis-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:10px;margin-top:10px}.analysis-box{background:#0b1928;border:1px solid #1f344b;border-radius:12px;padding:12px;line-height:1.6;font-size:12px}.levels{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.level{padding:5px 7px;border-radius:8px;background:#0a2130;border:1px solid #25485f;font-size:11px}.loading{text-align:center;padding:45px;color:var(--muted)}
+    @media(max-width:720px){.metrics{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,1fr)}h1{font-size:22px}.wrap{padding-top:12px}.ta-kpis{grid-template-columns:repeat(3,1fr)}.analysis-grid{grid-template-columns:1fr}.modal{padding:5px}.modal-card{max-height:98vh;border-radius:12px}}
     @media(display-mode:standalone){.install{display:none}}
   </style>
 </head>
@@ -47,11 +49,55 @@
     <div class="metric"><div class="k">Paper Ready</div><div class="v" id="paperCount" dir="ltr">—</div></div>
   </div>
 
+  <section class="analyzer">
+    <h2>تحليل سهم من خارج التوصيات</h2>
+    <div class="sub">اكتب كود أي سهم متاح في قاعدة ASTRA لفتح Technical Chart والتحليل الفني.</div>
+    <div class="analyzer-row">
+      <input id="stockInput" list="stockUniverse" placeholder="مثال: FWRY أو CIEB" autocomplete="off" spellcheck="false">
+      <datalist id="stockUniverse"></datalist>
+      <button id="analyzeBtn" type="button">تحليل السهم</button>
+    </div>
+  </section>
+
   <div class="section-title"><h2>التوصيات الحالية</h2><span class="count" id="updatedAt">—</span></div>
   <div id="cards" class="cards"><div class="empty">جارٍ تحميل التوصيات...</div></div>
   <div class="footer">ASTRA Decision Cockpit · Automatic Execution OFF<br>اضغط «تثبيت التطبيق» لإضافته إلى سطح المكتب أو الشاشة الرئيسية.</div>
 </div>
 <div id="toast" class="toast hide"></div>
+
+<div id="taModal" class="modal hide" role="dialog" aria-modal="true" aria-labelledby="taTitle">
+  <div class="modal-card">
+    <div class="modal-head">
+      <div><div class="modal-title" id="taTitle">Technical Chart</div><div class="sub" id="taSub">—</div></div>
+      <button class="close" id="taClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="taLoading" class="loading">جارٍ تحميل التحليل الفني...</div>
+      <div id="taContent" class="hide">
+        <div class="ta-kpis">
+          <div class="ta-kpi"><div class="k">آخر سعر</div><div class="v" id="taLast">—</div></div>
+          <div class="ta-kpi"><div class="k">SMA20</div><div class="v" id="taSma20">—</div></div>
+          <div class="ta-kpi"><div class="k">SMA50</div><div class="v" id="taSma50">—</div></div>
+          <div class="ta-kpi"><div class="k">RSI14</div><div class="v" id="taRsi">—</div></div>
+          <div class="ta-kpi"><div class="k">ATR%</div><div class="v" id="taAtr">—</div></div>
+          <div class="ta-kpi"><div class="k">Technical Score</div><div class="v" id="taScore">—</div></div>
+        </div>
+        <div class="chart-controls">
+          <label><input type="checkbox" id="showSma20" checked> SMA20</label>
+          <label><input type="checkbox" id="showSma50" checked> SMA50</label>
+          <label><input type="checkbox" id="showFib" checked> Fibonacci</label>
+          <label><input type="checkbox" id="showSr" checked> دعم/مقاومة</label>
+          <label><input type="checkbox" id="showChannel" checked> Price Channel</label>
+        </div>
+        <div class="chart-wrap"><svg id="taChart" viewBox="0 0 1000 520" aria-label="Technical price chart"></svg></div>
+        <div class="analysis-grid">
+          <div class="analysis-box"><b>التقييم الفني</b><div id="taAssessment" style="margin-top:7px"></div><div class="levels" id="taLevels"></div></div>
+          <div class="analysis-box"><b>السيناريو الفني</b><div id="taScenario" style="margin-top:7px"></div><div id="taAstraContext" style="margin-top:10px"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 'use strict';
@@ -78,7 +124,7 @@ function card(x,runtime){
   const prob=x.targetAchievement?.t1ProbabilityPct;
   const probStatus=x.targetAchievement?.status;
   return '<article class="card">'+
-    '<div class="head"><div class="ticker" dir="ltr">'+esc(symbol)+'</div><span class="badge '+cls+'">'+esc(status)+'</span></div>'+
+    '<div class="head"><button class="ticker-link" data-analyze="'+esc(symbol)+'" dir="ltr" title="فتح الشارت والتحليل">'+esc(symbol)+'</button><span class="badge '+cls+'">'+esc(status)+'</span></div>'+
     '<div class="score">Decision Score: <b>'+esc(x.finalDecisionScore??'—')+'</b>/100 · Grade: <b>'+esc(x.finalDecisionGrade??'—')+'</b> · Entry: '+esc(x.entryQuality??'—')+'</div>'+
     '<div class="grid">'+
       '<div class="cell"><div class="k">منطقة الدخول</div><div class="v">'+esc(entry)+'</div></div>'+
@@ -98,6 +144,136 @@ async function getJson(url){
   if(!r.ok)throw new Error(url+' HTTP '+r.status);
   return r.json();
 }
+
+let currentTA=null;
+
+async function loadTechnicalUniverse(){
+  try{
+    const idx=await getJson('/data/technical/index.json').catch(()=>getJson('/docs/data/technical/index.json')).catch(()=>getJson('/api/stock-analysis'));
+    const symbols=idx.symbols||[];
+    el('stockUniverse').innerHTML=symbols.map(x=>'<option value="'+esc(x.ticker)+'">'+esc(x.name||x.ticker)+'</option>').join('');
+  }catch(_){}
+}
+async function getTechnical(ticker){
+  const t=String(ticker||'').trim().toUpperCase();
+  if(!t)throw new Error('اكتب كود السهم أولاً');
+  return getJson('/data/technical/'+encodeURIComponent(t)+'.json')
+    .catch(()=>getJson('/docs/data/technical/'+encodeURIComponent(t)+'.json'))
+    .catch(()=>getJson('/api/stock-analysis?symbol='+encodeURIComponent(t)));
+}
+function smaSeries(bars,period){
+  return bars.map((b,i)=>{
+    if(i+1<period)return null;
+    const vals=bars.slice(i-period+1,i+1).map(x=>n(x.close)).filter(x=>x!=null);
+    return vals.length===period?vals.reduce((s,x)=>s+x,0)/period:null;
+  });
+}
+function renderTAChart(data){
+  const svg=el('taChart'),bars=(data.bars||[]).slice(-90);
+  if(!bars.length){svg.innerHTML='<text x="500" y="260" text-anchor="middle" fill="#90a3ba">No chart data</text>';return}
+  const W=1000,H=520,p={l:62,r:58,t:24,b:48};
+  const sma20=smaSeries(bars,20),sma50=smaSeries(bars,50);
+  let prices=[];
+  bars.forEach(b=>{[b.low,b.high,b.close,b.open].forEach(v=>{if(n(v)!=null)prices.push(n(v))})});
+  if(el('showFib').checked)(data.fibonacci?.levels||[]).forEach(x=>prices.push(n(x.price)));
+  if(el('showSr').checked)[...(data.supportResistance?.supports||[]),...(data.supportResistance?.resistances||[])].forEach(x=>prices.push(n(x.price)));
+  if(el('showChannel').checked&&data.channel)[data.channel.upperStart,data.channel.upperEnd,data.channel.lowerStart,data.channel.lowerEnd].forEach(x=>prices.push(n(x)));
+  prices=prices.filter(x=>x!=null);
+  let min=Math.min(...prices),max=Math.max(...prices);const pad=(max-min||1)*.07;min-=pad;max+=pad;
+  const x=i=>p.l+i*(W-p.l-p.r)/Math.max(1,bars.length-1);
+  const y=v=>p.t+(max-v)*(H-p.t-p.b)/(max-min);
+  let out='<rect x="0" y="0" width="'+W+'" height="'+H+'" fill="#050d16"/>';
+  for(let i=0;i<=5;i++){
+    const yy=p.t+i*(H-p.t-p.b)/5,val=max-i*(max-min)/5;
+    out+='<line x1="'+p.l+'" y1="'+yy+'" x2="'+(W-p.r)+'" y2="'+yy+'" stroke="#173047" stroke-width="1"/>'+
+      '<text x="'+(p.l-8)+'" y="'+(yy+4)+'" text-anchor="end" fill="#7f96aa" font-size="11">'+esc(fmt(val,2))+'</text>';
+  }
+  const bw=Math.max(3,Math.min(9,(W-p.l-p.r)/bars.length*.58));
+  bars.forEach((b,i)=>{
+    const o=n(b.open)??n(b.close),c=n(b.close),h=n(b.high)??c,l=n(b.low)??c,xx=x(i),up=c>=o,col=up?'#43d17f':'#ff6b6b';
+    out+='<line x1="'+xx+'" y1="'+y(h)+'" x2="'+xx+'" y2="'+y(l)+'" stroke="'+col+'" stroke-width="1.4"/>';
+    const yy=Math.min(y(o),y(c)),hh=Math.max(1.6,Math.abs(y(o)-y(c)));
+    out+='<rect x="'+(xx-bw/2)+'" y="'+yy+'" width="'+bw+'" height="'+hh+'" rx="1" fill="'+col+'" opacity=".9"/>';
+  });
+  function poly(vals,col,width=1.7,dash=''){
+    const pts=vals.map((v,i)=>v==null?null:(x(i)+','+y(v))).filter(Boolean).join(' ');
+    if(pts)out+='<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="'+width+'" '+(dash?'stroke-dasharray="'+dash+'"':'')+' opacity=".95"/>';
+  }
+  if(el('showSma20').checked)poly(sma20,'#4bb8ff',1.8);
+  if(el('showSma50').checked)poly(sma50,'#f5c451',1.8);
+  if(el('showFib').checked)(data.fibonacci?.levels||[]).forEach((lv,i)=>{
+    const yy=y(n(lv.price));out+='<line x1="'+p.l+'" y1="'+yy+'" x2="'+(W-p.r)+'" y2="'+yy+'" stroke="#7c5cff" stroke-width="1" stroke-dasharray="5 6" opacity=".5"/>'+
+      '<text x="'+(W-p.r+5)+'" y="'+(yy+3)+'" fill="#9d8cff" font-size="9">'+esc(String(lv.ratio))+'</text>';
+  });
+  if(el('showSr').checked){
+    (data.supportResistance?.supports||[]).forEach(lv=>{const yy=y(n(lv.price));out+='<line x1="'+p.l+'" y1="'+yy+'" x2="'+(W-p.r)+'" y2="'+yy+'" stroke="#39b97a" stroke-width="1.2" stroke-dasharray="8 5" opacity=".75"/>'});
+    (data.supportResistance?.resistances||[]).forEach(lv=>{const yy=y(n(lv.price));out+='<line x1="'+p.l+'" y1="'+yy+'" x2="'+(W-p.r)+'" y2="'+yy+'" stroke="#ec6c75" stroke-width="1.2" stroke-dasharray="8 5" opacity=".75"/>'});
+  }
+  if(el('showChannel').checked&&data.channel){
+    const start=Math.max(0,bars.length-(n(data.channel.lookback)||60)),xs=x(start),xe=x(bars.length-1);
+    for(const pair of [['upperStart','upperEnd'],['centerStart','centerEnd'],['lowerStart','lowerEnd']]){
+      const a=n(data.channel[pair[0]]),b=n(data.channel[pair[1]]);
+      if(a!=null&&b!=null)out+='<line x1="'+xs+'" y1="'+y(a)+'" x2="'+xe+'" y2="'+y(b)+'" stroke="#35d0d0" stroke-width="1.2" '+(pair[0]==='centerStart'?'':'stroke-dasharray="6 5"')+' opacity=".72"/>';
+    }
+  }
+  const ticks=[0,Math.floor((bars.length-1)/2),bars.length-1];
+  ticks.forEach(i=>{const date=bars[i]?.date||'';out+='<text x="'+x(i)+'" y="'+(H-18)+'" text-anchor="middle" fill="#7f96aa" font-size="10">'+esc(date.slice(5))+'</text>'});
+  svg.innerHTML=out;
+}
+function renderTA(data){
+  currentTA=data;
+  el('taTitle').textContent=(data.ticker||'—')+' · '+(data.name||'Technical Analysis');
+  el('taSub').textContent='جلسة '+(data.session||'—')+(data.delayed?' · Delayed data':'')+' · Research only';
+  el('taLast').textContent=fmt(data.indicators?.last,3);
+  el('taSma20').textContent=fmt(data.indicators?.sma20,3);
+  el('taSma50').textContent=fmt(data.indicators?.sma50,3);
+  el('taRsi').textContent=fmt(data.indicators?.rsi14,1);
+  el('taAtr').textContent=data.indicators?.atrPct!=null?fmt(data.indicators.atrPct,2)+'%':'—';
+  el('taScore').textContent=data.technicalAssessment?.score!=null?fmt(data.technicalAssessment.score,1)+'/100':'—';
+  const a=data.technicalAssessment||{};
+  el('taAssessment').innerHTML='<div><b>'+esc(a.outlook||'—')+'</b></div><div class="muted">'+esc((a.reasons||[]).join(' · ')||'لا توجد أسباب كافية')+'</div>';
+  const su=data.supportResistance?.supports||[],re=data.supportResistance?.resistances||[];
+  el('taLevels').innerHTML=[
+    ...su.map(x=>'<span class="level good">S '+esc(fmt(x.price,3))+' · '+esc(x.touches||0)+' touch</span>'),
+    ...re.map(x=>'<span class="level bad">R '+esc(fmt(x.price,3))+' · '+esc(x.touches||0)+' touch</span>')
+  ].join('');
+  const sc=data.scenario||{};
+  el('taScenario').innerHTML=
+    'Bullish trigger: <b dir="ltr">'+esc(fmt(sc.bullishTrigger,3))+'</b> → objective <b dir="ltr">'+esc(fmt(sc.bullishObjective,3))+'</b><br>'+
+    'Neutral range: <b dir="ltr">'+esc(fmt(sc.neutralRangeLow,3))+' – '+esc(fmt(sc.neutralRangeHigh,3))+'</b><br>'+
+    'Bearish trigger: <b dir="ltr">'+esc(fmt(sc.bearishTrigger,3))+'</b> → objective <b dir="ltr">'+esc(fmt(sc.bearishObjective,3))+'</b><br>'+
+    '<span class="muted">مستويات شرطية فنية وليست توقعات مضمونة.</span>';
+  const ctx=data.astraContext;
+  el('taAstraContext').innerHTML=ctx
+    ?'<b>ASTRA Context</b><br>Decision Score: '+esc(ctx.finalDecisionScore??'—')+' · Grade: '+esc(ctx.grade||'—')+' · Entry: '+esc(ctx.entryQuality||'—')+' · Gate: '+esc(ctx.decisionGate?.pass?'PASS':'BLOCKED')+
+      '<br>Plan: '+esc(fmt(ctx.entryLow,3))+' – '+esc(fmt(ctx.entryHigh,3))+' · Stop '+esc(fmt(ctx.stop,3))+' · T1 '+esc(fmt(ctx.target1,3))+' · T2 '+esc(fmt(ctx.target2,3))
+    :'<b>ASTRA Context</b><br><span class="muted">السهم خارج التوصيات الحالية؛ المعروض تحليل فني مستقل فقط.</span>';
+  renderTAChart(data);
+}
+async function openAnalysis(ticker){
+  const t=String(ticker||'').trim().toUpperCase();
+  if(!t){showToast('اكتب كود السهم أولاً');return}
+  el('taModal').classList.remove('hide');document.body.style.overflow='hidden';
+  el('taLoading').classList.remove('hide');el('taContent').classList.add('hide');
+  el('taTitle').textContent=t+' · جاري التحليل...';el('taSub').textContent='جارٍ تحميل البيانات الفنية';
+  try{
+    const data=await getTechnical(t);
+    if(data.success===false)throw new Error(data.error||'تعذر التحليل');
+    renderTA(data);
+    el('taLoading').classList.add('hide');el('taContent').classList.remove('hide');
+  }catch(e){
+    el('taLoading').textContent='تعذر تحليل '+t+': '+e.message;
+  }
+}
+function closeAnalysis(){el('taModal').classList.add('hide');document.body.style.overflow=''}
+['showSma20','showSma50','showFib','showSr','showChannel'].forEach(id=>el(id)?.addEventListener('change',()=>currentTA&&renderTAChart(currentTA)));
+el('taClose').addEventListener('click',closeAnalysis);
+el('taModal').addEventListener('click',e=>{if(e.target===el('taModal'))closeAnalysis()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAnalysis()});
+document.addEventListener('click',e=>{const b=e.target.closest?.('[data-analyze]');if(b)openAnalysis(b.dataset.analyze)});
+el('analyzeBtn').addEventListener('click',()=>openAnalysis(el('stockInput').value));
+el('stockInput').addEventListener('keydown',e=>{if(e.key==='Enter')openAnalysis(el('stockInput').value)});
+
 async function load(){
   el('refreshBtn').disabled=true;
   try{
@@ -140,6 +316,7 @@ el('installBtn').addEventListener('click',async()=>{
 });
 if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true)el('installBtn').classList.add('hide');
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/recommendations-sw.js').catch(()=>{}));
+loadTechnicalUniverse();
 load();
 setInterval(load,60000);
 </script>
