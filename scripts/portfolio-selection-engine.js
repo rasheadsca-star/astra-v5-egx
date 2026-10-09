@@ -16,6 +16,8 @@ if(!d) throw new Error('decision cockpit missing');
 
 const maxPositions=5;
 const maxSameFamily=3;
+const maxSameSector=2;
+const maxPairCorrelation=0.85;
 const minFinalScore=62;
 const lowLiquidityCapPct=15;
 const maxSingleWeightPct=30;
@@ -58,14 +60,25 @@ const universe=[
 
 const selected=[];
 const familyCounts=new Map();
+const sectorCounts=new Map();
+const diversificationRejected=[];
 
 for(const x of universe){
   if(selected.length>=maxPositions) break;
   const fk=familyKey(x);
   const count=familyCounts.get(fk)||0;
-  if(count>=maxSameFamily) continue;
+  if(count>=maxSameFamily){diversificationRejected.push({ticker:x.ticker,reason:'ENGINE_FAMILY_CONCENTRATION'});continue;}
+  const sector=x.sector||null;
+  if(sector && (sectorCounts.get(sector)||0)>=maxSameSector){diversificationRejected.push({ticker:x.ticker,reason:'SECTOR_CONCENTRATION',sector});continue;}
+  const correlatedWith=selected.find(s=>{
+    const peer=x.maxOpportunityCorrelationPeer===s.ticker ? n(x.maxOpportunityCorrelation) : 
+      (s.maxOpportunityCorrelationPeer===x.ticker ? n(s.maxOpportunityCorrelation) : null);
+    return peer!=null && peer>=maxPairCorrelation;
+  });
+  if(correlatedWith){diversificationRejected.push({ticker:x.ticker,reason:'HIGH_CORRELATION',peer:correlatedWith.ticker});continue;}
   selected.push(x);
   familyCounts.set(fk,count+1);
+  if(sector)sectorCounts.set(sector,(sectorCounts.get(sector)||0)+1);
 }
 
 let rawSum=selected.reduce((s,x)=>s+Math.max(1,n(x.portfolioSelectionScore)||1),0);
@@ -109,6 +122,10 @@ const basket=provisional.map((x,i)=>{
     rrT2:n(x.rrT2),
     contextScore:n(x.contextScore),
     liquidityScore:n(x.liquidityContextScore),
+    sector:x.sector||null,
+    sectorStrengthScore:n(x.sectorStrengthScore),
+    maxOpportunityCorrelation:n(x.maxOpportunityCorrelation),
+    maxOpportunityCorrelationPeer:x.maxOpportunityCorrelationPeer||null,
     t1ProbabilityPct:n(x.targetAchievement?.t1ProbabilityPct),
     t2ProbabilityPct:n(x.targetAchievement?.t2ProbabilityPct),
     probabilityStatus:x.targetAchievement?.status||'INSUFFICIENT_DATA',
@@ -126,11 +143,16 @@ const basket=provisional.map((x,i)=>{
 const excluded=universe
   .filter(x=>!basket.some(b=>b.ticker===x.ticker))
   .slice(0,20)
-  .map(x=>({
-    ticker:x.ticker,
-    score:x.portfolioSelectionScore,
-    reason:selected.length>=maxPositions?'MAX_POSITIONS_OR_DIVERSIFICATION_LIMIT':'DIVERSIFICATION_LIMIT'
-  }));
+  .map(x=>{
+    const dr=diversificationRejected.find(r=>r.ticker===x.ticker);
+    return {
+      ticker:x.ticker,
+      score:x.portfolioSelectionScore,
+      reason:dr?.reason||(selected.length>=maxPositions?'MAX_POSITIONS':'DIVERSIFICATION_LIMIT'),
+      peer:dr?.peer||null,
+      sector:dr?.sector||x.sector||null
+    };
+  });
 
 d.portfolioSelectionEngine={
   version:'portfolio-selection/v1',
@@ -141,12 +163,15 @@ d.portfolioSelectionEngine={
   policy:{
     maxPositions,
     maxSameEngineFamilySignature:maxSameFamily,
+    maxSameSector,
+    maxPairCorrelation,
     minFinalDecisionScore:minFinalScore,
     maxSingleWeightPct,
     lowLiquidityCapPct,
     minSingleWeightPct,
     marketExposureScale:exposureScale,
-    sectorConstraint:'DISABLED_UNTIL_VERIFIED_SECTOR_TAXONOMY'
+    sectorConstraint:'CONTROLLED_MAP_MAX_2_PER_SECTOR',
+    correlationConstraint:'MAX_PAIR_CORRELATION_0_85_WHEN_OBSERVED'
   },
   counts:{
     eligibleUniverse:universe.length,
@@ -154,7 +179,7 @@ d.portfolioSelectionEngine={
   },
   basket,
   excluded,
-  note:'Research basket only. Weights are relative research weights, not order sizes. Sector diversification is intentionally disabled until verified sector metadata exists.'
+  note:'Research basket only. Controlled sector mappings limit sector concentration; observed high daily-return correlation also blocks duplicate risk. Weights are research weights, not order sizes.'
 };
 
 const basketTickers=new Set(basket.map(x=>x.ticker));
