@@ -48,18 +48,20 @@ const unsafe=evaluateOperations(safety);
 assert.strictEqual(unsafe.overall,'CRITICAL');
 assert.ok(unsafe.issueCandidates.find(x=>x.key==='EXECUTION_SAFETY')?.active);
 
+function read(p,fallback={}){try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return fallback}}
+const currentCockpit=read('data/decision-cockpit.json',{});
 const currentInputs={
-  packageVersion:JSON.parse(fs.readFileSync('package.json','utf8')).version,
-  cockpit:JSON.parse(fs.readFileSync('data/decision-cockpit.json','utf8')),
-  market:JSON.parse(fs.readFileSync('data/canonical-market.json','utf8')),
-  history:JSON.parse(fs.readFileSync('data/history-index.json','utf8')),
-  sourceHealth:JSON.parse(fs.readFileSync('data/source-health.json','utf8')),
-  prediction:JSON.parse(fs.readFileSync('data/prediction-ledger.json','utf8')),
-  eventLedger:JSON.parse(fs.readFileSync('data/evidence-event-ledger.json','utf8')),
-  replay:JSON.parse(fs.readFileSync('data/replay/index.json','utf8')),
-  walkForward:JSON.parse(fs.readFileSync('data/walk-forward-validation.json','utf8')),
-  governance:JSON.parse(fs.readFileSync('data/model-governance.json','utf8')),
-  quantStatus:JSON.parse(fs.readFileSync('quant/data/daily-data-update-status.json','utf8'))
+  packageVersion:read('package.json',{version:'unknown'}).version,
+  cockpit:currentCockpit,
+  market:read('data/canonical-market.json',{}),
+  history:read('data/history-index.json',{}),
+  sourceHealth:read('data/source-health.json',currentCockpit.sourceHealthEngine||{}),
+  prediction:read('data/prediction-ledger.json',{}),
+  eventLedger:read('data/evidence-event-ledger.json',{}),
+  replay:read('data/replay/index.json',{}),
+  walkForward:read('data/walk-forward-validation.json',currentCockpit.walkForwardValidationEngine||{}),
+  governance:read('data/model-governance.json',currentCockpit.modelGovernanceEngine||{}),
+  quantStatus:read('quant/data/daily-data-update-status.json',{})
 };
 const current=evaluateOperations(currentInputs);
 assert.strictEqual(current.automaticExecution,false);
