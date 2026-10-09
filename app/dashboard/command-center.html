@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V5.9 Decision Cockpit</title>
+<title>ASTRA V5.10 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -48,7 +48,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V5.9 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V5.10 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -58,7 +58,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div><b>V5.9 LIVE UI</b> · Final Score + Probability Calibration + Decision Gate + Research Basket</div>
+  <div><b>V5.10 LIVE UI</b> · Daily Brief + Final Score + Probability Calibration + Decision Gate + Research Basket</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -71,7 +71,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.9 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value">ASTRA V5.10 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -81,6 +81,36 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+
+<div class="card" style="border:1px solid #3b82f6">
+  <div class="v52-header">
+    <div>
+      <h2 id="briefTitle" style="margin:0">Daily Decision Brief — V5.10</h2>
+      <div class="small" id="briefSub">Best setup, top 3, basket changes and today's main risks.</div>
+    </div>
+    <span class="badge ready" id="briefSession">-</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="briefBestLabel">Best Setup</div><div class="value" id="briefBest">-</div></div>
+    <div class="metric"><div class="label" id="briefScoreLabel">Final Score</div><div class="value" id="briefScore">-</div></div>
+    <div class="metric"><div class="label" id="briefGateLabel">Gate</div><div class="value" id="briefGate">-</div></div>
+    <div class="metric"><div class="label" id="briefRRLabel">R:R T2</div><div class="value" id="briefRR">-</div></div>
+    <div class="metric"><div class="label" id="briefBreadthLabel">Market Breadth</div><div class="value" id="briefBreadth">-</div></div>
+    <div class="metric"><div class="label" id="briefExposureLabel">Exposure Scale</div><div class="value" id="briefExposure">-</div></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="hitem">
+      <div class="k" id="briefTop3Label">Top 3</div>
+      <div id="briefTop3" style="margin-top:8px"></div>
+    </div>
+    <div class="hitem">
+      <div class="k" id="briefChangesLabel">Changes vs Previous Session</div>
+      <div id="briefChanges" style="margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="note" id="briefRisks" style="margin-top:12px"></div>
+</div>
 
 <div class="card">
   <div class="v52-header">
@@ -324,7 +354,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V5.9 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
+    "ASTRA V5.10 Decision Cockpit":"لوحة قرارات ASTRA V5.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -501,6 +531,36 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const db=d.dailyDecisionBrief||{}, dh=db.headline||{}, dc=db.changes||{}, dm=db.market||{};
+    document.getElementById('briefTitle').innerText=uiLang==='ar'?'ملخص القرار اليومي — V5.10':'Daily Decision Brief — V5.10';
+    document.getElementById('briefSub').innerText=uiLang==='ar'?'أفضل فرصة، أفضل 3 فرص، تغييرات السلة، وأهم مخاطر اليوم.':'Best setup, top 3, basket changes and today\'s main risks.';
+    document.getElementById('briefSession').innerText=db.session||'-';
+    document.getElementById('briefBestLabel').innerText=uiLang==='ar'?'أفضل فرصة':'Best Setup';
+    document.getElementById('briefScoreLabel').innerText=uiLang==='ar'?'الدرجة النهائية':'Final Score';
+    document.getElementById('briefGateLabel').innerText=uiLang==='ar'?'البوابة':'Gate';
+    document.getElementById('briefRRLabel').innerText=uiLang==='ar'?'R:R للهدف 2':'R:R T2';
+    document.getElementById('briefBreadthLabel').innerText=uiLang==='ar'?'اتساع السوق':'Market Breadth';
+    document.getElementById('briefExposureLabel').innerText=uiLang==='ar'?'مقياس التعرض':'Exposure Scale';
+    document.getElementById('briefTop3Label').innerText=uiLang==='ar'?'أفضل 3 فرص':'Top 3';
+    document.getElementById('briefChangesLabel').innerText=uiLang==='ar'?'التغييرات عن الجلسة السابقة':'Changes vs Previous Session';
+    document.getElementById('briefBest').innerText=dh.ticker||'-';
+    document.getElementById('briefScore').innerText=dh.finalDecisionScore!=null?dh.finalDecisionScore+'/100 · '+(dh.grade||'-'):'-';
+    document.getElementById('briefGate').innerText=ta(dh.gateStatus||'-');
+    document.getElementById('briefRR').innerText=dh.rrT2??'-';
+    document.getElementById('briefBreadth').innerText=dm.breadthPct!=null?dm.breadthPct+'%':'-';
+    document.getElementById('briefExposure').innerText=dm.exposureScale!=null?Math.round(dm.exposureScale*100)+'%':'-';
+    document.getElementById('briefTop3').innerHTML=(db.top3||[]).length
+      ?(db.top3||[]).map(x=>'<div style="margin:5px 0"><b>'+esc(x.rank)+'. '+esc(x.ticker)+'</b> · '+esc(x.finalDecisionScore??'-')+'/100 · '+esc(x.grade||'-')+' · '+esc(ta(x.entryQuality||'UNKNOWN'))+'</div>').join('')
+      :esc(uiLang==='ar'?'لا توجد فرص متاحة.':'No setups available.');
+    const entered=dc.entered||[], exited=dc.exited||[], retained=dc.retained||[];
+    document.getElementById('briefChanges').innerHTML=
+      '<div><b>'+esc(uiLang==='ar'?'دخلت السلة: ':'Entered basket: ')+'</b>'+esc(entered.length?entered.join(', '):(uiLang==='ar'?'لا شيء':'None'))+'</div>'+
+      '<div><b>'+esc(uiLang==='ar'?'خرجت من السلة: ':'Exited basket: ')+'</b>'+esc(exited.length?exited.join(', '):(uiLang==='ar'?'لا شيء':'None'))+'</div>'+
+      '<div><b>'+esc(uiLang==='ar'?'مستمرة: ':'Retained: ')+'</b>'+esc(retained.length?retained.join(', '):(uiLang==='ar'?'لا شيء':'None'))+'</div>';
+    const riskMap={STALE_DATA:'بيانات قديمة',WEAK_MARKET:'السوق ضعيف',WEAK_BREADTH:'اتساع السوق ضعيف',DRIFT_GUARD_ON:'حارس الانحراف مفعل',NO_GATE_PASSED_SETUP:'لا توجد فرصة اجتازت بوابة القرار',PROBABILITY_NOT_CALIBRATED:'الاحتمالات لم تُعاير بعد'};
+    const risks=db.risks||[];
+    document.getElementById('briefRisks').innerHTML='<b>'+esc(uiLang==='ar'?'مخاطر اليوم: ':'Today\'s risks: ')+'</b>'+
+      esc(risks.length?risks.map(x=>uiLang==='ar'?(riskMap[x]||x):x.replaceAll('_',' ')).join(' · '):(uiLang==='ar'?'لا توجد تحذيرات رئيسية':'No major warnings'));
     const ps=d.portfolioSelectionEngine||{}, pbasket=ps.basket||[];
     document.getElementById('portfolioTitle').innerText=uiLang==='ar'?'سلة الفرص البحثية — V5.9':'Research Basket — V5.9';
     document.getElementById('portfolioNote').innerText=uiLang==='ar'
