@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>ASTRA V6.6 Decision Cockpit</title>
+<title>ASTRA V6.7 Decision Cockpit</title>
 <style>
 body{font-family:Arial,sans-serif;background:#070d18;color:#fff;padding:30px}
 .card{background:#162033;border-radius:14px;padding:22px;margin:16px 0}
@@ -77,7 +77,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </head>
 <body>
 <div class="topbar">
-  <h1 id="appTitle">ASTRA V6.6 Decision Cockpit</h1>
+  <h1 id="appTitle">ASTRA V6.7 Decision Cockpit</h1>
   <div class="lang-box">
     <label for="languageSelect" id="languageLabel">Language</label>
     <select id="languageSelect" aria-label="Display language">
@@ -87,7 +87,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
   </div>
 </div>
 <div class="release-banner">
-  <div id="releaseText"><b>V6.6 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
+  <div id="releaseText"><b>V6.7 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
   <div class="small">Research only · Automatic execution OFF</div>
 </div>
 
@@ -100,7 +100,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 <div class="grid">
   <div class="metric"><div class="label">Market</div><div class="value">EGX</div></div>
-  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.6 ENGINE</div></div>
+  <div class="metric"><div class="label">Engine</div><div class="value" id="engineVersion">ASTRA V6.7 ENGINE</div></div>
   <div class="metric"><div class="label">Data Mode</div><div class="value" id="mode">-</div></div>
   <div class="metric"><div class="label">Live Feed</div><div class="value" id="live">-</div></div>
   <div class="metric"><div class="label">Entry Opportunities</div><div class="value" id="entryCount">-</div></div>
@@ -120,6 +120,25 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 
 
 
+
+<div class="card" style="border:1px solid #0ea5e9">
+  <div class="v52-header">
+    <div>
+      <h2 id="sourceTitle" style="margin:0">Data Source Integrity — V6.7</h2>
+      <div class="small" id="sourceNote">Coverage uses an explicit active-universe denominator. Stale symbols are never silently reclassified as dormant.</div>
+    </div>
+    <span class="badge warn" id="sourceQuorum">CHECKING</span>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="metric"><div class="label" id="sourceCoverageLabel">Active Coverage</div><div class="value" id="sourceCoverage">-</div></div>
+    <div class="metric"><div class="label" id="sourceCurrentLabel">Current Verified</div><div class="value" id="sourceCurrent">-</div></div>
+    <div class="metric"><div class="label" id="sourceStaleLabel">Active Stale</div><div class="value" id="sourceStale">-</div></div>
+    <div class="metric"><div class="label" id="sourceFailedLabel">Source Failed</div><div class="value" id="sourceFailed">-</div></div>
+    <div class="metric"><div class="label" id="sourceInactiveLabel">Explicit Inactive</div><div class="value" id="sourceInactive">-</div></div>
+    <div class="metric"><div class="label" id="sourceMismatchLabel">Cross-Store Mismatch</div><div class="value" id="sourceMismatch">-</div></div>
+  </div>
+  <div class="small" id="sourceDetail" style="margin-top:12px"></div>
+</div>
 
 <div class="card" style="border:1px solid #06b6d4">
   <div class="v52-header">
@@ -594,7 +613,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 const I18N={
   ar:{
     "Language":"اللغة",
-    "ASTRA V6.6 Decision Cockpit":"لوحة قرارات ASTRA V6.6",
+    "ASTRA V6.7 Decision Cockpit":"لوحة قرارات ASTRA V6.7",
     "Engine Status":"حالة المحرك",
     "Checking...":"جاري الفحص...",
     "Loading data health...":"جاري تحميل حالة البيانات...",
@@ -665,13 +684,13 @@ function applyLanguage(lang,reloadDynamic=true){
   document.getElementById('languageLabel').textContent=uiLang==='ar'?'اللغة':'Language';
   document.querySelectorAll('h1,h2,.label,th,.small').forEach(translateLeaf);
   const appTitle=document.getElementById('appTitle');
-  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.6':'ASTRA V6.6 Decision Cockpit';
+  if(appTitle) appTitle.textContent=uiLang==='ar'?'لوحة قرارات ASTRA V6.7':'ASTRA V6.7 Decision Cockpit';
   const releaseText=document.getElementById('releaseText');
-  if(releaseText) releaseText.innerHTML='<b>V6.6 TRUST UI</b> · '+(uiLang==='ar'
+  if(releaseText) releaseText.innerHTML='<b>V6.7 TRUST UI</b> · '+(uiLang==='ar'
     ?'Risk-State Override + حوكمة النموذج + Walk-Forward + Replay Archive + Prediction Ledger'
     :'Model Governance + Reliability Score + Walk-Forward Validation + Replay Archive + Prediction Ledger');
   const engineVersion=document.getElementById('engineVersion');
-  if(engineVersion) engineVersion.textContent='ASTRA V6.6 ENGINE';
+  if(engineVersion) engineVersion.textContent='ASTRA V6.7 ENGINE';
   document.querySelectorAll('.v52-k').forEach(translateLeaf);
   if(reloadDynamic){
     loadReplayIndex();
@@ -1022,10 +1041,34 @@ async function loadV52(){
     document.getElementById('eqExtended').innerText=eq.EXTENDED??0;
     document.getElementById('eqChase').innerText=eq.CHASE_RISK??0;
     document.getElementById('eqInvalid').innerText=eq.INVALIDATED??0;
+    const sh=d.sourceHealthEngine||{}, shc=sh.coverage||{}, shi=sh.independentVerification||{}, shx=sh.crossStoreConsistency||{};
+    document.getElementById('sourceTitle').innerText=uiLang==='ar'?'سلامة مصادر البيانات — V6.7':'Data Source Integrity — V6.7';
+    document.getElementById('sourceNote').innerText=uiLang==='ar'
+      ?'التغطية تستخدم مقامًا صريحًا للأسهم النشطة. السهم القديم لا يُصنف خاملًا لمجرد أنه قديم.'
+      :'Coverage uses an explicit active-universe denominator. Stale symbols are never silently reclassified as dormant.';
+    document.getElementById('sourceCoverageLabel').innerText=uiLang==='ar'?'تغطية الأسهم النشطة':'Active Coverage';
+    document.getElementById('sourceCurrentLabel').innerText=uiLang==='ar'?'حالي ومتحقق':'Current Verified';
+    document.getElementById('sourceStaleLabel').innerText=uiLang==='ar'?'نشط لكن قديم':'Active Stale';
+    document.getElementById('sourceFailedLabel').innerText=uiLang==='ar'?'فشل المصدر':'Source Failed';
+    document.getElementById('sourceInactiveLabel').innerText=uiLang==='ar'?'غير نشط بدليل صريح':'Explicit Inactive';
+    document.getElementById('sourceMismatchLabel').innerText=uiLang==='ar'?'اختلاف بين المخازن':'Cross-Store Mismatch';
+    document.getElementById('sourceCoverage').innerText=shc.activeCoveragePct!=null?shc.activeCoveragePct+'%':'-';
+    document.getElementById('sourceCurrent').innerText=shc.currentVerifiedSymbols??'-';
+    document.getElementById('sourceStale').innerText=shc.staleActiveSymbols??'-';
+    document.getElementById('sourceFailed').innerText=shc.sourceFailedSymbols??'-';
+    document.getElementById('sourceInactive').innerText=shc.explicitInactiveSymbols??'-';
+    document.getElementById('sourceMismatch').innerText=(shx.canonicalCurrentButQuantStale||[]).length;
+    document.getElementById('sourceQuorum').innerText=shi.quorumMet?(uiLang==='ar'?'QUORUM متاح':'QUORUM READY'):(uiLang==='ar'?'مصدر مستقل غير متاح':'NO INDEPENDENT QUORUM');
+    document.getElementById('sourceQuorum').className='badge '+(shi.quorumMet?'ready':'warn');
+    const staleList=(sh.lists?.activeStale||[]).slice(0,12).join(', ');
+    const failedList=(sh.lists?.sourceFailed||[]).join(', ');
+    document.getElementById('sourceDetail').innerText=uiLang==='ar'
+      ?('الأسهم القديمة النشطة: '+(staleList||'لا يوجد')+' · فشل مصدر: '+(failedList||'لا يوجد')+' · Yahoo الآلي غير مفعل ما لم توجد موافقة صريحة.')
+      :('Active stale: '+(staleList||'none')+' · Source failed: '+(failedList||'none')+' · Automated Yahoo access remains disabled unless expressly permitted.');
     const gov=d.modelGovernanceEngine||{}, gr=gov.reliability||{}, ges=gov.evidenceState||{}, grg=gov.releaseGate||{};
     const tierAr={HIGH:'مرتفع',GOOD:'جيد',BUILDING:'قيد البناء',LOW:'منخفض'};
-    const checkAr={DATA_INTEGRITY:'سلامة البيانات الذرية',DATA_FRESHNESS:'حداثة البيانات',LEDGER_CHAIN:'سلسلة سجل التوقعات',REPLAY_COVERAGE:'تغطية Replay',WALK_FORWARD:'التحقق المتقدم زمنيًا',PROBABILITY_EVIDENCE:'أدلة الاحتمالات المستقبلية',OUTCOME_SAMPLE:'حجم عينة النتائج',SECTOR_COVERAGE:'تغطية تصنيف القطاعات',MONITORING_SAFETY:'أمان المراقبة',MODEL_DRIFT:'حارس الانحراف'};
-    const blockerAr={ATOMIC_DATA_INTEGRITY_NOT_VERIFIED:'سلامة البيانات الذرية غير مؤكدة',LEDGER_CHAIN_NOT_VERIFIED:'سلسلة سجل التوقعات غير مؤكدة',REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD:'تغطية Replay أقل من أول Fold',MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED:'لم يتم إثبات Walk-Forward متعدد الـ folds بعد',FORWARD_PROBABILITY_SAMPLE_SMALL:'عينة الاحتمالات المستقبلية صغيرة',STALE_DATA:'البيانات قديمة',DRIFT_GUARD_ACTIVE:'حارس الانحراف مفعل'};
+    const checkAr={DATA_INTEGRITY:'سلامة البيانات الذرية',DATA_FRESHNESS:'حداثة البيانات',SOURCE_COVERAGE:'تغطية المصادر',SOURCE_QUORUM:'استقلالية المصادر',LEDGER_CHAIN:'سلسلة سجل التوقعات',REPLAY_COVERAGE:'تغطية Replay',WALK_FORWARD:'التحقق المتقدم زمنيًا',PROBABILITY_EVIDENCE:'أدلة الاحتمالات المستقبلية',OUTCOME_SAMPLE:'حجم عينة النتائج',SECTOR_COVERAGE:'تغطية تصنيف القطاعات',MONITORING_SAFETY:'أمان المراقبة',MODEL_DRIFT:'حارس الانحراف'};
+    const blockerAr={ATOMIC_DATA_INTEGRITY_NOT_VERIFIED:'سلامة البيانات الذرية غير مؤكدة',LEDGER_CHAIN_NOT_VERIFIED:'سلسلة سجل التوقعات غير مؤكدة',REPLAY_COVERAGE_BELOW_FIRST_WALK_FORWARD_FOLD:'تغطية Replay أقل من أول Fold',MULTI_FOLD_WALK_FORWARD_NOT_ESTABLISHED:'لم يتم إثبات Walk-Forward متعدد الـ folds بعد',FORWARD_PROBABILITY_SAMPLE_SMALL:'عينة الاحتمالات المستقبلية صغيرة',STALE_DATA:'البيانات قديمة',DRIFT_GUARD_ACTIVE:'حارس الانحراف مفعل',ACTIVE_SOURCE_COVERAGE_BELOW_80:'تغطية المصادر النشطة أقل من 80%'};
     document.getElementById('govTitle').innerText=uiLang==='ar'?'حوكمة النموذج ودرجة الموثوقية — V6.2':'Model Governance & Reliability — V6.2';
     document.getElementById('govNote').innerText=uiLang==='ar'
       ?'درجة شفافة لجودة التشغيل والأدلة. هذا الرقم ليس احتمال ربح وليس عائدًا متوقعًا.'
