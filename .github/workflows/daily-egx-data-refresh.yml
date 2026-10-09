@@ -56,12 +56,16 @@ jobs:
         run: |
           node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('data/canonical-market.json'));const h=JSON.parse(fs.readFileSync('data/history-index.json'));if(m.schemaVersion!=='5.0.0'||h.schemaVersion!=='5.0.0')throw new Error('Atomic schema v5 required');if(m?.source?.atomicHandoff!==true||h?.source?.atomicHandoff!==true)throw new Error('Atomic handoff required');if(m?.source?.expectedSession!==h?.source?.expectedSession)throw new Error('Market/history session mismatch');if(m?.source?.sourceSessionDataHash!==h?.source?.sourceSessionDataHash)throw new Error('Market/history fingerprint mismatch');if(!Array.isArray(m.rows)||m.rows.length<80)throw new Error('Canonical market coverage too low');if(!h.coverage||h.coverage.coveragePct<80)throw new Error('History coverage below 80%');console.log({marketRows:m.rows.length,historyCoveragePct:h.coverage.coveragePct,expectedSession:m.source.expectedSession,fingerprint:m.source.sourceSessionDataHash});"
 
-      - name: Commit refreshed data
+      - name: Build V5 decision cockpit and persistent evidence
+        if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
+        run: npm run cockpit:build
+
+      - name: Commit refreshed data and V5 decision state
         if: steps.preflight.outputs.source_ready == 'true' && steps.preflight.outputs.refresh_needed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/canonical-market.json data/history-index.json
+          git add data/canonical-market.json data/history-index.json data/decision-cockpit.json docs/data/decision-cockpit.json data/prospective-evidence.json docs/data/prospective-evidence.json data/daily-decision-brief-history.json docs/data/daily-decision-brief-history.json
           if git diff --cached --quiet; then
             echo "No canonical data changes."
           else
