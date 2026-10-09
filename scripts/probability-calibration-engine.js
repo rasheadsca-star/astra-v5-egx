@@ -1,6 +1,7 @@
 'use strict';
 
 const fs=require('fs'),path=require('path');
+const {dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
 const COCKPIT='data/decision-cockpit.json';
 const DOC='docs/data/decision-cockpit.json';
 const EVID='data/prospective-evidence.json';
@@ -48,7 +49,8 @@ if(!d)throw new Error('decision cockpit missing');
 const e=read(EVID,{records:[],counts:{},metrics:{}});
 const q=read(QUANT,null);
 
-const resolved=(e.records||[]).filter(r=>r.outcome?.status==='RESOLVED');
+const cleanEvidence=dedupeEvidenceRecords((e.records||[]).filter(r=>r.excludedFromAnalytics!==true)).primary;
+const resolved=cleanEvidence.filter(r=>r.outcome?.status==='RESOLVED');
 const groups=new Map();
 for(const r of resolved){
   const key=signature(r);
