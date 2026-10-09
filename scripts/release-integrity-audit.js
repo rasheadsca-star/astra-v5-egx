@@ -5,6 +5,7 @@ const {allocateCappedWeights}=require('./lib/portfolio-allocation');
 const {riskStatePolicy}=require('./lib/risk-state-policy');
 const {stableEvidenceKey,dedupeEvidenceRecords}=require('./lib/evidence-dedupe');
 const {sizeByRiskAndExposure}=require('./lib/position-sizing');
+const {BASE_WEIGHTS,scoreWithWeights,sensitivity}=require('./lib/final-score-policy');
 
 const ROOT=process.cwd();
 function read(p,fallback=null){try{return JSON.parse(fs.readFileSync(path.join(ROOT,p),'utf8'))}catch{return fallback}}
@@ -41,6 +42,7 @@ const ledger=read('data/prediction-ledger.json',{records:[]});
 const wf=read('data/walk-forward-validation.json',{});
 const gov=read('data/model-governance.json',{});
 const tech=read('data/technical/index.json',{symbols:[]});
+const engineRegistry=read('config/engine-family-registry.json',{families:[]});
 const html=txt('app/dashboard/command-center.html');
 const buildChain=String(pkg.scripts?.['cockpit:build']||'');
 
@@ -74,6 +76,30 @@ function actualChecks(issues){
       assert((n(x.finalDecisionScore)||0)>=62,'gate passed score<62 for '+x.ticker,issues);
       assert(x.stage!=='REJECTED_RISK','gate passed rejected risk for '+x.ticker,issues);
     }
+  }
+
+  const fd=d.finalDecisionEngine||{};
+  assert(fd.version==='final-decision-score/v2-missing-aware','final decision engine is not missing-aware v2',issues);
+  assert(fd.missingValuePolicy?.neutralImputationUsed===false,'final score permits neutral missing-value imputation',issues);
+  assert(fd.forwardEvidencePolicy?.includedInFinalScore===false,'global forward evidence still affects final score',issues);
+  const registeredFamilies=new Set((engineRegistry.families||[]).map(x=>x.id));
+  for(const fam of engineRegistry.families||[]){
+    assert(fam.statisticalIndependenceClaim!==true,'engine registry makes unsupported statistical-independence claim: '+fam.id,issues);
+    assert((fam.maxAgreementVotes||0)<=1,'engine family can contribute multiple agreement votes: '+fam.id,issues);
+  }
+  for(const x of all){
+    const fams=x.engineFamilies||[];
+    assert(new Set(fams).size===fams.length,'duplicate engine family on '+x.ticker,issues);
+    assert((x.familyBreadthCount??x.agreementCount)===fams.length,'family breadth count mismatch '+x.ticker,issues);
+    for(const fam of fams)assert(registeredFamilies.has(fam),'unregistered engine family '+fam+' on '+x.ticker,issues);
+    const comp=x.finalDecisionCompleteness||{};
+    assert(comp.neutralImputationUsed===false,'neutral imputation used for '+x.ticker,issues);
+    if((comp.missingComponents||[]).some(k=>['entryQuality','riskReward','riskControl'].includes(k))){
+      assert((n(x.finalDecisionScore)||0)<62,'critical-missing setup reached B threshold '+x.ticker,issues);
+    }
+    const sens=x.finalDecisionSensitivity||{};
+    assert(sens.perturbation==='ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED','missing ±20% sensitivity audit '+x.ticker,issues);
+    assert(Array.isArray(sens.cases),'sensitivity cases missing '+x.ticker,issues);
   }
 
   const ps=d.portfolioSelectionEngine||{},basket=ps.basket||[],pol=ps.policy||{};
@@ -239,6 +265,16 @@ function syntheticChecks(cycle,issues){
   const al=allocateCappedWeights(randomItems,{maxSingleWeightPct:30,lowLiquidityCapPct:15});
   assert(al.weights.every((w,i)=>w<=((randomItems[i].liquidityContextScore<40)?15:30)+1e-6),'random allocation cap failed cycle '+cycle,issues);
   assert(al.allocatedPct<=100.0001&&al.unallocatedPct>=-0.0001,'random allocation conservation failed cycle '+cycle,issues);
+
+  const scoreRow={entryQuality:'IDEAL',stage:'WATCHLIST',warnings:[]};
+  const fullComp={technical:80,entryQuality:90,context:70,riskReward:80,riskControl:85,evidence:65};
+  const missingComp={...fullComp,riskControl:null};
+  const fullScore=scoreWithWeights(fullComp,scoreRow,BASE_WEIGHTS);
+  const missingScore=scoreWithWeights(missingComp,scoreRow,BASE_WEIGHTS);
+  assert(fullScore.coveragePct===100,'full final-score component coverage not 100',issues);
+  assert(missingScore.missing.includes('riskControl')&&missingScore.score<=61.9,'critical missing score cap stress failed',issues);
+  const scoreSens=sensitivity(fullComp,scoreRow,BASE_WEIGHTS);
+  assert(scoreSens.cases.length===12&&Number.isFinite(scoreSens.maxAbsDelta),'±20% score sensitivity stress failed',issues);
 
   const z=sizeByRiskAndExposure({capital:100000,riskPct:1,entry:100,stopDistance:5,maxPositionPct:0});
   assert(z.shares===0,'zero exposure cap produced shares',issues);
