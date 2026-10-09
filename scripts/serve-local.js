@@ -13,6 +13,7 @@ const ROOT = path.join(__dirname, '..');
 const PORT = Number(process.env.PORT || 3000);
 const HOST = process.env.HOST || '127.0.0.1';
 const DASHBOARD = path.join(ROOT, 'app', 'dashboard', 'command-center.html');
+const APP_VERSION = String(require('../package.json').version||'').replace(/\.0$/,'');
 
 function makeRes(nodeRes) {
   const res = {
@@ -63,7 +64,7 @@ function createServer() {
 
 if (require.main === module) {
   createServer().listen(PORT, HOST, () => {
-    console.log(`ASTRA V5 يعمل على http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
+    console.log(`ASTRA V${APP_VERSION} يعمل على http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
     console.log('الإيقاف: Ctrl+C');
   });
 }
