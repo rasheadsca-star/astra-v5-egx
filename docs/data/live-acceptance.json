@@ -4,22 +4,160 @@
   "packageVersion": "6.11.0",
   "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
   "stableBranch": "release-v6.11-stable",
-  "generatedAt": "2026-10-09T21:36:20.020Z",
+  "generatedAt": "2026-10-11T17:49:22.026Z",
   "baselineSession": "2026-10-07",
   "requiredDistinctSessions": 2,
-  "currentSession": "2026-10-07",
-  "status": "WAITING_FOR_FIRST_SESSION",
-  "acceptedSessions": [],
-  "observedPostFreezeSessions": [],
-  "remainingSessions": 2,
-  "sessionReports": [],
+  "currentSession": "2026-10-11",
+  "status": "ONE_SESSION_ACCEPTED",
+  "acceptedSessions": [
+    "2026-10-11"
+  ],
+  "observedPostFreezeSessions": [
+    "2026-10-11"
+  ],
+  "remainingSessions": 1,
+  "sessionReports": [
+    {
+      "session": "2026-10-11",
+      "passed": true,
+      "captureTiming": "ON_SESSION_AFTER_CLOSE",
+      "recordedForwardEligible": true,
+      "snapshotSha256": "5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6",
+      "predictionRecordHash": "c5141fcddd262e57df2a7ad93c1aac08568ddfa6da0a1fad58b787d86d3c1a40",
+      "predictionCount": 31,
+      "evidenceCaptureEvents": 31,
+      "prospectiveEvidenceRecords": 31,
+      "checks": [
+        {
+          "id": "REPLAY_UNIQUE",
+          "ok": true,
+          "detail": "count=1"
+        },
+        {
+          "id": "LEDGER_UNIQUE",
+          "ok": true,
+          "detail": "count=1"
+        },
+        {
+          "id": "RECORDED_FORWARD_ELIGIBLE",
+          "ok": true,
+          "detail": "replay=true"
+        },
+        {
+          "id": "CAPTURE_TIMING",
+          "ok": true,
+          "detail": "replay=ON_SESSION_AFTER_CLOSE"
+        },
+        {
+          "id": "LEDGER_RECORD_PRESENT",
+          "ok": true,
+          "detail": "c5141fcddd262e57df2a7ad93c1aac08568ddfa6da0a1fad58b787d86d3c1a40"
+        },
+        {
+          "id": "SNAPSHOT_PRESENT",
+          "ok": true,
+          "detail": "5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6"
+        },
+        {
+          "id": "LEDGER_REPLAY_LINK",
+          "ok": true,
+          "detail": "ledger=5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6 replay=5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6"
+        },
+        {
+          "id": "LEDGER_FORWARD_ELIGIBLE",
+          "ok": true,
+          "detail": "ledger=true"
+        },
+        {
+          "id": "LEDGER_CAPTURE_TIMING",
+          "ok": true,
+          "detail": "ledger=ON_SESSION_AFTER_CLOSE"
+        },
+        {
+          "id": "SNAPSHOT_HASH_VALID",
+          "ok": true,
+          "detail": "stored=5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6"
+        },
+        {
+          "id": "SNAPSHOT_REPLAY_LINK",
+          "ok": true,
+          "detail": "snapshot=5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6 replay=5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6"
+        },
+        {
+          "id": "SNAPSHOT_FORWARD_ELIGIBLE",
+          "ok": true,
+          "detail": "snapshot=true"
+        },
+        {
+          "id": "SNAPSHOT_CAPTURE_TIMING",
+          "ok": true,
+          "detail": "snapshot=ON_SESSION_AFTER_CLOSE"
+        },
+        {
+          "id": "SNAPSHOT_ATOMIC_HANDOFF",
+          "ok": true,
+          "detail": "atomic=true"
+        },
+        {
+          "id": "SNAPSHOT_EXPECTED_SESSION",
+          "ok": true,
+          "detail": "expected=2026-10-11"
+        },
+        {
+          "id": "SOURCE_FINGERPRINT_LINK",
+          "ok": true,
+          "detail": "ledger=d0377cbefca4a96fb1fe54d670b959676bfcd82c15e35a81e3b168f0af03e319 snapshot=d0377cbefca4a96fb1fe54d670b959676bfcd82c15e35a81e3b168f0af03e319"
+        },
+        {
+          "id": "SNAPSHOT_RESEARCH_ONLY",
+          "ok": true,
+          "detail": "researchOnly=true"
+        },
+        {
+          "id": "SNAPSHOT_EXECUTION_OFF",
+          "ok": true,
+          "detail": "automaticExecution=false"
+        },
+        {
+          "id": "EVIDENCE_CAPTURE_EVENTS",
+          "ok": true,
+          "detail": "count=31"
+        },
+        {
+          "id": "EVENTS_FORWARD_ELIGIBLE",
+          "ok": true,
+          "detail": "eligible=31/31"
+        },
+        {
+          "id": "EVENTS_CAPTURE_TIMING",
+          "ok": true,
+          "detail": "required=ON_SESSION_AFTER_CLOSE"
+        },
+        {
+          "id": "PROSPECTIVE_EVIDENCE_PRESENT",
+          "ok": true,
+          "detail": "count=31"
+        },
+        {
+          "id": "PROSPECTIVE_FORWARD_ELIGIBLE",
+          "ok": true,
+          "detail": "eligible=31/31"
+        },
+        {
+          "id": "PROSPECTIVE_CAPTURE_TIMING",
+          "ok": true,
+          "detail": "required=ON_SESSION_AFTER_CLOSE"
+        }
+      ]
+    }
+  ],
   "global": {
     "predictionChain": "VERIFIED",
     "eventChain": "VERIFIED",
     "replayLedgerChain": "VERIFIED",
-    "replaySessionCount": 1,
-    "predictionLedgerRecords": 1,
-    "eventRecords": 60,
+    "replaySessionCount": 2,
+    "predictionLedgerRecords": 2,
+    "eventRecords": 152,
     "currentSafetyOk": true,
     "currentAtomicHandoff": true
   },

@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.347Z",
-  "availableSessions": 149,
+  "availableSessions": 150,
   "firstSession": "2026-01-21",
-  "lastSession": "2026-10-07",
+  "lastSession": "2026-10-11",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4902,6 +4902,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 242.56,
       "jumpPct": -3.79
+    },
+    {
+      "ticker": "SEIG",
+      "date": "2026-10-11",
+      "sourceSessionDate": "2026-10-11",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 233.37,
+      "high": 233.37,
+      "low": 222.54,
+      "close": 222.54,
+      "adjustedClose": 222.54,
+      "volume": 6318,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-11T17:33:58.373Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 233.37,
+      "jumpPct": -4.64
     }
   ],
   "priceTruthLatest": {
@@ -4912,7 +4944,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 149,
-  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
+  "sessionsCount": 150,
+  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

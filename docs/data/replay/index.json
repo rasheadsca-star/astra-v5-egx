@@ -1,13 +1,13 @@
 {
   "schemaVersion": "astra-replay-index/v1",
-  "generatedAt": "2026-10-09T21:36:19.617Z",
+  "generatedAt": "2026-10-11T17:49:21.481Z",
   "coverageStart": "2026-10-07",
-  "coverageEnd": "2026-10-07",
-  "sessionCount": 1,
+  "coverageEnd": "2026-10-11",
+  "sessionCount": 2,
   "ledgerChainStatus": "VERIFIED",
-  "currentBuildDiffersFromFrozenSession": true,
-  "frozenModelVersion": "ASTRA_6.4.0",
-  "frozenBuildCommit": "0bc9c687493924722ae81c5844d2dcac4b674eb2",
+  "currentBuildDiffersFromFrozenSession": false,
+  "frozenModelVersion": "ASTRA_6.11.0",
+  "frozenBuildCommit": "e447e4a533b2c60cecf33183d5578a3911903180",
   "sessions": [
     {
       "session": "2026-10-07",
@@ -26,6 +26,21 @@
       ],
       "marketRegime": "هابط",
       "breadthPct": 26.9,
+      "dataStale": false
+    },
+    {
+      "session": "2026-10-11",
+      "archivedAt": "2026-10-11T17:49:21.458Z",
+      "modelVersion": "ASTRA_6.11.0",
+      "buildCommit": "e447e4a533b2c60cecf33183d5578a3911903180",
+      "captureTiming": "ON_SESSION_AFTER_CLOSE",
+      "recordedForwardEligible": true,
+      "snapshotSha256": "5422b647330f06f3be24206cfa4409490dca9a36837f5b0b76d776caf83f29e6",
+      "predictionCount": 31,
+      "gatePassedCount": 0,
+      "basketTickers": [],
+      "marketRegime": "هابط",
+      "breadthPct": 21.5,
       "dataStale": false
     }
   ],

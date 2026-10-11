@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.500Z",
-  "availableSessions": 149,
+  "availableSessions": 150,
   "firstSession": "2026-02-01",
-  "lastSession": "2026-10-07",
+  "lastSession": "2026-10-11",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4906,6 +4906,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 113.86,
       "jumpPct": 0.1
+    },
+    {
+      "ticker": "PHAR",
+      "date": "2026-10-11",
+      "sourceSessionDate": "2026-10-11",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 114.1,
+      "high": 115.0,
+      "low": 112.53,
+      "close": 112.95,
+      "adjustedClose": 112.95,
+      "volume": 272463,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-11T17:33:58.373Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 113.97,
+      "jumpPct": -0.89
     }
   ],
   "priceTruthLatest": {
@@ -4916,7 +4948,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 149,
-  "updatedAt": "2026-10-07T16:44:22.076342+03:00",
+  "sessionsCount": 150,
+  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "astra-operations-health/v1",
-  "generatedAt": "2026-10-09T21:36:20.091Z",
+  "generatedAt": "2026-10-11T17:49:22.116Z",
   "version": "6.11.0",
-  "session": "2026-10-07",
+  "session": "2026-10-11",
   "overall": "DEGRADED",
   "researchOnly": true,
   "automaticExecution": false,
@@ -46,23 +46,24 @@
       "id": "CROSS_STORE_FRESHNESS",
       "status": "WARN",
       "severity": "MEDIUM",
-      "detail": "Canonical-current but quant-stale: EFID, EXPA",
+      "detail": "Canonical-current but quant-stale: EFID, EXPA, FAITA",
       "tickers": [
         "EFID",
-        "EXPA"
+        "EXPA",
+        "FAITA"
       ]
     },
     {
       "id": "LEDGER_INTEGRITY",
       "status": "PASS",
       "severity": "CRITICAL",
-      "detail": "Prediction/event hash chains verified (1/60 records)."
+      "detail": "Prediction/event hash chains verified (2/152 records)."
     },
     {
       "id": "SESSION_PERSISTENCE",
       "status": "PASS",
       "severity": "HIGH",
-      "detail": "Session 2026-10-07 exists in replay and prediction ledger."
+      "detail": "Session 2026-10-11 exists in replay and prediction ledger."
     },
     {
       "id": "QUANT_PIPELINE",
@@ -116,7 +117,7 @@
       "title": "[ASTRA OPS][SESSION_PERSISTENCE] Current session is not fully persisted",
       "severity": "HIGH",
       "active": false,
-      "body": "Current session 2026-10-07 is missing from replay and/or prediction-ledger state."
+      "body": "Current session 2026-10-11 is missing from replay and/or prediction-ledger state."
     },
     {
       "key": "SOURCE_COVERAGE",
@@ -137,19 +138,19 @@
       "title": "[ASTRA OPS][CROSS_STORE_FRESHNESS] Canonical and quant freshness disagree",
       "severity": "MEDIUM",
       "active": true,
-      "body": "Affected tickers: EFID, EXPA"
+      "body": "Affected tickers: EFID, EXPA, FAITA"
     },
     {
       "key": "DECISION_DATA_FRESHNESS",
       "title": "[ASTRA OPS][DECISION_DATA_FRESHNESS] Decision data is stale",
       "severity": "HIGH",
       "active": false,
-      "body": "Decision cockpit session 2026-10-07 reports stale data or a non-zero stale lag."
+      "body": "Decision cockpit session 2026-10-11 reports stale data or a non-zero stale lag."
     }
   ],
   "release": {
     "governanceGate": "EVIDENCE_BUILDING",
-    "reliabilityScore": 51.4,
+    "reliabilityScore": 51.8,
     "probabilityStatus": "INSUFFICIENT_EVIDENCE",
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS"
   }

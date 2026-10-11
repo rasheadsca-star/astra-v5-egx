@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-09T21:36:19.670Z",
+  "generatedAt": "2026-10-11T17:49:21.551Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
-    "score": 51.4,
+    "score": 51.8,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -53,10 +53,10 @@
     {
       "id": "REPLAY_COVERAGE",
       "label": "Replay archive coverage",
-      "score": 0,
+      "score": 4,
       "weight": 10,
-      "status": "WAIT",
-      "detail": "0 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
+      "status": "BUILDING",
+      "detail": "1 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
     },
     {
       "id": "WALK_FORWARD",
@@ -85,10 +85,10 @@
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 34.6,
+      "score": 34.3,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "34.6% of current market rows classified by controlled symbol mapping."
+      "detail": "34.3% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
@@ -114,8 +114,8 @@
     "DRIFT_GUARD_ACTIVE"
   ],
   "evidenceState": {
-    "replaySessions": 0,
-    "totalPersistedReplaySessions": 1,
+    "replaySessions": 1,
+    "totalPersistedReplaySessions": 2,
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS",
     "validWalkForwardFolds": 0,
     "outOfSampleResolved": 0,
@@ -150,7 +150,7 @@
         "bins": []
       }
     },
-    "ledgerRecords": 1,
+    "ledgerRecords": 2,
     "ledgerChainStatus": "VERIFIED",
     "activeSourceCoveragePct": 91,
     "independentSourceQuorum": false
