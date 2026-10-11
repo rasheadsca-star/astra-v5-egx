@@ -88,7 +88,7 @@ html[dir="ltr"] td,html[dir="ltr"] th{text-align:left}
 </div>
 <div class="release-banner">
   <div id="releaseText"><b>V6.11 TRUST UI</b> · Risk-State Override + Model Governance + Walk-Forward Validation + Replay Archive + Prediction Ledger</div>
-  <div class="small">Research only · Automatic execution OFF · <a href="/health" style="color:#7dd3fc">Operations Health</a> · <a href="/acceptance" style="color:#7dd3fc">Live Acceptance</a></div>
+  <div class="small">Research only · Automatic execution OFF · <span id="canonicalSession">Session: loading...</span> · <a href="/health" style="color:#7dd3fc">Operations Health</a> · <a href="/acceptance" style="color:#7dd3fc">Live Acceptance</a></div>
 </div>
 
 <div class="card">
@@ -708,9 +708,58 @@ function statusText(v){
   return uiLang==='ar'?(mapAr[String(v)]||t(v)):String(v??'-');
 }
 async function api(path){
-  const response=await fetch(path,{cache:'no-store'});
+  const sep=path.includes('?')?'&':'?';
+  const response=await fetch(path+sep+'_astra611='+Date.now(),{
+    cache:'no-store',
+    headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}
+  });
   if(!response.ok) throw new Error('HTTP '+response.status);
   return response.json();
+}
+
+function canonicalRuntimeFallback(cockpit){
+  const all=[
+    ...(cockpit?.topOpportunities||[]),
+    ...(cockpit?.watchlist||[]),
+    ...(cockpit?.rejected||[])
+  ];
+  const seen=new Set();
+  const unique=all.filter(x=>{
+    const key=x?.ticker;
+    if(!key||seen.has(key))return false;
+    seen.add(key);return true;
+  });
+  const eligible=unique.filter(x=>x.decisionGate?.pass===true);
+  const toRec=x=>({
+    symbol:x.ticker,
+    signal:'RESEARCH',
+    entry:x.entryHigh??x.entryLow??null,
+    target1:x.target1??null,
+    target2:x.target2??null,
+    target3:null,
+    stopLoss:x.stop??null,
+    confidence:x.finalDecisionScore??x.conviction??0,
+    riskLevel:Number(x.riskPct)>8?'HIGH':Number(x.riskPct)>5?'MEDIUM':'LOW',
+    executionReady:false,
+    executionBlockers:['RUNTIME_API_UNAVAILABLE_CANONICAL_FALLBACK']
+  });
+  const toWatch=x=>({
+    symbol:x.ticker,
+    confidence:x.finalDecisionScore??x.conviction??0,
+    riskLevel:Number(x.riskPct)>8?'HIGH':Number(x.riskPct)>5?'MEDIUM':'LOW',
+    reason:(x.decisionGate?.reasons||[]).join(', ')||x.stage||'WATCH'
+  });
+  return {
+    recommendations:eligible.map(toRec),
+    watchlist:unique.filter(x=>x.decisionGate?.pass!==true).slice(0,30).map(toWatch),
+    executionReadyCount:0,
+    mode:'CANONICAL_STATIC',
+    dataSource:'CANONICAL_DECISION_COCKPIT',
+    deploymentCommit:null,
+    updatedAt:cockpit?.generatedAt||new Date().toISOString(),
+    marketSessionDate:cockpit?.session||null,
+    expectedSession:cockpit?.session||null
+  };
 }
 
 function esc(value){
@@ -1009,6 +1058,8 @@ async function loadStockUniverse(){
 async function loadV52(){
   try{
     const d=await api('/data/decision-cockpit.json').catch(()=>api('/docs/data/decision-cockpit.json'));
+    const sessionEl=document.getElementById('canonicalSession');
+    if(sessionEl)sessionEl.innerText='Session: '+(d.session||'-')+' · V6.11';
     document.getElementById('v52Market').innerText=d.market?.regime||'-';
     document.getElementById('v52Breadth').innerText=d.market?.breadthPct!=null?d.market.breadthPct+'%':'-';
     document.getElementById('v52Ready').innerText=d.counts?.entryReady??'-';
@@ -1454,11 +1505,25 @@ async function loadSignals(){
     const settled=await Promise.allSettled([
       api('/api/recommendations'),
       api('/api/data-health'),
-      api('/api/unified-opportunities')
+      api('/api/unified-opportunities'),
+      api('/data/decision-cockpit.json').catch(()=>api('/docs/data/decision-cockpit.json'))
     ]);
-    const data=settled[0].status==='fulfilled'?settled[0].value:{recommendations:[],watchlist:[],executionReadyCount:0,mode:'DEGRADED',dataSource:'UNAVAILABLE',deploymentCommit:null};
-    const h=settled[1].status==='fulfilled'?settled[1].value:{engineStatus:'DEGRADED',liveFeed:'UNAVAILABLE',message:'Data health endpoint unavailable'};
+    const cockpit=settled[3].status==='fulfilled'?settled[3].value:null;
+    const runtime=settled[0].status==='fulfilled'?settled[0].value:null;
+    const runtimeSession=runtime?.marketSessionDate||runtime?.expectedSession||null;
+    const canonicalSession=cockpit?.session||null;
+    const runtimeIsCurrent=runtime&&(!canonicalSession||runtimeSession===canonicalSession);
+    const data=runtimeIsCurrent?runtime:canonicalRuntimeFallback(cockpit||{});
+    const h=settled[1].status==='fulfilled'&&runtimeIsCurrent
+      ? settled[1].value
+      : {
+          engineStatus:cockpit?.dataHealth?.stale===false?'DELAYED_READY':'DEGRADED',
+          liveFeed:cockpit?.dataHealth?.stale===false?'DELAYED_CURRENT_SESSION':'STALE',
+          message:'Canonical V6.11 session '+(canonicalSession||'-')+' loaded from persisted decision cockpit.'
+        };
     const unified=settled[2].status==='fulfilled'?settled[2].value:{rows:[],sessionDate:null,ucpStatus:'UNAVAILABLE'};
+    const sessionEl=document.getElementById('canonicalSession');
+    if(sessionEl)sessionEl.innerText='Session: '+(canonicalSession||runtimeSession||'-')+' · V6.11';
 
     const rows=data.recommendations||[];
     const watch=data.watchlist||[];
@@ -1471,7 +1536,8 @@ async function loadSignals(){
       (data.executionReadyCount||0)+' / '+rows.length;
 
     document.getElementById('summary').innerText=
-      (rows.length||0)+' entry opportunities · '+
+      (rows.length||0)+' entry opportunities · session '+
+      (data.marketSessionDate||canonicalSession||'-')+' · '+
       (data.dataSource||'-')+' · updated '+
       new Date(data.updatedAt||Date.now()).toLocaleString();
 
@@ -1550,7 +1616,8 @@ async function loadSignals(){
         : 'blocked';
 
     document.getElementById('deployment').innerText=
-      (uiLang==='ar'?'النشر: ':'Deployment: ')+(data.deploymentCommit||'unknown');
+      (uiLang==='ar'?'النشر: ':'Deployment: ')+(data.deploymentCommit||'static-canonical')+
+      ' · session '+(data.marketSessionDate||canonicalSession||'-');
   }catch(e){
     document.getElementById('unifiedBoard').innerHTML=
       '<tr><td colspan="16">Unified board unavailable</td></tr>';
