@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.680Z",
-  "availableSessions": 149,
+  "availableSessions": 150,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-12",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4918,6 +4918,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 11.64,
       "jumpPct": -1.89
+    },
+    {
+      "ticker": "SNFC",
+      "date": "2026-10-12",
+      "sourceSessionDate": "2026-10-12",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 11.42,
+      "high": 11.5,
+      "low": 11.03,
+      "close": 11.3,
+      "adjustedClose": 11.3,
+      "volume": 685928,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-12T15:27:28.674Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 11.42,
+      "jumpPct": -1.05
     }
   ],
   "priceTruthLatest": {
@@ -4928,7 +4960,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 149,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 150,
+  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

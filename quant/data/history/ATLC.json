@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.442Z",
-  "availableSessions": 147,
+  "availableSessions": 148,
   "firstSession": "2026-02-19",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-12",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4846,6 +4846,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 6.3,
       "jumpPct": -3.33
+    },
+    {
+      "ticker": "ATLC",
+      "date": "2026-10-12",
+      "sourceSessionDate": "2026-10-12",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 6.09,
+      "high": 6.14,
+      "low": 5.46,
+      "close": 5.51,
+      "adjustedClose": 5.51,
+      "volume": 1364542,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-12T15:27:28.674Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 6.09,
+      "jumpPct": -9.52
     }
   ],
   "priceTruthLatest": {
@@ -4856,7 +4888,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 147,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 148,
+  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

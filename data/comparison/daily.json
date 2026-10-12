@@ -459,6 +459,127 @@
         "v2AndV5IndependentToday": false,
         "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
       }
+    },
+    {
+      "session": "2026-10-12",
+      "generatedAt": "2026-10-12T15:54:56.026Z",
+      "metrics": {
+        "v2": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v4": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "v5": {
+          "recommendations": 10,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 10,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "claude": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "confluence": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        },
+        "confluenceV2": {
+          "recommendations": 0,
+          "resolved": 0,
+          "wins": 0,
+          "losses": 0,
+          "open": 0,
+          "hitRatePct": null,
+          "avgReturnPct": null
+        }
+      },
+      "tickers": {
+        "v2": [
+          "AJWA",
+          "CPCI",
+          "ARAB",
+          "SNFC",
+          "ADRI",
+          "AFDI",
+          "AMIA",
+          "MOIL",
+          "ARVA",
+          "EHDR"
+        ],
+        "v4": [],
+        "v5": [
+          "AJWA",
+          "CPCI",
+          "ARAB",
+          "SNFC",
+          "ADRI",
+          "AFDI",
+          "AMIA",
+          "MOIL",
+          "ARVA",
+          "EHDR"
+        ],
+        "claude": [],
+        "confluence": [],
+        "confluenceV2": []
+      },
+      "overlap": {
+        "v2_v4": [],
+        "v2_v5": [
+          "AJWA",
+          "CPCI",
+          "ARAB",
+          "SNFC",
+          "ADRI",
+          "AFDI",
+          "AMIA",
+          "MOIL",
+          "ARVA",
+          "EHDR"
+        ],
+        "v4_v5": [],
+        "v2_claude": [],
+        "v4_claude": [],
+        "v5_claude": [],
+        "v2_confluence": [],
+        "v4_confluence": [],
+        "v5_confluence": [],
+        "claude_confluence": [],
+        "v2_confluenceV2": [],
+        "v4_confluenceV2": [],
+        "v5_confluenceV2": [],
+        "claude_confluenceV2": []
+      },
+      "independence": {
+        "v2AndV5IndependentToday": false,
+        "reason": "V2.1 published page and V5 quant lane currently render the same astra-quant/v1 ranking payload for this session."
+      }
     }
   ]
 }

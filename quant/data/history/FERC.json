@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.590Z",
-  "availableSessions": 150,
+  "availableSessions": 151,
   "firstSession": "2026-02-05",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-12",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4944,6 +4944,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 75.27,
       "jumpPct": -0.97
+    },
+    {
+      "ticker": "FERC",
+      "date": "2026-10-12",
+      "sourceSessionDate": "2026-10-12",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 74.54,
+      "high": 77.64,
+      "low": 70.0,
+      "close": 71.07,
+      "adjustedClose": 71.07,
+      "volume": 128158,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-12T15:27:28.674Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 74.54,
+      "jumpPct": -4.66
     }
   ],
   "priceTruthLatest": {
@@ -4954,7 +4986,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 150,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 151,
+  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

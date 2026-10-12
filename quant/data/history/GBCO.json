@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.613Z",
-  "availableSessions": 150,
+  "availableSessions": 151,
   "firstSession": "2026-02-01",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-12",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4937,6 +4937,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 31.24,
       "jumpPct": -2.62
+    },
+    {
+      "ticker": "GBCO",
+      "date": "2026-10-12",
+      "sourceSessionDate": "2026-10-12",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 30.42,
+      "high": 30.7,
+      "low": 29.5,
+      "close": 29.81,
+      "adjustedClose": 29.81,
+      "volume": 1056186,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-12T15:27:28.674Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 30.42,
+      "jumpPct": -2.01
     }
   ],
   "priceTruthLatest": {
@@ -4947,7 +4979,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 150,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 151,
+  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

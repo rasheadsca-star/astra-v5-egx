@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.289Z",
-  "availableSessions": 146,
+  "availableSessions": 147,
   "firstSession": "2026-02-17",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-12",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4817,6 +4817,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.61,
       "jumpPct": -2.48
+    },
+    {
+      "ticker": "COSG",
+      "date": "2026-10-12",
+      "sourceSessionDate": "2026-10-12",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 1.55,
+      "high": 1.57,
+      "low": 1.46,
+      "close": 1.46,
+      "adjustedClose": 1.46,
+      "volume": 6961413,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-12T15:27:28.674Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 1.57,
+      "jumpPct": -7.01
     }
   ],
   "priceTruthLatest": {
@@ -4827,7 +4859,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 146,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 147,
+  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
