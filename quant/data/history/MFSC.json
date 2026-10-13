@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.379Z",
-  "availableSessions": 151,
+  "availableSessions": 152,
   "firstSession": "2026-01-11",
-  "lastSession": "2026-10-12",
+  "lastSession": "2026-10-13",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4970,6 +4970,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 42.58,
       "jumpPct": -6.55
+    },
+    {
+      "ticker": "MFSC",
+      "date": "2026-10-13",
+      "sourceSessionDate": "2026-10-13",
+      "sourceMarketTime": "01:09 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 39.79,
+      "high": 40.99,
+      "low": 36.25,
+      "close": 38.18,
+      "adjustedClose": 38.18,
+      "volume": 31894,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-13T13:29:48.867Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 39.79,
+      "jumpPct": -4.05
     }
   ],
   "priceTruthLatest": {
@@ -4980,7 +5012,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 151,
-  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
+  "sessionsCount": 152,
+  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

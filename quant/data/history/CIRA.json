@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.266Z",
-  "availableSessions": 147,
+  "availableSessions": 148,
   "firstSession": "2026-02-15",
-  "lastSession": "2026-10-12",
+  "lastSession": "2026-10-13",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4851,6 +4851,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 37.53,
       "jumpPct": -2.42
+    },
+    {
+      "ticker": "CIRA",
+      "date": "2026-10-13",
+      "sourceSessionDate": "2026-10-13",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 36.62,
+      "high": 37.39,
+      "low": 35.51,
+      "close": 36.54,
+      "adjustedClose": 36.54,
+      "volume": 564084,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-13T13:29:48.867Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 36.62,
+      "jumpPct": -0.22
     }
   ],
   "priceTruthLatest": {
@@ -4861,7 +4893,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 147,
-  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
+  "sessionsCount": 148,
+  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

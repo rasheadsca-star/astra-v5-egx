@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-13T00:54:54.270Z",
+  "generatedAt": "2026-10-13T14:30:23.400Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
-    "score": 52.9,
+    "score": 53.5,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -53,10 +53,10 @@
     {
       "id": "REPLAY_COVERAGE",
       "label": "Replay archive coverage",
-      "score": 8,
+      "score": 12,
       "weight": 10,
       "status": "BUILDING",
-      "detail": "2 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
+      "detail": "3 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
     },
     {
       "id": "WALK_FORWARD",
@@ -69,26 +69,26 @@
     {
       "id": "PROBABILITY_EVIDENCE",
       "label": "Forward probability evidence",
-      "score": 1.3,
+      "score": 2.7,
       "weight": 10,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "4 resolved forward outcome(s) across 1 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
+      "detail": "24 resolved forward outcome(s) across 2 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
     },
     {
       "id": "OUTCOME_SAMPLE",
       "label": "Outcome analytics sample",
-      "score": 1.3,
+      "score": 2.7,
       "weight": 8,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "4 resolved prospective outcome(s) across 1 distinct session(s)."
+      "detail": "24 resolved prospective outcome(s) across 2 distinct session(s)."
     },
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 34.9,
+      "score": 34.7,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "34.9% of current market rows classified by controlled symbol mapping."
+      "detail": "34.7% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
@@ -114,15 +114,15 @@
     "DRIFT_GUARD_ACTIVE"
   ],
   "evidenceState": {
-    "replaySessions": 2,
-    "totalPersistedReplaySessions": 3,
+    "replaySessions": 3,
+    "totalPersistedReplaySessions": 4,
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS",
     "validWalkForwardFolds": 0,
     "outOfSampleResolved": 0,
-    "prospectiveResolved": 4,
-    "prospectiveDistinctSessions": 1,
-    "probabilityResolved": 4,
-    "probabilityDistinctSessions": 1,
+    "prospectiveResolved": 24,
+    "prospectiveDistinctSessions": 2,
+    "probabilityResolved": 24,
+    "probabilityDistinctSessions": 2,
     "probabilityStatus": "INSUFFICIENT_EVIDENCE",
     "calibrationScoring": {
       "t1": {
@@ -150,7 +150,7 @@
         "bins": []
       }
     },
-    "ledgerRecords": 3,
+    "ledgerRecords": 4,
     "ledgerChainStatus": "VERIFIED",
     "activeSourceCoveragePct": 90,
     "independentSourceQuorum": false

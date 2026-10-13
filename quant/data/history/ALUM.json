@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.486Z",
-  "availableSessions": 150,
+  "availableSessions": 151,
   "firstSession": "2026-01-15",
-  "lastSession": "2026-10-12",
+  "lastSession": "2026-10-13",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4927,6 +4927,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 22.92,
       "jumpPct": -3.36
+    },
+    {
+      "ticker": "ALUM",
+      "date": "2026-10-13",
+      "sourceSessionDate": "2026-10-13",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 22.15,
+      "high": 22.55,
+      "low": 20.52,
+      "close": 21.07,
+      "adjustedClose": 21.07,
+      "volume": 290499,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-13T13:29:48.867Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 22.15,
+      "jumpPct": -4.88
     }
   ],
   "priceTruthLatest": {
@@ -4937,7 +4969,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 150,
-  "updatedAt": "2026-10-12T18:53:52.914335+03:00",
+  "sessionsCount": 151,
+  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
