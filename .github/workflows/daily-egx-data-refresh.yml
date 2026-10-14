@@ -3,7 +3,8 @@ name: Daily EGX Data Refresh
 
 on:
   schedule:
-    - cron: '45 12-16 * * 0-4'
+    # Keep retrying after close when upstream session validation finishes late.
+    - cron: '45 12-20 * * 0-4'
   workflow_run:
     workflows: ["ASTRA Daily Stability Audit"]
     types: [completed]
