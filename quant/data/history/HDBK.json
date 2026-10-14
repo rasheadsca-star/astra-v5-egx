@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.270Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-02-08",
-  "lastSession": "2026-10-13",
+  "lastSession": "2026-10-14",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5008,6 +5008,40 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 104.11,
       "jumpPct": -0.61
+    },
+    {
+      "ticker": "HDBK",
+      "date": "2026-10-14",
+      "sourceSessionDate": "2026-10-14",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 103.48,
+      "high": 105.72,
+      "low": 101.0,
+      "close": 102.76,
+      "adjustedClose": 102.76,
+      "volume": 204706,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-14T18:14:50.303Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "corporate_action_review_required"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 103.48,
+      "jumpPct": -0.7
     }
   ],
   "priceTruthLatest": {
@@ -5018,7 +5052,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-14T21:16:19.588746+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

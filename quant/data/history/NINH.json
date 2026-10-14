@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.657Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-01-27",
-  "lastSession": "2026-10-13",
+  "lastSession": "2026-10-14",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4989,6 +4989,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 17.43,
       "jumpPct": -4.59
+    },
+    {
+      "ticker": "NINH",
+      "date": "2026-10-14",
+      "sourceSessionDate": "2026-10-14",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 16.63,
+      "high": 17.19,
+      "low": 16.02,
+      "close": 16.8,
+      "adjustedClose": 16.8,
+      "volume": 542924,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-14T18:14:50.303Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 16.63,
+      "jumpPct": 1.02
     }
   ],
   "priceTruthLatest": {
@@ -4999,7 +5031,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-14T21:16:19.588746+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

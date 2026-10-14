@@ -1,13 +1,13 @@
 {
   "schemaVersion": "astra-replay-index/v1",
-  "generatedAt": "2026-10-13T20:20:42.873Z",
+  "generatedAt": "2026-10-14T18:17:15.855Z",
   "coverageStart": "2026-10-07",
-  "coverageEnd": "2026-10-13",
-  "sessionCount": 4,
+  "coverageEnd": "2026-10-14",
+  "sessionCount": 5,
   "ledgerChainStatus": "VERIFIED",
-  "currentBuildDiffersFromFrozenSession": true,
+  "currentBuildDiffersFromFrozenSession": false,
   "frozenModelVersion": "ASTRA_6.11.0",
-  "frozenBuildCommit": "ce324a65bc927905eff0cb533cb32083f26b3dd1",
+  "frozenBuildCommit": "65dd5bb9c12131cf9c35f577e31c866ae40fb56f",
   "sessions": [
     {
       "session": "2026-10-07",
@@ -71,6 +71,25 @@
       "basketTickers": [],
       "marketRegime": "هابط",
       "breadthPct": 8.3,
+      "dataStale": false
+    },
+    {
+      "session": "2026-10-14",
+      "archivedAt": "2026-10-14T18:17:15.834Z",
+      "modelVersion": "ASTRA_6.11.0",
+      "buildCommit": "65dd5bb9c12131cf9c35f577e31c866ae40fb56f",
+      "captureTiming": "ON_SESSION_AFTER_CLOSE",
+      "recordedForwardEligible": true,
+      "snapshotSha256": "1085caf8e51dde220c10d9a3889b74c362ec8e71e7246bef6cd13f66ce3fb4b0",
+      "predictionCount": 29,
+      "gatePassedCount": 14,
+      "basketTickers": [
+        "HRHO",
+        "COMI",
+        "SNFC"
+      ],
+      "marketRegime": "هابط",
+      "breadthPct": 11.7,
       "dataStale": false
     }
   ],
