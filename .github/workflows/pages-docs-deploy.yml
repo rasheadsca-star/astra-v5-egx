@@ -9,7 +9,7 @@ on:
       - "scripts/build-github-pages.js"
       - ".github/workflows/pages-docs-deploy.yml"
   workflow_run:
-    workflows: ["Daily EGX Data Refresh"]
+    workflows: ["Daily EGX Data Refresh", "pages build and deployment"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
