@@ -5,7 +5,13 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "app/dashboard/**"
+      - "scripts/build-github-pages.js"
       - ".github/workflows/pages-docs-deploy.yml"
+  workflow_run:
+    workflows: ["Daily EGX Data Refresh"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,6 +25,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -28,15 +35,16 @@ jobs:
         with:
           ref: main
 
-      - name: Verify V5 page exists
-        run: |
-          test -f docs/v5/index.html
-          grep -q "ASTRA V5" docs/v5/index.html
-          test -f docs/data/engine-comparison.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build validated GitHub Pages snapshot
+        run: node scripts/build-github-pages.js
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: public
 
       - name: Deploy docs artifact
         id: deployment
