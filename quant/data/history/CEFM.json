@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.473Z",
-  "availableSessions": 149,
+  "availableSessions": 150,
   "firstSession": "2026-02-01",
-  "lastSession": "2026-10-14",
+  "lastSession": "2026-10-15",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4923,6 +4923,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 121.45,
       "jumpPct": 3.78
+    },
+    {
+      "ticker": "CEFM",
+      "date": "2026-10-15",
+      "sourceSessionDate": "2026-10-15",
+      "sourceMarketTime": "01:12 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 126.04,
+      "high": 127.78,
+      "low": 125.0,
+      "close": 126.08,
+      "adjustedClose": 126.08,
+      "volume": 4313,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-15T17:15:10.497Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 126.04,
+      "jumpPct": 0.03
     }
   ],
   "priceTruthLatest": {
@@ -4933,7 +4965,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 149,
-  "updatedAt": "2026-10-14T21:16:19.588746+03:00",
+  "sessionsCount": 150,
+  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

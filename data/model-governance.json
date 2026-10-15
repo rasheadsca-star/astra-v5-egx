@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-14T18:17:15.931Z",
+  "generatedAt": "2026-10-15T17:23:04.766Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
-    "score": 54.4,
+    "score": 55.2,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -29,10 +29,10 @@
     {
       "id": "SOURCE_COVERAGE",
       "label": "Active-universe source coverage",
-      "score": 88.5,
+      "score": 91,
       "weight": 0,
       "status": "PARTIAL",
-      "detail": "88.5% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
+      "detail": "91% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
     },
     {
       "id": "SOURCE_QUORUM",
@@ -53,15 +53,15 @@
     {
       "id": "REPLAY_COVERAGE",
       "label": "Replay archive coverage",
-      "score": 16,
+      "score": 20,
       "weight": 10,
       "status": "BUILDING",
-      "detail": "4 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
+      "detail": "5 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
     },
     {
       "id": "WALK_FORWARD",
       "label": "Walk-forward validation",
-      "score": 4.2,
+      "score": 5.6,
       "weight": 16,
       "status": "WAITING_FOR_MINIMUM_SESSIONS",
       "detail": "0 valid fold(s), 0 resolved out-of-sample outcome(s)."
@@ -69,26 +69,26 @@
     {
       "id": "PROBABILITY_EVIDENCE",
       "label": "Forward probability evidence",
-      "score": 4,
+      "score": 5.3,
       "weight": 10,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "26 resolved forward outcome(s) across 3 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
+      "detail": "30 resolved forward outcome(s) across 4 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
     },
     {
       "id": "OUTCOME_SAMPLE",
       "label": "Outcome analytics sample",
-      "score": 4,
+      "score": 5.3,
       "weight": 8,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "26 resolved prospective outcome(s) across 3 distinct session(s)."
+      "detail": "30 resolved prospective outcome(s) across 4 distinct session(s)."
     },
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 35.1,
+      "score": 34.4,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "35.1% of current market rows classified by controlled symbol mapping."
+      "detail": "34.4% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
@@ -114,15 +114,15 @@
     "DRIFT_GUARD_ACTIVE"
   ],
   "evidenceState": {
-    "replaySessions": 4,
-    "totalPersistedReplaySessions": 5,
+    "replaySessions": 5,
+    "totalPersistedReplaySessions": 6,
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS",
     "validWalkForwardFolds": 0,
     "outOfSampleResolved": 0,
-    "prospectiveResolved": 26,
-    "prospectiveDistinctSessions": 3,
-    "probabilityResolved": 26,
-    "probabilityDistinctSessions": 3,
+    "prospectiveResolved": 30,
+    "prospectiveDistinctSessions": 4,
+    "probabilityResolved": 30,
+    "probabilityDistinctSessions": 4,
     "probabilityStatus": "INSUFFICIENT_EVIDENCE",
     "calibrationScoring": {
       "t1": {
@@ -150,9 +150,9 @@
         "bins": []
       }
     },
-    "ledgerRecords": 5,
+    "ledgerRecords": 6,
     "ledgerChainStatus": "VERIFIED",
-    "activeSourceCoveragePct": 88.5,
+    "activeSourceCoveragePct": 91,
     "independentSourceQuorum": false
   },
   "releaseGate": {

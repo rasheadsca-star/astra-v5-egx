@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.697Z",
-  "availableSessions": 138,
+  "availableSessions": 139,
   "firstSession": "2025-12-29",
-  "lastSession": "2026-10-11",
+  "lastSession": "2026-10-15",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4485,6 +4485,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.64,
       "jumpPct": -1.83
+    },
+    {
+      "ticker": "GMCI",
+      "date": "2026-10-15",
+      "sourceSessionDate": "2026-10-15",
+      "sourceMarketTime": "12:43 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 1.61,
+      "high": 1.61,
+      "low": 1.54,
+      "close": 1.54,
+      "adjustedClose": 1.54,
+      "volume": 241417,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-15T17:15:10.497Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 1.61,
+      "jumpPct": -4.35
     }
   ],
   "priceTruthLatest": {
@@ -4495,7 +4527,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 138,
-  "updatedAt": "2026-10-11T20:48:28.997533+03:00",
+  "sessionsCount": 139,
+  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

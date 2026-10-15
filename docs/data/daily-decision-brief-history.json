@@ -1,6 +1,6 @@
 {
   "version": "daily-brief-history/v1",
-  "updatedAt": "2026-10-14T18:17:15.502Z",
+  "updatedAt": "2026-10-15T17:23:04.251Z",
   "records": [
     {
       "session": "2026-10-07",
@@ -2918,6 +2918,609 @@
           "rrT2": 1.67,
           "liquidityContextScore": 30,
           "currentPrice": 28.31,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "LIQUIDITY_TOO_LOW",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        }
+      ]
+    },
+    {
+      "session": "2026-10-15",
+      "generatedAt": "2026-10-15T17:23:04.240Z",
+      "headline": {
+        "ticker": "FWRY",
+        "finalDecisionScore": 72.6,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 2.3,
+        "entryLow": 18.4326,
+        "entryHigh": 18.69,
+        "stop": 17.2867,
+        "target1": 20.1852,
+        "target2": 21.4935,
+        "contextScore": 45.6,
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+      },
+      "top3": [
+        {
+          "rank": 1,
+          "ticker": "FWRY",
+          "finalDecisionScore": 72.6,
+          "grade": "B",
+          "gateStatus": "RESEARCH_ELIGIBLE",
+          "entryQuality": "IDEAL",
+          "rrT2": 2.3,
+          "contextScore": 45.6,
+          "researchWeightPct": 30,
+          "portfolioSelected": true
+        },
+        {
+          "rank": 2,
+          "ticker": "RACC",
+          "finalDecisionScore": 70.2,
+          "grade": "B",
+          "gateStatus": "RESEARCH_ELIGIBLE",
+          "entryQuality": "IDEAL",
+          "rrT2": 5.99,
+          "contextScore": 40.4,
+          "researchWeightPct": 30,
+          "portfolioSelected": true
+        },
+        {
+          "rank": 3,
+          "ticker": "SNFC",
+          "finalDecisionScore": 67.9,
+          "grade": "B",
+          "gateStatus": "RESEARCH_ELIGIBLE",
+          "entryQuality": "IDEAL",
+          "rrT2": 2.53,
+          "contextScore": 40.4,
+          "researchWeightPct": 0,
+          "portfolioSelected": false
+        }
+      ],
+      "basketTickers": [
+        "RACC",
+        "FWRY",
+        "EHDR"
+      ],
+      "basket": [
+        {
+          "rank": 1,
+          "ticker": "RACC",
+          "researchWeightPct": 30,
+          "effectiveExposurePct": 12,
+          "score": 81.2,
+          "entryQuality": "IDEAL",
+          "rrT2": 5.99
+        },
+        {
+          "rank": 2,
+          "ticker": "FWRY",
+          "researchWeightPct": 30,
+          "effectiveExposurePct": 12,
+          "score": 79.2,
+          "entryQuality": "IDEAL",
+          "rrT2": 2.3
+        },
+        {
+          "rank": 3,
+          "ticker": "EHDR",
+          "researchWeightPct": 30,
+          "effectiveExposurePct": 12,
+          "score": 75.6,
+          "entryQuality": "IDEAL",
+          "rrT2": 6.31
+        }
+      ],
+      "risks": [
+        "WEAK_MARKET",
+        "WEAK_BREADTH",
+        "DRIFT_GUARD_ON"
+      ],
+      "market": {
+        "regime": "هابط",
+        "breadthPct": 15.6,
+        "contextScore": 30.8,
+        "exposureScale": 0.4,
+        "driftGuard": true
+      },
+      "opportunitySnapshots": [
+        {
+          "ticker": "FWRY",
+          "finalDecisionScore": 72.6,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 45.6,
+          "rrT2": 2.3,
+          "liquidityContextScore": 50,
+          "currentPrice": 18.69,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": true,
+          "portfolioRank": 2
+        },
+        {
+          "ticker": "RACC",
+          "finalDecisionScore": 70.2,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 5.99,
+          "liquidityContextScore": 50,
+          "currentPrice": 9.09,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": true,
+          "portfolioRank": 1
+        },
+        {
+          "ticker": "SNFC",
+          "finalDecisionScore": 67.9,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 2.53,
+          "liquidityContextScore": 50,
+          "currentPrice": 11.26,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "SAUD",
+          "finalDecisionScore": 65,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 41.1,
+          "rrT2": 2.83,
+          "liquidityContextScore": 50,
+          "currentPrice": 22,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "EHDR",
+          "finalDecisionScore": 64.6,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 6.31,
+          "liquidityContextScore": 50,
+          "currentPrice": 2.3,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": true,
+          "portfolioRank": 3
+        },
+        {
+          "ticker": "ISMQ",
+          "finalDecisionScore": 64.6,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 5.8,
+          "liquidityContextScore": 50,
+          "currentPrice": 7.6,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "HRHO",
+          "finalDecisionScore": 63.7,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 42.2,
+          "rrT2": 6.98,
+          "liquidityContextScore": 50,
+          "currentPrice": 25.7,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ISPH",
+          "finalDecisionScore": 63.3,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.9,
+          "rrT2": 6,
+          "liquidityContextScore": 50,
+          "currentPrice": 11.27,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "COSG",
+          "finalDecisionScore": 63,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 3.71,
+          "liquidityContextScore": 50,
+          "currentPrice": 1.47,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "RAYA",
+          "finalDecisionScore": 61.8,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.2,
+          "rrT2": 2.43,
+          "liquidityContextScore": 50,
+          "currentPrice": 5.97,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "RMDA",
+          "finalDecisionScore": 61.1,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.9,
+          "rrT2": 2.57,
+          "liquidityContextScore": 50,
+          "currentPrice": 5.14,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "UEGC",
+          "finalDecisionScore": 61.1,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 2.97,
+          "liquidityContextScore": 50,
+          "currentPrice": 1.67,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "CLHO",
+          "finalDecisionScore": 61,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.9,
+          "rrT2": 2.57,
+          "liquidityContextScore": 50,
+          "currentPrice": 14.05,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ATLC",
+          "finalDecisionScore": 55.7,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 42.2,
+          "rrT2": 2.08,
+          "liquidityContextScore": 50,
+          "currentPrice": 5.48,
+          "gatePass": false,
+          "gateReasons": [
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ACAMD",
+          "finalDecisionScore": 53.3,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 1.53,
+          "liquidityContextScore": 50,
+          "currentPrice": 2.14,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ROTO",
+          "finalDecisionScore": 51.3,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 1.29,
+          "liquidityContextScore": 50,
+          "currentPrice": 37.63,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "MBSC",
+          "finalDecisionScore": 44.6,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.2,
+          "rrT2": 0.95,
+          "liquidityContextScore": 50,
+          "currentPrice": 348,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "SCEM",
+          "finalDecisionScore": 43.1,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 39.2,
+          "rrT2": 1.08,
+          "liquidityContextScore": 50,
+          "currentPrice": 89.99,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ADCI",
+          "finalDecisionScore": 42.4,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 0.87,
+          "liquidityContextScore": 50,
+          "currentPrice": 260.19,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "SEIG",
+          "finalDecisionScore": 42.4,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 40.4,
+          "rrT2": 0.94,
+          "liquidityContextScore": 50,
+          "currentPrice": 192.4,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "COMI",
+          "finalDecisionScore": 67.5,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 41.1,
+          "rrT2": 2.59,
+          "liquidityContextScore": 50,
+          "currentPrice": 125.08,
+          "gatePass": true,
+          "gateReasons": [],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "AMIA",
+          "finalDecisionScore": 57.4,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 52.4,
+          "rrT2": 1.67,
+          "liquidityContextScore": 90,
+          "currentPrice": 19,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "AJWA",
+          "finalDecisionScore": 57.1,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 52.4,
+          "rrT2": 1.67,
+          "liquidityContextScore": 90,
+          "currentPrice": 227,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "EGAL",
+          "finalDecisionScore": 56.9,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 49.7,
+          "rrT2": 1.67,
+          "liquidityContextScore": 90,
+          "currentPrice": 305.4,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "EALR",
+          "finalDecisionScore": 54.5,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 44.9,
+          "rrT2": 1.67,
+          "liquidityContextScore": 65,
+          "currentPrice": 304.72,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "NINH",
+          "finalDecisionScore": 54.4,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 44.9,
+          "rrT2": 1.66,
+          "liquidityContextScore": 65,
+          "currentPrice": 16.56,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "MILS",
+          "finalDecisionScore": 54.2,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 44.9,
+          "rrT2": 1.67,
+          "liquidityContextScore": 65,
+          "currentPrice": 154.16,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "CPCI",
+          "finalDecisionScore": 49.8,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 33.9,
+          "rrT2": 1.67,
+          "liquidityContextScore": 30,
+          "currentPrice": 606.99,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "LIQUIDITY_TOO_LOW",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "MOIL",
+          "finalDecisionScore": 48,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 34.4,
+          "rrT2": 1.62,
+          "liquidityContextScore": 30,
+          "currentPrice": 0.68,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "LIQUIDITY_TOO_LOW",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "ALUM",
+          "finalDecisionScore": 46.6,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 34.4,
+          "rrT2": 1.67,
+          "liquidityContextScore": 30,
+          "currentPrice": 21.13,
+          "gatePass": false,
+          "gateReasons": [
+            "RR_BELOW_2",
+            "LIQUIDITY_TOO_LOW",
+            "FINAL_SCORE_BELOW_B"
+          ],
+          "portfolioSelected": false,
+          "portfolioRank": null
+        },
+        {
+          "ticker": "WCDF",
+          "finalDecisionScore": 45.4,
+          "entryQualityScore": 100,
+          "entryQuality": "IDEAL",
+          "contextScore": 34.4,
+          "rrT2": 1.67,
+          "liquidityContextScore": 30,
+          "currentPrice": 539.15,
           "gatePass": false,
           "gateReasons": [
             "RR_BELOW_2",

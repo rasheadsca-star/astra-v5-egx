@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.524Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-01-28",
-  "lastSession": "2026-10-14",
+  "lastSession": "2026-10-15",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4767,6 +4767,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 0.64,
       "jumpPct": 0.0
+    },
+    {
+      "ticker": "GGCC",
+      "date": "2026-10-15",
+      "sourceSessionDate": "2026-10-15",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 0.64,
+      "high": 0.73,
+      "low": 0.63,
+      "close": 0.7,
+      "adjustedClose": 0.7,
+      "volume": 118200967,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-15T17:15:10.497Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.64,
+      "jumpPct": 9.38
     }
   ],
   "priceTruthLatest": {
@@ -4777,7 +4809,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-14T21:16:19.588746+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

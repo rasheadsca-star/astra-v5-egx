@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-08-25T07:56:19.865Z",
-  "availableSessions": 142,
+  "availableSessions": 143,
   "firstSession": "2026-03-08",
-  "lastSession": "2026-10-13",
+  "lastSession": "2026-10-15",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4034,10 +4034,44 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 5.41,
       "jumpPct": 0.0
+    },
+    {
+      "ticker": "SEIGA",
+      "date": "2026-10-15",
+      "sourceSessionDate": "2026-10-15",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 5.41,
+      "high": 5.41,
+      "low": 5.41,
+      "close": 5.41,
+      "adjustedClose": 5.41,
+      "volume": 157,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-15T17:15:10.497Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "flat_ohlc_possible_reconstruction"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 5.41,
+      "jumpPct": 0.0
     }
   ],
-  "sessionsCount": 142,
-  "updatedAt": "2026-10-13T17:29:16.825932+03:00",
+  "sessionsCount": 143,
+  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-08-12",
