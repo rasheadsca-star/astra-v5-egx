@@ -707,14 +707,37 @@ function statusText(v){
   };
   return uiLang==='ar'?(mapAr[String(v)]||t(v)):String(v??'-');
 }
+// Canonical production snapshots are published atomically to GitHub by the
+// sole state-writer. Prefer that public source for dashboard JSON to avoid
+// serving old, immutable Vercel deployment assets between deployments.
+// Never mix unverified third-party feeds or fabricate current-session prices.
+const ASTRA_CANONICAL_PUBLIC='https://raw.githubusercontent.com/rasheadsca-star/astra-v5-egx/main';
 async function api(path){
   const sep=path.includes('?')?'&':'?';
-  const response=await fetch(path+sep+'_astra611='+Date.now(),{
-    cache:'no-store',
-    headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}
-  });
-  if(!response.ok) throw new Error('HTTP '+response.status);
-  return response.json();
+  const request=async url=>{
+    const response=await fetch(url+(url.includes('?')?'&':'?')+'_astra611='+Date.now(),{
+      cache:'no-store', headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}
+    });
+    if(!response.ok) throw new Error('HTTP '+response.status+' '+url);
+    return response.json();
+  };
+  // Public, committed data provides a single canonical state even if Vercel's
+  // HTML/JS build has not redeployed. Fallback is explicitly marked as stale-risk.
+  if(/^\\/(?:docs\\/)?data\\/.*\\.json$/.test(path)){
+    try { return await request(ASTRA_CANONICAL_PUBLIC+path); }
+    catch(error){
+      document.documentElement.dataset.canonicalSource='deployed-fallback';
+      let banner=document.getElementById('astraSourceWarning');
+      if(!banner){
+        banner=document.createElement('div');banner.id='astraSourceWarning';
+        banner.setAttribute('role','alert');
+        banner.style.cssText='background:#3d250c;color:#fde68a;border:2px solid #f59e0b;padding:12px;font-weight:bold';
+        banner.textContent='WARNING: Live canonical feed unavailable; deployed data may be outdated. Do not treat signals as current.';
+        document.body.prepend(banner);
+      }
+    }
+  }
+  return request(path);
 }
 
 function canonicalRuntimeFallback(cockpit){
