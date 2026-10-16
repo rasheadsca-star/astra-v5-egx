@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-15T17:23:04.766Z",
+  "generatedAt": "2026-10-16T14:30:59.573Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
-    "score": 55.2,
+    "score": 55.4,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -61,7 +61,7 @@
     {
       "id": "WALK_FORWARD",
       "label": "Walk-forward validation",
-      "score": 5.6,
+      "score": 7,
       "weight": 16,
       "status": "WAITING_FOR_MINIMUM_SESSIONS",
       "detail": "0 valid fold(s), 0 resolved out-of-sample outcome(s)."
@@ -85,10 +85,10 @@
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 34.4,
+      "score": 34.3,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "34.4% of current market rows classified by controlled symbol mapping."
+      "detail": "34.3% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
