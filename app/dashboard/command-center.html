@@ -713,7 +713,6 @@ function statusText(v){
 // Never mix unverified third-party feeds or fabricate current-session prices.
 const ASTRA_CANONICAL_PUBLIC='https://raw.githubusercontent.com/rasheadsca-star/astra-v5-egx/main';
 async function api(path){
-  const sep=path.includes('?')?'&':'?';
   const request=async url=>{
     const response=await fetch(url+(url.includes('?')?'&':'?')+'_astra611='+Date.now(),{
       cache:'no-store', headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}
@@ -723,7 +722,7 @@ async function api(path){
   };
   // Public, committed data provides a single canonical state even if Vercel's
   // HTML/JS build has not redeployed. Fallback is explicitly marked as stale-risk.
-  if(/^\\/(?:docs\\/)?data\\/.*\\.json$/.test(path)){
+  if((path.startsWith('/data/') || path.startsWith('/docs/data/')) && path.endsWith('.json')){
     try { return await request(ASTRA_CANONICAL_PUBLIC+path); }
     catch(error){
       document.documentElement.dataset.canonicalSource='deployed-fallback';
