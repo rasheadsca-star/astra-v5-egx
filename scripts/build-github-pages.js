@@ -36,6 +36,34 @@ const metadata = {session:cockpit.session, generatedAt:cockpit.generatedAt,
   commit:execFileSync('git', ['rev-parse', 'HEAD'], {encoding:'utf8'}).trim(),
   sourceSessionDataHash:market.source.sourceSessionDataHash, executionAllowed:false};
 fs.writeFileSync(path.join(out, 'data/pages-deployment.json'), JSON.stringify(metadata));
+// The legacy docs status was frozen at an old session. Never ship it as a live
+// status report: materialize the canonical snapshot's actual session instead.
+const sourceHealth = read('data/source-health.json');
+const operations = read('data/operations-health.json');
+const coveragePct = market.source.coveragePct ?? null;
+const liveStatus = {
+  schemaVersion: 'astra-pages-published-session/v1',
+  expectedSession: cockpit.session,
+  actualAcceptedSession: market.source.expectedSession,
+  generatedAt: cockpit.generatedAt,
+  deploymentCommit: metadata.commit,
+  sourceSessionDataHash: metadata.sourceSessionDataHash,
+  coveragePct,
+  universeCount: Array.isArray(market.rows) ? market.rows.length : 0,
+  realFetch: market.source.currentSessionRows > 0,
+  currentSessionRows: market.source.currentSessionRows ?? 0,
+  overall: operations.overall || 'UNKNOWN',
+  researchOnly: true,
+  executionAllowed: false,
+  publicationEligible: true,
+  notes: ['Published validated canonical research snapshot; see operations-health.json for warnings.']
+};
+for (const rel of ['data/daily-data-update-status.json', 'docs/data/daily-data-update-status.json']) {
+  const dest = path.join(out, rel);
+  fs.mkdirSync(path.dirname(dest), {recursive:true});
+  fs.writeFileSync(dest, JSON.stringify(liveStatus, null, 2));
+}
+
 // The quant board already reads the committed local artifacts; no market fetch.
 const {loadQuantBoard} = require('../engine/ucp/quant-adapter');
 fs.writeFileSync(path.join(out, 'data/pages-quant.json'), JSON.stringify({...loadQuantBoard(), executionAllowed:false, deploymentCommit:metadata.commit}));
