@@ -52,3 +52,40 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages-${{ github.run_attempt }}
+
+      - name: Verify live Pages URL and published session
+        env:
+          PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request, urllib.error
+          base=os.environ['PUBLIC_URL'].rstrip('/')
+          with open('public/data/pages-deployment.json', encoding='utf-8') as f:
+              expected=json.load(f)
+          targets=['/', '/app/dashboard/command-center.html', '/data/pages-deployment.json']
+          error=''
+          for attempt in range(1, 13):
+              try:
+                  response={}
+                  for target in targets:
+                      url=base+target+'?acceptance='+expected['commit'][:12]
+                      with urllib.request.urlopen(urllib.request.Request(url, headers={'Cache-Control':'no-cache'}), timeout=25) as r:
+                          if r.status != 200: raise RuntimeError(f'{target}: HTTP {r.status}')
+                          response[target]=r.read().decode('utf-8')
+                  if 'ASTRA V6.11 Decision Cockpit' not in response['/']:
+                      raise RuntimeError('Homepage does not contain expected cockpit')
+                  if 'ASTRA V6.11 Decision Cockpit' not in response['/app/dashboard/command-center.html']:
+                      raise RuntimeError('Direct dashboard route is not available')
+                  deployed=json.loads(response['/data/pages-deployment.json'])
+                  for key in ('session','commit','sourceSessionDataHash'):
+                      if deployed.get(key) != expected.get(key):
+                          raise RuntimeError(f'Published {key} mismatch: {deployed.get(key)!r} != {expected.get(key)!r}')
+                  print('LIVE ACCEPTED:', base, deployed['session'], deployed['commit'])
+                  break
+              except Exception as exc:
+                  error=str(exc)
+                  print(f'Attempt {attempt}/12: {error}', flush=True)
+                  if attempt == 12:
+                      raise SystemExit('LIVE DEPLOYMENT VALIDATION FAILED: '+error)
+                  time.sleep(10)
+          PY
