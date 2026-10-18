@@ -39,6 +39,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Build validated GitHub Pages snapshot
         run: node scripts/build-github-pages.js
 
