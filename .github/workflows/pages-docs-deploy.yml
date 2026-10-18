@@ -62,7 +62,7 @@ jobs:
           base=os.environ['PUBLIC_URL'].rstrip('/')
           with open('public/data/pages-deployment.json', encoding='utf-8') as f:
               expected=json.load(f)
-          targets=['/', '/app/dashboard/command-center.html', '/data/pages-deployment.json']
+          targets=['/', '/app/dashboard/command-center.html', '/data/pages-deployment.json', '/docs/v2.html', '/docs/data/signals.json']
           error=''
           for attempt in range(1, 13):
               try:
@@ -76,6 +76,11 @@ jobs:
                       raise RuntimeError('Homepage does not contain expected cockpit')
                   if 'ASTRA V6.11 Decision Cockpit' not in response['/app/dashboard/command-center.html']:
                       raise RuntimeError('Direct dashboard route is not available')
+                  v2_signals=json.loads(response['/docs/data/signals.json'])
+                  if v2_signals.get('session') != expected['session'] or v2_signals.get('stale') is True:
+                      raise RuntimeError('EGX NEXT V2.1 published signals are stale or out of session')
+                  if 'EGX NEXT' not in response['/docs/v2.html']:
+                      raise RuntimeError('EGX NEXT V2.1 page missing')
                   deployed=json.loads(response['/data/pages-deployment.json'])
                   for key in ('session','commit','sourceSessionDataHash'):
                       if deployed.get(key) != expected.get(key):
