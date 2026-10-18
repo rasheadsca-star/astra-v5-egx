@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.284Z",
-  "availableSessions": 142,
+  "availableSessions": 143,
   "firstSession": "2026-03-08",
-  "lastSession": "2026-10-15",
+  "lastSession": "2026-10-18",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -4678,10 +4678,42 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 906.61,
       "jumpPct": -1.02
+    },
+    {
+      "ticker": "ORAS",
+      "date": "2026-10-18",
+      "sourceSessionDate": "2026-10-18",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 895.0,
+      "high": 895.0,
+      "low": 861.03,
+      "close": 861.03,
+      "adjustedClose": 861.03,
+      "volume": 170208,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-18T15:50:11.416Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 897.37,
+      "jumpPct": -4.05
     }
   ],
-  "sessionsCount": 142,
-  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
+  "sessionsCount": 143,
+  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-09-28",

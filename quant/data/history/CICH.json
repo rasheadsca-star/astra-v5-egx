@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.633Z",
-  "availableSessions": 149,
+  "availableSessions": 150,
   "firstSession": "2026-02-19",
-  "lastSession": "2026-10-15",
+  "lastSession": "2026-10-18",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4909,6 +4909,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 11.08,
       "jumpPct": -0.81
+    },
+    {
+      "ticker": "CICH",
+      "date": "2026-10-18",
+      "sourceSessionDate": "2026-10-18",
+      "sourceMarketTime": "01:13 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 10.99,
+      "high": 11.0,
+      "low": 9.63,
+      "close": 10.51,
+      "adjustedClose": 10.51,
+      "volume": 259216,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-18T15:50:11.416Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 10.99,
+      "jumpPct": -4.37
     }
   ],
   "priceTruthLatest": {
@@ -4919,7 +4951,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 149,
-  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
+  "sessionsCount": 150,
+  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

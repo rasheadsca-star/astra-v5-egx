@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.734Z",
-  "availableSessions": 90,
+  "availableSessions": 91,
   "firstSession": "2025-09-14",
-  "lastSession": "2026-10-15",
+  "lastSession": "2026-10-18",
   "historyStatus": "historical_partial_50",
   "primarySource": "kaggle_yahoo_seed",
   "verificationSources": [],
@@ -3019,6 +3019,41 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 8.87,
       "jumpPct": -0.68
+    },
+    {
+      "ticker": "EGSA",
+      "date": "2026-10-18",
+      "sourceSessionDate": "2026-10-18",
+      "sourceMarketTime": "12:55 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 8.81,
+      "high": 8.81,
+      "low": 8.75,
+      "close": 8.76,
+      "adjustedClose": 8.76,
+      "volume": 975,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-18T15:50:11.416Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:36"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 8.81,
+      "jumpPct": -0.57
     }
   ],
   "lastUpdateError": "Yahoo history failed for EGSA: EGSA.CA: identity score 75",
@@ -3030,7 +3065,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 90,
-  "updatedAt": "2026-10-15T20:21:52.373783+03:00",
+  "sessionsCount": 91,
+  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

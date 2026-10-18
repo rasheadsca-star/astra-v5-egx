@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-confluence-pullback/v1",
   "engine": "CONFLUENCE_PULLBACK_V1",
-  "generatedAt": "2026-10-16T14:30:55.607Z",
-  "session": "2026-10-15",
-  "expectedSession": "2026-10-15",
+  "generatedAt": "2026-10-18T16:09:38.297Z",
+  "session": "2026-10-18",
+  "expectedSession": "2026-10-18",
   "marketStatus": "TRADING_SESSION",
   "holiday": null,
   "methodology": {
@@ -23,7 +23,7 @@
     "automaticPromotion": false
   },
   "counts": {
-    "scanned": 173,
+    "scanned": 167,
     "published": 30,
     "actionable": 0,
     "opportunityBrief": 10
@@ -32,29 +32,29 @@
   "opportunityBrief": [
     {
       "rank": 1,
-      "ticker": "FWRY",
-      "score": 58,
+      "ticker": "SEIG",
+      "score": 50,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 18.69,
-      "watchEntryLow": 18.4326,
-      "watchEntryHigh": 18.69,
-      "structuralStop": 17.2867,
+      "close": 199.11,
+      "watchEntryLow": 197.974,
+      "watchEntryHigh": 199.11,
+      "structuralStop": 161.7812,
       "targets": {
-        "t1": 20.1852,
-        "t2": 21.4935,
-        "t3": 22.8018,
-        "t4": 24.297
+        "t1": 215.0388,
+        "t2": 228.9765,
+        "t3": 242.9142,
+        "t4": 258.843
       },
       "factors": [
         "FIB_61_8_78_6",
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "VOLUME_NOT_CONFIRMED"
+        "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -63,27 +63,27 @@
     {
       "rank": 2,
       "ticker": "SNFC",
-      "score": 58,
+      "score": 50,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 11.26,
-      "watchEntryLow": 11.1854,
-      "watchEntryHigh": 11.26,
-      "structuralStop": 10.5399,
+      "close": 11.13,
+      "watchEntryLow": 11.13,
+      "watchEntryHigh": 11.13,
+      "structuralStop": 10.5395,
       "targets": {
-        "t1": 12.1608,
-        "t2": 12.949,
-        "t3": 13.7372,
-        "t4": 14.638
+        "t1": 12.0204,
+        "t2": 12.7995,
+        "t3": 13.5786,
+        "t4": 14.469
       },
       "factors": [
         "FIB_61_8_78_6",
         "ANCHORED_VWAP",
         "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "PRIOR_SUPPORT"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
         "VOLUME_NOT_CONFIRMED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
@@ -92,29 +92,29 @@
     },
     {
       "rank": 3,
-      "ticker": "ACAMD",
-      "score": 50,
+      "ticker": "ELKA",
+      "score": 42,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 2.14,
-      "watchEntryLow": 2.0438,
-      "watchEntryHigh": 2.14,
-      "structuralStop": 1.8508,
+      "close": 1.45,
+      "watchEntryLow": 1.45,
+      "watchEntryHigh": 1.45,
+      "structuralStop": 1.2647,
       "targets": {
-        "t1": 2.3112,
-        "t2": 2.461,
-        "t3": 2.6108,
-        "t4": 2.782
+        "t1": 1.566,
+        "t2": 1.6675,
+        "t3": 1.769,
+        "t4": 1.885
       },
       "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
+        "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
+        "CORRECTION_30_38",
         "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "FIB_ZONE_NOT_CONFIRMED"
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -122,28 +122,28 @@
     },
     {
       "rank": 4,
-      "ticker": "CLHO",
-      "score": 45,
+      "ticker": "RMDA",
+      "score": 42,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 14.05,
-      "watchEntryLow": 14.05,
-      "watchEntryHigh": 14.05,
-      "structuralStop": 13.2299,
+      "close": 4.91,
+      "watchEntryLow": 4.91,
+      "watchEntryHigh": 5.0006,
+      "structuralStop": 4.8071,
       "targets": {
-        "t1": 15.174,
-        "t2": 16.1575,
-        "t3": 17.141,
-        "t4": 18.265
+        "t1": 5.3028,
+        "t2": 5.6465,
+        "t3": 5.9902,
+        "t4": 6.383
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
+        "CORRECTION_30_38",
         "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
         "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
@@ -152,29 +152,29 @@
     },
     {
       "rank": 5,
-      "ticker": "UEGC",
-      "score": 45,
+      "ticker": "SUGR",
+      "score": 42,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 1.67,
-      "watchEntryLow": 1.67,
-      "watchEntryHigh": 1.67,
-      "structuralStop": 1.5856,
+      "close": 55.74,
+      "watchEntryLow": 52.6024,
+      "watchEntryHigh": 55.74,
+      "structuralStop": 48.1335,
       "targets": {
-        "t1": 1.8036,
-        "t2": 1.9205,
-        "t3": 2.0374,
-        "t4": 2.171
+        "t1": 60.1992,
+        "t2": 64.101,
+        "t3": 68.0028,
+        "t4": 72.462
       },
       "factors": [
-        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
         "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "ANCHORED_VWAP_NOT_ALIGNED"
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -182,29 +182,29 @@
     },
     {
       "rank": 6,
-      "ticker": "HRHO",
-      "score": 43,
+      "ticker": "ZMID",
+      "score": 42,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 25.7,
-      "watchEntryLow": 25.7,
-      "watchEntryHigh": 25.9235,
-      "structuralStop": 25.2754,
+      "close": 6.75,
+      "watchEntryLow": 6.75,
+      "watchEntryHigh": 6.75,
+      "structuralStop": 6.0447,
       "targets": {
-        "t1": 27.756,
-        "t2": 29.555,
-        "t3": 31.354,
-        "t4": 33.41
+        "t1": 7.29,
+        "t2": 7.7625,
+        "t3": 8.235,
+        "t4": 8.775
       },
       "factors": [
         "FIB_61_8_78_6",
-        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "ANCHORED_VWAP_NOT_ALIGNED",
-        "VOLUME_NOT_CONFIRMED"
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -212,28 +212,29 @@
     },
     {
       "rank": 7,
-      "ticker": "ISPH",
-      "score": 43,
+      "ticker": "SIPC",
+      "score": 40,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 11.27,
-      "watchEntryLow": 11.27,
-      "watchEntryHigh": 11.27,
-      "structuralStop": 10.9883,
+      "close": 5.29,
+      "watchEntryLow": 4.7895,
+      "watchEntryHigh": 5.29,
+      "structuralStop": 3.8556,
       "targets": {
-        "t1": 12.1716,
-        "t2": 12.9605,
-        "t3": 13.7494,
-        "t4": 14.651
+        "t1": 5.7132,
+        "t2": 6.0835,
+        "t3": 6.4538,
+        "t4": 6.877
       },
       "factors": [
-        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_30_38",
-        "PRICE_REACTION"
+        "CORRECTION_NEAR_TARGET"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "ANCHORED_VWAP_NOT_ALIGNED",
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED",
         "VOLUME_NOT_CONFIRMED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
@@ -242,29 +243,29 @@
     },
     {
       "rank": 8,
-      "ticker": "SCEM",
-      "score": 43,
+      "ticker": "AALR",
+      "score": 37,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 89.99,
-      "watchEntryLow": 78.151,
-      "watchEntryHigh": 89.99,
-      "structuralStop": 66.0325,
+      "close": 214.91,
+      "watchEntryLow": 214.91,
+      "watchEntryHigh": 214.91,
+      "structuralStop": 199.4981,
       "targets": {
-        "t1": 97.1892,
-        "t2": 103.4885,
-        "t3": 109.7878,
-        "t4": 116.987
+        "t1": 232.1028,
+        "t2": 247.1465,
+        "t3": 262.1902,
+        "t4": 279.383
       },
       "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
+        "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "CORRECTION_NEAR_TARGET",
+        "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "FIB_ZONE_NOT_CONFIRMED",
-        "VOLUME_NOT_CONFIRMED"
+        "REACTION_NOT_CONFIRMED",
+        "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -272,27 +273,28 @@
     },
     {
       "rank": 9,
-      "ticker": "COMI",
-      "score": 40,
+      "ticker": "MCRO",
+      "score": 37,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 125.08,
-      "watchEntryLow": 123.9613,
-      "watchEntryHigh": 125.08,
-      "structuralStop": 117.0467,
+      "close": 1.27,
+      "watchEntryLow": 1.27,
+      "watchEntryHigh": 1.2834,
+      "structuralStop": 1.2043,
       "targets": {
-        "t1": 135.0864,
-        "t2": 143.842,
-        "t3": 152.5976,
-        "t4": 162.604
+        "t1": 1.3716,
+        "t2": 1.4605,
+        "t3": 1.5494,
+        "t4": 1.651
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
+        "CORRECTION_NEAR_TARGET",
         "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
+        "REACTION_NOT_CONFIRMED",
         "ANCHORED_VWAP_NOT_ALIGNED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
@@ -301,29 +303,29 @@
     },
     {
       "rank": 10,
-      "ticker": "DTPP",
-      "score": 40,
+      "ticker": "MIPH",
+      "score": 37,
       "state": "FUNDAMENTALS_MISSING",
-      "close": 264.49,
-      "watchEntryLow": 207.2752,
-      "watchEntryHigh": 264.49,
-      "structuralStop": 147.8309,
+      "close": 750,
+      "watchEntryLow": 672.46,
+      "watchEntryHigh": 750,
+      "structuralStop": 556.29,
       "targets": {
-        "t1": 285.6492,
-        "t2": 304.1635,
-        "t3": 322.6778,
-        "t4": 343.837
+        "t1": 810,
+        "t2": 862.5,
+        "t3": 915,
+        "t4": 975
       },
       "factors": [
         "ANCHORED_VWAP",
-        "CORRECTION_30_38",
-        "PRICE_REACTION",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
         "VOLUME_CONFIRMATION"
       ],
       "missingConditions": [
         "VERIFIED_PROFITABILITY_MISSING",
-        "FIB_ZONE_NOT_CONFIRMED",
-        "DAILY_MA50_OR_SUPPORT_NOT_ALIGNED"
+        "REACTION_NOT_CONFIRMED",
+        "FIB_ZONE_NOT_CONFIRMED"
       ],
       "label": "WATCHLIST_ONLY_NOT_BUY_RECOMMENDATION",
       "researchOnly": true,
@@ -332,40 +334,40 @@
   ],
   "watchlist": [
     {
-      "ticker": "FWRY",
-      "session": "2026-10-15",
+      "ticker": "SEIG",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 58,
+      "score": 50,
       "actionable": false,
-      "close": 18.69,
-      "entryLow": 18.4326,
-      "entryHigh": 18.69,
-      "structuralInvalidation": 17.2867,
+      "close": 199.11,
+      "entryLow": 197.974,
+      "entryHigh": 199.11,
+      "structuralInvalidation": 161.7812,
       "targets": {
-        "t1": 20.1852,
-        "t2": 21.4935,
-        "t3": 22.8018,
-        "t4": 24.297
+        "t1": 215.0388,
+        "t2": 228.9765,
+        "t3": 242.9142,
+        "t4": 258.843
       },
       "confluence": {
-        "fib618": 18.4326,
-        "fib786": 17.5607,
+        "fib618": 197.974,
+        "fib786": 171.598,
         "inFib": true,
-        "anchoredVwap": 19.0389,
-        "vwapHit": true,
-        "dailyMa50": 18.944,
-        "ma50Hit": true,
+        "anchoredVwap": 226.3748,
+        "vwapHit": false,
+        "dailyMa50": 247.0364,
+        "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 18.69,
+        "priorSupport": 200,
         "supportHit": true,
-        "correctionPct": 13.63,
+        "correctionPct": 32.51,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 0.91,
-        "volumeConfirmed": false,
+        "volumeRatio": 3.59,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -374,56 +376,56 @@
         }
       },
       "impulse": {
-        "startDate": "2026-03-16",
-        "peakDate": "2026-05-11",
-        "low": 16.45,
-        "high": 21.64,
-        "risePct": 31.55
+        "startDate": "2026-03-31",
+        "peakDate": "2026-08-03",
+        "low": 138,
+        "high": 295,
+        "risePct": 113.77
       },
       "factors": [
         "FIB_61_8_78_6",
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "SNFC",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 58,
+      "score": 50,
       "actionable": false,
-      "close": 11.26,
-      "entryLow": 11.1854,
-      "entryHigh": 11.26,
-      "structuralInvalidation": 10.5399,
+      "close": 11.13,
+      "entryLow": 11.13,
+      "entryHigh": 11.13,
+      "structuralInvalidation": 10.5395,
       "targets": {
-        "t1": 12.1608,
-        "t2": 12.949,
-        "t3": 13.7372,
-        "t4": 14.638
+        "t1": 12.0204,
+        "t2": 12.7995,
+        "t3": 13.5786,
+        "t4": 14.469
       },
       "confluence": {
         "fib618": 11.1854,
         "fib786": 10.6949,
         "inFib": true,
-        "anchoredVwap": 11.45,
+        "anchoredVwap": 11.449,
         "vwapHit": true,
-        "dailyMa50": 11.0658,
+        "dailyMa50": 11.07,
         "ma50Hit": true,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 11.26,
+        "priorSupport": 11.13,
         "supportHit": true,
-        "correctionPct": 13.32,
+        "correctionPct": 14.32,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.78,
+        "volumeRatio": 0.4,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -443,687 +445,45 @@
         "FIB_61_8_78_6",
         "ANCHORED_VWAP",
         "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ACAMD",
-      "session": "2026-10-15",
+      "ticker": "ELKA",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 50,
+      "score": 42,
       "actionable": false,
-      "close": 2.14,
-      "entryLow": 2.0438,
-      "entryHigh": 2.14,
-      "structuralInvalidation": 1.8508,
+      "close": 1.45,
+      "entryLow": 1.45,
+      "entryHigh": 1.45,
+      "structuralInvalidation": 1.2647,
       "targets": {
-        "t1": 2.3112,
-        "t2": 2.461,
-        "t3": 2.6108,
-        "t4": 2.782
+        "t1": 1.566,
+        "t2": 1.6675,
+        "t3": 1.769,
+        "t4": 1.885
       },
       "confluence": {
-        "fib618": 2.0438,
-        "fib786": 1.8926,
-        "inFib": false,
-        "anchoredVwap": 2.1758,
-        "vwapHit": true,
-        "dailyMa50": 2.0894,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.15,
-        "supportHit": true,
-        "correctionPct": 17.69,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.31,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-06-10",
-        "low": 1.7,
-        "high": 2.6,
-        "risePct": 52.94
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "CLHO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 45,
-      "actionable": false,
-      "close": 14.05,
-      "entryLow": 14.05,
-      "entryHigh": 14.05,
-      "structuralInvalidation": 13.2299,
-      "targets": {
-        "t1": 15.174,
-        "t2": 16.1575,
-        "t3": 17.141,
-        "t4": 18.265
-      },
-      "confluence": {
-        "fib618": 14.8563,
-        "fib786": 13.5342,
+        "fib618": 1.5084,
+        "fib786": 1.3068,
         "inFib": true,
-        "anchoredVwap": 16.0157,
+        "anchoredVwap": 1.5364,
         "vwapHit": false,
-        "dailyMa50": 16.4602,
+        "dailyMa50": 1.6904,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 13.9,
+        "priorSupport": 1.44,
         "supportHit": true,
-        "correctionPct": 28.75,
+        "correctionPct": 35.56,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 3.82,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-03",
-        "low": 11.85,
-        "high": 19.72,
-        "risePct": 66.41
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "UEGC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 45,
-      "actionable": false,
-      "close": 1.67,
-      "entryLow": 1.67,
-      "entryHigh": 1.67,
-      "structuralInvalidation": 1.5856,
-      "targets": {
-        "t1": 1.8036,
-        "t2": 1.9205,
-        "t3": 2.0374,
-        "t4": 2.171
-      },
-      "confluence": {
-        "fib618": 1.8997,
-        "fib786": 1.636,
-        "inFib": true,
-        "anchoredVwap": 1.856,
-        "vwapHit": false,
-        "dailyMa50": 1.876,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1.66,
-        "supportHit": true,
-        "correctionPct": 41.81,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 6.51,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-05-21",
-        "peakDate": "2026-08-11",
-        "low": 1.3,
-        "high": 2.87,
-        "risePct": 120.77
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "HRHO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 25.7,
-      "entryLow": 25.7,
-      "entryHigh": 25.9235,
-      "structuralInvalidation": 25.2754,
-      "targets": {
-        "t1": 27.756,
-        "t2": 29.555,
-        "t3": 31.354,
-        "t4": 33.41
-      },
-      "confluence": {
-        "fib618": 26.8055,
-        "fib786": 25.9235,
-        "inFib": true,
-        "anchoredVwap": 26.7252,
-        "vwapHit": false,
-        "dailyMa50": 25.719,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 25.7,
-        "supportHit": true,
-        "correctionPct": 14.48,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.7,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-05-11",
-        "low": 24.8,
-        "high": 30.05,
-        "risePct": 21.17
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "ISPH",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 11.27,
-      "entryLow": 11.27,
-      "entryHigh": 11.27,
-      "structuralInvalidation": 10.9883,
-      "targets": {
-        "t1": 12.1716,
-        "t2": 12.9605,
-        "t3": 13.7494,
-        "t4": 14.651
-      },
-      "confluence": {
-        "fib618": 12.4186,
-        "fib786": 11.1922,
-        "inFib": true,
-        "anchoredVwap": 12.3385,
-        "vwapHit": false,
-        "dailyMa50": 12.5788,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 11.28,
-        "supportHit": true,
-        "correctionPct": 33.43,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.38,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-04",
-        "low": 9.63,
-        "high": 16.93,
-        "risePct": 75.8
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "SCEM",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 89.99,
-      "entryLow": 78.151,
-      "entryHigh": 89.99,
-      "structuralInvalidation": 66.0325,
-      "targets": {
-        "t1": 97.1892,
-        "t2": 103.4885,
-        "t3": 109.7878,
-        "t4": 116.987
-      },
-      "confluence": {
-        "fib618": 78.151,
-        "fib786": 68.6775,
-        "inFib": false,
-        "anchoredVwap": 87.5238,
-        "vwapHit": true,
-        "dailyMa50": 92.4238,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 90.6,
-        "supportHit": true,
-        "correctionPct": 20.36,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.95,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-12",
-        "low": 56.61,
-        "high": 113,
-        "risePct": 99.61
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "COMI",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 125.08,
-      "entryLow": 123.9613,
-      "entryHigh": 125.08,
-      "structuralInvalidation": 117.0467,
-      "targets": {
-        "t1": 135.0864,
-        "t2": 143.842,
-        "t3": 152.5976,
-        "t4": 162.604
-      },
-      "confluence": {
-        "fib618": 123.9613,
-        "fib786": 118.261,
-        "inFib": true,
-        "anchoredVwap": 133.2075,
-        "vwapHit": false,
-        "dailyMa50": 134.0084,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 125.03,
-        "supportHit": true,
-        "correctionPct": 13.7,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.33,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-04",
-        "peakDate": "2026-05-11",
-        "low": 111,
-        "high": 144.93,
-        "risePct": 30.57
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "DTPP",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 264.49,
-      "entryLow": 207.2752,
-      "entryHigh": 264.49,
-      "structuralInvalidation": 147.8309,
-      "targets": {
-        "t1": 285.6492,
-        "t2": 304.1635,
-        "t3": 322.6778,
-        "t4": 343.837
-      },
-      "confluence": {
-        "fib618": 207.2752,
-        "fib786": 160.3209,
-        "inFib": false,
-        "anchoredVwap": 270.3389,
-        "vwapHit": true,
-        "dailyMa50": 302.2604,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 276,
-        "supportHit": false,
-        "correctionPct": 30.4,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.28,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-09-14",
-        "low": 100.51,
-        "high": 380,
-        "risePct": 278.07
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "CORRECTION_30_38",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "GGCC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 0.7,
-      "entryLow": 0.7,
-      "entryHigh": 0.7,
-      "structuralInvalidation": 0.5392,
-      "targets": {
-        "t1": 0.756,
-        "t2": 0.805,
-        "t3": 0.854,
-        "t4": 0.91
-      },
-      "confluence": {
-        "fib618": 0.721,
-        "fib786": 0.5609,
-        "inFib": true,
-        "anchoredVwap": 0.7628,
-        "vwapHit": false,
-        "dailyMa50": 0.861,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.7,
-        "supportHit": true,
-        "correctionPct": 46.56,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 7.16,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-05",
-        "peakDate": "2026-08-10",
-        "low": 0.357,
-        "high": 1.31,
-        "risePct": 266.95
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RACC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 9.09,
-      "entryLow": 9.09,
-      "entryHigh": 9.2454,
-      "structuralInvalidation": 8.9532,
-      "targets": {
-        "t1": 9.8172,
-        "t2": 10.4535,
-        "t3": 11.0898,
-        "t4": 11.817
-      },
-      "confluence": {
-        "fib618": 9.8385,
-        "fib786": 9.2454,
-        "inFib": true,
-        "anchoredVwap": 9.8613,
-        "vwapHit": false,
-        "dailyMa50": 9.7112,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 9.13,
-        "supportHit": true,
-        "correctionPct": 24.38,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.23,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-05-12",
-        "low": 8.49,
-        "high": 12.02,
-        "risePct": 41.58
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "SAUD",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 22,
-      "entryLow": 22,
-      "entryHigh": 22,
-      "structuralInvalidation": 20.8337,
-      "targets": {
-        "t1": 23.76,
-        "t2": 25.3,
-        "t3": 26.84,
-        "t4": 28.6
-      },
-      "confluence": {
-        "fib618": 22.2094,
-        "fib786": 21.2333,
-        "inFib": true,
-        "anchoredVwap": 23.197,
-        "vwapHit": false,
-        "dailyMa50": 23.269,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 22.03,
-        "supportHit": true,
-        "correctionPct": 14.73,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 2.66,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-06-28",
-        "peakDate": "2026-09-22",
-        "low": 19.99,
-        "high": 25.8,
-        "risePct": 29.06
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "UNIP",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 0.33,
-      "entryLow": 0.33,
-      "entryHigh": 0.33,
-      "structuralInvalidation": 0.2998,
-      "targets": {
-        "t1": 0.3564,
-        "t2": 0.3795,
-        "t3": 0.4026,
-        "t4": 0.429
-      },
-      "confluence": {
-        "fib618": 0.3368,
-        "fib786": 0.3087,
-        "inFib": true,
-        "anchoredVwap": 0.3572,
-        "vwapHit": false,
-        "dailyMa50": 0.372,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.33,
-        "supportHit": true,
-        "correctionPct": 25,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.22,
+        "volumeRatio": 1.64,
         "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
@@ -1134,171 +494,55 @@
       },
       "impulse": {
         "startDate": "2026-04-14",
-        "peakDate": "2026-08-13",
-        "low": 0.273,
-        "high": 0.44,
-        "risePct": 61.17
+        "peakDate": "2026-07-19",
+        "low": 1.05,
+        "high": 2.25,
+        "risePct": 114.29
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
+        "CORRECTION_30_38",
         "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ASPI",
-      "session": "2026-10-15",
+      "ticker": "RMDA",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 0.34,
-      "entryLow": 0.34,
-      "entryHigh": 0.34,
-      "structuralInvalidation": 0.3065,
+      "close": 4.91,
+      "entryLow": 4.91,
+      "entryHigh": 5.0006,
+      "structuralInvalidation": 4.8071,
       "targets": {
-        "t1": 0.3672,
-        "t2": 0.391,
-        "t3": 0.4148,
-        "t4": 0.442
+        "t1": 5.3028,
+        "t2": 5.6465,
+        "t3": 5.9902,
+        "t4": 6.383
       },
       "confluence": {
-        "fib618": 0.3734,
-        "fib786": 0.3172,
+        "fib618": 5.5113,
+        "fib786": 5.0006,
         "inFib": true,
-        "anchoredVwap": 0.4001,
+        "anchoredVwap": 5.5376,
         "vwapHit": false,
-        "dailyMa50": 0.4358,
+        "dailyMa50": 5.9236,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.34,
+        "priorSupport": 4.94,
         "supportHit": true,
-        "correctionPct": 41.38,
+        "correctionPct": 33.56,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.58,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-05-24",
-        "peakDate": "2026-08-16",
-        "low": 0.2457,
-        "high": 0.58,
-        "risePct": 136.1
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "COSG",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 1.47,
-      "entryLow": 1.47,
-      "entryHigh": 1.47,
-      "structuralInvalidation": 1.4105,
-      "targets": {
-        "t1": 1.5876,
-        "t2": 1.6905,
-        "t3": 1.7934,
-        "t4": 1.911
-      },
-      "confluence": {
-        "fib618": 1.5674,
-        "fib786": 1.4498,
-        "inFib": true,
-        "anchoredVwap": 1.654,
-        "vwapHit": false,
-        "dailyMa50": 1.7416,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1.46,
-        "supportHit": true,
-        "correctionPct": 26.5,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.87,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-09-06",
-        "low": 1.3,
-        "high": 2,
-        "risePct": 53.85
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "EHDR",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 2.3,
-      "entryLow": 2.3,
-      "entryHigh": 2.3118,
-      "structuralInvalidation": 2.2522,
-      "targets": {
-        "t1": 2.484,
-        "t2": 2.645,
-        "t3": 2.806,
-        "t4": 2.99
-      },
-      "confluence": {
-        "fib618": 2.5017,
-        "fib786": 2.3118,
-        "inFib": true,
-        "anchoredVwap": 2.6629,
-        "vwapHit": false,
-        "dailyMa50": 2.7602,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.35,
-        "supportHit": true,
-        "correctionPct": 28.13,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.89,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.55,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -1308,55 +552,55 @@
       },
       "impulse": {
         "startDate": "2026-04-15",
-        "peakDate": "2026-08-17",
-        "low": 2.07,
-        "high": 3.2,
-        "risePct": 54.59
+        "peakDate": "2026-08-11",
+        "low": 4.35,
+        "high": 7.39,
+        "risePct": 69.89
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ISMQ",
-      "session": "2026-10-15",
+      "ticker": "SUGR",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 7.6,
-      "entryLow": 7.6,
-      "entryHigh": 7.6569,
-      "structuralInvalidation": 7.4368,
+      "close": 55.74,
+      "entryLow": 52.6024,
+      "entryHigh": 55.74,
+      "structuralInvalidation": 48.1335,
       "targets": {
-        "t1": 8.208,
-        "t2": 8.74,
-        "t3": 9.272,
-        "t4": 9.88
+        "t1": 60.1992,
+        "t2": 64.101,
+        "t3": 68.0028,
+        "t4": 72.462
       },
       "confluence": {
-        "fib618": 8.1962,
-        "fib786": 7.6569,
-        "inFib": true,
-        "anchoredVwap": 8.6468,
-        "vwapHit": false,
-        "dailyMa50": 8.8362,
-        "ma50Hit": false,
+        "fib618": 52.6024,
+        "fib786": 49.3953,
+        "inFib": false,
+        "anchoredVwap": 55.395,
+        "vwapHit": true,
+        "dailyMa50": 55.9616,
+        "ma50Hit": true,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 7.6,
+        "priorSupport": 55.76,
         "supportHit": true,
-        "correctionPct": 25.34,
+        "correctionPct": 13.45,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.31,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.29,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -1365,55 +609,113 @@
         }
       },
       "impulse": {
-        "startDate": "2026-04-02",
-        "peakDate": "2026-07-06",
-        "low": 6.97,
-        "high": 10.18,
-        "risePct": 46.05
+        "startDate": "2026-06-29",
+        "peakDate": "2026-09-13",
+        "low": 45.31,
+        "high": 64.4,
+        "risePct": 42.13
       },
       "factors": [
-        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "MBSC",
-      "session": "2026-10-15",
+      "ticker": "ZMID",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 348,
-      "entryLow": 317.1439,
-      "entryHigh": 348,
-      "structuralInvalidation": 261.6193,
+      "close": 6.75,
+      "entryLow": 6.75,
+      "entryHigh": 6.75,
+      "structuralInvalidation": 6.0447,
       "targets": {
-        "t1": 375.84,
-        "t2": 400.2,
-        "t3": 424.56,
-        "t4": 452.4
+        "t1": 7.29,
+        "t2": 7.7625,
+        "t3": 8.235,
+        "t4": 8.775
       },
       "confluence": {
-        "fib618": 317.1439,
-        "fib786": 275.5908,
-        "inFib": false,
-        "anchoredVwap": 347.6888,
-        "vwapHit": true,
-        "dailyMa50": 362.8776,
+        "fib618": 7.0207,
+        "fib786": 6.2244,
+        "inFib": true,
+        "anchoredVwap": 7.1883,
+        "vwapHit": false,
+        "dailyMa50": 8.2008,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 350.04,
+        "priorSupport": 6.74,
         "supportHit": true,
-        "correctionPct": 25.96,
+        "correctionPct": 32.16,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.55,
+        "volumeRatio": 1.99,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-31",
+        "peakDate": "2026-09-06",
+        "low": 5.21,
+        "high": 9.95,
+        "risePct": 90.98
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SIPC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 40,
+      "actionable": false,
+      "close": 5.29,
+      "entryLow": 4.7895,
+      "entryHigh": 5.29,
+      "structuralInvalidation": 3.8556,
+      "targets": {
+        "t1": 5.7132,
+        "t2": 6.0835,
+        "t3": 6.4538,
+        "t4": 6.877
+      },
+      "confluence": {
+        "fib618": 4.7895,
+        "fib786": 4.1124,
+        "inFib": false,
+        "anchoredVwap": 5.2235,
+        "vwapHit": true,
+        "dailyMa50": 5.31,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 5.3,
+        "supportHit": true,
+        "correctionPct": 27.34,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.82,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -1424,171 +726,55 @@
       },
       "impulse": {
         "startDate": "2026-06-29",
-        "peakDate": "2026-09-01",
-        "low": 222.66,
-        "high": 470,
-        "risePct": 111.08
+        "peakDate": "2026-09-07",
+        "low": 3.25,
+        "high": 7.28,
+        "risePct": 124
       },
       "factors": [
         "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "CORRECTION_NEAR_TARGET"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "PHAR",
-      "session": "2026-10-15",
+      "ticker": "AALR",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 37,
       "actionable": false,
-      "close": 108.41,
-      "entryLow": 108.41,
-      "entryHigh": 108.41,
-      "structuralInvalidation": 96.7313,
+      "close": 214.91,
+      "entryLow": 214.91,
+      "entryHigh": 214.91,
+      "structuralInvalidation": 199.4981,
       "targets": {
-        "t1": 117.0828,
-        "t2": 124.6715,
-        "t3": 132.2602,
-        "t4": 140.933
+        "t1": 232.1028,
+        "t2": 247.1465,
+        "t3": 262.1902,
+        "t4": 279.383
       },
       "confluence": {
-        "fib618": 116.1518,
-        "fib786": 99.0695,
+        "fib618": 243.366,
+        "fib786": 207.582,
         "inFib": true,
-        "anchoredVwap": 127.5148,
+        "anchoredVwap": 271.9559,
         "vwapHit": false,
-        "dailyMa50": 124.0554,
+        "dailyMa50": 290.7516,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 108.1,
+        "priorSupport": 217.55,
         "supportHit": true,
-        "correctionPct": 39.43,
+        "correctionPct": 42.69,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.32,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-08-11",
-        "low": 77.31,
-        "high": 178.99,
-        "risePct": 131.52
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RAYA",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 5.97,
-      "entryLow": 5.97,
-      "entryHigh": 5.97,
-      "structuralInvalidation": 5.6016,
-      "targets": {
-        "t1": 6.4476,
-        "t2": 6.8655,
-        "t3": 7.2834,
-        "t4": 7.761
-      },
-      "confluence": {
-        "fib618": 6.3209,
-        "fib786": 5.7884,
-        "inFib": true,
-        "anchoredVwap": 6.9673,
-        "vwapHit": false,
-        "dailyMa50": 6.9444,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.95,
-        "supportHit": true,
-        "correctionPct": 27.9,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.47,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-05",
-        "peakDate": "2026-07-06",
-        "low": 5.11,
-        "high": 8.28,
-        "risePct": 62.04
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "ROTO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 37.63,
-      "entryLow": 37.63,
-      "entryHigh": 37.63,
-      "structuralInvalidation": 33.2455,
-      "targets": {
-        "t1": 40.6404,
-        "t2": 43.2745,
-        "t3": 45.9086,
-        "t4": 48.919
-      },
-      "confluence": {
-        "fib618": 38.4096,
-        "fib786": 34.2801,
-        "inFib": true,
-        "anchoredVwap": 40.8529,
-        "vwapHit": false,
-        "dailyMa50": 43.108,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 38.2,
-        "supportHit": true,
-        "correctionPct": 29.79,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.37,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.94,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -1598,54 +784,227 @@
       },
       "impulse": {
         "startDate": "2026-03-30",
-        "peakDate": "2026-08-16",
-        "low": 29.02,
-        "high": 53.6,
-        "risePct": 84.7
+        "peakDate": "2026-08-18",
+        "low": 162,
+        "high": 375,
+        "risePct": 131.48
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
         "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MCRO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 37,
+      "actionable": false,
+      "close": 1.27,
+      "entryLow": 1.27,
+      "entryHigh": 1.2834,
+      "structuralInvalidation": 1.2043,
+      "targets": {
+        "t1": 1.3716,
+        "t2": 1.4605,
+        "t3": 1.5494,
+        "t4": 1.651
+      },
+      "confluence": {
+        "fib618": 1.3959,
+        "fib786": 1.2834,
+        "inFib": true,
+        "anchoredVwap": 1.4356,
+        "vwapHit": false,
+        "dailyMa50": 1.551,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 1.25,
+        "supportHit": true,
+        "correctionPct": 29.83,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.55,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-16",
+        "peakDate": "2026-09-15",
+        "low": 1.14,
+        "high": 1.81,
+        "risePct": 58.77
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MIPH",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 37,
+      "actionable": false,
+      "close": 750,
+      "entryLow": 672.46,
+      "entryHigh": 750,
+      "structuralInvalidation": 556.29,
+      "targets": {
+        "t1": 810,
+        "t2": 862.5,
+        "t3": 915,
+        "t4": 975
+      },
+      "confluence": {
+        "fib618": 672.46,
+        "fib786": 583.42,
+        "inFib": false,
+        "anchoredVwap": 737.8943,
+        "vwapHit": true,
+        "dailyMa50": 801.7732,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 750,
+        "supportHit": true,
+        "correctionPct": 25,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 3.48,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-09",
+        "peakDate": "2026-09-21",
+        "low": 470,
+        "high": 1000,
+        "risePct": 112.77
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ACAMD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 2.07,
+      "entryLow": 2.07,
+      "entryHigh": 2.07,
+      "structuralInvalidation": 1.9401,
+      "targets": {
+        "t1": 2.2356,
+        "t2": 2.3805,
+        "t3": 2.5254,
+        "t4": 2.691
+      },
+      "confluence": {
+        "fib618": 2.1118,
+        "fib786": 1.9791,
+        "inFib": true,
+        "anchoredVwap": 2.1842,
+        "vwapHit": false,
+        "dailyMa50": 2.0838,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 2.07,
+        "supportHit": true,
+        "correctionPct": 20.38,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.96,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-14",
+        "peakDate": "2026-06-10",
+        "low": 1.81,
+        "high": 2.6,
+        "risePct": 43.65
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "ADCI",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 260.19,
+      "close": 257.35,
       "entryLow": 239.2042,
-      "entryHigh": 260.19,
-      "structuralInvalidation": 192.7228,
+      "entryHigh": 257.35,
+      "structuralInvalidation": 192.8171,
       "targets": {
-        "t1": 281.0052,
-        "t2": 299.2185,
-        "t3": 317.4318,
-        "t4": 338.247
+        "t1": 277.938,
+        "t2": 295.9525,
+        "t3": 313.967,
+        "t4": 334.555
       },
       "confluence": {
         "fib618": 239.2042,
         "fib786": 198.2139,
         "inFib": false,
-        "anchoredVwap": 256.0112,
+        "anchoredVwap": 256.0141,
         "vwapHit": true,
-        "dailyMa50": 286.434,
+        "dailyMa50": 285.8592,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
         "priorSupport": 258.1,
         "supportHit": true,
-        "correctionPct": 33.28,
+        "correctionPct": 34.01,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.82,
+        "volumeRatio": 0.38,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -1670,39 +1029,39 @@
       "executionAllowed": false
     },
     {
-      "ticker": "ATLC",
-      "session": "2026-10-15",
+      "ticker": "AFDI",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 5.48,
-      "entryLow": 5.48,
-      "entryHigh": 5.48,
-      "structuralInvalidation": 5.084,
+      "close": 46.98,
+      "entryLow": 46.165,
+      "entryHigh": 46.98,
+      "structuralInvalidation": 38.6019,
       "targets": {
-        "t1": 5.9184,
-        "t2": 6.302,
-        "t3": 6.6856,
-        "t4": 7.124
+        "t1": 50.7384,
+        "t2": 54.027,
+        "t3": 57.3156,
+        "t4": 61.074
       },
       "confluence": {
-        "fib618": 5.9246,
-        "fib786": 5.3333,
+        "fib618": 46.165,
+        "fib786": 39.7155,
         "inFib": true,
-        "anchoredVwap": 5.8091,
+        "anchoredVwap": 50.2955,
         "vwapHit": false,
-        "dailyMa50": 6.1602,
+        "dailyMa50": 55.9406,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.47,
+        "priorSupport": 47.03,
         "supportHit": true,
-        "correctionPct": 32.35,
+        "correctionPct": 32.78,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.55,
+        "volumeRatio": 0.7,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -1712,282 +1071,168 @@
         }
       },
       "impulse": {
-        "startDate": "2026-04-19",
-        "peakDate": "2026-09-06",
-        "low": 4.58,
-        "high": 8.1,
-        "risePct": 76.86
+        "startDate": "2026-04-09",
+        "peakDate": "2026-08-12",
+        "low": 31.5,
+        "high": 69.89,
+        "risePct": 121.87
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
         "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "AIFI",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 1.97,
+      "entryLow": 1.97,
+      "entryHigh": 1.97,
+      "structuralInvalidation": 1.8661,
+      "targets": {
+        "t1": 2.1276,
+        "t2": 2.2655,
+        "t3": 2.4034,
+        "t4": 2.561
+      },
+      "confluence": {
+        "fib618": 2.146,
+        "fib786": 1.9411,
+        "inFib": true,
+        "anchoredVwap": 2.1321,
+        "vwapHit": false,
+        "dailyMa50": 2.2952,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 1.93,
+        "supportHit": true,
+        "correctionPct": 32.07,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.93,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-05-05",
+        "peakDate": "2026-09-01",
+        "low": 1.68,
+        "high": 2.9,
+        "risePct": 72.62
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ALCN",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 32.33,
+      "entryLow": 29.4522,
+      "entryHigh": 32.33,
+      "structuralInvalidation": 27.0296,
+      "targets": {
+        "t1": 34.9164,
+        "t2": 37.1795,
+        "t3": 39.4426,
+        "t4": 42.029
+      },
+      "confluence": {
+        "fib618": 29.4522,
+        "fib786": 27.7185,
+        "inFib": false,
+        "anchoredVwap": 31.7121,
+        "vwapHit": true,
+        "dailyMa50": 32.268,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 32.31,
+        "supportHit": true,
+        "correctionPct": 9.77,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.27,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-06-11",
+        "peakDate": "2026-10-05",
+        "low": 25.51,
+        "high": 35.83,
+        "risePct": 40.45
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "AXPH",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 1371.51,
-      "entryLow": 1261.468,
-      "entryHigh": 1371.51,
-      "structuralInvalidation": 1008.0992,
+      "close": 1327.83,
+      "entryLow": 1281.3676,
+      "entryHigh": 1327.83,
+      "structuralInvalidation": 1045.1724,
       "targets": {
-        "t1": 1481.2308,
-        "t2": 1577.2365,
-        "t3": 1673.2422,
-        "t4": 1782.963
+        "t1": 1434.0564,
+        "t2": 1527.0045,
+        "t3": 1619.9526,
+        "t4": 1726.179
       },
       "confluence": {
-        "fib618": 1261.468,
-        "fib786": 1064.236,
+        "fib618": 1281.3676,
+        "fib786": 1089.5452,
         "inFib": false,
-        "anchoredVwap": 1351.674,
+        "anchoredVwap": 1363.2099,
         "vwapHit": true,
-        "dailyMa50": 1533.6724,
+        "dailyMa50": 1535.0378,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1363,
+        "priorSupport": 1325,
         "supportHit": true,
-        "correctionPct": 30.98,
+        "correctionPct": 33.17,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.54,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-27",
-        "low": 813,
-        "high": 1987,
-        "risePct": 144.4
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "MPCO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 2.07,
-      "entryLow": 2.07,
-      "entryHigh": 2.07,
-      "structuralInvalidation": 1.7703,
-      "targets": {
-        "t1": 2.2356,
-        "t2": 2.3805,
-        "t3": 2.5254,
-        "t4": 2.691
-      },
-      "confluence": {
-        "fib618": 2.0992,
-        "fib786": 1.8489,
-        "inFib": true,
-        "anchoredVwap": 2.1638,
-        "vwapHit": false,
-        "dailyMa50": 2.3482,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.07,
-        "supportHit": true,
-        "correctionPct": 31.46,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.48,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-20",
-        "low": 1.53,
-        "high": 3.02,
-        "risePct": 97.39
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "NCCW",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 5.86,
-      "entryLow": 5.86,
-      "entryHigh": 5.86,
-      "structuralInvalidation": 5.3206,
-      "targets": {
-        "t1": 6.3288,
-        "t2": 6.739,
-        "t3": 7.1492,
-        "t4": 7.618
-      },
-      "confluence": {
-        "fib618": 6.2729,
-        "fib786": 5.5724,
-        "inFib": true,
-        "anchoredVwap": 6.6505,
-        "vwapHit": false,
-        "dailyMa50": 6.6598,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.84,
-        "supportHit": true,
-        "correctionPct": 33.79,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.58,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-09-14",
-        "low": 4.68,
-        "high": 8.85,
-        "risePct": 89.1
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "OFH",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 0.8,
-      "entryLow": 0.7999,
-      "entryHigh": 0.8,
-      "structuralInvalidation": 0.6695,
-      "targets": {
-        "t1": 0.864,
-        "t2": 0.92,
-        "t3": 0.976,
-        "t4": 1.04
-      },
-      "confluence": {
-        "fib618": 0.7999,
-        "fib786": 0.6966,
-        "inFib": true,
-        "anchoredVwap": 0.8619,
-        "vwapHit": false,
-        "dailyMa50": 0.9642,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.79,
-        "supportHit": true,
-        "correctionPct": 32.2,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.14,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-07",
-        "low": 0.565,
-        "high": 1.18,
-        "risePct": 108.85
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RMDA",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 5.14,
-      "entryLow": 5.14,
-      "entryHigh": 5.14,
-      "structuralInvalidation": 4.8398,
-      "targets": {
-        "t1": 5.5512,
-        "t2": 5.911,
-        "t3": 6.2708,
-        "t4": 6.682
-      },
-      "confluence": {
-        "fib618": 5.5113,
-        "fib786": 5.0006,
-        "inFib": true,
-        "anchoredVwap": 5.5407,
-        "vwapHit": false,
-        "dailyMa50": 5.9514,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.15,
-        "supportHit": true,
-        "correctionPct": 30.45,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.61,
+        "volumeRatio": 0.68,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -1998,10 +1243,67 @@
       },
       "impulse": {
         "startDate": "2026-04-15",
-        "peakDate": "2026-08-11",
-        "low": 4.35,
-        "high": 7.39,
-        "risePct": 69.89
+        "peakDate": "2026-09-27",
+        "low": 845.2,
+        "high": 1987,
+        "risePct": 135.09
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "IDRE",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 40.27,
+      "entryLow": 40.27,
+      "entryHigh": 40.27,
+      "structuralInvalidation": 36.1575,
+      "targets": {
+        "t1": 43.4916,
+        "t2": 46.3105,
+        "t3": 49.1294,
+        "t4": 52.351
+      },
+      "confluence": {
+        "fib618": 42.6061,
+        "fib786": 37.9592,
+        "inFib": true,
+        "anchoredVwap": 48.0877,
+        "vwapHit": false,
+        "dailyMa50": 51.9974,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 41.1,
+        "supportHit": true,
+        "correctionPct": 32.55,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.35,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-09-20",
+        "low": 32.04,
+        "high": 59.7,
+        "risePct": 86.33
       },
       "factors": [
         "FIB_61_8_78_6",
@@ -2012,34 +1314,718 @@
       "executionAllowed": false
     },
     {
-      "ticker": "SEIG",
-      "session": "2026-10-15",
+      "ticker": "KZPC",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 192.4,
-      "entryLow": 192.4,
-      "entryHigh": 192.4,
-      "structuralInvalidation": 161.6851,
+      "close": 12.87,
+      "entryLow": 11.4994,
+      "entryHigh": 12.87,
+      "structuralInvalidation": 9.8119,
       "targets": {
-        "t1": 207.792,
-        "t2": 221.26,
-        "t3": 234.728,
-        "t4": 250.12
+        "t1": 13.8996,
+        "t2": 14.8005,
+        "t3": 15.7014,
+        "t4": 16.731
       },
       "confluence": {
-        "fib618": 197.974,
-        "fib786": 171.598,
+        "fib618": 11.4994,
+        "fib786": 10.0747,
+        "inFib": false,
+        "anchoredVwap": 12.7357,
+        "vwapHit": true,
+        "dailyMa50": 12.9758,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 12.86,
+        "supportHit": true,
+        "correctionPct": 23.12,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.74,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-07-06",
+        "peakDate": "2026-08-20",
+        "low": 8.26,
+        "high": 16.74,
+        "risePct": 102.66
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MPCO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 1.88,
+      "entryLow": 1.88,
+      "entryHigh": 1.88,
+      "structuralInvalidation": 1.7814,
+      "targets": {
+        "t1": 2.0304,
+        "t2": 2.162,
+        "t3": 2.2936,
+        "t4": 2.444
+      },
+      "confluence": {
+        "fib618": 2.1054,
+        "fib786": 1.8567,
         "inFib": true,
-        "anchoredVwap": 226.6446,
+        "anchoredVwap": 2.1627,
         "vwapHit": false,
-        "dailyMa50": 248.3252,
+        "dailyMa50": 2.346,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 188.19,
+        "priorSupport": 1.88,
         "supportHit": true,
-        "correctionPct": 34.78,
+        "correctionPct": 37.75,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.84,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-14",
+        "peakDate": "2026-09-20",
+        "low": 1.54,
+        "high": 3.02,
+        "risePct": 96.1
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "OCDI",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 24.05,
+      "entryLow": 24.05,
+      "entryHigh": 24.05,
+      "structuralInvalidation": 22.2824,
+      "targets": {
+        "t1": 25.974,
+        "t2": 27.6575,
+        "t3": 29.341,
+        "t4": 31.265
+      },
+      "confluence": {
+        "fib618": 25.9263,
+        "fib786": 22.9242,
+        "inFib": true,
+        "anchoredVwap": 27.2234,
+        "vwapHit": false,
+        "dailyMa50": 30.2634,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 24.2,
+        "supportHit": true,
+        "correctionPct": 34.95,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.88,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-29",
+        "peakDate": "2026-08-13",
+        "low": 19.1,
+        "high": 36.97,
+        "risePct": 93.56
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ROTO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 35.9,
+      "entryLow": 35.9,
+      "entryHigh": 35.9,
+      "structuralInvalidation": 33.2873,
+      "targets": {
+        "t1": 38.772,
+        "t2": 41.285,
+        "t3": 43.798,
+        "t4": 46.67
+      },
+      "confluence": {
+        "fib618": 38.4096,
+        "fib786": 34.2801,
+        "inFib": true,
+        "anchoredVwap": 40.8266,
+        "vwapHit": false,
+        "dailyMa50": 42.898,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 36.38,
+        "supportHit": true,
+        "correctionPct": 33.02,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.13,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-08-16",
+        "low": 29.02,
+        "high": 53.6,
+        "risePct": 84.7
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ASCM",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 46.59,
+      "entryLow": 46.59,
+      "entryHigh": 46.9274,
+      "structuralInvalidation": 45.6449,
+      "targets": {
+        "t1": 50.3172,
+        "t2": 53.5785,
+        "t3": 56.8398,
+        "t4": 60.567
+      },
+      "confluence": {
+        "fib618": 52.6562,
+        "fib786": 46.9274,
+        "inFib": true,
+        "anchoredVwap": 59.1683,
+        "vwapHit": false,
+        "dailyMa50": 60.4814,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 53.8,
+        "supportHit": false,
+        "correctionPct": 36.81,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.79,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-31",
+        "peakDate": "2026-06-23",
+        "low": 39.63,
+        "high": 73.73,
+        "risePct": 86.05
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "GBCO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 29,
+      "entryLow": 28.0818,
+      "entryHigh": 29,
+      "structuralInvalidation": 25.7972,
+      "targets": {
+        "t1": 31.32,
+        "t2": 33.35,
+        "t3": 35.38,
+        "t4": 37.7
+      },
+      "confluence": {
+        "fib618": 28.0818,
+        "fib786": 26.4186,
+        "inFib": false,
+        "anchoredVwap": 29.4068,
+        "vwapHit": true,
+        "dailyMa50": 30.2474,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 29,
+        "supportHit": true,
+        "correctionPct": 15.2,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.26,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-05",
+        "peakDate": "2026-07-15",
+        "low": 24.3,
+        "high": 34.2,
+        "risePct": 40.74
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MPRC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 34.62,
+      "entryLow": 34.62,
+      "entryHigh": 34.62,
+      "structuralInvalidation": 32.7196,
+      "targets": {
+        "t1": 37.3896,
+        "t2": 39.813,
+        "t3": 42.2364,
+        "t4": 45.006
+      },
+      "confluence": {
+        "fib618": 37.6271,
+        "fib786": 33.5867,
+        "inFib": true,
+        "anchoredVwap": 38.9337,
+        "vwapHit": false,
+        "dailyMa50": 41.1036,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 37.65,
+        "supportHit": false,
+        "correctionPct": 34.04,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 2.09,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-20",
+        "peakDate": "2026-08-11",
+        "low": 28.44,
+        "high": 52.49,
+        "risePct": 84.56
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SAUD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 21,
+      "entryLow": 21,
+      "entryHigh": 21.2333,
+      "structuralInvalidation": 20.6357,
+      "targets": {
+        "t1": 22.68,
+        "t2": 24.15,
+        "t3": 25.62,
+        "t4": 27.3
+      },
+      "confluence": {
+        "fib618": 22.2094,
+        "fib786": 21.2333,
+        "inFib": true,
+        "anchoredVwap": 23.1572,
+        "vwapHit": false,
+        "dailyMa50": 23.24,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 21.03,
+        "supportHit": true,
+        "correctionPct": 18.6,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.21,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-06-28",
+        "peakDate": "2026-09-22",
+        "low": 19.99,
+        "high": 25.8,
+        "risePct": 29.06
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SCEM",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 85.66,
+      "entryLow": 78.151,
+      "entryHigh": 85.66,
+      "structuralInvalidation": 66.0632,
+      "targets": {
+        "t1": 92.5128,
+        "t2": 98.509,
+        "t3": 104.5052,
+        "t4": 111.358
+      },
+      "confluence": {
+        "fib618": 78.151,
+        "fib786": 68.6775,
+        "inFib": false,
+        "anchoredVwap": 87.5211,
+        "vwapHit": true,
+        "dailyMa50": 92.5596,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 85.6,
+        "supportHit": true,
+        "correctionPct": 24.19,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.5,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-08-12",
+        "low": 56.61,
+        "high": 113,
+        "risePct": 99.61
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ARCC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 65.39,
+      "entryLow": 63.8049,
+      "entryHigh": 65.39,
+      "structuralInvalidation": 54.5285,
+      "targets": {
+        "t1": 70.6212,
+        "t2": 75.1985,
+        "t3": 79.7758,
+        "t4": 85.007
+      },
+      "confluence": {
+        "fib618": 63.8049,
+        "fib786": 56.2164,
+        "inFib": false,
+        "anchoredVwap": 64.6634,
+        "vwapHit": true,
+        "dailyMa50": 71.9374,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 66.12,
+        "supportHit": true,
+        "correctionPct": 28.71,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.85,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-24",
+        "peakDate": "2026-08-12",
+        "low": 46.55,
+        "high": 91.72,
+        "risePct": 97.04
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "EASB",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 6.17,
+      "entryLow": 6.17,
+      "entryHigh": 6.17,
+      "structuralInvalidation": 5.1343,
+      "targets": {
+        "t1": 6.6636,
+        "t2": 7.0955,
+        "t3": 7.5274,
+        "t4": 8.021
+      },
+      "confluence": {
+        "fib618": 6.4249,
+        "fib786": 5.4068,
+        "inFib": true,
+        "anchoredVwap": 7.2836,
+        "vwapHit": false,
+        "dailyMa50": 7.5382,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 6.04,
+        "supportHit": true,
+        "correctionPct": 39.33,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.74,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-26",
+        "peakDate": "2026-06-21",
+        "low": 4.11,
+        "high": 10.17,
+        "risePct": 147.45
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "EGSA",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 8.76,
+      "entryLow": 8.601,
+      "entryHigh": 8.76,
+      "structuralInvalidation": 7.6259,
+      "targets": {
+        "t1": 9.4608,
+        "t2": 10.074,
+        "t3": 10.6872,
+        "t4": 11.388
+      },
+      "confluence": {
+        "fib618": 8.601,
+        "fib786": 7.677,
+        "inFib": true,
+        "anchoredVwap": 7.538,
+        "vwapHit": false,
+        "dailyMa50": 7.9968,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 8.77,
+        "supportHit": true,
+        "correctionPct": 27,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.66,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2025-10-22",
+        "peakDate": "2026-08-12",
+        "low": 6.5,
+        "high": 12,
+        "risePct": 84.62
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "GIHD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 48.73,
+      "entryLow": 48.73,
+      "entryHigh": 48.73,
+      "structuralInvalidation": 42.6726,
+      "targets": {
+        "t1": 52.6284,
+        "t2": 56.0395,
+        "t3": 59.4506,
+        "t4": 63.349
+      },
+      "confluence": {
+        "fib618": 52.2445,
+        "fib786": 44.7265,
+        "inFib": true,
+        "anchoredVwap": 61.1026,
+        "vwapHit": false,
+        "dailyMa50": 66.7958,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 49,
+        "supportHit": true,
+        "correctionPct": 39.01,
         "reaction": {
           "ok": false,
           "type": "NONE"
@@ -2054,16 +2040,16 @@
         }
       },
       "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-08-03",
-        "low": 138,
-        "high": 295,
-        "risePct": 113.77
+        "startDate": "2026-06-10",
+        "peakDate": "2026-09-08",
+        "low": 35.15,
+        "high": 79.9,
+        "risePct": 127.31
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
+        "CORRECTION_NEAR_TARGET"
       ],
       "researchOnly": true,
       "executionAllowed": false
@@ -2071,40 +2057,40 @@
   ],
   "allTop": [
     {
-      "ticker": "FWRY",
-      "session": "2026-10-15",
+      "ticker": "SEIG",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 58,
+      "score": 50,
       "actionable": false,
-      "close": 18.69,
-      "entryLow": 18.4326,
-      "entryHigh": 18.69,
-      "structuralInvalidation": 17.2867,
+      "close": 199.11,
+      "entryLow": 197.974,
+      "entryHigh": 199.11,
+      "structuralInvalidation": 161.7812,
       "targets": {
-        "t1": 20.1852,
-        "t2": 21.4935,
-        "t3": 22.8018,
-        "t4": 24.297
+        "t1": 215.0388,
+        "t2": 228.9765,
+        "t3": 242.9142,
+        "t4": 258.843
       },
       "confluence": {
-        "fib618": 18.4326,
-        "fib786": 17.5607,
+        "fib618": 197.974,
+        "fib786": 171.598,
         "inFib": true,
-        "anchoredVwap": 19.0389,
-        "vwapHit": true,
-        "dailyMa50": 18.944,
-        "ma50Hit": true,
+        "anchoredVwap": 226.3748,
+        "vwapHit": false,
+        "dailyMa50": 247.0364,
+        "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 18.69,
+        "priorSupport": 200,
         "supportHit": true,
-        "correctionPct": 13.63,
+        "correctionPct": 32.51,
         "reaction": {
           "ok": true,
           "type": "BULLISH_ENGULFING"
         },
-        "volumeRatio": 0.91,
-        "volumeConfirmed": false,
+        "volumeRatio": 3.59,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -2113,56 +2099,56 @@
         }
       },
       "impulse": {
-        "startDate": "2026-03-16",
-        "peakDate": "2026-05-11",
-        "low": 16.45,
-        "high": 21.64,
-        "risePct": 31.55
+        "startDate": "2026-03-31",
+        "peakDate": "2026-08-03",
+        "low": 138,
+        "high": 295,
+        "risePct": 113.77
       },
       "factors": [
         "FIB_61_8_78_6",
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "PRICE_REACTION",
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "SNFC",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 58,
+      "score": 50,
       "actionable": false,
-      "close": 11.26,
-      "entryLow": 11.1854,
-      "entryHigh": 11.26,
-      "structuralInvalidation": 10.5399,
+      "close": 11.13,
+      "entryLow": 11.13,
+      "entryHigh": 11.13,
+      "structuralInvalidation": 10.5395,
       "targets": {
-        "t1": 12.1608,
-        "t2": 12.949,
-        "t3": 13.7372,
-        "t4": 14.638
+        "t1": 12.0204,
+        "t2": 12.7995,
+        "t3": 13.5786,
+        "t4": 14.469
       },
       "confluence": {
         "fib618": 11.1854,
         "fib786": 10.6949,
         "inFib": true,
-        "anchoredVwap": 11.45,
+        "anchoredVwap": 11.449,
         "vwapHit": true,
-        "dailyMa50": 11.0658,
+        "dailyMa50": 11.07,
         "ma50Hit": true,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 11.26,
+        "priorSupport": 11.13,
         "supportHit": true,
-        "correctionPct": 13.32,
+        "correctionPct": 14.32,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.78,
+        "volumeRatio": 0.4,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -2182,687 +2168,45 @@
         "FIB_61_8_78_6",
         "ANCHORED_VWAP",
         "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ACAMD",
-      "session": "2026-10-15",
+      "ticker": "ELKA",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 50,
+      "score": 42,
       "actionable": false,
-      "close": 2.14,
-      "entryLow": 2.0438,
-      "entryHigh": 2.14,
-      "structuralInvalidation": 1.8508,
+      "close": 1.45,
+      "entryLow": 1.45,
+      "entryHigh": 1.45,
+      "structuralInvalidation": 1.2647,
       "targets": {
-        "t1": 2.3112,
-        "t2": 2.461,
-        "t3": 2.6108,
-        "t4": 2.782
+        "t1": 1.566,
+        "t2": 1.6675,
+        "t3": 1.769,
+        "t4": 1.885
       },
       "confluence": {
-        "fib618": 2.0438,
-        "fib786": 1.8926,
-        "inFib": false,
-        "anchoredVwap": 2.1758,
-        "vwapHit": true,
-        "dailyMa50": 2.0894,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.15,
-        "supportHit": true,
-        "correctionPct": 17.69,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.31,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-06-10",
-        "low": 1.7,
-        "high": 2.6,
-        "risePct": 52.94
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "CLHO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 45,
-      "actionable": false,
-      "close": 14.05,
-      "entryLow": 14.05,
-      "entryHigh": 14.05,
-      "structuralInvalidation": 13.2299,
-      "targets": {
-        "t1": 15.174,
-        "t2": 16.1575,
-        "t3": 17.141,
-        "t4": 18.265
-      },
-      "confluence": {
-        "fib618": 14.8563,
-        "fib786": 13.5342,
+        "fib618": 1.5084,
+        "fib786": 1.3068,
         "inFib": true,
-        "anchoredVwap": 16.0157,
+        "anchoredVwap": 1.5364,
         "vwapHit": false,
-        "dailyMa50": 16.4602,
+        "dailyMa50": 1.6904,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 13.9,
+        "priorSupport": 1.44,
         "supportHit": true,
-        "correctionPct": 28.75,
+        "correctionPct": 35.56,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 3.82,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-03",
-        "low": 11.85,
-        "high": 19.72,
-        "risePct": 66.41
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "UEGC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 45,
-      "actionable": false,
-      "close": 1.67,
-      "entryLow": 1.67,
-      "entryHigh": 1.67,
-      "structuralInvalidation": 1.5856,
-      "targets": {
-        "t1": 1.8036,
-        "t2": 1.9205,
-        "t3": 2.0374,
-        "t4": 2.171
-      },
-      "confluence": {
-        "fib618": 1.8997,
-        "fib786": 1.636,
-        "inFib": true,
-        "anchoredVwap": 1.856,
-        "vwapHit": false,
-        "dailyMa50": 1.876,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1.66,
-        "supportHit": true,
-        "correctionPct": 41.81,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 6.51,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-05-21",
-        "peakDate": "2026-08-11",
-        "low": 1.3,
-        "high": 2.87,
-        "risePct": 120.77
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "HRHO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 25.7,
-      "entryLow": 25.7,
-      "entryHigh": 25.9235,
-      "structuralInvalidation": 25.2754,
-      "targets": {
-        "t1": 27.756,
-        "t2": 29.555,
-        "t3": 31.354,
-        "t4": 33.41
-      },
-      "confluence": {
-        "fib618": 26.8055,
-        "fib786": 25.9235,
-        "inFib": true,
-        "anchoredVwap": 26.7252,
-        "vwapHit": false,
-        "dailyMa50": 25.719,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 25.7,
-        "supportHit": true,
-        "correctionPct": 14.48,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.7,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-05-11",
-        "low": 24.8,
-        "high": 30.05,
-        "risePct": 21.17
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "ISPH",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 11.27,
-      "entryLow": 11.27,
-      "entryHigh": 11.27,
-      "structuralInvalidation": 10.9883,
-      "targets": {
-        "t1": 12.1716,
-        "t2": 12.9605,
-        "t3": 13.7494,
-        "t4": 14.651
-      },
-      "confluence": {
-        "fib618": 12.4186,
-        "fib786": 11.1922,
-        "inFib": true,
-        "anchoredVwap": 12.3385,
-        "vwapHit": false,
-        "dailyMa50": 12.5788,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 11.28,
-        "supportHit": true,
-        "correctionPct": 33.43,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.38,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-04",
-        "low": 9.63,
-        "high": 16.93,
-        "risePct": 75.8
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "SCEM",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 43,
-      "actionable": false,
-      "close": 89.99,
-      "entryLow": 78.151,
-      "entryHigh": 89.99,
-      "structuralInvalidation": 66.0325,
-      "targets": {
-        "t1": 97.1892,
-        "t2": 103.4885,
-        "t3": 109.7878,
-        "t4": 116.987
-      },
-      "confluence": {
-        "fib618": 78.151,
-        "fib786": 68.6775,
-        "inFib": false,
-        "anchoredVwap": 87.5238,
-        "vwapHit": true,
-        "dailyMa50": 92.4238,
-        "ma50Hit": true,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 90.6,
-        "supportHit": true,
-        "correctionPct": 20.36,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.95,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-08-12",
-        "low": 56.61,
-        "high": 113,
-        "risePct": 99.61
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "DAILY_MA50",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "COMI",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 125.08,
-      "entryLow": 123.9613,
-      "entryHigh": 125.08,
-      "structuralInvalidation": 117.0467,
-      "targets": {
-        "t1": 135.0864,
-        "t2": 143.842,
-        "t3": 152.5976,
-        "t4": 162.604
-      },
-      "confluence": {
-        "fib618": 123.9613,
-        "fib786": 118.261,
-        "inFib": true,
-        "anchoredVwap": 133.2075,
-        "vwapHit": false,
-        "dailyMa50": 134.0084,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 125.03,
-        "supportHit": true,
-        "correctionPct": 13.7,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.33,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-04",
-        "peakDate": "2026-05-11",
-        "low": 111,
-        "high": 144.93,
-        "risePct": 30.57
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "DTPP",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 264.49,
-      "entryLow": 207.2752,
-      "entryHigh": 264.49,
-      "structuralInvalidation": 147.8309,
-      "targets": {
-        "t1": 285.6492,
-        "t2": 304.1635,
-        "t3": 322.6778,
-        "t4": 343.837
-      },
-      "confluence": {
-        "fib618": 207.2752,
-        "fib786": 160.3209,
-        "inFib": false,
-        "anchoredVwap": 270.3389,
-        "vwapHit": true,
-        "dailyMa50": 302.2604,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 276,
-        "supportHit": false,
-        "correctionPct": 30.4,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.28,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-30",
-        "peakDate": "2026-09-14",
-        "low": 100.51,
-        "high": 380,
-        "risePct": 278.07
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "CORRECTION_30_38",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "GGCC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 0.7,
-      "entryLow": 0.7,
-      "entryHigh": 0.7,
-      "structuralInvalidation": 0.5392,
-      "targets": {
-        "t1": 0.756,
-        "t2": 0.805,
-        "t3": 0.854,
-        "t4": 0.91
-      },
-      "confluence": {
-        "fib618": 0.721,
-        "fib786": 0.5609,
-        "inFib": true,
-        "anchoredVwap": 0.7628,
-        "vwapHit": false,
-        "dailyMa50": 0.861,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.7,
-        "supportHit": true,
-        "correctionPct": 46.56,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 7.16,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-05",
-        "peakDate": "2026-08-10",
-        "low": 0.357,
-        "high": 1.31,
-        "risePct": 266.95
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RACC",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 9.09,
-      "entryLow": 9.09,
-      "entryHigh": 9.2454,
-      "structuralInvalidation": 8.9532,
-      "targets": {
-        "t1": 9.8172,
-        "t2": 10.4535,
-        "t3": 11.0898,
-        "t4": 11.817
-      },
-      "confluence": {
-        "fib618": 9.8385,
-        "fib786": 9.2454,
-        "inFib": true,
-        "anchoredVwap": 9.8613,
-        "vwapHit": false,
-        "dailyMa50": 9.7112,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 9.13,
-        "supportHit": true,
-        "correctionPct": 24.38,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.23,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-05-12",
-        "low": 8.49,
-        "high": 12.02,
-        "risePct": 41.58
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "SAUD",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 22,
-      "entryLow": 22,
-      "entryHigh": 22,
-      "structuralInvalidation": 20.8337,
-      "targets": {
-        "t1": 23.76,
-        "t2": 25.3,
-        "t3": 26.84,
-        "t4": 28.6
-      },
-      "confluence": {
-        "fib618": 22.2094,
-        "fib786": 21.2333,
-        "inFib": true,
-        "anchoredVwap": 23.197,
-        "vwapHit": false,
-        "dailyMa50": 23.269,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 22.03,
-        "supportHit": true,
-        "correctionPct": 14.73,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 2.66,
-        "volumeConfirmed": true,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-06-28",
-        "peakDate": "2026-09-22",
-        "low": 19.99,
-        "high": 25.8,
-        "risePct": 29.06
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "PRICE_REACTION",
-        "VOLUME_CONFIRMATION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "UNIP",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 40,
-      "actionable": false,
-      "close": 0.33,
-      "entryLow": 0.33,
-      "entryHigh": 0.33,
-      "structuralInvalidation": 0.2998,
-      "targets": {
-        "t1": 0.3564,
-        "t2": 0.3795,
-        "t3": 0.4026,
-        "t4": 0.429
-      },
-      "confluence": {
-        "fib618": 0.3368,
-        "fib786": 0.3087,
-        "inFib": true,
-        "anchoredVwap": 0.3572,
-        "vwapHit": false,
-        "dailyMa50": 0.372,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.33,
-        "supportHit": true,
-        "correctionPct": 25,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 1.22,
+        "volumeRatio": 1.64,
         "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
@@ -2873,171 +2217,55 @@
       },
       "impulse": {
         "startDate": "2026-04-14",
-        "peakDate": "2026-08-13",
-        "low": 0.273,
-        "high": 0.44,
-        "risePct": 61.17
+        "peakDate": "2026-07-19",
+        "low": 1.05,
+        "high": 2.25,
+        "risePct": 114.29
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "PRICE_REACTION",
+        "CORRECTION_30_38",
         "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ASPI",
-      "session": "2026-10-15",
+      "ticker": "RMDA",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 0.34,
-      "entryLow": 0.34,
-      "entryHigh": 0.34,
-      "structuralInvalidation": 0.3065,
+      "close": 4.91,
+      "entryLow": 4.91,
+      "entryHigh": 5.0006,
+      "structuralInvalidation": 4.8071,
       "targets": {
-        "t1": 0.3672,
-        "t2": 0.391,
-        "t3": 0.4148,
-        "t4": 0.442
+        "t1": 5.3028,
+        "t2": 5.6465,
+        "t3": 5.9902,
+        "t4": 6.383
       },
       "confluence": {
-        "fib618": 0.3734,
-        "fib786": 0.3172,
+        "fib618": 5.5113,
+        "fib786": 5.0006,
         "inFib": true,
-        "anchoredVwap": 0.4001,
+        "anchoredVwap": 5.5376,
         "vwapHit": false,
-        "dailyMa50": 0.4358,
+        "dailyMa50": 5.9236,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.34,
+        "priorSupport": 4.94,
         "supportHit": true,
-        "correctionPct": 41.38,
+        "correctionPct": 33.56,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.58,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-05-24",
-        "peakDate": "2026-08-16",
-        "low": 0.2457,
-        "high": 0.58,
-        "risePct": 136.1
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "COSG",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 1.47,
-      "entryLow": 1.47,
-      "entryHigh": 1.47,
-      "structuralInvalidation": 1.4105,
-      "targets": {
-        "t1": 1.5876,
-        "t2": 1.6905,
-        "t3": 1.7934,
-        "t4": 1.911
-      },
-      "confluence": {
-        "fib618": 1.5674,
-        "fib786": 1.4498,
-        "inFib": true,
-        "anchoredVwap": 1.654,
-        "vwapHit": false,
-        "dailyMa50": 1.7416,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1.46,
-        "supportHit": true,
-        "correctionPct": 26.5,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.87,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-09-06",
-        "low": 1.3,
-        "high": 2,
-        "risePct": 53.85
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "EHDR",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 2.3,
-      "entryLow": 2.3,
-      "entryHigh": 2.3118,
-      "structuralInvalidation": 2.2522,
-      "targets": {
-        "t1": 2.484,
-        "t2": 2.645,
-        "t3": 2.806,
-        "t4": 2.99
-      },
-      "confluence": {
-        "fib618": 2.5017,
-        "fib786": 2.3118,
-        "inFib": true,
-        "anchoredVwap": 2.6629,
-        "vwapHit": false,
-        "dailyMa50": 2.7602,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.35,
-        "supportHit": true,
-        "correctionPct": 28.13,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.89,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.55,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -3047,55 +2275,55 @@
       },
       "impulse": {
         "startDate": "2026-04-15",
-        "peakDate": "2026-08-17",
-        "low": 2.07,
-        "high": 3.2,
-        "risePct": 54.59
+        "peakDate": "2026-08-11",
+        "low": 4.35,
+        "high": 7.39,
+        "risePct": 69.89
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "ISMQ",
-      "session": "2026-10-15",
+      "ticker": "SUGR",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 7.6,
-      "entryLow": 7.6,
-      "entryHigh": 7.6569,
-      "structuralInvalidation": 7.4368,
+      "close": 55.74,
+      "entryLow": 52.6024,
+      "entryHigh": 55.74,
+      "structuralInvalidation": 48.1335,
       "targets": {
-        "t1": 8.208,
-        "t2": 8.74,
-        "t3": 9.272,
-        "t4": 9.88
+        "t1": 60.1992,
+        "t2": 64.101,
+        "t3": 68.0028,
+        "t4": 72.462
       },
       "confluence": {
-        "fib618": 8.1962,
-        "fib786": 7.6569,
-        "inFib": true,
-        "anchoredVwap": 8.6468,
-        "vwapHit": false,
-        "dailyMa50": 8.8362,
-        "ma50Hit": false,
+        "fib618": 52.6024,
+        "fib786": 49.3953,
+        "inFib": false,
+        "anchoredVwap": 55.395,
+        "vwapHit": true,
+        "dailyMa50": 55.9616,
+        "ma50Hit": true,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 7.6,
+        "priorSupport": 55.76,
         "supportHit": true,
-        "correctionPct": 25.34,
+        "correctionPct": 13.45,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_REJECTION"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.31,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.29,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -3104,55 +2332,113 @@
         }
       },
       "impulse": {
-        "startDate": "2026-04-02",
-        "peakDate": "2026-07-06",
-        "low": 6.97,
-        "high": 10.18,
-        "risePct": 46.05
+        "startDate": "2026-06-29",
+        "peakDate": "2026-09-13",
+        "low": 45.31,
+        "high": 64.4,
+        "risePct": 42.13
       },
       "factors": [
-        "FIB_61_8_78_6",
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "VOLUME_CONFIRMATION"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "MBSC",
-      "session": "2026-10-15",
+      "ticker": "ZMID",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 42,
       "actionable": false,
-      "close": 348,
-      "entryLow": 317.1439,
-      "entryHigh": 348,
-      "structuralInvalidation": 261.6193,
+      "close": 6.75,
+      "entryLow": 6.75,
+      "entryHigh": 6.75,
+      "structuralInvalidation": 6.0447,
       "targets": {
-        "t1": 375.84,
-        "t2": 400.2,
-        "t3": 424.56,
-        "t4": 452.4
+        "t1": 7.29,
+        "t2": 7.7625,
+        "t3": 8.235,
+        "t4": 8.775
       },
       "confluence": {
-        "fib618": 317.1439,
-        "fib786": 275.5908,
-        "inFib": false,
-        "anchoredVwap": 347.6888,
-        "vwapHit": true,
-        "dailyMa50": 362.8776,
+        "fib618": 7.0207,
+        "fib786": 6.2244,
+        "inFib": true,
+        "anchoredVwap": 7.1883,
+        "vwapHit": false,
+        "dailyMa50": 8.2008,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 350.04,
+        "priorSupport": 6.74,
         "supportHit": true,
-        "correctionPct": 25.96,
+        "correctionPct": 32.16,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.55,
+        "volumeRatio": 1.99,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-31",
+        "peakDate": "2026-09-06",
+        "low": 5.21,
+        "high": 9.95,
+        "risePct": 90.98
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SIPC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 40,
+      "actionable": false,
+      "close": 5.29,
+      "entryLow": 4.7895,
+      "entryHigh": 5.29,
+      "structuralInvalidation": 3.8556,
+      "targets": {
+        "t1": 5.7132,
+        "t2": 6.0835,
+        "t3": 6.4538,
+        "t4": 6.877
+      },
+      "confluence": {
+        "fib618": 4.7895,
+        "fib786": 4.1124,
+        "inFib": false,
+        "anchoredVwap": 5.2235,
+        "vwapHit": true,
+        "dailyMa50": 5.31,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 5.3,
+        "supportHit": true,
+        "correctionPct": 27.34,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.82,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -3163,171 +2449,55 @@
       },
       "impulse": {
         "startDate": "2026-06-29",
-        "peakDate": "2026-09-01",
-        "low": 222.66,
-        "high": 470,
-        "risePct": 111.08
+        "peakDate": "2026-09-07",
+        "low": 3.25,
+        "high": 7.28,
+        "risePct": 124
       },
       "factors": [
         "ANCHORED_VWAP",
+        "DAILY_MA50",
         "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "CORRECTION_NEAR_TARGET"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
-      "ticker": "PHAR",
-      "session": "2026-10-15",
+      "ticker": "AALR",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
+      "score": 37,
       "actionable": false,
-      "close": 108.41,
-      "entryLow": 108.41,
-      "entryHigh": 108.41,
-      "structuralInvalidation": 96.7313,
+      "close": 214.91,
+      "entryLow": 214.91,
+      "entryHigh": 214.91,
+      "structuralInvalidation": 199.4981,
       "targets": {
-        "t1": 117.0828,
-        "t2": 124.6715,
-        "t3": 132.2602,
-        "t4": 140.933
+        "t1": 232.1028,
+        "t2": 247.1465,
+        "t3": 262.1902,
+        "t4": 279.383
       },
       "confluence": {
-        "fib618": 116.1518,
-        "fib786": 99.0695,
+        "fib618": 243.366,
+        "fib786": 207.582,
         "inFib": true,
-        "anchoredVwap": 127.5148,
+        "anchoredVwap": 271.9559,
         "vwapHit": false,
-        "dailyMa50": 124.0554,
+        "dailyMa50": 290.7516,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 108.1,
+        "priorSupport": 217.55,
         "supportHit": true,
-        "correctionPct": 39.43,
+        "correctionPct": 42.69,
         "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
+          "ok": false,
+          "type": "NONE"
         },
-        "volumeRatio": 0.32,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-08-11",
-        "low": 77.31,
-        "high": 178.99,
-        "risePct": 131.52
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RAYA",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 5.97,
-      "entryLow": 5.97,
-      "entryHigh": 5.97,
-      "structuralInvalidation": 5.6016,
-      "targets": {
-        "t1": 6.4476,
-        "t2": 6.8655,
-        "t3": 7.2834,
-        "t4": 7.761
-      },
-      "confluence": {
-        "fib618": 6.3209,
-        "fib786": 5.7884,
-        "inFib": true,
-        "anchoredVwap": 6.9673,
-        "vwapHit": false,
-        "dailyMa50": 6.9444,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.95,
-        "supportHit": true,
-        "correctionPct": 27.9,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.47,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-05",
-        "peakDate": "2026-07-06",
-        "low": 5.11,
-        "high": 8.28,
-        "risePct": 62.04
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "ROTO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 38,
-      "actionable": false,
-      "close": 37.63,
-      "entryLow": 37.63,
-      "entryHigh": 37.63,
-      "structuralInvalidation": 33.2455,
-      "targets": {
-        "t1": 40.6404,
-        "t2": 43.2745,
-        "t3": 45.9086,
-        "t4": 48.919
-      },
-      "confluence": {
-        "fib618": 38.4096,
-        "fib786": 34.2801,
-        "inFib": true,
-        "anchoredVwap": 40.8529,
-        "vwapHit": false,
-        "dailyMa50": 43.108,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 38.2,
-        "supportHit": true,
-        "correctionPct": 29.79,
-        "reaction": {
-          "ok": true,
-          "type": "BULLISH_ENGULFING"
-        },
-        "volumeRatio": 0.37,
-        "volumeConfirmed": false,
+        "volumeRatio": 1.94,
+        "volumeConfirmed": true,
         "fundamentals": {
           "verified": false,
           "profitable": false,
@@ -3337,54 +2507,227 @@
       },
       "impulse": {
         "startDate": "2026-03-30",
-        "peakDate": "2026-08-16",
-        "low": 29.02,
-        "high": 53.6,
-        "risePct": 84.7
+        "peakDate": "2026-08-18",
+        "low": 162,
+        "high": 375,
+        "risePct": 131.48
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
         "CORRECTION_NEAR_TARGET",
-        "PRICE_REACTION"
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MCRO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 37,
+      "actionable": false,
+      "close": 1.27,
+      "entryLow": 1.27,
+      "entryHigh": 1.2834,
+      "structuralInvalidation": 1.2043,
+      "targets": {
+        "t1": 1.3716,
+        "t2": 1.4605,
+        "t3": 1.5494,
+        "t4": 1.651
+      },
+      "confluence": {
+        "fib618": 1.3959,
+        "fib786": 1.2834,
+        "inFib": true,
+        "anchoredVwap": 1.4356,
+        "vwapHit": false,
+        "dailyMa50": 1.551,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 1.25,
+        "supportHit": true,
+        "correctionPct": 29.83,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.55,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-16",
+        "peakDate": "2026-09-15",
+        "low": 1.14,
+        "high": 1.81,
+        "risePct": 58.77
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MIPH",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 37,
+      "actionable": false,
+      "close": 750,
+      "entryLow": 672.46,
+      "entryHigh": 750,
+      "structuralInvalidation": 556.29,
+      "targets": {
+        "t1": 810,
+        "t2": 862.5,
+        "t3": 915,
+        "t4": 975
+      },
+      "confluence": {
+        "fib618": 672.46,
+        "fib786": 583.42,
+        "inFib": false,
+        "anchoredVwap": 737.8943,
+        "vwapHit": true,
+        "dailyMa50": 801.7732,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 750,
+        "supportHit": true,
+        "correctionPct": 25,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 3.48,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-09",
+        "peakDate": "2026-09-21",
+        "low": 470,
+        "high": 1000,
+        "risePct": 112.77
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ACAMD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 2.07,
+      "entryLow": 2.07,
+      "entryHigh": 2.07,
+      "structuralInvalidation": 1.9401,
+      "targets": {
+        "t1": 2.2356,
+        "t2": 2.3805,
+        "t3": 2.5254,
+        "t4": 2.691
+      },
+      "confluence": {
+        "fib618": 2.1118,
+        "fib786": 1.9791,
+        "inFib": true,
+        "anchoredVwap": 2.1842,
+        "vwapHit": false,
+        "dailyMa50": 2.0838,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 2.07,
+        "supportHit": true,
+        "correctionPct": 20.38,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.96,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-14",
+        "peakDate": "2026-06-10",
+        "low": 1.81,
+        "high": 2.6,
+        "risePct": 43.65
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "ADCI",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 260.19,
+      "close": 257.35,
       "entryLow": 239.2042,
-      "entryHigh": 260.19,
-      "structuralInvalidation": 192.7228,
+      "entryHigh": 257.35,
+      "structuralInvalidation": 192.8171,
       "targets": {
-        "t1": 281.0052,
-        "t2": 299.2185,
-        "t3": 317.4318,
-        "t4": 338.247
+        "t1": 277.938,
+        "t2": 295.9525,
+        "t3": 313.967,
+        "t4": 334.555
       },
       "confluence": {
         "fib618": 239.2042,
         "fib786": 198.2139,
         "inFib": false,
-        "anchoredVwap": 256.0112,
+        "anchoredVwap": 256.0141,
         "vwapHit": true,
-        "dailyMa50": 286.434,
+        "dailyMa50": 285.8592,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
         "priorSupport": 258.1,
         "supportHit": true,
-        "correctionPct": 33.28,
+        "correctionPct": 34.01,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.82,
+        "volumeRatio": 0.38,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -3409,39 +2752,39 @@
       "executionAllowed": false
     },
     {
-      "ticker": "ATLC",
-      "session": "2026-10-15",
+      "ticker": "AFDI",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 5.48,
-      "entryLow": 5.48,
-      "entryHigh": 5.48,
-      "structuralInvalidation": 5.084,
+      "close": 46.98,
+      "entryLow": 46.165,
+      "entryHigh": 46.98,
+      "structuralInvalidation": 38.6019,
       "targets": {
-        "t1": 5.9184,
-        "t2": 6.302,
-        "t3": 6.6856,
-        "t4": 7.124
+        "t1": 50.7384,
+        "t2": 54.027,
+        "t3": 57.3156,
+        "t4": 61.074
       },
       "confluence": {
-        "fib618": 5.9246,
-        "fib786": 5.3333,
+        "fib618": 46.165,
+        "fib786": 39.7155,
         "inFib": true,
-        "anchoredVwap": 5.8091,
+        "anchoredVwap": 50.2955,
         "vwapHit": false,
-        "dailyMa50": 6.1602,
+        "dailyMa50": 55.9406,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.47,
+        "priorSupport": 47.03,
         "supportHit": true,
-        "correctionPct": 32.35,
+        "correctionPct": 32.78,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.55,
+        "volumeRatio": 0.7,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -3451,282 +2794,168 @@
         }
       },
       "impulse": {
-        "startDate": "2026-04-19",
-        "peakDate": "2026-09-06",
-        "low": 4.58,
-        "high": 8.1,
-        "risePct": 76.86
+        "startDate": "2026-04-09",
+        "peakDate": "2026-08-12",
+        "low": 31.5,
+        "high": 69.89,
+        "risePct": 121.87
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
         "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "AIFI",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 1.97,
+      "entryLow": 1.97,
+      "entryHigh": 1.97,
+      "structuralInvalidation": 1.8661,
+      "targets": {
+        "t1": 2.1276,
+        "t2": 2.2655,
+        "t3": 2.4034,
+        "t4": 2.561
+      },
+      "confluence": {
+        "fib618": 2.146,
+        "fib786": 1.9411,
+        "inFib": true,
+        "anchoredVwap": 2.1321,
+        "vwapHit": false,
+        "dailyMa50": 2.2952,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 1.93,
+        "supportHit": true,
+        "correctionPct": 32.07,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.93,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-05-05",
+        "peakDate": "2026-09-01",
+        "low": 1.68,
+        "high": 2.9,
+        "risePct": 72.62
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ALCN",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 32.33,
+      "entryLow": 29.4522,
+      "entryHigh": 32.33,
+      "structuralInvalidation": 27.0296,
+      "targets": {
+        "t1": 34.9164,
+        "t2": 37.1795,
+        "t3": 39.4426,
+        "t4": 42.029
+      },
+      "confluence": {
+        "fib618": 29.4522,
+        "fib786": 27.7185,
+        "inFib": false,
+        "anchoredVwap": 31.7121,
+        "vwapHit": true,
+        "dailyMa50": 32.268,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 32.31,
+        "supportHit": true,
+        "correctionPct": 9.77,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.27,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-06-11",
+        "peakDate": "2026-10-05",
+        "low": 25.51,
+        "high": 35.83,
+        "risePct": 40.45
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
       ],
       "researchOnly": true,
       "executionAllowed": false
     },
     {
       "ticker": "AXPH",
-      "session": "2026-10-15",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 1371.51,
-      "entryLow": 1261.468,
-      "entryHigh": 1371.51,
-      "structuralInvalidation": 1008.0992,
+      "close": 1327.83,
+      "entryLow": 1281.3676,
+      "entryHigh": 1327.83,
+      "structuralInvalidation": 1045.1724,
       "targets": {
-        "t1": 1481.2308,
-        "t2": 1577.2365,
-        "t3": 1673.2422,
-        "t4": 1782.963
+        "t1": 1434.0564,
+        "t2": 1527.0045,
+        "t3": 1619.9526,
+        "t4": 1726.179
       },
       "confluence": {
-        "fib618": 1261.468,
-        "fib786": 1064.236,
+        "fib618": 1281.3676,
+        "fib786": 1089.5452,
         "inFib": false,
-        "anchoredVwap": 1351.674,
+        "anchoredVwap": 1363.2099,
         "vwapHit": true,
-        "dailyMa50": 1533.6724,
+        "dailyMa50": 1535.0378,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 1363,
+        "priorSupport": 1325,
         "supportHit": true,
-        "correctionPct": 30.98,
+        "correctionPct": 33.17,
         "reaction": {
           "ok": false,
           "type": "NONE"
         },
-        "volumeRatio": 0.54,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-27",
-        "low": 813,
-        "high": 1987,
-        "risePct": 144.4
-      },
-      "factors": [
-        "ANCHORED_VWAP",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "MPCO",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 2.07,
-      "entryLow": 2.07,
-      "entryHigh": 2.07,
-      "structuralInvalidation": 1.7703,
-      "targets": {
-        "t1": 2.2356,
-        "t2": 2.3805,
-        "t3": 2.5254,
-        "t4": 2.691
-      },
-      "confluence": {
-        "fib618": 2.0992,
-        "fib786": 1.8489,
-        "inFib": true,
-        "anchoredVwap": 2.1638,
-        "vwapHit": false,
-        "dailyMa50": 2.3482,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 2.07,
-        "supportHit": true,
-        "correctionPct": 31.46,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.48,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-20",
-        "low": 1.53,
-        "high": 3.02,
-        "risePct": 97.39
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "NCCW",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 5.86,
-      "entryLow": 5.86,
-      "entryHigh": 5.86,
-      "structuralInvalidation": 5.3206,
-      "targets": {
-        "t1": 6.3288,
-        "t2": 6.739,
-        "t3": 7.1492,
-        "t4": 7.618
-      },
-      "confluence": {
-        "fib618": 6.2729,
-        "fib786": 5.5724,
-        "inFib": true,
-        "anchoredVwap": 6.6505,
-        "vwapHit": false,
-        "dailyMa50": 6.6598,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.84,
-        "supportHit": true,
-        "correctionPct": 33.79,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.58,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-07",
-        "peakDate": "2026-09-14",
-        "low": 4.68,
-        "high": 8.85,
-        "risePct": 89.1
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "OFH",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 0.8,
-      "entryLow": 0.7999,
-      "entryHigh": 0.8,
-      "structuralInvalidation": 0.6695,
-      "targets": {
-        "t1": 0.864,
-        "t2": 0.92,
-        "t3": 0.976,
-        "t4": 1.04
-      },
-      "confluence": {
-        "fib618": 0.7999,
-        "fib786": 0.6966,
-        "inFib": true,
-        "anchoredVwap": 0.8619,
-        "vwapHit": false,
-        "dailyMa50": 0.9642,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 0.79,
-        "supportHit": true,
-        "correctionPct": 32.2,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.14,
-        "volumeConfirmed": false,
-        "fundamentals": {
-          "verified": false,
-          "profitable": false,
-          "netProfit": null,
-          "period": null
-        }
-      },
-      "impulse": {
-        "startDate": "2026-04-09",
-        "peakDate": "2026-09-07",
-        "low": 0.565,
-        "high": 1.18,
-        "risePct": 108.85
-      },
-      "factors": [
-        "FIB_61_8_78_6",
-        "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
-      ],
-      "researchOnly": true,
-      "executionAllowed": false
-    },
-    {
-      "ticker": "RMDA",
-      "session": "2026-10-15",
-      "state": "FUNDAMENTALS_MISSING",
-      "score": 35,
-      "actionable": false,
-      "close": 5.14,
-      "entryLow": 5.14,
-      "entryHigh": 5.14,
-      "structuralInvalidation": 4.8398,
-      "targets": {
-        "t1": 5.5512,
-        "t2": 5.911,
-        "t3": 6.2708,
-        "t4": 6.682
-      },
-      "confluence": {
-        "fib618": 5.5113,
-        "fib786": 5.0006,
-        "inFib": true,
-        "anchoredVwap": 5.5407,
-        "vwapHit": false,
-        "dailyMa50": 5.9514,
-        "ma50Hit": false,
-        "hourlyMa100": null,
-        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 5.15,
-        "supportHit": true,
-        "correctionPct": 30.45,
-        "reaction": {
-          "ok": false,
-          "type": "NONE"
-        },
-        "volumeRatio": 0.61,
+        "volumeRatio": 0.68,
         "volumeConfirmed": false,
         "fundamentals": {
           "verified": false,
@@ -3737,10 +2966,67 @@
       },
       "impulse": {
         "startDate": "2026-04-15",
-        "peakDate": "2026-08-11",
-        "low": 4.35,
-        "high": 7.39,
-        "risePct": 69.89
+        "peakDate": "2026-09-27",
+        "low": 845.2,
+        "high": 1987,
+        "risePct": 135.09
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "IDRE",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 40.27,
+      "entryLow": 40.27,
+      "entryHigh": 40.27,
+      "structuralInvalidation": 36.1575,
+      "targets": {
+        "t1": 43.4916,
+        "t2": 46.3105,
+        "t3": 49.1294,
+        "t4": 52.351
+      },
+      "confluence": {
+        "fib618": 42.6061,
+        "fib786": 37.9592,
+        "inFib": true,
+        "anchoredVwap": 48.0877,
+        "vwapHit": false,
+        "dailyMa50": 51.9974,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 41.1,
+        "supportHit": true,
+        "correctionPct": 32.55,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.35,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-09-20",
+        "low": 32.04,
+        "high": 59.7,
+        "risePct": 86.33
       },
       "factors": [
         "FIB_61_8_78_6",
@@ -3751,34 +3037,718 @@
       "executionAllowed": false
     },
     {
-      "ticker": "SEIG",
-      "session": "2026-10-15",
+      "ticker": "KZPC",
+      "session": "2026-10-18",
       "state": "FUNDAMENTALS_MISSING",
       "score": 35,
       "actionable": false,
-      "close": 192.4,
-      "entryLow": 192.4,
-      "entryHigh": 192.4,
-      "structuralInvalidation": 161.6851,
+      "close": 12.87,
+      "entryLow": 11.4994,
+      "entryHigh": 12.87,
+      "structuralInvalidation": 9.8119,
       "targets": {
-        "t1": 207.792,
-        "t2": 221.26,
-        "t3": 234.728,
-        "t4": 250.12
+        "t1": 13.8996,
+        "t2": 14.8005,
+        "t3": 15.7014,
+        "t4": 16.731
       },
       "confluence": {
-        "fib618": 197.974,
-        "fib786": 171.598,
+        "fib618": 11.4994,
+        "fib786": 10.0747,
+        "inFib": false,
+        "anchoredVwap": 12.7357,
+        "vwapHit": true,
+        "dailyMa50": 12.9758,
+        "ma50Hit": true,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 12.86,
+        "supportHit": true,
+        "correctionPct": 23.12,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.74,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-07-06",
+        "peakDate": "2026-08-20",
+        "low": 8.26,
+        "high": 16.74,
+        "risePct": 102.66
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "DAILY_MA50",
+        "PRIOR_SUPPORT"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MPCO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 1.88,
+      "entryLow": 1.88,
+      "entryHigh": 1.88,
+      "structuralInvalidation": 1.7814,
+      "targets": {
+        "t1": 2.0304,
+        "t2": 2.162,
+        "t3": 2.2936,
+        "t4": 2.444
+      },
+      "confluence": {
+        "fib618": 2.1054,
+        "fib786": 1.8567,
         "inFib": true,
-        "anchoredVwap": 226.6446,
+        "anchoredVwap": 2.1627,
         "vwapHit": false,
-        "dailyMa50": 248.3252,
+        "dailyMa50": 2.346,
         "ma50Hit": false,
         "hourlyMa100": null,
         "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
-        "priorSupport": 188.19,
+        "priorSupport": 1.88,
         "supportHit": true,
-        "correctionPct": 34.78,
+        "correctionPct": 37.75,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.84,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-14",
+        "peakDate": "2026-09-20",
+        "low": 1.54,
+        "high": 3.02,
+        "risePct": 96.1
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "OCDI",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 24.05,
+      "entryLow": 24.05,
+      "entryHigh": 24.05,
+      "structuralInvalidation": 22.2824,
+      "targets": {
+        "t1": 25.974,
+        "t2": 27.6575,
+        "t3": 29.341,
+        "t4": 31.265
+      },
+      "confluence": {
+        "fib618": 25.9263,
+        "fib786": 22.9242,
+        "inFib": true,
+        "anchoredVwap": 27.2234,
+        "vwapHit": false,
+        "dailyMa50": 30.2634,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 24.2,
+        "supportHit": true,
+        "correctionPct": 34.95,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.88,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-29",
+        "peakDate": "2026-08-13",
+        "low": 19.1,
+        "high": 36.97,
+        "risePct": 93.56
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ROTO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 35,
+      "actionable": false,
+      "close": 35.9,
+      "entryLow": 35.9,
+      "entryHigh": 35.9,
+      "structuralInvalidation": 33.2873,
+      "targets": {
+        "t1": 38.772,
+        "t2": 41.285,
+        "t3": 43.798,
+        "t4": 46.67
+      },
+      "confluence": {
+        "fib618": 38.4096,
+        "fib786": 34.2801,
+        "inFib": true,
+        "anchoredVwap": 40.8266,
+        "vwapHit": false,
+        "dailyMa50": 42.898,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 36.38,
+        "supportHit": true,
+        "correctionPct": 33.02,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.13,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-08-16",
+        "low": 29.02,
+        "high": 53.6,
+        "risePct": 84.7
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_30_38"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ASCM",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 46.59,
+      "entryLow": 46.59,
+      "entryHigh": 46.9274,
+      "structuralInvalidation": 45.6449,
+      "targets": {
+        "t1": 50.3172,
+        "t2": 53.5785,
+        "t3": 56.8398,
+        "t4": 60.567
+      },
+      "confluence": {
+        "fib618": 52.6562,
+        "fib786": 46.9274,
+        "inFib": true,
+        "anchoredVwap": 59.1683,
+        "vwapHit": false,
+        "dailyMa50": 60.4814,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 53.8,
+        "supportHit": false,
+        "correctionPct": 36.81,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.79,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-31",
+        "peakDate": "2026-06-23",
+        "low": 39.63,
+        "high": 73.73,
+        "risePct": 86.05
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "GBCO",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 29,
+      "entryLow": 28.0818,
+      "entryHigh": 29,
+      "structuralInvalidation": 25.7972,
+      "targets": {
+        "t1": 31.32,
+        "t2": 33.35,
+        "t3": 35.38,
+        "t4": 37.7
+      },
+      "confluence": {
+        "fib618": 28.0818,
+        "fib786": 26.4186,
+        "inFib": false,
+        "anchoredVwap": 29.4068,
+        "vwapHit": true,
+        "dailyMa50": 30.2474,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 29,
+        "supportHit": true,
+        "correctionPct": 15.2,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.26,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-05",
+        "peakDate": "2026-07-15",
+        "low": 24.3,
+        "high": 34.2,
+        "risePct": 40.74
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "MPRC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 34.62,
+      "entryLow": 34.62,
+      "entryHigh": 34.62,
+      "structuralInvalidation": 32.7196,
+      "targets": {
+        "t1": 37.3896,
+        "t2": 39.813,
+        "t3": 42.2364,
+        "t4": 45.006
+      },
+      "confluence": {
+        "fib618": 37.6271,
+        "fib786": 33.5867,
+        "inFib": true,
+        "anchoredVwap": 38.9337,
+        "vwapHit": false,
+        "dailyMa50": 41.1036,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 37.65,
+        "supportHit": false,
+        "correctionPct": 34.04,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 2.09,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-20",
+        "peakDate": "2026-08-11",
+        "low": 28.44,
+        "high": 52.49,
+        "risePct": 84.56
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "CORRECTION_30_38",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SAUD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 21,
+      "entryLow": 21,
+      "entryHigh": 21.2333,
+      "structuralInvalidation": 20.6357,
+      "targets": {
+        "t1": 22.68,
+        "t2": 24.15,
+        "t3": 25.62,
+        "t4": 27.3
+      },
+      "confluence": {
+        "fib618": 22.2094,
+        "fib786": 21.2333,
+        "inFib": true,
+        "anchoredVwap": 23.1572,
+        "vwapHit": false,
+        "dailyMa50": 23.24,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 21.03,
+        "supportHit": true,
+        "correctionPct": 18.6,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.21,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-06-28",
+        "peakDate": "2026-09-22",
+        "low": 19.99,
+        "high": 25.8,
+        "risePct": 29.06
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "SCEM",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 32,
+      "actionable": false,
+      "close": 85.66,
+      "entryLow": 78.151,
+      "entryHigh": 85.66,
+      "structuralInvalidation": 66.0632,
+      "targets": {
+        "t1": 92.5128,
+        "t2": 98.509,
+        "t3": 104.5052,
+        "t4": 111.358
+      },
+      "confluence": {
+        "fib618": 78.151,
+        "fib786": 68.6775,
+        "inFib": false,
+        "anchoredVwap": 87.5211,
+        "vwapHit": true,
+        "dailyMa50": 92.5596,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 85.6,
+        "supportHit": true,
+        "correctionPct": 24.19,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 1.5,
+        "volumeConfirmed": true,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-30",
+        "peakDate": "2026-08-12",
+        "low": 56.61,
+        "high": 113,
+        "risePct": 99.61
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "VOLUME_CONFIRMATION"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "ARCC",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 65.39,
+      "entryLow": 63.8049,
+      "entryHigh": 65.39,
+      "structuralInvalidation": 54.5285,
+      "targets": {
+        "t1": 70.6212,
+        "t2": 75.1985,
+        "t3": 79.7758,
+        "t4": 85.007
+      },
+      "confluence": {
+        "fib618": 63.8049,
+        "fib786": 56.2164,
+        "inFib": false,
+        "anchoredVwap": 64.6634,
+        "vwapHit": true,
+        "dailyMa50": 71.9374,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 66.12,
+        "supportHit": true,
+        "correctionPct": 28.71,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.85,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-03-24",
+        "peakDate": "2026-08-12",
+        "low": 46.55,
+        "high": 91.72,
+        "risePct": 97.04
+      },
+      "factors": [
+        "ANCHORED_VWAP",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "EASB",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 6.17,
+      "entryLow": 6.17,
+      "entryHigh": 6.17,
+      "structuralInvalidation": 5.1343,
+      "targets": {
+        "t1": 6.6636,
+        "t2": 7.0955,
+        "t3": 7.5274,
+        "t4": 8.021
+      },
+      "confluence": {
+        "fib618": 6.4249,
+        "fib786": 5.4068,
+        "inFib": true,
+        "anchoredVwap": 7.2836,
+        "vwapHit": false,
+        "dailyMa50": 7.5382,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 6.04,
+        "supportHit": true,
+        "correctionPct": 39.33,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.74,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2026-04-26",
+        "peakDate": "2026-06-21",
+        "low": 4.11,
+        "high": 10.17,
+        "risePct": 147.45
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "EGSA",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 8.76,
+      "entryLow": 8.601,
+      "entryHigh": 8.76,
+      "structuralInvalidation": 7.6259,
+      "targets": {
+        "t1": 9.4608,
+        "t2": 10.074,
+        "t3": 10.6872,
+        "t4": 11.388
+      },
+      "confluence": {
+        "fib618": 8.601,
+        "fib786": 7.677,
+        "inFib": true,
+        "anchoredVwap": 7.538,
+        "vwapHit": false,
+        "dailyMa50": 7.9968,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 8.77,
+        "supportHit": true,
+        "correctionPct": 27,
+        "reaction": {
+          "ok": false,
+          "type": "NONE"
+        },
+        "volumeRatio": 0.66,
+        "volumeConfirmed": false,
+        "fundamentals": {
+          "verified": false,
+          "profitable": false,
+          "netProfit": null,
+          "period": null
+        }
+      },
+      "impulse": {
+        "startDate": "2025-10-22",
+        "peakDate": "2026-08-12",
+        "low": 6.5,
+        "high": 12,
+        "risePct": 84.62
+      },
+      "factors": [
+        "FIB_61_8_78_6",
+        "PRIOR_SUPPORT",
+        "CORRECTION_NEAR_TARGET"
+      ],
+      "researchOnly": true,
+      "executionAllowed": false
+    },
+    {
+      "ticker": "GIHD",
+      "session": "2026-10-18",
+      "state": "FUNDAMENTALS_MISSING",
+      "score": 30,
+      "actionable": false,
+      "close": 48.73,
+      "entryLow": 48.73,
+      "entryHigh": 48.73,
+      "structuralInvalidation": 42.6726,
+      "targets": {
+        "t1": 52.6284,
+        "t2": 56.0395,
+        "t3": 59.4506,
+        "t4": 63.349
+      },
+      "confluence": {
+        "fib618": 52.2445,
+        "fib786": 44.7265,
+        "inFib": true,
+        "anchoredVwap": 61.1026,
+        "vwapHit": false,
+        "dailyMa50": 66.7958,
+        "ma50Hit": false,
+        "hourlyMa100": null,
+        "hourlyMa100Status": "NOT_AVAILABLE_NO_INTRADAY_1H_SOURCE",
+        "priorSupport": 49,
+        "supportHit": true,
+        "correctionPct": 39.01,
         "reaction": {
           "ok": false,
           "type": "NONE"
@@ -3793,16 +3763,16 @@
         }
       },
       "impulse": {
-        "startDate": "2026-03-31",
-        "peakDate": "2026-08-03",
-        "low": 138,
-        "high": 295,
-        "risePct": 113.77
+        "startDate": "2026-06-10",
+        "peakDate": "2026-09-08",
+        "low": 35.15,
+        "high": 79.9,
+        "risePct": 127.31
       },
       "factors": [
         "FIB_61_8_78_6",
         "PRIOR_SUPPORT",
-        "CORRECTION_30_38"
+        "CORRECTION_NEAR_TARGET"
       ],
       "researchOnly": true,
       "executionAllowed": false
