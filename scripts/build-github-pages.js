@@ -34,6 +34,14 @@ console.log('EGX NEXT V2.1 published session:', v2.session);
 const base = '/astra-v5-egx';
 const out = 'public';
 let html = fs.readFileSync('app/dashboard/command-center.html', 'utf8');
+// Pages must consume its own immutable published files, not mutable external raw GitHub.
+// Otherwise network/CORS/cache failures can silently mix releases.
+html = html.replace(
+  "const ASTRA_CANONICAL_PUBLIC='https://raw.githubusercontent.com/rasheadsca-star/astra-v5-egx/main';",
+  "const ASTRA_CANONICAL_PUBLIC=location.origin + '/astra-v5-egx';"
+);
+if (!html.includes("const ASTRA_CANONICAL_PUBLIC=location.origin + '/astra-v5-egx';"))
+  throw Error('Failed to bind dashboard canonical data to same-origin Pages');
 html = html.replace('async function api(path){', `async function api(path){
   if(path === '/api/quant') path = '/data/pages-quant.json';
   if(path.startsWith('/api/')) throw new Error('Static research snapshot: runtime endpoint unavailable');
