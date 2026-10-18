@@ -17,6 +17,20 @@ if (!market.source.sourceSessionDataHash || market.source.sourceSessionDataHash 
 execFileSync(process.execPath, ['scripts/vercel-build.js'], {stdio: 'inherit'});
 if (read('public/data/technical/index.json').session !== cockpit.session) throw Error('Technical session mismatch');
 
+// EGX NEXT V2.1 embeds the refreshed session in docs/v2.html.
+// The legacy docs/data/signals.json can lag behind and override it in the UI.
+// Materialize the exact embedded snapshot as the public JSON to prevent stale ranking.
+const v2Html = fs.readFileSync('docs/v2.html', 'utf8');
+const v2Begin = v2Html.indexOf('const D=') + 'const D='.length;
+const v2End = v2Html.indexOf(', ST=', v2Begin);
+if (v2Begin < 'const D='.length || v2End < 0) throw Error('EGX NEXT embedded snapshot missing');
+const v2 = JSON.parse(v2Html.slice(v2Begin, v2End));
+if (v2.session !== cockpit.session || v2.stale === true)
+  throw Error('EGX NEXT V2.1 session does not match canonical cockpit');
+fs.mkdirSync('public/docs/data', {recursive:true});
+fs.writeFileSync('public/docs/data/signals.json', JSON.stringify(v2, null, 2));
+console.log('EGX NEXT V2.1 published session:', v2.session);
+
 const base = '/astra-v5-egx';
 const out = 'public';
 let html = fs.readFileSync('app/dashboard/command-center.html', 'utf8');
