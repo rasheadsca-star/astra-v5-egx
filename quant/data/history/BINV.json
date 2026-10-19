@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.642Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-01-27",
-  "lastSession": "2026-10-18",
+  "lastSession": "2026-10-19",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4997,6 +4997,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 58.89,
       "jumpPct": -1.21
+    },
+    {
+      "ticker": "BINV",
+      "date": "2026-10-19",
+      "sourceSessionDate": "2026-10-19",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 58.18,
+      "high": 58.39,
+      "low": 57.33,
+      "close": 58.0,
+      "adjustedClose": 58.0,
+      "volume": 289894,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-19T18:34:38.149Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 58.18,
+      "jumpPct": -0.31
     }
   ],
   "priceTruthLatest": {
@@ -5007,7 +5039,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-19T21:50:30.215688+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

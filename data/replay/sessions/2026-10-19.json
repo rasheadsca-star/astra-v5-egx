@@ -1,0 +1,6098 @@
+{
+  "schemaVersion": "astra-replay-snapshot/v1",
+  "session": "2026-10-19",
+  "archivedAt": "2026-10-19T18:51:42.453Z",
+  "captureTiming": "ON_SESSION_AFTER_CLOSE",
+  "recordedForwardEligible": true,
+  "modelVersion": "ASTRA_6.11.0",
+  "buildCommit": "e3e215968b8a56ce89e605416d9200dd17e4aebb",
+  "decisionFingerprint": "4b91b0547bf481fa7036e78150d99afedb8a8eac737a9a3ec409bd5be7b1ec0a",
+  "researchOnly": true,
+  "automaticExecution": false,
+  "inputFingerprint": {
+    "canonicalMarketSha256": "0c280b6e4a9cb8d0f5fdb46e3bef676efc441f28da171dc9ba2fbe6f0345d22b",
+    "historyIndexSha256": "f63cb92d6bd216c92b2face63b24b9de15898efc17ac1960c226819bdfcceb2e",
+    "sourceSessionDataHash": "c8b579c39cd9f28a5b99490fa817a91228843a82cd4ab43dc4264637e63e0065",
+    "expectedSession": "2026-10-19",
+    "atomicHandoff": true
+  },
+  "market": {
+    "regime": "هابط",
+    "breadthPct": 6.4,
+    "marketR20Pct": -15.3,
+    "exposureScale": 0.4,
+    "driftGuard": true,
+    "regimeAdjustment": -8
+  },
+  "dataHealth": {
+    "session": "2026-10-19",
+    "generatedAt": "2026-10-19T18:51:40.481Z",
+    "stale": false,
+    "staleLagSessions": 0,
+    "universe": 155,
+    "symbols": 174,
+    "excludedCount": 27,
+    "executionAllowed": false,
+    "v2V5Independent": false,
+    "confluenceV2Evaluated": 30,
+    "confluenceV2EntryReady": 0,
+    "forwardRecords": 1,
+    "forwardResolved": 0,
+    "activeCoveragePct": 88.5,
+    "activeStaleSymbols": 21,
+    "sourceFailedSymbols": 2,
+    "independentSourceQuorum": false
+  },
+  "dailyDecisionBrief": {
+    "version": "daily-decision-brief/v1",
+    "generatedAt": "2026-10-19T18:51:42.008Z",
+    "session": "2026-10-19",
+    "headline": {
+      "ticker": "RMDA",
+      "finalDecisionScore": 71.2,
+      "grade": "B",
+      "gateStatus": "RESEARCH_ELIGIBLE",
+      "entryQuality": "IDEAL",
+      "rrT2": 4.73,
+      "entryLow": 5.04,
+      "entryHigh": 5.04,
+      "stop": 4.8802,
+      "target1": 5.4432,
+      "target2": 5.796,
+      "contextScore": 46,
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    "top3": [
+      {
+        "rank": 1,
+        "ticker": "RMDA",
+        "finalDecisionScore": 71.2,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 4.73,
+        "contextScore": 46,
+        "researchWeightPct": 30,
+        "portfolioSelected": true
+      },
+      {
+        "rank": 2,
+        "ticker": "EGAL",
+        "finalDecisionScore": 71.1,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 5.54,
+        "contextScore": 43.8,
+        "researchWeightPct": 30,
+        "portfolioSelected": true
+      },
+      {
+        "rank": 3,
+        "ticker": "RAYA",
+        "finalDecisionScore": 68.7,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 3.26,
+        "contextScore": 41.6,
+        "researchWeightPct": 30,
+        "portfolioSelected": true
+      }
+    ],
+    "basket": [
+      {
+        "rank": 1,
+        "ticker": "RMDA",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "score": 82.2,
+        "entryQuality": "IDEAL",
+        "rrT2": 4.73
+      },
+      {
+        "rank": 2,
+        "ticker": "EGAL",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "score": 82.1,
+        "entryQuality": "IDEAL",
+        "rrT2": 5.54
+      },
+      {
+        "rank": 3,
+        "ticker": "RAYA",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "score": 77.2,
+        "entryQuality": "IDEAL",
+        "rrT2": 3.26
+      }
+    ],
+    "changes": {
+      "status": "COMPARED",
+      "entered": [
+        "RMDA",
+        "EGAL",
+        "RAYA"
+      ],
+      "exited": [],
+      "retained": [],
+      "scoreMoves": [
+        {
+          "ticker": "RMDA",
+          "current": 71.2,
+          "prior": 65,
+          "delta": 6.2
+        },
+        {
+          "ticker": "EGAL",
+          "current": 71.1,
+          "prior": null,
+          "delta": null
+        },
+        {
+          "ticker": "RAYA",
+          "current": 68.7,
+          "prior": null,
+          "delta": null
+        }
+      ]
+    },
+    "risks": [
+      "WEAK_MARKET",
+      "WEAK_BREADTH",
+      "DRIFT_GUARD_ON"
+    ],
+    "market": {
+      "regime": "هابط",
+      "breadthPct": 6.4,
+      "contextScore": 35.3,
+      "exposureScale": 0.4,
+      "driftGuard": true
+    },
+    "evidence": {
+      "forwardResolved": 89,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+      "prospectiveResolved": 0
+    },
+    "researchOnly": true,
+    "automaticOrders": false
+  },
+  "portfolioSelectionEngine": {
+    "version": "portfolio-selection/v1",
+    "generatedAt": "2026-10-19T18:51:41.505Z",
+    "researchOnly": true,
+    "executionAllowed": false,
+    "automaticOrders": false,
+    "policy": {
+      "maxPositions": 5,
+      "maxSameEngineFamily": 3,
+      "maxSameSector": 2,
+      "maxPairCorrelation": 0.85,
+      "minFinalDecisionScore": 62,
+      "maxSingleWeightPct": 30,
+      "lowLiquidityCapPct": 15,
+      "marketExposureScale": 0.4,
+      "allocatedResearchPct": 90,
+      "unallocatedResearchPct": 10,
+      "sectorConstraint": "CONTROLLED_MAP_MAX_2_PER_SECTOR",
+      "correlationConstraint": "MAX_PAIR_CORRELATION_0_85_WHEN_OBSERVED"
+    },
+    "counts": {
+      "eligibleUniverse": 8,
+      "selected": 3
+    },
+    "basket": [
+      {
+        "rank": 1,
+        "ticker": "RMDA",
+        "grade": "B",
+        "finalDecisionScore": 71.2,
+        "portfolioSelectionScore": 82.2,
+        "entryQuality": "IDEAL",
+        "rrT2": 4.73,
+        "contextScore": 46,
+        "liquidityScore": 50,
+        "sector": "رعاية صحية ودواء",
+        "sectorStrengthScore": 66.8,
+        "maxOpportunityCorrelation": 0.729,
+        "maxOpportunityCorrelationPeer": "PHAR",
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "engineFamilies": [
+          "CONFLUENCE"
+        ],
+        "entryLow": 5.04,
+        "entryHigh": 5.04,
+        "stop": 4.8802,
+        "target1": 5.4432,
+        "target2": 5.796
+      },
+      {
+        "rank": 2,
+        "ticker": "EGAL",
+        "grade": "B",
+        "finalDecisionScore": 71.1,
+        "portfolioSelectionScore": 82.1,
+        "entryQuality": "IDEAL",
+        "rrT2": 5.54,
+        "contextScore": 43.8,
+        "liquidityScore": 50,
+        "sector": "معادن ومواد أساسية",
+        "sectorStrengthScore": 55.5,
+        "maxOpportunityCorrelation": 0.747,
+        "maxOpportunityCorrelationPeer": "ALUM",
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "engineFamilies": [
+          "CONFLUENCE"
+        ],
+        "entryLow": 295.51,
+        "entryHigh": 298.5421,
+        "stop": 289.3003,
+        "target1": 319.1508,
+        "target2": 339.8365
+      },
+      {
+        "rank": 3,
+        "ticker": "RAYA",
+        "grade": "B",
+        "finalDecisionScore": 68.7,
+        "portfolioSelectionScore": 77.2,
+        "entryQuality": "IDEAL",
+        "rrT2": 3.26,
+        "contextScore": 41.6,
+        "liquidityScore": 50,
+        "sector": "تجارة وتوزيع",
+        "sectorStrengthScore": 44.9,
+        "maxOpportunityCorrelation": 0.488,
+        "maxOpportunityCorrelationPeer": "AIFI",
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "engineFamilies": [
+          "CONFLUENCE"
+        ],
+        "entryLow": 5.79,
+        "entryHigh": 5.8355,
+        "stop": 5.5532,
+        "target1": 6.2532,
+        "target2": 6.6585
+      }
+    ],
+    "excluded": [
+      {
+        "ticker": "SNFC",
+        "score": 75.4,
+        "reason": "ENGINE_FAMILY_CONCENTRATION",
+        "peer": null,
+        "family": "CONFLUENCE",
+        "sector": null
+      },
+      {
+        "ticker": "IRON",
+        "score": 75,
+        "reason": "ENGINE_FAMILY_CONCENTRATION",
+        "peer": null,
+        "family": "CONFLUENCE",
+        "sector": "معادن ومواد أساسية"
+      },
+      {
+        "ticker": "AIFI",
+        "score": 74.6,
+        "reason": "ENGINE_FAMILY_CONCENTRATION",
+        "peer": null,
+        "family": "CONFLUENCE",
+        "sector": null
+      },
+      {
+        "ticker": "ACAMD",
+        "score": 73.4,
+        "reason": "ENGINE_FAMILY_CONCENTRATION",
+        "peer": null,
+        "family": "CONFLUENCE",
+        "sector": null
+      },
+      {
+        "ticker": "ASPI",
+        "score": 72.9,
+        "reason": "ENGINE_FAMILY_CONCENTRATION",
+        "peer": null,
+        "family": "CONFLUENCE",
+        "sector": null
+      }
+    ],
+    "note": "Research basket only. Per-name and low-liquidity caps are never exceeded; any unused allocation remains explicitly unallocated. Engine-family, sector and observed correlation controls reduce duplicate risk. Weights are research weights, not order sizes."
+  },
+  "riskBudgetEngine": {
+    "version": "risk-budget/v2-risk-state-aware",
+    "generatedAt": "2026-10-19T18:51:41.682Z",
+    "referenceCapital": 100000,
+    "currency": "EGP",
+    "policy": {
+      "baseRiskPerTradePct": 1,
+      "maxRiskPerPositionPct": 1,
+      "minRiskPerPositionPct": 0,
+      "riskFloorPolicy": "NO_MINIMUM_FLOOR; risk factors may reduce sizing to zero",
+      "maxPortfolioRiskPct": 1.2,
+      "marketExposureScale": 0.4,
+      "sizingEntry": "ENTRY_HIGH_OR_ENTRY_LOW",
+      "shareRounding": "FLOOR",
+      "automaticExecution": false,
+      "riskStateOverride": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
+      "blockedStates": [
+        "STOP_HIT",
+        "NEAR_STOP",
+        "CHASE_RISK",
+        "GATE_BLOCKED",
+        "ABOVE_ENTRY_ZONE",
+        "SLIGHTLY_ABOVE_ENTRY",
+        "BELOW_ENTRY_ZONE",
+        "T1_HIT",
+        "T2_HIT",
+        "NO_CURRENT_PRICE"
+      ]
+    },
+    "totals": {
+      "positions": 3,
+      "riskBudgetPct": 0.58,
+      "referencePortfolioValue": 16440.96,
+      "referenceMaxLossAtStops": 576.34,
+      "theoreticalRiskBudgetPct": 0.58,
+      "theoreticalReferencePortfolioValue": 16440.96,
+      "theoreticalReferenceMaxLossAtStops": 576.34,
+      "actionablePositions": 2,
+      "actionableRiskBudgetPct": 0.364,
+      "actionableReferencePortfolioValue": 9574.49,
+      "actionableReferenceMaxLossAtStops": 363.78
+    },
+    "positions": [
+      {
+        "ticker": "RMDA",
+        "rank": 1,
+        "sector": "رعاية صحية ودواء",
+        "entryReference": 5.04,
+        "entryLow": 5.04,
+        "entryHigh": 5.04,
+        "stop": 4.8802,
+        "stopDistance": 0.1598,
+        "stopDistancePct": 3.17,
+        "dailyVolatilityPct": 2.62,
+        "finalDecisionScore": 71.2,
+        "rrT2": 4.73,
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "maxPositionPct": 12,
+        "riskBudgetPct": 0.189,
+        "referenceCapital": 100000,
+        "referenceShares": 1183,
+        "referencePositionValue": 5962.32,
+        "referenceMaxLossAtStop": 189.04,
+        "factors": {
+          "market": 0.4,
+          "score": 0.785,
+          "volatility": 0.75,
+          "liquidity": 0.9,
+          "correlation": 0.85,
+          "sector": 1.05,
+          "probability": 1
+        },
+        "status": "ACTIONABLE_SIZED",
+        "theoreticalRiskBudgetPct": 0.189,
+        "theoreticalReferenceShares": 1183,
+        "theoreticalReferencePositionValue": 5962.32,
+        "theoreticalReferenceMaxLossAtStop": 189.04,
+        "actionableRiskBudgetPct": 0.189,
+        "actionableReferenceShares": 1183,
+        "actionableReferencePositionValue": 5962.32,
+        "actionableReferenceMaxLossAtStop": 189.04,
+        "actionableNow": true,
+        "riskStateOverrideFactor": 1,
+        "riskStateOverrideReason": "IN_ENTRY_ZONE_GATE_PASSED",
+        "monitoringState": "IN_ENTRY_ZONE",
+        "monitoringSeverity": "ACTION",
+        "monitoringAction": "REVIEW_ENTRY"
+      },
+      {
+        "ticker": "EGAL",
+        "rank": 2,
+        "sector": "معادن ومواد أساسية",
+        "entryReference": 298.5421,
+        "entryLow": 295.51,
+        "entryHigh": 298.5421,
+        "stop": 289.3003,
+        "stopDistance": 9.2418,
+        "stopDistancePct": 3.1,
+        "dailyVolatilityPct": 2.48,
+        "finalDecisionScore": 71.1,
+        "rrT2": 5.54,
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "maxPositionPct": 12,
+        "riskBudgetPct": 0.216,
+        "referenceCapital": 100000,
+        "referenceShares": 23,
+        "referencePositionValue": 6866.47,
+        "referenceMaxLossAtStop": 212.56,
+        "factors": {
+          "market": 0.4,
+          "score": 0.784,
+          "volatility": 0.9,
+          "liquidity": 0.9,
+          "correlation": 0.85,
+          "sector": 1,
+          "probability": 1
+        },
+        "status": "THEORETICAL_ONLY_BLOCKED",
+        "theoreticalRiskBudgetPct": 0.216,
+        "theoreticalReferenceShares": 23,
+        "theoreticalReferencePositionValue": 6866.47,
+        "theoreticalReferenceMaxLossAtStop": 212.56,
+        "actionableRiskBudgetPct": 0,
+        "actionableReferenceShares": 0,
+        "actionableReferencePositionValue": 0,
+        "actionableReferenceMaxLossAtStop": 0,
+        "actionableNow": false,
+        "riskStateOverrideFactor": 0,
+        "riskStateOverrideReason": "NEAR_STOP_CRITICAL",
+        "monitoringState": "NEAR_STOP",
+        "monitoringSeverity": "CRITICAL",
+        "monitoringAction": "RISK_ALERT"
+      },
+      {
+        "ticker": "RAYA",
+        "rank": 3,
+        "sector": "تجارة وتوزيع",
+        "entryReference": 5.8355,
+        "entryLow": 5.79,
+        "entryHigh": 5.8355,
+        "stop": 5.5532,
+        "stopDistance": 0.2823,
+        "stopDistancePct": 4.84,
+        "dailyVolatilityPct": 3.3,
+        "finalDecisionScore": 68.7,
+        "rrT2": 3.26,
+        "researchWeightPct": 30,
+        "effectiveExposurePct": 12,
+        "maxPositionPct": 12,
+        "riskBudgetPct": 0.175,
+        "referenceCapital": 100000,
+        "referenceShares": 619,
+        "referencePositionValue": 3612.17,
+        "referenceMaxLossAtStop": 174.74,
+        "factors": {
+          "market": 0.4,
+          "score": 0.762,
+          "volatility": 0.75,
+          "liquidity": 0.9,
+          "correlation": 1,
+          "sector": 0.85,
+          "probability": 1
+        },
+        "status": "ACTIONABLE_SIZED",
+        "theoreticalRiskBudgetPct": 0.175,
+        "theoreticalReferenceShares": 619,
+        "theoreticalReferencePositionValue": 3612.17,
+        "theoreticalReferenceMaxLossAtStop": 174.74,
+        "actionableRiskBudgetPct": 0.175,
+        "actionableReferenceShares": 619,
+        "actionableReferencePositionValue": 3612.17,
+        "actionableReferenceMaxLossAtStop": 174.74,
+        "actionableNow": true,
+        "riskStateOverrideFactor": 1,
+        "riskStateOverrideReason": "IN_ENTRY_ZONE_GATE_PASSED",
+        "monitoringState": "IN_ENTRY_ZONE",
+        "monitoringSeverity": "ACTION",
+        "monitoringAction": "REVIEW_ENTRY"
+      }
+    ],
+    "note": "Theoretical size is preserved for plan analysis. Actionable size is forced to zero unless the latest monitoring state is IN_ENTRY_ZONE and the Decision Gate passes. Near-stop/critical setups can never display a positive actionable new-entry size."
+  },
+  "monitoringAlertsEngine": {
+    "version": "monitoring-alerts/v1",
+    "generatedAt": "2026-10-19T18:51:41.639Z",
+    "session": "2026-10-19",
+    "dataMode": "DELAYED_SESSION_MONITORING",
+    "delayed": true,
+    "realTime": false,
+    "monitored": 27,
+    "monitoredBasket": 3,
+    "counts": {
+      "IN_ENTRY_ZONE": 7,
+      "NEAR_STOP": 1,
+      "GATE_BLOCKED": 19
+    },
+    "rows": [
+      {
+        "ticker": "RMDA",
+        "portfolioSelected": true,
+        "portfolioRank": 1,
+        "currentPrice": 5.04,
+        "entryLow": 5.04,
+        "entryHigh": 5.04,
+        "stop": 4.8802,
+        "target1": 5.4432,
+        "target2": 5.796,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "EGAL",
+        "portfolioSelected": true,
+        "portfolioRank": 2,
+        "currentPrice": 295.51,
+        "entryLow": 295.51,
+        "entryHigh": 298.5421,
+        "stop": 289.3003,
+        "target1": 319.1508,
+        "target2": 339.8365,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "NEAR_STOP",
+        "severity": "CRITICAL",
+        "action": "RISK_ALERT",
+        "reasons": [
+          "PRICE_WITHIN_2_5PCT_OF_STOP",
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "RAYA",
+        "portfolioSelected": true,
+        "portfolioRank": 3,
+        "currentPrice": 5.79,
+        "entryLow": 5.79,
+        "entryHigh": 5.8355,
+        "stop": 5.5532,
+        "target1": 6.2532,
+        "target2": 6.6585,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "SNFC",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 11.33,
+        "entryLow": 11.1854,
+        "entryHigh": 11.33,
+        "stop": 10.5327,
+        "target1": 12.2364,
+        "target2": 13.0295,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "ACAMD",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 2.04,
+        "entryLow": 2.04,
+        "entryHigh": 2.04,
+        "stop": 1.9412,
+        "target1": 2.2032,
+        "target2": 2.346,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "IRON",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 26.35,
+        "entryLow": 26.35,
+        "entryHigh": 26.5594,
+        "stop": 25.5043,
+        "target1": 28.458,
+        "target2": 30.3025,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "AIFI",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 1.91,
+        "entryLow": 1.91,
+        "entryHigh": 1.9411,
+        "stop": 1.8593,
+        "target1": 2.0628,
+        "target2": 2.1965,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "ASPI",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 0.32,
+        "entryLow": 0.32,
+        "entryHigh": 0.32,
+        "stop": 0.3072,
+        "target1": 0.3456,
+        "target2": 0.368,
+        "entryQuality": "IDEAL",
+        "gatePass": true,
+        "state": "IN_ENTRY_ZONE",
+        "severity": "ACTION",
+        "action": "REVIEW_ENTRY",
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "CLHO",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 13.72,
+        "entryLow": 13.72,
+        "entryHigh": 13.72,
+        "stop": 13.281,
+        "target1": 14.8176,
+        "target2": 15.778,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "PHAR",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 104.22,
+        "entryLow": 104.22,
+        "entryHigh": 104.22,
+        "stop": 97.4444,
+        "target1": 112.5576,
+        "target2": 119.853,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "MPCO",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 1.93,
+        "entryLow": 1.93,
+        "entryHigh": 1.93,
+        "stop": 1.7864,
+        "target1": 2.0844,
+        "target2": 2.2195,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "MPRC",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 35.29,
+        "entryLow": 35.29,
+        "entryHigh": 35.29,
+        "stop": 32.6431,
+        "target1": 38.1132,
+        "target2": 40.5835,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "MCRO",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 1.32,
+        "entryLow": 1.32,
+        "entryHigh": 1.32,
+        "stop": 1.2362,
+        "target1": 1.4256,
+        "target2": 1.518,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "OCDI",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 24.49,
+        "entryLow": 24.49,
+        "entryHigh": 24.49,
+        "stop": 22.2395,
+        "target1": 26.4492,
+        "target2": 28.1635,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "MICH",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 39.35,
+        "entryLow": 39.35,
+        "entryHigh": 39.35,
+        "stop": 35.5783,
+        "target1": 42.498,
+        "target2": 45.2525,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "HDBK",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 93.59,
+        "entryLow": 93.59,
+        "entryHigh": 93.59,
+        "stop": 83.7436,
+        "target1": 101.0772,
+        "target2": 107.6285,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "CSAG",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 33.97,
+        "entryLow": 33.97,
+        "entryHigh": 33.97,
+        "stop": 30.6445,
+        "target1": 36.6876,
+        "target2": 39.0655,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "KZPC",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 12.91,
+        "entryLow": 11.4994,
+        "entryHigh": 12.91,
+        "stop": 9.8101,
+        "target1": 13.9428,
+        "target2": 14.8465,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "ADCI",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 256.27,
+        "entryLow": 239.2042,
+        "entryHigh": 256.27,
+        "stop": 192.8739,
+        "target1": 276.7716,
+        "target2": 294.7105,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "AXPH",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 1292.12,
+        "entryLow": 1281.3676,
+        "entryHigh": 1292.12,
+        "stop": 1053.4127,
+        "target1": 1395.4896,
+        "target2": 1485.938,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "ENGC",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 31.38,
+        "entryLow": 31.07,
+        "entryHigh": 31.69,
+        "stop": 28.87,
+        "target1": 33.05,
+        "target2": 35.56,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "KWIN",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 63.13,
+        "entryLow": 62.5,
+        "entryHigh": 63.76,
+        "stop": 58.08,
+        "target1": 66.5,
+        "target2": 71.55,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "EEII",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 1.83,
+        "entryLow": 1.812,
+        "entryHigh": 1.848,
+        "stop": 1.684,
+        "target1": 1.928,
+        "target2": 2.074,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "SPIN",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 13.99,
+        "entryLow": 13.85,
+        "entryHigh": 14.13,
+        "stop": 13.08,
+        "target1": 14.6,
+        "target2": 15.5,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "MOED",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 0.56,
+        "entryLow": 0.554,
+        "entryHigh": 0.566,
+        "stop": 0.515,
+        "target1": 0.59,
+        "target2": 0.635,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "ALUM",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 19.5,
+        "entryLow": 19.3,
+        "entryHigh": 19.7,
+        "stop": 17.94,
+        "target1": 20.54,
+        "target2": 22.1,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "LIQUIDITY_TOO_LOW",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      },
+      {
+        "ticker": "EPCO",
+        "portfolioSelected": false,
+        "portfolioRank": null,
+        "currentPrice": 8.27,
+        "entryLow": 8.19,
+        "entryHigh": 8.35,
+        "stop": 7.61,
+        "target1": 8.71,
+        "target2": 9.37,
+        "entryQuality": "IDEAL",
+        "gatePass": false,
+        "state": "GATE_BLOCKED",
+        "severity": "WARN",
+        "action": "NO_ACTION",
+        "reasons": [
+          "RR_BELOW_2",
+          "LIQUIDITY_TOO_LOW",
+          "FINAL_SCORE_BELOW_B"
+        ],
+        "priceSource": "mubasher_symbol_pages",
+        "sourceSession": "2026-10-19"
+      }
+    ],
+    "alerts": [
+      {
+        "ticker": "EGAL",
+        "type": "RISK_ALERT",
+        "severity": "CRITICAL",
+        "state": "NEAR_STOP",
+        "currentPrice": 295.51,
+        "portfolioSelected": true,
+        "reasons": [
+          "PRICE_WITHIN_2_5PCT_OF_STOP",
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "RMDA",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 5.04,
+        "portfolioSelected": true,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "RAYA",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 5.79,
+        "portfolioSelected": true,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "SNFC",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 11.33,
+        "portfolioSelected": false,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "ACAMD",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 2.04,
+        "portfolioSelected": false,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "IRON",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 26.35,
+        "portfolioSelected": false,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "AIFI",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 1.91,
+        "portfolioSelected": false,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "ASPI",
+        "type": "REVIEW_ENTRY",
+        "severity": "ACTION",
+        "state": "IN_ENTRY_ZONE",
+        "currentPrice": 0.32,
+        "portfolioSelected": false,
+        "reasons": [
+          "PRICE_INSIDE_ENTRY_ZONE"
+        ]
+      },
+      {
+        "ticker": "CLHO",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 13.72,
+        "portfolioSelected": false,
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "PHAR",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 104.22,
+        "portfolioSelected": false,
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "MPCO",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 1.93,
+        "portfolioSelected": false,
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "MPRC",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 35.29,
+        "portfolioSelected": false,
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "MCRO",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 1.32,
+        "portfolioSelected": false,
+        "reasons": [
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "OCDI",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 24.49,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "MICH",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 39.35,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "HDBK",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 93.59,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "CSAG",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 33.97,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "KZPC",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 12.91,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "ADCI",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 256.27,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "AXPH",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 1292.12,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "ENGC",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 31.38,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "KWIN",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 63.13,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "EEII",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 1.83,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "SPIN",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 13.99,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "MOED",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 0.56,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "ALUM",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 19.5,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "LIQUIDITY_TOO_LOW",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      },
+      {
+        "ticker": "EPCO",
+        "type": "NO_ACTION",
+        "severity": "WARN",
+        "state": "GATE_BLOCKED",
+        "currentPrice": 8.27,
+        "portfolioSelected": false,
+        "reasons": [
+          "RR_BELOW_2",
+          "LIQUIDITY_TOO_LOW",
+          "FINAL_SCORE_BELOW_B"
+        ]
+      }
+    ],
+    "policy": {
+      "nearStopPct": 2.5,
+      "slightlyAboveEntryPct": 2,
+      "autoExecution": false,
+      "autoOrders": false
+    },
+    "note": "Monitoring uses delayed/current-session data. Alerts are state-change research signals, not real-time execution triggers.",
+    "automaticExecution": false
+  },
+  "outcomeAnalyticsEngine": {
+    "version": "outcome-analytics/v3-recorded-forward-only",
+    "generatedAt": "2026-10-19T18:51:41.967Z",
+    "evidenceGeneratedAt": "2026-10-19T18:51:41.755Z",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "samplePolicy": {
+      "groupLeaderboardMinimumResolved": 5,
+      "probabilityValidationThreshold": {
+        "resolved": 90,
+        "distinctSessions": 30
+      },
+      "ambiguousExcludedFromReturnMetrics": true,
+      "t1Denominator": "deduped activated records; ambiguous entry/OHLC cases remain descriptive and are excluded from return metrics",
+      "returnMetricsDenominator": "RESOLVED only"
+    },
+    "overall": {
+      "captured": 208,
+      "distinctSessions": 6,
+      "activated": 141,
+      "resolved": 89,
+      "ambiguous": 0,
+      "wins": 13,
+      "losses": 76,
+      "breakeven": 0,
+      "t1Hits": 16,
+      "t2Hits": 3,
+      "stops": 76,
+      "t1ObservedPct": 11.3,
+      "t2ResolvedPct": 3.4,
+      "stopResolvedPct": 85.4,
+      "resolvedWinRatePct": 14.6,
+      "expectancyPct": -4.87,
+      "avgWinPct": 3.11,
+      "avgLossPct": -6.24,
+      "payoffRatio": 0.5,
+      "profitFactor": 0.09,
+      "avgMfePct": 0,
+      "avgMaePct": 0
+    },
+    "groups": {
+      "byGrade": [
+        {
+          "key": "C",
+          "captured": 103,
+          "distinctSessions": 6,
+          "activated": 71,
+          "resolved": 49,
+          "ambiguous": 0,
+          "wins": 8,
+          "losses": 41,
+          "breakeven": 0,
+          "t1Hits": 9,
+          "t2Hits": 3,
+          "stops": 41,
+          "t1ObservedPct": 12.7,
+          "t2ResolvedPct": 6.1,
+          "stopResolvedPct": 83.7,
+          "resolvedWinRatePct": 16.3,
+          "expectancyPct": -4.72,
+          "avgWinPct": 3.22,
+          "avgLossPct": -6.27,
+          "payoffRatio": 0.51,
+          "profitFactor": 0.1,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "B",
+          "captured": 42,
+          "distinctSessions": 5,
+          "activated": 25,
+          "resolved": 21,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 21,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 21,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -4.57,
+          "avgWinPct": null,
+          "avgLossPct": -4.57,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "REJECT",
+          "captured": 63,
+          "distinctSessions": 5,
+          "activated": 45,
+          "resolved": 19,
+          "ambiguous": 0,
+          "wins": 5,
+          "losses": 14,
+          "breakeven": 0,
+          "t1Hits": 7,
+          "t2Hits": 0,
+          "stops": 14,
+          "t1ObservedPct": 15.6,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 73.7,
+          "resolvedWinRatePct": 26.3,
+          "expectancyPct": -5.6,
+          "avgWinPct": 2.95,
+          "avgLossPct": -8.65,
+          "payoffRatio": 0.34,
+          "profitFactor": 0.12,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        }
+      ],
+      "byEntryQuality": [
+        {
+          "key": "IDEAL",
+          "captured": 207,
+          "distinctSessions": 6,
+          "activated": 141,
+          "resolved": 89,
+          "ambiguous": 0,
+          "wins": 13,
+          "losses": 76,
+          "breakeven": 0,
+          "t1Hits": 16,
+          "t2Hits": 3,
+          "stops": 76,
+          "t1ObservedPct": 11.3,
+          "t2ResolvedPct": 3.4,
+          "stopResolvedPct": 85.4,
+          "resolvedWinRatePct": 14.6,
+          "expectancyPct": -4.87,
+          "avgWinPct": 3.11,
+          "avgLossPct": -6.24,
+          "payoffRatio": 0.5,
+          "profitFactor": 0.09,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "CHASE_RISK",
+          "captured": 1,
+          "distinctSessions": 0,
+          "activated": 0,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": null,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": null,
+          "avgMaePct": null
+        }
+      ],
+      "byRegime": [
+        {
+          "key": "هابط",
+          "captured": 208,
+          "distinctSessions": 6,
+          "activated": 141,
+          "resolved": 89,
+          "ambiguous": 0,
+          "wins": 13,
+          "losses": 76,
+          "breakeven": 0,
+          "t1Hits": 16,
+          "t2Hits": 3,
+          "stops": 76,
+          "t1ObservedPct": 11.3,
+          "t2ResolvedPct": 3.4,
+          "stopResolvedPct": 85.4,
+          "resolvedWinRatePct": 14.6,
+          "expectancyPct": -4.87,
+          "avgWinPct": 3.11,
+          "avgLossPct": -6.24,
+          "payoffRatio": 0.5,
+          "profitFactor": 0.09,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        }
+      ],
+      "bySector": [
+        {
+          "key": "UNCLASSIFIED",
+          "captured": 131,
+          "distinctSessions": 6,
+          "activated": 98,
+          "resolved": 62,
+          "ambiguous": 0,
+          "wins": 10,
+          "losses": 52,
+          "breakeven": 0,
+          "t1Hits": 13,
+          "t2Hits": 3,
+          "stops": 52,
+          "t1ObservedPct": 13.3,
+          "t2ResolvedPct": 4.8,
+          "stopResolvedPct": 83.9,
+          "resolvedWinRatePct": 16.1,
+          "expectancyPct": -5.24,
+          "avgWinPct": 3.25,
+          "avgLossPct": -6.87,
+          "payoffRatio": 0.47,
+          "profitFactor": 0.09,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "رعاية صحية ودواء",
+          "captured": 25,
+          "distinctSessions": 5,
+          "activated": 10,
+          "resolved": 6,
+          "ambiguous": 0,
+          "wins": 1,
+          "losses": 5,
+          "breakeven": 0,
+          "t1Hits": 1,
+          "t2Hits": 0,
+          "stops": 5,
+          "t1ObservedPct": 10,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 83.3,
+          "resolvedWinRatePct": 16.7,
+          "expectancyPct": -2.81,
+          "avgWinPct": 0.8,
+          "avgLossPct": -3.53,
+          "payoffRatio": 0.23,
+          "profitFactor": 0.05,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "معادن ومواد أساسية",
+          "captured": 8,
+          "distinctSessions": 5,
+          "activated": 5,
+          "resolved": 5,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 5,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 5,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -6.11,
+          "avgWinPct": null,
+          "avgLossPct": -6.11,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "خدمات مالية غير مصرفية",
+          "captured": 6,
+          "distinctSessions": 2,
+          "activated": 4,
+          "resolved": 4,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 4,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 4,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -5.86,
+          "avgWinPct": null,
+          "avgLossPct": -5.86,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "بنوك وخدمات مالية مصرفية",
+          "captured": 8,
+          "distinctSessions": 3,
+          "activated": 5,
+          "resolved": 3,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 3,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 3,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -4.22,
+          "avgWinPct": null,
+          "avgLossPct": -4.22,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "أسمنت ومواد بناء",
+          "captured": 6,
+          "distinctSessions": 2,
+          "activated": 5,
+          "resolved": 2,
+          "ambiguous": 0,
+          "wins": 2,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 2,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": 40,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 0,
+          "resolvedWinRatePct": 100,
+          "expectancyPct": 3.57,
+          "avgWinPct": 3.57,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "عقارات وإنشاءات",
+          "captured": 6,
+          "distinctSessions": 2,
+          "activated": 4,
+          "resolved": 2,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 2,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 2,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -7.74,
+          "avgWinPct": null,
+          "avgLossPct": -7.74,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "بتروكيماويات وكيماويات",
+          "captured": 3,
+          "distinctSessions": 2,
+          "activated": 2,
+          "resolved": 2,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 2,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 2,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -2.47,
+          "avgWinPct": null,
+          "avgLossPct": -2.47,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "أغذية ومشروبات",
+          "captured": 4,
+          "distinctSessions": 1,
+          "activated": 4,
+          "resolved": 1,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 1,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 1,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -1.46,
+          "avgWinPct": null,
+          "avgLossPct": -1.46,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "تجارة وتوزيع",
+          "captured": 3,
+          "distinctSessions": 1,
+          "activated": 1,
+          "resolved": 1,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 1,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 1,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -2.38,
+          "avgWinPct": null,
+          "avgLossPct": -2.38,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "منسوجات وملابس",
+          "captured": 1,
+          "distinctSessions": 1,
+          "activated": 1,
+          "resolved": 1,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 1,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 1,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -8.19,
+          "avgWinPct": null,
+          "avgLossPct": -8.19,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "تكنولوجيا ومدفوعات",
+          "captured": 4,
+          "distinctSessions": 0,
+          "activated": 1,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "سيارات وتجارة وتوزيع",
+          "captured": 1,
+          "distinctSessions": 0,
+          "activated": 1,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "نقل وخدمات لوجستية",
+          "captured": 1,
+          "distinctSessions": 0,
+          "activated": 0,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": null,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "صناعة وطاقة وبنية تحتية",
+          "captured": 1,
+          "distinctSessions": 0,
+          "activated": 0,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": null,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": null,
+          "avgMaePct": null
+        }
+      ],
+      "byPortfolioSelection": [
+        {
+          "key": "NOT_SELECTED",
+          "captured": 199,
+          "distinctSessions": 6,
+          "activated": 138,
+          "resolved": 87,
+          "ambiguous": 0,
+          "wins": 13,
+          "losses": 74,
+          "breakeven": 0,
+          "t1Hits": 16,
+          "t2Hits": 3,
+          "stops": 74,
+          "t1ObservedPct": 11.6,
+          "t2ResolvedPct": 3.4,
+          "stopResolvedPct": 85.1,
+          "resolvedWinRatePct": 14.9,
+          "expectancyPct": -4.83,
+          "avgWinPct": 3.11,
+          "avgLossPct": -6.22,
+          "payoffRatio": 0.5,
+          "profitFactor": 0.09,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "SELECTED",
+          "captured": 9,
+          "distinctSessions": 1,
+          "activated": 3,
+          "resolved": 2,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 2,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 2,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -6.81,
+          "avgWinPct": null,
+          "avgLossPct": -6.81,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        }
+      ],
+      "byMonitoringAtCapture": [
+        {
+          "key": "GATE_BLOCKED",
+          "captured": 158,
+          "distinctSessions": 6,
+          "activated": 112,
+          "resolved": 64,
+          "ambiguous": 0,
+          "wins": 13,
+          "losses": 51,
+          "breakeven": 0,
+          "t1Hits": 15,
+          "t2Hits": 3,
+          "stops": 51,
+          "t1ObservedPct": 13.4,
+          "t2ResolvedPct": 4.7,
+          "stopResolvedPct": 79.7,
+          "resolvedWinRatePct": 20.3,
+          "expectancyPct": -5.27,
+          "avgWinPct": 3.11,
+          "avgLossPct": -7.4,
+          "payoffRatio": 0.42,
+          "profitFactor": 0.11,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "NEAR_STOP",
+          "captured": 21,
+          "distinctSessions": 6,
+          "activated": 16,
+          "resolved": 16,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 16,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 16,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -3.05,
+          "avgWinPct": null,
+          "avgLossPct": -3.05,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": null,
+          "avgMaePct": null
+        },
+        {
+          "key": "IN_ENTRY_ZONE",
+          "captured": 23,
+          "distinctSessions": 2,
+          "activated": 10,
+          "resolved": 8,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 8,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 8,
+          "t1ObservedPct": 0,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -5.67,
+          "avgWinPct": null,
+          "avgLossPct": -5.67,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "UNKNOWN",
+          "captured": 5,
+          "distinctSessions": 1,
+          "activated": 3,
+          "resolved": 1,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 1,
+          "breakeven": 0,
+          "t1Hits": 1,
+          "t2Hits": 0,
+          "stops": 1,
+          "t1ObservedPct": 33.3,
+          "t2ResolvedPct": 0,
+          "stopResolvedPct": 100,
+          "resolvedWinRatePct": 0,
+          "expectancyPct": -2.37,
+          "avgWinPct": null,
+          "avgLossPct": -2.37,
+          "payoffRatio": null,
+          "profitFactor": 0,
+          "avgMfePct": 0,
+          "avgMaePct": 0
+        },
+        {
+          "key": "CHASE_RISK",
+          "captured": 1,
+          "distinctSessions": 0,
+          "activated": 0,
+          "resolved": 0,
+          "ambiguous": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakeven": 0,
+          "t1Hits": 0,
+          "t2Hits": 0,
+          "stops": 0,
+          "t1ObservedPct": null,
+          "t2ResolvedPct": null,
+          "stopResolvedPct": null,
+          "resolvedWinRatePct": null,
+          "expectancyPct": null,
+          "avgWinPct": null,
+          "avgLossPct": null,
+          "payoffRatio": null,
+          "profitFactor": null,
+          "avgMfePct": null,
+          "avgMaePct": null
+        }
+      ]
+    },
+    "leaders": {
+      "grade": {
+        "key": "B",
+        "expectancyPct": -4.57,
+        "resolved": 21
+      },
+      "entryQuality": {
+        "key": "IDEAL",
+        "expectancyPct": -4.87,
+        "resolved": 89
+      },
+      "sector": {
+        "key": "رعاية صحية ودواء",
+        "expectancyPct": -2.81,
+        "resolved": 6
+      }
+    },
+    "interpretation": {
+      "expectancy": "Average net return across resolved prospective records after resolver costs.",
+      "profitFactor": "Gross positive resolved returns divided by absolute gross negative resolved returns.",
+      "t1ObservedPct": "Share of activated records that have observed T1 or better; unresolved records remain in the denominator.",
+      "caution": "Small groups are descriptive only. No causal or calibrated-probability claim is made from subgroup rankings."
+    },
+    "researchOnly": true,
+    "automaticExecution": false
+  },
+  "probabilityCalibrationEngine": {
+    "version": "probability-calibration/v3-session-aware",
+    "generatedAt": "2026-10-19T18:51:41.426Z",
+    "forwardResolved": 89,
+    "forwardDistinctSessions": 6,
+    "sampleMaturity": "INSUFFICIENT_EVIDENCE",
+    "status": "INSUFFICIENT_EVIDENCE",
+    "walkForwardCalibrationGate": false,
+    "holdingHorizonSessions": 10,
+    "thresholds": {
+      "preliminary": {
+        "resolved": 30,
+        "sessions": 10
+      },
+      "calibrating": {
+        "resolved": 60,
+        "sessions": 20
+      },
+      "mature": {
+        "resolved": 90,
+        "sessions": 30
+      },
+      "hierarchicalBucket": {
+        "resolved": 30,
+        "sessions": 10
+      },
+      "scoring": {
+        "resolved": 30,
+        "sessions": 10
+      }
+    },
+    "methodology": "Recorded-forward resolved evidence only. Maturity requires both resolved outcomes and distinct sessions. Estimates use hierarchical pooling from grade+entry+R:R+context toward broader pools. Confidence intervals use deterministic 90% session-block bootstrap. Probability fields remain null until >=90 resolved outcomes across >=30 distinct sessions AND the walk-forward calibration gate passes. Brier/ECE are computed only from ex-ante VALIDATED probabilities frozen at capture.",
+    "overall": {
+      "n": 89,
+      "distinctSessions": 6,
+      "maturity": "INSUFFICIENT_EVIDENCE",
+      "t1EstimatePct": 14.6,
+      "t2EstimatePct": 3.4,
+      "stopEstimatePct": 85.4,
+      "avgNetReturnPct": -4.87,
+      "intervals": {
+        "t1": [
+          5.55,
+          23.6
+        ],
+        "t2": [
+          1.14,
+          5.32
+        ],
+        "stop": [
+          76.13,
+          94.32
+        ],
+        "avgNetReturn": [
+          -5.29,
+          -4.45
+        ]
+      },
+      "intervalMethod": "90% session-block bootstrap"
+    },
+    "calibrationScoring": {
+      "t1": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      },
+      "t2": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      },
+      "stop": {
+        "status": "INSUFFICIENT_SCORED_PREDICTIONS",
+        "n": 0,
+        "distinctSessions": 0,
+        "brier": null,
+        "ece": null,
+        "bins": []
+      }
+    },
+    "quantHistoricalBenchmark": {
+      "sampleSize": 517,
+      "t1HitPct": 64.4,
+      "t2HitPct": 36.6,
+      "source": "historical_quant_backtest",
+      "calibratedForward": false
+    },
+    "bestByEstimatedT1": null,
+    "bestByValidatedT1": null,
+    "researchOnly": true,
+    "automaticExecution": false
+  },
+  "sectorCorrelationEngine": {
+    "version": "sector-correlation/v1",
+    "generatedAt": "2026-10-19T18:51:40.779Z",
+    "taxonomy": {
+      "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
+      "symbolMappings": 80,
+      "currentMarketClassified": 74,
+      "currentMarketRows": 211,
+      "coveragePct": 35.1,
+      "patternInferenceUsed": false
+    },
+    "sectorStats": [
+      {
+        "sector": "استثمارات قابضة ومتنوعة",
+        "count": 1,
+        "avgChangePct": 4.22,
+        "relativeChangePct": 3.12,
+        "breadthPct": 100,
+        "strengthScore": 87.5,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "منسوجات وملابس",
+        "count": 3,
+        "avgChangePct": 3.76,
+        "relativeChangePct": 2.66,
+        "breadthPct": 100,
+        "strengthScore": 83.8,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "خدمات مالية غير مصرفية",
+        "count": 5,
+        "avgChangePct": 3.34,
+        "relativeChangePct": 2.24,
+        "breadthPct": 100,
+        "strengthScore": 80.4,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "سياحة وترفيه",
+        "count": 1,
+        "avgChangePct": 2.73,
+        "relativeChangePct": 1.63,
+        "breadthPct": 100,
+        "strengthScore": 75.6,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "بتروكيماويات وكيماويات",
+        "count": 6,
+        "avgChangePct": 2.9,
+        "relativeChangePct": 1.8,
+        "breadthPct": 83.3,
+        "strengthScore": 72.8,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "رعاية صحية ودواء",
+        "count": 10,
+        "avgChangePct": 2.88,
+        "relativeChangePct": 1.78,
+        "breadthPct": 60,
+        "strengthScore": 66.8,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "سيارات وتجارة وتوزيع",
+        "count": 1,
+        "avgChangePct": 1.45,
+        "relativeChangePct": 0.35,
+        "breadthPct": 100,
+        "strengthScore": 65.3,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "تبغ ومنتجات استهلاكية",
+        "count": 1,
+        "avgChangePct": 1.3,
+        "relativeChangePct": 0.2,
+        "breadthPct": 100,
+        "strengthScore": 64.1,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "اتصالات وإعلام وتكنولوجيا",
+        "count": 1,
+        "avgChangePct": 1.04,
+        "relativeChangePct": -0.06,
+        "breadthPct": 100,
+        "strengthScore": 62,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "تعليم وخدمات",
+        "count": 2,
+        "avgChangePct": 0.32,
+        "relativeChangePct": -0.78,
+        "breadthPct": 100,
+        "strengthScore": 56.2,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "معادن ومواد أساسية",
+        "count": 5,
+        "avgChangePct": 2.1,
+        "relativeChangePct": 1,
+        "breadthPct": 40,
+        "strengthScore": 55.5,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "أسمنت ومواد بناء",
+        "count": 6,
+        "avgChangePct": 0.44,
+        "relativeChangePct": -0.66,
+        "breadthPct": 83.3,
+        "strengthScore": 53.1,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "عقارات وإنشاءات",
+        "count": 8,
+        "avgChangePct": 0.45,
+        "relativeChangePct": -0.64,
+        "breadthPct": 62.5,
+        "strengthScore": 48,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "تجارة وتوزيع",
+        "count": 2,
+        "avgChangePct": 0.46,
+        "relativeChangePct": -0.63,
+        "breadthPct": 50,
+        "strengthScore": 44.9,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "صناعة وطاقة وبنية تحتية",
+        "count": 3,
+        "avgChangePct": 0.92,
+        "relativeChangePct": -0.18,
+        "breadthPct": 33.3,
+        "strengthScore": 44.4,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "نقل وخدمات لوجستية",
+        "count": 2,
+        "avgChangePct": -1.13,
+        "relativeChangePct": -2.23,
+        "breadthPct": 50,
+        "strengthScore": 32.2,
+        "status": "LOW_SAMPLE"
+      },
+      {
+        "sector": "أغذية ومشروبات",
+        "count": 6,
+        "avgChangePct": -0.22,
+        "relativeChangePct": -1.32,
+        "breadthPct": 16.7,
+        "strengthScore": 31.1,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "بنوك وخدمات مالية مصرفية",
+        "count": 9,
+        "avgChangePct": -1,
+        "relativeChangePct": -2.1,
+        "breadthPct": 33.3,
+        "strengthScore": 29,
+        "status": "ACTIVE"
+      },
+      {
+        "sector": "تكنولوجيا ومدفوعات",
+        "count": 2,
+        "avgChangePct": -1.38,
+        "relativeChangePct": -2.47,
+        "breadthPct": 0,
+        "strengthScore": 17.7,
+        "status": "LOW_SAMPLE"
+      }
+    ],
+    "correlation": {
+      "lookbackReturns": 60,
+      "minimumOverlap": 30,
+      "highThreshold": 0.85,
+      "mediumThreshold": 0.7,
+      "activeTickers": 27,
+      "evaluatedPairs": 351,
+      "pairMatrix": {
+        "RAYA|HDBK": {
+          "correlation": 0.399,
+          "overlap": 60
+        },
+        "RAYA|OCDI": {
+          "correlation": 0.3,
+          "overlap": 60
+        },
+        "RAYA|ADCI": {
+          "correlation": 0.124,
+          "overlap": 60
+        },
+        "RAYA|MICH": {
+          "correlation": 0.323,
+          "overlap": 60
+        },
+        "RAYA|SNFC": {
+          "correlation": 0.395,
+          "overlap": 58
+        },
+        "RAYA|RMDA": {
+          "correlation": 0.33,
+          "overlap": 60
+        },
+        "RAYA|EGAL": {
+          "correlation": 0.335,
+          "overlap": 59
+        },
+        "RAYA|ACAMD": {
+          "correlation": 0.302,
+          "overlap": 59
+        },
+        "RAYA|PHAR": {
+          "correlation": 0.235,
+          "overlap": 59
+        },
+        "RAYA|MPCO": {
+          "correlation": 0.305,
+          "overlap": 59
+        },
+        "RAYA|AIFI": {
+          "correlation": 0.488,
+          "overlap": 60
+        },
+        "RAYA|IRON": {
+          "correlation": 0.409,
+          "overlap": 59
+        },
+        "RAYA|MPRC": {
+          "correlation": 0.243,
+          "overlap": 59
+        },
+        "RAYA|KZPC": {
+          "correlation": 0.118,
+          "overlap": 60
+        },
+        "RAYA|ASPI": {
+          "correlation": 0.445,
+          "overlap": 59
+        },
+        "RAYA|MCRO": {
+          "correlation": 0.472,
+          "overlap": 60
+        },
+        "RAYA|CLHO": {
+          "correlation": 0.319,
+          "overlap": 58
+        },
+        "RAYA|CSAG": {
+          "correlation": 0.237,
+          "overlap": 60
+        },
+        "RAYA|AXPH": {
+          "correlation": 0.373,
+          "overlap": 59
+        },
+        "RAYA|KWIN": {
+          "correlation": 0.254,
+          "overlap": 60
+        },
+        "RAYA|ENGC": {
+          "correlation": 0.306,
+          "overlap": 59
+        },
+        "RAYA|MOED": {
+          "correlation": 0.443,
+          "overlap": 60
+        },
+        "RAYA|EEII": {
+          "correlation": 0.035,
+          "overlap": 60
+        },
+        "RAYA|SPIN": {
+          "correlation": 0.336,
+          "overlap": 60
+        },
+        "RAYA|ALUM": {
+          "correlation": 0.389,
+          "overlap": 60
+        },
+        "RAYA|EPCO": {
+          "correlation": 0.438,
+          "overlap": 59
+        },
+        "HDBK|OCDI": {
+          "correlation": 0.102,
+          "overlap": 60
+        },
+        "HDBK|ADCI": {
+          "correlation": 0.121,
+          "overlap": 60
+        },
+        "HDBK|MICH": {
+          "correlation": 0.033,
+          "overlap": 60
+        },
+        "HDBK|SNFC": {
+          "correlation": -0.007,
+          "overlap": 58
+        },
+        "HDBK|RMDA": {
+          "correlation": 0.107,
+          "overlap": 60
+        },
+        "HDBK|EGAL": {
+          "correlation": 0.262,
+          "overlap": 59
+        },
+        "HDBK|ACAMD": {
+          "correlation": 0.202,
+          "overlap": 59
+        },
+        "HDBK|PHAR": {
+          "correlation": 0.07,
+          "overlap": 59
+        },
+        "HDBK|MPCO": {
+          "correlation": 0.091,
+          "overlap": 59
+        },
+        "HDBK|AIFI": {
+          "correlation": 0.156,
+          "overlap": 60
+        },
+        "HDBK|IRON": {
+          "correlation": 0.118,
+          "overlap": 59
+        },
+        "HDBK|MPRC": {
+          "correlation": 0.022,
+          "overlap": 59
+        },
+        "HDBK|KZPC": {
+          "correlation": 0.103,
+          "overlap": 60
+        },
+        "HDBK|ASPI": {
+          "correlation": 0.129,
+          "overlap": 59
+        },
+        "HDBK|MCRO": {
+          "correlation": 0.19,
+          "overlap": 60
+        },
+        "HDBK|CLHO": {
+          "correlation": 0.302,
+          "overlap": 58
+        },
+        "HDBK|CSAG": {
+          "correlation": 0.236,
+          "overlap": 60
+        },
+        "HDBK|AXPH": {
+          "correlation": 0.27,
+          "overlap": 59
+        },
+        "HDBK|KWIN": {
+          "correlation": 0.109,
+          "overlap": 60
+        },
+        "HDBK|ENGC": {
+          "correlation": 0.05,
+          "overlap": 59
+        },
+        "HDBK|MOED": {
+          "correlation": 0.433,
+          "overlap": 60
+        },
+        "HDBK|EEII": {
+          "correlation": -0.127,
+          "overlap": 60
+        },
+        "HDBK|SPIN": {
+          "correlation": 0.208,
+          "overlap": 60
+        },
+        "HDBK|ALUM": {
+          "correlation": 0.251,
+          "overlap": 60
+        },
+        "HDBK|EPCO": {
+          "correlation": 0.185,
+          "overlap": 59
+        },
+        "OCDI|ADCI": {
+          "correlation": 0.215,
+          "overlap": 60
+        },
+        "OCDI|MICH": {
+          "correlation": 0.373,
+          "overlap": 60
+        },
+        "OCDI|SNFC": {
+          "correlation": 0.096,
+          "overlap": 58
+        },
+        "OCDI|RMDA": {
+          "correlation": 0.293,
+          "overlap": 60
+        },
+        "OCDI|EGAL": {
+          "correlation": 0.567,
+          "overlap": 59
+        },
+        "OCDI|ACAMD": {
+          "correlation": 0.009,
+          "overlap": 59
+        },
+        "OCDI|PHAR": {
+          "correlation": 0.319,
+          "overlap": 59
+        },
+        "OCDI|MPCO": {
+          "correlation": 0.339,
+          "overlap": 59
+        },
+        "OCDI|AIFI": {
+          "correlation": 0.302,
+          "overlap": 60
+        },
+        "OCDI|IRON": {
+          "correlation": 0.318,
+          "overlap": 59
+        },
+        "OCDI|MPRC": {
+          "correlation": 0.491,
+          "overlap": 59
+        },
+        "OCDI|KZPC": {
+          "correlation": 0.185,
+          "overlap": 60
+        },
+        "OCDI|ASPI": {
+          "correlation": 0.297,
+          "overlap": 59
+        },
+        "OCDI|MCRO": {
+          "correlation": 0.311,
+          "overlap": 60
+        },
+        "OCDI|CLHO": {
+          "correlation": 0.1,
+          "overlap": 58
+        },
+        "OCDI|CSAG": {
+          "correlation": 0.339,
+          "overlap": 60
+        },
+        "OCDI|AXPH": {
+          "correlation": 0.245,
+          "overlap": 59
+        },
+        "OCDI|KWIN": {
+          "correlation": 0.258,
+          "overlap": 60
+        },
+        "OCDI|ENGC": {
+          "correlation": 0.635,
+          "overlap": 59
+        },
+        "OCDI|MOED": {
+          "correlation": 0.211,
+          "overlap": 60
+        },
+        "OCDI|EEII": {
+          "correlation": 0.199,
+          "overlap": 60
+        },
+        "OCDI|SPIN": {
+          "correlation": 0.155,
+          "overlap": 60
+        },
+        "OCDI|ALUM": {
+          "correlation": 0.6,
+          "overlap": 60
+        },
+        "OCDI|EPCO": {
+          "correlation": 0.444,
+          "overlap": 59
+        },
+        "ADCI|MICH": {
+          "correlation": 0.141,
+          "overlap": 60
+        },
+        "ADCI|SNFC": {
+          "correlation": -0.072,
+          "overlap": 58
+        },
+        "ADCI|RMDA": {
+          "correlation": 0.702,
+          "overlap": 60
+        },
+        "ADCI|EGAL": {
+          "correlation": -0.04,
+          "overlap": 59
+        },
+        "ADCI|ACAMD": {
+          "correlation": -0.118,
+          "overlap": 59
+        },
+        "ADCI|PHAR": {
+          "correlation": 0.806,
+          "overlap": 59
+        },
+        "ADCI|MPCO": {
+          "correlation": 0.126,
+          "overlap": 59
+        },
+        "ADCI|AIFI": {
+          "correlation": 0.053,
+          "overlap": 60
+        },
+        "ADCI|IRON": {
+          "correlation": -0.053,
+          "overlap": 59
+        },
+        "ADCI|MPRC": {
+          "correlation": 0.031,
+          "overlap": 59
+        },
+        "ADCI|KZPC": {
+          "correlation": -0.035,
+          "overlap": 60
+        },
+        "ADCI|ASPI": {
+          "correlation": 0.012,
+          "overlap": 59
+        },
+        "ADCI|MCRO": {
+          "correlation": 0.393,
+          "overlap": 60
+        },
+        "ADCI|CLHO": {
+          "correlation": 0.581,
+          "overlap": 58
+        },
+        "ADCI|CSAG": {
+          "correlation": 0.231,
+          "overlap": 60
+        },
+        "ADCI|AXPH": {
+          "correlation": 0.507,
+          "overlap": 59
+        },
+        "ADCI|KWIN": {
+          "correlation": 0.226,
+          "overlap": 60
+        },
+        "ADCI|ENGC": {
+          "correlation": 0,
+          "overlap": 59
+        },
+        "ADCI|MOED": {
+          "correlation": 0.086,
+          "overlap": 60
+        },
+        "ADCI|EEII": {
+          "correlation": 0.307,
+          "overlap": 60
+        },
+        "ADCI|SPIN": {
+          "correlation": 0.099,
+          "overlap": 60
+        },
+        "ADCI|ALUM": {
+          "correlation": -0.029,
+          "overlap": 60
+        },
+        "ADCI|EPCO": {
+          "correlation": 0.459,
+          "overlap": 59
+        },
+        "MICH|SNFC": {
+          "correlation": -0.093,
+          "overlap": 58
+        },
+        "MICH|RMDA": {
+          "correlation": 0.291,
+          "overlap": 60
+        },
+        "MICH|EGAL": {
+          "correlation": 0.302,
+          "overlap": 59
+        },
+        "MICH|ACAMD": {
+          "correlation": -0.171,
+          "overlap": 59
+        },
+        "MICH|PHAR": {
+          "correlation": 0.281,
+          "overlap": 59
+        },
+        "MICH|MPCO": {
+          "correlation": 0.19,
+          "overlap": 59
+        },
+        "MICH|AIFI": {
+          "correlation": 0.293,
+          "overlap": 60
+        },
+        "MICH|IRON": {
+          "correlation": 0.531,
+          "overlap": 59
+        },
+        "MICH|MPRC": {
+          "correlation": 0.108,
+          "overlap": 59
+        },
+        "MICH|KZPC": {
+          "correlation": 0.091,
+          "overlap": 60
+        },
+        "MICH|ASPI": {
+          "correlation": 0.253,
+          "overlap": 59
+        },
+        "MICH|MCRO": {
+          "correlation": 0.305,
+          "overlap": 60
+        },
+        "MICH|CLHO": {
+          "correlation": 0.091,
+          "overlap": 58
+        },
+        "MICH|CSAG": {
+          "correlation": 0.297,
+          "overlap": 60
+        },
+        "MICH|AXPH": {
+          "correlation": 0.117,
+          "overlap": 59
+        },
+        "MICH|KWIN": {
+          "correlation": 0.238,
+          "overlap": 60
+        },
+        "MICH|ENGC": {
+          "correlation": 0.408,
+          "overlap": 59
+        },
+        "MICH|MOED": {
+          "correlation": 0.258,
+          "overlap": 60
+        },
+        "MICH|EEII": {
+          "correlation": 0.437,
+          "overlap": 60
+        },
+        "MICH|SPIN": {
+          "correlation": 0.133,
+          "overlap": 60
+        },
+        "MICH|ALUM": {
+          "correlation": 0.241,
+          "overlap": 60
+        },
+        "MICH|EPCO": {
+          "correlation": 0.346,
+          "overlap": 59
+        },
+        "SNFC|RMDA": {
+          "correlation": 0.145,
+          "overlap": 58
+        },
+        "SNFC|EGAL": {
+          "correlation": 0.065,
+          "overlap": 59
+        },
+        "SNFC|ACAMD": {
+          "correlation": 0.273,
+          "overlap": 59
+        },
+        "SNFC|PHAR": {
+          "correlation": -0.067,
+          "overlap": 57
+        },
+        "SNFC|MPCO": {
+          "correlation": -0.018,
+          "overlap": 58
+        },
+        "SNFC|AIFI": {
+          "correlation": 0.156,
+          "overlap": 58
+        },
+        "SNFC|IRON": {
+          "correlation": 0.174,
+          "overlap": 59
+        },
+        "SNFC|MPRC": {
+          "correlation": 0.035,
+          "overlap": 59
+        },
+        "SNFC|KZPC": {
+          "correlation": 0.263,
+          "overlap": 58
+        },
+        "SNFC|ASPI": {
+          "correlation": 0.082,
+          "overlap": 58
+        },
+        "SNFC|MCRO": {
+          "correlation": 0.277,
+          "overlap": 58
+        },
+        "SNFC|CLHO": {
+          "correlation": -0.058,
+          "overlap": 58
+        },
+        "SNFC|CSAG": {
+          "correlation": -0.008,
+          "overlap": 58
+        },
+        "SNFC|AXPH": {
+          "correlation": 0.055,
+          "overlap": 59
+        },
+        "SNFC|KWIN": {
+          "correlation": 0.023,
+          "overlap": 58
+        },
+        "SNFC|ENGC": {
+          "correlation": -0.006,
+          "overlap": 58
+        },
+        "SNFC|MOED": {
+          "correlation": 0.214,
+          "overlap": 58
+        },
+        "SNFC|EEII": {
+          "correlation": -0.08,
+          "overlap": 58
+        },
+        "SNFC|SPIN": {
+          "correlation": 0.298,
+          "overlap": 58
+        },
+        "SNFC|ALUM": {
+          "correlation": -0.02,
+          "overlap": 58
+        },
+        "SNFC|EPCO": {
+          "correlation": 0.015,
+          "overlap": 59
+        },
+        "RMDA|EGAL": {
+          "correlation": 0.094,
+          "overlap": 59
+        },
+        "RMDA|ACAMD": {
+          "correlation": 0.14,
+          "overlap": 59
+        },
+        "RMDA|PHAR": {
+          "correlation": 0.729,
+          "overlap": 59
+        },
+        "RMDA|MPCO": {
+          "correlation": 0.236,
+          "overlap": 59
+        },
+        "RMDA|AIFI": {
+          "correlation": 0.163,
+          "overlap": 60
+        },
+        "RMDA|IRON": {
+          "correlation": 0.029,
+          "overlap": 59
+        },
+        "RMDA|MPRC": {
+          "correlation": 0.09,
+          "overlap": 59
+        },
+        "RMDA|KZPC": {
+          "correlation": -0.021,
+          "overlap": 60
+        },
+        "RMDA|ASPI": {
+          "correlation": 0.214,
+          "overlap": 59
+        },
+        "RMDA|MCRO": {
+          "correlation": 0.507,
+          "overlap": 60
+        },
+        "RMDA|CLHO": {
+          "correlation": 0.449,
+          "overlap": 58
+        },
+        "RMDA|CSAG": {
+          "correlation": 0.161,
+          "overlap": 60
+        },
+        "RMDA|AXPH": {
+          "correlation": 0.486,
+          "overlap": 59
+        },
+        "RMDA|KWIN": {
+          "correlation": 0.146,
+          "overlap": 60
+        },
+        "RMDA|ENGC": {
+          "correlation": 0.155,
+          "overlap": 59
+        },
+        "RMDA|MOED": {
+          "correlation": 0.128,
+          "overlap": 60
+        },
+        "RMDA|EEII": {
+          "correlation": 0.22,
+          "overlap": 60
+        },
+        "RMDA|SPIN": {
+          "correlation": 0.092,
+          "overlap": 60
+        },
+        "RMDA|ALUM": {
+          "correlation": 0.097,
+          "overlap": 60
+        },
+        "RMDA|EPCO": {
+          "correlation": 0.476,
+          "overlap": 59
+        },
+        "EGAL|ACAMD": {
+          "correlation": 0.139,
+          "overlap": 59
+        },
+        "EGAL|PHAR": {
+          "correlation": 0.066,
+          "overlap": 58
+        },
+        "EGAL|MPCO": {
+          "correlation": 0.437,
+          "overlap": 59
+        },
+        "EGAL|AIFI": {
+          "correlation": 0.254,
+          "overlap": 59
+        },
+        "EGAL|IRON": {
+          "correlation": 0.346,
+          "overlap": 60
+        },
+        "EGAL|MPRC": {
+          "correlation": 0.557,
+          "overlap": 59
+        },
+        "EGAL|KZPC": {
+          "correlation": 0.137,
+          "overlap": 59
+        },
+        "EGAL|ASPI": {
+          "correlation": 0.298,
+          "overlap": 59
+        },
+        "EGAL|MCRO": {
+          "correlation": 0.215,
+          "overlap": 59
+        },
+        "EGAL|CLHO": {
+          "correlation": -0.039,
+          "overlap": 57
+        },
+        "EGAL|CSAG": {
+          "correlation": 0.213,
+          "overlap": 59
+        },
+        "EGAL|AXPH": {
+          "correlation": 0.295,
+          "overlap": 60
+        },
+        "EGAL|KWIN": {
+          "correlation": 0.358,
+          "overlap": 59
+        },
+        "EGAL|ENGC": {
+          "correlation": 0.558,
+          "overlap": 59
+        },
+        "EGAL|MOED": {
+          "correlation": 0.17,
+          "overlap": 59
+        },
+        "EGAL|EEII": {
+          "correlation": 0.324,
+          "overlap": 59
+        },
+        "EGAL|SPIN": {
+          "correlation": 0.297,
+          "overlap": 59
+        },
+        "EGAL|ALUM": {
+          "correlation": 0.747,
+          "overlap": 59
+        },
+        "EGAL|EPCO": {
+          "correlation": 0.475,
+          "overlap": 60
+        },
+        "ACAMD|PHAR": {
+          "correlation": -0.008,
+          "overlap": 58
+        },
+        "ACAMD|MPCO": {
+          "correlation": 0.286,
+          "overlap": 59
+        },
+        "ACAMD|AIFI": {
+          "correlation": 0.166,
+          "overlap": 59
+        },
+        "ACAMD|IRON": {
+          "correlation": -0.004,
+          "overlap": 59
+        },
+        "ACAMD|MPRC": {
+          "correlation": 0.098,
+          "overlap": 60
+        },
+        "ACAMD|KZPC": {
+          "correlation": 0.081,
+          "overlap": 59
+        },
+        "ACAMD|ASPI": {
+          "correlation": 0.234,
+          "overlap": 59
+        },
+        "ACAMD|MCRO": {
+          "correlation": 0.318,
+          "overlap": 59
+        },
+        "ACAMD|CLHO": {
+          "correlation": 0.143,
+          "overlap": 58
+        },
+        "ACAMD|CSAG": {
+          "correlation": 0.072,
+          "overlap": 59
+        },
+        "ACAMD|AXPH": {
+          "correlation": 0.037,
+          "overlap": 59
+        },
+        "ACAMD|KWIN": {
+          "correlation": 0.011,
+          "overlap": 59
+        },
+        "ACAMD|ENGC": {
+          "correlation": 0.077,
+          "overlap": 59
+        },
+        "ACAMD|MOED": {
+          "correlation": 0.135,
+          "overlap": 59
+        },
+        "ACAMD|EEII": {
+          "correlation": -0.078,
+          "overlap": 59
+        },
+        "ACAMD|SPIN": {
+          "correlation": 0.173,
+          "overlap": 59
+        },
+        "ACAMD|ALUM": {
+          "correlation": 0.273,
+          "overlap": 59
+        },
+        "ACAMD|EPCO": {
+          "correlation": 0.234,
+          "overlap": 59
+        },
+        "PHAR|MPCO": {
+          "correlation": 0.189,
+          "overlap": 58
+        },
+        "PHAR|AIFI": {
+          "correlation": 0.215,
+          "overlap": 59
+        },
+        "PHAR|IRON": {
+          "correlation": 0.014,
+          "overlap": 58
+        },
+        "PHAR|MPRC": {
+          "correlation": 0.145,
+          "overlap": 58
+        },
+        "PHAR|KZPC": {
+          "correlation": -0.067,
+          "overlap": 59
+        },
+        "PHAR|ASPI": {
+          "correlation": 0.086,
+          "overlap": 58
+        },
+        "PHAR|MCRO": {
+          "correlation": 0.464,
+          "overlap": 59
+        },
+        "PHAR|CLHO": {
+          "correlation": 0.532,
+          "overlap": 58
+        },
+        "PHAR|CSAG": {
+          "correlation": 0.169,
+          "overlap": 59
+        },
+        "PHAR|AXPH": {
+          "correlation": 0.458,
+          "overlap": 58
+        },
+        "PHAR|KWIN": {
+          "correlation": 0.216,
+          "overlap": 59
+        },
+        "PHAR|ENGC": {
+          "correlation": 0.087,
+          "overlap": 59
+        },
+        "PHAR|MOED": {
+          "correlation": 0.076,
+          "overlap": 59
+        },
+        "PHAR|EEII": {
+          "correlation": 0.246,
+          "overlap": 59
+        },
+        "PHAR|SPIN": {
+          "correlation": 0.09,
+          "overlap": 59
+        },
+        "PHAR|ALUM": {
+          "correlation": 0.116,
+          "overlap": 59
+        },
+        "PHAR|EPCO": {
+          "correlation": 0.481,
+          "overlap": 58
+        },
+        "MPCO|AIFI": {
+          "correlation": 0.242,
+          "overlap": 59
+        },
+        "MPCO|IRON": {
+          "correlation": 0.076,
+          "overlap": 59
+        },
+        "MPCO|MPRC": {
+          "correlation": 0.272,
+          "overlap": 59
+        },
+        "MPCO|KZPC": {
+          "correlation": 0.044,
+          "overlap": 59
+        },
+        "MPCO|ASPI": {
+          "correlation": 0.387,
+          "overlap": 59
+        },
+        "MPCO|MCRO": {
+          "correlation": 0.44,
+          "overlap": 59
+        },
+        "MPCO|CLHO": {
+          "correlation": 0.155,
+          "overlap": 57
+        },
+        "MPCO|CSAG": {
+          "correlation": 0.1,
+          "overlap": 59
+        },
+        "MPCO|AXPH": {
+          "correlation": 0.279,
+          "overlap": 59
+        },
+        "MPCO|KWIN": {
+          "correlation": 0.215,
+          "overlap": 59
+        },
+        "MPCO|ENGC": {
+          "correlation": 0.399,
+          "overlap": 59
+        },
+        "MPCO|MOED": {
+          "correlation": 0.287,
+          "overlap": 59
+        },
+        "MPCO|EEII": {
+          "correlation": 0.232,
+          "overlap": 59
+        },
+        "MPCO|SPIN": {
+          "correlation": 0.145,
+          "overlap": 59
+        },
+        "MPCO|ALUM": {
+          "correlation": 0.398,
+          "overlap": 59
+        },
+        "MPCO|EPCO": {
+          "correlation": 0.649,
+          "overlap": 59
+        },
+        "AIFI|IRON": {
+          "correlation": 0.105,
+          "overlap": 59
+        },
+        "AIFI|MPRC": {
+          "correlation": 0.164,
+          "overlap": 59
+        },
+        "AIFI|KZPC": {
+          "correlation": 0.379,
+          "overlap": 60
+        },
+        "AIFI|ASPI": {
+          "correlation": 0.281,
+          "overlap": 59
+        },
+        "AIFI|MCRO": {
+          "correlation": 0.262,
+          "overlap": 60
+        },
+        "AIFI|CLHO": {
+          "correlation": 0.155,
+          "overlap": 58
+        },
+        "AIFI|CSAG": {
+          "correlation": 0.173,
+          "overlap": 60
+        },
+        "AIFI|AXPH": {
+          "correlation": 0.251,
+          "overlap": 59
+        },
+        "AIFI|KWIN": {
+          "correlation": 0.273,
+          "overlap": 60
+        },
+        "AIFI|ENGC": {
+          "correlation": 0.102,
+          "overlap": 59
+        },
+        "AIFI|MOED": {
+          "correlation": 0.331,
+          "overlap": 60
+        },
+        "AIFI|EEII": {
+          "correlation": 0.096,
+          "overlap": 60
+        },
+        "AIFI|SPIN": {
+          "correlation": 0.422,
+          "overlap": 60
+        },
+        "AIFI|ALUM": {
+          "correlation": 0.293,
+          "overlap": 60
+        },
+        "AIFI|EPCO": {
+          "correlation": 0.396,
+          "overlap": 59
+        },
+        "IRON|MPRC": {
+          "correlation": 0.219,
+          "overlap": 59
+        },
+        "IRON|KZPC": {
+          "correlation": 0.087,
+          "overlap": 59
+        },
+        "IRON|ASPI": {
+          "correlation": 0.217,
+          "overlap": 59
+        },
+        "IRON|MCRO": {
+          "correlation": 0.145,
+          "overlap": 59
+        },
+        "IRON|CLHO": {
+          "correlation": -0.106,
+          "overlap": 57
+        },
+        "IRON|CSAG": {
+          "correlation": 0.088,
+          "overlap": 59
+        },
+        "IRON|AXPH": {
+          "correlation": 0.085,
+          "overlap": 60
+        },
+        "IRON|KWIN": {
+          "correlation": 0.25,
+          "overlap": 59
+        },
+        "IRON|ENGC": {
+          "correlation": 0.379,
+          "overlap": 59
+        },
+        "IRON|MOED": {
+          "correlation": 0.34,
+          "overlap": 59
+        },
+        "IRON|EEII": {
+          "correlation": 0.254,
+          "overlap": 59
+        },
+        "IRON|SPIN": {
+          "correlation": 0.157,
+          "overlap": 59
+        },
+        "IRON|ALUM": {
+          "correlation": 0.296,
+          "overlap": 59
+        },
+        "IRON|EPCO": {
+          "correlation": 0.298,
+          "overlap": 60
+        },
+        "MPRC|KZPC": {
+          "correlation": 0.089,
+          "overlap": 59
+        },
+        "MPRC|ASPI": {
+          "correlation": 0.239,
+          "overlap": 59
+        },
+        "MPRC|MCRO": {
+          "correlation": 0.142,
+          "overlap": 59
+        },
+        "MPRC|CLHO": {
+          "correlation": 0.022,
+          "overlap": 58
+        },
+        "MPRC|CSAG": {
+          "correlation": 0.128,
+          "overlap": 59
+        },
+        "MPRC|AXPH": {
+          "correlation": 0.255,
+          "overlap": 59
+        },
+        "MPRC|KWIN": {
+          "correlation": 0.444,
+          "overlap": 59
+        },
+        "MPRC|ENGC": {
+          "correlation": 0.555,
+          "overlap": 59
+        },
+        "MPRC|MOED": {
+          "correlation": 0.133,
+          "overlap": 59
+        },
+        "MPRC|EEII": {
+          "correlation": 0.299,
+          "overlap": 59
+        },
+        "MPRC|SPIN": {
+          "correlation": 0.19,
+          "overlap": 59
+        },
+        "MPRC|ALUM": {
+          "correlation": 0.591,
+          "overlap": 59
+        },
+        "MPRC|EPCO": {
+          "correlation": 0.416,
+          "overlap": 59
+        },
+        "KZPC|ASPI": {
+          "correlation": 0.262,
+          "overlap": 59
+        },
+        "KZPC|MCRO": {
+          "correlation": 0.042,
+          "overlap": 60
+        },
+        "KZPC|CLHO": {
+          "correlation": 0.105,
+          "overlap": 58
+        },
+        "KZPC|CSAG": {
+          "correlation": 0.219,
+          "overlap": 60
+        },
+        "KZPC|AXPH": {
+          "correlation": 0.17,
+          "overlap": 59
+        },
+        "KZPC|KWIN": {
+          "correlation": 0.086,
+          "overlap": 60
+        },
+        "KZPC|ENGC": {
+          "correlation": 0.095,
+          "overlap": 59
+        },
+        "KZPC|MOED": {
+          "correlation": 0.38,
+          "overlap": 60
+        },
+        "KZPC|EEII": {
+          "correlation": 0.122,
+          "overlap": 60
+        },
+        "KZPC|SPIN": {
+          "correlation": 0.335,
+          "overlap": 60
+        },
+        "KZPC|ALUM": {
+          "correlation": 0.196,
+          "overlap": 60
+        },
+        "KZPC|EPCO": {
+          "correlation": 0.118,
+          "overlap": 59
+        },
+        "ASPI|MCRO": {
+          "correlation": 0.422,
+          "overlap": 59
+        },
+        "ASPI|CLHO": {
+          "correlation": 0.202,
+          "overlap": 57
+        },
+        "ASPI|CSAG": {
+          "correlation": 0.238,
+          "overlap": 59
+        },
+        "ASPI|AXPH": {
+          "correlation": 0.156,
+          "overlap": 59
+        },
+        "ASPI|KWIN": {
+          "correlation": 0.034,
+          "overlap": 59
+        },
+        "ASPI|ENGC": {
+          "correlation": 0.512,
+          "overlap": 59
+        },
+        "ASPI|MOED": {
+          "correlation": 0.265,
+          "overlap": 59
+        },
+        "ASPI|EEII": {
+          "correlation": 0.167,
+          "overlap": 59
+        },
+        "ASPI|SPIN": {
+          "correlation": 0.52,
+          "overlap": 59
+        },
+        "ASPI|ALUM": {
+          "correlation": 0.509,
+          "overlap": 59
+        },
+        "ASPI|EPCO": {
+          "correlation": 0.494,
+          "overlap": 59
+        },
+        "MCRO|CLHO": {
+          "correlation": 0.303,
+          "overlap": 58
+        },
+        "MCRO|CSAG": {
+          "correlation": 0.218,
+          "overlap": 60
+        },
+        "MCRO|AXPH": {
+          "correlation": 0.396,
+          "overlap": 59
+        },
+        "MCRO|KWIN": {
+          "correlation": 0.244,
+          "overlap": 60
+        },
+        "MCRO|ENGC": {
+          "correlation": 0.225,
+          "overlap": 59
+        },
+        "MCRO|MOED": {
+          "correlation": 0.503,
+          "overlap": 60
+        },
+        "MCRO|EEII": {
+          "correlation": 0.271,
+          "overlap": 60
+        },
+        "MCRO|SPIN": {
+          "correlation": 0.302,
+          "overlap": 60
+        },
+        "MCRO|ALUM": {
+          "correlation": 0.238,
+          "overlap": 60
+        },
+        "MCRO|EPCO": {
+          "correlation": 0.454,
+          "overlap": 59
+        },
+        "CLHO|CSAG": {
+          "correlation": 0.384,
+          "overlap": 58
+        },
+        "CLHO|AXPH": {
+          "correlation": 0.493,
+          "overlap": 57
+        },
+        "CLHO|KWIN": {
+          "correlation": 0.173,
+          "overlap": 58
+        },
+        "CLHO|ENGC": {
+          "correlation": 0.008,
+          "overlap": 57
+        },
+        "CLHO|MOED": {
+          "correlation": 0.386,
+          "overlap": 58
+        },
+        "CLHO|EEII": {
+          "correlation": 0.105,
+          "overlap": 58
+        },
+        "CLHO|SPIN": {
+          "correlation": 0.157,
+          "overlap": 58
+        },
+        "CLHO|ALUM": {
+          "correlation": 0.178,
+          "overlap": 58
+        },
+        "CLHO|EPCO": {
+          "correlation": 0.328,
+          "overlap": 57
+        },
+        "CSAG|AXPH": {
+          "correlation": 0.163,
+          "overlap": 59
+        },
+        "CSAG|KWIN": {
+          "correlation": 0.193,
+          "overlap": 60
+        },
+        "CSAG|ENGC": {
+          "correlation": 0.295,
+          "overlap": 59
+        },
+        "CSAG|MOED": {
+          "correlation": 0.413,
+          "overlap": 60
+        },
+        "CSAG|EEII": {
+          "correlation": 0.221,
+          "overlap": 60
+        },
+        "CSAG|SPIN": {
+          "correlation": 0.099,
+          "overlap": 60
+        },
+        "CSAG|ALUM": {
+          "correlation": 0.355,
+          "overlap": 60
+        },
+        "CSAG|EPCO": {
+          "correlation": 0.204,
+          "overlap": 59
+        },
+        "AXPH|KWIN": {
+          "correlation": 0.41,
+          "overlap": 59
+        },
+        "AXPH|ENGC": {
+          "correlation": 0.249,
+          "overlap": 59
+        },
+        "AXPH|MOED": {
+          "correlation": 0.432,
+          "overlap": 59
+        },
+        "AXPH|EEII": {
+          "correlation": 0.233,
+          "overlap": 59
+        },
+        "AXPH|SPIN": {
+          "correlation": 0.257,
+          "overlap": 59
+        },
+        "AXPH|ALUM": {
+          "correlation": 0.213,
+          "overlap": 59
+        },
+        "AXPH|EPCO": {
+          "correlation": 0.45,
+          "overlap": 60
+        },
+        "KWIN|ENGC": {
+          "correlation": 0.197,
+          "overlap": 59
+        },
+        "KWIN|MOED": {
+          "correlation": 0.378,
+          "overlap": 60
+        },
+        "KWIN|EEII": {
+          "correlation": 0.367,
+          "overlap": 60
+        },
+        "KWIN|SPIN": {
+          "correlation": 0.05,
+          "overlap": 60
+        },
+        "KWIN|ALUM": {
+          "correlation": 0.176,
+          "overlap": 60
+        },
+        "KWIN|EPCO": {
+          "correlation": 0.365,
+          "overlap": 59
+        },
+        "ENGC|MOED": {
+          "correlation": 0.115,
+          "overlap": 59
+        },
+        "ENGC|EEII": {
+          "correlation": 0.277,
+          "overlap": 59
+        },
+        "ENGC|SPIN": {
+          "correlation": 0.263,
+          "overlap": 59
+        },
+        "ENGC|ALUM": {
+          "correlation": 0.629,
+          "overlap": 59
+        },
+        "ENGC|EPCO": {
+          "correlation": 0.425,
+          "overlap": 59
+        },
+        "MOED|EEII": {
+          "correlation": 0.219,
+          "overlap": 60
+        },
+        "MOED|SPIN": {
+          "correlation": 0.183,
+          "overlap": 60
+        },
+        "MOED|ALUM": {
+          "correlation": 0.229,
+          "overlap": 60
+        },
+        "MOED|EPCO": {
+          "correlation": 0.332,
+          "overlap": 59
+        },
+        "EEII|SPIN": {
+          "correlation": 0.134,
+          "overlap": 60
+        },
+        "EEII|ALUM": {
+          "correlation": 0.269,
+          "overlap": 60
+        },
+        "EEII|EPCO": {
+          "correlation": 0.48,
+          "overlap": 59
+        },
+        "SPIN|ALUM": {
+          "correlation": 0.307,
+          "overlap": 60
+        },
+        "SPIN|EPCO": {
+          "correlation": 0.292,
+          "overlap": 59
+        },
+        "ALUM|EPCO": {
+          "correlation": 0.493,
+          "overlap": 59
+        }
+      },
+      "highPairs": []
+    },
+    "note": "Sector constraints use controlled symbol mappings only. Correlation is Pearson correlation of overlapping daily close-to-close returns and is used as a concentration-control signal, not as a forecast.",
+    "researchOnly": true,
+    "automaticOrders": false
+  },
+  "changeAttributionEngine": {
+    "version": "change-attribution/v1",
+    "generatedAt": "2026-10-19T18:51:42.053Z",
+    "session": "2026-10-19",
+    "priorSession": "2026-10-18",
+    "status": "COMPARED",
+    "rows": [
+      {
+        "ticker": "AIFI",
+        "status": "IMPROVED",
+        "score": 64.4,
+        "previousScore": 55.1,
+        "scoreDelta": 9.3,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 64.4,
+            "previous": 55.1,
+            "delta": 9.3
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "IMPROVED",
+            "current": 4.09,
+            "previous": 2.84,
+            "delta": 1.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "WEAKENED",
+            "current": 1.91,
+            "previous": 1.97,
+            "delta": -0.1
+          },
+          {
+            "factor": "DECISION_GATE",
+            "direction": "IMPROVED",
+            "current": "PASSED",
+            "previous": "BLOCKED"
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK",
+              "FINAL_SCORE_BELOW_B"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "ACAMD",
+        "status": "IMPROVED",
+        "score": 65.2,
+        "previousScore": 57.7,
+        "scoreDelta": 7.5,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 65.2,
+            "previous": 57.7,
+            "delta": 7.5
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "IMPROVED",
+            "current": 3.1,
+            "previous": 2.39,
+            "delta": 0.7
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "WEAKENED",
+            "current": 2.04,
+            "previous": 2.07,
+            "delta": 0
+          },
+          {
+            "factor": "DECISION_GATE",
+            "direction": "IMPROVED",
+            "current": "PASSED",
+            "previous": "BLOCKED"
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK",
+              "FINAL_SCORE_BELOW_B"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "RMDA",
+        "status": "ENTERED_BASKET",
+        "score": 71.2,
+        "previousScore": 65,
+        "scoreDelta": 6.2,
+        "portfolioSelected": true,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 71.2,
+            "previous": 65,
+            "delta": 6.2
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 46,
+            "previous": 25.9,
+            "delta": 20.1
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "IMPROVED",
+            "current": 4.73,
+            "previous": 4.66,
+            "delta": 0.1
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 5.04,
+            "previous": 4.91,
+            "delta": 0.1
+          },
+          {
+            "factor": "DECISION_GATE",
+            "direction": "IMPROVED",
+            "current": "PASSED",
+            "previous": "BLOCKED"
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "KZPC",
+        "status": "IMPROVED",
+        "score": 50.4,
+        "previousScore": 44.4,
+        "scoreDelta": 6,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 50.4,
+            "previous": 44.4,
+            "delta": 6
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 12.91,
+            "previous": 12.87,
+            "delta": 0
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "SNFC",
+        "status": "IMPROVED",
+        "score": 67.3,
+        "previousScore": 61.4,
+        "scoreDelta": 5.9,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 67.3,
+            "previous": 61.4,
+            "delta": 5.9
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 47.2,
+            "previous": 28.4,
+            "delta": 18.8
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "WEAKENED",
+            "current": 2.44,
+            "previous": 2.83,
+            "delta": -0.4
+          },
+          {
+            "factor": "LIQUIDITY_SCORE",
+            "direction": "IMPROVED",
+            "current": 65,
+            "previous": 50,
+            "delta": 15
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 11.33,
+            "previous": 11.13,
+            "delta": 0.2
+          },
+          {
+            "factor": "DECISION_GATE",
+            "direction": "IMPROVED",
+            "current": "PASSED",
+            "previous": "BLOCKED"
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK",
+              "FINAL_SCORE_BELOW_B"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "ADCI",
+        "status": "IMPROVED",
+        "score": 46.2,
+        "previousScore": 40.5,
+        "scoreDelta": 5.7,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 46.2,
+            "previous": 40.5,
+            "delta": 5.7
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "WEAKENED",
+            "current": 256.27,
+            "previous": 257.35,
+            "delta": -1.1
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "KWIN",
+        "status": "IMPROVED",
+        "score": 54.1,
+        "previousScore": 49.5,
+        "scoreDelta": 4.6,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 54.1,
+            "previous": 49.5,
+            "delta": 4.6
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 47.2,
+            "previous": 32.9,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 63.13,
+            "previous": 62.21,
+            "delta": 0.9
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "MCRO",
+        "status": "IMPROVED",
+        "score": 58.6,
+        "previousScore": 54.2,
+        "scoreDelta": 4.4,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 58.6,
+            "previous": 54.2,
+            "delta": 4.4
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 46,
+            "previous": 25.9,
+            "delta": 20.1
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "WEAKENED",
+            "current": 2.36,
+            "previous": 2.54,
+            "delta": -0.2
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 1.32,
+            "previous": 1.27,
+            "delta": 0.1
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "MPCO",
+        "status": "IMPROVED",
+        "score": 59.4,
+        "previousScore": 55.1,
+        "scoreDelta": 4.3,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 59.4,
+            "previous": 55.1,
+            "delta": 4.3
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "WEAKENED",
+            "current": 2.02,
+            "previous": 2.86,
+            "delta": -0.8
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 1.93,
+            "previous": 1.88,
+            "delta": 0.1
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "MPRC",
+        "status": "IMPROVED",
+        "score": 58.6,
+        "previousScore": 54.3,
+        "scoreDelta": 4.3,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 58.6,
+            "previous": 54.3,
+            "delta": 4.3
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.7,
+            "previous": 28.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "WEAKENED",
+            "current": 2,
+            "previous": 2.73,
+            "delta": -0.7
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 35.29,
+            "previous": 34.62,
+            "delta": 0.7
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "ALUM",
+        "status": "IMPROVED",
+        "score": 45.6,
+        "previousScore": 42.4,
+        "scoreDelta": 3.2,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 45.6,
+            "previous": 42.4,
+            "delta": 3.2
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 36.7,
+            "previous": 22.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 19.5,
+            "previous": 19.32,
+            "delta": 0.2
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "ENGC",
+        "status": "UNCHANGED",
+        "score": 55.1,
+        "previousScore": 53.3,
+        "scoreDelta": 1.8,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 55.1,
+            "previous": 53.3,
+            "delta": 1.8
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 54.7,
+            "previous": 40.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "WEAKENED",
+            "current": 31.38,
+            "previous": 31.63,
+            "delta": -0.3
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "OCDI",
+        "status": "UNCHANGED",
+        "score": 56.1,
+        "previousScore": 57.3,
+        "scoreDelta": -1.2,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "WEAKENED",
+            "current": 56.1,
+            "previous": 57.3,
+            "delta": -1.2
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 42.3,
+            "previous": 26.2,
+            "delta": 16.1
+          },
+          {
+            "factor": "RR_T2",
+            "direction": "WEAKENED",
+            "current": 1.63,
+            "previous": 2.04,
+            "delta": -0.4
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 24.49,
+            "previous": 24.05,
+            "delta": 0.4
+          },
+          {
+            "factor": "NEW_GATE_BLOCKERS",
+            "direction": "WEAKENED",
+            "items": [
+              "RR_BELOW_2"
+            ]
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "EPCO",
+        "status": "UNCHANGED",
+        "score": 45.2,
+        "previousScore": 44.1,
+        "scoreDelta": 1.1,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "FINAL_SCORE",
+            "direction": "IMPROVED",
+            "current": 45.2,
+            "previous": 44.1,
+            "delta": 1.1
+          },
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 36.7,
+            "previous": 22.4,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 8.27,
+            "previous": 8.18,
+            "delta": 0.1
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "EEII",
+        "status": "UNCHANGED",
+        "score": 53.5,
+        "previousScore": 52.7,
+        "scoreDelta": 0.8,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 47.2,
+            "previous": 32.9,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "IMPROVED",
+            "current": 1.83,
+            "previous": 1.8,
+            "delta": 0
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "SPIN",
+        "status": "UNCHANGED",
+        "score": 53.5,
+        "previousScore": 53.3,
+        "scoreDelta": 0.2,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "CONTEXT_SCORE",
+            "direction": "IMPROVED",
+            "current": 47.2,
+            "previous": 32.9,
+            "delta": 14.3
+          },
+          {
+            "factor": "CURRENT_PRICE",
+            "direction": "WEAKENED",
+            "current": 13.99,
+            "previous": 14.14,
+            "delta": -0.2
+          },
+          {
+            "factor": "REMOVED_GATE_BLOCKERS",
+            "direction": "IMPROVED",
+            "items": [
+              "MARKET_SAFETY_TOO_WEAK"
+            ]
+          }
+        ]
+      },
+      {
+        "ticker": "EGAL",
+        "status": "NEW",
+        "score": 71.1,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": true,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "RAYA",
+        "status": "NEW",
+        "score": 68.7,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": true,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "IRON",
+        "status": "NEW",
+        "score": 64.9,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "ASPI",
+        "status": "NEW",
+        "score": 63.4,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": true,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "CLHO",
+        "status": "NEW",
+        "score": 61.5,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "PHAR",
+        "status": "NEW",
+        "score": 60.4,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "MICH",
+        "status": "NEW",
+        "score": 55.6,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "HDBK",
+        "status": "NEW",
+        "score": 51.7,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "CSAG",
+        "status": "NEW",
+        "score": 50.8,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "AXPH",
+        "status": "NEW",
+        "score": 43.2,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "MOED",
+        "status": "NEW",
+        "score": 52.2,
+        "previousScore": null,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": "IDEAL",
+        "reasons": [
+          {
+            "factor": "NEW_SETUP",
+            "direction": "NEW",
+            "impact": null
+          }
+        ]
+      },
+      {
+        "ticker": "SAUD",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 64.7,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ASCM",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 59.5,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ROTO",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 57.7,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "AALR",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 53.8,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "SUGR",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 51.5,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "SCEM",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 48.4,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ALCN",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 47.6,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ZMID",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 43.7,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ELKA",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 41.1,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "SIPC",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 39.2,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "ODIN",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 50.2,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      },
+      {
+        "ticker": "FERC",
+        "status": "DROPPED_FROM_ACTIVE_LIST",
+        "score": null,
+        "previousScore": 43.8,
+        "scoreDelta": null,
+        "portfolioSelected": false,
+        "previousPortfolioSelected": false,
+        "gatePass": false,
+        "entryQuality": null,
+        "reasons": [
+          {
+            "factor": "DROPPED_FROM_ACTIVE_LIST",
+            "direction": "WEAKENED"
+          }
+        ]
+      }
+    ],
+    "highlights": {
+      "enteredBasket": [
+        "RMDA"
+      ],
+      "exitedBasket": [],
+      "biggestImprovers": [
+        {
+          "ticker": "AIFI",
+          "delta": 9.3
+        },
+        {
+          "ticker": "ACAMD",
+          "delta": 7.5
+        },
+        {
+          "ticker": "RMDA",
+          "delta": 6.2
+        },
+        {
+          "ticker": "KZPC",
+          "delta": 6
+        },
+        {
+          "ticker": "SNFC",
+          "delta": 5.9
+        }
+      ],
+      "biggestWeakening": [
+        {
+          "ticker": "OCDI",
+          "delta": -1.2
+        }
+      ]
+    },
+    "note": "Attribution compares persisted prior-session factor snapshots; it explains observed ranking changes, not causal market effects.",
+    "automaticExecution": false
+  },
+  "predictions": [
+    {
+      "ticker": "RMDA",
+      "stage": "NEAR_ENTRY",
+      "rank": 7,
+      "currentPrice": 5.04,
+      "finalDecisionScore": 71.2,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 5.04,
+      "entryHigh": 5.04,
+      "stop": 4.8802,
+      "target1": 5.4432,
+      "target2": 5.796,
+      "rrT2": 4.73,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": true,
+      "portfolioRank": 1,
+      "researchWeightPct": 30,
+      "riskBudgetPct": 0.189,
+      "theoreticalRiskBudgetPct": 0.189,
+      "actionableRiskBudgetPct": 0.189,
+      "theoreticalShares100k": 1183,
+      "actionableShares100k": 1183,
+      "actionableNow": true,
+      "riskStateOverrideReason": "IN_ENTRY_ZONE_GATE_PASSED",
+      "sector": "رعاية صحية ودواء",
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "EGAL",
+      "stage": "NEAR_ENTRY",
+      "rank": 8,
+      "currentPrice": 295.51,
+      "finalDecisionScore": 71.1,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 295.51,
+      "entryHigh": 298.5421,
+      "stop": 289.3003,
+      "target1": 319.1508,
+      "target2": 339.8365,
+      "rrT2": 5.54,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": true,
+      "portfolioRank": 2,
+      "researchWeightPct": 30,
+      "riskBudgetPct": 0.216,
+      "theoreticalRiskBudgetPct": 0.216,
+      "actionableRiskBudgetPct": 0,
+      "theoreticalShares100k": 23,
+      "actionableShares100k": 0,
+      "actionableNow": false,
+      "riskStateOverrideReason": "NEAR_STOP_CRITICAL",
+      "sector": "معادن ومواد أساسية",
+      "monitoringState": "NEAR_STOP",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "RAYA",
+      "stage": "WAITING_FOR_TRIGGER",
+      "rank": 1,
+      "currentPrice": 5.79,
+      "finalDecisionScore": 68.7,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 5.79,
+      "entryHigh": 5.8355,
+      "stop": 5.5532,
+      "target1": 6.2532,
+      "target2": 6.6585,
+      "rrT2": 3.26,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": true,
+      "portfolioRank": 3,
+      "researchWeightPct": 30,
+      "riskBudgetPct": 0.175,
+      "theoreticalRiskBudgetPct": 0.175,
+      "actionableRiskBudgetPct": 0.175,
+      "theoreticalShares100k": 619,
+      "actionableShares100k": 619,
+      "actionableNow": true,
+      "riskStateOverrideReason": "IN_ENTRY_ZONE_GATE_PASSED",
+      "sector": "تجارة وتوزيع",
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "SNFC",
+      "stage": "NEAR_ENTRY",
+      "rank": 6,
+      "currentPrice": 11.33,
+      "finalDecisionScore": 67.3,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 11.1854,
+      "entryHigh": 11.33,
+      "stop": 10.5327,
+      "target1": 12.2364,
+      "target2": 13.0295,
+      "rrT2": 2.44,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "ACAMD",
+      "stage": "NEAR_ENTRY",
+      "rank": 9,
+      "currentPrice": 2.04,
+      "finalDecisionScore": 65.2,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 2.04,
+      "entryHigh": 2.04,
+      "stop": 1.9412,
+      "target1": 2.2032,
+      "target2": 2.346,
+      "rrT2": 3.1,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "IRON",
+      "stage": "NEAR_ENTRY",
+      "rank": 13,
+      "currentPrice": 26.35,
+      "finalDecisionScore": 64.9,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 26.35,
+      "entryHigh": 26.5594,
+      "stop": 25.5043,
+      "target1": 28.458,
+      "target2": 30.3025,
+      "rrT2": 4.05,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "معادن ومواد أساسية",
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "AIFI",
+      "stage": "NEAR_ENTRY",
+      "rank": 12,
+      "currentPrice": 1.91,
+      "finalDecisionScore": 64.4,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 1.91,
+      "entryHigh": 1.9411,
+      "stop": 1.8593,
+      "target1": 2.0628,
+      "target2": 2.1965,
+      "rrT2": 4.09,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "ASPI",
+      "stage": "NEAR_ENTRY",
+      "rank": 16,
+      "currentPrice": 0.32,
+      "finalDecisionScore": 63.4,
+      "finalDecisionGrade": "B",
+      "entryQuality": "IDEAL",
+      "entryLow": 0.32,
+      "entryHigh": 0.32,
+      "stop": 0.3072,
+      "target1": 0.3456,
+      "target2": 0.368,
+      "rrT2": 3.75,
+      "decisionGatePass": true,
+      "decisionGateStatus": "RESEARCH_ELIGIBLE",
+      "decisionGateReasons": [],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "IN_ENTRY_ZONE",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "CLHO",
+      "stage": "NEAR_ENTRY",
+      "rank": 18,
+      "currentPrice": 13.72,
+      "finalDecisionScore": 61.5,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 13.72,
+      "entryHigh": 13.72,
+      "stop": 13.281,
+      "target1": 14.8176,
+      "target2": 15.778,
+      "rrT2": 4.69,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "رعاية صحية ودواء",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "PHAR",
+      "stage": "NEAR_ENTRY",
+      "rank": 10,
+      "currentPrice": 104.22,
+      "finalDecisionScore": 60.4,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 104.22,
+      "entryHigh": 104.22,
+      "stop": 97.4444,
+      "target1": 112.5576,
+      "target2": 119.853,
+      "rrT2": 2.31,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "رعاية صحية ودواء",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "MPCO",
+      "stage": "NEAR_ENTRY",
+      "rank": 11,
+      "currentPrice": 1.93,
+      "finalDecisionScore": 59.4,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 1.93,
+      "entryHigh": 1.93,
+      "stop": 1.7864,
+      "target1": 2.0844,
+      "target2": 2.2195,
+      "rrT2": 2.02,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "MPRC",
+      "stage": "NEAR_ENTRY",
+      "rank": 14,
+      "currentPrice": 35.29,
+      "finalDecisionScore": 58.6,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 35.29,
+      "entryHigh": 35.29,
+      "stop": 32.6431,
+      "target1": 38.1132,
+      "target2": 40.5835,
+      "rrT2": 2,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "MCRO",
+      "stage": "NEAR_ENTRY",
+      "rank": 17,
+      "currentPrice": 1.32,
+      "finalDecisionScore": 58.6,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 1.32,
+      "entryHigh": 1.32,
+      "stop": 1.2362,
+      "target1": 1.4256,
+      "target2": 1.518,
+      "rrT2": 2.36,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "رعاية صحية ودواء",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "OCDI",
+      "stage": "WAITING_FOR_TRIGGER",
+      "rank": 3,
+      "currentPrice": 24.49,
+      "finalDecisionScore": 56.1,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 24.49,
+      "entryHigh": 24.49,
+      "stop": 22.2395,
+      "target1": 26.4492,
+      "target2": 28.1635,
+      "rrT2": 1.63,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "عقارات وإنشاءات",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "MICH",
+      "stage": "WAITING_FOR_TRIGGER",
+      "rank": 5,
+      "currentPrice": 39.35,
+      "finalDecisionScore": 55.6,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 39.35,
+      "entryHigh": 39.35,
+      "stop": 35.5783,
+      "target1": 42.498,
+      "target2": 45.2525,
+      "rrT2": 1.56,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "بتروكيماويات وكيماويات",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "HDBK",
+      "stage": "WAITING_FOR_TRIGGER",
+      "rank": 2,
+      "currentPrice": 93.59,
+      "finalDecisionScore": 51.7,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 93.59,
+      "entryHigh": 93.59,
+      "stop": 83.7436,
+      "target1": 101.0772,
+      "target2": 107.6285,
+      "rrT2": 1.43,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "CSAG",
+      "stage": "NEAR_ENTRY",
+      "rank": 19,
+      "currentPrice": 33.97,
+      "finalDecisionScore": 50.8,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 33.97,
+      "entryHigh": 33.97,
+      "stop": 30.6445,
+      "target1": 36.6876,
+      "target2": 39.0655,
+      "rrT2": 1.53,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "نقل وخدمات لوجستية",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "KZPC",
+      "stage": "NEAR_ENTRY",
+      "rank": 15,
+      "currentPrice": 12.91,
+      "finalDecisionScore": 50.4,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 11.4994,
+      "entryHigh": 12.91,
+      "stop": 9.8101,
+      "target1": 13.9428,
+      "target2": 14.8465,
+      "rrT2": 1.1,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "ADCI",
+      "stage": "WAITING_FOR_TRIGGER",
+      "rank": 4,
+      "currentPrice": 256.27,
+      "finalDecisionScore": 46.2,
+      "finalDecisionGrade": "REJECT",
+      "entryQuality": "IDEAL",
+      "entryLow": 239.2042,
+      "entryHigh": 256.27,
+      "stop": 192.8739,
+      "target1": 276.7716,
+      "target2": 294.7105,
+      "rrT2": 0.86,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "AXPH",
+      "stage": "NEAR_ENTRY",
+      "rank": 20,
+      "currentPrice": 1292.12,
+      "finalDecisionScore": 43.2,
+      "finalDecisionGrade": "REJECT",
+      "entryQuality": "IDEAL",
+      "entryLow": 1281.3676,
+      "entryHigh": 1292.12,
+      "stop": 1053.4127,
+      "target1": 1395.4896,
+      "target2": 1485.938,
+      "rrT2": 0.85,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "رعاية صحية ودواء",
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "ENGC",
+      "stage": "WATCHLIST",
+      "rank": 31,
+      "currentPrice": 31.38,
+      "finalDecisionScore": 55.1,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 31.07,
+      "entryHigh": 31.69,
+      "stop": 28.87,
+      "target1": 33.05,
+      "target2": 35.56,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "KWIN",
+      "stage": "WATCHLIST",
+      "rank": 30,
+      "currentPrice": 63.13,
+      "finalDecisionScore": 54.1,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 62.5,
+      "entryHigh": 63.76,
+      "stop": 58.08,
+      "target1": 66.5,
+      "target2": 71.55,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "EEII",
+      "stage": "WATCHLIST",
+      "rank": 33,
+      "currentPrice": 1.83,
+      "finalDecisionScore": 53.5,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 1.812,
+      "entryHigh": 1.848,
+      "stop": 1.684,
+      "target1": 1.928,
+      "target2": 2.074,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "SPIN",
+      "stage": "WATCHLIST",
+      "rank": 34,
+      "currentPrice": 13.99,
+      "finalDecisionScore": 53.5,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 13.85,
+      "entryHigh": 14.13,
+      "stop": 13.08,
+      "target1": 14.6,
+      "target2": 15.5,
+      "rrT2": 1.66,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "MOED",
+      "stage": "WATCHLIST",
+      "rank": 32,
+      "currentPrice": 0.56,
+      "finalDecisionScore": 52.2,
+      "finalDecisionGrade": "C",
+      "entryQuality": "IDEAL",
+      "entryLow": 0.554,
+      "entryHigh": 0.566,
+      "stop": 0.515,
+      "target1": 0.59,
+      "target2": 0.635,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "ALUM",
+      "stage": "WATCHLIST",
+      "rank": 35,
+      "currentPrice": 19.5,
+      "finalDecisionScore": 45.6,
+      "finalDecisionGrade": "REJECT",
+      "entryQuality": "IDEAL",
+      "entryLow": 19.3,
+      "entryHigh": 19.7,
+      "stop": 17.94,
+      "target1": 20.54,
+      "target2": 22.1,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "LIQUIDITY_TOO_LOW",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "EPCO",
+      "stage": "WATCHLIST",
+      "rank": 36,
+      "currentPrice": 8.27,
+      "finalDecisionScore": 45.2,
+      "finalDecisionGrade": "REJECT",
+      "entryQuality": "IDEAL",
+      "entryLow": 8.19,
+      "entryHigh": 8.35,
+      "stop": 7.61,
+      "target1": 8.71,
+      "target2": 9.37,
+      "rrT2": 1.67,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "LIQUIDITY_TOO_LOW",
+        "FINAL_SCORE_BELOW_B"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": null,
+      "monitoringState": "GATE_BLOCKED",
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "ticker": "SWDY",
+      "stage": "REJECTED_RISK",
+      "rank": 37,
+      "currentPrice": 108.89,
+      "finalDecisionScore": 50.2,
+      "finalDecisionGrade": "REJECT",
+      "entryQuality": "IDEAL",
+      "entryLow": 101.2666,
+      "entryHigh": 108.89,
+      "stop": 87.7322,
+      "target1": 117.6012,
+      "target2": 125.2235,
+      "rrT2": 1.16,
+      "decisionGatePass": false,
+      "decisionGateStatus": "BLOCKED",
+      "decisionGateReasons": [
+        "RR_BELOW_2",
+        "FINAL_SCORE_BELOW_B",
+        "RISK_REJECTED"
+      ],
+      "portfolioSelected": false,
+      "portfolioRank": null,
+      "researchWeightPct": 0,
+      "riskBudgetPct": 0,
+      "theoreticalRiskBudgetPct": null,
+      "actionableRiskBudgetPct": null,
+      "theoreticalShares100k": null,
+      "actionableShares100k": null,
+      "actionableNow": false,
+      "riskStateOverrideReason": null,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "monitoringState": null,
+      "t1ProbabilityPct": 0,
+      "t2ProbabilityPct": 0,
+      "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+    }
+  ],
+  "snapshotSha256": "09ad56e0b3282831f8a02e974470ba66a31703b3f19c19f173b8736f0ffd517c"
+}

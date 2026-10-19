@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.703Z",
-  "availableSessions": 154,
+  "availableSessions": 155,
   "firstSession": "2026-01-20",
-  "lastSession": "2026-10-18",
+  "lastSession": "2026-10-19",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5087,6 +5087,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 232.8,
       "jumpPct": -2.32
+    },
+    {
+      "ticker": "SCFM",
+      "date": "2026-10-19",
+      "sourceSessionDate": "2026-10-19",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 227.39,
+      "high": 227.39,
+      "low": 217.75,
+      "close": 217.75,
+      "adjustedClose": 217.75,
+      "volume": 21110,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-19T18:34:38.149Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 227.39,
+      "jumpPct": -4.24
     }
   ],
   "priceTruthLatest": {
@@ -5097,7 +5129,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 154,
-  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
+  "sessionsCount": 155,
+  "updatedAt": "2026-10-19T21:50:30.215688+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

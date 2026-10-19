@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.287Z",
-  "availableSessions": 155,
+  "availableSessions": 156,
   "firstSession": "2026-02-08",
-  "lastSession": "2026-10-18",
+  "lastSession": "2026-10-19",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5104,6 +5104,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 11.34,
       "jumpPct": -9.61
+    },
+    {
+      "ticker": "ZEOT",
+      "date": "2026-10-19",
+      "sourceSessionDate": "2026-10-19",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 10.15,
+      "high": 10.88,
+      "low": 10.02,
+      "close": 10.61,
+      "adjustedClose": 10.61,
+      "volume": 1011661,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-19T18:34:38.149Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 10.25,
+      "jumpPct": 3.51
     }
   ],
   "priceTruthLatest": {
@@ -5114,7 +5146,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 155,
-  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
+  "sessionsCount": 156,
+  "updatedAt": "2026-10-19T21:50:30.215688+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

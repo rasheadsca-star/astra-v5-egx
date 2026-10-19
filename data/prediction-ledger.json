@@ -236,12 +236,48 @@
         "probabilityStatus": "INSUFFICIENT_EVIDENCE"
       },
       "recordHash": "f5fc84db7e3547c06740003f74afbc1e5666c83f305a731f0c927820e394ca7e"
+    },
+    {
+      "session": "2026-10-19",
+      "archivedAt": "2026-10-19T18:51:42.453Z",
+      "modelVersion": "ASTRA_6.11.0",
+      "buildCommit": "e3e215968b8a56ce89e605416d9200dd17e4aebb",
+      "captureTiming": "ON_SESSION_AFTER_CLOSE",
+      "recordedForwardEligible": true,
+      "previousRecordHash": "f5fc84db7e3547c06740003f74afbc1e5666c83f305a731f0c927820e394ca7e",
+      "snapshotSha256": "09ad56e0b3282831f8a02e974470ba66a31703b3f19c19f173b8736f0ffd517c",
+      "sourceSessionDataHash": "c8b579c39cd9f28a5b99490fa817a91228843a82cd4ab43dc4264637e63e0065",
+      "predictionCount": 28,
+      "gatePassedCount": 8,
+      "basketTickers": [
+        "RMDA",
+        "EGAL",
+        "RAYA"
+      ],
+      "headline": {
+        "ticker": "RMDA",
+        "finalDecisionScore": 71.2,
+        "grade": "B",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 4.73,
+        "entryLow": 5.04,
+        "entryHigh": 5.04,
+        "stop": 4.8802,
+        "target1": 5.4432,
+        "target2": 5.796,
+        "contextScore": 46,
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+      },
+      "recordHash": "bb4c1fa7136553cba45b037b423e5beecd949b01d03086f4d640537d92359ecb"
     }
   ],
-  "generatedAt": "2026-10-18T16:09:41.144Z",
+  "generatedAt": "2026-10-19T18:51:42.476Z",
   "chain": {
     "status": "VERIFIED",
-    "records": 7,
+    "records": 8,
     "errors": []
   },
   "note": "Tamper-evident hash-chained research ledger committed to Git. It is not a blockchain and does not claim legal immutability."
