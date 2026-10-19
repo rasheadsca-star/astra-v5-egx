@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-decision-cockpit/v1",
   "product": "ASTRA V5.1 DECISION COCKPIT",
-  "generatedAt": "2026-10-19T18:51:40.651Z",
+  "generatedAt": "2026-10-19T23:04:54.005Z",
   "session": "2026-10-19",
   "safety": {
     "researchOnly": true,
@@ -3691,7 +3691,7 @@
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
       "sectorStrengthScore": 48,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": -0.64,
+      "sectorRelativeChangePct": -0.65,
       "sectorBreadthPct": 62.5,
       "maxOpportunityCorrelation": 0.635,
       "maxOpportunityCorrelationPeer": "ENGC",
@@ -9069,7 +9069,7 @@
   },
   "dataHealth": {
     "session": "2026-10-19",
-    "generatedAt": "2026-10-19T18:51:40.481Z",
+    "generatedAt": "2026-10-19T23:04:53.894Z",
     "stale": false,
     "staleLagSessions": 0,
     "universe": 155,
@@ -9088,7 +9088,7 @@
   },
   "entryQualityEngine": {
     "version": "entry-quality/v1",
-    "generatedAt": "2026-10-19T18:51:40.685Z",
+    "generatedAt": "2026-10-19T23:04:54.030Z",
     "marketSession": "2026-10-19",
     "rules": {
       "invalidated": "current price <= stop",
@@ -9110,7 +9110,7 @@
   },
   "sectorCorrelationEngine": {
     "version": "sector-correlation/v1",
-    "generatedAt": "2026-10-19T18:51:40.779Z",
+    "generatedAt": "2026-10-19T23:04:54.092Z",
     "taxonomy": {
       "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
       "symbolMappings": 80,
@@ -9153,7 +9153,7 @@
         "avgChangePct": 2.73,
         "relativeChangePct": 1.63,
         "breadthPct": 100,
-        "strengthScore": 75.6,
+        "strengthScore": 75.5,
         "status": "LOW_SAMPLE"
       },
       {
@@ -9232,7 +9232,7 @@
         "sector": "عقارات وإنشاءات",
         "count": 8,
         "avgChangePct": 0.45,
-        "relativeChangePct": -0.64,
+        "relativeChangePct": -0.65,
         "breadthPct": 62.5,
         "strengthScore": 48,
         "status": "ACTIVE"
@@ -10713,7 +10713,7 @@
   },
   "marketSectorContextEngine": {
     "version": "market-sector-context/v1",
-    "generatedAt": "2026-10-19T18:51:40.823Z",
+    "generatedAt": "2026-10-19T23:04:54.126Z",
     "marketSession": "2026-10-19",
     "market": {
       "regime": "هابط",
@@ -10739,7 +10739,7 @@
   },
   "finalDecisionEngine": {
     "version": "final-decision-score/v2-missing-aware",
-    "generatedAt": "2026-10-19T18:51:40.871Z",
+    "generatedAt": "2026-10-19T23:04:54.159Z",
     "weights": {
       "technical": 0.25,
       "entryQuality": 0.2,
@@ -10767,7 +10767,7 @@
     "forwardEvidencePolicy": {
       "includedInFinalScore": false,
       "reason": "A single global forward score is non-discriminative and would add the same pseudo-evidence to every ticker. Forward evidence remains visible in calibration/outcome analytics and can only become ticker-specific probability after WP5 governance.",
-      "currentlyResolvedRecordedForward": 66
+      "currentlyResolvedRecordedForward": 89
     },
     "sensitivityPolicy": {
       "perturbation": "Each available component weight is changed by -20% and +20% one at a time, then available weights are renormalized.",
@@ -10798,7 +10798,7 @@
   },
   "walkForwardValidationEngine": {
     "schemaVersion": "astra-walk-forward-validation/v1",
-    "generatedAt": "2026-10-19T18:51:41.044Z",
+    "generatedAt": "2026-10-19T23:04:54.267Z",
     "methodology": {
       "noLookAhead": true,
       "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -10810,11 +10810,11 @@
       "note": "This engine intentionally refuses to reconstruct pre-V6 decisions from future-known data."
     },
     "coverage": {
-      "replaySessions": 6,
+      "replaySessions": 7,
       "firstSession": "2026-10-11",
-      "lastSession": "2026-10-18",
+      "lastSession": "2026-10-19",
       "requiredForFirstFold": 25,
-      "sessionsRemainingForFirstFold": 19,
+      "sessionsRemainingForFirstFold": 18,
       "folds": 0,
       "validFolds": 0
     },
@@ -10843,7 +10843,7 @@
   },
   "probabilityCalibrationEngine": {
     "version": "probability-calibration/v3-session-aware",
-    "generatedAt": "2026-10-19T18:51:41.426Z",
+    "generatedAt": "2026-10-19T23:04:54.502Z",
     "forwardResolved": 89,
     "forwardDistinctSessions": 6,
     "sampleMaturity": "INSUFFICIENT_EVIDENCE",
@@ -10941,7 +10941,7 @@
   },
   "decisionGateEngine": {
     "version": "decision-gate/v1",
-    "generatedAt": "2026-10-19T18:51:41.464Z",
+    "generatedAt": "2026-10-19T23:04:54.531Z",
     "rules": {
       "dataFreshness": "stale=false and staleLagSessions=0",
       "entryQuality": "not INVALIDATED, CHASE_RISK or UNKNOWN",
@@ -11028,7 +11028,7 @@
   },
   "portfolioSelectionEngine": {
     "version": "portfolio-selection/v1",
-    "generatedAt": "2026-10-19T18:51:41.505Z",
+    "generatedAt": "2026-10-19T23:04:54.560Z",
     "researchOnly": true,
     "executionAllowed": false,
     "automaticOrders": false,
@@ -11182,7 +11182,7 @@
   },
   "riskBudgetEngine": {
     "version": "risk-budget/v2-risk-state-aware",
-    "generatedAt": "2026-10-19T18:51:41.682Z",
+    "generatedAt": "2026-10-19T23:04:54.672Z",
     "referenceCapital": 100000,
     "currency": "EGP",
     "policy": {
@@ -11366,7 +11366,7 @@
   },
   "monitoringAlertsEngine": {
     "version": "monitoring-alerts/v1",
-    "generatedAt": "2026-10-19T18:51:41.639Z",
+    "generatedAt": "2026-10-19T23:04:54.644Z",
     "session": "2026-10-19",
     "dataMode": "DELAYED_SESSION_MONITORING",
     "delayed": true,
@@ -12291,7 +12291,7 @@
   },
   "riskStateOverrideEngine": {
     "version": "risk-state-override/v1",
-    "generatedAt": "2026-10-19T18:51:41.682Z",
+    "generatedAt": "2026-10-19T23:04:54.672Z",
     "policy": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
     "positions": [
       {
@@ -12335,8 +12335,8 @@
   },
   "outcomeAnalyticsEngine": {
     "version": "outcome-analytics/v3-recorded-forward-only",
-    "generatedAt": "2026-10-19T18:51:41.967Z",
-    "evidenceGeneratedAt": "2026-10-19T18:51:41.755Z",
+    "generatedAt": "2026-10-19T23:04:54.861Z",
+    "evidenceGeneratedAt": "2026-10-19T23:04:54.716Z",
     "status": "INSUFFICIENT_EVIDENCE",
     "samplePolicy": {
       "groupLeaderboardMinimumResolved": 5,
@@ -13114,7 +13114,7 @@
   },
   "dailyDecisionBrief": {
     "version": "daily-decision-brief/v1",
-    "generatedAt": "2026-10-19T18:51:42.008Z",
+    "generatedAt": "2026-10-19T23:04:54.890Z",
     "session": "2026-10-19",
     "headline": {
       "ticker": "RMDA",
@@ -13252,7 +13252,7 @@
   },
   "changeAttributionEngine": {
     "version": "change-attribution/v1",
-    "generatedAt": "2026-10-19T18:51:42.053Z",
+    "generatedAt": "2026-10-19T23:04:54.921Z",
     "session": "2026-10-19",
     "priorSession": "2026-10-18",
     "status": "COMPARED",
@@ -14439,7 +14439,7 @@
   "sourceHealthEngine": {
     "schemaVersion": "astra-source-health/v1",
     "expectedSession": "2026-10-19",
-    "generatedAt": "2026-10-19T18:51:42.337Z",
+    "generatedAt": "2026-10-19T23:04:55.090Z",
     "researchOnly": true,
     "automaticExecution": false,
     "coverage": {
@@ -17211,7 +17211,7 @@
   },
   "trustArchitecture": {
     "version": "trust-architecture/v1",
-    "generatedAt": "2026-10-19T18:51:42.478Z",
+    "generatedAt": "2026-10-19T23:04:55.174Z",
     "session": "2026-10-19",
     "replaySnapshotSha256": "09ad56e0b3282831f8a02e974470ba66a31703b3f19c19f173b8736f0ffd517c",
     "ledgerRecordHash": "bb4c1fa7136553cba45b037b423e5beecd949b01d03086f4d640537d92359ecb",
@@ -17222,14 +17222,14 @@
     "replayCoverageStart": "2026-10-07",
     "researchOnly": true,
     "automaticExecution": false,
-    "note": "True no-look-ahead replay is available only for sessions persisted after V6 Trust Archive activation. Earlier dates are not reconstructed from future-known data."
+    "note": "True no-look-ahead replay is available only for sessions persisted after V6 Trust Archive activation. Earlier dates are not reconstructed from future-known data. Current same-session build differs from the already-frozen snapshot; the frozen record was preserved unchanged."
   },
   "modelGovernanceEngine": {
     "schemaVersion": "astra-model-governance/v1",
-    "generatedAt": "2026-10-19T18:51:42.576Z",
+    "generatedAt": "2026-10-19T23:04:55.231Z",
     "modelVersion": "ASTRA_V6.8_GOVERNANCE",
     "reliability": {
-      "score": 57,
+      "score": 57.2,
       "tier": "BUILDING",
       "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
       "hardCapApplied": false,
@@ -17287,7 +17287,7 @@
       {
         "id": "WALK_FORWARD",
         "label": "Walk-forward validation",
-        "score": 8.4,
+        "score": 9.8,
         "weight": 16,
         "status": "WAITING_FOR_MINIMUM_SESSIONS",
         "detail": "0 valid fold(s), 0 resolved out-of-sample outcome(s)."
@@ -17391,7 +17391,7 @@
     "automaticExecution": false
   },
   "reliabilityScore": {
-    "score": 57,
+    "score": 57.2,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -17399,7 +17399,7 @@
   },
   "operationsHealthEngine": {
     "schemaVersion": "astra-operations-health/v1",
-    "generatedAt": "2026-10-19T18:51:43.466Z",
+    "generatedAt": "2026-10-19T23:04:55.831Z",
     "version": "6.11.0",
     "session": "2026-10-19",
     "overall": "DEGRADED",
@@ -17548,7 +17548,7 @@
     ],
     "release": {
       "governanceGate": "EVIDENCE_BUILDING",
-      "reliabilityScore": 57,
+      "reliabilityScore": 57.2,
       "probabilityStatus": "INSUFFICIENT_EVIDENCE",
       "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS"
     }
@@ -17559,7 +17559,7 @@
     "packageVersion": "6.11.0",
     "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
     "stableBranch": "release-v6.11-stable",
-    "generatedAt": "2026-10-19T18:51:43.343Z",
+    "generatedAt": "2026-10-19T23:04:55.749Z",
     "baselineSession": "2026-10-07",
     "requiredDistinctSessions": 2,
     "currentSession": "2026-10-19",
