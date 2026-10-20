@@ -1,0 +1,125 @@
+{
+  "schema": "egx-autonomous-intelligence-report/v1",
+  "reportSession": "2026-10-20",
+  "nextExpectedSession": "2026-10-21",
+  "createdFor": "EGX AUTONOMOUS AI TRADING INTELLIGENCE AGENT",
+  "publicationStatus": "DATA_NOT_VERIFIED",
+  "officialEGXCloseFeedIndependentlyCaptured": false,
+  "market": {
+    "indexes": {
+      "EGX30": {
+        "close": 52089.01,
+        "changePct": 1.94
+      },
+      "EGX70": {
+        "close": 17903.71,
+        "changePct": 2.17
+      },
+      "EGX100": {
+        "close": 24012.96,
+        "changePct": 2.24
+      }
+    },
+    "tradedEquitiesValueEGPApprox": 9100000000,
+    "advanced": 165,
+    "declined": 44,
+    "unchanged": 14,
+    "status": "completed",
+    "note": "Index closes and market breadth cross-checked against dated public third-party reports; official securities-by-security close feed not independently captured."
+  },
+  "engineChecks": [
+    {
+      "repo": "rasheadsca-star/RAS-EGX-PRO2026-NEXT",
+      "sourceFile": "data/rc2/current-session.json",
+      "sourceSession": "2026-10-20",
+      "scanned": 174,
+      "technicalEligible": 0,
+      "publicationEligible": 0,
+      "outputCount": 0,
+      "mode": "RESEARCH_ONLY"
+    },
+    {
+      "repo": "rasheadsca-star/astra-v5-egx",
+      "sourceFile": "data/operations-health.json",
+      "sourceSession": "2026-10-20",
+      "status": "DEGRADED",
+      "activeCoveragePct": 87,
+      "quantCoveragePct": 86.4,
+      "independentSourceQuorum": false,
+      "walkForwardValidFolds": 0
+    }
+  ],
+  "researchWatchlist": [
+    {
+      "ticker": "FWRY",
+      "nameAr": "فوري لتكنولوجيا البنوك والمدفوعات الإلكترونية",
+      "externalDate": "2026-10-20",
+      "externalClose": 18.61,
+      "internalClose": 18.59,
+      "priceReview": "company IR matches external price; internal close does not match exactly",
+      "finalScoreFromUserWeights": null,
+      "actionable": false
+    },
+    {
+      "ticker": "SKPC",
+      "nameAr": "سيدي كرير للبتروكيماويات",
+      "externalDate": "2026-10-20",
+      "externalClose": 15.69,
+      "internalClose": 15.7,
+      "priceReview": "conflicting delayed regional market snapshot 15.77 also observed; no primary official close",
+      "finalScoreFromUserWeights": null,
+      "actionable": false
+    },
+    {
+      "ticker": "ASCM",
+      "nameAr": "أسيك للتعدين",
+      "externalDate": "2026-10-20",
+      "externalClose": 47.41,
+      "internalClose": 47.44,
+      "priceReview": "close mismatch; no primary official close",
+      "finalScoreFromUserWeights": null,
+      "actionable": false
+    }
+  ],
+  "finalApprovedRecommendations": [],
+  "riskBudget": {
+    "perTradeMaxPortfolioRiskPct": 0.5,
+    "concurrentMaxPortfolioRiskPct": 1.5,
+    "allocatedPct": 0,
+    "cashPct": 100
+  },
+  "withheldReasons": [
+    "No full-independent-source quorum for symbol prices",
+    "Current same-date internal OHLCV differs from independently published prices and some prior sessions",
+    "Engine publication gates returned zero candidates",
+    "Historical source is not sufficiently independently verified; 200-session EMA unavailable in cited ASTRA candidate histories",
+    "Out-of-sample walk-forward not established and forecast probabilities unverifiable"
+  ],
+  "historicalValidation": {
+    "performedByThisRun": false,
+    "reportedWinRate": null,
+    "reportedTargetHitProbability": null,
+    "reportedBacktest": null
+  },
+  "outcomeTracking": {
+    "approvedSignalCount": 0,
+    "openPositions": 0,
+    "eligibleForRealizedPerformance": 0,
+    "entryAndExitResults": [],
+    "note": "This run created no actionable signal. Future comparisons require approved dated entry/exit rules and verified market observations."
+  },
+  "sources": [
+    "https://beta.egx.com.eg/ar",
+    "https://www.investing.com/indices/egx30-historical-data",
+    "https://openstockeg.com/reports/day/2026-10-20",
+    "https://almalnews.com/2142380/",
+    "https://www.fawry.com/ar/investor-relations-2/",
+    "https://sa.investing.com/equities/fawry-banking-and-payment-historical-data",
+    "https://sa.investing.com/equities/sidi-kerir-pet-historical-data",
+    "https://sa.investing.com/equities/asec-mining-co-historical-data",
+    "https://fra.gov.eg/news/",
+    "https://www.cbe.org.eg/ar/news-publications/news/2026/09/24/15/38/mpc-press-release-24-september-2026",
+    "https://github.com/rasheadsca-star/RAS-EGX-PRO2026-NEXT/blob/main/data/rc2/current-session.json",
+    "https://github.com/rasheadsca-star/astra-v5-egx/blob/main/data/operations-health.json"
+  ]
+}
