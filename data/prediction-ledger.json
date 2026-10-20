@@ -272,12 +272,48 @@
         "probabilityStatus": "INSUFFICIENT_EVIDENCE"
       },
       "recordHash": "bb4c1fa7136553cba45b037b423e5beecd949b01d03086f4d640537d92359ecb"
+    },
+    {
+      "session": "2026-10-20",
+      "archivedAt": "2026-10-20T17:32:19.227Z",
+      "modelVersion": "ASTRA_6.11.0",
+      "buildCommit": "63be8d6b210124756af16bd1c2d464490db21bd3",
+      "captureTiming": "ON_SESSION_AFTER_CLOSE",
+      "recordedForwardEligible": true,
+      "previousRecordHash": "bb4c1fa7136553cba45b037b423e5beecd949b01d03086f4d640537d92359ecb",
+      "snapshotSha256": "c8c6b094f70a30017e6499e874f4327e959faec3eaf45262366bf4ab5e247298",
+      "sourceSessionDataHash": "c33b371ece97fa6bbc9c07d19d9b530d63768ba56ce48fa41382ee397b50d66d",
+      "predictionCount": 31,
+      "gatePassedCount": 13,
+      "basketTickers": [
+        "SKPC",
+        "FWRY",
+        "ASCM"
+      ],
+      "headline": {
+        "ticker": "FWRY",
+        "finalDecisionScore": 78.3,
+        "grade": "A",
+        "gateStatus": "RESEARCH_ELIGIBLE",
+        "entryQuality": "IDEAL",
+        "rrT2": 2.48,
+        "entryLow": 18.5871,
+        "entryHigh": 18.59,
+        "stop": 17.4614,
+        "target1": 20.0772,
+        "target2": 21.3785,
+        "contextScore": 50.9,
+        "t1ProbabilityPct": 0,
+        "t2ProbabilityPct": 0,
+        "probabilityStatus": "INSUFFICIENT_EVIDENCE"
+      },
+      "recordHash": "078c922f6218cae2f62e990e57517601a593f174adb1c4d459f7fc7c4086aadc"
     }
   ],
-  "generatedAt": "2026-10-19T23:04:55.173Z",
+  "generatedAt": "2026-10-20T17:32:19.242Z",
   "chain": {
     "status": "VERIFIED",
-    "records": 8,
+    "records": 9,
     "errors": []
   },
   "note": "Tamper-evident hash-chained research ledger committed to Git. It is not a blockchain and does not claim legal immutability."

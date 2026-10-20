@@ -1,9 +1,9 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-19T23:04:55.231Z",
+  "generatedAt": "2026-10-20T17:32:19.305Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
-    "score": 57.2,
+    "score": 57.9,
     "tier": "BUILDING",
     "meaning": "Operational and evidence reliability index; NOT probability of profit and NOT expected return.",
     "hardCapApplied": false,
@@ -29,10 +29,10 @@
     {
       "id": "SOURCE_COVERAGE",
       "label": "Active-universe source coverage",
-      "score": 88.5,
+      "score": 87,
       "weight": 0,
       "status": "PARTIAL",
-      "detail": "88.5% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
+      "detail": "87% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
     },
     {
       "id": "SOURCE_QUORUM",
@@ -53,10 +53,10 @@
     {
       "id": "REPLAY_COVERAGE",
       "label": "Replay archive coverage",
-      "score": 28,
+      "score": 32,
       "weight": 10,
       "status": "BUILDING",
-      "detail": "7 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
+      "detail": "8 persisted no-look-ahead session(s); 25 required for first standard walk-forward fold."
     },
     {
       "id": "WALK_FORWARD",
@@ -69,26 +69,26 @@
     {
       "id": "PROBABILITY_EVIDENCE",
       "label": "Forward probability evidence",
-      "score": 8,
+      "score": 9.3,
       "weight": 10,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "89 resolved forward outcome(s) across 6 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
+      "detail": "91 resolved forward outcome(s) across 7 distinct session(s); mature sample requires 90 outcomes across 30 sessions plus the walk-forward release gate."
     },
     {
       "id": "OUTCOME_SAMPLE",
       "label": "Outcome analytics sample",
-      "score": 8,
+      "score": 9.3,
       "weight": 8,
       "status": "INSUFFICIENT_EVIDENCE",
-      "detail": "89 resolved prospective outcome(s) across 6 distinct session(s)."
+      "detail": "91 resolved prospective outcome(s) across 7 distinct session(s)."
     },
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 35.1,
+      "score": 35.2,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "35.1% of current market rows classified by controlled symbol mapping."
+      "detail": "35.2% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
@@ -114,15 +114,15 @@
     "DRIFT_GUARD_ACTIVE"
   ],
   "evidenceState": {
-    "replaySessions": 7,
-    "totalPersistedReplaySessions": 8,
+    "replaySessions": 8,
+    "totalPersistedReplaySessions": 9,
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS",
     "validWalkForwardFolds": 0,
     "outOfSampleResolved": 0,
-    "prospectiveResolved": 89,
-    "prospectiveDistinctSessions": 6,
-    "probabilityResolved": 89,
-    "probabilityDistinctSessions": 6,
+    "prospectiveResolved": 91,
+    "prospectiveDistinctSessions": 7,
+    "probabilityResolved": 91,
+    "probabilityDistinctSessions": 7,
     "probabilityStatus": "INSUFFICIENT_EVIDENCE",
     "calibrationScoring": {
       "t1": {
@@ -150,9 +150,9 @@
         "bins": []
       }
     },
-    "ledgerRecords": 8,
+    "ledgerRecords": 9,
     "ledgerChainStatus": "VERIFIED",
-    "activeSourceCoveragePct": 88.5,
+    "activeSourceCoveragePct": 87,
     "independentSourceQuorum": false
   },
   "releaseGate": {

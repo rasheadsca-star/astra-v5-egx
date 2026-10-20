@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.465Z",
-  "availableSessions": 153,
+  "availableSessions": 154,
   "firstSession": "2026-02-24",
-  "lastSession": "2026-10-19",
+  "lastSession": "2026-10-20",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5031,6 +5031,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 17.33,
       "jumpPct": 2.54
+    },
+    {
+      "ticker": "AMIA",
+      "date": "2026-10-20",
+      "sourceSessionDate": "2026-10-20",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 17.77,
+      "high": 18.28,
+      "low": 17.77,
+      "close": 18.28,
+      "adjustedClose": 18.28,
+      "volume": 194811,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-20T17:28:25.347Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 17.77,
+      "jumpPct": 2.87
     }
   ],
   "priceTruthLatest": {
@@ -5041,7 +5073,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 153,
-  "updatedAt": "2026-10-19T21:50:30.215688+03:00",
+  "sessionsCount": 154,
+  "updatedAt": "2026-10-20T20:31:31.458551+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
