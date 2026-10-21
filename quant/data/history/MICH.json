@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.572Z",
-  "availableSessions": 157,
+  "availableSessions": 158,
   "firstSession": "2026-01-21",
-  "lastSession": "2026-10-20",
+  "lastSession": "2026-10-21",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5174,6 +5174,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 39.35,
       "jumpPct": 7.37
+    },
+    {
+      "ticker": "MICH",
+      "date": "2026-10-21",
+      "sourceSessionDate": "2026-10-21",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 42.25,
+      "high": 43.99,
+      "low": 42.25,
+      "close": 43.0,
+      "adjustedClose": 43.0,
+      "volume": 156312,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-21T17:41:23.156Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 42.25,
+      "jumpPct": 1.78
     }
   ],
   "priceTruthLatest": {
@@ -5184,7 +5216,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 157,
-  "updatedAt": "2026-10-20T20:31:31.458551+03:00",
+  "sessionsCount": 158,
+  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

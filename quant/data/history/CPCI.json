@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.549Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-20",
+  "lastSession": "2026-10-21",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5020,6 +5020,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 573.86,
       "jumpPct": 2.2
+    },
+    {
+      "ticker": "CPCI",
+      "date": "2026-10-21",
+      "sourceSessionDate": "2026-10-21",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 586.48,
+      "high": 593.0,
+      "low": 580.5,
+      "close": 592.51,
+      "adjustedClose": 592.51,
+      "volume": 5937,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-21T17:41:23.156Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 586.48,
+      "jumpPct": 1.03
     }
   ],
   "priceTruthLatest": {
@@ -5030,7 +5062,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-20T20:31:31.458551+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

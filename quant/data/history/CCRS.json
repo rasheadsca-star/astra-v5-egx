@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.407Z",
-  "availableSessions": 152,
+  "availableSessions": 153,
   "firstSession": "2026-02-09",
-  "lastSession": "2026-10-20",
+  "lastSession": "2026-10-21",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5012,6 +5012,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.87,
       "jumpPct": 5.88
+    },
+    {
+      "ticker": "CCRS",
+      "date": "2026-10-21",
+      "sourceSessionDate": "2026-10-21",
+      "sourceMarketTime": "01:26 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 1.98,
+      "high": 2.03,
+      "low": 1.92,
+      "close": 2.0,
+      "adjustedClose": 2.0,
+      "volume": 1550391,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-21T17:41:23.156Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 1.98,
+      "jumpPct": 1.01
     }
   ],
   "priceTruthLatest": {
@@ -5022,7 +5054,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 152,
-  "updatedAt": "2026-10-20T20:31:31.458551+03:00",
+  "sessionsCount": 153,
+  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

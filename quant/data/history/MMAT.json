@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.726Z",
-  "availableSessions": 120,
+  "availableSessions": 121,
   "firstSession": "2025-12-04",
-  "lastSession": "2026-10-18",
+  "lastSession": "2026-10-21",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -3780,6 +3780,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 5.53,
       "jumpPct": -4.88
+    },
+    {
+      "ticker": "MMAT",
+      "date": "2026-10-21",
+      "sourceSessionDate": "2026-10-21",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 5.26,
+      "high": 5.26,
+      "low": 5.0,
+      "close": 5.0,
+      "adjustedClose": 5.0,
+      "volume": 73205,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-21T17:41:23.156Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 5.26,
+      "jumpPct": -4.94
     }
   ],
   "priceTruthLatest": {
@@ -3790,7 +3822,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 120,
-  "updatedAt": "2026-10-18T19:08:33.968012+03:00",
+  "sessionsCount": 121,
+  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
