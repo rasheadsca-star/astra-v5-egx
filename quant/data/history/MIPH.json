@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.648Z",
-  "availableSessions": 157,
+  "availableSessions": 158,
   "firstSession": "2026-02-12",
-  "lastSession": "2026-10-21",
+  "lastSession": "2026-10-22",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5167,6 +5167,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 751.34,
       "jumpPct": -0.43
+    },
+    {
+      "ticker": "MIPH",
+      "date": "2026-10-22",
+      "sourceSessionDate": "2026-10-22",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 748.1,
+      "high": 750.0,
+      "low": 740.0,
+      "close": 742.36,
+      "adjustedClose": 742.36,
+      "volume": 578,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-22T17:06:41.009Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 748.1,
+      "jumpPct": -0.77
     }
   ],
   "priceTruthLatest": {
@@ -5177,7 +5209,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 157,
-  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
+  "sessionsCount": 158,
+  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

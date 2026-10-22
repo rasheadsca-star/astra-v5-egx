@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.560Z",
-  "availableSessions": 158,
+  "availableSessions": 159,
   "firstSession": "2026-02-10",
-  "lastSession": "2026-10-21",
+  "lastSession": "2026-10-22",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5202,6 +5202,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 275.6,
       "jumpPct": -0.03
+    },
+    {
+      "ticker": "WKOL",
+      "date": "2026-10-22",
+      "sourceSessionDate": "2026-10-22",
+      "sourceMarketTime": "01:25 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 275.52,
+      "high": 275.52,
+      "low": 267.25,
+      "close": 267.25,
+      "adjustedClose": 267.25,
+      "volume": 20795,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-22T17:06:41.009Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 275.52,
+      "jumpPct": -3.0
     }
   ],
   "priceTruthLatest": {
@@ -5212,7 +5244,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 158,
-  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
+  "sessionsCount": 159,
+  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

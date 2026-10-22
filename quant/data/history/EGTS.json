@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.353Z",
-  "availableSessions": 157,
+  "availableSessions": 158,
   "firstSession": "2026-01-21",
-  "lastSession": "2026-10-21",
+  "lastSession": "2026-10-22",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5198,6 +5198,40 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 13.13,
       "jumpPct": -1.45
+    },
+    {
+      "ticker": "EGTS",
+      "date": "2026-10-22",
+      "sourceSessionDate": "2026-10-22",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 12.91,
+      "high": 13.03,
+      "low": 12.4,
+      "close": 12.58,
+      "adjustedClose": 12.58,
+      "volume": 1185385,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-22T17:06:41.009Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "corporate_action_review_required"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 12.94,
+      "jumpPct": -2.78
     }
   ],
   "priceTruthLatest": {
@@ -5208,7 +5242,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 157,
-  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
+  "sessionsCount": 158,
+  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
