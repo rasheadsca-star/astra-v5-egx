@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-decision-cockpit/v1",
   "product": "ASTRA V5.1 DECISION COCKPIT",
-  "generatedAt": "2026-10-22T18:44:10.540Z",
+  "generatedAt": "2026-10-23T23:29:45.209Z",
   "session": "2026-10-22",
   "safety": {
     "researchOnly": true,
@@ -161,10 +161,10 @@
       "maxOpportunityCorrelationPeer": "GSSC",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 54.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 54,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -175,7 +175,7 @@
       "finalDecisionComponents": {
         "technical": 68,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 52
@@ -197,9 +197,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 68.59,
-        "maxScore": 71.35,
-        "maxAbsDelta": 1.42,
+        "minScore": 68.57,
+        "maxScore": 71.34,
+        "maxAbsDelta": 1.43,
         "gradeStable": true,
         "possibleGrades": [
           "B"
@@ -208,73 +208,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 70.26,
+            "score": 70.24,
             "delta": 0.33
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 69.63,
+            "score": 69.61,
             "delta": -0.3
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 68.78,
+            "score": 68.76,
             "delta": -1.15
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 70.98,
+            "score": 70.96,
             "delta": 1.05
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 71.35,
+            "score": 71.34,
             "delta": 1.43
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 68.59,
+            "score": 68.57,
             "delta": -1.34
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 69.08,
+            "score": 69.06,
             "delta": -0.85
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 70.72,
+            "score": 70.71,
             "delta": 0.8
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 69.69,
+            "score": 69.67,
             "delta": -0.24
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 70.15,
+            "score": 70.14,
             "delta": 0.23
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 70.4,
+            "score": 70.38,
             "delta": 0.47
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 69.47,
+            "score": 69.46,
             "delta": -0.45
           }
         ]
@@ -417,19 +417,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 47.8,
+      "sectorStrengthScore": 47.9,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.94,
+      "sectorRelativeChangePct": 0.95,
       "sectorBreadthPct": 11.1,
       "maxOpportunityCorrelation": 0.578,
       "maxOpportunityCorrelationPeer": "ADIB",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 29.8,
+      "contextScore": 29.7,
       "contextAdjustment": -6.1,
       "adjustedConviction": 39.9,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 47.8,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 47.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 4,
@@ -439,7 +439,7 @@
       "finalDecisionComponents": {
         "technical": 52,
         "entryQuality": 100,
-        "context": 29.8,
+        "context": 29.7,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 69
@@ -461,8 +461,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 66.17,
-        "maxScore": 68.8,
+        "minScore": 66.15,
+        "maxScore": 68.79,
         "maxAbsDelta": 1.36,
         "gradeStable": true,
         "possibleGrades": [
@@ -472,73 +472,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 68.52,
+            "score": 68.51,
             "delta": 1.08
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 66.47,
+            "score": 66.45,
             "delta": -0.97
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 66.19,
+            "score": 66.17,
             "delta": -1.26
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 68.6,
+            "score": 68.58,
             "delta": 1.15
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 68.8,
+            "score": 68.79,
             "delta": 1.36
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 66.17,
-            "delta": -1.27
+            "score": 66.15,
+            "delta": -1.28
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 66.51,
+            "score": 66.49,
             "delta": -0.93
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 68.32,
+            "score": 68.3,
             "delta": 0.87
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 67.15,
+            "score": 67.13,
             "delta": -0.29
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 67.72,
+            "score": 67.71,
             "delta": 0.28
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 67.49,
+            "score": 67.48,
             "delta": 0.05
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 67.39,
+            "score": 67.38,
             "delta": -0.05
           }
         ]
@@ -701,10 +701,10 @@
       "maxOpportunityCorrelationPeer": null,
       "maxOpportunityCorrelationN": 0,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 51.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 51,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -715,7 +715,7 @@
       "finalDecisionComponents": {
         "technical": 65,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 90,
         "riskControl": 65,
         "evidence": 60
@@ -737,8 +737,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 64.99,
-        "maxScore": 67.6,
+        "minScore": 64.97,
+        "maxScore": 67.59,
         "maxAbsDelta": 1.31,
         "gradeStable": true,
         "possibleGrades": [
@@ -748,73 +748,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 66.59,
+            "score": 66.57,
             "delta": 0.29
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 66.03,
+            "score": 66.02,
             "delta": -0.26
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 64.99,
+            "score": 64.97,
             "delta": -1.31
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 67.49,
+            "score": 67.48,
             "delta": 1.2
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 67.6,
+            "score": 67.59,
             "delta": 1.31
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 65.07,
+            "score": 65.05,
             "delta": -1.23
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 65.65,
+            "score": 65.64,
             "delta": -0.64
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 66.9,
+            "score": 66.88,
             "delta": 0.6
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 66.41,
+            "score": 66.39,
             "delta": 0.11
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 66.19,
+            "score": 66.17,
             "delta": -0.11
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 66.52,
+            "score": 66.5,
             "delta": 0.22
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 66.08,
+            "score": 66.07,
             "delta": -0.21
           }
         ]
@@ -968,29 +968,29 @@
       "chaseDistancePct": 0,
       "sector": "معادن ومواد أساسية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 48.7,
+      "sectorStrengthScore": 48.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 1.4,
+      "sectorRelativeChangePct": 1.41,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.563,
       "maxOpportunityCorrelationPeer": "OCDI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30,
+      "contextScore": 29.9,
       "contextAdjustment": -6,
       "adjustedConviction": 36,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 48.7,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 48.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 5,
-      "finalDecisionScore": 65.3,
+      "finalDecisionScore": 65.2,
       "finalDecisionGrade": "B",
       "finalDecisionLabel": "WATCH / CONDITIONAL",
       "finalDecisionComponents": {
         "technical": 50,
         "entryQuality": 100,
-        "context": 30,
+        "context": 29.9,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 53
@@ -1012,8 +1012,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 63.91,
-        "maxScore": 66.54,
+        "minScore": 63.9,
+        "maxScore": 66.53,
         "maxAbsDelta": 1.35,
         "gradeStable": true,
         "possibleGrades": [
@@ -1023,74 +1023,74 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 66.33,
+            "score": 66.32,
             "delta": 1.07
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 64.3,
+            "score": 64.28,
             "delta": -0.96
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 63.91,
+            "score": 63.9,
             "delta": -1.35
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 66.51,
+            "score": 66.49,
             "delta": 1.24
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 66.54,
+            "score": 66.53,
             "delta": 1.28
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 64.06,
+            "score": 64.04,
             "delta": -1.2
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 64.26,
+            "score": 64.24,
             "delta": -1
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 66.2,
+            "score": 66.19,
             "delta": 0.94
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 64.92,
+            "score": 64.91,
             "delta": -0.34
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 65.59,
+            "score": 65.57,
             "delta": 0.32
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 65.61,
+            "score": 65.6,
             "delta": 0.35
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 64.93,
-            "delta": -0.34
+            "score": 64.91,
+            "delta": -0.33
           }
         ]
       },
@@ -1243,10 +1243,10 @@
       "maxOpportunityCorrelationPeer": "ADPC",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 31.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 31,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -1257,7 +1257,7 @@
       "finalDecisionComponents": {
         "technical": 45,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 46
@@ -1279,9 +1279,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 63.45,
-        "maxScore": 66.14,
-        "maxAbsDelta": 1.37,
+        "minScore": 63.43,
+        "maxScore": 66.13,
+        "maxAbsDelta": 1.38,
         "gradeStable": true,
         "possibleGrades": [
           "B"
@@ -1290,73 +1290,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 66.14,
+            "score": 66.13,
             "delta": 1.32
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 63.63,
+            "score": 63.61,
             "delta": -1.19
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 63.45,
+            "score": 63.43,
             "delta": -1.37
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 66.08,
+            "score": 66.07,
             "delta": 1.26
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 66.08,
+            "score": 66.07,
             "delta": 1.26
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 63.64,
+            "score": 63.62,
             "delta": -1.18
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 63.8,
+            "score": 63.79,
             "delta": -1.02
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 65.78,
+            "score": 65.76,
             "delta": 0.95
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 64.15,
+            "score": 64.13,
             "delta": -0.67
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 65.46,
+            "score": 65.45,
             "delta": 0.64
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 65.31,
+            "score": 65.3,
             "delta": 0.49
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 64.35,
+            "score": 64.34,
             "delta": -0.47
           }
         ]
@@ -1503,16 +1503,16 @@
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
       "sectorStrengthScore": 0,
       "sectorStrengthStatus": "LOW_SAMPLE",
-      "sectorRelativeChangePct": -4.93,
+      "sectorRelativeChangePct": -4.91,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.59,
       "maxOpportunityCorrelationPeer": "ADPC",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 20.2,
-      "contextAdjustment": -8.9,
-      "adjustedConviction": 32.1,
-      "marketContextScore": 10.5,
+      "contextScore": 20.1,
+      "contextAdjustment": -9,
+      "adjustedConviction": 32,
+      "marketContextScore": 10.2,
       "sectorContextScore": 0,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
@@ -1523,7 +1523,7 @@
       "finalDecisionComponents": {
         "technical": 47,
         "entryQuality": 100,
-        "context": 20.2,
+        "context": 20.1,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 54
@@ -1545,9 +1545,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 63.13,
-        "maxScore": 66.19,
-        "maxAbsDelta": 1.58,
+        "minScore": 63.11,
+        "maxScore": 66.18,
+        "maxAbsDelta": 1.59,
         "gradeStable": true,
         "possibleGrades": [
           "B"
@@ -1556,73 +1556,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 65.81,
+            "score": 65.79,
             "delta": 1.2
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 63.53,
+            "score": 63.52,
             "delta": -1.08
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 63.23,
+            "score": 63.21,
             "delta": -1.38
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 65.88,
+            "score": 65.86,
             "delta": 1.27
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 66.19,
+            "score": 66.18,
             "delta": 1.58
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 63.13,
+            "score": 63.11,
             "delta": -1.48
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 63.59,
+            "score": 63.57,
             "delta": -1.02
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 65.57,
+            "score": 65.56,
             "delta": 0.96
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 63.94,
+            "score": 63.92,
             "delta": -0.68
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 65.26,
+            "score": 65.24,
             "delta": 0.65
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 64.92,
+            "score": 64.91,
             "delta": 0.31
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 64.31,
+            "score": 64.29,
             "delta": -0.3
           }
         ]
@@ -1786,21 +1786,21 @@
       "maxOpportunityCorrelationPeer": "ADCI",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 41.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 41,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
       "contextRank": 3,
-      "finalDecisionScore": 63.7,
+      "finalDecisionScore": 63.6,
       "finalDecisionGrade": "B",
       "finalDecisionLabel": "WATCH / CONDITIONAL",
       "finalDecisionComponents": {
         "technical": 55,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 90,
         "riskControl": 65,
         "evidence": 60
@@ -1822,8 +1822,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 62.24,
-        "maxScore": 64.97,
+        "minScore": 62.23,
+        "maxScore": 64.95,
         "maxAbsDelta": 1.42,
         "gradeStable": true,
         "possibleGrades": [
@@ -1833,73 +1833,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 64.37,
+            "score": 64.35,
             "delta": 0.7
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 63.03,
+            "score": 63.02,
             "delta": -0.63
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 62.24,
+            "score": 62.23,
             "delta": -1.42
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 64.97,
+            "score": 64.95,
             "delta": 1.31
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 64.88,
+            "score": 64.87,
             "delta": 1.22
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 62.52,
+            "score": 62.5,
             "delta": -1.15
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 62.93,
+            "score": 62.92,
             "delta": -0.73
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 64.35,
+            "score": 64.33,
             "delta": 0.68
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 63.72,
+            "score": 63.7,
             "delta": 0.06
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 63.61,
+            "score": 63.59,
             "delta": -0.05
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 63.83,
+            "score": 63.81,
             "delta": 0.16
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 63.51,
+            "score": 63.49,
             "delta": -0.16
           }
         ]
@@ -2043,19 +2043,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 47.8,
+      "sectorStrengthScore": 47.9,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.94,
+      "sectorRelativeChangePct": 0.95,
       "sectorBreadthPct": 11.1,
       "maxOpportunityCorrelation": 0.578,
       "maxOpportunityCorrelationPeer": "COMI",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 29.8,
+      "contextScore": 29.7,
       "contextAdjustment": -6.1,
       "adjustedConviction": 29.9,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 47.8,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 47.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 10,
@@ -2065,7 +2065,7 @@
       "finalDecisionComponents": {
         "technical": 42,
         "entryQuality": 100,
-        "context": 29.8,
+        "context": 29.7,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 54
@@ -2087,9 +2087,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 61.79,
-        "maxScore": 64.63,
-        "maxAbsDelta": 1.44,
+        "minScore": 61.77,
+        "maxScore": 64.62,
+        "maxAbsDelta": 1.45,
         "gradeStable": false,
         "possibleGrades": [
           "B",
@@ -2099,73 +2099,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 64.63,
+            "score": 64.62,
             "delta": 1.4
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 61.97,
+            "score": 61.95,
             "delta": -1.26
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 61.79,
+            "score": 61.77,
             "delta": -1.44
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 64.56,
+            "score": 64.54,
             "delta": 1.32
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 64.45,
+            "score": 64.44,
             "delta": 1.22
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 62.09,
+            "score": 62.07,
             "delta": -1.15
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 62.16,
+            "score": 62.15,
             "delta": -1.07
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 64.23,
+            "score": 64.22,
             "delta": 1
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 62.85,
+            "score": 62.83,
             "delta": -0.38
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 63.6,
+            "score": 63.58,
             "delta": 0.37
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 63.52,
+            "score": 63.5,
             "delta": 0.28
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 62.96,
+            "score": 62.94,
             "delta": -0.27
           }
         ]
@@ -2311,19 +2311,19 @@
       "chaseDistancePct": 0,
       "sector": "رعاية صحية ودواء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 43.1,
+      "sectorStrengthScore": 43.2,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.7,
+      "sectorRelativeChangePct": 0.71,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.716,
       "maxOpportunityCorrelationPeer": "ADCI",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "MEDIUM",
-      "contextScore": 28.8,
-      "contextAdjustment": -6.3,
-      "adjustedConviction": 32.7,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 43.1,
+      "contextScore": 28.7,
+      "contextAdjustment": -6.4,
+      "adjustedConviction": 32.6,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 43.2,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 7,
@@ -2333,7 +2333,7 @@
       "finalDecisionComponents": {
         "technical": 45,
         "entryQuality": 100,
-        "context": 28.8,
+        "context": 28.7,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 46
@@ -2355,9 +2355,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 61.57,
-        "maxScore": 64.35,
-        "maxAbsDelta": 1.45,
+        "minScore": 61.55,
+        "maxScore": 64.34,
+        "maxAbsDelta": 1.46,
         "gradeStable": false,
         "possibleGrades": [
           "B",
@@ -2367,73 +2367,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 64.24,
+            "score": 64.23,
             "delta": 1.22
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 61.92,
+            "score": 61.91,
             "delta": -1.1
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 61.57,
+            "score": 61.55,
             "delta": -1.45
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 64.35,
+            "score": 64.34,
             "delta": 1.33
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 64.27,
+            "score": 64.25,
             "delta": 1.25
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 61.85,
+            "score": 61.83,
             "delta": -1.17
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 61.95,
+            "score": 61.93,
             "delta": -1.08
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 64.03,
+            "score": 64.02,
             "delta": 1.01
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 62.63,
+            "score": 62.62,
             "delta": -0.39
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 63.39,
+            "score": 63.38,
             "delta": 0.37
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 63.47,
+            "score": 63.46,
             "delta": 0.45
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 62.59,
+            "score": 62.57,
             "delta": -0.43
           }
         ]
@@ -2586,21 +2586,21 @@
       "maxOpportunityCorrelationPeer": "GSSC",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 35.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 35,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
       "contextRank": 6,
-      "finalDecisionScore": 61.7,
+      "finalDecisionScore": 61.6,
       "finalDecisionGrade": "C",
       "finalDecisionLabel": "LOW PRIORITY",
       "finalDecisionComponents": {
         "technical": 47,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 90,
         "riskControl": 65,
         "evidence": 61
@@ -2622,8 +2622,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 60.15,
-        "maxScore": 63.05,
+        "minScore": 60.14,
+        "maxScore": 63.04,
         "maxAbsDelta": 1.51,
         "gradeStable": false,
         "possibleGrades": [
@@ -2634,73 +2634,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 62.7,
+            "score": 62.68,
             "delta": 1.04
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 60.73,
+            "score": 60.72,
             "delta": -0.93
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 60.15,
+            "score": 60.14,
             "delta": -1.51
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 63.05,
+            "score": 63.04,
             "delta": 1.39
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 62.82,
+            "score": 62.81,
             "delta": 1.16
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 60.58,
+            "score": 60.56,
             "delta": -1.09
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 60.87,
+            "score": 60.85,
             "delta": -0.79
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 62.41,
+            "score": 62.39,
             "delta": 0.75
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 61.68,
+            "score": 61.66,
             "delta": 0.01
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 61.65,
+            "score": 61.63,
             "delta": -0.01
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 61.76,
+            "score": 61.75,
             "delta": 0.1
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 61.57,
+            "score": 61.55,
             "delta": -0.1
           }
         ]
@@ -2857,10 +2857,10 @@
       "maxOpportunityCorrelationPeer": "CPCI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 21.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 21,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -2871,7 +2871,7 @@
       "finalDecisionComponents": {
         "technical": 35,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 31
@@ -2893,8 +2893,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 59.05,
-        "maxScore": 62.26,
+        "minScore": 59.04,
+        "maxScore": 62.24,
         "maxAbsDelta": 1.65,
         "gradeStable": false,
         "possibleGrades": [
@@ -2905,73 +2905,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 62.26,
-            "delta": 1.65
+            "score": 62.24,
+            "delta": 1.64
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 59.13,
+            "score": 59.12,
             "delta": -1.48
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 59.05,
+            "score": 59.04,
             "delta": -1.56
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 62.04,
+            "score": 62.03,
             "delta": 1.43
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 61.73,
+            "score": 61.72,
             "delta": 1.12
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 59.56,
-            "delta": -1.05
+            "score": 59.54,
+            "delta": -1.06
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 59.46,
+            "score": 59.44,
             "delta": -1.15
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 61.69,
+            "score": 61.68,
             "delta": 1.08
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 59.85,
+            "score": 59.83,
             "delta": -0.76
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 61.34,
+            "score": 61.32,
             "delta": 0.73
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 61.33,
+            "score": 61.32,
             "delta": 0.72
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 59.92,
+            "score": 59.9,
             "delta": -0.69
           }
         ]
@@ -3141,10 +3141,10 @@
       "maxOpportunityCorrelationPeer": "ASCM",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 29.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 29,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -3155,7 +3155,7 @@
       "finalDecisionComponents": {
         "technical": 43,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 100,
         "riskControl": 85,
         "evidence": 22
@@ -3177,8 +3177,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 58.62,
-        "maxScore": 61.64,
+        "minScore": 58.6,
+        "maxScore": 61.62,
         "maxAbsDelta": 1.57,
         "gradeStable": true,
         "possibleGrades": [
@@ -3188,73 +3188,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 61.37,
+            "score": 61.35,
             "delta": 1.18
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 59.13,
+            "score": 59.12,
             "delta": -1.06
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 58.62,
+            "score": 58.6,
             "delta": -1.57
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 61.64,
+            "score": 61.62,
             "delta": 1.45
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 61.3,
+            "score": 61.28,
             "delta": 1.11
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 59.15,
+            "score": 59.13,
             "delta": -1.04
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 59.02,
+            "score": 59.01,
             "delta": -1.17
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 61.29,
+            "score": 61.27,
             "delta": 1.1
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 59.74,
+            "score": 59.73,
             "delta": -0.45
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 60.62,
+            "score": 60.6,
             "delta": 0.43
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 61.1,
+            "score": 61.08,
             "delta": 0.91
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 59.32,
+            "score": 59.3,
             "delta": -0.87
           }
         ]
@@ -3409,10 +3409,10 @@
       "maxOpportunityCorrelationPeer": "ASCM",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 18.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 18,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -3423,7 +3423,7 @@
       "finalDecisionComponents": {
         "technical": 32,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 90,
         "riskControl": 65,
         "evidence": 39
@@ -3445,8 +3445,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 53.62,
-        "maxScore": 57.04,
+        "minScore": 53.6,
+        "maxScore": 57.03,
         "maxAbsDelta": 1.78,
         "gradeStable": true,
         "possibleGrades": [
@@ -3456,73 +3456,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 56.92,
+            "score": 56.91,
             "delta": 1.52
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 54.03,
+            "score": 54.02,
             "delta": -1.37
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 53.62,
-            "delta": -1.78
+            "score": 53.6,
+            "delta": -1.79
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 57.04,
+            "score": 57.03,
             "delta": 1.64
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 56.35,
+            "score": 56.34,
             "delta": 0.95
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 54.51,
-            "delta": -0.89
+            "score": 54.49,
+            "delta": -0.9
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 54.4,
+            "score": 54.39,
             "delta": -1
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 56.34,
+            "score": 56.32,
             "delta": 0.94
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 55.28,
+            "score": 55.26,
             "delta": -0.12
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 55.52,
+            "score": 55.5,
             "delta": 0.12
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 55.84,
+            "score": 55.82,
             "delta": 0.44
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 54.98,
+            "score": 54.96,
             "delta": -0.42
           }
         ]
@@ -3679,10 +3679,10 @@
       "maxOpportunityCorrelationPeer": "ADPC",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 21.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 21,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -3693,7 +3693,7 @@
       "finalDecisionComponents": {
         "technical": 35,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 80,
         "riskControl": 65,
         "evidence": 31
@@ -3715,9 +3715,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 51.91,
-        "maxScore": 55.47,
-        "maxAbsDelta": 1.86,
+        "minScore": 51.9,
+        "maxScore": 55.46,
+        "maxAbsDelta": 1.85,
         "gradeStable": true,
         "possibleGrades": [
           "C"
@@ -3726,73 +3726,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 55.03,
+            "score": 55.02,
             "delta": 1.26
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 52.63,
+            "score": 52.62,
             "delta": -1.14
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 51.91,
+            "score": 51.9,
             "delta": -1.86
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 55.47,
+            "score": 55.46,
             "delta": 1.71
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 54.67,
+            "score": 54.65,
             "delta": 0.9
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 52.92,
-            "delta": -0.84
+            "score": 52.91,
+            "delta": -0.85
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 53.04,
-            "delta": -0.72
+            "score": 53.03,
+            "delta": -0.73
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 54.45,
+            "score": 54.43,
             "delta": 0.68
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 53.61,
+            "score": 53.6,
             "delta": -0.16
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 53.92,
+            "score": 53.9,
             "delta": 0.15
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 54.34,
+            "score": 54.33,
             "delta": 0.58
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 53.22,
+            "score": 53.2,
             "delta": -0.55
           }
         ]
@@ -3949,10 +3949,10 @@
       "maxOpportunityCorrelationPeer": "IDRE",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 21.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 21,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -3963,7 +3963,7 @@
       "finalDecisionComponents": {
         "technical": 35,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 80,
         "riskControl": 65,
         "evidence": 31
@@ -3985,9 +3985,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 51.91,
-        "maxScore": 55.47,
-        "maxAbsDelta": 1.86,
+        "minScore": 51.9,
+        "maxScore": 55.46,
+        "maxAbsDelta": 1.85,
         "gradeStable": true,
         "possibleGrades": [
           "C"
@@ -3996,73 +3996,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 55.03,
+            "score": 55.02,
             "delta": 1.26
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 52.63,
+            "score": 52.62,
             "delta": -1.14
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 51.91,
+            "score": 51.9,
             "delta": -1.86
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 55.47,
+            "score": 55.46,
             "delta": 1.71
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 54.67,
+            "score": 54.65,
             "delta": 0.9
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 52.92,
-            "delta": -0.84
+            "score": 52.91,
+            "delta": -0.85
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 53.04,
-            "delta": -0.72
+            "score": 53.03,
+            "delta": -0.73
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 54.45,
+            "score": 54.43,
             "delta": 0.68
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 53.61,
+            "score": 53.6,
             "delta": -0.16
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 53.92,
+            "score": 53.9,
             "delta": 0.15
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 54.34,
+            "score": 54.33,
             "delta": 0.58
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 53.22,
+            "score": 53.2,
             "delta": -0.55
           }
         ]
@@ -4214,19 +4214,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 47.8,
+      "sectorStrengthScore": 47.9,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.94,
+      "sectorRelativeChangePct": 0.95,
       "sectorBreadthPct": 11.1,
       "maxOpportunityCorrelation": 0.458,
       "maxOpportunityCorrelationPeer": "MOED",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 29.8,
+      "contextScore": 29.7,
       "contextAdjustment": -6.1,
       "adjustedConviction": 23.9,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 47.8,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 47.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 13,
@@ -4236,7 +4236,7 @@
       "finalDecisionComponents": {
         "technical": 50,
         "entryQuality": 100,
-        "context": 29.8,
+        "context": 29.7,
         "riskReward": 40,
         "riskControl": 40,
         "evidence": 30
@@ -4258,8 +4258,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 46.52,
-        "maxScore": 50.52,
+        "minScore": 46.5,
+        "maxScore": 50.5,
         "maxAbsDelta": 2.08,
         "gradeStable": false,
         "possibleGrades": [
@@ -4270,73 +4270,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 48.74,
+            "score": 48.73,
             "delta": 0.14
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 48.47,
+            "score": 48.45,
             "delta": -0.13
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 46.52,
+            "score": 46.5,
             "delta": -2.08
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 50.52,
+            "score": 50.5,
             "delta": 1.92
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 49.34,
-            "delta": 0.74
+            "score": 49.33,
+            "delta": 0.75
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 47.9,
+            "score": 47.88,
             "delta": -0.7
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 49.01,
+            "score": 48.99,
             "delta": 0.41
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 48.21,
+            "score": 48.2,
             "delta": -0.39
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 48.87,
+            "score": 48.85,
             "delta": 0.27
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 48.34,
+            "score": 48.32,
             "delta": -0.26
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 49.09,
+            "score": 49.07,
             "delta": 0.49
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 48.13,
+            "score": 48.12,
             "delta": -0.47
           }
         ]
@@ -4502,19 +4502,19 @@
       "chaseDistancePct": 0,
       "sector": "عقارات وإنشاءات",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 24.1,
+      "sectorStrengthScore": 24.2,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": -1.68,
+      "sectorRelativeChangePct": -1.67,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.563,
       "maxOpportunityCorrelationPeer": "EGAL",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 25,
+      "contextScore": 24.9,
       "contextAdjustment": -7.5,
       "adjustedConviction": 24.5,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 24.1,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 24.2,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 12,
@@ -4524,7 +4524,7 @@
       "finalDecisionComponents": {
         "technical": 52,
         "entryQuality": 100,
-        "context": 25,
+        "context": 24.9,
         "riskReward": 40,
         "riskControl": 40,
         "evidence": 21
@@ -4546,9 +4546,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 45.29,
-        "maxScore": 49.38,
-        "maxAbsDelta": 2.13,
+        "minScore": 45.27,
+        "maxScore": 49.37,
+        "maxAbsDelta": 2.14,
         "gradeStable": true,
         "possibleGrades": [
           "REJECT"
@@ -4557,73 +4557,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 47.39,
+            "score": 47.37,
             "delta": -0.03
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 47.45,
+            "score": 47.44,
             "delta": 0.03
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 45.29,
+            "score": 45.27,
             "delta": -2.14
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 49.38,
+            "score": 49.37,
             "delta": 1.96
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 48.28,
+            "score": 48.27,
             "delta": 0.86
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 46.61,
+            "score": 46.59,
             "delta": -0.81
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 47.79,
+            "score": 47.78,
             "delta": 0.37
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 47.07,
+            "score": 47.06,
             "delta": -0.35
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 47.67,
+            "score": 47.65,
             "delta": 0.25
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 47.19,
+            "score": 47.17,
             "delta": -0.24
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 48.08,
+            "score": 48.06,
             "delta": 0.65
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 46.79,
+            "score": 46.78,
             "delta": -0.63
           }
         ]
@@ -4795,10 +4795,10 @@
       "maxOpportunityCorrelationPeer": "ADPC",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 22.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 22,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -4809,7 +4809,7 @@
       "finalDecisionComponents": {
         "technical": 50,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 40,
         "riskControl": 15,
         "evidence": 29
@@ -4831,8 +4831,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 43.73,
-        "maxScore": 47.95,
+        "minScore": 43.71,
+        "maxScore": 47.93,
         "maxAbsDelta": 2.2,
         "gradeStable": true,
         "possibleGrades": [
@@ -4842,73 +4842,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 45.92,
+            "score": 45.91,
             "delta": 0
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 45.93,
+            "score": 45.91,
             "delta": 0
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 43.73,
+            "score": 43.71,
             "delta": -2.2
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 47.95,
+            "score": 47.93,
             "delta": 2.02
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 46.57,
-            "delta": 0.64
+            "score": 46.56,
+            "delta": 0.65
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 45.32,
-            "delta": -0.6
+            "score": 45.3,
+            "delta": -0.61
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 46.25,
+            "score": 46.23,
             "delta": 0.32
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 45.62,
+            "score": 45.61,
             "delta": -0.3
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 46.68,
+            "score": 46.66,
             "delta": 0.75
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 45.21,
+            "score": 45.19,
             "delta": -0.72
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 46.38,
+            "score": 46.36,
             "delta": 0.45
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 45.49,
+            "score": 45.48,
             "delta": -0.43
           }
         ]
@@ -5077,19 +5077,19 @@
       "chaseDistancePct": 0,
       "sector": "أسمنت ومواد بناء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 39.8,
+      "sectorStrengthScore": 39.9,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.28,
+      "sectorRelativeChangePct": 0.29,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.519,
       "maxOpportunityCorrelationPeer": "EGAL",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 28.2,
-      "contextAdjustment": -6.5,
-      "adjustedConviction": 16.5,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 39.8,
+      "contextScore": 28.1,
+      "contextAdjustment": -6.6,
+      "adjustedConviction": 16.4,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 39.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 20,
@@ -5099,7 +5099,7 @@
       "finalDecisionComponents": {
         "technical": 45,
         "entryQuality": 100,
-        "context": 28.2,
+        "context": 28.1,
         "riskReward": 40,
         "riskControl": 15,
         "evidence": 0
@@ -5121,9 +5121,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 38.84,
-        "maxScore": 43.45,
-        "maxAbsDelta": 2.4,
+        "minScore": 38.82,
+        "maxScore": 43.44,
+        "maxAbsDelta": 2.41,
         "gradeStable": true,
         "possibleGrades": [
           "REJECT"
@@ -5132,73 +5132,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 41.26,
+            "score": 41.24,
             "delta": 0.01
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 41.23,
+            "score": 41.22,
             "delta": -0.01
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 38.84,
+            "score": 38.82,
             "delta": -2.41
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 43.45,
+            "score": 43.44,
             "delta": 2.21
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 41.8,
+            "score": 41.78,
             "delta": 0.56
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 40.72,
+            "score": 40.7,
             "delta": -0.52
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 41.41,
+            "score": 41.4,
             "delta": 0.17
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 41.08,
+            "score": 41.07,
             "delta": -0.16
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 41.89,
+            "score": 41.88,
             "delta": 0.65
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 40.62,
+            "score": 40.6,
             "delta": -0.62
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 42.22,
+            "score": 42.2,
             "delta": 0.97
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 40.31,
+            "score": 40.29,
             "delta": -0.93
           }
         ]
@@ -5360,10 +5360,10 @@
       "maxOpportunityCorrelationPeer": "CPCI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "MEDIUM",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 19.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 19,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -5374,7 +5374,7 @@
       "finalDecisionComponents": {
         "technical": 45,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 15,
         "riskControl": 15,
         "evidence": 30
@@ -5396,8 +5396,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 38.34,
-        "maxScore": 43,
+        "minScore": 38.32,
+        "maxScore": 42.98,
         "maxAbsDelta": 2.43,
         "gradeStable": true,
         "possibleGrades": [
@@ -5407,73 +5407,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 40.76,
+            "score": 40.74,
             "delta": -0.01
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 40.78,
+            "score": 40.77,
             "delta": 0.01
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 38.34,
+            "score": 38.32,
             "delta": -2.43
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 43,
+            "score": 42.98,
             "delta": 2.23
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 41.24,
+            "score": 41.23,
             "delta": 0.48
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 40.32,
+            "score": 40.3,
             "delta": -0.45
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 41.74,
+            "score": 41.72,
             "delta": 0.97
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 39.86,
+            "score": 39.84,
             "delta": -0.91
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 41.41,
+            "score": 41.39,
             "delta": 0.64
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 40.15,
+            "score": 40.14,
             "delta": -0.61
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 41.09,
+            "score": 41.07,
             "delta": 0.32
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 40.46,
+            "score": 40.45,
             "delta": -0.3
           }
         ]
@@ -6853,10 +6853,10 @@
       "maxOpportunityCorrelationPeer": "CPCI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 21.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -6867,7 +6867,7 @@
       "finalDecisionComponents": {
         "technical": 34.4,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 42
@@ -6889,9 +6889,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 50.4,
-        "maxScore": 54.09,
-        "maxAbsDelta": 1.92,
+        "minScore": 50.38,
+        "maxScore": 54.07,
+        "maxAbsDelta": 1.93,
         "gradeStable": true,
         "possibleGrades": [
           "C"
@@ -6900,74 +6900,74 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 53.54,
+            "score": 53.52,
             "delta": 1.22
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 51.23,
+            "score": 51.21,
             "delta": -1.1
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 50.4,
+            "score": 50.38,
             "delta": -1.92
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 54.09,
-            "delta": 1.76
+            "score": 54.07,
+            "delta": 1.77
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 53.03,
+            "score": 53.01,
             "delta": 0.71
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 51.66,
+            "score": 51.64,
             "delta": -0.66
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 52.2,
+            "score": 52.18,
             "delta": -0.12
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 52.43,
+            "score": 52.42,
             "delta": 0.11
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 52.13,
+            "score": 52.12,
             "delta": -0.19
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 52.5,
+            "score": 52.48,
             "delta": 0.18
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 52.63,
+            "score": 52.61,
             "delta": 0.31
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 52.03,
-            "delta": -0.3
+            "score": 52.01,
+            "delta": -0.29
           }
         ]
       },
@@ -7126,10 +7126,10 @@
       "maxOpportunityCorrelationPeer": "MOED",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 18.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -7140,7 +7140,7 @@
       "finalDecisionComponents": {
         "technical": 30.9,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 42
@@ -7162,8 +7162,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 49.44,
-        "maxScore": 53.2,
+        "minScore": 49.42,
+        "maxScore": 53.19,
         "maxAbsDelta": 1.96,
         "gradeStable": false,
         "possibleGrades": [
@@ -7174,73 +7174,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 52.76,
+            "score": 52.74,
             "delta": 1.36
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 50.18,
-            "delta": -1.23
+            "score": 50.16,
+            "delta": -1.22
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 49.44,
+            "score": 49.42,
             "delta": -1.96
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 53.2,
+            "score": 53.19,
             "delta": 1.8
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 52.08,
-            "delta": 0.67
+            "score": 52.06,
+            "delta": 0.68
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 50.77,
-            "delta": -0.63
+            "score": 50.75,
+            "delta": -0.64
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 51.25,
+            "score": 51.23,
             "delta": -0.15
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 51.54,
+            "score": 51.53,
             "delta": 0.14
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 51.19,
+            "score": 51.18,
             "delta": -0.21
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 51.6,
+            "score": 51.58,
             "delta": 0.2
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 51.69,
+            "score": 51.67,
             "delta": 0.29
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 51.12,
+            "score": 51.11,
             "delta": -0.28
           }
         ]
@@ -7400,10 +7400,10 @@
       "maxOpportunityCorrelationPeer": "NHPS",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 18.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -7414,7 +7414,7 @@
       "finalDecisionComponents": {
         "technical": 30.7,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 42
@@ -7436,9 +7436,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 49.38,
-        "maxScore": 53.15,
-        "maxAbsDelta": 1.97,
+        "minScore": 49.37,
+        "maxScore": 53.14,
+        "maxAbsDelta": 1.96,
         "gradeStable": false,
         "possibleGrades": [
           "C",
@@ -7448,74 +7448,74 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 52.72,
+            "score": 52.7,
             "delta": 1.37
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 50.12,
+            "score": 50.1,
             "delta": -1.23
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 49.38,
+            "score": 49.37,
             "delta": -1.96
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 53.15,
+            "score": 53.14,
             "delta": 1.8
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 52.02,
-            "delta": 0.67
+            "score": 52.01,
+            "delta": 0.68
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 50.72,
+            "score": 50.7,
             "delta": -0.63
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 51.2,
+            "score": 51.18,
             "delta": -0.15
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 51.49,
+            "score": 51.47,
             "delta": 0.14
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 51.14,
+            "score": 51.12,
             "delta": -0.21
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 51.55,
+            "score": 51.53,
             "delta": 0.2
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 51.63,
+            "score": 51.62,
             "delta": 0.29
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 51.07,
-            "delta": -0.28
+            "score": 51.06,
+            "delta": -0.27
           }
         ]
       },
@@ -7674,10 +7674,10 @@
       "maxOpportunityCorrelationPeer": "CAED",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 17.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -7688,7 +7688,7 @@
       "finalDecisionComponents": {
         "technical": 30.4,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 42
@@ -7710,9 +7710,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 49.3,
-        "maxScore": 53.08,
-        "maxAbsDelta": 1.97,
+        "minScore": 49.29,
+        "maxScore": 53.06,
+        "maxAbsDelta": 1.96,
         "gradeStable": false,
         "possibleGrades": [
           "C",
@@ -7722,73 +7722,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 52.65,
+            "score": 52.63,
             "delta": 1.38
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 50.02,
+            "score": 50.01,
             "delta": -1.24
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 49.3,
+            "score": 49.29,
             "delta": -1.97
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 53.08,
+            "score": 53.06,
             "delta": 1.81
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 51.94,
+            "score": 51.93,
             "delta": 0.67
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 50.64,
+            "score": 50.62,
             "delta": -0.63
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 51.11,
+            "score": 51.1,
             "delta": -0.15
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 51.41,
-            "delta": 0.14
+            "score": 51.4,
+            "delta": 0.15
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 51.06,
+            "score": 51.04,
             "delta": -0.21
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 51.47,
+            "score": 51.45,
             "delta": 0.2
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 51.55,
+            "score": 51.54,
             "delta": 0.29
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 50.99,
+            "score": 50.98,
             "delta": -0.27
           }
         ]
@@ -7948,10 +7948,10 @@
       "maxOpportunityCorrelationPeer": "IDRE",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 17.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -7962,7 +7962,7 @@
       "finalDecisionComponents": {
         "technical": 30.2,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 42
@@ -7984,8 +7984,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 49.25,
-        "maxScore": 53.03,
+        "minScore": 49.23,
+        "maxScore": 53.01,
         "maxAbsDelta": 1.97,
         "gradeStable": false,
         "possibleGrades": [
@@ -7996,73 +7996,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 52.61,
+            "score": 52.59,
             "delta": 1.39
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 49.97,
+            "score": 49.95,
             "delta": -1.25
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 49.25,
+            "score": 49.23,
             "delta": -1.97
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 53.03,
+            "score": 53.01,
             "delta": 1.81
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 51.88,
+            "score": 51.87,
             "delta": 0.67
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 50.59,
+            "score": 50.57,
             "delta": -0.63
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 51.06,
+            "score": 51.04,
             "delta": -0.16
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 51.36,
+            "score": 51.35,
             "delta": 0.15
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 51.01,
+            "score": 50.99,
             "delta": -0.21
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 51.42,
+            "score": 51.4,
             "delta": 0.2
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 51.5,
+            "score": 51.48,
             "delta": 0.28
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 50.94,
+            "score": 50.93,
             "delta": -0.27
           }
         ]
@@ -8222,10 +8222,10 @@
       "maxOpportunityCorrelationPeer": "IDRE",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 34.7,
+      "contextScore": 34.6,
       "contextAdjustment": -4.6,
       "adjustedConviction": 19.4,
-      "marketContextScore": 10.5,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 65,
@@ -8236,7 +8236,7 @@
       "finalDecisionComponents": {
         "technical": 31.5,
         "entryQuality": 100,
-        "context": 34.7,
+        "context": 34.6,
         "riskReward": 60,
         "riskControl": 40,
         "evidence": 42
@@ -8258,8 +8258,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 46.86,
-        "maxScore": 50.83,
+        "minScore": 46.84,
+        "maxScore": 50.81,
         "maxAbsDelta": 2.07,
         "gradeStable": false,
         "possibleGrades": [
@@ -8270,74 +8270,74 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 50.12,
+            "score": 50.1,
             "delta": 1.19
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 47.86,
+            "score": 47.84,
             "delta": -1.07
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 46.86,
+            "score": 46.84,
             "delta": -2.07
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 50.83,
+            "score": 50.81,
             "delta": 1.9
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 49.52,
-            "delta": 0.59
+            "score": 49.51,
+            "delta": 0.6
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 48.37,
+            "score": 48.35,
             "delta": -0.56
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 48.7,
+            "score": 48.68,
             "delta": -0.23
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 49.14,
+            "score": 49.13,
             "delta": 0.22
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 49.2,
+            "score": 49.19,
             "delta": 0.28
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 48.66,
+            "score": 48.64,
             "delta": -0.27
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 49.16,
+            "score": 49.15,
             "delta": 0.23
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 48.7,
-            "delta": -0.23
+            "score": 48.69,
+            "delta": -0.22
           }
         ]
       },
@@ -8490,19 +8490,19 @@
       "chaseDistancePct": 0,
       "sector": "رعاية صحية ودواء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 43.1,
+      "sectorStrengthScore": 43.2,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 0.7,
+      "sectorRelativeChangePct": 0.71,
       "sectorBreadthPct": 0,
       "maxOpportunityCorrelation": 0.804,
       "maxOpportunityCorrelationPeer": "ADCI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "MEDIUM",
-      "contextScore": 22.8,
-      "contextAdjustment": -8.1,
-      "adjustedConviction": 11.9,
-      "marketContextScore": 10.5,
-      "sectorContextScore": 43.1,
+      "contextScore": 22.7,
+      "contextAdjustment": -8.2,
+      "adjustedConviction": 11.8,
+      "marketContextScore": 10.2,
+      "sectorContextScore": 43.2,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 30,
       "contextRank": 7,
@@ -8512,7 +8512,7 @@
       "finalDecisionComponents": {
         "technical": 32.8,
         "entryQuality": 100,
-        "context": 22.8,
+        "context": 22.7,
         "riskReward": 60,
         "riskControl": 85,
         "evidence": 26
@@ -8538,9 +8538,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 43.44,
-        "maxScore": 47.28,
-        "maxAbsDelta": 2,
+        "minScore": 43.42,
+        "maxScore": 47.27,
+        "maxAbsDelta": 2.01,
         "gradeStable": true,
         "possibleGrades": [
           "REJECT"
@@ -8549,73 +8549,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 46.64,
+            "score": 46.63,
             "delta": 1.2
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 44.36,
+            "score": 44.34,
             "delta": -1.08
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 43.44,
+            "score": 43.42,
             "delta": -2
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 47.28,
+            "score": 47.27,
             "delta": 1.84
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 46.47,
+            "score": 46.46,
             "delta": 1.03
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 44.47,
+            "score": 44.46,
             "delta": -0.97
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 45.26,
+            "score": 45.24,
             "delta": -0.18
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 45.61,
+            "score": 45.6,
             "delta": 0.17
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 44.78,
+            "score": 44.77,
             "delta": -0.66
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 46.07,
+            "score": 46.06,
             "delta": 0.63
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 46.05,
+            "score": 46.04,
             "delta": 0.61
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 44.86,
+            "score": 44.84,
             "delta": -0.59
           }
         ]
@@ -8779,21 +8779,21 @@
       "maxOpportunityCorrelationPeer": "OCDI",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 24.2,
-      "contextAdjustment": -7.7,
-      "adjustedConviction": 11.3,
-      "marketContextScore": 10.5,
+      "contextScore": 24.1,
+      "contextAdjustment": -7.8,
+      "adjustedConviction": 11.2,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 30,
       "contextRank": 8,
-      "finalDecisionScore": 43.5,
+      "finalDecisionScore": 43.4,
       "finalDecisionGrade": "REJECT",
       "finalDecisionLabel": "REJECT / NO ACTION",
       "finalDecisionComponents": {
         "technical": 32.4,
         "entryQuality": 100,
-        "context": 24.2,
+        "context": 24.1,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 26
@@ -8819,8 +8819,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 41.36,
-        "maxScore": 45.37,
+        "minScore": 41.35,
+        "maxScore": 45.36,
         "maxAbsDelta": 2.09,
         "gradeStable": true,
         "possibleGrades": [
@@ -8830,73 +8830,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 44.57,
+            "score": 44.55,
             "delta": 1.11
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 42.45,
+            "score": 42.44,
             "delta": -1
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 41.36,
+            "score": 41.35,
             "delta": -2.09
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 45.37,
+            "score": 45.36,
             "delta": 1.92
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 44.37,
+            "score": 44.36,
             "delta": 0.92
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 42.59,
-            "delta": -0.86
+            "score": 42.57,
+            "delta": -0.87
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 43.21,
+            "score": 43.19,
             "delta": -0.25
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 43.68,
+            "score": 43.67,
             "delta": 0.23
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 43.18,
+            "score": 43.17,
             "delta": -0.27
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 43.71,
+            "score": 43.7,
             "delta": 0.26
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 44.02,
+            "score": 44.01,
             "delta": 0.57
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 42.91,
+            "score": 42.89,
             "delta": -0.55
           }
         ]
@@ -9060,21 +9060,21 @@
       "maxOpportunityCorrelationPeer": "IDRE",
       "maxOpportunityCorrelationN": 59,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 24.2,
-      "contextAdjustment": -7.7,
-      "adjustedConviction": 10.3,
-      "marketContextScore": 10.5,
+      "contextScore": 24.1,
+      "contextAdjustment": -7.8,
+      "adjustedConviction": 10.2,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 30,
       "contextRank": 9,
-      "finalDecisionScore": 43,
+      "finalDecisionScore": 42.9,
       "finalDecisionGrade": "REJECT",
       "finalDecisionLabel": "REJECT / NO ACTION",
       "finalDecisionComponents": {
         "technical": 30.5,
         "entryQuality": 100,
-        "context": 24.2,
+        "context": 24.1,
         "riskReward": 60,
         "riskControl": 65,
         "evidence": 26
@@ -9100,9 +9100,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 40.84,
-        "maxScore": 44.89,
-        "maxAbsDelta": 2.11,
+        "minScore": 40.82,
+        "maxScore": 44.88,
+        "maxAbsDelta": 2.12,
         "gradeStable": true,
         "possibleGrades": [
           "REJECT"
@@ -9111,74 +9111,74 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 44.14,
+            "score": 44.13,
             "delta": 1.19
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 41.88,
+            "score": 41.87,
             "delta": -1.07
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 40.84,
+            "score": 40.82,
             "delta": -2.11
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 44.89,
+            "score": 44.88,
             "delta": 1.94
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 43.86,
-            "delta": 0.9
+            "score": 43.84,
+            "delta": 0.91
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 42.1,
+            "score": 42.08,
             "delta": -0.85
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 42.69,
+            "score": 42.67,
             "delta": -0.26
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 43.2,
+            "score": 43.18,
             "delta": 0.25
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 42.67,
+            "score": 42.66,
             "delta": -0.28
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 43.22,
+            "score": 43.21,
             "delta": 0.27
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 43.51,
+            "score": 43.49,
             "delta": 0.56
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 42.42,
-            "delta": -0.54
+            "score": 42.4,
+            "delta": -0.53
           }
         ]
       },
@@ -9347,10 +9347,10 @@
       "maxOpportunityCorrelationPeer": null,
       "maxOpportunityCorrelationN": 0,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 30.2,
-      "contextAdjustment": -5.9,
-      "adjustedConviction": 27.1,
-      "marketContextScore": 10.5,
+      "contextScore": 30.1,
+      "contextAdjustment": -6,
+      "adjustedConviction": 27,
+      "marketContextScore": 10.2,
       "sectorContextScore": 50,
       "sectorContextStatus": "UNCLASSIFIED_NEUTRAL",
       "liquidityContextScore": 50,
@@ -9361,7 +9361,7 @@
       "finalDecisionComponents": {
         "technical": 55,
         "entryQuality": 100,
-        "context": 30.2,
+        "context": 30.1,
         "riskReward": 40,
         "riskControl": 15,
         "evidence": 60
@@ -9383,8 +9383,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 48.51,
-        "maxScore": 52.34,
+        "minScore": 48.49,
+        "maxScore": 52.33,
         "maxAbsDelta": 2,
         "gradeStable": true,
         "possibleGrades": [
@@ -9394,73 +9394,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 50.48,
+            "score": 50.46,
             "delta": -0.03
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 50.53,
-            "delta": 0.02
+            "score": 50.52,
+            "delta": 0.03
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 48.51,
+            "score": 48.49,
             "delta": -2
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 52.34,
+            "score": 52.33,
             "delta": 1.84
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 51.3,
-            "delta": 0.79
+            "score": 51.28,
+            "delta": 0.8
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 49.76,
-            "delta": -0.74
+            "score": 49.74,
+            "delta": -0.75
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 50.98,
+            "score": 50.96,
             "delta": 0.47
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 50.06,
+            "score": 50.05,
             "delta": -0.44
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 51.35,
+            "score": 51.34,
             "delta": 0.85
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 49.69,
+            "score": 49.68,
             "delta": -0.81
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 50.39,
+            "score": 50.37,
             "delta": -0.12
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 50.62,
+            "score": 50.6,
             "delta": 0.11
           }
         ]
@@ -9606,7 +9606,7 @@
   },
   "dataHealth": {
     "session": "2026-10-22",
-    "generatedAt": "2026-10-22T18:44:10.428Z",
+    "generatedAt": "2026-10-23T23:29:45.030Z",
     "stale": false,
     "staleLagSessions": 0,
     "universe": 157,
@@ -9625,7 +9625,7 @@
   },
   "entryQualityEngine": {
     "version": "entry-quality/v1",
-    "generatedAt": "2026-10-22T18:44:10.567Z",
+    "generatedAt": "2026-10-23T23:29:45.246Z",
     "marketSession": "2026-10-22",
     "rules": {
       "invalidated": "current price <= stop",
@@ -9647,7 +9647,7 @@
   },
   "sectorCorrelationEngine": {
     "version": "sector-correlation/v1",
-    "generatedAt": "2026-10-22T18:44:10.622Z",
+    "generatedAt": "2026-10-23T23:29:45.340Z",
     "taxonomy": {
       "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
       "symbolMappings": 80,
@@ -9661,169 +9661,169 @@
         "sector": "تبغ ومنتجات استهلاكية",
         "count": 1,
         "avgChangePct": 1.6,
-        "relativeChangePct": 4.6,
+        "relativeChangePct": 4.62,
         "breadthPct": 100,
-        "strengthScore": 99.3,
+        "strengthScore": 99.4,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "استثمارات قابضة ومتنوعة",
         "count": 1,
         "avgChangePct": 0.96,
-        "relativeChangePct": 3.96,
+        "relativeChangePct": 3.98,
         "breadthPct": 100,
-        "strengthScore": 94.2,
+        "strengthScore": 94.3,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "تعليم وخدمات",
         "count": 2,
         "avgChangePct": -1.09,
-        "relativeChangePct": 1.91,
+        "relativeChangePct": 1.93,
         "breadthPct": 0,
-        "strengthScore": 52.8,
+        "strengthScore": 52.9,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "خدمات مالية غير مصرفية",
         "count": 5,
         "avgChangePct": -1.82,
-        "relativeChangePct": 1.18,
+        "relativeChangePct": 1.2,
         "breadthPct": 20,
-        "strengthScore": 52,
+        "strengthScore": 52.1,
         "status": "ACTIVE"
       },
       {
         "sector": "معادن ومواد أساسية",
         "count": 5,
         "avgChangePct": -1.61,
-        "relativeChangePct": 1.4,
+        "relativeChangePct": 1.41,
         "breadthPct": 0,
-        "strengthScore": 48.7,
+        "strengthScore": 48.8,
         "status": "ACTIVE"
       },
       {
         "sector": "بنوك وخدمات مالية مصرفية",
         "count": 9,
         "avgChangePct": -2.07,
-        "relativeChangePct": 0.94,
+        "relativeChangePct": 0.95,
         "breadthPct": 11.1,
-        "strengthScore": 47.8,
+        "strengthScore": 47.9,
         "status": "ACTIVE"
       },
       {
         "sector": "نقل وخدمات لوجستية",
         "count": 2,
         "avgChangePct": -1.8,
-        "relativeChangePct": 1.2,
+        "relativeChangePct": 1.22,
         "breadthPct": 0,
-        "strengthScore": 47.1,
+        "strengthScore": 47.2,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "أغذية ومشروبات",
         "count": 6,
         "avgChangePct": -2.18,
-        "relativeChangePct": 0.83,
+        "relativeChangePct": 0.84,
         "breadthPct": 0,
-        "strengthScore": 44.1,
+        "strengthScore": 44.2,
         "status": "ACTIVE"
       },
       {
         "sector": "رعاية صحية ودواء",
         "count": 10,
         "avgChangePct": -2.3,
-        "relativeChangePct": 0.7,
+        "relativeChangePct": 0.71,
         "breadthPct": 0,
-        "strengthScore": 43.1,
+        "strengthScore": 43.2,
         "status": "ACTIVE"
       },
       {
         "sector": "صناعة وطاقة وبنية تحتية",
         "count": 3,
         "avgChangePct": -2.33,
-        "relativeChangePct": 0.67,
+        "relativeChangePct": 0.68,
         "breadthPct": 0,
-        "strengthScore": 42.9,
+        "strengthScore": 43,
         "status": "ACTIVE"
       },
       {
         "sector": "سياحة وترفيه",
         "count": 1,
         "avgChangePct": -2.56,
-        "relativeChangePct": 0.44,
+        "relativeChangePct": 0.46,
         "breadthPct": 0,
-        "strengthScore": 41.1,
+        "strengthScore": 41.2,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "أسمنت ومواد بناء",
         "count": 6,
         "avgChangePct": -2.72,
-        "relativeChangePct": 0.28,
+        "relativeChangePct": 0.29,
         "breadthPct": 0,
-        "strengthScore": 39.8,
+        "strengthScore": 39.9,
         "status": "ACTIVE"
       },
       {
         "sector": "بتروكيماويات وكيماويات",
         "count": 6,
         "avgChangePct": -3.24,
-        "relativeChangePct": -0.24,
+        "relativeChangePct": -0.22,
         "breadthPct": 0,
-        "strengthScore": 35.6,
+        "strengthScore": 35.7,
         "status": "ACTIVE"
       },
       {
         "sector": "تجارة وتوزيع",
         "count": 2,
         "avgChangePct": -3.31,
-        "relativeChangePct": -0.31,
+        "relativeChangePct": -0.3,
         "breadthPct": 0,
-        "strengthScore": 35,
+        "strengthScore": 35.1,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "عقارات وإنشاءات",
         "count": 8,
         "avgChangePct": -4.68,
-        "relativeChangePct": -1.68,
+        "relativeChangePct": -1.67,
         "breadthPct": 0,
-        "strengthScore": 24.1,
+        "strengthScore": 24.2,
         "status": "ACTIVE"
       },
       {
         "sector": "اتصالات وإعلام وتكنولوجيا",
         "count": 1,
         "avgChangePct": -5,
-        "relativeChangePct": -2,
+        "relativeChangePct": -1.98,
         "breadthPct": 0,
-        "strengthScore": 21.5,
+        "strengthScore": 21.6,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "منسوجات وملابس",
         "count": 3,
         "avgChangePct": -5.44,
-        "relativeChangePct": -2.44,
+        "relativeChangePct": -2.42,
         "breadthPct": 0,
-        "strengthScore": 18,
+        "strengthScore": 18.1,
         "status": "ACTIVE"
       },
       {
         "sector": "سيارات وتجارة وتوزيع",
         "count": 1,
         "avgChangePct": -6.75,
-        "relativeChangePct": -3.75,
+        "relativeChangePct": -3.73,
         "breadthPct": 0,
-        "strengthScore": 7.5,
+        "strengthScore": 7.6,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "تكنولوجيا ومدفوعات",
         "count": 2,
         "avgChangePct": -7.93,
-        "relativeChangePct": -4.93,
+        "relativeChangePct": -4.91,
         "breadthPct": 0,
         "strengthScore": 0,
         "status": "LOW_SAMPLE"
@@ -11358,16 +11358,16 @@
   },
   "marketSectorContextEngine": {
     "version": "market-sector-context/v1",
-    "generatedAt": "2026-10-22T18:44:10.659Z",
+    "generatedAt": "2026-10-23T23:29:45.386Z",
     "marketSession": "2026-10-22",
     "market": {
       "regime": "هابط",
-      "breadthPct": 10.9,
-      "advancing": 23,
+      "breadthPct": 10.4,
+      "advancing": 22,
       "declining": 180,
-      "flat": 8,
+      "flat": 9,
       "medianChangePct": -3.21,
-      "score": 10.5
+      "score": 10.2
     },
     "weights": {
       "market": 0.5,
@@ -11384,7 +11384,7 @@
   },
   "finalDecisionEngine": {
     "version": "final-decision-score/v2-missing-aware",
-    "generatedAt": "2026-10-22T18:44:10.692Z",
+    "generatedAt": "2026-10-23T23:29:45.438Z",
     "weights": {
       "technical": 0.25,
       "entryQuality": 0.2,
@@ -11448,7 +11448,7 @@
   },
   "walkForwardValidationEngine": {
     "schemaVersion": "astra-walk-forward-validation/v1",
-    "generatedAt": "2026-10-22T18:44:10.806Z",
+    "generatedAt": "2026-10-23T23:29:45.619Z",
     "methodology": {
       "noLookAhead": true,
       "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -11493,7 +11493,7 @@
   },
   "probabilityCalibrationEngine": {
     "version": "probability-calibration/v3-session-aware",
-    "generatedAt": "2026-10-22T18:44:11.077Z",
+    "generatedAt": "2026-10-23T23:29:46.110Z",
     "forwardResolved": 109,
     "forwardDistinctSessions": 9,
     "sampleMaturity": "INSUFFICIENT_EVIDENCE",
@@ -11591,7 +11591,7 @@
   },
   "decisionGateEngine": {
     "version": "decision-gate/v1",
-    "generatedAt": "2026-10-22T18:44:11.104Z",
+    "generatedAt": "2026-10-23T23:29:46.153Z",
     "rules": {
       "dataFreshness": "stale=false and staleLagSessions=0",
       "entryQuality": "not INVALIDATED, CHASE_RISK or UNKNOWN",
@@ -11613,7 +11613,7 @@
   },
   "portfolioSelectionEngine": {
     "version": "portfolio-selection/v1",
-    "generatedAt": "2026-10-22T18:44:11.130Z",
+    "generatedAt": "2026-10-23T23:29:46.194Z",
     "researchOnly": true,
     "executionAllowed": false,
     "automaticOrders": false,
@@ -11641,7 +11641,7 @@
   },
   "riskBudgetEngine": {
     "version": "risk-budget/v2-risk-state-aware",
-    "generatedAt": "2026-10-22T18:44:11.236Z",
+    "generatedAt": "2026-10-23T23:29:46.361Z",
     "referenceCapital": 100000,
     "currency": "EGP",
     "policy": {
@@ -11686,7 +11686,7 @@
   },
   "monitoringAlertsEngine": {
     "version": "monitoring-alerts/v1",
-    "generatedAt": "2026-10-22T18:44:11.208Z",
+    "generatedAt": "2026-10-23T23:29:46.319Z",
     "session": "2026-10-22",
     "dataMode": "DELAYED_SESSION_MONITORING",
     "delayed": true,
@@ -12720,7 +12720,7 @@
   },
   "riskStateOverrideEngine": {
     "version": "risk-state-override/v1",
-    "generatedAt": "2026-10-22T18:44:11.236Z",
+    "generatedAt": "2026-10-23T23:29:46.361Z",
     "policy": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
     "positions": [],
     "blockedCount": 0,
@@ -12730,8 +12730,8 @@
   },
   "outcomeAnalyticsEngine": {
     "version": "outcome-analytics/v3-recorded-forward-only",
-    "generatedAt": "2026-10-22T18:44:11.450Z",
-    "evidenceGeneratedAt": "2026-10-22T18:44:11.283Z",
+    "generatedAt": "2026-10-23T23:29:46.686Z",
+    "evidenceGeneratedAt": "2026-10-23T23:29:46.432Z",
     "status": "INSUFFICIENT_EVIDENCE",
     "samplePolicy": {
       "groupLeaderboardMinimumResolved": 5,
@@ -13534,7 +13534,7 @@
   },
   "dailyDecisionBrief": {
     "version": "daily-decision-brief/v1",
-    "generatedAt": "2026-10-22T18:44:11.478Z",
+    "generatedAt": "2026-10-23T23:29:46.729Z",
     "session": "2026-10-22",
     "headline": {
       "ticker": "SNFC",
@@ -13548,7 +13548,7 @@
       "stop": 10.6671,
       "target1": 12.0312,
       "target2": 12.811,
-      "contextScore": 30.2,
+      "contextScore": 30.1,
       "t1ProbabilityPct": 0,
       "t2ProbabilityPct": 0,
       "probabilityStatus": "INSUFFICIENT_EVIDENCE"
@@ -13562,7 +13562,7 @@
         "gateStatus": "BLOCKED",
         "entryQuality": "IDEAL",
         "rrT2": 3.53,
-        "contextScore": 30.2,
+        "contextScore": 30.1,
         "researchWeightPct": 0,
         "portfolioSelected": false
       },
@@ -13574,7 +13574,7 @@
         "gateStatus": "BLOCKED",
         "entryQuality": "IDEAL",
         "rrT2": 4.07,
-        "contextScore": 29.8,
+        "contextScore": 29.7,
         "researchWeightPct": 0,
         "portfolioSelected": false
       },
@@ -13586,7 +13586,7 @@
         "gateStatus": "BLOCKED",
         "entryQuality": "IDEAL",
         "rrT2": 2.8,
-        "contextScore": 30.2,
+        "contextScore": 30.1,
         "researchWeightPct": 0,
         "portfolioSelected": false
       }
@@ -13627,7 +13627,7 @@
     "market": {
       "regime": "هابط",
       "breadthPct": 6.9,
-      "contextScore": 10.5,
+      "contextScore": 10.2,
       "exposureScale": 0.4,
       "driftGuard": true
     },
@@ -13641,7 +13641,7 @@
   },
   "changeAttributionEngine": {
     "version": "change-attribution/v1",
-    "generatedAt": "2026-10-22T18:44:11.512Z",
+    "generatedAt": "2026-10-23T23:29:46.777Z",
     "session": "2026-10-22",
     "priorSession": "2026-10-21",
     "status": "COMPARED",
@@ -13649,9 +13649,9 @@
       {
         "ticker": "MFSC",
         "status": "IMPROVED",
-        "score": 63.7,
+        "score": 63.6,
         "previousScore": 41.5,
-        "scoreDelta": 22.2,
+        "scoreDelta": 22.1,
         "portfolioSelected": false,
         "previousPortfolioSelected": false,
         "gatePass": false,
@@ -13660,16 +13660,16 @@
           {
             "factor": "FINAL_SCORE",
             "direction": "IMPROVED",
-            "current": 63.7,
+            "current": 63.6,
             "previous": 41.5,
-            "delta": 22.2
+            "delta": 22.1
           },
           {
             "factor": "CONTEXT_SCORE",
             "direction": "IMPROVED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 28.2,
-            "delta": 2
+            "delta": 1.9
           },
           {
             "factor": "RR_T2",
@@ -13724,9 +13724,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 34.2,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "RR_T2",
@@ -13765,9 +13765,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 20.2,
+            "current": 20.1,
             "previous": 31.3,
-            "delta": -11.1
+            "delta": -11.2
           },
           {
             "factor": "RR_T2",
@@ -13806,9 +13806,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 28.8,
+            "current": 28.7,
             "previous": 31.5,
-            "delta": -2.7
+            "delta": -2.8
           },
           {
             "factor": "RR_T2",
@@ -13854,9 +13854,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 34.7,
+            "current": 34.6,
             "previous": 38.7,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "CURRENT_PRICE",
@@ -13888,9 +13888,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 22.8,
+            "current": 22.7,
             "previous": 25.5,
-            "delta": -2.7
+            "delta": -2.8
           },
           {
             "factor": "CURRENT_PRICE",
@@ -13922,9 +13922,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 34.7,
+            "current": 34.6,
             "previous": 38.7,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "CURRENT_PRICE",
@@ -13949,9 +13949,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 34.2,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "RR_T2",
@@ -13983,9 +13983,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 34.7,
+            "current": 34.6,
             "previous": 38.7,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "CURRENT_PRICE",
@@ -14010,9 +14010,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 34.2,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "RR_T2",
@@ -14044,9 +14044,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 34.2,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "CURRENT_PRICE",
@@ -14071,9 +14071,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "WEAKENED",
-            "current": 30.2,
+            "current": 30.1,
             "previous": 34.2,
-            "delta": -4
+            "delta": -4.1
           },
           {
             "factor": "RR_T2",
@@ -14130,7 +14130,7 @@
       {
         "ticker": "EGAL",
         "status": "NEW",
-        "score": 65.3,
+        "score": 65.2,
         "previousScore": null,
         "scoreDelta": null,
         "portfolioSelected": false,
@@ -14166,7 +14166,7 @@
       {
         "ticker": "SEIG",
         "status": "NEW",
-        "score": 61.7,
+        "score": 61.6,
         "previousScore": null,
         "scoreDelta": null,
         "portfolioSelected": false,
@@ -14364,7 +14364,7 @@
       {
         "ticker": "AFDI",
         "status": "NEW",
-        "score": 43.5,
+        "score": 43.4,
         "previousScore": null,
         "scoreDelta": null,
         "portfolioSelected": false,
@@ -14382,7 +14382,7 @@
       {
         "ticker": "SCFM",
         "status": "NEW",
-        "score": 43,
+        "score": 42.9,
         "previousScore": null,
         "scoreDelta": null,
         "portfolioSelected": false,
@@ -14710,7 +14710,7 @@
       "biggestImprovers": [
         {
           "ticker": "MFSC",
-          "delta": 22.2
+          "delta": 22.1
         },
         {
           "ticker": "SNFC",
@@ -14758,7 +14758,7 @@
   "sourceHealthEngine": {
     "schemaVersion": "astra-source-health/v1",
     "expectedSession": "2026-10-22",
-    "generatedAt": "2026-10-22T18:44:11.699Z",
+    "generatedAt": "2026-10-23T23:29:47.047Z",
     "researchOnly": true,
     "automaticExecution": false,
     "coverage": {
@@ -17529,7 +17529,7 @@
   },
   "trustArchitecture": {
     "version": "trust-architecture/v1",
-    "generatedAt": "2026-10-22T18:44:11.787Z",
+    "generatedAt": "2026-10-23T23:29:47.175Z",
     "session": "2026-10-22",
     "replaySnapshotSha256": "40ee4c36a9a07f47a5446feff8db138e5137db7a1989ec9aba0a43bdda57f892",
     "ledgerRecordHash": "6b3c8205f48f62ca63f63a65d185c718aaadd1c55cce0dc1823c523ff97b5803",
@@ -17544,7 +17544,7 @@
   },
   "modelGovernanceEngine": {
     "schemaVersion": "astra-model-governance/v1",
-    "generatedAt": "2026-10-22T18:44:11.848Z",
+    "generatedAt": "2026-10-23T23:29:47.272Z",
     "modelVersion": "ASTRA_V6.8_GOVERNANCE",
     "reliability": {
       "score": 59.8,
@@ -17717,7 +17717,7 @@
   },
   "operationsHealthEngine": {
     "schemaVersion": "astra-operations-health/v1",
-    "generatedAt": "2026-10-22T18:44:12.448Z",
+    "generatedAt": "2026-10-23T23:29:48.257Z",
     "version": "6.11.0",
     "session": "2026-10-22",
     "overall": "DEGRADED",
@@ -17877,7 +17877,7 @@
     "packageVersion": "6.11.0",
     "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
     "stableBranch": "release-v6.11-stable",
-    "generatedAt": "2026-10-22T18:44:12.368Z",
+    "generatedAt": "2026-10-23T23:29:48.135Z",
     "baselineSession": "2026-10-07",
     "requiredDistinctSessions": 2,
     "currentSession": "2026-10-22",
