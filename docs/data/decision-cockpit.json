@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-decision-cockpit/v1",
   "product": "ASTRA V5.1 DECISION COCKPIT",
-  "generatedAt": "2026-10-25T17:46:19.325Z",
+  "generatedAt": "2026-10-25T19:57:04.239Z",
   "session": "2026-10-25",
   "safety": {
     "researchOnly": true,
@@ -9730,7 +9730,7 @@
   },
   "dataHealth": {
     "session": "2026-10-25",
-    "generatedAt": "2026-10-25T17:46:19.162Z",
+    "generatedAt": "2026-10-25T19:57:04.056Z",
     "stale": false,
     "staleLagSessions": 0,
     "universe": 156,
@@ -9749,7 +9749,7 @@
   },
   "entryQualityEngine": {
     "version": "entry-quality/v1",
-    "generatedAt": "2026-10-25T17:46:19.363Z",
+    "generatedAt": "2026-10-25T19:57:04.272Z",
     "marketSession": "2026-10-25",
     "rules": {
       "invalidated": "current price <= stop",
@@ -9771,7 +9771,7 @@
   },
   "sectorCorrelationEngine": {
     "version": "sector-correlation/v1",
-    "generatedAt": "2026-10-25T17:46:19.456Z",
+    "generatedAt": "2026-10-25T19:57:04.361Z",
     "taxonomy": {
       "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
       "symbolMappings": 80,
@@ -11482,7 +11482,7 @@
   },
   "marketSectorContextEngine": {
     "version": "market-sector-context/v1",
-    "generatedAt": "2026-10-25T17:46:19.498Z",
+    "generatedAt": "2026-10-25T19:57:04.403Z",
     "marketSession": "2026-10-25",
     "market": {
       "regime": "هابط",
@@ -11508,7 +11508,7 @@
   },
   "finalDecisionEngine": {
     "version": "final-decision-score/v2-missing-aware",
-    "generatedAt": "2026-10-25T17:46:19.548Z",
+    "generatedAt": "2026-10-25T19:57:04.452Z",
     "weights": {
       "technical": 0.25,
       "entryQuality": 0.2,
@@ -11569,7 +11569,7 @@
   },
   "walkForwardValidationEngine": {
     "schemaVersion": "astra-walk-forward-validation/v1",
-    "generatedAt": "2026-10-25T17:46:19.722Z",
+    "generatedAt": "2026-10-25T19:57:04.628Z",
     "methodology": {
       "noLookAhead": true,
       "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -11614,7 +11614,7 @@
   },
   "probabilityCalibrationEngine": {
     "version": "probability-calibration/v3-session-aware",
-    "generatedAt": "2026-10-25T17:46:20.313Z",
+    "generatedAt": "2026-10-25T19:57:05.200Z",
     "forwardResolved": 169,
     "forwardDistinctSessions": 10,
     "sampleMaturity": "PRELIMINARY",
@@ -11722,7 +11722,7 @@
   },
   "decisionGateEngine": {
     "version": "decision-gate/v1",
-    "generatedAt": "2026-10-25T17:46:20.351Z",
+    "generatedAt": "2026-10-25T19:57:05.237Z",
     "rules": {
       "dataFreshness": "stale=false and staleLagSessions=0",
       "entryQuality": "not INVALIDATED, CHASE_RISK or UNKNOWN",
@@ -11744,7 +11744,7 @@
   },
   "portfolioSelectionEngine": {
     "version": "portfolio-selection/v1",
-    "generatedAt": "2026-10-25T17:46:20.388Z",
+    "generatedAt": "2026-10-25T19:57:05.275Z",
     "researchOnly": true,
     "executionAllowed": false,
     "automaticOrders": false,
@@ -11772,7 +11772,7 @@
   },
   "riskBudgetEngine": {
     "version": "risk-budget/v2-risk-state-aware",
-    "generatedAt": "2026-10-25T17:46:20.547Z",
+    "generatedAt": "2026-10-25T19:57:05.443Z",
     "referenceCapital": 100000,
     "currency": "EGP",
     "policy": {
@@ -11817,7 +11817,7 @@
   },
   "monitoringAlertsEngine": {
     "version": "monitoring-alerts/v1",
-    "generatedAt": "2026-10-25T17:46:20.507Z",
+    "generatedAt": "2026-10-25T19:57:05.397Z",
     "session": "2026-10-25",
     "dataMode": "DELAYED_SESSION_MONITORING",
     "delayed": true,
@@ -12871,7 +12871,7 @@
   },
   "riskStateOverrideEngine": {
     "version": "risk-state-override/v1",
-    "generatedAt": "2026-10-25T17:46:20.548Z",
+    "generatedAt": "2026-10-25T19:57:05.443Z",
     "policy": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
     "positions": [],
     "blockedCount": 0,
@@ -12881,8 +12881,8 @@
   },
   "outcomeAnalyticsEngine": {
     "version": "outcome-analytics/v3-recorded-forward-only",
-    "generatedAt": "2026-10-25T17:46:20.869Z",
-    "evidenceGeneratedAt": "2026-10-25T17:46:20.616Z",
+    "generatedAt": "2026-10-25T19:57:05.773Z",
+    "evidenceGeneratedAt": "2026-10-25T19:57:05.516Z",
     "status": "PRELIMINARY",
     "samplePolicy": {
       "groupLeaderboardMinimumResolved": 5,
@@ -13685,7 +13685,7 @@
   },
   "dailyDecisionBrief": {
     "version": "daily-decision-brief/v1",
-    "generatedAt": "2026-10-25T17:46:20.910Z",
+    "generatedAt": "2026-10-25T19:57:05.814Z",
     "session": "2026-10-25",
     "headline": {
       "ticker": "ADIB",
@@ -13792,7 +13792,7 @@
   },
   "changeAttributionEngine": {
     "version": "change-attribution/v1",
-    "generatedAt": "2026-10-25T17:46:20.957Z",
+    "generatedAt": "2026-10-25T19:57:05.860Z",
     "session": "2026-10-25",
     "priorSession": "2026-10-22",
     "status": "COMPARED",
@@ -14926,7 +14926,7 @@
   "sourceHealthEngine": {
     "schemaVersion": "astra-source-health/v1",
     "expectedSession": "2026-10-25",
-    "generatedAt": "2026-10-25T17:46:21.224Z",
+    "generatedAt": "2026-10-25T19:57:06.120Z",
     "researchOnly": true,
     "automaticExecution": false,
     "coverage": {
@@ -17700,7 +17700,7 @@
   },
   "trustArchitecture": {
     "version": "trust-architecture/v1",
-    "generatedAt": "2026-10-25T17:46:21.349Z",
+    "generatedAt": "2026-10-25T19:57:06.248Z",
     "session": "2026-10-25",
     "replaySnapshotSha256": "0afc6cb9600017a83c6f1af42bce482cc3460744b23523123ebfbf47d72f118e",
     "ledgerRecordHash": "eae522a20e37eb27854f899345105bfbc16cdfed09487758893f94d74dc8aa72",
@@ -17715,7 +17715,7 @@
   },
   "modelGovernanceEngine": {
     "schemaVersion": "astra-model-governance/v1",
-    "generatedAt": "2026-10-25T17:46:21.443Z",
+    "generatedAt": "2026-10-25T19:57:06.339Z",
     "modelVersion": "ASTRA_V6.8_GOVERNANCE",
     "reliability": {
       "score": 66.3,
@@ -17888,7 +17888,7 @@
   },
   "operationsHealthEngine": {
     "schemaVersion": "astra-operations-health/v1",
-    "generatedAt": "2026-10-25T17:46:22.399Z",
+    "generatedAt": "2026-10-25T19:57:07.304Z",
     "version": "6.11.0",
     "session": "2026-10-25",
     "overall": "DEGRADED",
@@ -18048,7 +18048,7 @@
     "packageVersion": "6.11.0",
     "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
     "stableBranch": "release-v6.11-stable",
-    "generatedAt": "2026-10-25T17:46:22.278Z",
+    "generatedAt": "2026-10-25T19:57:07.182Z",
     "baselineSession": "2026-10-07",
     "requiredDistinctSessions": 2,
     "currentSession": "2026-10-25",
