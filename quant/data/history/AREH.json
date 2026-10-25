@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.293Z",
-  "availableSessions": 156,
+  "availableSessions": 157,
   "firstSession": "2026-02-16",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5123,6 +5123,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.13,
       "jumpPct": -4.42
+    },
+    {
+      "ticker": "AREH",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 1.08,
+      "high": 1.09,
+      "low": 0.94,
+      "close": 0.97,
+      "adjustedClose": 0.97,
+      "volume": 8431839,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 1.08,
+      "jumpPct": -10.19
     }
   ],
   "priceTruthLatest": {
@@ -5133,7 +5165,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 156,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 157,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

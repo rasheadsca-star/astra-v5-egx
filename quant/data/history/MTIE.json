@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.255Z",
-  "availableSessions": 159,
+  "availableSessions": 160,
   "firstSession": "2026-02-05",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5029,6 +5029,40 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 7.5,
       "jumpPct": -2.0
+    },
+    {
+      "ticker": "MTIE",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 7.31,
+      "high": 7.4,
+      "low": 6.11,
+      "close": 6.23,
+      "adjustedClose": 6.23,
+      "volume": 2062661,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "large_move_review"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 7.35,
+      "jumpPct": -15.24
     }
   ],
   "priceTruthLatest": {
@@ -5039,7 +5073,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 159,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 160,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

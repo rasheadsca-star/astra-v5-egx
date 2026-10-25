@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.639Z",
-  "availableSessions": 167,
+  "availableSessions": 168,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "mixed_history_with_starta_ohlc_api",
   "verificationSources": [
@@ -5791,6 +5791,41 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 0.66,
       "jumpPct": 0.0
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 0.66,
+      "high": 0.66,
+      "low": 0.64,
+      "close": 0.64,
+      "adjustedClose": 0.64,
+      "volume": 256846,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.66,
+      "jumpPct": -3.03
     }
   ],
   "lastUpdateError": "Yahoo history failed for MOIL: MOIL.CA: identity score 75",
@@ -5932,8 +5967,8 @@
     "rowsAccepted": 100,
     "confidenceCap": 75
   },
-  "sessionsCount": 167,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 168,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-09-28",

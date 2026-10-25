@@ -1,8 +1,8 @@
 {
   "schemaVersion": "astra-operations-health/v1",
-  "generatedAt": "2026-10-23T23:29:48.257Z",
+  "generatedAt": "2026-10-25T16:50:04.110Z",
   "version": "6.11.0",
-  "session": "2026-10-22",
+  "session": "2026-10-25",
   "overall": "DEGRADED",
   "researchOnly": true,
   "automaticExecution": false,
@@ -37,9 +37,9 @@
       "id": "SOURCE_COVERAGE",
       "status": "WARN",
       "severity": "MEDIUM",
-      "detail": "89% active coverage · 20 active stale · 2 source failed.",
-      "activeCoveragePct": 89,
-      "staleActiveSymbols": 20,
+      "detail": "87.5% active coverage · 23 active stale · 2 source failed.",
+      "activeCoveragePct": 87.5,
+      "staleActiveSymbols": 23,
       "sourceFailedSymbols": 2
     },
     {
@@ -56,25 +56,25 @@
       "id": "LEDGER_INTEGRITY",
       "status": "PASS",
       "severity": "CRITICAL",
-      "detail": "Prediction/event hash chains verified (11/1452 records)."
+      "detail": "Prediction/event hash chains verified (12/1633 records)."
     },
     {
       "id": "SESSION_PERSISTENCE",
       "status": "PASS",
       "severity": "HIGH",
-      "detail": "Session 2026-10-22 exists in replay and prediction ledger."
+      "detail": "Session 2026-10-25 exists in replay and prediction ledger."
     },
     {
       "id": "QUANT_PIPELINE",
       "status": "WARN",
       "severity": "MEDIUM",
-      "detail": "Quant update status: PARTIAL; coverage=88.4%."
+      "detail": "Quant update status: PARTIAL; coverage=87.4%."
     },
     {
       "id": "CALIBRATION_MATURITY",
       "status": "INFO",
       "severity": "INFO",
-      "detail": "Calibration status: INSUFFICIENT_EVIDENCE; resolved=109, sessions=9."
+      "detail": "Calibration status: PRELIMINARY; resolved=169, sessions=10."
     },
     {
       "id": "WALK_FORWARD_MATURITY",
@@ -116,14 +116,14 @@
       "title": "[ASTRA OPS][SESSION_PERSISTENCE] Current session is not fully persisted",
       "severity": "HIGH",
       "active": false,
-      "body": "Current session 2026-10-22 is missing from replay and/or prediction-ledger state."
+      "body": "Current session 2026-10-25 is missing from replay and/or prediction-ledger state."
     },
     {
       "key": "SOURCE_COVERAGE",
       "title": "[ASTRA OPS][SOURCE_COVERAGE] Active source coverage below hard floor",
       "severity": "HIGH",
       "active": false,
-      "body": "Active coverage is 89%. Hard operational floor is 80%."
+      "body": "Active coverage is 87.5%. Hard operational floor is 80%."
     },
     {
       "key": "SOURCE_FAILURES",
@@ -144,13 +144,13 @@
       "title": "[ASTRA OPS][DECISION_DATA_FRESHNESS] Decision data is stale",
       "severity": "HIGH",
       "active": false,
-      "body": "Decision cockpit session 2026-10-22 reports stale data or a non-zero stale lag."
+      "body": "Decision cockpit session 2026-10-25 reports stale data or a non-zero stale lag."
     }
   ],
   "release": {
     "governanceGate": "EVIDENCE_BUILDING",
-    "reliabilityScore": 59.8,
-    "probabilityStatus": "INSUFFICIENT_EVIDENCE",
+    "reliabilityScore": 66.1,
+    "probabilityStatus": "PRELIMINARY",
     "walkForwardStatus": "WAITING_FOR_MINIMUM_SESSIONS"
   }
 }

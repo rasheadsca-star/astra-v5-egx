@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.377Z",
-  "availableSessions": 155,
+  "availableSessions": 156,
   "firstSession": "2026-02-23",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -4906,6 +4906,40 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 4.08,
       "jumpPct": -0.98
+    },
+    {
+      "ticker": "CNFN",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 4.04,
+      "high": 4.05,
+      "low": 3.5,
+      "close": 3.53,
+      "adjustedClose": 3.53,
+      "volume": 2189200,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "large_move_review"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 4.04,
+      "jumpPct": -12.62
     }
   ],
   "priceTruthLatest": {
@@ -4916,7 +4950,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 155,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 156,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

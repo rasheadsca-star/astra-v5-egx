@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.700Z",
-  "availableSessions": 159,
+  "availableSessions": 160,
   "firstSession": "2026-01-26",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5264,6 +5264,40 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 260.16,
       "jumpPct": -3.84
+    },
+    {
+      "ticker": "MOSC",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 250.18,
+      "high": 250.18,
+      "low": 231.22,
+      "close": 231.22,
+      "adjustedClose": 231.22,
+      "volume": 4794,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "corporate_action_review_required"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 250.18,
+      "jumpPct": -7.58
     }
   ],
   "priceTruthLatest": {
@@ -5274,7 +5308,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 159,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 160,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

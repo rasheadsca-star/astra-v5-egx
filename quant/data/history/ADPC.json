@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.578Z",
-  "availableSessions": 158,
+  "availableSessions": 159,
   "firstSession": "2026-02-08",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [
@@ -5201,6 +5201,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 3.06,
       "jumpPct": -4.25
+    },
+    {
+      "ticker": "ADPC",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 2.93,
+      "high": 2.93,
+      "low": 2.64,
+      "close": 2.64,
+      "adjustedClose": 2.64,
+      "volume": 6182848,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 2.93,
+      "jumpPct": -9.9
     }
   ],
   "priceTruthLatest": {
@@ -5211,7 +5243,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 158,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 159,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

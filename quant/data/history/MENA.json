@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.471Z",
-  "availableSessions": 157,
+  "availableSessions": 158,
   "firstSession": "2026-02-23",
-  "lastSession": "2026-10-21",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5145,6 +5145,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 5.99,
       "jumpPct": -0.83
+    },
+    {
+      "ticker": "MENA",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:27 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 5.94,
+      "high": 5.94,
+      "low": 5.59,
+      "close": 5.59,
+      "adjustedClose": 5.59,
+      "volume": 252931,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 5.94,
+      "jumpPct": -5.89
     }
   ],
   "priceTruthLatest": {
@@ -5155,7 +5187,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 157,
-  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
+  "sessionsCount": 158,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

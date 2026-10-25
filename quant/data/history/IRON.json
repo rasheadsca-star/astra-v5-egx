@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.624Z",
-  "availableSessions": 158,
+  "availableSessions": 159,
   "firstSession": "2026-02-22",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5199,6 +5199,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 27.04,
       "jumpPct": -4.36
+    },
+    {
+      "ticker": "IRON",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 25.86,
+      "high": 25.86,
+      "low": 24.59,
+      "close": 24.59,
+      "adjustedClose": 24.59,
+      "volume": 410837,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 25.86,
+      "jumpPct": -4.91
     }
   ],
   "priceTruthLatest": {
@@ -5209,7 +5241,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 158,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 159,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

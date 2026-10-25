@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-20T21:09:03.177Z",
-  "availableSessions": 117,
+  "availableSessions": 118,
   "firstSession": "2026-02-12",
-  "lastSession": "2026-10-22",
+  "lastSession": "2026-10-25",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -3698,6 +3698,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 35.22,
       "jumpPct": 5.0
+    },
+    {
+      "ticker": "ELNA",
+      "date": "2026-10-25",
+      "sourceSessionDate": "2026-10-25",
+      "sourceMarketTime": "01:29 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 36.98,
+      "high": 38.82,
+      "low": 36.98,
+      "close": 38.82,
+      "adjustedClose": 38.82,
+      "volume": 79692,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-25T16:34:58.153Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 36.98,
+      "jumpPct": 4.98
     }
   ],
   "priceTruthLatest": {
@@ -3708,7 +3740,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-20"
   },
-  "sessionsCount": 117,
-  "updatedAt": "2026-10-22T20:38:01.811510+03:00",
+  "sessionsCount": 118,
+  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
