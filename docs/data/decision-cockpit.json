@@ -1,7 +1,7 @@
 {
   "schemaVersion": "astra-decision-cockpit/v1",
   "product": "ASTRA V5.1 DECISION COCKPIT",
-  "generatedAt": "2026-10-25T19:57:04.239Z",
+  "generatedAt": "2026-10-25T22:48:52.089Z",
   "session": "2026-10-25",
   "safety": {
     "researchOnly": true,
@@ -150,29 +150,29 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": 0.513,
       "maxOpportunityCorrelationPeer": "COMI",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 38.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 2,
-      "finalDecisionScore": 68.1,
+      "finalDecisionScore": 68,
       "finalDecisionGrade": "B",
       "finalDecisionLabel": "WATCH / CONDITIONAL",
       "finalDecisionComponents": {
         "technical": 50,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 53
@@ -194,8 +194,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 66.83,
-        "maxScore": 69.28,
+        "minScore": 66.81,
+        "maxScore": 69.27,
         "maxAbsDelta": 1.23,
         "gradeStable": true,
         "possibleGrades": [
@@ -205,73 +205,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 69.28,
-            "delta": 1.23
+            "score": 69.27,
+            "delta": 1.22
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 66.95,
+            "score": 66.94,
             "delta": -1.1
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 66.83,
+            "score": 66.81,
             "delta": -1.23
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 69.19,
+            "score": 69.17,
             "delta": 1.13
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 69.18,
+            "score": 69.17,
             "delta": 1.12
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 67.01,
+            "score": 66.99,
             "delta": -1.05
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 67.15,
+            "score": 67.13,
             "delta": -0.91
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 68.91,
+            "score": 68.9,
             "delta": 0.86
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 67.46,
+            "score": 67.44,
             "delta": -0.6
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 68.63,
+            "score": 68.62,
             "delta": 0.58
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 68.47,
+            "score": 68.45,
             "delta": 0.41
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 67.66,
+            "score": 67.65,
             "delta": -0.39
           }
         ]
@@ -415,19 +415,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": 0.529,
       "maxOpportunityCorrelationPeer": "CANA",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 35.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 3,
@@ -437,7 +437,7 @@
       "finalDecisionComponents": {
         "technical": 45,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 54
@@ -459,9 +459,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 65.56,
-        "maxScore": 68.28,
-        "maxAbsDelta": 1.43,
+        "minScore": 65.54,
+        "maxScore": 68.27,
+        "maxAbsDelta": 1.44,
         "gradeStable": true,
         "possibleGrades": [
           "B"
@@ -470,73 +470,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 68.28,
+            "score": 68.27,
             "delta": 1.44
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 65.56,
+            "score": 65.54,
             "delta": -1.29
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 65.57,
+            "score": 65.55,
             "delta": -1.28
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 68.03,
+            "score": 68.01,
             "delta": 1.18
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 67.93,
+            "score": 67.92,
             "delta": 1.08
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 65.83,
-            "delta": -1.01
+            "score": 65.81,
+            "delta": -1.02
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 65.9,
+            "score": 65.88,
             "delta": -0.95
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 67.74,
+            "score": 67.72,
             "delta": 0.89
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 66.22,
+            "score": 66.2,
             "delta": -0.63
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 67.45,
+            "score": 67.43,
             "delta": 0.6
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 67.21,
+            "score": 67.19,
             "delta": 0.36
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 66.5,
+            "score": 66.48,
             "delta": -0.35
           }
         ]
@@ -963,7 +963,7 @@
       "chaseDistancePct": 0,
       "sector": "عقارات وإنشاءات",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 59,
+      "sectorStrengthScore": 58.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 2.29,
       "sectorBreadthPct": 12.5,
@@ -975,7 +975,7 @@
       "contextAdjustment": -5.8,
       "adjustedConviction": 40.2,
       "marketContextScore": 7.8,
-      "sectorContextScore": 59,
+      "sectorContextScore": 58.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 1,
@@ -1233,7 +1233,7 @@
       "chaseDistancePct": 0,
       "sector": "عقارات وإنشاءات",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 59,
+      "sectorStrengthScore": 58.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 2.29,
       "sectorBreadthPct": 12.5,
@@ -1245,7 +1245,7 @@
       "contextAdjustment": -5.8,
       "adjustedConviction": 18.2,
       "marketContextScore": 7.8,
-      "sectorContextScore": 59,
+      "sectorContextScore": 58.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 9,
@@ -1503,7 +1503,7 @@
       "chaseDistancePct": 0,
       "sector": "عقارات وإنشاءات",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 59,
+      "sectorStrengthScore": 58.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 2.29,
       "sectorBreadthPct": 12.5,
@@ -1515,7 +1515,7 @@
       "contextAdjustment": -5.8,
       "adjustedConviction": 16.2,
       "marketContextScore": 7.8,
-      "sectorContextScore": 59,
+      "sectorContextScore": 58.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 11,
@@ -1772,7 +1772,7 @@
       "chaseDistancePct": 0,
       "sector": "خدمات مالية غير مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 24.9,
+      "sectorStrengthScore": 24.8,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": -1.58,
       "sectorBreadthPct": 0,
@@ -1780,11 +1780,11 @@
       "maxOpportunityCorrelationPeer": "MICH",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 23.9,
+      "contextScore": 23.8,
       "contextAdjustment": -7.8,
       "adjustedConviction": 9.2,
       "marketContextScore": 7.8,
-      "sectorContextScore": 24.9,
+      "sectorContextScore": 24.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 19,
@@ -1794,7 +1794,7 @@
       "finalDecisionComponents": {
         "technical": 25,
         "entryQuality": 100,
-        "context": 23.9,
+        "context": 23.8,
         "riskReward": 100,
         "riskControl": 100,
         "evidence": 24
@@ -1816,8 +1816,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 54.48,
-        "maxScore": 58.21,
+        "minScore": 54.47,
+        "maxScore": 58.19,
         "maxAbsDelta": 1.96,
         "gradeStable": true,
         "possibleGrades": [
@@ -1827,73 +1827,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 58.21,
+            "score": 58.19,
             "delta": 1.96
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 54.48,
+            "score": 54.47,
             "delta": -1.76
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 54.5,
+            "score": 54.48,
             "delta": -1.75
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 57.85,
+            "score": 57.84,
             "delta": 1.61
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 57.43,
+            "score": 57.42,
             "delta": 1.19
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 55.13,
-            "delta": -1.11
+            "score": 55.12,
+            "delta": -1.12
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 54.95,
+            "score": 54.93,
             "delta": -1.3
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 57.46,
+            "score": 57.45,
             "delta": 1.22
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 55.39,
-            "delta": -0.85
+            "score": 55.38,
+            "delta": -0.86
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 57.07,
+            "score": 57.05,
             "delta": 0.82
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 57.03,
+            "score": 57.01,
             "delta": 0.78
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 55.5,
+            "score": 55.48,
             "delta": -0.75
           }
         ]
@@ -2328,19 +2328,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": 0.529,
       "maxOpportunityCorrelationPeer": "COMI",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 26.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 5,
@@ -2350,7 +2350,7 @@
       "finalDecisionComponents": {
         "technical": 50,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 60,
         "riskControl": 40,
         "evidence": 6
@@ -2372,8 +2372,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 48.48,
-        "maxScore": 52.32,
+        "minScore": 48.46,
+        "maxScore": 52.3,
         "maxAbsDelta": 2,
         "gradeStable": false,
         "possibleGrades": [
@@ -2384,73 +2384,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 50.73,
+            "score": 50.71,
             "delta": 0.25
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 50.26,
+            "score": 50.24,
             "delta": -0.22
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 48.48,
+            "score": 48.46,
             "delta": -2
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 52.32,
+            "score": 52.3,
             "delta": 1.84
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 51.03,
+            "score": 51.01,
             "delta": 0.55
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 49.97,
-            "delta": -0.51
+            "score": 49.95,
+            "delta": -0.52
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 50.3,
+            "score": 50.28,
             "delta": -0.18
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 50.65,
+            "score": 50.63,
             "delta": 0.17
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 50.79,
+            "score": 50.77,
             "delta": 0.31
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 50.18,
+            "score": 50.16,
             "delta": -0.3
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 51.52,
+            "score": 51.51,
             "delta": 1.04
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 49.48,
+            "score": 49.46,
             "delta": -1
           }
         ]
@@ -2879,19 +2879,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": 0.287,
       "maxOpportunityCorrelationPeer": "ADIB",
       "maxOpportunityCorrelationN": 58,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 11.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 17,
@@ -2901,7 +2901,7 @@
       "finalDecisionComponents": {
         "technical": 35,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 60,
         "riskControl": 40,
         "evidence": 23
@@ -2923,9 +2923,9 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 46.23,
-        "maxScore": 50.25,
-        "maxAbsDelta": 2.09,
+        "minScore": 46.21,
+        "maxScore": 50.23,
+        "maxAbsDelta": 2.1,
         "gradeStable": false,
         "possibleGrades": [
           "REJECT",
@@ -2935,73 +2935,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 49.28,
+            "score": 49.27,
             "delta": 0.96
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 47.45,
+            "score": 47.44,
             "delta": -0.87
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 46.23,
+            "score": 46.21,
             "delta": -2.1
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 50.25,
+            "score": 50.23,
             "delta": 1.93
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 48.8,
+            "score": 48.78,
             "delta": 0.48
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 47.87,
+            "score": 47.86,
             "delta": -0.45
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 48.07,
+            "score": 48.05,
             "delta": -0.25
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 48.56,
+            "score": 48.54,
             "delta": 0.24
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 48.59,
+            "score": 48.57,
             "delta": 0.26
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 48.07,
+            "score": 48.05,
             "delta": -0.25
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 48.95,
+            "score": 48.94,
             "delta": 0.63
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 47.72,
+            "score": 47.7,
             "delta": -0.6
           }
         ]
@@ -3470,19 +3470,19 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": 0.531,
       "maxOpportunityCorrelationPeer": "ENGC",
       "maxOpportunityCorrelationN": 60,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 11.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 18,
@@ -3492,7 +3492,7 @@
       "finalDecisionComponents": {
         "technical": 35,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 60,
         "riskControl": 40,
         "evidence": 15
@@ -3514,8 +3514,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 45.35,
-        "maxScore": 49.44,
+        "minScore": 45.33,
+        "maxScore": 49.42,
         "maxAbsDelta": 2.13,
         "gradeStable": true,
         "possibleGrades": [
@@ -3525,73 +3525,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 48.39,
-            "delta": 0.92
+            "score": 48.38,
+            "delta": 0.91
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 46.66,
+            "score": 46.64,
             "delta": -0.82
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 45.35,
+            "score": 45.33,
             "delta": -2.13
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 49.44,
+            "score": 49.42,
             "delta": 1.96
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 47.93,
+            "score": 47.92,
             "delta": 0.45
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 47.06,
+            "score": 47.04,
             "delta": -0.42
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 47.2,
+            "score": 47.18,
             "delta": -0.28
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 47.74,
+            "score": 47.72,
             "delta": 0.26
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 47.73,
+            "score": 47.71,
             "delta": 0.25
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 47.24,
+            "score": 47.23,
             "delta": -0.24
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 48.26,
+            "score": 48.25,
             "delta": 0.78
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 46.73,
+            "score": 46.71,
             "delta": -0.75
           }
         ]
@@ -4031,7 +4031,7 @@
       "chaseDistancePct": 0,
       "sector": "رعاية صحية ودواء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 43,
+      "sectorStrengthScore": 42.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 0.68,
       "sectorBreadthPct": 0,
@@ -4043,7 +4043,7 @@
       "contextAdjustment": -6.8,
       "adjustedConviction": 8.2,
       "marketContextScore": 7.8,
-      "sectorContextScore": 43,
+      "sectorContextScore": 42.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 20,
@@ -7247,7 +7247,7 @@
       "chaseDistancePct": 0,
       "sector": "رعاية صحية ودواء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 43,
+      "sectorStrengthScore": 42.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 0.68,
       "sectorBreadthPct": 0,
@@ -7259,7 +7259,7 @@
       "contextAdjustment": -5.4,
       "adjustedConviction": 19.6,
       "marketContextScore": 7.8,
-      "sectorContextScore": 43,
+      "sectorContextScore": 42.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 65,
       "contextRank": 8,
@@ -7520,7 +7520,7 @@
       "chaseDistancePct": 0,
       "sector": "رعاية صحية ودواء",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 43,
+      "sectorStrengthScore": 42.9,
       "sectorStrengthStatus": "ACTIVE",
       "sectorRelativeChangePct": 0.68,
       "sectorBreadthPct": 0,
@@ -7532,7 +7532,7 @@
       "contextAdjustment": -3.2,
       "adjustedConviction": 22.8,
       "marketContextScore": 7.8,
-      "sectorContextScore": 43,
+      "sectorContextScore": 42.9,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 90,
       "contextRank": 2,
@@ -9463,29 +9463,29 @@
       "chaseDistancePct": 0,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorSource": "CONTROLLED_SYMBOL_MAP",
-      "sectorStrengthScore": 93.9,
+      "sectorStrengthScore": 93.8,
       "sectorStrengthStatus": "ACTIVE",
-      "sectorRelativeChangePct": 6.35,
+      "sectorRelativeChangePct": 6.34,
       "sectorBreadthPct": 22.2,
       "maxOpportunityCorrelation": null,
       "maxOpportunityCorrelationPeer": null,
       "maxOpportunityCorrelationN": 0,
       "correlationRisk": "LOW_OR_UNKNOWN",
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "contextAdjustment": -3.7,
       "adjustedConviction": 29.3,
       "marketContextScore": 7.8,
-      "sectorContextScore": 93.9,
+      "sectorContextScore": 93.8,
       "sectorContextStatus": "VERIFIED_MAP",
       "liquidityContextScore": 50,
       "contextRank": 1,
-      "finalDecisionScore": 49.2,
+      "finalDecisionScore": 49.1,
       "finalDecisionGrade": "REJECT",
       "finalDecisionLabel": "REJECT / NO ACTION",
       "finalDecisionComponents": {
         "technical": 55,
         "entryQuality": 100,
-        "context": 37.7,
+        "context": 37.6,
         "riskReward": 40,
         "riskControl": 15,
         "evidence": 36
@@ -9507,8 +9507,8 @@
       "finalDecisionSensitivity": {
         "perturbation": "ONE_COMPONENT_WEIGHT_PLUS_MINUS_20_PERCENT_RENORMALIZED",
         "status": "STABLE",
-        "minScore": 47.1,
-        "maxScore": 51.06,
+        "minScore": 47.09,
+        "maxScore": 51.04,
         "maxAbsDelta": 2.06,
         "gradeStable": true,
         "possibleGrades": [
@@ -9518,73 +9518,73 @@
           {
             "component": "technical",
             "factor": 0.8,
-            "score": 49.06,
+            "score": 49.04,
             "delta": -0.1
           },
           {
             "component": "technical",
             "factor": 1.2,
-            "score": 49.26,
+            "score": 49.24,
             "delta": 0.09
           },
           {
             "component": "entryQuality",
             "factor": 0.8,
-            "score": 47.1,
+            "score": 47.09,
             "delta": -2.06
           },
           {
             "component": "entryQuality",
             "factor": 1.2,
-            "score": 51.06,
+            "score": 51.04,
             "delta": 1.89
           },
           {
             "component": "context",
             "factor": 0.8,
-            "score": 49.67,
-            "delta": 0.5
+            "score": 49.65,
+            "delta": 0.51
           },
           {
             "component": "context",
             "factor": 1.2,
-            "score": 48.69,
-            "delta": -0.47
+            "score": 48.67,
+            "delta": -0.48
           },
           {
             "component": "riskReward",
             "factor": 0.8,
-            "score": 49.59,
+            "score": 49.58,
             "delta": 0.43
           },
           {
             "component": "riskReward",
             "factor": 1.2,
-            "score": 48.76,
+            "score": 48.74,
             "delta": -0.4
           },
           {
             "component": "riskControl",
             "factor": 0.8,
-            "score": 49.98,
+            "score": 49.97,
             "delta": 0.82
           },
           {
             "component": "riskControl",
             "factor": 1.2,
-            "score": 48.38,
+            "score": 48.36,
             "delta": -0.79
           },
           {
             "component": "evidence",
             "factor": 0.8,
-            "score": 49.53,
+            "score": 49.52,
             "delta": 0.37
           },
           {
             "component": "evidence",
             "factor": 1.2,
-            "score": 48.81,
+            "score": 48.79,
             "delta": -0.35
           }
         ]
@@ -9730,7 +9730,7 @@
   },
   "dataHealth": {
     "session": "2026-10-25",
-    "generatedAt": "2026-10-25T19:57:04.056Z",
+    "generatedAt": "2026-10-25T22:48:51.922Z",
     "stale": false,
     "staleLagSessions": 0,
     "universe": 156,
@@ -9749,7 +9749,7 @@
   },
   "entryQualityEngine": {
     "version": "entry-quality/v1",
-    "generatedAt": "2026-10-25T19:57:04.272Z",
+    "generatedAt": "2026-10-25T22:48:52.123Z",
     "marketSession": "2026-10-25",
     "rules": {
       "invalidated": "current price <= stop",
@@ -9771,7 +9771,7 @@
   },
   "sectorCorrelationEngine": {
     "version": "sector-correlation/v1",
-    "generatedAt": "2026-10-25T19:57:04.361Z",
+    "generatedAt": "2026-10-25T22:48:52.211Z",
     "taxonomy": {
       "source": "rasheadsca-star/RAS-EGX-PRO2026-NEXT/config/egx-sector-map.json",
       "symbolMappings": 80,
@@ -9785,7 +9785,7 @@
         "sector": "تبغ ومنتجات استهلاكية",
         "count": 1,
         "avgChangePct": -1.64,
-        "relativeChangePct": 7.19,
+        "relativeChangePct": 7.18,
         "breadthPct": 0,
         "strengthScore": 95,
         "status": "LOW_SAMPLE"
@@ -9794,7 +9794,7 @@
         "sector": "تكنولوجيا ومدفوعات",
         "count": 2,
         "avgChangePct": -1.69,
-        "relativeChangePct": 7.14,
+        "relativeChangePct": 7.13,
         "breadthPct": 0,
         "strengthScore": 94.6,
         "status": "LOW_SAMPLE"
@@ -9803,16 +9803,16 @@
         "sector": "بنوك وخدمات مالية مصرفية",
         "count": 9,
         "avgChangePct": -2.48,
-        "relativeChangePct": 6.35,
+        "relativeChangePct": 6.34,
         "breadthPct": 22.2,
-        "strengthScore": 93.9,
+        "strengthScore": 93.8,
         "status": "ACTIVE"
       },
       {
         "sector": "استثمارات قابضة ومتنوعة",
         "count": 1,
         "avgChangePct": -2.05,
-        "relativeChangePct": 6.78,
+        "relativeChangePct": 6.77,
         "breadthPct": 0,
         "strengthScore": 91.7,
         "status": "LOW_SAMPLE"
@@ -9823,7 +9823,7 @@
         "avgChangePct": -2.73,
         "relativeChangePct": 6.09,
         "breadthPct": 0,
-        "strengthScore": 86.3,
+        "strengthScore": 86.2,
         "status": "ACTIVE"
       },
       {
@@ -9839,7 +9839,7 @@
         "sector": "سيارات وتجارة وتوزيع",
         "count": 1,
         "avgChangePct": -3.86,
-        "relativeChangePct": 4.97,
+        "relativeChangePct": 4.96,
         "breadthPct": 0,
         "strengthScore": 77.2,
         "status": "LOW_SAMPLE"
@@ -9857,7 +9857,7 @@
         "sector": "تعليم وخدمات",
         "count": 2,
         "avgChangePct": -5.5,
-        "relativeChangePct": 3.33,
+        "relativeChangePct": 3.32,
         "breadthPct": 0,
         "strengthScore": 64.1,
         "status": "LOW_SAMPLE"
@@ -9868,14 +9868,14 @@
         "avgChangePct": -6.54,
         "relativeChangePct": 2.29,
         "breadthPct": 12.5,
-        "strengthScore": 59,
+        "strengthScore": 58.9,
         "status": "ACTIVE"
       },
       {
         "sector": "أغذية ومشروبات",
         "count": 6,
         "avgChangePct": -7.3,
-        "relativeChangePct": 1.53,
+        "relativeChangePct": 1.52,
         "breadthPct": 0,
         "strengthScore": 49.7,
         "status": "ACTIVE"
@@ -9884,7 +9884,7 @@
         "sector": "اتصالات وإعلام وتكنولوجيا",
         "count": 1,
         "avgChangePct": -7.35,
-        "relativeChangePct": 1.48,
+        "relativeChangePct": 1.47,
         "breadthPct": 0,
         "strengthScore": 49.3,
         "status": "LOW_SAMPLE"
@@ -9895,7 +9895,7 @@
         "avgChangePct": -8.15,
         "relativeChangePct": 0.68,
         "breadthPct": 0,
-        "strengthScore": 43,
+        "strengthScore": 42.9,
         "status": "ACTIVE"
       },
       {
@@ -9913,16 +9913,16 @@
         "avgChangePct": -10,
         "relativeChangePct": -1.18,
         "breadthPct": 0,
-        "strengthScore": 28.1,
+        "strengthScore": 28,
         "status": "LOW_SAMPLE"
       },
       {
         "sector": "تجارة وتوزيع",
         "count": 2,
         "avgChangePct": -10.32,
-        "relativeChangePct": -1.49,
+        "relativeChangePct": -1.5,
         "breadthPct": 0,
-        "strengthScore": 25.6,
+        "strengthScore": 25.5,
         "status": "LOW_SAMPLE"
       },
       {
@@ -9931,7 +9931,7 @@
         "avgChangePct": -10.4,
         "relativeChangePct": -1.58,
         "breadthPct": 0,
-        "strengthScore": 24.9,
+        "strengthScore": 24.8,
         "status": "ACTIVE"
       },
       {
@@ -9947,7 +9947,7 @@
         "sector": "سياحة وترفيه",
         "count": 1,
         "avgChangePct": -14.47,
-        "relativeChangePct": -5.64,
+        "relativeChangePct": -5.65,
         "breadthPct": 0,
         "strengthScore": 0,
         "status": "LOW_SAMPLE"
@@ -11482,7 +11482,7 @@
   },
   "marketSectorContextEngine": {
     "version": "market-sector-context/v1",
-    "generatedAt": "2026-10-25T19:57:04.403Z",
+    "generatedAt": "2026-10-25T22:48:52.272Z",
     "marketSession": "2026-10-25",
     "market": {
       "regime": "هابط",
@@ -11508,7 +11508,7 @@
   },
   "finalDecisionEngine": {
     "version": "final-decision-score/v2-missing-aware",
-    "generatedAt": "2026-10-25T19:57:04.452Z",
+    "generatedAt": "2026-10-25T22:48:52.323Z",
     "weights": {
       "technical": 0.25,
       "entryQuality": 0.2,
@@ -11569,7 +11569,7 @@
   },
   "walkForwardValidationEngine": {
     "schemaVersion": "astra-walk-forward-validation/v1",
-    "generatedAt": "2026-10-25T19:57:04.628Z",
+    "generatedAt": "2026-10-25T22:48:52.504Z",
     "methodology": {
       "noLookAhead": true,
       "source": "persisted contemporaneous replay sessions + recorded-forward prospective evidence only",
@@ -11614,7 +11614,7 @@
   },
   "probabilityCalibrationEngine": {
     "version": "probability-calibration/v3-session-aware",
-    "generatedAt": "2026-10-25T19:57:05.200Z",
+    "generatedAt": "2026-10-25T22:48:53.115Z",
     "forwardResolved": 169,
     "forwardDistinctSessions": 10,
     "sampleMaturity": "PRELIMINARY",
@@ -11722,7 +11722,7 @@
   },
   "decisionGateEngine": {
     "version": "decision-gate/v1",
-    "generatedAt": "2026-10-25T19:57:05.237Z",
+    "generatedAt": "2026-10-25T22:48:53.157Z",
     "rules": {
       "dataFreshness": "stale=false and staleLagSessions=0",
       "entryQuality": "not INVALIDATED, CHASE_RISK or UNKNOWN",
@@ -11744,7 +11744,7 @@
   },
   "portfolioSelectionEngine": {
     "version": "portfolio-selection/v1",
-    "generatedAt": "2026-10-25T19:57:05.275Z",
+    "generatedAt": "2026-10-25T22:48:53.196Z",
     "researchOnly": true,
     "executionAllowed": false,
     "automaticOrders": false,
@@ -11772,7 +11772,7 @@
   },
   "riskBudgetEngine": {
     "version": "risk-budget/v2-risk-state-aware",
-    "generatedAt": "2026-10-25T19:57:05.443Z",
+    "generatedAt": "2026-10-25T22:48:53.364Z",
     "referenceCapital": 100000,
     "currency": "EGP",
     "policy": {
@@ -11817,7 +11817,7 @@
   },
   "monitoringAlertsEngine": {
     "version": "monitoring-alerts/v1",
-    "generatedAt": "2026-10-25T19:57:05.397Z",
+    "generatedAt": "2026-10-25T22:48:53.322Z",
     "session": "2026-10-25",
     "dataMode": "DELAYED_SESSION_MONITORING",
     "delayed": true,
@@ -12871,7 +12871,7 @@
   },
   "riskStateOverrideEngine": {
     "version": "risk-state-override/v1",
-    "generatedAt": "2026-10-25T19:57:05.443Z",
+    "generatedAt": "2026-10-25T22:48:53.364Z",
     "policy": "ONLY_IN_ENTRY_ZONE_AND_GATE_PASSED_IS_ACTIONABLE",
     "positions": [],
     "blockedCount": 0,
@@ -12881,8 +12881,8 @@
   },
   "outcomeAnalyticsEngine": {
     "version": "outcome-analytics/v3-recorded-forward-only",
-    "generatedAt": "2026-10-25T19:57:05.773Z",
-    "evidenceGeneratedAt": "2026-10-25T19:57:05.516Z",
+    "generatedAt": "2026-10-25T22:48:53.698Z",
+    "evidenceGeneratedAt": "2026-10-25T22:48:53.438Z",
     "status": "PRELIMINARY",
     "samplePolicy": {
       "groupLeaderboardMinimumResolved": 5,
@@ -13685,11 +13685,11 @@
   },
   "dailyDecisionBrief": {
     "version": "daily-decision-brief/v1",
-    "generatedAt": "2026-10-25T19:57:05.814Z",
+    "generatedAt": "2026-10-25T22:48:53.740Z",
     "session": "2026-10-25",
     "headline": {
       "ticker": "ADIB",
-      "finalDecisionScore": 68.1,
+      "finalDecisionScore": 68,
       "grade": "B",
       "gateStatus": "BLOCKED",
       "entryQuality": "IDEAL",
@@ -13699,7 +13699,7 @@
       "stop": 44.8357,
       "target1": 49.6692,
       "target2": 52.8885,
-      "contextScore": 37.7,
+      "contextScore": 37.6,
       "t1ProbabilityPct": 0,
       "t2ProbabilityPct": 0,
       "probabilityStatus": "PRELIMINARY"
@@ -13708,12 +13708,12 @@
       {
         "rank": 1,
         "ticker": "ADIB",
-        "finalDecisionScore": 68.1,
+        "finalDecisionScore": 68,
         "grade": "B",
         "gateStatus": "BLOCKED",
         "entryQuality": "IDEAL",
         "rrT2": 5.98,
-        "contextScore": 37.7,
+        "contextScore": 37.6,
         "researchWeightPct": 0,
         "portfolioSelected": false
       },
@@ -13725,7 +13725,7 @@
         "gateStatus": "BLOCKED",
         "entryQuality": "IDEAL",
         "rrT2": 11.01,
-        "contextScore": 37.7,
+        "contextScore": 37.6,
         "researchWeightPct": 0,
         "portfolioSelected": false
       },
@@ -13751,7 +13751,7 @@
       "scoreMoves": [
         {
           "ticker": "ADIB",
-          "current": 68.1,
+          "current": 68,
           "prior": null,
           "delta": null
         },
@@ -13792,7 +13792,7 @@
   },
   "changeAttributionEngine": {
     "version": "change-attribution/v1",
-    "generatedAt": "2026-10-25T19:57:05.860Z",
+    "generatedAt": "2026-10-25T22:48:53.793Z",
     "session": "2026-10-25",
     "priorSession": "2026-10-22",
     "status": "COMPARED",
@@ -13952,9 +13952,9 @@
       {
         "ticker": "ADIB",
         "status": "IMPROVED",
-        "score": 68.1,
+        "score": 68,
         "previousScore": 63.2,
-        "scoreDelta": 4.9,
+        "scoreDelta": 4.8,
         "portfolioSelected": false,
         "previousPortfolioSelected": false,
         "gatePass": false,
@@ -13963,16 +13963,16 @@
           {
             "factor": "FINAL_SCORE",
             "direction": "IMPROVED",
-            "current": 68.1,
+            "current": 68,
             "previous": 63.2,
-            "delta": 4.9
+            "delta": 4.8
           },
           {
             "factor": "CONTEXT_SCORE",
             "direction": "IMPROVED",
-            "current": 37.7,
+            "current": 37.6,
             "previous": 29.7,
-            "delta": 8
+            "delta": 7.9
           },
           {
             "factor": "RR_T2",
@@ -14093,9 +14093,9 @@
           {
             "factor": "CONTEXT_SCORE",
             "direction": "IMPROVED",
-            "current": 37.7,
+            "current": 37.6,
             "previous": 29.7,
-            "delta": 8
+            "delta": 7.9
           },
           {
             "factor": "RR_T2",
@@ -14898,7 +14898,7 @@
         },
         {
           "ticker": "ADIB",
-          "delta": 4.9
+          "delta": 4.8
         },
         {
           "ticker": "MOIN",
@@ -14926,7 +14926,7 @@
   "sourceHealthEngine": {
     "schemaVersion": "astra-source-health/v1",
     "expectedSession": "2026-10-25",
-    "generatedAt": "2026-10-25T19:57:06.120Z",
+    "generatedAt": "2026-10-25T22:48:54.073Z",
     "researchOnly": true,
     "automaticExecution": false,
     "coverage": {
@@ -17700,7 +17700,7 @@
   },
   "trustArchitecture": {
     "version": "trust-architecture/v1",
-    "generatedAt": "2026-10-25T19:57:06.248Z",
+    "generatedAt": "2026-10-25T22:48:54.206Z",
     "session": "2026-10-25",
     "replaySnapshotSha256": "0afc6cb9600017a83c6f1af42bce482cc3460744b23523123ebfbf47d72f118e",
     "ledgerRecordHash": "eae522a20e37eb27854f899345105bfbc16cdfed09487758893f94d74dc8aa72",
@@ -17715,7 +17715,7 @@
   },
   "modelGovernanceEngine": {
     "schemaVersion": "astra-model-governance/v1",
-    "generatedAt": "2026-10-25T19:57:06.339Z",
+    "generatedAt": "2026-10-25T22:48:54.300Z",
     "modelVersion": "ASTRA_V6.8_GOVERNANCE",
     "reliability": {
       "score": 66.3,
@@ -17888,7 +17888,7 @@
   },
   "operationsHealthEngine": {
     "schemaVersion": "astra-operations-health/v1",
-    "generatedAt": "2026-10-25T19:57:07.304Z",
+    "generatedAt": "2026-10-25T22:48:55.291Z",
     "version": "6.11.0",
     "session": "2026-10-25",
     "overall": "DEGRADED",
@@ -18048,7 +18048,7 @@
     "packageVersion": "6.11.0",
     "frozenCommit": "f5d8dce6961f9485d83c4ae51bdfdfcac1d7d6b4",
     "stableBranch": "release-v6.11-stable",
-    "generatedAt": "2026-10-25T19:57:07.182Z",
+    "generatedAt": "2026-10-25T22:48:55.166Z",
     "baselineSession": "2026-10-07",
     "requiredDistinctSessions": 2,
     "currentSession": "2026-10-25",
