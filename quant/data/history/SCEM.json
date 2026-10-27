@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.365Z",
-  "availableSessions": 160,
+  "availableSessions": 162,
   "firstSession": "2026-01-13",
-  "lastSession": "2026-10-25",
+  "lastSession": "2026-10-27",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5241,6 +5241,70 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 84.52,
       "jumpPct": -9.65
+    },
+    {
+      "ticker": "SCEM",
+      "date": "2026-10-26",
+      "sourceSessionDate": "2026-10-26",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 76.36,
+      "high": 78.8,
+      "low": 73.9,
+      "close": 76.32,
+      "adjustedClose": 76.32,
+      "volume": 262853,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 76.36,
+      "jumpPct": -0.05
+    },
+    {
+      "ticker": "SCEM",
+      "date": "2026-10-27",
+      "sourceSessionDate": "2026-10-27",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 76.32,
+      "high": 83.26,
+      "low": 76.32,
+      "close": 83.26,
+      "adjustedClose": 83.26,
+      "volume": 1126047,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 76.32,
+      "jumpPct": 9.09
     }
   ],
   "priceTruthLatest": {
@@ -5251,7 +5315,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 160,
-  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
+  "sessionsCount": 162,
+  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

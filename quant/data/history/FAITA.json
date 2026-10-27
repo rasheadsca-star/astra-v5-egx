@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.534Z",
-  "availableSessions": 124,
+  "availableSessions": 126,
   "firstSession": "2025-09-14",
-  "lastSession": "2026-10-25",
+  "lastSession": "2026-10-27",
   "historyStatus": "historical_partial_50",
   "primarySource": "kaggle_yahoo_seed",
   "verificationSources": [],
@@ -4215,6 +4215,76 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 1.0,
       "jumpPct": -2.0
+    },
+    {
+      "ticker": "FAITA",
+      "date": "2026-10-26",
+      "sourceSessionDate": "2026-10-26",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.98,
+      "high": 0.99,
+      "low": 0.98,
+      "close": 0.99,
+      "adjustedClose": 0.99,
+      "volume": 11416,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:24"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.98,
+      "jumpPct": 1.02
+    },
+    {
+      "ticker": "FAITA",
+      "date": "2026-10-27",
+      "sourceSessionDate": "2026-10-27",
+      "sourceMarketTime": "01:12 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 0.99,
+      "high": 1.0,
+      "low": 0.98,
+      "close": 0.99,
+      "adjustedClose": 0.99,
+      "volume": 6288,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:24"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.99,
+      "jumpPct": 0.0
     }
   ],
   "lastUpdateError": "Yahoo history failed for FAITA: FAITA.CA: identity score 75",
@@ -4226,7 +4296,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 124,
-  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
+  "sessionsCount": 126,
+  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

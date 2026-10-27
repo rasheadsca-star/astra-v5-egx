@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.636Z",
-  "availableSessions": 167,
+  "availableSessions": 169,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-25",
+  "lastSession": "2026-10-27",
   "historyStatus": "historical_complete_100",
   "primarySource": "mixed_history_with_starta_ohlc_api",
   "verificationSources": [
@@ -5745,6 +5745,76 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 0.5,
       "jumpPct": -4.0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-10-26",
+      "sourceSessionDate": "2026-10-26",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.48,
+      "high": 0.48,
+      "low": 0.47,
+      "close": 0.48,
+      "adjustedClose": 0.48,
+      "volume": 227097,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:21"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.48,
+      "jumpPct": 0.0
+    },
+    {
+      "ticker": "EGBE",
+      "date": "2026-10-27",
+      "sourceSessionDate": "2026-10-27",
+      "sourceMarketTime": "01:28 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 0.48,
+      "high": 0.5,
+      "low": 0.47,
+      "close": 0.5,
+      "adjustedClose": 0.5,
+      "volume": 89502,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:21"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.48,
+      "jumpPct": 4.17
     }
   ],
   "lastUpdateError": "Yahoo history failed for EGBE: EGBE.CA: identity score 65",
@@ -5886,8 +5956,8 @@
     "rowsAccepted": 99,
     "confidenceCap": 75
   },
-  "sessionsCount": 167,
-  "updatedAt": "2026-10-25T19:48:50.699656+03:00",
+  "sessionsCount": 169,
+  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-09-28",

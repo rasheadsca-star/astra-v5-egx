@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-20T21:09:03.175Z",
-  "availableSessions": 122,
+  "availableSessions": 123,
   "firstSession": "2026-02-09",
-  "lastSession": "2026-10-21",
+  "lastSession": "2026-10-27",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -3667,6 +3667,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 23.22,
       "jumpPct": -0.69
+    },
+    {
+      "ticker": "RAKT",
+      "date": "2026-10-27",
+      "sourceSessionDate": "2026-10-27",
+      "sourceMarketTime": "01:14 PM market time",
+      "sourceSessionEvidence": null,
+      "open": 23.06,
+      "high": 23.06,
+      "low": 22.5,
+      "close": 22.5,
+      "adjustedClose": 22.5,
+      "volume": 29008,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-27T17:55:55.509Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 23.06,
+      "jumpPct": -2.43
     }
   ],
   "priceTruthLatest": {
@@ -3677,7 +3709,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-20"
   },
-  "sessionsCount": 122,
-  "updatedAt": "2026-10-21T21:49:50.023160+03:00",
+  "sessionsCount": 123,
+  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }
