@@ -1,16 +1,16 @@
 {
   "schemaVersion": "astra-source-health/v1",
   "expectedSession": "2026-10-27",
-  "generatedAt": "2026-10-27T19:34:12.556Z",
+  "generatedAt": "2026-10-27T22:36:47.828Z",
   "researchOnly": true,
   "automaticExecution": false,
   "coverage": {
     "registeredSymbols": 201,
     "explicitInactiveSymbols": 1,
     "activeDenominator": 200,
-    "currentVerifiedSymbols": 176,
-    "activeCoveragePct": 88,
-    "staleActiveSymbols": 22,
+    "currentVerifiedSymbols": 177,
+    "activeCoveragePct": 88.5,
+    "staleActiveSymbols": 21,
     "sourceFailedSymbols": 2,
     "rule": "Only explicit DORMANT/SUSPENDED/DELISTED evidence removes a symbol from the denominator. ACTIVE_STALE and SOURCE_FAILED remain in it."
   },
@@ -25,12 +25,13 @@
     "quantStaleCount": 25,
     "canonicalCurrentButQuantStale": [
       "EFID",
-      "EXPA"
+      "EXPA",
+      "NAHO"
     ]
   },
   "counts": {
-    "CURRENT_VERIFIED": 176,
-    "ACTIVE_STALE": 22,
+    "CURRENT_VERIFIED": 177,
+    "ACTIVE_STALE": 21,
     "SOURCE_FAILED": 2,
     "DORMANT": 0,
     "SUSPENDED": 0,
@@ -52,7 +53,6 @@
       "GPPL",
       "ICLE",
       "MEGM",
-      "NAHO",
       "NEDA",
       "ORHD",
       "ORWE",
@@ -1901,7 +1901,7 @@
     },
     "NAHO": {
       "ticker": "NAHO",
-      "lastSession": "2026-10-22",
+      "lastSession": "2026-10-27",
       "primarySource": "mixed_history_with_starta_ohlc_api",
       "staleData": false,
       "updateFailed": false,
@@ -1912,8 +1912,8 @@
         "non_official_public_database_fallback",
         "not_independently_verified_by_egx"
       ],
-      "status": "ACTIVE_STALE",
-      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
       "activeDenominator": true
     },
     "NCCW": {

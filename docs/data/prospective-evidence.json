@@ -1,12 +1,12 @@
 {
   "schemaVersion": "astra-prospective-evidence/v1",
-  "generatedAt": "2026-10-27T19:34:11.933Z",
+  "generatedAt": "2026-10-27T22:36:47.218Z",
   "researchOnly": true,
   "automaticExecution": false,
   "identityPolicy": "one immutable prediction capture per session+ticker; v3 freezes ex-ante calibration fields; outcomes may evolve only through append-only evidence events",
   "capturePolicy": {
-    "currentCaptureTiming": "ON_SESSION_AFTER_CLOSE",
-    "recordedForwardEligible": true
+    "currentCaptureTiming": "LATE_CAPTURE",
+    "recordedForwardEligible": false
   },
   "records": [
     {

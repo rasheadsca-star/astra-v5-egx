@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-operations-health/v1",
-  "generatedAt": "2026-10-27T19:34:13.766Z",
+  "generatedAt": "2026-10-27T22:36:49.028Z",
   "version": "6.11.0",
   "session": "2026-10-27",
   "overall": "DEGRADED",
@@ -37,19 +37,20 @@
       "id": "SOURCE_COVERAGE",
       "status": "WARN",
       "severity": "MEDIUM",
-      "detail": "88% active coverage · 22 active stale · 2 source failed.",
-      "activeCoveragePct": 88,
-      "staleActiveSymbols": 22,
+      "detail": "88.5% active coverage · 21 active stale · 2 source failed.",
+      "activeCoveragePct": 88.5,
+      "staleActiveSymbols": 21,
       "sourceFailedSymbols": 2
     },
     {
       "id": "CROSS_STORE_FRESHNESS",
       "status": "WARN",
       "severity": "MEDIUM",
-      "detail": "Canonical-current but quant-stale: EFID, EXPA",
+      "detail": "Canonical-current but quant-stale: EFID, EXPA, NAHO",
       "tickers": [
         "EFID",
-        "EXPA"
+        "EXPA",
+        "NAHO"
       ]
     },
     {
@@ -123,7 +124,7 @@
       "title": "[ASTRA OPS][SOURCE_COVERAGE] Active source coverage below hard floor",
       "severity": "HIGH",
       "active": false,
-      "body": "Active coverage is 88%. Hard operational floor is 80%."
+      "body": "Active coverage is 88.5%. Hard operational floor is 80%."
     },
     {
       "key": "SOURCE_FAILURES",
@@ -137,7 +138,7 @@
       "title": "[ASTRA OPS][CROSS_STORE_FRESHNESS] Canonical and quant freshness disagree",
       "severity": "MEDIUM",
       "active": true,
-      "body": "Affected tickers: EFID, EXPA"
+      "body": "Affected tickers: EFID, EXPA, NAHO"
     },
     {
       "key": "DECISION_DATA_FRESHNESS",

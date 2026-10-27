@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-model-governance/v1",
-  "generatedAt": "2026-10-27T19:34:12.772Z",
+  "generatedAt": "2026-10-27T22:36:48.045Z",
   "modelVersion": "ASTRA_V6.8_GOVERNANCE",
   "reliability": {
     "score": 67,
@@ -29,10 +29,10 @@
     {
       "id": "SOURCE_COVERAGE",
       "label": "Active-universe source coverage",
-      "score": 88,
+      "score": 88.5,
       "weight": 0,
       "status": "PARTIAL",
-      "detail": "88% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
+      "detail": "88.5% of the explicit active denominator is current; stale/failed active symbols remain in the denominator."
     },
     {
       "id": "SOURCE_QUORUM",
@@ -85,10 +85,10 @@
     {
       "id": "SECTOR_COVERAGE",
       "label": "Verified sector taxonomy coverage",
-      "score": 34.6,
+      "score": 34.7,
       "weight": 5,
       "status": "PARTIAL",
-      "detail": "34.6% of current market rows classified by controlled symbol mapping."
+      "detail": "34.7% of current market rows classified by controlled symbol mapping."
     },
     {
       "id": "MONITORING_SAFETY",
@@ -152,7 +152,7 @@
     },
     "ledgerRecords": 13,
     "ledgerChainStatus": "VERIFIED",
-    "activeSourceCoveragePct": 88,
+    "activeSourceCoveragePct": 88.5,
     "independentSourceQuorum": false
   },
   "releaseGate": {
