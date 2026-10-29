@@ -1,6 +1,6 @@
 {
   "schemaVersion": "astra-prospective-evidence/v1",
-  "generatedAt": "2026-10-27T22:36:47.218Z",
+  "generatedAt": "2026-10-29T18:39:18.193Z",
   "researchOnly": true,
   "automaticExecution": false,
   "identityPolicy": "one immutable prediction capture per session+ticker; v3 freezes ex-ante calibration fields; outcomes may evolve only through append-only evidence events",
@@ -11855,16 +11855,21 @@
       "probabilityDistinctSessionsAtCapture": 3,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 2.12,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 1.93,
+        "equivalentExitPrice": 1.93,
+        "grossReturnPct": -8.96,
+        "netReturnPct": -9.56,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "0125d38c61420c90764074a1ac8fd4420afa16384a13b58af180944cf4061abe"
     },
@@ -11952,16 +11957,21 @@
       "probabilityDistinctSessionsAtCapture": 3,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 262.24,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 260.25,
+        "equivalentExitPrice": 260.25,
+        "grossReturnPct": -0.76,
+        "netReturnPct": -1.36,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "4463502bbd9f43747e41739495b17335974fd7eb888fa3b8ea9620ce2b2089aa"
     },
@@ -12927,16 +12937,21 @@
       "probabilityDistinctSessionsAtCapture": 3,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 393.23,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 367.23,
+        "equivalentExitPrice": 367.23,
+        "grossReturnPct": -6.61,
+        "netReturnPct": -7.21,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "0c7873a30d95afb82b66ac3e3bd7cbbfe74d587dbb2f2a6447f47f900e953fd6"
     },
@@ -14697,16 +14712,21 @@
       "probabilityDistinctSessionsAtCapture": 4,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-29",
         "fillPrice": 2.07,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 1.94,
+        "equivalentExitPrice": 1.94,
+        "grossReturnPct": -6.28,
+        "netReturnPct": -6.88,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "d05cf1c0adc2c8e8218485d1683479fa4f850e40abf086141d4d9db84f6cf54a"
     },
@@ -14802,7 +14822,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -15375,16 +15395,21 @@
       "probabilityDistinctSessionsAtCapture": 4,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-29",
         "fillPrice": 124.97,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 119.84,
+        "equivalentExitPrice": 119.84,
+        "grossReturnPct": -4.1,
+        "netReturnPct": -4.7,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "b8d5d420297736709c254d8112f7041650ccbdf376531e7a57cb8f66031a0d34"
     },
@@ -17354,16 +17379,21 @@
       "probabilityDistinctSessionsAtCapture": 4,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TIME_EXIT",
+        "resolvedAt": "2026-10-29",
         "fillPrice": 85.66,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 84.26,
+        "equivalentExitPrice": 84.26,
+        "grossReturnPct": -1.63,
+        "netReturnPct": -2.23,
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TIME_EXIT",
+        "secondExitType": null,
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "6507be99a712853c2bbcce478dc59dbab60b879d4ce2a37f2167c50b043a4124"
     },
@@ -18066,7 +18096,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -18265,7 +18295,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -20852,7 +20882,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -21248,7 +21278,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -22233,7 +22263,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -23639,7 +23669,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -23836,7 +23866,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -24027,7 +24057,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -25005,7 +25035,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -26688,7 +26718,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -27185,7 +27215,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -27380,7 +27410,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -28863,12 +28893,12 @@
       "outcome": {
         "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": 23.06,
+        "fillPrice": 22.5,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -29954,7 +29984,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -30834,7 +30864,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -31719,16 +31749,16 @@
       "probabilityDistinctSessionsAtCapture": 9,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
+        "status": "OPEN_T1_HIT",
         "resolvedAt": null,
         "fillPrice": 33.5,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
       "captureHash": "2523d7adeda2f0a3731bd3cefd40b3f292ece0a5d60156e6f83dd4d810d94681"
     },
@@ -32910,16 +32940,21 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN_T1_HIT",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TARGET2",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 232.36,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 262.027,
+        "equivalentExitPrice": 262.027,
+        "grossReturnPct": 12.77,
+        "netReturnPct": 12.17,
+        "t1HitAt": "2026-10-27",
+        "t2HitAt": "2026-10-28",
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE_AFTER_T1"
+        "firstExitType": "TARGET1_GAP",
+        "secondExitType": "TARGET2",
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "bf09a5ecff5f751aee50c7c189e72d7045eb8dae0a916d6d821b688d5c95ea87"
     },
@@ -33220,7 +33255,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
@@ -33308,7 +33343,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
@@ -33402,16 +33437,21 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TARGET2",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 1172.99,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 1307.8838499999997,
+        "equivalentExitPrice": 1307.8838499999997,
+        "grossReturnPct": 11.5,
+        "netReturnPct": 10.9,
+        "t1HitAt": "2026-10-27",
+        "t2HitAt": "2026-10-28",
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TARGET1",
+        "secondExitType": "TARGET2",
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "997386d8c304884dae5c3c54bdb654230050940c5660a3a6da586776e0e9fa30"
     },
@@ -33503,16 +33543,21 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L4_EXACT",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TARGET2",
+        "resolvedAt": "2026-10-29",
         "fillPrice": 39.92,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 45.394000000000005,
+        "equivalentExitPrice": 45.394000000000005,
+        "grossReturnPct": 13.71,
+        "netReturnPct": 13.11,
+        "t1HitAt": "2026-10-28",
+        "t2HitAt": "2026-10-29",
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TARGET1_GAP",
+        "secondExitType": "TARGET2",
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "db69249fdd2be9817a1f0d7469da98c7d3806a8aa029b91d37bc23236fcf9146"
     },
@@ -33698,7 +33743,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
@@ -33795,7 +33840,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -33897,7 +33942,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -33978,16 +34023,21 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L4_EXACT",
       "outcome": {
-        "status": "OPEN_T1_HIT",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TARGET2",
+        "resolvedAt": "2026-10-28",
         "fillPrice": 28.16,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 31.775000000000002,
+        "equivalentExitPrice": 31.775000000000002,
+        "grossReturnPct": 12.84,
+        "netReturnPct": 12.24,
+        "t1HitAt": "2026-10-26",
+        "t2HitAt": "2026-10-28",
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE_AFTER_T1"
+        "firstExitType": "TARGET1",
+        "secondExitType": "TARGET2_GAP",
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "e72c126a64dda27052a636cf1d5940f9377e6b9ea5413d3aa2290c0693f2d32f"
     },
@@ -34083,7 +34133,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -34184,7 +34234,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE"
       },
@@ -34466,16 +34516,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L4_EXACT",
       "outcome": {
-        "status": "OPEN",
+        "status": "OPEN_T1_HIT",
         "resolvedAt": null,
         "fillPrice": 16.14,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
       "captureHash": "da3529d2c367fb9bb793f6612872df4b4dfae31db09e0b122b0caa320a1fc320"
     },
@@ -34563,16 +34613,21 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
-        "resolvedAt": null,
+        "status": "RESOLVED",
+        "result": "TARGET2",
+        "resolvedAt": "2026-10-29",
         "fillPrice": 31.54,
-        "exitPrice": null,
-        "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "exitPrice": 36.000499999999995,
+        "equivalentExitPrice": 36.000499999999995,
+        "grossReturnPct": 14.14,
+        "netReturnPct": 13.54,
+        "t1HitAt": "2026-10-28",
+        "t2HitAt": "2026-10-29",
+        "locked": false,
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "firstExitType": "TARGET1_GAP",
+        "secondExitType": "TARGET2",
+        "note": "Resolved under execution-contract/v1."
       },
       "captureHash": "9d527271729883793ff1f39f85b18cc2c448dd05f770145cd7a2192d94581a13"
     },
@@ -34659,16 +34714,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
+        "status": "OPEN_T1_HIT",
         "resolvedAt": null,
         "fillPrice": 37.94,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
       "captureHash": "d9fb6d22cba37307862e0b09f33d19506232a1d037d6da157a084d402986550a"
     },
@@ -35044,7 +35099,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
@@ -35248,7 +35303,7 @@
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
         "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
@@ -35635,16 +35690,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "OPEN",
+        "status": "OPEN_T1_HIT",
         "resolvedAt": null,
         "fillPrice": 477.22,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
         "maxAdversePct": null,
-        "lastEvaluatedSession": "2026-10-27",
+        "lastEvaluatedSession": "2026-10-29",
         "executionSpecVersion": "execution-contract/v1",
-        "note": "HORIZON_INCOMPLETE"
+        "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
       "captureHash": "aa377063c4db93b8f3b50bfd0794dbacc2d42501d86885821c96d456b34ae0a4"
     },
@@ -35735,13 +35790,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "1e77b56f30e4fa81ba0f2cd2ae5d5d536d2b928eb8abeafa7db548ef04d924c0"
     },
@@ -35825,13 +35887,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "b949ac41b312f8adc20b91d9c1c2d75036d3a425de7b6e206a656c007e82ef55"
     },
@@ -35916,13 +35985,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "481343a76fe61d98d0815b44e79b0e3c9e96be8432dfb8c51368453906b05fdc"
     },
@@ -36013,13 +36089,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "d3ebe067671f288fd114dbacdd2e18dfbdf63c828f523b361eae2ef07c5c2f0e"
     },
@@ -36107,13 +36190,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "999b76e659017db593a7f1efab0bd58c39fc3dfd0fa49cb07d9e5a00a149f507"
     },
@@ -36203,13 +36293,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "198bf8b79392bcef5def080844579a5747bd7b5209291eb26a051a4763165d9a"
     },
@@ -36297,13 +36394,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "9fc266e434d47a70db7f33f115775144bcdedfbf640aa6f067e520e6d9beebe3"
     },
@@ -36380,13 +36484,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 597.17,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "852bf6d694cde423942f172d8af4ed7b5b83f8c54918bcc1d9cd6b47a4ccd4cc"
     },
@@ -36466,13 +36573,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 257.67,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "3aecf227a1d0ab9d25b5ff14c81fb4379aa2f0fce06db38d4767ec79167a6e4b"
     },
@@ -36549,13 +36659,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "7ab45c378cb738ed5c4f5af68582efa6533c4ffc7802b50bfd3bb02dc7caaccd"
     },
@@ -36641,13 +36758,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "2497831e6f52caa9ca804d5d6231e30095a01468492ce7a8e0bf8a2753aafee5"
     },
@@ -36737,13 +36861,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "e4730bdb5bd59d44d69492aae307027569f3df93fdfa860f29c8e93610f034ea"
     },
@@ -36823,13 +36954,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "77ce50d7ace406875bcbd4046b86214e39c80ca1261ca60c37e5280a871d1cd8"
     },
@@ -36906,13 +37044,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "e7bc800e5b771fdb898fa28fc0ecc1b090c896133e7b7841208a25385bedbaa7"
     },
@@ -36999,13 +37144,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 95.42,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "04bf641ca4751b4a7c2b68a3ac6d4ab800be8d003b513da8bcd1d2acb0e5e9ba"
     },
@@ -37085,13 +37233,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "554a42a510c6ef61ddca471b49c244344e21eca500b5f1570bda82cf7944e5f9"
     },
@@ -37177,13 +37332,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "bd33bd960097d8ef634618d608f0a32ca93a896092d6dc0d0ac7de0ebc8335b8"
     },
@@ -37271,13 +37433,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "5b3de8567e2870955d6d560af6fd43a0f3a304464595f0b7b6bb73903d55a39d"
     },
@@ -37365,13 +37534,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "c89909c9ef4c909b5535dec95a356c42b3c54eb5a6e006db1fa77d345d3fd366"
     },
@@ -37459,13 +37635,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "1f30a32b03a5406519e4fb9c5690232a4e4d38fa0ab1063be6c06d6cf17ab7e9"
     },
@@ -37542,13 +37725,16 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 1.25,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "bcc3bf9fa2e559e89e6b56bc079f7604c4e48151caa7cb5662918a6e554330a1"
     },
@@ -37635,13 +37821,16 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 749.82,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "e8224ad78a3b53214cb9a0bbce6c32475986eb97bb9bac7662cba1c7bbb6cf68"
     },
@@ -37718,13 +37907,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "d729579ea7d4e6e80bdf4c9359ce8588b570f29ec04c5ff6e8d0c0ba727f4394"
     },
@@ -37814,13 +38010,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "1d76f4579a8085b2a88b89f696bc5680c716c75b400fc07f0d6977a30bc500eb"
     },
@@ -37897,13 +38100,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L3_GRADE_ENTRY_RR",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "53589f56b199da916662244bb2d7194a2fe172c98a9e974da3f6d7f451b59cbd"
     },
@@ -37989,13 +38199,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "0abea99e9885f760ce0b630c4d9dcd55d4bea7a170ea94f95ab1765205deef75"
     },
@@ -38085,13 +38302,16 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 815,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE"
       },
       "captureHash": "4b2a4df8135fa131fdb9dbba5721a1827f6454851a9240c9b532662f23b94382"
     },
@@ -38179,13 +38399,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "ed2cc7e9cf40ec26cbf16830c439d27543e9f48f5b7c6c6ecbc1ffbe81dea9fb"
     },
@@ -38270,13 +38497,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L0_OVERALL",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "b456cf319eec47b7b733bf860c4d6d3cafb6b38481aff239568eb1ccc85f0c6a"
     },
@@ -38364,13 +38598,20 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "b4a0d8fd05069f710d2841898f3bb541e1dada89977540fc2b063830cb6c521e"
     },
@@ -38455,13 +38696,20 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L4_EXACT",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "6d0dfacbd24a50c714529ac54b12f22f1691131ca2598868ab33b068196efed9"
     },
@@ -38541,13 +38789,16 @@
       "probabilityDistinctSessionsAtCapture": 11,
       "probabilityPoolLevelAtCapture": "L4_EXACT",
       "outcome": {
-        "status": "PENDING",
+        "status": "OPEN_T1_HIT",
         "resolvedAt": null,
-        "fillPrice": null,
+        "fillPrice": 481.06,
         "exitPrice": null,
         "netReturnPct": null,
         "maxFavorablePct": null,
-        "maxAdversePct": null
+        "maxAdversePct": null,
+        "lastEvaluatedSession": "2026-10-29",
+        "executionSpecVersion": "execution-contract/v1",
+        "note": "HORIZON_INCOMPLETE_AFTER_T1"
       },
       "captureHash": "4185fb96135688834a416c54efa33a0ba8cba545187ade1eb212e2ca26de14d1"
     },
@@ -38633,20 +38884,27 @@
       "probabilityDistinctSessionsAtCapture": 10,
       "probabilityPoolLevelAtCapture": "L2_GRADE_ENTRY",
       "outcome": {
-        "status": "PENDING",
-        "resolvedAt": null,
+        "status": "EXPIRED_UNFILLED",
+        "result": "UNFILLED",
+        "resolvedAt": "2026-10-28",
         "fillPrice": null,
         "exitPrice": null,
+        "equivalentExitPrice": null,
+        "grossReturnPct": null,
         "netReturnPct": null,
-        "maxFavorablePct": null,
-        "maxAdversePct": null
+        "t1HitAt": null,
+        "t2HitAt": null,
+        "locked": false,
+        "executionSpecVersion": "execution-contract/v1",
+        "exitType": "NEXT_OPEN_OUTSIDE_ENTRY_ZONE",
+        "note": "Canonical contract: entry expires when the next-session open is outside the frozen entry zone."
       },
       "captureHash": "873932ba26f1d3ecbf98ea7e99d2cf99fe36bf625c665f68a5759eb448d21445"
     }
   ],
   "counts": {
     "total": 395,
-    "pending": 33,
-    "resolved": 211
+    "pending": 0,
+    "resolved": 222
   }
 }

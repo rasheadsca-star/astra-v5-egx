@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.678Z",
-  "availableSessions": 161,
+  "availableSessions": 162,
   "firstSession": "2026-01-28",
-  "lastSession": "2026-10-27",
+  "lastSession": "2026-10-28",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5275,6 +5275,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 15.95,
       "jumpPct": 16.3
+    },
+    {
+      "ticker": "ISMA",
+      "date": "2026-10-28",
+      "sourceSessionDate": "2026-10-28",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 18.72,
+      "high": 19.84,
+      "low": 18.01,
+      "close": 18.72,
+      "adjustedClose": 18.72,
+      "volume": 582905,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-29T18:37:21.772Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 18.55,
+      "jumpPct": 0.92
     }
   ],
   "priceTruthLatest": {
@@ -5285,7 +5317,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 161,
-  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
+  "sessionsCount": 162,
+  "updatedAt": "2026-10-29T21:39:14.045794+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

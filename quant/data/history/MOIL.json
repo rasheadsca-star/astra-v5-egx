@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.639Z",
-  "availableSessions": 170,
+  "availableSessions": 171,
   "firstSession": "2026-02-04",
-  "lastSession": "2026-10-27",
+  "lastSession": "2026-10-28",
   "historyStatus": "historical_complete_100",
   "primarySource": "mixed_history_with_starta_ohlc_api",
   "verificationSources": [
@@ -5896,6 +5896,41 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 0.62,
       "jumpPct": 4.84
+    },
+    {
+      "ticker": "MOIL",
+      "date": "2026-10-28",
+      "sourceSessionDate": "2026-10-28",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 0.65,
+      "high": 0.65,
+      "low": 0.64,
+      "close": 0.65,
+      "adjustedClose": 0.65,
+      "volume": 169202,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-29T18:37:21.772Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:12"
+      ],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 0.65,
+      "jumpPct": 0.0
     }
   ],
   "lastUpdateError": "Yahoo history failed for MOIL: MOIL.CA: identity score 75",
@@ -6037,8 +6072,8 @@
     "rowsAccepted": 100,
     "confidenceCap": 75
   },
-  "sessionsCount": 170,
-  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
+  "sessionsCount": 171,
+  "updatedAt": "2026-10-29T21:39:14.045794+03:00",
   "lastUpdateSource": "daily_update:session_pack",
   "priceTruthLatest": {
     "date": "2026-09-28",

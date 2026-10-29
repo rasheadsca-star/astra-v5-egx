@@ -593,7 +593,7 @@
    "PROFIT_FACTOR_NOT_ESTABLISHED",
    "AVERAGE_NET_RETURN_NOT_ESTABLISHED"
   ],
-  "observedCalendarDays": 26,
+  "observedCalendarDays": 28,
   "policy": {
    "version": "ucp-forward-promotion/v1",
    "minForwardSessions": 30,
@@ -605,15 +605,15 @@
   }
  },
  "dataStatus": {
-  "finalStatus": "PARTIAL",
-  "guard": "NOOP_NO_NEW_ROWS",
-  "expectedSession": "2026-10-27",
-  "actualAcceptedSession": "2026-10-27",
-  "coveragePct": 87.4,
-  "acceptedRows": 173,
-  "staleRows": 25,
-  "quarantinedCount": 7,
-  "stage1Prepared": true,
+  "finalStatus": "WAITING_DATA",
+  "guard": "WAITING_DATA",
+  "expectedSession": "2026-10-29",
+  "actualAcceptedSession": "2026-10-28",
+  "coveragePct": 74.2,
+  "acceptedRows": 147,
+  "staleRows": 198,
+  "quarantinedCount": 6,
+  "stage1Prepared": false,
   "preparedCandidateCount": 10
  }
 }

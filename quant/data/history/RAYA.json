@@ -9,9 +9,9 @@
   "currency": "EGP",
   "exchange": "EGX",
   "generatedAt": "2026-09-29T00:00:33.281Z",
-  "availableSessions": 162,
+  "availableSessions": 163,
   "firstSession": "2026-02-03",
-  "lastSession": "2026-10-27",
+  "lastSession": "2026-10-28",
   "historyStatus": "historical_complete_100",
   "primarySource": "yahoo",
   "verificationSources": [],
@@ -5308,6 +5308,38 @@
       "priceTruthMode": "astra_atomic_mirror",
       "previousTrustedClose": 5.26,
       "jumpPct": 5.89
+    },
+    {
+      "ticker": "RAYA",
+      "date": "2026-10-28",
+      "sourceSessionDate": "2026-10-28",
+      "sourceMarketTime": null,
+      "sourceSessionEvidence": null,
+      "open": 5.46,
+      "high": 5.65,
+      "low": 5.42,
+      "close": 5.46,
+      "adjustedClose": 5.46,
+      "volume": 1783063,
+      "currency": "EGP",
+      "source": "astra_atomic_history_index",
+      "primarySource": "mubasher_symbol_pages_precise_enriched",
+      "officialVerified": false,
+      "verifiedBy": [],
+      "sourceUrls": {
+        "primary": "astra://data/history-index.json",
+        "verification": []
+      },
+      "fetchedAt": "2026-10-29T18:37:21.772Z",
+      "confidence": {
+        "overall": 85,
+        "derivedFrom": "astra_atomic_history_index"
+      },
+      "validationStatus": "precise_public_source_session_confirmed",
+      "warnings": [],
+      "priceTruthMode": "astra_atomic_mirror",
+      "previousTrustedClose": 5.57,
+      "jumpPct": -1.97
     }
   ],
   "priceTruthLatest": {
@@ -5318,7 +5350,7 @@
     "confidence": 86,
     "sourceSessionDate": "2026-09-28"
   },
-  "sessionsCount": 162,
-  "updatedAt": "2026-10-27T21:16:00.576417+03:00",
+  "sessionsCount": 163,
+  "updatedAt": "2026-10-29T21:39:14.045794+03:00",
   "lastUpdateSource": "daily_update:session_pack"
 }

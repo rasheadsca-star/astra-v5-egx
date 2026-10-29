@@ -1,16 +1,16 @@
 {
   "schemaVersion": "astra-source-health/v1",
-  "expectedSession": "2026-10-27",
-  "generatedAt": "2026-10-27T22:36:47.828Z",
+  "expectedSession": "2026-10-29",
+  "generatedAt": "2026-10-29T18:39:18.846Z",
   "researchOnly": true,
   "automaticExecution": false,
   "coverage": {
     "registeredSymbols": 201,
     "explicitInactiveSymbols": 1,
     "activeDenominator": 200,
-    "currentVerifiedSymbols": 177,
-    "activeCoveragePct": 88.5,
-    "staleActiveSymbols": 21,
+    "currentVerifiedSymbols": 149,
+    "activeCoveragePct": 74.5,
+    "staleActiveSymbols": 49,
     "sourceFailedSymbols": 2,
     "rule": "Only explicit DORMANT/SUSPENDED/DELISTED evidence removes a symbol from the denominator. ACTIVE_STALE and SOURCE_FAILED remain in it."
   },
@@ -21,17 +21,163 @@
     "claimAllowed": false
   },
   "crossStoreConsistency": {
-    "quantCoveragePct": 87.4,
-    "quantStaleCount": 25,
+    "quantCoveragePct": 74.2,
+    "quantStaleCount": 198,
     "canonicalCurrentButQuantStale": [
+      "AALR",
+      "ABUK",
+      "ACAMD",
+      "ACGC",
+      "ADIB",
+      "ADPC",
+      "AFDI",
+      "AFMC",
+      "AIFI",
+      "AJWA",
+      "ALCN",
+      "ALUM",
+      "AMER",
+      "AMIA",
+      "AMOC",
+      "ARAB",
+      "ARCC",
+      "AREH",
+      "ARVA",
+      "ASCM",
+      "ASPI",
+      "ATLC",
+      "ATQA",
+      "BTFH",
+      "CAED",
+      "CANA",
+      "CCAP",
+      "CEFM",
+      "CERA",
+      "CICH",
+      "CIEB",
+      "CIRA",
+      "CLHO",
+      "CNFN",
+      "COMI",
+      "COPR",
+      "COSG",
+      "DAPH",
+      "DOMT",
+      "DSCW",
+      "EASB",
+      "EAST",
+      "EBSC",
+      "ECAP",
+      "EDFM",
+      "EEII",
+      "EFIC",
       "EFID",
+      "EFIH",
+      "EGAL",
+      "EGAS",
+      "EGCH",
+      "EGTS",
+      "EHDR",
+      "ELEC",
+      "ELKA",
+      "ELSH",
+      "EMFD",
+      "ENGC",
+      "EPCO",
+      "ETEL",
+      "ETRS",
       "EXPA",
-      "NAHO"
+      "FAITA",
+      "FERC",
+      "FWRY",
+      "GBCO",
+      "GDWA",
+      "GIHD",
+      "GMCI",
+      "GRCA",
+      "GTWL",
+      "HDBK",
+      "HELI",
+      "HRHO",
+      "ICID",
+      "IDRE",
+      "IFAP",
+      "IRON",
+      "ISMA",
+      "ISMQ",
+      "ISPH",
+      "JUFO",
+      "KABO",
+      "KWIN",
+      "KZPC",
+      "LCSW",
+      "LUTS",
+      "MAAL",
+      "MASR",
+      "MBSC",
+      "MCQE",
+      "MENA",
+      "MFPC",
+      "MFSC",
+      "MICH",
+      "MILS",
+      "MMAT",
+      "MOED",
+      "MOIL",
+      "MOIN",
+      "MOSC",
+      "MPCO",
+      "MPRC",
+      "MTIE",
+      "NHPS",
+      "NINH",
+      "OBRI",
+      "OCDI",
+      "ODIN",
+      "OFH",
+      "OIH",
+      "OLFI",
+      "ORAS",
+      "PHDC",
+      "PHTV",
+      "PRCL",
+      "PRDC",
+      "PRMH",
+      "RACC",
+      "RAYA",
+      "ROTO",
+      "RTVC",
+      "RUBX",
+      "SAUD",
+      "SCEM",
+      "SCFM",
+      "SCTS",
+      "SDTI",
+      "SEIG",
+      "SEIGA",
+      "SKPC",
+      "SMFR",
+      "SNFC",
+      "SPIN",
+      "SPMD",
+      "SUGR",
+      "SVCE",
+      "SWDY",
+      "TALM",
+      "TMGH",
+      "UEFM",
+      "UEGC",
+      "UNIP",
+      "UNIT",
+      "WCDF",
+      "WKOL",
+      "ZEOT",
+      "ZMID"
     ]
   },
   "counts": {
-    "CURRENT_VERIFIED": 177,
-    "ACTIVE_STALE": 21,
+    "CURRENT_VERIFIED": 149,
+    "ACTIVE_STALE": 49,
     "SOURCE_FAILED": 2,
     "DORMANT": 0,
     "SUSPENDED": 0,
@@ -39,27 +185,55 @@
   },
   "lists": {
     "activeStale": [
+      "ADCI",
+      "ADRI",
+      "AMES",
       "APSW",
-      "ARAB",
-      "ARVA",
+      "AXPH",
+      "BINV",
+      "BIOC",
+      "CCRS",
       "CFGH",
+      "CPCI",
+      "CSAG",
       "DCCC",
       "DEIN",
       "DTPP",
+      "EALR",
+      "EGBE",
       "EGSA",
+      "ELNA",
       "ELWA",
       "EOSB",
       "EPPK",
+      "FAIT",
+      "GGCC",
       "GPPL",
+      "GSSC",
       "ICLE",
+      "INFI",
+      "MCRO",
       "MEGM",
+      "MEPA",
+      "MHOT",
+      "MIPH",
+      "MPCI",
+      "NAHO",
+      "NCCW",
       "NEDA",
+      "NIPH",
+      "OCPH",
       "ORHD",
       "ORWE",
+      "PHAR",
+      "PHGC",
       "POUL",
+      "RAKT",
+      "RMDA",
+      "RREI",
       "SAIB",
-      "SEIGA",
-      "UNIP"
+      "SIPC",
+      "TRTO"
     ],
     "sourceFailed": [
       "NDRL",
@@ -69,7 +243,7 @@
   "symbols": {
     "AALR": {
       "ticker": "AALR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -82,7 +256,7 @@
     },
     "ABUK": {
       "ticker": "ABUK",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -95,7 +269,7 @@
     },
     "ACAMD": {
       "ticker": "ACAMD",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -108,7 +282,7 @@
     },
     "ACGC": {
       "ticker": "ACGC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -121,20 +295,20 @@
     },
     "ADCI": {
       "ticker": "ADCI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:20.3469%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "ADIB": {
       "ticker": "ADIB",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -147,7 +321,7 @@
     },
     "ADPC": {
       "ticker": "ADPC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -160,20 +334,20 @@
     },
     "ADRI": {
       "ticker": "ADRI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:3.2033%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "AFDI": {
       "ticker": "AFDI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -186,7 +360,7 @@
     },
     "AFMC": {
       "ticker": "AFMC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -199,7 +373,7 @@
     },
     "AIFI": {
       "ticker": "AIFI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -212,7 +386,7 @@
     },
     "AJWA": {
       "ticker": "AJWA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -225,7 +399,7 @@
     },
     "ALCN": {
       "ticker": "ALCN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -238,7 +412,7 @@
     },
     "ALUM": {
       "ticker": "ALUM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -251,7 +425,7 @@
     },
     "AMER": {
       "ticker": "AMER",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -264,7 +438,7 @@
     },
     "AMES": {
       "ticker": "AMES",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -272,13 +446,13 @@
         "latest_close_conflict:97.3723%",
         "corporate_action_review_required"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "AMIA": {
       "ticker": "AMIA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -291,7 +465,7 @@
     },
     "AMOC": {
       "ticker": "AMOC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -304,7 +478,7 @@
     },
     "APSW": {
       "ticker": "APSW",
-      "lastSession": "2026-10-26",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -317,20 +491,20 @@
     },
     "ARAB": {
       "ticker": "ARAB",
-      "lastSession": "2026-10-26",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:13.8095%"
       ],
-      "status": "ACTIVE_STALE",
-      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
       "activeDenominator": true
     },
     "ARCC": {
       "ticker": "ARCC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -343,7 +517,7 @@
     },
     "AREH": {
       "ticker": "AREH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -356,20 +530,20 @@
     },
     "ARVA": {
       "ticker": "ARVA",
-      "lastSession": "2026-10-22",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:11.9674%"
       ],
-      "status": "ACTIVE_STALE",
-      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
       "activeDenominator": true
     },
     "ASCM": {
       "ticker": "ASCM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -382,7 +556,7 @@
     },
     "ASPI": {
       "ticker": "ASPI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -395,7 +569,7 @@
     },
     "ATLC": {
       "ticker": "ATLC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -408,7 +582,7 @@
     },
     "ATQA": {
       "ticker": "ATQA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -421,33 +595,33 @@
     },
     "AXPH": {
       "ticker": "AXPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:9.5154%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "BINV": {
       "ticker": "BINV",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:6.3206%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "BIOC": {
       "ticker": "BIOC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -455,13 +629,13 @@
         "latest_close_conflict:383.0022%",
         "corporate_action_review_required"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "BTFH": {
       "ticker": "BTFH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -474,7 +648,7 @@
     },
     "CAED": {
       "ticker": "CAED",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -487,7 +661,7 @@
     },
     "CANA": {
       "ticker": "CANA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -501,7 +675,7 @@
     },
     "CCAP": {
       "ticker": "CCAP",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -514,20 +688,20 @@
     },
     "CCRS": {
       "ticker": "CCRS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:6.8966%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "CEFM": {
       "ticker": "CEFM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -540,7 +714,7 @@
     },
     "CERA": {
       "ticker": "CERA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -566,7 +740,7 @@
     },
     "CICH": {
       "ticker": "CICH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -579,7 +753,7 @@
     },
     "CIEB": {
       "ticker": "CIEB",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -592,7 +766,7 @@
     },
     "CIRA": {
       "ticker": "CIRA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -605,7 +779,7 @@
     },
     "CLHO": {
       "ticker": "CLHO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -618,7 +792,7 @@
     },
     "CNFN": {
       "ticker": "CNFN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -631,7 +805,7 @@
     },
     "COMI": {
       "ticker": "COMI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -644,7 +818,7 @@
     },
     "COPR": {
       "ticker": "COPR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -657,7 +831,7 @@
     },
     "COSG": {
       "ticker": "COSG",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -670,33 +844,33 @@
     },
     "CPCI": {
       "ticker": "CPCI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:20.9182%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "CSAG": {
       "ticker": "CSAG",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:5.6783%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "DAPH": {
       "ticker": "DAPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -735,7 +909,7 @@
     },
     "DOMT": {
       "ticker": "DOMT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -748,7 +922,7 @@
     },
     "DSCW": {
       "ticker": "DSCW",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -775,20 +949,20 @@
     },
     "EALR": {
       "ticker": "EALR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:15.3154%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "EASB": {
       "ticker": "EASB",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -801,7 +975,7 @@
     },
     "EAST": {
       "ticker": "EAST",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -814,7 +988,7 @@
     },
     "EBSC": {
       "ticker": "EBSC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -827,7 +1001,7 @@
     },
     "ECAP": {
       "ticker": "ECAP",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -840,7 +1014,7 @@
     },
     "EDFM": {
       "ticker": "EDFM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -853,7 +1027,7 @@
     },
     "EEII": {
       "ticker": "EEII",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -866,7 +1040,7 @@
     },
     "EFIC": {
       "ticker": "EFIC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -879,7 +1053,7 @@
     },
     "EFID": {
       "ticker": "EFID",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -892,7 +1066,7 @@
     },
     "EFIH": {
       "ticker": "EFIH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -905,7 +1079,7 @@
     },
     "EGAL": {
       "ticker": "EGAL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -918,7 +1092,7 @@
     },
     "EGAS": {
       "ticker": "EGAS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -931,7 +1105,7 @@
     },
     "EGBE": {
       "ticker": "EGBE",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "mixed_history_with_starta_ohlc_api",
       "staleData": false,
       "updateFailed": false,
@@ -942,13 +1116,13 @@
         "non_official_public_database_fallback",
         "not_independently_verified_by_egx"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "EGCH": {
       "ticker": "EGCH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -976,7 +1150,7 @@
     },
     "EGTS": {
       "ticker": "EGTS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -990,7 +1164,7 @@
     },
     "EHDR": {
       "ticker": "EHDR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1003,7 +1177,7 @@
     },
     "ELEC": {
       "ticker": "ELEC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1016,7 +1190,7 @@
     },
     "ELKA": {
       "ticker": "ELKA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1029,20 +1203,20 @@
     },
     "ELNA": {
       "ticker": "ELNA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:5.1301%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "ELSH": {
       "ticker": "ELSH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1069,7 +1243,7 @@
     },
     "EMFD": {
       "ticker": "EMFD",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1082,7 +1256,7 @@
     },
     "ENGC": {
       "ticker": "ENGC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1108,7 +1282,7 @@
     },
     "EPCO": {
       "ticker": "EPCO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1134,7 +1308,7 @@
     },
     "ESRS": {
       "ticker": "ESRS",
-      "lastSession": "2026-10-26",
+      "lastSession": "2026-10-28",
       "primarySource": "kaggle_yahoo_seed",
       "staleData": false,
       "updateFailed": false,
@@ -1150,7 +1324,7 @@
     },
     "ETEL": {
       "ticker": "ETEL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1163,7 +1337,7 @@
     },
     "ETRS": {
       "ticker": "ETRS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1176,7 +1350,7 @@
     },
     "EXPA": {
       "ticker": "EXPA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1189,20 +1363,20 @@
     },
     "FAIT": {
       "ticker": "FAIT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:1.1628%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "FAITA": {
       "ticker": "FAITA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "kaggle_yahoo_seed",
       "staleData": false,
       "updateFailed": false,
@@ -1217,7 +1391,7 @@
     },
     "FERC": {
       "ticker": "FERC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1230,7 +1404,7 @@
     },
     "FWRY": {
       "ticker": "FWRY",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1243,7 +1417,7 @@
     },
     "GBCO": {
       "ticker": "GBCO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1256,7 +1430,7 @@
     },
     "GDWA": {
       "ticker": "GDWA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1269,20 +1443,20 @@
     },
     "GGCC": {
       "ticker": "GGCC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:69.3878%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "GIHD": {
       "ticker": "GIHD",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1295,7 +1469,7 @@
     },
     "GMCI": {
       "ticker": "GMCI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1326,7 +1500,7 @@
     },
     "GRCA": {
       "ticker": "GRCA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1339,20 +1513,20 @@
     },
     "GSSC": {
       "ticker": "GSSC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:14.9525%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "GTWL": {
       "ticker": "GTWL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1365,7 +1539,7 @@
     },
     "HDBK": {
       "ticker": "HDBK",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1379,7 +1553,7 @@
     },
     "HELI": {
       "ticker": "HELI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1392,7 +1566,7 @@
     },
     "HRHO": {
       "ticker": "HRHO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1405,7 +1579,7 @@
     },
     "ICID": {
       "ticker": "ICID",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1431,7 +1605,7 @@
     },
     "IDRE": {
       "ticker": "IDRE",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1444,7 +1618,7 @@
     },
     "IFAP": {
       "ticker": "IFAP",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1457,20 +1631,20 @@
     },
     "INFI": {
       "ticker": "INFI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:14.2062%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "IRON": {
       "ticker": "IRON",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1483,7 +1657,7 @@
     },
     "ISMA": {
       "ticker": "ISMA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1496,7 +1670,7 @@
     },
     "ISMQ": {
       "ticker": "ISMQ",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1509,7 +1683,7 @@
     },
     "ISPH": {
       "ticker": "ISPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1522,7 +1696,7 @@
     },
     "JUFO": {
       "ticker": "JUFO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1535,7 +1709,7 @@
     },
     "KABO": {
       "ticker": "KABO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1548,7 +1722,7 @@
     },
     "KWIN": {
       "ticker": "KWIN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1561,7 +1735,7 @@
     },
     "KZPC": {
       "ticker": "KZPC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1574,7 +1748,7 @@
     },
     "LCSW": {
       "ticker": "LCSW",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1587,7 +1761,7 @@
     },
     "LUTS": {
       "ticker": "LUTS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1600,7 +1774,7 @@
     },
     "MAAL": {
       "ticker": "MAAL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1613,7 +1787,7 @@
     },
     "MASR": {
       "ticker": "MASR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1626,7 +1800,7 @@
     },
     "MBSC": {
       "ticker": "MBSC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1637,7 +1811,7 @@
     },
     "MCQE": {
       "ticker": "MCQE",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1650,15 +1824,15 @@
     },
     "MCRO": {
       "ticker": "MCRO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:24.1667%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "MEGM": {
@@ -1676,7 +1850,7 @@
     },
     "MENA": {
       "ticker": "MENA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1689,20 +1863,20 @@
     },
     "MEPA": {
       "ticker": "MEPA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:14.6497%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "MFPC": {
       "ticker": "MFPC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1715,7 +1889,7 @@
     },
     "MFSC": {
       "ticker": "MFSC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1728,7 +1902,7 @@
     },
     "MHOT": {
       "ticker": "MHOT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1736,13 +1910,13 @@
         "latest_close_conflict:51.9423%",
         "corporate_action_review_required"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "MICH": {
       "ticker": "MICH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1755,7 +1929,7 @@
     },
     "MILS": {
       "ticker": "MILS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1768,20 +1942,20 @@
     },
     "MIPH": {
       "ticker": "MIPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:12.4005%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "MMAT": {
       "ticker": "MMAT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1794,7 +1968,7 @@
     },
     "MOED": {
       "ticker": "MOED",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1805,7 +1979,7 @@
     },
     "MOIL": {
       "ticker": "MOIL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "mixed_history_with_starta_ohlc_api",
       "staleData": false,
       "updateFailed": false,
@@ -1822,7 +1996,7 @@
     },
     "MOIN": {
       "ticker": "MOIN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1835,7 +2009,7 @@
     },
     "MOSC": {
       "ticker": "MOSC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1849,20 +2023,20 @@
     },
     "MPCI": {
       "ticker": "MPCI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:17.8862%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "MPCO": {
       "ticker": "MPCO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1875,7 +2049,7 @@
     },
     "MPRC": {
       "ticker": "MPRC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1888,7 +2062,7 @@
     },
     "MTIE": {
       "ticker": "MTIE",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1912,21 +2086,21 @@
         "non_official_public_database_fallback",
         "not_independently_verified_by_egx"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "NCCW": {
       "ticker": "NCCW",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:12.013%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "NDRL": {
@@ -1956,7 +2130,7 @@
     },
     "NHPS": {
       "ticker": "NHPS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1969,7 +2143,7 @@
     },
     "NINH": {
       "ticker": "NINH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -1982,20 +2156,20 @@
     },
     "NIPH": {
       "ticker": "NIPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:24.403%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "OBRI": {
       "ticker": "OBRI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2008,7 +2182,7 @@
     },
     "OCDI": {
       "ticker": "OCDI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2021,20 +2195,20 @@
     },
     "OCPH": {
       "ticker": "OCPH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:30.0825%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "ODIN": {
       "ticker": "ODIN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2047,7 +2221,7 @@
     },
     "OFH": {
       "ticker": "OFH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2060,7 +2234,7 @@
     },
     "OIH": {
       "ticker": "OIH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2073,7 +2247,7 @@
     },
     "OLFI": {
       "ticker": "OLFI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2086,7 +2260,7 @@
     },
     "ORAS": {
       "ticker": "ORAS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2112,7 +2286,7 @@
     },
     "ORWE": {
       "ticker": "ORWE",
-      "lastSession": "2026-10-26",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2125,20 +2299,20 @@
     },
     "PHAR": {
       "ticker": "PHAR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:17.9005%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "PHDC": {
       "ticker": "PHDC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2151,20 +2325,20 @@
     },
     "PHGC": {
       "ticker": "PHGC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "sigma_capital_independent_live_session_confirmation",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "historical_depth_not_established_current_session_seed_only"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "PHTV": {
       "ticker": "PHTV",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2190,7 +2364,7 @@
     },
     "PRCL": {
       "ticker": "PRCL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2203,7 +2377,7 @@
     },
     "PRDC": {
       "ticker": "PRDC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2216,7 +2390,7 @@
     },
     "PRMH": {
       "ticker": "PRMH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2229,7 +2403,7 @@
     },
     "RACC": {
       "ticker": "RACC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2242,20 +2416,20 @@
     },
     "RAKT": {
       "ticker": "RAKT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:1.3951%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "RAYA": {
       "ticker": "RAYA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2268,20 +2442,20 @@
     },
     "RMDA": {
       "ticker": "RMDA",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:5.3892%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "ROTO": {
       "ticker": "ROTO",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2294,20 +2468,20 @@
     },
     "RREI": {
       "ticker": "RREI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:32.5648%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "RTVC": {
       "ticker": "RTVC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2320,7 +2494,7 @@
     },
     "RUBX": {
       "ticker": "RUBX",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2351,7 +2525,7 @@
     },
     "SAUD": {
       "ticker": "SAUD",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2364,7 +2538,7 @@
     },
     "SCEM": {
       "ticker": "SCEM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2377,7 +2551,7 @@
     },
     "SCFM": {
       "ticker": "SCFM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2390,7 +2564,7 @@
     },
     "SCTS": {
       "ticker": "SCTS",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2404,7 +2578,7 @@
     },
     "SDTI": {
       "ticker": "SDTI",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2417,7 +2591,7 @@
     },
     "SEIG": {
       "ticker": "SEIG",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2430,33 +2604,33 @@
     },
     "SEIGA": {
       "ticker": "SEIGA",
-      "lastSession": "2026-10-22",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:1069.8706%"
       ],
-      "status": "ACTIVE_STALE",
-      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
       "activeDenominator": true
     },
     "SIPC": {
       "ticker": "SIPC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-28",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:18.0473%"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "SKPC": {
       "ticker": "SKPC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2469,7 +2643,7 @@
     },
     "SMFR": {
       "ticker": "SMFR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2482,7 +2656,7 @@
     },
     "SNFC": {
       "ticker": "SNFC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2510,7 +2684,7 @@
     },
     "SPIN": {
       "ticker": "SPIN",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2523,7 +2697,7 @@
     },
     "SPMD": {
       "ticker": "SPMD",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2536,7 +2710,7 @@
     },
     "SUGR": {
       "ticker": "SUGR",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2549,7 +2723,7 @@
     },
     "SVCE": {
       "ticker": "SVCE",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2562,7 +2736,7 @@
     },
     "SWDY": {
       "ticker": "SWDY",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2575,7 +2749,7 @@
     },
     "TALM": {
       "ticker": "TALM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2588,7 +2762,7 @@
     },
     "TMGH": {
       "ticker": "TMGH",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2612,13 +2786,13 @@
         "non_official_public_database_fallback",
         "not_independently_verified_by_egx"
       ],
-      "status": "CURRENT_VERIFIED",
-      "reason": "LAST_SESSION_MATCHES_EXPECTED",
+      "status": "ACTIVE_STALE",
+      "reason": "LAST_SESSION_BEHIND_EXPECTED",
       "activeDenominator": true
     },
     "UEFM": {
       "ticker": "UEFM",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2631,7 +2805,7 @@
     },
     "UEGC": {
       "ticker": "UEGC",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2644,20 +2818,20 @@
     },
     "UNIP": {
       "ticker": "UNIP",
-      "lastSession": "2026-10-26",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
       "warnings": [
         "latest_close_conflict:14.2424%"
       ],
-      "status": "ACTIVE_STALE",
-      "reason": "LAST_SESSION_BEHIND_EXPECTED",
+      "status": "CURRENT_VERIFIED",
+      "reason": "LAST_SESSION_MATCHES_EXPECTED",
       "activeDenominator": true
     },
     "UNIT": {
       "ticker": "UNIT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2670,7 +2844,7 @@
     },
     "WCDF": {
       "ticker": "WCDF",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2683,7 +2857,7 @@
     },
     "WKOL": {
       "ticker": "WKOL",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2696,7 +2870,7 @@
     },
     "ZEOT": {
       "ticker": "ZEOT",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
@@ -2709,7 +2883,7 @@
     },
     "ZMID": {
       "ticker": "ZMID",
-      "lastSession": "2026-10-27",
+      "lastSession": "2026-10-29",
       "primarySource": "yahoo",
       "staleData": false,
       "updateFailed": false,
